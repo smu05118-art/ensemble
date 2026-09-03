@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "companies": 32,
+  "sectors": [
+    "rack",
+    "jpeq",
+    "power",
+    "optics",
+    "mem"
+  ],
+  "sized_companies": 32,
+  "color_sources": {
+    "engine": 17,
+    "proxy_3m": 15
+  },
+  "clock": "placeholder",
+  "spot_checks": [
+    {
+      "company": "DELL",
+      "route": "usimp",
+      "csv": "us_long.csv",
+      "window": "2026-04~06",
+      "cur_usd": 76567316509.0,
+      "yoy": 114.3
+    },
+    {
+      "company": "LONGI",
+      "route": "mir",
+      "csv": "cn_mirror_long.csv",
+      "window": "2026-05~07",
+      "cur_usd": 1393784920.9999998,
+      "yoy": -58.0
+    },
+    {
+      "company": "KIOXIA",
+      "route": "jp_flash_ic",
+      "csv": "estat_long.csv",
+      "window": "2026-05~07",
+      "cur_usd": 2786663033.667372,
+      "yoy": 329.9
+    }
+  ],
+  "contracts": {
+    "pure_js_no_d3": true,
+    "clip_yoy_pct": [
+      -30,
+      30
+    ],
+    "clickable_company_buttons": true,
+    "investment_disclaimer": true
+  }
+}

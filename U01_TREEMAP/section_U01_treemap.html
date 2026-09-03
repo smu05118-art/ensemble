@@ -1,0 +1,237 @@
+<section id="u01-treemap">
+<style>
+#u01-treemap{margin:12px 0}
+#u01-treemap .u01-card{background:var(--card,#12151d);border:1px solid var(--line,#232a3a);
+border-radius:12px;padding:12px 14px}
+#u01-treemap h2{margin:0 0 2px;font-size:16px;color:var(--ink,#dce3f0)}
+#u01-treemap .u01-sub{color:var(--sub,#8a93a6);font-size:11.5px;margin-bottom:10px;line-height:1.5}
+#u01-treemap .u01-legend{display:flex;align-items:center;gap:8px;font-size:11px;
+color:var(--sub,#8a93a6);margin:6px 0 8px;flex-wrap:wrap}
+#u01-treemap .u01-grad{width:150px;height:10px;border-radius:5px;
+background:linear-gradient(90deg,#e2574f,#3a4152 50%,#2fae66)}
+#u01-treemap .u01-map{position:relative;width:100%;height:clamp(360px,52vw,540px);
+border-radius:8px;overflow:hidden;background:var(--bg,#0b0e14)}
+#u01-treemap .u01-sec{position:absolute;border:1px solid var(--line,#232a3a);border-radius:4px;
+overflow:hidden}
+#u01-treemap .u01-sechead{position:absolute;left:0;right:0;top:0;height:16px;line-height:16px;
+padding:0 6px;font-size:10px;font-weight:800;color:#aeb8cc;background:rgba(23,27,38,.92);
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis;z-index:2}
+#u01-treemap .u01-box{position:absolute;border-radius:3px;cursor:pointer;overflow:hidden;
+border:0;padding:0;text-align:left;font:inherit;color:inherit;appearance:none;
+box-shadow:inset 0 0 0 1px rgba(11,14,20,.65);transition:filter .12s}
+#u01-treemap .u01-box:hover{filter:brightness(1.25);z-index:3}
+#u01-treemap .u01-box:focus-visible{outline:2px solid #eef2fa;outline-offset:-3px;z-index:4}
+#u01-treemap .u01-box.sel{box-shadow:inset 0 0 0 2px #dce3f0;z-index:3}
+#u01-treemap .u01-bl{padding:3px 4px;font-size:10.5px;font-weight:800;color:#eef2fa;
+text-shadow:0 1px 2px rgba(0,0,0,.55);line-height:1.25;pointer-events:none}
+#u01-treemap .u01-bl .y{display:block;font-size:9.5px;font-weight:700;opacity:.9}
+#u01-treemap .u01-bl .tag{display:inline-block;font-size:8.5px;font-weight:700;
+background:rgba(11,14,20,.55);border-radius:3px;padding:0 3px;margin-top:1px}
+#u01-treemap .u01-wait{margin-top:8px;font-size:11.5px;color:var(--gold,#c9a24a)}
+#u01-treemap .u01-disclaimer{margin-top:8px;padding-top:8px;border-top:1px solid var(--line,#232a3a);
+font-size:11px;color:var(--sub,#8a93a6)}
+#u01-treemap .u01-detail{display:none;margin-top:10px;background:var(--card2,#171b26);
+border:1px solid var(--line,#232a3a);border-radius:10px;padding:10px 12px}
+#u01-treemap .u01-detail.on{display:block}
+#u01-treemap .u01-dhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px}
+#u01-treemap .u01-dhead b{font-size:15px;color:var(--ink,#dce3f0)}
+#u01-treemap .u01-dhead .tk{color:var(--sub,#8a93a6);font-size:12px}
+#u01-treemap .u01-x{margin-left:auto;cursor:pointer;color:var(--sub,#8a93a6);font-size:13px;
+background:none;border:0;padding:2px 6px}
+#u01-treemap .u01-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:6px;margin-top:8px}
+#u01-treemap .u01-chip{background:var(--card,#12151d);border:1px solid var(--line,#232a3a);
+border-radius:8px;padding:7px 9px}
+#u01-treemap .u01-chip .l{color:var(--sub,#8a93a6);font-size:10px;letter-spacing:.04em}
+#u01-treemap .u01-chip .v{font-size:13.5px;font-weight:800;margin-top:2px;
+font-variant-numeric:tabular-nums;color:var(--ink,#dce3f0)}
+#u01-treemap .u01-chip .s{font-size:10px;color:var(--sub,#8a93a6);margin-top:1px}
+#u01-treemap .u01-routes{margin-top:8px;font-size:11.5px;color:var(--sub,#8a93a6)}
+#u01-treemap .u01-routes li{margin:3px 0}
+#u01-treemap .u01-gbadge{border-radius:5px;padding:1px 7px;font-size:11px;font-weight:800;color:#0b0e14}
+@media(max-width:640px){#u01-treemap .u01-map{height:72vw;min-height:330px}}
+</style>
+<div class="u01-card">
+  <h2>밸류체인 강도 맵</h2>
+  <div class="u01-sub">박스 크기 = 레지스트리 route 실측 최신 3M 무역금액(귀속가중 중앙값 적용, USD 환산 · 시총 아님) ·
+  색 = 컴포짓 YoY(엔진) 우선, 없으면 프록시 최신 3M YoY · ±30% 클리핑 ·
+  섹터 그룹 → 종목 박스, 박스 클릭 = 미니카드 · USD 환산 환율 JPY 160.11·THB 33.26 (Wed, 02 Sep 2026 00:02:31 +0000, open.er-api.com (실측)) · 사이클 국면: R03_CLOCK 미산출 — placeholder 표기</div>
+  <div class="u01-legend"><span>YoY</span><span>-30%</span><div class="u01-grad"></div><span>+30%</span>
+  <span style="margin-left:8px">■ 회색 = 판정 대기</span><span id="u01-asof"></span></div>
+  <div class="u01-map" id="u01-map"></div>
+  <div class="u01-wait" id="u01-wait"></div>
+  <div class="u01-detail" id="u01-detail" role="region" aria-label="선택 종목 미니카드" aria-live="polite"></div>
+  <div class="u01-disclaimer">투자판단 참고용·투자 권유 아님. 무역 프록시는 회사 전용 매출이 아니며, 나우캐스트는 오차·개정 가능성이 있음.</div>
+</div>
+<script>
+(function(){
+"use strict";
+var DATA={"asof":{"registry":"2026-09-02","quality":"2026-09-02","engine":"2026-09-02","built":"2026-09-03 07:47 KST","csv_last":{"us_long.csv":"2026-06","rack_long.csv":"2026-06","thai_long.csv":"2026-05","estat_long.csv":"2026-07","cn_mirror_long.csv":"2026-07"}},"fx":{"JPY":160.113803,"THB":33.259227,"asof":"Wed, 02 Sep 2026 00:02:31 +0000","source":"open.er-api.com (실측)"},"clock":{"placeholder":true,"by_sector":{"rack":{"sector":"rack","phase":null,"phase_angle":null,"confidence":null,"evidence":null,"asof":null},"jpeq":{"sector":"jpeq","phase":null,"phase_angle":null,"confidence":null,"evidence":null,"asof":null},"power":{"sector":"power","phase":null,"phase_angle":null,"confidence":null,"evidence":null,"asof":null},"optics":{"sector":"optics","phase":null,"phase_angle":null,"confidence":null,"evidence":null,"asof":null},"mem":{"sector":"mem","phase":null,"phase_angle":null,"confidence":null,"evidence":null,"asof":null}},"src":"R03_CLOCK 미산출 — 스키마 {sector,phase,phase_angle,confidence,evidence,asof} 가정 placeholder"},"sector_label":{"rack":"랙/서버","mem":"메모리","optics":"광통신","power":"전력/신재생","jpeq":"일본 장비·소재"},"sector_order":["rack","jpeq","power","optics","mem"],"companies":[{"id":"DELL","name":"Dell Technologies","ticker":"DELL US","sector":"rack","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-11-24T15:30:00-06:00","size_usd":31700573620,"proxy_yoy":167.1,"engine_yoy":33.3,"engine_state":"ready","nowcast_target":"2026-11","color_yoy":33.3,"color_src":"컴포짓(엔진)","routes":[{"label":"미국 HS847150 수입(1Q 선행; Dell·경쟁사 전체 바스켓)","window":"2026-04~06","cur_usd":76567316509.0,"yoy":114.3,"metric":"value","w_mid":0.175},{"label":"멕시코 HS8471 수출(1Q 선행; 후아레스 포함 가능·Dell 전용 아님)","window":"2026-04~06","cur_usd":52289409231.00001,"yoy":193.5,"metric":"value","w_mid":0.35}]},{"id":"JBL","name":"Jabil","ticker":"JBL US","sector":"rack","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"2026-09-24 개장전","size_usd":3570341084,"proxy_yoy":136.7,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-08","color_yoy":136.7,"color_src":"프록시 3M","routes":[{"label":"MEX·MYS·VNM 컴퓨팅+광네트워크 수출 (동분기)","window":"2026-04~06","cur_usd":64915292434.99999,"yoy":136.7,"metric":"value","w_mid":0.055}]},{"id":"LITE","name":"Lumentum","ticker":"LITE US","sector":"optics","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-11-03 (추정)","size_usd":8261499079,"proxy_yoy":122.7,"engine_yoy":81.5,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":81.5,"color_src":"컴포짓(엔진)","routes":[{"label":"태국 HS851762 수출(광트랜시버 클러스터, 선행 1Q)","window":"2026-03~05","cur_usd":7577011437.156972,"yoy":133.1,"metric":"value","w_mid":0.5},{"label":"미국 HS851762 수입·태국발(선행 1Q)","window":"2026-04~06","cur_usd":8945986721.0,"yoy":112.3,"metric":"value","w_mid":0.5}]},{"id":"CRDO","name":"Credo Technology Group","ticker":"CRDO US","sector":"optics","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"2026-12-01 (추정)","size_usd":1278876884,"proxy_yoy":3.5,"engine_yoy":144.5,"engine_state":"ready","nowcast_target":"2026-11","color_yoy":144.5,"color_src":"컴포짓(엔진)","routes":[{"label":"미국 HS854442 수입·아시아 5개국(선행 1Q, AEC 비독점 바스켓)","window":"2026-04~06","cur_usd":1278876883.9999998,"yoy":3.5,"metric":"value","w_mid":1.0}]},{"id":"JEM","name":"JEM (日本電子材料)","ticker":"6855 JP","sector":"jpeq","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"모른다 (TDnet·회사 IR 미공시)","size_usd":71886202,"proxy_yoy":121.3,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":121.3,"color_src":"프록시 3M","routes":[{"label":"프로브카드 후보: 일본 수출 9030.90(간사이·규슈 등, 동분기)","window":"2026-05~07","cur_usd":130702185.61981194,"yoy":121.3,"metric":"value","w_mid":0.55}]},{"id":"HPE","name":"Hewlett Packard Enterprise","ticker":"HPE US","sector":"rack","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-09-02 장후 (확정)","size_usd":8333239908,"proxy_yoy":61.7,"engine_yoy":32.3,"engine_state":"ready","nowcast_target":"2026-07","color_yoy":32.3,"color_src":"컴포짓(엔진)","routes":[{"label":"체코 서버 수출 8471 (동분기 — EMEA)","window":"2026-04~06","cur_usd":6308155964.000001,"yoy":49.7,"metric":"value","w_mid":0.35},{"label":"미국 서버형 수입 847150 (선행 1Q — 공용풀)","window":"2026-04~06","cur_usd":76567316509.0,"yoy":114.3,"metric":"value","w_mid":0.08}]},{"id":"SMCI","name":"Super Micro Computer","ticker":"SMCI US","sector":"rack","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"2026-11-03 (추정)","size_usd":1714079165,"proxy_yoy":76.5,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":76.5,"color_src":"프록시 3M","routes":[{"label":"미국 서버형 수출 847150 (동분기 — 산호세발)","window":"2026-04~06","cur_usd":12243422610.000008,"yoy":76.5,"metric":"value","w_mid":0.14}]},{"id":"CLS","name":"Celestica","ticker":"CLS US","sector":"rack","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-10-26","size_usd":1500465132,"proxy_yoy":1236.6,"engine_yoy":49.0,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":49.0,"color_src":"컴포짓(엔진)","routes":[{"label":"미국 서버형 수입 847150 (태국·말레이발, 선행 1Q)","window":"2026-04~06","cur_usd":7502325662.0,"yoy":1236.6,"metric":"value","w_mid":0.2}]},{"id":"MJC","name":"Micronics Japan","ticker":"6871 JP","sector":"jpeq","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"2026-11-11 (추정)","size_usd":351825272,"proxy_yoy":54.0,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":54.0,"color_src":"프록시 3M","routes":[{"label":"프로브카드 후보: 일본 수출 9030.90(사카이·주부공항 등)","window":"2026-05~07","cur_usd":541269649.3131201,"yoy":54.0,"metric":"value","w_mid":0.65}]},{"id":"ADTEST","name":"Advantest","ticker":"6857 JP","sector":"jpeq","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"2026-10-28 (추정)","size_usd":284531189,"proxy_yoy":89.6,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":89.6,"color_src":"프록시 3M","routes":[{"label":"일본 수출 9030.82(나리타 104 한정)","window":"2026-05~07","cur_usd":379374918.7257766,"yoy":89.6,"metric":"value","w_mid":0.75}]},{"id":"DISCO","name":"DISCO","ticker":"6146 JP","sector":"jpeq","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"2026-10-22 (회사 공시 예정일; 10/6 속보 선행)","size_usd":233994964,"proxy_yoy":44.8,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":44.8,"color_src":"프록시 3M","routes":[{"label":"일본 수출 8486.20(하카타 604 한정)","window":"2026-05~07","cur_usd":467989927.1395109,"yoy":44.8,"metric":"value","w_mid":0.5}]},{"id":"SCREEN","name":"SCREEN Holdings","ticker":"7735 JP","sector":"jpeq","research_only":false,"grade":"A","grade_source":"quality_verdicts E16","report":"2026-10월 하순 (회사 IR 일정; 날짜 모른다)","size_usd":828020684,"proxy_yoy":39.9,"engine_yoy":6.0,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":6.0,"color_src":"컴포짓(엔진)","routes":[{"label":"일본 수출 8486.20(시모노세키·나고야·오사카)","window":"2026-05~07","cur_usd":1505492152.9782164,"yoy":39.9,"metric":"value","w_mid":0.55}]},{"id":"HOYA","name":"HOYA","ticker":"7741 JP","sector":"jpeq","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"2026-10-30 (추정)","size_usd":90178109,"proxy_yoy":6.9,"engine_yoy":14.7,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":14.7,"color_src":"컴포짓(엔진)","routes":[{"label":"마스크블랭크 후보: 일본 수출 3701.99(나리타·요코하마·오사카·나고야)","window":"2026-05~07","cur_usd":128825870.18434632,"yoy":6.9,"metric":"value","w_mid":0.7}]},{"id":"LASERTEC","name":"Lasertec","ticker":"6920 JP","sector":"jpeq","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-10-30 (추정)","size_usd":349391281,"proxy_yoy":80.1,"engine_yoy":87.7,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":87.7,"color_src":"컴포짓(엔진)","routes":[{"label":"포토마스크 검사 후보: 일본 수출 9031.41(+1개월 창)","window":"2026-05~07","cur_usd":635256874.1372036,"yoy":80.1,"metric":"value","w_mid":0.55}]},{"id":"MURATA","name":"Murata Manufacturing","ticker":"6981 JP","sector":"jpeq","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"2026-10-30 (회사 공시 예정)","size_usd":261088111,"proxy_yoy":18.8,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":18.8,"color_src":"프록시 3M","routes":[{"label":"MLCC 후보: 일본 수출 8532.24(간사이 세관)","window":"2026-05~07","cur_usd":652720277.963793,"yoy":18.8,"metric":"value","w_mid":0.4}]},{"id":"MITSUIKZ2","name":"Mitsui Kinzoku 동박","ticker":"5706 JP","sector":"jpeq","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-11-10 (추정)","size_usd":121955095,"proxy_yoy":42.4,"engine_yoy":15.1,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":15.1,"color_src":"컴포짓(엔진)","routes":[{"label":"캐리어 부착 동박 후보: 일본 수출 7410.21(나리타·도쿄)","window":"2026-05~07","cur_usd":162606792.86969408,"yoy":42.4,"metric":"value","w_mid":0.75}]},{"id":"FURUKAWA2","name":"Furukawa Electric 동박","ticker":"5801 JP","sector":"jpeq","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-11-09 (잠정·추정)","size_usd":34672662,"proxy_yoy":44.2,"engine_yoy":15.6,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":15.6,"color_src":"컴포짓(엔진)","routes":[{"label":"무배면 정제동 동박 후보: 일본 수출 7410.11(도쿄·요코하마·나리타)","window":"2026-05~07","cur_usd":138690647.4265682,"yoy":44.2,"metric":"value","w_mid":0.25}]},{"id":"FN","name":"Fabrinet","ticker":"FN US","sector":"optics","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"2026-11-02 (추정)","size_usd":4925057434,"proxy_yoy":133.1,"engine_yoy":41.5,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":41.5,"color_src":"컴포짓(엔진)","routes":[{"label":"태국 HS851762 수출단가(광트랜시버 믹스 프록시)","window":"2026-03~05","cur_usd":7577011437.156972,"yoy":133.1,"metric":"value","w_mid":0.65}]},{"id":"COHR","name":"Coherent","ticker":"COHR US","sector":"optics","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"2026-11-04 (추정)","size_usd":3744846957,"proxy_yoy":105.6,"engine_yoy":12.3,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":12.3,"color_src":"컴포짓(엔진)","routes":[{"label":"말레이시아 HS851762 수출(이포 광트랜시버 클러스터)","window":"2026-04~06","cur_usd":3744846956.9999995,"yoy":105.6,"metric":"value","w_mid":1.0}]},{"id":"QUANTA","name":"Quanta Computer","ticker":"2382 TT","sector":"rack","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"월매출 매월 10일 · 분기 11월 중순","size_usd":10002881176,"proxy_yoy":92.3,"engine_yoy":99.2,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":99.2,"color_src":"컴포짓(엔진)","routes":[{"label":"미국 서버형 수입 847150 (Taiwan발)","window":"2026-04~06","cur_usd":28579660504.0,"yoy":92.3,"metric":"value","w_mid":0.35}]},{"id":"WIWYNN","name":"Wiwynn","ticker":"6669 TT","sector":"rack","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"월매출 매월 10일 · 분기 11월 중순","size_usd":7144915126,"proxy_yoy":92.3,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":92.3,"color_src":"프록시 3M","routes":[{"label":"미국 서버형 수입 847150 (Taiwan발)","window":"2026-04~06","cur_usd":28579660504.0,"yoy":92.3,"metric":"value","w_mid":0.25}]},{"id":"HONHAI","name":"Hon Hai Precision Industry","ticker":"2317 TT","sector":"rack","research_only":false,"grade":"B","grade_source":"quality_verdicts E16","report":"월매출 매월 10일 · 분기 11월 중순","size_usd":16069930832,"proxy_yoy":89.5,"engine_yoy":35.0,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":35.0,"color_src":"컴포짓(엔진)","routes":[{"label":"미국 서버형 수입 847150 (Taiwan·Mexico발)","window":"2026-04~06","cur_usd":64279723329.0,"yoy":89.5,"metric":"value","w_mid":0.25}]},{"id":"INVENTEC","name":"Inventec","ticker":"2356 TT","sector":"rack","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"월매출 매월 10일 · 분기 11월 중순","size_usd":6446428057,"proxy_yoy":132.9,"engine_yoy":41.4,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":41.4,"color_src":"컴포짓(엔진)","routes":[{"label":"미국 서버형 수입 847150 (Taiwan·Thailand발)","window":"2026-04~06","cur_usd":35813489206.0,"yoy":132.9,"metric":"value","w_mid":0.18}]},{"id":"GIGABYTE","name":"Giga-Byte Technology","ticker":"2376 TT","sector":"rack","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"월매출 매월 10일 · 분기 11월 중순","size_usd":2000576235,"proxy_yoy":92.3,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":92.3,"color_src":"프록시 3M","routes":[{"label":"미국 서버형 수입 847150 (Taiwan발)","window":"2026-04~06","cur_usd":28579660504.0,"yoy":92.3,"metric":"value","w_mid":0.07}]},{"id":"CATL","name":"宁德时代 CATL","ticker":"300750 CH","sector":"power","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"A주 분기공시(4월말·8월말·10월말)","size_usd":2717062816,"proxy_yoy":-36.4,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":-36.4,"color_src":"프록시 3M","routes":[{"label":"미러 850760 (19개국 대중국 수입)","window":"2026-05~07","cur_usd":7763036615.999999,"yoy":-36.4,"metric":"value","w_mid":0.35}]},{"id":"JINKO","name":"JinkoSolar Holding Co., Ltd.","ticker":"JKS US","sector":"power","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"A주 분기공시(4월말·8월말·10월말)","size_usd":250881286,"proxy_yoy":-60.7,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":-60.7,"color_src":"프록시 3M","routes":[{"label":"미러 PV 셀+모듈 중량축 (854140/854142/854143)","window":"2026-05~07","cur_usd":1393784920.9999998,"yoy":-60.7,"metric":"weight","w_mid":0.18}]},{"id":"CANADIAN","name":"Canadian Solar Inc.","ticker":"CSIQ US","sector":"power","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"A주 분기공시(4월말·8월말·10월말)","size_usd":195129889,"proxy_yoy":-58.0,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":-58.0,"color_src":"프록시 3M","routes":[{"label":"미러 PV 셀+모듈 (854140/854142/854143)","window":"2026-05~07","cur_usd":1393784920.9999998,"yoy":-58.0,"metric":"value","w_mid":0.14}]},{"id":"LONGI","name":"隆基绿能 LONGi","ticker":"601012 CH","sector":"power","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"A주 분기공시(4월말·8월말·10월말)","size_usd":278756984,"proxy_yoy":-58.0,"engine_yoy":-28.0,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":-28.0,"color_src":"컴포짓(엔진)","routes":[{"label":"미러 PV 셀+모듈 중량축 (854140/854142/854143)","window":"2026-05~07","cur_usd":1393784920.9999998,"yoy":-58.0,"metric":"value","w_mid":0.2}]},{"id":"SUNGROW","name":"阳光电源 Sungrow","ticker":"300274 CH","sector":"power","research_only":false,"grade":"C","grade_source":"quality_verdicts E16","report":"A주 분기공시(4월말·8월말·10월말)","size_usd":658147462,"proxy_yoy":-45.8,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":-45.8,"color_src":"프록시 3M","routes":[{"label":"미러 850440 금액축 (19개국 대중국 수입)","window":"2026-05~07","cur_usd":2632589846.0,"yoy":-45.8,"metric":"value","w_mid":0.25}]},{"id":"DEYE","name":"德业股份 Deye","ticker":"605117 CH","sector":"power","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"A주 분기공시(4월말·8월말·10월말)","size_usd":263258985,"proxy_yoy":-45.8,"engine_yoy":83.3,"engine_state":"ready","nowcast_target":"2026-09","color_yoy":83.3,"color_src":"컴포짓(엔진)","routes":[{"label":"미러 850440 중량축 (19개국 대중국 수입)","window":"2026-05~07","cur_usd":2632589846.0,"yoy":-45.8,"metric":"value","w_mid":0.1}]},{"id":"HANGKE","name":"杭可科技 Hangke","ticker":"688006 CH","sector":"power","research_only":false,"grade":"제외","grade_source":"quality_verdicts E16","report":"A주 분기공시(4월말·8월말·10월말)","size_usd":184382420,"proxy_yoy":-39.8,"engine_yoy":null,"engine_state":"insufficient_nowcast","nowcast_target":"2026-09","color_yoy":-39.8,"color_src":"프록시 3M","routes":[{"label":"미러 847989 금액축 (19개국 대중국 수입)","window":"2026-05~07","cur_usd":921912098.0,"yoy":-39.8,"metric":"value","w_mid":0.2}]},{"id":"KIOXIA","name":"KIOXIA Holdings","ticker":"285A JP","sector":"mem","research_only":true,"grade":null,"grade_source":"미평가","report":"2026-11 예정 (정확한 날짜 모른다)","size_usd":2786663034,"proxy_yoy":329.9,"engine_yoy":null,"engine_state":null,"nowcast_target":null,"color_yoy":329.9,"color_src":"프록시 3M","routes":[{"label":"일본 플래시메모리 IC 수출 HS 854232921","window":"2026-05~07","cur_usd":2786663033.667372,"yoy":329.9,"metric":"value","w_mid":1.0}]}]};
+var GC={A:"#2fae66",B:"#5aa9ff",C:"#c9a24a"};
+function gcol(g){return GC[g]||"#6b7280";}
+function esc(v){
+  var e={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};
+  return String(v==null?"":v).replace(/[&<>"']/g,function(ch){return e[ch];});
+}
+function fmtUsd(v){
+  if(v==null)return "환율/데이터 대기";
+  if(v>=1e9)return (v/1e9).toFixed(2)+"B$";
+  if(v>=1e6)return (v/1e6).toFixed(1)+"M$";
+  return Math.round(v/1e3)+"K$";
+}
+function yoyTxt(y){return y==null?"–":(y>0?"+":"")+y.toFixed(1)+"%";}
+function mix(a,b,t){return "rgb("+a.map(function(v,i){return Math.round(v+(b[i]-v)*t);}).join(",")+")";}
+var NEU=[58,65,82],RED=[226,87,79],GRN=[47,174,102];
+function col(y){
+  if(y==null)return "#2b3242";
+  var t=Math.max(-30,Math.min(30,y))/30;
+  return t<0?mix(NEU,RED,-t):mix(NEU,GRN,t);
+}
+// ── 순수 JS squarified treemap ──
+function squarify(items,x,y,w,h){
+  var total=0,i;for(i=0;i<items.length;i++)total+=items[i].v;
+  if(total<=0||w<=0||h<=0)return [];
+  var sc=w*h/total,it=[],out=[];
+  for(i=0;i<items.length;i++)if(items[i].v>0)it.push({o:items[i],a:items[i].v*sc});
+  it.sort(function(a,b){return b.a-a.a;});
+  var rx=x,ry=y,rw=w,rh=h,k=0;
+  function worst(row,s,len){
+    var mx=0,mn=Infinity,j;
+    for(j=0;j<row.length;j++){if(row[j].a>mx)mx=row[j].a;if(row[j].a<mn)mn=row[j].a;}
+    var s2=s*s,l2=len*len;
+    return Math.max(l2*mx/s2,s2/(l2*mn));
+  }
+  while(k<it.length){
+    var len=Math.min(rw,rh),row=[it[k]],s=it[k].a;k++;
+    while(k<it.length){
+      var s2=s+it[k].a,r2=row.concat([it[k]]);
+      if(worst(row,s,len)>=worst(r2,s2,len)){row=r2;s=s2;k++;}else break;
+    }
+    var thick=s/len,off=0,j;
+    for(j=0;j<row.length;j++){
+      var side=row[j].a/thick;
+      if(rw>=rh)out.push({o:row[j].o,x:rx,y:ry+off,w:thick,h:side});
+      else out.push({o:row[j].o,x:rx+off,y:ry,w:side,h:thick});
+      off+=side;
+    }
+    if(rw>=rh){rx+=thick;rw-=thick;}else{ry+=thick;rh-=thick;}
+  }
+  return out;
+}
+var map=document.getElementById("u01-map"),detail=document.getElementById("u01-detail"),sel=null;
+function phaseTxt(sec){
+  var ck=DATA.clock,e=(ck.by_sector||{})[sec];
+  if(ck.placeholder||!e||e.phase==null)return "R03 데이터 대기(placeholder)";
+  var t=e.phase;
+  if(e.phase_angle!=null)t+=" ("+e.phase_angle+"°)";
+  if(e.confidence!=null)t+=" · conf "+e.confidence;
+  return t;
+}
+function showDetail(c){
+  sel=c.id;
+  var now=(c.engine_yoy!=null)?yoyTxt(c.engine_yoy)+(c.nowcast_target?" → "+c.nowcast_target+" 분기":"")
+        :"데이터 대기("+(c.engine_state||"미산출")+")";
+  var rts="";
+  for(var i=0;i<c.routes.length;i++){
+    var r=c.routes[i];
+    rts+="<li>"+esc(r.label)+" — 창 "+esc(r.window||"관측 부족")+" · "+fmtUsd(r.cur_usd)
+       +" · YoY("+esc(r.metric)+") "+yoyTxt(r.yoy)+" · w "+esc(r.w_mid)+"</li>";
+  }
+  var grade=c.grade||"미평가";
+  detail.innerHTML=
+    '<div class="u01-dhead"><b>'+esc(c.name)+'</b><span class="tk">'+esc(c.ticker)+" · "
+    +esc(DATA.sector_label[c.sector]||c.sector)+'</span>'
+    +'<span class="u01-gbadge" style="background:'+gcol(c.grade)+'">품질 '+esc(grade)+'</span>'
+    +(c.research_only?'<span class="u01-gbadge" style="background:#6b7280">연구전용</span>':"")
+    +'<button type="button" class="u01-x" id="u01-close" aria-label="미니카드 닫기">✕ 닫기</button></div>'
+    +'<div class="u01-chips">'
+    +'<div class="u01-chip"><div class="l">현 국면</div><div class="v" style="font-size:12px">'
+    +esc(phaseTxt(c.sector))+'</div></div>'
+    +'<div class="u01-chip"><div class="l">최신 나우캐스트 YoY</div><div class="v">'+now
+    +'</div><div class="s">컴포짓 엔진 corr_yoy</div></div>'
+    +'<div class="u01-chip"><div class="l">프록시 최신 3M YoY</div><div class="v">'+yoyTxt(c.proxy_yoy)
+    +'</div><div class="s">route 축(metric) 기준</div></div>'
+    +'<div class="u01-chip"><div class="l">최신 3M 무역금액</div><div class="v">'+fmtUsd(c.size_usd)
+    +'</div><div class="s">귀속가중 중앙값 적용</div></div>'
+    +'<div class="u01-chip"><div class="l">다음 발표</div><div class="v" style="font-size:12px">'
+    +esc(c.report||"모른다")+'</div></div>'
+    +'</div><ul class="u01-routes">'+rts+'</ul>';
+  detail.classList.add("on");
+  var b=document.getElementById("u01-close");
+  if(b)b.onclick=function(){detail.classList.remove("on");sel=null;render();};
+  render();
+}
+function render(){
+  var W=map.clientWidth,H=map.clientHeight;
+  if(!W||!H)return;
+  map.innerHTML="";
+  var secs=[],waits=[],i,j;
+  for(i=0;i<DATA.sector_order.length;i++){
+    var sk=DATA.sector_order[i],mem=[],tot=0;
+    for(j=0;j<DATA.companies.length;j++){
+      var c=DATA.companies[j];
+      if(c.sector!==sk)continue;
+      if(c.size_usd&&c.size_usd>0){mem.push(c);tot+=c.size_usd;}
+      else waits.push(c);
+    }
+    if(tot>0)secs.push({k:sk,v:tot,mem:mem});
+  }
+  var srects=squarify(secs.map(function(s){return {v:s.v,ref:s};}),0,0,W,H);
+  for(i=0;i<srects.length;i++){
+    var sr=srects[i],s=sr.o.ref;
+    var sd=document.createElement("div");
+    sd.className="u01-sec";
+    sd.style.cssText="left:"+sr.x+"px;top:"+sr.y+"px;width:"+sr.w+"px;height:"+sr.h+"px";
+    var head=0;
+    if(sr.h>44&&sr.w>60){
+      head=16;
+      var hd=document.createElement("div");
+      hd.className="u01-sechead";
+      hd.textContent=(DATA.sector_label[s.k]||s.k)+" · "+fmtUsd(s.v);
+      hd.title="국면: "+phaseTxt(s.k);
+      sd.appendChild(hd);
+    }
+    var brects=squarify(s.mem.map(function(c){return {v:c.size_usd,ref:c};}),
+                        1,head+1,Math.max(0,sr.w-2),Math.max(0,sr.h-head-2));
+    for(j=0;j<brects.length;j++){
+      (function(br){
+        var c=br.o.ref,bd=document.createElement("button");
+        bd.type="button";
+        bd.className="u01-box"+(sel===c.id?" sel":"");
+        bd.setAttribute("data-company",c.id);
+        bd.setAttribute("aria-controls","u01-detail");
+        bd.setAttribute("aria-expanded",sel===c.id?"true":"false");
+        bd.style.cssText="left:"+br.x+"px;top:"+br.y+"px;width:"+Math.max(0,br.w-1)
+          +"px;height:"+Math.max(0,br.h-1)+"px;background:"+col(c.color_yoy);
+        bd.title=c.name+" ("+c.ticker+") · "+fmtUsd(c.size_usd)+" · YoY "+yoyTxt(c.color_yoy)
+          +" ["+c.color_src+"] · 품질 "+(c.grade||"미평가");
+        bd.setAttribute("aria-label",bd.title);
+        if(br.w>44&&br.h>26){
+          var lb=document.createElement("div");
+          lb.className="u01-bl";
+          lb.innerHTML=c.id+(br.h>40?'<span class="y">'+yoyTxt(c.color_yoy)+"</span>":"")
+            +(c.research_only&&br.h>54?'<span class="tag">연구전용</span>':"");
+          bd.appendChild(lb);
+        }
+        bd.onclick=function(){showDetail(c);};
+        sd.appendChild(bd);
+      })(brects[j]);
+    }
+    map.appendChild(sd);
+  }
+  var wd=document.getElementById("u01-wait");
+  if(waits.length){
+    var t=[];
+    for(i=0;i<waits.length;i++)t.push(waits[i].id);
+    wd.textContent="⚠ 크기 미산출(데이터/환율 대기): "+t.join(", ")+" — 박스 제외, 창작값으로 메우지 않음";
+  }else wd.textContent="";
+}
+var asof=document.getElementById("u01-asof");
+asof.textContent=" · 레지스트리 "+(DATA.asof.registry||"?")+" · 엔진 "+(DATA.asof.engine||"미산출")
+  +" · 품질 "+(DATA.asof.quality||"미산출")+" · 빌드 "+DATA.asof.built;
+var rt=null;
+window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(render,120);});
+render();
+})();
+</script>
+</section>

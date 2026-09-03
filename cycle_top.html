@@ -1,0 +1,91 @@
+<!-- ensemble 홈 상단 — 마이크로 마켓사이클 시계 (미니 클로드 제작, 시드 v0.1)
+     데이터: 아래 인라인 CLOCK 은 수동 시드. R03 산출 cycle_clock.json 이 나오면
+     ensemble_page_build.py 가 이 블록의 CLOCK/LEGS 를 실측값으로 치환한다. -->
+<div id="cycle-top" style="background:#0d1117;border:1px solid #233038;border-radius:14px;padding:22px 24px;font-family:'Apple SD Gothic Neo',-apple-system,sans-serif;color:#e6edf3">
+<style>
+#cycle-top .ct-h{display:flex;align-items:baseline;gap:12px;margin-bottom:4px}
+#cycle-top h2{margin:0;font-size:18px;letter-spacing:-.02em}
+#cycle-top .ct-sub{color:#8a93a3;font-size:12px}
+#cycle-top .ct-badge{margin-left:auto;font-size:11px;color:#ffd23d;border:1px solid #5a4a12;background:#2e2412;border-radius:999px;padding:3px 10px}
+#cycle-top .ct-wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+#cycle-top .ct-curve{flex:1 1 520px;min-width:340px}
+#cycle-top .ct-legs{flex:1 1 380px;min-width:300px}
+#cycle-top svg text{font-family:inherit}
+#cycle-top .leg{display:flex;gap:10px;align-items:center;padding:6px 8px;border-radius:8px;font-size:12.5px}
+#cycle-top .leg:nth-child(odd){background:#151d23}
+#cycle-top .leg .no{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex:none}
+#cycle-top .leg .nm{font-weight:650;min-width:118px}
+#cycle-top .leg .dt{color:#8a93a3;font-variant-numeric:tabular-nums;font-size:11.5px}
+#cycle-top .leg .st{margin-left:auto;font-size:11px;padding:2px 8px;border-radius:999px;white-space:nowrap}
+#cycle-top .ct-note{margin-top:10px;color:#6f8090;font-size:11px;line-height:1.5}
+</style>
+<div class="ct-h">
+  <h2>🕰 마이크로 마켓사이클 — AI 인프라 밸류체인</h2>
+  <span class="ct-sub">막스 사이클의 섹터 단위 적용 · 프록시 종합 판정</span>
+  <span class="ct-badge">v1.0 — R03 실측 반영 (2026-09-03)</span>
+</div>
+<div class="ct-wrap">
+  <div class="ct-curve"><svg id="ct-svg" viewBox="0 0 640 300" width="100%"></svg></div>
+  <div class="ct-legs" id="ct-legs"></div>
+</div>
+<p class="ct-note">곡선 위 위치 = 현재 국면(침체→초입→가속→과열→피크아웃→하강). 점 크기 = 판정 신뢰도. <b>배치는 R03 실측</b>(가격 126일 신고가 규칙 × 프록시 오버레이). 전력·냉각만 관찰 후보(미백테스트). 로테이션 연대기의 날짜는 R01 실측 대기 — 현재는 사용자 관찰 가설. 투자판단 참고용이며 투자 권유가 아닙니다.</p>
+<script>
+(function(){
+// ── 수동 시드 (R03 cycle_clock.json 으로 치환될 자리) ─────────────────────
+// phase: 0=침체 60=초입 120=가속 180=과열 240=피크아웃 300=하강 (0~360)
+var CLOCK=[{"sector": "GPU(NVDA)", "phase": 130, "conf": 0.44, "color": "#76b900", "ev": "가속 — 펀더멘털 점수 86.3/100; 수요 YoY 중앙값 75.1%"}, {"sector": "랙(DELL·HPE)", "phase": 130, "conf": 0.68, "color": "#2bc0d4", "ev": "가속 — 펀더멘털 점수 96.7/100; 수요 YoY 중앙값 131.3%"}, {"sector": "HBM", "phase": 310, "conf": 0.3, "color": "#e8912d", "ev": "하강 — 펀더멘털 점수 89.6/100; 수요 YoY 중앙값 26.6%"}, {"sector": "메모리 범용", "phase": 310, "conf": 0.34, "color": "#e06666", "ev": "하강 — 펀더멘털 점수 100.0/100; 수요 YoY 중앙값 200.0%"}, {"sector": "광통신", "phase": 310, "conf": 0.34, "color": "#9a8cff", "ev": "하강 — 펀더멘털 점수 86.4/100; 수요 YoY 중앙값 90.8%"}, {"sector": "MLCC", "phase": 310, "conf": 0.66, "color": "#ffd23d", "ev": "하강 — 펀더멘털 점수 90.4/100; 수요 YoY 중앙값 42.6%"}, {"sector": "CPU", "phase": 310, "conf": 0.42, "color": "#3fbf7a", "ev": "하강 — 펀더멘털 점수 72.1/100; 수요 YoY 중앙값 31.5%"}, {"sector": "전력·냉각(후보)", "phase": 55, "conf": 0.3, "color": "#f0f6fc", "ev": "R04 병목 1위 계열 — 미백테스트(관찰). R05 랭킹 1·2위 근거"}];
+var LEGS=[
+ {n:1,nm:"GPU 랠리(NVDA)",     dt:"~2023 → (가설)",     st:"성숙",   c:"#76b900"},
+ {n:2,nm:"랙 1차(SMCI 등)",    dt:"2024 (가설)",         st:"완료",   c:"#2bc0d4"},
+ {n:3,nm:"HBM 독주(하이닉스)", dt:"2024~25 (가설)",      st:"성숙",   c:"#e8912d"},
+ {n:4,nm:"메모리 전종목",      dt:"25H2~26H1 (가설)",    st:"과열",   c:"#e06666"},
+ {n:5,nm:"광통신 + CPU",       dt:"2026 초~ (가설)",     st:"가속",   c:"#9a8cff"},
+ {n:6,nm:"MLCC 폭발",          dt:"2026 (가설)",         st:"과열?",  c:"#ffd23d"},
+ {n:7,nm:"랙 2차(DELL 대장)",  dt:"26H2~ 진행중",        st:"가속",   c:"#2bc0d4"},
+ {n:8,nm:"❓ 차기 대시세",      dt:"R04·R05 도출중",      st:"관찰",   c:"#f0f6fc"}
+];
+// ── 곡선 렌더 ────────────────────────────────────────────────────────────
+var svg=document.getElementById('ct-svg'), NS='http://www.w3.org/2000/svg';
+function el(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+var W=640,H=300,L=40,R=610,MID=170,AMP=95;
+// phase(0~360) → 곡선 좌표: 0침체(저점)→180과열(고점)→360 다시 저점
+function xy(ph){var t=ph/360;var x=L+(R-L)*t;var y=MID-AMP*Math.sin(Math.PI*2*t-Math.PI/2)-0;return [x,y];}
+var d='M';for(var p=0;p<=360;p+=4){var c=xy(p);d+=(p?'L':'')+c[0].toFixed(1)+','+c[1].toFixed(1);}
+svg.appendChild(el('path',{d:d,fill:'none',stroke:'#233038','stroke-width':2.5}));
+// 국면 라벨
+var zones=[[0,'침체'],[60,'초입'],[120,'가속'],[180,'과열'],[240,'피크아웃'],[300,'하강']];
+zones.forEach(function(z){var c=xy(z[0]+28);var t=el('text',{x:c[0],y:288,'text-anchor':'middle',fill:'#6f8090','font-size':11});t.textContent=z[1];svg.appendChild(t);
+ var g=xy(z[0]);svg.appendChild(el('line',{x1:g[0],y1:g[1],x2:g[0],y2:278,stroke:'#1b242c','stroke-width':1}));});
+// 위험/기회 음영대
+svg.appendChild(el('text',{x:L+4,y:26,fill:'#3fbf7a','font-size':11})).textContent='기회 (초입 매집대)';
+svg.appendChild(el('text',{x:R-150,y:26,fill:'#e06666','font-size':11})).textContent='위험 (피크아웃 경계)';
+// 섹터 점
+// 라벨 충돌 회피: phase 순 정렬 후, 가까운 이웃(Δx<90px)은 위/아래·2단 오프셋 순환
+var sorted=CLOCK.slice().sort(function(a,b){return a.phase-b.phase});
+var lastX=-999, tier=0;
+sorted.forEach(function(s){
+ var c=xy(s.phase),r=5+8*s.conf;
+ if(c[0]-lastX<90){tier=(tier+1)%4;}else{tier=0;}
+ lastX=c[0];
+ var dot=el('circle',{cx:c[0],cy:c[1],r:r,fill:s.color,'fill-opacity':.85,stroke:'#0d1117','stroke-width':1.5});
+ var tt=el('title'); tt.textContent=s.sector+' — 신뢰도 '+Math.round(s.conf*100)+'%\n'+s.ev; dot.appendChild(tt);
+ svg.appendChild(dot);
+ var dy=[-1,1,-1,1][tier]*(r+8+[0,0,14,14][tier]);
+ var ly=c[1]+dy+(dy>0?8:0);
+ svg.appendChild(el('line',{x1:c[0],y1:c[1]+(dy>0?r:-r),x2:c[0],y2:ly+(dy>0?-9:3),stroke:s.color,'stroke-width':.8,'stroke-opacity':.5}));
+ var lbl=el('text',{x:c[0],y:ly,'text-anchor':'middle',fill:'#e6edf3','font-size':10.5,'font-weight':650});
+ lbl.textContent=s.sector; svg.appendChild(lbl);
+});
+// ── 연대기 렌더 ──────────────────────────────────────────────────────────
+var lg=document.getElementById('ct-legs');
+lg.innerHTML='<div style="font-size:12px;color:#8a93a3;margin-bottom:6px">로테이션 연대기 (①→⑧)</div>';
+LEGS.forEach(function(x){
+ var d=document.createElement('div');d.className='leg';
+ d.innerHTML='<span class="no" style="background:'+x.c+'22;color:'+x.c+';border:1px solid '+x.c+'55">'+x.n+'</span>'
+  +'<span class="nm">'+x.nm+'</span><span class="dt">'+x.dt+'</span>'
+  +'<span class="st" style="background:#151d23;border:1px solid #233038;color:#8a93a3">'+x.st+'</span>';
+ lg.appendChild(d);
+});
+})();
+</script>
+</div>

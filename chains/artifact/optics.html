@@ -1,0 +1,153 @@
+<title>광통신 발라보기</title>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f4f5f7;--panel:#fff;--panel2:#eef0f4;--ink:#1b202a;--dim:#6b7484;--line:#dde1e8;
+  --acc:#2f7fe0;--accSoft:rgba(47,127,224,.16);--cyan:#0d93a5;--amber:#c98a12;--pos:#0f9d76;--neg:#d84557;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace
+}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#0f1216;--panel:#161a21;--panel2:#1d222b;--ink:#e6eaf1;--dim:#8a93a4;--line:#262c37;--acc:#4ea1ff;--accSoft:rgba(78,161,255,.18);--cyan:#34c5d7;--amber:#ffb02e;--pos:#3fd0a4;--neg:#ff5d6e}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1216;--panel:#161a21;--panel2:#1d222b;--ink:#e6eaf1;--dim:#8a93a4;--line:#262c37;--acc:#4ea1ff;--accSoft:rgba(78,161,255,.18);--cyan:#34c5d7;--amber:#ffb02e;--pos:#3fd0a4;--neg:#ff5d6e}
+:root[data-theme="light"]{color-scheme:light;--bg:#f4f5f7;--panel:#fff;--panel2:#eef0f4;--ink:#1b202a;--dim:#6b7484;--line:#dde1e8;--acc:#2f7fe0;--accSoft:rgba(47,127,224,.16);--cyan:#0d93a5;--amber:#c98a12;--pos:#0f9d76;--neg:#d84557}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;margin:0;padding:22px 18px 60px;line-height:1.48;-webkit-font-smoothing:antialiased}.wrap{max-width:1120px;margin:auto}
+header{margin-bottom:14px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:radial-gradient(circle at 1px 1px,var(--line) 1px,transparent 1.6px) 0 0/14px 14px,var(--panel);position:relative}h1{font-size:20px;margin:0 0 4px;font-weight:800;letter-spacing:-.3px}.sub{font-size:11.5px;color:var(--dim)}.badge{display:inline-block;font-size:10px;padding:2px 7px;border:1px solid var(--line);border-radius:999px;background:var(--panel);margin:7px 4px 0 0}.badge.est{color:var(--amber);border-color:var(--amber)}.badge.nf{color:var(--neg);border-color:var(--neg)}.badge.ok{color:var(--pos);border-color:var(--pos)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 10px}.chip{font-size:12px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);cursor:pointer;color:var(--dim);background:var(--panel);user-select:none}.chip.on{background:var(--accSoft);color:var(--acc);border-color:var(--acc);font-weight:700}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:11.5px}th{font-size:10.5px;color:var(--dim);text-align:left;font-weight:600;letter-spacing:.03em;padding:6px 9px;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}td.nowrap{white-space:nowrap}tr:last-child td{border-bottom:0}tbody tr.click{cursor:pointer}tbody tr.sel{background:var(--accSoft)}.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}.box,.mini{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 14px}.k{font-size:10px;color:var(--dim);letter-spacing:.05em}.v{font-size:18px;font-weight:800;font-family:var(--mono);font-variant-numeric:tabular-nums;margin-top:2px}.s{font-size:10px;color:var(--dim);margin-top:2px}h2{font-size:13.5px;margin:0 0 2px;font-weight:800}h3{font-size:12px;margin:0 0 6px}.cap{font-size:10.5px;color:var(--dim);margin-bottom:9px}.note{font-size:10.5px;color:var(--dim);line-height:1.62}.call{padding:9px 11px;border-left:3px solid var(--acc);background:var(--panel2);border-radius:3px 8px 8px 3px;font-size:11px;margin:7px 0}.call.warn{border-color:var(--amber)}.call.risk{border-color:var(--neg)}.pos{color:var(--pos)}.neg{color:var(--neg)}.amber{color:var(--amber)}.mono{font-family:var(--mono)}
+.track{display:grid;grid-template-columns:90px repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:10.5px}.track>div{background:var(--panel);padding:7px 8px}.track .head{background:var(--panel2);color:var(--dim);font-weight:700}.track .co{font-family:var(--mono);font-weight:800}.yes{color:var(--pos)}.maybe{color:var(--amber)}.nf{color:var(--neg)}
+.srcs{columns:2;column-gap:24px}.src{break-inside:avoid;font-size:10.5px;margin:0 0 7px;padding-left:23px;position:relative}.src b{position:absolute;left:0;color:var(--acc);font-family:var(--mono)}a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}svg{display:block;width:100%;height:auto}svg text{font-family:var(--mono);font-size:9px;fill:var(--dim)}footer{font-size:10px;color:var(--dim);margin-top:20px;line-height:1.7}
+@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}.track{grid-template-columns:68px repeat(4,150px);overflow-x:auto}.srcs{columns:1}body{padding:12px 9px 40px}.panel{padding:12px}.hide-sm{display:none}}
+@media(prefers-reduced-motion:no-preference){.chip{transition:.15s background,.15s color}}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>⚡ AI 광인터커넥트 — 800G에서 1.6T로</h1>
+  <div class="sub">CRDO · COHR · LITE · FN + AAOI 후보 · as of 2026-09-02 · 공시 USD million · 무역 원자료 통화 미환산</div>
+  <span class="badge ok">실적 = GAAP actual</span><span class="badge est">E = 회사 가이던스 중간값</span><span class="badge nf">미공개 = NOT FOUND</span>
+</header>
+
+<div class="chips" id="chips"></div>
+<section class="panel scroll">
+  <h2>체인 개요</h2><div class="cap">행 클릭으로 상세 기업 전환 · latest는 실제 실적, guide는 미래 추정 범위</div>
+  <table id="overview"></table>
+</section>
+<div id="detail"></div>
+
+<section class="panel">
+  <h2>1.6T 세대 전환 트래커</h2>
+  <div class="cap">제품·생산·수요에 대한 회사 원문 수준만 반영. 세대별 매출을 추정해 채우지 않음.</div>
+  <div class="scroll"><div class="track">
+    <div class="head">기업</div><div class="head">800G</div><div class="head">1.6T</div><div class="head">3.2T+</div><div class="head">세대별 매출</div>
+    <div class="co">CRDO</div><div class="yes">공시 제품</div><div class="maybe">신흥 AEC 제품</div><div class="nf">NOT FOUND</div><div class="nf">NOT FOUND</div>
+    <div class="co">COHR</div><div class="yes">Ipoh 양산</div><div class="yes">Ipoh 준비·성장 엔진</div><div class="maybe">3.2T 준비·6.4T 로드맵</div><div class="nf">NOT FOUND</div>
+    <div class="co">LITE</div><div class="yes">클라우드 성장 기반</div><div class="maybe">채택이 더해지기 시작</div><div class="nf">NOT FOUND</div><div class="nf">NOT FOUND</div>
+    <div class="co">FN</div><div class="maybe">고객/시장 간접노출</div><div class="maybe">고객/시장 간접노출</div><div class="nf">NOT FOUND</div><div class="nf">NOT FOUND</div>
+    <div class="co">AAOI</div><div class="yes">출하량 2배+ QoQ</div><div class="yes">수요가 능력 초과</div><div class="nf">NOT FOUND</div><div class="nf">NOT FOUND</div>
+  </div></div>
+  <div class="call warn"><b>800G→1.6T ASP 점프: NOT FOUND.</b> 어느 회사도 비교 가능한 정확한 세대별 ASP를 공시하지 않았다. LITE는 FY26 클라우드 트랜시버 +173%가 물량 증가 주도, 낮은 ASP 일부 상쇄라고 설명했다. 가격 점프의 증거가 아니다.</div>
+</section>
+
+<div class="grid2">
+  <section class="panel">
+    <h2>Fabrinet 고객 교차검증</h2><div class="cap">FY26 10-K 명시 매출 비중 · 최종 광모듈 고객/제품 귀속을 뜻하지 않음</div>
+    <table><thead><tr><th>고객</th><th class="num">FN 비중</th><th>광학 체인 연결고리</th></tr></thead><tbody>
+      <tr><td>Cisco</td><td class="num">19.9%</td><td>통신·데이터센터 네트워킹</td></tr>
+      <tr><td>NVIDIA</td><td class="num">16.3%</td><td>AI 데이터센터 연결</td></tr>
+      <tr><td>Nokia</td><td class="num">10.7%</td><td>통신 인프라</td></tr>
+      <tr><td>Amazon</td><td class="num">10.5%</td><td>하이퍼스케일 클라우드</td></tr>
+      <tr><td><b>합계</b></td><td class="num"><b>57.4%</b></td><td>고객 집중도 리스크</td></tr>
+    </tbody></table>
+  </section>
+  <section class="panel">
+    <h2>하이퍼스케일러 집중도</h2><div class="cap">공시 정의가 회사별로 다르므로 단순 동급 비교 주의</div>
+    <div id="concChart"></div>
+    <div class="note">CRDO는 <b>최종고객 상위 3곳 84%</b>, FN은 명시 고객 4곳 57.4%, LITE는 상위 2곳 41.6%. COHR는 익명 고객 2곳 32%. 집중도는 AI 램프의 탄력과 설계변경 리스크를 동시에 확대한다.</div>
+  </section>
+</div>
+
+<section class="panel">
+  <h2>태국·미국 무역 프록시</h2>
+  <div class="cap">태국 수출 HS 851762 value/weight (좌, 2024 Q1=100) · 미국 수입 HS 851762 value (우, 원자료 단위) · 기업 실적 레벨 캘리브레이션 금지</div>
+  <div id="proxyChart"></div>
+  <div class="grid3" style="margin-top:9px">
+    <div class="mini"><div class="k">태국 851762 value/weight</div><div class="v">220.6</div><div class="s">2026 Q1 · 2024 Q1=100</div></div>
+    <div class="mini"><div class="k">미국 851762 태국발 value</div><div class="v">8.946M</div><div class="s">2026 Q2 · 원자료 단위</div></div>
+    <div class="mini"><div class="k">미국 854470</div><div class="v neg" style="font-size:15px">NOT FOUND</div><div class="s">us_long.csv 행 0개 · 854442 대체 금지</div></div>
+  </div>
+  <div class="call risk"><b>분류 한계.</b> 851762는 수신·변환·전송·재생 장치와 스위칭·라우팅까지 포함하는 광범위 코드다. 854470은 광섬유 케이블이며 광모듈 코드가 아니다. 태국 value/weight 상승은 제품·국가·중량 믹스 변화가 섞인 모멘텀 지표다. 2026 Q2 태국은 4~5월 2개월만 포함한 partial.</div>
+</section>
+
+<section class="panel scroll">
+  <h2>E06 프록시 진단 — 봉인된 과거 테스트</h2>
+  <div class="cap">현재 실적 예측이 아니라 모델 신뢰도 기록. 표본·게이트를 통과하지 못한 값은 neutral/momentum only.</div>
+  <table><thead><tr><th>기업</th><th>축</th><th>route</th><th class="num">fit n</th><th class="num">ρ</th><th class="num">OOS n</th><th class="num">OOS MAE</th><th class="num">당시 est</th><th>범위/판정</th></tr></thead><tbody>
+    <tr><td>CRDO</td><td>value</td><td>partial</td><td class="num">9</td><td class="num">0.695</td><td class="num">3</td><td class="num neg">67.524pp</td><td class="num">$651.622M</td><td class="neg">범위 NOT FOUND · low · neutral only</td></tr>
+    <tr><td>COHR</td><td>value</td><td>ready</td><td class="num">13</td><td class="num">0.530</td><td class="num">8</td><td class="num">11.741pp</td><td class="num">$1,775.679M</td><td>80% conformal $1,264.682~2,286.675M</td></tr>
+    <tr><td>LITE</td><td>value</td><td>partial</td><td class="num">9</td><td class="num">0.984</td><td class="num">3</td><td class="num">11.154pp</td><td class="num">$968.868M</td><td class="amber">범위 NOT FOUND · 태국 6월 결측/보간</td></tr>
+    <tr><td>FN</td><td>value</td><td>partial</td><td class="num">—</td><td class="num">—</td><td class="num">4</td><td class="num">6.054pp</td><td class="num">$1,383.806M</td><td class="amber">momentum only</td></tr>
+  </tbody></table>
+  <div class="call warn"><b>FN 축 전환 REJECTED.</b> unit_price 후보(ρ 0.831, OOS n=4, MAE 4.755pp, est $1,480.622M, 80% $1,330.664~1,630.580M)는 공통 OOS n&lt;6이고 triple gate를 통과하지 못했다. value 대비 공통표본 MAE 개선도 0.129pp뿐이라 현 축은 value로 유지한다.</div>
+</section>
+
+<section class="panel">
+  <h2>투자 시사점</h2><div class="cap">확인된 사실과 해석을 분리한 체크리스트</div>
+  <div class="grid2">
+    <div><div class="call"><b class="pos">수요 동행.</b> COHR InP 증설, LITE 1.6T 채택 시작, AAOI 능력 부족, FN 데이터센터 47.9%가 같은 방향을 가리킨다.</div><div class="call warn"><b>집중 리스크.</b> CRDO 상위 3 최종고객 84% 등 소수 고객의 일정과 설계 전환이 분기 변동성을 키울 수 있다.</div><div class="call warn"><b>AAOI 고베타.</b> 2026 Q2 매출 +86.4% YoY지만 GAAP 영업손실 $24.7M. 월 650k 목표는 미래계획이다.</div></div>
+    <div><div class="call risk"><b>ASP 미증명.</b> 정확한 800G·1.6T ASP는 NOT FOUND. 세대 전환을 곧바로 단가 상승으로 등치하지 않는다.</div><div class="call risk"><b>프록시 순도.</b> HS 851762/854470은 광모듈 전용이 아니다. 현재 모델이 아닌 중립적 모멘텀 보조지표다.</div><div class="call"><b>확인 순서.</b> 다음 실적에서 1.6T 양산 매출, 고객 다변화, 수율/증설 전환, GAAP 이익 동반 여부를 우선 확인한다.</div></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>1차 출처</h2><div class="cap">SEC·회사 IR·미국 Census만 사용. 수치 근거는 동봉 optics_data.json에 구조화.</div>
+  <div class="srcs">
+    <div class="src"><b>S01</b><a href="https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx">Credo FY27 Q1 results</a></div>
+    <div class="src"><b>S02</b><a href="https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm">Credo FY26 10-K</a></div>
+    <div class="src"><b>S03</b><a href="https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm">Coherent FY26 10-K</a></div>
+    <div class="src"><b>S04</b><a href="https://www.sec.gov/Archives/edgar/data/820318/000119312526346860/d128030dex992.htm">Coherent FY26 Q4 deck</a></div>
+    <div class="src"><b>S05</b><a href="https://www.coherent.com/news/press-releases/manufacturing-milestone-300-million-transceiveres-shipped">Coherent Ipoh milestone</a></div>
+    <div class="src"><b>S06</b><a href="https://www.coherent.com/content/dam/coherent/site/en/documents/investors/investor-presentations/2026/march-17/OFC-2026-Investor%20event-deck-vf.pdf">Coherent OFC 2026 deck</a></div>
+    <div class="src"><b>S07</b><a href="https://www.sec.gov/Archives/edgar/data/1633978/000162828026055726/lite_ex991xq4fy26.htm">Lumentum FY26 Q4 results</a></div>
+    <div class="src"><b>S08</b><a href="https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm">Lumentum FY26 10-K</a></div>
+    <div class="src"><b>S09</b><a href="https://www.sec.gov/Archives/edgar/data/1408710/000140871026000026/fn-2026811xex991q426.htm">Fabrinet FY26 Q4 results</a></div>
+    <div class="src"><b>S10</b><a href="https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm">Fabrinet FY26 10-K</a></div>
+    <div class="src"><b>S11</b><a href="https://investors.ao-inc.com/news-releases/news-release-details/applied-optoelectronics-reports-second-quarter-2026-results">AAOI 2026 Q2 results</a></div>
+    <div class="src"><b>S12</b><a href="https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm">AAOI 2026 Q2 10-Q</a></div>
+    <div class="src"><b>S13</b><a href="https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm">AAOI 2025 10-K</a></div>
+    <div class="src"><b>S14</b><a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001158114.json">SEC companyfacts: AAOI</a></div>
+    <div class="src"><b>S15</b><a href="https://www.census.gov/foreign-trade/schedules/b/2026/c85.pdf">2026 Schedule B Chapter 85</a></div>
+    <div class="src"><b>S16</b><a href="https://www.census.gov/foreign-trade/schedules/b/index.html">Census Schedule B hub</a></div>
+  </div>
+</section>
+
+<footer>투자판단 참고용 · 매수/매도 권유 아님 · actual과 est를 분리 · 공시 통화 미환산 · NOT FOUND를 임의 추정으로 대체하지 않음<br>로컬 검증 근거: E06_SECTOR_OPTICS sealed outputs, route audit, integrated registry · 상세 감사 trail은 NOTES.md 참조</footer>
+</div>
+
+<script id="g" type="application/json">
+{
+  "companies":[
+    {"t":"CRDO","n":"Credo","role":"DSP·SerDes·AEC","latest":"FY27 Q1","rev":479.003,"op":120.700,"yoy":114.7,"guide":[525,535],"conc":84.0,"concLabel":"상위 3 최종고객","qs":[["FY26 Q1",223.074,60.742,0],["FY26 Q2",268.027,78.796,0],["FY26 Q3",407.012,149.622,0],["FY26 Q4",437.003,155.845,0],["FY27 Q1",479.003,120.700,0],["FY27 Q2E",530,null,1]],"mix":[["FY26 상위 3 최종고객",84.0],["FY26 상위 10 고객",90.0]],"gen":"100G/200G/400G/800G 및 신흥 1.6T AEC 공시. 세대별 매출 NOT FOUND.","cap":"팹리스. 1.6T 생산능력 수치 NOT FOUND.","backlog":"표준 수주잔고 금액 NOT FOUND."},
+    {"t":"COHR","n":"Coherent","role":"트랜시버·레이저·광부품","latest":"FY26 Q4","rev":2045.533,"op":241.917,"yoy":33.7,"guide":[2200,2400],"conc":32.0,"concLabel":"상위 2 고객","qs":[["FY25 Q4",1529.436,137.978,0],["FY26 Q1",1581.378,172.239,0],["FY26 Q2",1685.629,198.624,0],["FY26 Q3",1805.641,245.064,0],["FY26 Q4",2045.533,241.917,0],["FY27 Q1E",2300,null,1]],"mix":[["Datacenter & Communications FY26",74.1],["Industrial FY26",25.9]],"gen":"Ipoh 800G 양산, 1.6T·3.2T 준비. 1.6T/3.2T/6.4T 성장 엔진.","cap":"InP 출력 2026년 말 2배, 2027년 다시 2배+ 계획. Ipoh 누적 3억 트랜시버.","backlog":"세대별 수주잔고 금액 NOT FOUND."},
+    {"t":"LITE","n":"Lumentum","role":"클라우드 트랜시버·OCS","latest":"FY26 Q4","rev":1006.3,"op":279.3,"yoy":109.3,"guide":[1225,1275],"conc":41.6,"concLabel":"상위 2 고객","qs":[["FY25 Q4",480.7,-8.4,0],["FY26 Q1",533.8,null,0],["FY26 Q2",665.5,null,0],["FY26 Q3",808.4,174.5,0],["FY26 Q4",1006.3,279.3,0],["FY27 Q1E",1250,null,1]],"mix":[["Components FY26 Q4",64.5],["Systems FY26 Q4",35.5]],"gen":"800G 성장 기반에 1.6T 채택이 더해지기 시작. 세대별 매출 NOT FOUND.","cap":"태국 소유 제조시설 1.173M ft²; 태국·대만·말레이시아 공급망.","backlog":"FY26 클라우드 트랜시버 +173%, 물량 증가 주도·낮은 ASP 일부 상쇄."},
+    {"t":"FN","n":"Fabrinet","role":"태국 광전자 EMS","latest":"FY26 Q4","rev":1315.788,"op":134.249,"yoy":44.6,"guide":[1375,1425],"conc":57.4,"concLabel":"명시 고객 4곳","qs":[["FY25 Q4",909.692,89.003,0],["FY26 Q1",978.128,94.288,0],["FY26 Q2",1132.888,114.365,0],["FY26 Q3",1214.293,120.044,0],["FY26 Q4",1315.788,134.249,0],["FY27 Q1E",1400,null,1]],"mix":[["Data center FY26",47.9],["Communications infrastructure FY26",33.3],["Auto/industrial/other FY26",18.8]],"gen":"EMS 특성상 800G·1.6T 세대별 매출 NOT FOUND. 고객/최종시장 간접 확인.","cap":"제조·인력 대부분 태국. 1.6T 전용 능력 수치 NOT FOUND.","backlog":"표준 수주잔고 금액 NOT FOUND."},
+    {"t":"AAOI","n":"Applied Optoelectronics","role":"고베타 후보","latest":"2026 Q2","rev":191.922,"op":-24.727,"yoy":86.4,"guide":[255,290],"conc":96.6,"concLabel":"2025 상위 10 고객","qs":[["2025 Q2",102.952,-15.976,0],["2025 Q3",118.630,-18.187,0],["2025 Q4*",134.274,-11.501,2],["2026 Q1",151.144,-12.991,0],["2026 Q2",191.922,-24.727,0],["2026 Q3E",272.5,null,1]],"mix":[["2025 상위 10 고객",96.6]],"gen":"Q2 800G 출하 2배+ QoQ. 800G·1.6T 수요가 2027년 중반까지 능력 초과.","cap":"월 약 200k개에서 2026년 말 약 650k개 목표(est/계획).","backlog":"수요 초과 정성 언급, 수주잔고 금액 NOT FOUND."}
+  ],
+  "thaiIndex":[100,107.10,112.60,116.48,135.01,158.15,172.79,198.15,220.59,216.85],
+  "usWorld":[11.929,13.237,15.104,16.169,16.476,19.642,21.564,27.264,28.180,34.192],
+  "usThai":[1.572,2.034,2.362,2.523,2.999,4.214,4.855,6.215,7.003,8.946],
+  "periods":["24Q1","24Q2","24Q3","24Q4","25Q1","25Q2","25Q3","25Q4","26Q1","26Q2*"]
+}
+</script>
+<script>
+const D=JSON.parse(document.getElementById('g').textContent), $=s=>document.querySelector(s);
+let selected=0;
+const money=v=>v==null?'NOT FOUND':'$'+v.toLocaleString('en-US',{minimumFractionDigits:v<100?1:0,maximumFractionDigits:1})+'M';
+function chips(){ $('#chips').innerHTML=D.companies.map((c,i)=>`<span class="chip ${i===selected?'on':''}" data-i="${i}">${c.t}${c.t==='AAOI'?' · 후보':''}</span>`).join(''); document.querySelectorAll('.chip').forEach(x=>x.onclick=()=>{selected=+x.dataset.i;render()}) }
+function overview(){let h='<thead><tr><th>기업</th><th>역할</th><th>최근 실적</th><th class="num">매출</th><th class="num">GAAP 영업이익</th><th class="num">YoY</th><th class="num">다음 매출 guide (est)</th><th>집중도</th></tr></thead><tbody>';D.companies.forEach((c,i)=>h+=`<tr class="click ${i===selected?'sel':''}" data-i="${i}"><td class="nowrap"><b>${c.t}</b></td><td>${c.role}</td><td class="nowrap">${c.latest}</td><td class="num">${money(c.rev)}</td><td class="num ${c.op<0?'neg':''}">${money(c.op)}</td><td class="num pos">+${c.yoy.toFixed(1)}%</td><td class="num amber">${money(c.guide[0])}~${money(c.guide[1])}</td><td>${c.concLabel} ${c.conc}%</td></tr>`);$('#overview').innerHTML=h+'</tbody>';document.querySelectorAll('#overview tbody tr').forEach(x=>x.onclick=()=>{selected=+x.dataset.i;render()})}
+function finChart(c){const W=680,H=230,p={l:48,r:24,t:18,b:38},iw=W-p.l-p.r,ih=H-p.t-p.b,max=Math.max(...c.qs.map(q=>q[1]))*1.16,minOp=Math.min(0,...c.qs.map(q=>q[2]??0)),maxOp=Math.max(...c.qs.map(q=>q[2]??0));let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="분기 매출과 영업이익 차트">`;for(let k=0;k<5;k++){let y=p.t+ih*k/4;s+=`<line x1="${p.l}" x2="${W-p.r}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${p.l-5}" y="${y+3}" text-anchor="end">${Math.round(max*(1-k/4))}</text>`}const bw=iw/c.qs.length*.52;c.qs.forEach((q,i)=>{let x=p.l+iw*(i+.5)/c.qs.length,y=p.t+ih*(1-q[1]/max),col=q[3]===1?'var(--amber)':'var(--acc)';s+=`<rect x="${x-bw/2}" y="${y}" width="${bw}" height="${p.t+ih-y}" rx="3" fill="${col}" opacity="${q[3]===1?.55:.86}"/><text x="${x}" y="${H-20}" text-anchor="middle">${q[0].replace('FY','').replace('20','')}</text>`});let den=(maxOp-minOp)||1,pts=c.qs.map((q,i)=>q[2]==null?null:[p.l+iw*(i+.5)/c.qs.length,p.t+ih*(maxOp-(q[2]??0))/den]).filter(Boolean);if(pts.length>1)s+=`<polyline points="${pts.map(x=>x.join(',')).join(' ')}" fill="none" stroke="var(--cyan)" stroke-width="2.2"/>`;pts.forEach(x=>s+=`<circle cx="${x[0]}" cy="${x[1]}" r="3" fill="var(--cyan)"/>`);return s+`<text x="${p.l}" y="11">USD million · 막대 매출(actual 파랑 / est 황색) · 선 GAAP 영업이익</text></svg>`}
+function detail(){const c=D.companies[selected],mid=(c.guide[0]+c.guide[1])/2,margin=c.op/c.rev*100;$('#detail').innerHTML=`<div class="stat"><div class="box"><div class="k">${c.latest} 매출 actual</div><div class="v">${money(c.rev)}</div><div class="s pos">+${c.yoy.toFixed(1)}% YoY</div></div><div class="box"><div class="k">GAAP 영업이익 actual</div><div class="v ${c.op<0?'neg':''}">${money(c.op)}</div><div class="s">영업이익률 ${margin.toFixed(1)}%</div></div><div class="box"><div class="k">다음 분기 매출 est</div><div class="v amber">${money(mid)}</div><div class="s">회사 범위 ${money(c.guide[0])}~${money(c.guide[1])}</div></div><div class="box"><div class="k">고객 집중도</div><div class="v">${c.conc}%</div><div class="s">${c.concLabel}</div></div></div><div class="grid2"><section class="panel"><h2>${c.t} · ${c.n}</h2><div class="cap">공시 분기 재무 · AAOI 2025 Q4*는 FY−9M 파생(actual-derived), E는 회사 가이던스 중간값</div>${finChart(c)}</section><section class="panel"><h2>믹스·세대·능력</h2><div class="cap">공시된 항목만 표시</div><table><thead><tr><th>공시 믹스</th><th class="num">비중</th></tr></thead><tbody>${c.mix.map(x=>`<tr><td>${x[0]}</td><td class="num">${x[1]}%</td></tr>`).join('')}</tbody></table><div class="call"><b>세대.</b> ${c.gen}</div><div class="call warn"><b>능력.</b> ${c.cap}</div><div class="call risk"><b>수주.</b> ${c.backlog}</div></section></div>`}
+function barChart(){let cs=D.companies,W=520,H=205,p={l:55,r:20,t:18,b:36},iw=W-p.l-p.r,ih=H-p.t-p.b,max=100,s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="고객 집중도 막대 차트">`;cs.forEach((c,i)=>{let y=p.t+i*ih/cs.length+3,bh=19,w=iw*c.conc/max;s+=`<text x="${p.l-7}" y="${y+14}" text-anchor="end">${c.t}</text><rect x="${p.l}" y="${y}" width="${iw}" height="${bh}" fill="var(--panel2)" rx="3"/><rect x="${p.l}" y="${y}" width="${w}" height="${bh}" fill="${i===0?'var(--amber)':'var(--acc)'}" opacity=".82" rx="3"/><text x="${Math.min(p.l+w+5,W-31)}" y="${y+14}">${c.conc}%</text>`});return s+`</svg>`}
+function proxyChart(){const W=1040,H=280,p={l:46,r:50,t:20,b:42},iw=W-p.l-p.r,ih=H-p.t-p.b,maxL=250,maxR=38;let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="태국과 미국 무역 프록시 차트">`;for(let k=0;k<5;k++){let y=p.t+ih*k/4;s+=`<line x1="${p.l}" x2="${W-p.r}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${p.l-6}" y="${y+3}" text-anchor="end">${Math.round(maxL*(1-k/4))}</text><text x="${W-p.r+6}" y="${y+3}">${(maxR*(1-k/4)).toFixed(0)}M</text>`}const pts=(a,m)=>a.map((v,i)=>[p.l+iw*i/(a.length-1),p.t+ih*(1-v/m)]);[[D.thaiIndex,maxL,'var(--amber)'],[D.usWorld,maxR,'var(--acc)'],[D.usThai,maxR,'var(--cyan)']].forEach(z=>{let q=pts(z[0],z[1]);s+=`<polyline points="${q.map(x=>x.join(',')).join(' ')}" fill="none" stroke="${z[2]}" stroke-width="2.3"/>`;q.forEach((x,i)=>s+=`<circle cx="${x[0]}" cy="${x[1]}" r="${i===9?3.7:2.4}" fill="${z[2]}"/>`)});D.periods.forEach((x,i)=>s+=`<text x="${p.l+iw*i/(D.periods.length-1)}" y="${H-20}" text-anchor="middle">${x}</text>`);return s+`<text x="${p.l}" y="11" fill="var(--amber)">태국 value/weight 지수</text><text x="${p.l+190}" y="11" fill="var(--acc)">미국 world value</text><text x="${p.l+335}" y="11" fill="var(--cyan)">미국 태국발 value</text></svg>`}
+function render(){chips();overview();detail();$('#concChart').innerHTML=barChart();$('#proxyChart').innerHTML=proxyChart()}
+render();
+</script>

@@ -1,0 +1,2538 @@
+<title>랙 발라보기</title>
+<style>
+:root{--bg:#f4f5f7;--panel:#fff;--panel2:#eef0f4;--ink:#1b202a;--dim:#6b7484;--line:#dde1e8;--acc:#2f7fe0;--acc2:#7557d8;--accSoft:rgba(47,127,224,.16);--amber:#c98a12;--pos:#0f9d76;--neg:#d84557;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1216;--panel:#161a21;--panel2:#1d222b;--ink:#e6eaf1;--dim:#8a93a4;--line:#262c37;--acc:#4ea1ff;--acc2:#a28cff;--accSoft:rgba(78,161,255,.18);--amber:#ffb02e;--pos:#3fd0a4;--neg:#ff5d6e}}
+:root[data-theme=dark]{--bg:#0f1216;--panel:#161a21;--panel2:#1d222b;--ink:#e6eaf1;--dim:#8a93a4;--line:#262c37;--acc:#4ea1ff;--acc2:#a28cff;--accSoft:rgba(78,161,255,.18);--amber:#ffb02e;--pos:#3fd0a4;--neg:#ff5d6e}
+:root[data-theme=light]{--bg:#f4f5f7;--panel:#fff;--panel2:#eef0f4;--ink:#1b202a;--dim:#6b7484;--line:#dde1e8;--acc:#2f7fe0;--acc2:#7557d8;--accSoft:rgba(47,127,224,.16);--amber:#c98a12;--pos:#0f9d76;--neg:#d84557}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;margin:0;padding:22px 18px 60px;line-height:1.45;-webkit-font-smoothing:antialiased}.wrap{max-width:1140px;margin:0 auto}header{margin-bottom:16px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:radial-gradient(circle at 1px 1px,var(--line) 1px,transparent 1.6px) 0 0/14px 14px,var(--panel);position:relative}h1{font-size:20px;margin:0 0 4px;font-weight:800;letter-spacing:-.3px}.sub{font-size:11.5px;color:var(--dim);max-width:900px}.theme{position:absolute;right:16px;top:16px;border:1px solid var(--line);background:var(--panel);color:var(--dim);border-radius:999px;padding:5px 10px;cursor:pointer}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 10px}.chip{font-size:11.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);cursor:pointer;color:var(--dim);background:var(--panel);user-select:none}.chip.on{background:var(--accSoft);color:var(--acc);border-color:var(--acc);font-weight:700}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px}th{font-size:10.5px;color:var(--dim);text-align:left;font-weight:600;letter-spacing:.03em;padding:6px 9px;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border-bottom:none}tbody tr.pick{cursor:pointer}tbody tr.pick:hover,tbody tr.sel{background:var(--accSoft)}.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}.stat .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 14px}.stat .k{font-size:10px;color:var(--dim);letter-spacing:.05em}.stat .v{font-size:19px;font-weight:800;font-family:var(--mono);font-variant-numeric:tabular-nums;margin-top:2px}.stat .s{font-size:10px;color:var(--dim);margin-top:2px}h2{font-size:13.5px;margin:0 0 2px;font-weight:800}h3{font-size:12px;margin:12px 0 5px}.cap{font-size:10.5px;color:var(--dim);margin-bottom:8px}.note{font-size:10.5px;color:var(--dim);line-height:1.65}.pos{color:var(--pos)}.neg{color:var(--neg)}.amber{color:var(--amber)}.tag{display:inline-block;font-size:9px;padding:2px 6px;border:1px solid var(--line);border-radius:99px;color:var(--dim);white-space:nowrap}.tag.est{color:var(--amber);border-color:var(--amber)}.tag.actual{color:var(--pos);border-color:var(--pos)}.tag.nf{color:var(--neg);border-color:var(--neg)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.callout{border-left:3px solid var(--amber)}.source a{color:var(--acc);text-decoration:none}.source a:hover{text-decoration:underline}svg{display:block;width:100%;height:auto}svg text{font-family:var(--mono);font-variant-numeric:tabular-nums}.legend{display:flex;flex-wrap:wrap;gap:5px 13px;font-size:10.5px;color:var(--dim);margin:5px 0}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}.imp{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}.imp:last-child{border:0}.imp b{font-size:11px}.imp div{font-size:11.5px}.stamp{font-family:var(--mono);font-size:10px;color:var(--dim)}footer{font-size:10px;color:var(--dim);margin-top:22px;line-height:1.75}.sticky{position:sticky;top:0;z-index:4;background:color-mix(in srgb,var(--bg) 92%,transparent);padding-top:2px;padding-bottom:2px}.empty{padding:16px;border:1px dashed var(--line);border-radius:8px;color:var(--dim);font-size:11px}.kbd{font-family:var(--mono);padding:1px 5px;border-radius:4px;background:var(--panel2);border:1px solid var(--line)}
+@media(max-width:760px){body{padding:12px 9px 40px}.grid2{grid-template-columns:1fr}.theme{position:static;margin-top:10px}.imp{grid-template-columns:1fr}.stat{grid-template-columns:1fr 1fr}td{white-space:nowrap}.wide{white-space:normal;min-width:260px}}
+</style>
+<div class="wrap">
+<header><h1>🗄️ 랙/AI서버 글로벌 체인 — 11사 발라보기</h1><div class="sub" id="headSub"></div><button class="theme" id="themeBtn" type="button">◐ 테마</button></header>
+<div class="sticky"><div class="chips" id="cats"></div><div class="chips" id="chips"></div></div>
+<section class="panel scroll"><h2>체인 개요 <span style="font-weight:400;font-size:10.5px;color:var(--dim)">— 행 클릭 = 기업 선택 · 통화 미환산</span></h2><table id="overview"></table></section>
+<main id="detail"></main><section id="global"></section><footer id="foot"></footer>
+</div>
+<script id="rack-data" type="application/json">{
+  "schema_version": "ensemble-chain-rack-1.0",
+  "asof": "2026-09-02",
+  "title": "랙/AI서버 글로벌 체인 — 11사 발라보기",
+  "unit_policy": "미국·캐나다=USD_B, 대만=TWD_B. 통화 미환산. 모든 금융 수치는 각 회사 보고통화.",
+  "method": {
+    "actual": "실적=회사 IR/SEC 및 Studio 회사공시 컴파일. est:false.",
+    "derived": "파생=공시값의 합·차·비율만, basis 명시.",
+    "estimate": "가이던스/전망=est:true. 실적과 차트·표에서 분리.",
+    "not_found": "미공시·컷오프 미확인은 0이 아니라 NOT FOUND.",
+    "proxy": "CSV 실집계. ρ·홀드아웃이 없으면 NOT FOUND, 게이트 미검증으로 기업 예측 합산 금지."
+  },
+  "order": [
+    "DELL",
+    "HPE",
+    "SMCI",
+    "JBL",
+    "CLS",
+    "QUANTA",
+    "WIWYNN",
+    "INVENTEC",
+    "GIGABYTE",
+    "HONHAI",
+    "KINGSLIDE"
+  ],
+  "companies": {
+    "DELL": {
+      "label": "Dell Technologies",
+      "ticker": "DELL",
+      "category": "브랜드 OEM",
+      "ccy": "USD_B",
+      "fiscal": "1월 말 52/53주 결산",
+      "bm_grade": "B",
+      "latest_basis": "실적(8-K, 2026-09-01)",
+      "bm": "자체 브랜드의 AI·전통 서버/네트워킹·스토리지(ISG)와 PC(CSG). 서버 무역은 ISG 일부만 포착.",
+      "segments": [
+        {
+          "name": "ISG",
+          "value": 31.782,
+          "period": "FY27Q2",
+          "basis": "실적"
+        },
+        {
+          "name": "AI 최적화 서버",
+          "value": 16.401,
+          "period": "FY27Q2",
+          "basis": "실적·ISG 내"
+        },
+        {
+          "name": "전통 서버·네트워킹",
+          "value": 10.531,
+          "period": "FY27Q2",
+          "basis": "실적·ISG 내"
+        },
+        {
+          "name": "스토리지",
+          "value": 4.85,
+          "period": "FY27Q2",
+          "basis": "실적·ISG 내"
+        },
+        {
+          "name": "CSG",
+          "value": 15.034,
+          "period": "FY27Q2",
+          "basis": "실적"
+        }
+      ],
+      "segment_note": "ISG 구성합과 ISG가 일치. ISG+CSG는 부문간 제거 전 총매출과 소폭 차이가 날 수 있음. 단위 USD_B.",
+      "guidance": [
+        {
+          "when": "2026-05-28 원",
+          "item": "FY27 매출",
+          "value": "$165–169B (중값 $167B)",
+          "status": "원 가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-05-28 원",
+          "item": "FY27 AI 서버",
+          "value": "약 $60B",
+          "status": "원 가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-09-01 수정",
+          "item": "FY27 매출",
+          "value": "$190–194B (중값 $192B)",
+          "status": "상향",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-09-01 수정",
+          "item": "FY27 AI 서버",
+          "value": "약 $74B",
+          "status": "상향",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-09-01",
+          "item": "FY27Q3 매출",
+          "value": "$48.5–49.5B (중값 $49B)",
+          "status": "가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        }
+      ],
+      "backlog_status": "분기 수치",
+      "backlog_note": "AI 서버 범위. 전사 RPO와 같지 않고 취소·재예약·공급제약 가능. 원금액을 전사매출로 직접 환산 금지.",
+      "capa": "정량 서버/랙 생산능력 NOT FOUND. 자체 제조+ODM 글로벌 공급망으로 유연 생산하며, AI 매출 가이드·백로그를 실현능력의 상위 지표로 사용.",
+      "sources": [
+        {
+          "label": "FY27Q2 8-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000039/exhibit991earnings8kq2fy27.htm",
+          "note": "실적·부문·가이드"
+        },
+        {
+          "label": "FY27Q2 transcript",
+          "url": "https://investors.delltechnologies.com/static-files/a24f97e4-63b2-460d-a4be-44738826e8ce",
+          "note": "AI 주문·매출·백로그"
+        },
+        {
+          "label": "FY27Q1 release",
+          "url": "https://investors.delltechnologies.com/news-releases/news-release-details/dell-technologies-delivers-first-quarter-fiscal-2027-financial",
+          "note": "원 가이드"
+        },
+        {
+          "label": "FY2026 10-K",
+          "url": "https://investors.delltechnologies.com/static-files/2150fa65-e520-4a31-bf12-81d32e16670f",
+          "note": "BM·회계"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-05",
+          "fiscal_label": "FY25Q1",
+          "rev": 22.244,
+          "op": 1.057,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-08",
+          "fiscal_label": "FY25Q2",
+          "rev": 25.026,
+          "op": 1.72,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-11",
+          "fiscal_label": "FY25Q3",
+          "rev": 24.366,
+          "op": 1.866,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-01",
+          "fiscal_label": "FY25Q4",
+          "rev": 23.931,
+          "op": 2.287,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-05",
+          "fiscal_label": "FY26Q1",
+          "rev": 23.378,
+          "op": 1.295,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-08",
+          "fiscal_label": "FY26Q2",
+          "rev": 29.776,
+          "op": 1.977,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-10",
+          "fiscal_label": "FY26Q3",
+          "rev": 27.005,
+          "op": 2.234,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-01",
+          "fiscal_label": "FY26Q4",
+          "rev": 33.379,
+          "op": 3.212,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-05",
+          "fiscal_label": "FY27Q1",
+          "rev": 43.842,
+          "op": 3.883,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-08",
+          "fiscal_label": "FY27Q2",
+          "rev": 46.971,
+          "op": 5.385,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "HPE": {
+      "label": "HPE",
+      "ticker": "HPE",
+      "category": "브랜드 OEM",
+      "ccy": "USD_B",
+      "fiscal": "10월 결산",
+      "bm_grade": "B",
+      "latest_basis": "실적(FY26Q2, Q3는 컷오프상 NOT FOUND)",
+      "bm": "Cloud & AI(서버·스토리지·금융), Networking(Juniper 포함), GreenLake. 서버 물동량과 전사 탄력성은 고정되지 않음.",
+      "segments": [
+        {
+          "name": "Cloud & AI",
+          "value": 7.707,
+          "period": "FY26Q2",
+          "basis": "실적"
+        },
+        {
+          "name": "Server",
+          "value": 5.5,
+          "period": "FY26Q2",
+          "basis": "실적·Cloud & AI 내"
+        },
+        {
+          "name": "Storage",
+          "value": 1.2,
+          "period": "FY26Q2",
+          "basis": "실적·Cloud & AI 내"
+        },
+        {
+          "name": "Financial Services",
+          "value": 0.9,
+          "period": "FY26Q2",
+          "basis": "실적·Cloud & AI 내"
+        },
+        {
+          "name": "Networking",
+          "value": 2.7,
+          "period": "FY26Q2",
+          "basis": "실적"
+        }
+      ],
+      "segment_note": "FY2026 새 보고체계. 반올림 때문에 합계 차이 가능. 단위 USD_B.",
+      "guidance": [
+        {
+          "when": "2026-06-01",
+          "item": "FY26Q3 매출",
+          "value": "$11.5–12.1B",
+          "status": "가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-09-02 컷오프",
+          "item": "FY26Q3 실적",
+          "value": "NOT FOUND — 미국 장후 발표 예정",
+          "status": "미공시",
+          "est": false,
+          "reason": "컷오프 기준 미공시를 0으로 대체하지 않음"
+        }
+      ],
+      "backlog_status": "분기 하한",
+      "backlog_note": "FY26Q2 프레젠테이션 >$6.3B, transcript 약 $5.9B 충돌. 표에는 원 슬라이드 하한 6.3을 채택하고 충돌을 보존.",
+      "capa": "정량 서버/랙 생산능력 NOT FOUND. 제3자 제조 의존; 실리콘·메모리 공급 확보와 구성/리드타임 관리가 가동 제약.",
+      "sources": [
+        {
+          "label": "FY26Q2 presentation",
+          "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q2-2026/q2-2026-earnings-presentation.pdf",
+          "note": "부문·AI 주문/백로그·가이드"
+        },
+        {
+          "label": "분기결과 인덱스",
+          "url": "https://investors.hpe.com/financial/quarterly-results",
+          "note": "공시 상태"
+        },
+        {
+          "label": "FY26Q3 콜 공지",
+          "url": "https://www.hpe.com/us/en/newsroom/press-release/2026/08/hpe-to-present-live-audio-webcast-of-fiscal-2026-third-quarter-earnings-conference-call.html",
+          "note": "발표시각"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-01",
+          "fiscal_label": "FY24Q1",
+          "rev": 6.755,
+          "op": 0.562,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-04",
+          "fiscal_label": "FY24Q2",
+          "rev": 7.204,
+          "op": 0.497,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-07",
+          "fiscal_label": "FY24Q3",
+          "rev": 7.71,
+          "op": 0.604,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-10",
+          "fiscal_label": "FY24Q4",
+          "rev": 8.458,
+          "op": 0.836,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-01",
+          "fiscal_label": "FY25Q1",
+          "rev": 7.854,
+          "op": 0.585,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-04",
+          "fiscal_label": "FY25Q2",
+          "rev": 7.627,
+          "op": 0.479,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-07",
+          "fiscal_label": "FY25Q3",
+          "rev": 9.136,
+          "op": 0.502,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-10",
+          "fiscal_label": "FY25Q4",
+          "rev": 9.679,
+          "op": 0.34,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-01",
+          "fiscal_label": "FY26Q1",
+          "rev": 9.301,
+          "op": 0.711,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-04",
+          "fiscal_label": "FY26Q2",
+          "rev": 10.678,
+          "op": 0.929,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "SMCI": {
+      "label": "Supermicro",
+      "ticker": "SMCI",
+      "category": "브랜드 OEM",
+      "ccy": "USD_B",
+      "fiscal": "6월 결산",
+      "bm_grade": "B",
+      "latest_basis": "실적(FY26Q4, 2026-08-11)",
+      "bm": "서버 빌딩블록·완성 AI 랙·액체냉각·배치. GPU/랙 고가 부품 통과와 대형딜 컷오프 변동이 큼.",
+      "segments": [
+        {
+          "name": "단일 보고세그",
+          "value": 11.12,
+          "period": "FY26Q4",
+          "basis": "실적"
+        },
+        {
+          "name": "제품별 매출",
+          "value": null,
+          "period": "FY26Q4",
+          "basis": "NOT FOUND"
+        }
+      ],
+      "segment_note": "AI 서버/랙·스토리지별 분기 매출의 일관된 정량 분해는 NOT FOUND.",
+      "guidance": [
+        {
+          "when": "2026-08-11",
+          "item": "FY27Q1 매출",
+          "value": "$14.5–15.5B",
+          "status": "가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        }
+      ],
+      "backlog_status": "정성+주문 하한",
+      "backlog_note": "FY26 신규 주문 >$60B, FY27 진입 백로그는 'record' 정성뿐. 잔액 NOT FOUND.",
+      "capa": "2023년 공개 런레이트 5,000 완전검증 랙/월. 이후 실리콘밸리 3캠퍼스·멕시코·대만·네덜란드 확장 중이나 최신 정량 런레이트 NOT FOUND.",
+      "sources": [
+        {
+          "label": "FY26Q4 release",
+          "url": "https://ir.supermicro.com/news/news-details/2026/Supermicro-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Financial-Results/default.aspx",
+          "note": "실적·주문·가이드"
+        },
+        {
+          "label": "랙 캐파 발표",
+          "url": "https://ir.supermicro.com/news/news-details/2023/Supermicro-Expands-Global-Manufacturing-Footprint-Increasing-Worldwide-Rack-Scale-Manufacturing-Capacity-to-5000-Fully-Tested-AI-HPC-and-Liquid-Cooling-Rack-Solutions-Per-Month/default.aspx",
+          "note": "5,000랙/월"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-03",
+          "fiscal_label": "FY24Q3",
+          "rev": 3.85,
+          "op": 0.378,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-06",
+          "fiscal_label": "FY24Q4",
+          "rev": 5.355,
+          "op": 0.288,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "FY25Q1",
+          "rev": 5.937,
+          "op": 0.509,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "FY25Q2",
+          "rev": 5.678,
+          "op": 0.369,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "FY25Q3",
+          "rev": 4.6,
+          "op": 0.147,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "FY25Q4",
+          "rev": 5.757,
+          "op": 0.228,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "FY26Q1",
+          "rev": 5.018,
+          "op": 0.182,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "FY26Q2",
+          "rev": 12.682,
+          "op": 0.474,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "FY26Q3",
+          "rev": 10.243,
+          "op": 0.626,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "FY26Q4",
+          "rev": 11.12,
+          "op": 1.488,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "JBL": {
+      "label": "Jabil",
+      "ticker": "JBL",
+      "category": "EMS/HPS",
+      "ccy": "USD_B",
+      "fiscal": "8월 결산",
+      "bm_grade": "C",
+      "latest_basis": "실적(FY26Q3, 2026-06-17)",
+      "bm": "다각화 EMS·설계/공급망 파트너. 클라우드·데이터센터 외 자동차·헬스케어·자본장비 등이 커 전사와 서버 물동량 범위가 다름.",
+      "segments": [
+        {
+          "name": "클라우드·데이터센터 분기매출",
+          "value": null,
+          "period": "FY26Q3",
+          "basis": "NOT FOUND"
+        },
+        {
+          "name": "연결",
+          "value": 8.751,
+          "period": "FY26Q3",
+          "basis": "실적"
+        }
+      ],
+      "segment_note": "FY26Q3 release는 AI 인프라 강세를 정성 언급하나 해당 분기 절대 매출 분해는 NOT FOUND.",
+      "guidance": [
+        {
+          "when": "2026-06-17",
+          "item": "FY26Q4 매출",
+          "value": "$9.2–10.0B",
+          "status": "가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-06-17",
+          "item": "FY26 매출",
+          "value": "$35.0B",
+          "status": "상향",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "비교 가능한 취소불능 전사/AI 백로그 숫자 NOT FOUND.",
+      "capa": "미국 남동부 클라우드·AI 제조에 수년간 약 $500M, 2026년 중반 가동 목표. 2026년 인도 Pune 신공장 개장; Adani와 인도 multi-GW AI 랙 플랫폼은 계획/MoU 단계.",
+      "sources": [
+        {
+          "label": "FY26Q3 release",
+          "url": "https://investors.jabil.com/news/news-details/2026/Jabil-Posts-Third-Quarter-Results/default.aspx",
+          "note": "실적·가이드"
+        },
+        {
+          "label": "미국 $500M 투자",
+          "url": "https://investors.jabil.com/news/news-details/2025/Jabil-Announces-Planned-Multi-Year-500-Million-Investment-in-U-S--Manufacturing-for-Cloud-and-AI-Data-Center-Infrastructure/default.aspx",
+          "note": "가동 목표"
+        },
+        {
+          "label": "Adani-Jabil 계획",
+          "url": "https://investors.jabil.com/news/news-details/2026/Adani-Enterprises-and-Jabil-Target-a-Strategic-Alliance-to-Build-AI-Data-Center-Infrastructure-Platform-in-India/default.aspx",
+          "note": "multi-GW 계획"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-02",
+          "fiscal_label": "FY24Q2",
+          "rev": 6.767,
+          "op": 0.306,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-05",
+          "fiscal_label": "FY24Q3",
+          "rev": 6.765,
+          "op": 0.322,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-08",
+          "fiscal_label": "FY24Q4",
+          "rev": 6.964,
+          "op": 0.371,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-11",
+          "fiscal_label": "FY25Q1",
+          "rev": 6.994,
+          "op": 0.28,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-02",
+          "fiscal_label": "FY25Q2",
+          "rev": 6.728,
+          "op": 0.298,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-05",
+          "fiscal_label": "FY25Q3",
+          "rev": 7.828,
+          "op": 0.383,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-08",
+          "fiscal_label": "FY25Q4",
+          "rev": 8.252,
+          "op": 0.482,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-11",
+          "fiscal_label": "FY26Q1",
+          "rev": 8.305,
+          "op": 0.372,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-02",
+          "fiscal_label": "FY26Q2",
+          "rev": 8.282,
+          "op": 0.387,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-05",
+          "fiscal_label": "FY26Q3",
+          "rev": 8.751,
+          "op": 0.445,
+          "status": "실적",
+          "est": false,
+          "basis": "FY26Q3 회사 release의 GAAP operating income로 교체"
+        }
+      ]
+    },
+    "CLS": {
+      "label": "Celestica",
+      "ticker": "CLS",
+      "category": "EMS/HPS",
+      "ccy": "USD_B",
+      "fiscal": "12월 결산",
+      "bm_grade": "B",
+      "latest_basis": "실적(2026Q2, 2026-07-27)",
+      "bm": "CCS의 스위치·광·랙·서버/스토리지와 HPS, ATS의 산업·항공·자본장비. HPS 설계가 전통 EMS보다 높은 부가가치.",
+      "segments": [
+        {
+          "name": "CCS",
+          "value": 3.81,
+          "period": "2026Q2",
+          "basis": "실적"
+        },
+        {
+          "name": "HPS",
+          "value": 1.9,
+          "period": "2026Q2",
+          "basis": "실적·CCS 내"
+        },
+        {
+          "name": "ATS",
+          "value": 0.89,
+          "period": "2026Q2",
+          "basis": "실적"
+        }
+      ],
+      "segment_note": "HPS는 CCS 내 하위 지표이므로 CCS와 합산 금지. 단위 USD_B.",
+      "guidance": [
+        {
+          "when": "2026-07-27",
+          "item": "2026Q3 매출",
+          "value": "$5.25–5.55B",
+          "status": "가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "직전",
+          "item": "FY26 매출",
+          "value": "$19.0B",
+          "status": "원 가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-07-27",
+          "item": "FY26 매출",
+          "value": "$20.5B",
+          "status": "상향",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "비교 가능한 정례 백로그 숫자 NOT FOUND; 고객 프로그램·forecast는 백로그로 간주하지 않음.",
+      "capa": "2026 capex 약 $1B. Dallas-Fort Worth 확대·태국 복수 신동·멕시코/일본 투자·미/아시아 HPS 설계센터, 2026–27 순차 가동. 북미 면적 >2배·power envelope >10배(2027 vs 2024) 목표.",
+      "sources": [
+        {
+          "label": "2026Q2 release",
+          "url": "https://corporate.celestica.com/news-releases/news-release-details/celestica-announces-second-quarter-2026-financial-results",
+          "note": "실적·세그·가이드"
+        },
+        {
+          "label": "캐파/투자 공시",
+          "url": "https://corporate.celestica.com/node/16981/html",
+          "note": "$1B capex·가동 로드맵"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-03",
+          "fiscal_label": "FY24Q1",
+          "rev": 2.209,
+          "op": 0.13,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-06",
+          "fiscal_label": "FY24Q2",
+          "rev": 2.392,
+          "op": 0.144,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "FY24Q3",
+          "rev": 2.499,
+          "op": 0.139,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "FY24Q4",
+          "rev": 2.546,
+          "op": 0.202,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "FY25Q1",
+          "rev": 2.649,
+          "op": 0.133,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "FY25Q2",
+          "rev": 2.893,
+          "op": 0.286,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "FY25Q3",
+          "rev": 3.194,
+          "op": 0.33,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "FY25Q4",
+          "rev": 3.655,
+          "op": 0.318,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "FY26Q1",
+          "rev": 4.047,
+          "op": 0.268,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "FY26Q2",
+          "rev": 4.699,
+          "op": 0.461,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "QUANTA": {
+      "label": "Quanta",
+      "ticker": "2382.TW",
+      "category": "ODM",
+      "ccy": "TWD_B",
+      "fiscal": "12월 결산",
+      "bm_grade": "B",
+      "latest_basis": "실적(2026Q2, 회사 공시 컴파일)",
+      "bm": "노트북과 서버·스토리지·스위치·랙을 생산하는 대형 ODM. 2024 서버 사업 매출이 50%를 처음 상회.",
+      "segments": [
+        {
+          "name": "서버 사업 매출비중",
+          "value": ">50%",
+          "period": "FY2024",
+          "basis": "회사 ESG 공시"
+        },
+        {
+          "name": "2026Q2 서버 절대매출",
+          "value": null,
+          "period": "2026Q2",
+          "basis": "NOT FOUND"
+        }
+      ],
+      "segment_note": "최신 분기 서버 절대매출 분해는 NOT FOUND. 연결 수치와 혼합하지 않음.",
+      "guidance": [
+        {
+          "when": "2026-09-02 컷오프",
+          "item": "정량 분기가이드",
+          "value": "NOT FOUND",
+          "status": "미공시",
+          "est": false,
+          "reason": "컷오프 기준 미공시를 0으로 대체하지 않음"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "월매출은 공시하나 정례 서버 백로그 숫자 NOT FOUND.",
+      "capa": "미국·독일·태국·베트남·멕시코 확장. Fremont 임차공장 생산/냉각 설비에 $67.247M(2025-07 공시); 최신 전체 랙 수량 캐파 NOT FOUND.",
+      "sources": [
+        {
+          "label": "2Q26 results index",
+          "url": "https://www.quantatw.com/quanta/english/investment/financials_icp.aspx",
+          "note": "분기 실적"
+        },
+        {
+          "label": "2024 ESG",
+          "url": "https://www.quantatw.com/Quanta/english/esg/ESG2024/ch00-2.html",
+          "note": "서버 비중·글로벌 생산"
+        },
+        {
+          "label": "Fremont 투자",
+          "url": "https://www.quantatw.com/quanta/english/allnews/allnews_open.aspx?CASENO=NEWS003608",
+          "note": "$67.247M"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-03",
+          "fiscal_label": "FY24Q1",
+          "rev": 258.939,
+          "op": 11.698,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-06",
+          "fiscal_label": "FY24Q2",
+          "rev": 309.954,
+          "op": 15.208,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "FY24Q3",
+          "rev": 424.549,
+          "op": 19.557,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "FY24Q4",
+          "rev": 417.313,
+          "op": 15.159,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "FY25Q1",
+          "rev": 485.672,
+          "op": 24.6,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "FY25Q2",
+          "rev": 504.122,
+          "op": 20.403,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "FY25Q3",
+          "rev": 495.258,
+          "op": 18.374,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "FY25Q4",
+          "rev": 638.637,
+          "op": 24.019,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "FY26Q1",
+          "rev": 809.221,
+          "op": 23.024,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "FY26Q2",
+          "rev": 1036.593,
+          "op": 34.244,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "WIWYNN": {
+      "label": "Wiwynn",
+      "ticker": "6669.TW",
+      "category": "ODM",
+      "ccy": "TWD_B",
+      "fiscal": "12월 결산",
+      "bm_grade": "B",
+      "latest_basis": "실적(2026Q2, 회사 공시 컴파일)",
+      "bm": "하이퍼스케일 서버·스토리지와 L10/L11 랙 통합에 집중한 ODM. 2026년 4월 일부 메모리 조달대행 전환으로 매출 총액 비교 단절.",
+      "segments": [
+        {
+          "name": "AI 관련 제품",
+          "value": ">50%",
+          "period": "FY2025",
+          "basis": "회사 공시"
+        },
+        {
+          "name": "2026Q2 AI 절대매출",
+          "value": null,
+          "period": "2026Q2",
+          "basis": "NOT FOUND"
+        }
+      ],
+      "segment_note": "2026년 4월부터 일부 고객 메모리 조달대행 금액을 매출/원가에서 제외. 물량과 reported revenue 탄력성 변화.",
+      "guidance": [
+        {
+          "when": "2026-09-02 컷오프",
+          "item": "정량 분기가이드",
+          "value": "NOT FOUND",
+          "status": "미공시",
+          "est": false,
+          "reason": "컷오프 기준 미공시를 0으로 대체하지 않음"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "비교 가능한 취소불능 정례 백로그 숫자 NOT FOUND.",
+      "capa": "Texas 공장 2025년 말 생산 개시. 미국·멕시코·말레이시아 고전력 랙 통합 전력 캐파를 2028년까지 계획. 2026 하반기 capex 예산 $942M.",
+      "sources": [
+        {
+          "label": "2026Q2 results",
+          "url": "https://www.wiwynn.com/news/wiwynn-reports-second-quarter-2026-financial-results",
+          "note": "실적·agent 회계·capex"
+        },
+        {
+          "label": "2026 AGM",
+          "url": "https://www.wiwynn.com/news/wiwynn-corporation-2026-annual-shareholders-meeting",
+          "note": "Texas·2028 power"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-03",
+          "fiscal_label": "FY24Q1",
+          "rev": 69.628,
+          "op": 5.857,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-06",
+          "fiscal_label": "FY24Q2",
+          "rev": 77.481,
+          "op": 6.207,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "FY24Q3",
+          "rev": 97.818,
+          "op": 7.905,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "FY24Q4",
+          "rev": 115.614,
+          "op": 8.131,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "FY25Q1",
+          "rev": 170.655,
+          "op": 11.981,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "FY25Q2",
+          "rev": 220.744,
+          "op": 15.899,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "FY25Q3",
+          "rev": 266.824,
+          "op": 19.572,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "FY25Q4",
+          "rev": 292.44,
+          "op": 16.466,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "FY26Q1",
+          "rev": 276.508,
+          "op": 17.458,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "FY26Q2",
+          "rev": 278.153,
+          "op": 20.218,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "HONHAI": {
+      "label": "Hon Hai",
+      "ticker": "2317.TW",
+      "category": "ODM",
+      "ccy": "TWD_B",
+      "fiscal": "12월 결산",
+      "bm_grade": "C",
+      "latest_basis": "실적(2026Q2, 2026-08-12)",
+      "bm": "초대형 EMS/ODM. Cloud & Networking이 최대 제품군이지만 소비자전자·컴퓨팅·부품도 큼. 고ASP AI 랙은 매출보다 마진 기여가 낮을 수 있음.",
+      "segments": [
+        {
+          "name": "Cloud & Networking 비중",
+          "value": "40%",
+          "period": "FY2025",
+          "basis": "실적"
+        },
+        {
+          "name": "기타 제품군 합",
+          "value": "60%",
+          "period": "FY2025",
+          "basis": "파생(100-40)"
+        },
+        {
+          "name": "2026Q2 제품군 절대매출",
+          "value": null,
+          "period": "2026Q2",
+          "basis": "NOT FOUND"
+        }
+      ],
+      "segment_note": "FY2025 제품군 비중은 연결 매출 기준. 2026Q2 절대 분해는 NOT FOUND.",
+      "guidance": [
+        {
+          "when": "2026-08-12",
+          "item": "2026Q3",
+          "value": "QoQ 유의미 성장·YoY 강한 성장",
+          "status": "정성 가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        },
+        {
+          "when": "2026-08-12",
+          "item": "FY2026",
+          "value": "강한 성장 유지",
+          "status": "정성 가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "AI 서버 수요 전망은 공시하나 비교 가능한 정례 백로그 숫자 NOT FOUND.",
+      "capa": "AI 랙 물량 램프 지속. 미국 Texas·Wisconsin·Ohio·California capex 확대 계획; 2027 AI 생산캐파 수요 강세 전망. 정량 랙 수량 NOT FOUND.",
+      "sources": [
+        {
+          "label": "2026Q2 release",
+          "url": "https://www.honhai.com/en-us/press-center/press-releases/latest-news?category=Monthly+Revenues",
+          "note": "실적·전망·미국 capex"
+        },
+        {
+          "label": "2025 annual report",
+          "url": "https://image.honhai.com/upload/202605/financy_by_year/2025_Annual_Report_20260523_7728.pdf",
+          "note": "제품·BM"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-03",
+          "fiscal_label": "FY24Q1",
+          "rev": 1323.992,
+          "op": 36.751,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-06",
+          "fiscal_label": "FY24Q2",
+          "rev": 1550.551,
+          "op": 44.604,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "FY24Q3",
+          "rev": 1854.569,
+          "op": 54.771,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "FY24Q4",
+          "rev": 2130.504,
+          "op": 64.481,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "FY25Q1",
+          "rev": 1644.316,
+          "op": 46.5,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "FY25Q2",
+          "rev": 1793.468,
+          "op": 56.596,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "FY25Q3",
+          "rev": 2058.949,
+          "op": 70.536,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "FY25Q4",
+          "rev": 2606.372,
+          "op": 85.591,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "FY26Q1",
+          "rev": 2119.533,
+          "op": 75.649,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "FY26Q2",
+          "rev": 2525.894,
+          "op": 94.803,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "INVENTEC": {
+      "label": "Inventec",
+      "ticker": "2356.TW",
+      "category": "ODM",
+      "ccy": "TWD_B",
+      "fiscal": "12월 결산",
+      "bm_grade": "B",
+      "latest_basis": "실적(2026Q2, 회사 공시 컴파일)",
+      "bm": "서버·랙·스토리지와 노트북/PC를 함께 생산하는 ODM. 대만·태국 관문은 엔터프라이즈 사업 일부만 포착.",
+      "segments": [
+        {
+          "name": "서버 분기매출",
+          "value": null,
+          "period": "2026Q2",
+          "basis": "NOT FOUND"
+        },
+        {
+          "name": "연결",
+          "value": 269.857,
+          "period": "2026Q2",
+          "basis": "실적"
+        }
+      ],
+      "segment_note": "공식 영문 자료에서 서버 절대매출 비중 NOT FOUND.",
+      "guidance": [
+        {
+          "when": "2026-09-02 컷오프",
+          "item": "정량 분기가이드",
+          "value": "NOT FOUND",
+          "status": "미공시",
+          "est": false,
+          "reason": "컷오프 기준 미공시를 0으로 대체하지 않음"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "월매출은 있으나 서버 정례 백로그 숫자 NOT FOUND.",
+      "capa": "2026-07-28 태국 자회사에 THB 6.1B 현금 증자. 사용처별 서버 캐파·완공/램프 수량은 공시문에서 NOT FOUND.",
+      "sources": [
+        {
+          "label": "재무보고서",
+          "url": "https://www.inventec.com/en/investor-list9-11.htm",
+          "note": "분기 실적"
+        },
+        {
+          "label": "태국 증자",
+          "url": "https://www.inventec.com/en/investor-detail612.htm",
+          "note": "THB 6.1B"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-03",
+          "fiscal_label": "FY24Q1",
+          "rev": 130.506,
+          "op": 2.137,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-06",
+          "fiscal_label": "FY24Q2",
+          "rev": 154.159,
+          "op": 2.601,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "FY24Q3",
+          "rev": 163.815,
+          "op": 3.161,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "FY24Q4",
+          "rev": 197.782,
+          "op": 3.918,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "FY25Q1",
+          "rev": 157.034,
+          "op": 3.473,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "FY25Q2",
+          "rev": 186.577,
+          "op": 3.635,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "FY25Q3",
+          "rev": 176.286,
+          "op": 3.067,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "FY25Q4",
+          "rev": 171.293,
+          "op": 2.538,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "FY26Q1",
+          "rev": 200.311,
+          "op": 3.615,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "FY26Q2",
+          "rev": 269.857,
+          "op": 4.741,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "GIGABYTE": {
+      "label": "GIGABYTE",
+      "ticker": "2376.TW",
+      "category": "ODM",
+      "ccy": "TWD_B",
+      "fiscal": "12월 결산",
+      "bm_grade": "C",
+      "latest_basis": "실적(2026Q2, 회사 공시 컴파일)",
+      "bm": "브랜드 소비자 부품과 Giga Computing의 AI 서버·랙을 함께 보유. 채널/제품 주기가 달라 서버 무역으로 연결 전사를 설명하기 어려움.",
+      "segments": [
+        {
+          "name": "AI 서버 매출 YoY",
+          "value": "+110%",
+          "period": "2026Q1",
+          "basis": "회사 발표"
+        },
+        {
+          "name": "AI 서버 절대매출",
+          "value": null,
+          "period": "2026Q1/Q2",
+          "basis": "NOT FOUND"
+        }
+      ],
+      "segment_note": "GB300 NVL72 생산은 확인되나 AI 서버 절대 매출 분해는 NOT FOUND.",
+      "guidance": [
+        {
+          "when": "2026Q1 발표",
+          "item": "FY2026",
+          "value": "매출 신기록 지속 기대",
+          "status": "정성 가이드",
+          "est": true,
+          "reason": "회사 경영진의 미래 가이던스/전망으로 아직 실적이 아님"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "비교 가능한 정례 AI 서버 백로그 숫자 NOT FOUND.",
+      "capa": "대만·중국·미국·말레이시아 생산망, GB300 NVL72 양산 확인. 신규 랙 수량/투자액·완공일의 최신 정량 공시는 NOT FOUND.",
+      "sources": [
+        {
+          "label": "2026Q1 deck",
+          "url": "https://www.gigabyte.com/FileUpload/TW/SiteMap/83/images/2026Q1-0515.en.pdf",
+          "note": "AI 서버 성장·생산망"
+        },
+        {
+          "label": "Investor Relations",
+          "url": "https://www.gigabyte.com/Investor/83",
+          "note": "분기 공시"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-03",
+          "fiscal_label": "FY24Q1",
+          "rev": 55.164,
+          "op": 3.077,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-06",
+          "fiscal_label": "FY24Q2",
+          "rev": 73.923,
+          "op": 3.851,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "FY24Q3",
+          "rev": 70.446,
+          "op": 3.377,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "FY24Q4",
+          "rev": 65.615,
+          "op": 2.472,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "FY25Q1",
+          "rev": 65.747,
+          "op": 4.24,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "FY25Q2",
+          "rev": 102.258,
+          "op": 5.293,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "FY25Q3",
+          "rev": 79.581,
+          "op": 3.437,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "FY25Q4",
+          "rev": 89.35,
+          "op": 3.803,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "FY26Q1",
+          "rev": 105.057,
+          "op": 7.414,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "FY26Q2",
+          "rev": 144.214,
+          "op": 8.12,
+          "status": "실적",
+          "est": false,
+          "basis": "Studio financials.json 회사공시 컴파일; 잘못된 cur 태그는 사용하지 않고 회사 보고통화로 보정"
+        }
+      ]
+    },
+    "KINGSLIDE": {
+      "label": "King Slide",
+      "ticker": "2059.TW",
+      "category": "부품",
+      "ccy": "TWD_B",
+      "fiscal": "12월 결산",
+      "bm_grade": "N/A",
+      "latest_basis": "실적(공식 월매출 합산·MOPS 분기)",
+      "bm": "서버 rail kit와 케이블 매니지먼트 암(CMA) 중심의 정밀 기구부품. 랙 출하의 하위 BOM에 직접 노출.",
+      "segments": [
+        {
+          "name": "Rail Kit",
+          "value": "96.38%",
+          "period": "FY2024",
+          "basis": "회사 발표"
+        },
+        {
+          "name": "2026Q2 Rail Kit 절대매출",
+          "value": null,
+          "period": "2026Q2",
+          "basis": "NOT FOUND"
+        }
+      ],
+      "segment_note": "FY2024 제품 믹스만 사용. 최신 분기 제품 믹스는 NOT FOUND.",
+      "guidance": [
+        {
+          "when": "2026-09-02 컷오프",
+          "item": "정량 분기가이드",
+          "value": "NOT FOUND",
+          "status": "미공시",
+          "est": false,
+          "reason": "컷오프 기준 미공시를 0으로 대체하지 않음"
+        }
+      ],
+      "backlog_status": "NOT FOUND",
+      "backlog_note": "정례 백로그 수치 NOT FOUND. 월매출을 1차 실제로 사용.",
+      "capa": "Kaohsiung Science Park 2기 공장: NT$2B, 56,000㎡, 2022년 초 가동. 최신 증설의 정량 캐파/신규 완공일은 공식 자료에서 NOT FOUND.",
+      "sources": [
+        {
+          "label": "공식 월매출",
+          "url": "https://www.kingslide.com/investor_financialinfo_monthlyreports?___store=default",
+          "note": "2026-07까지"
+        },
+        {
+          "label": "재무보고서 인덱스",
+          "url": "https://www.kingslide.com/investor_financialinfo_financialreports",
+          "note": "분기 실적"
+        },
+        {
+          "label": "제품매출 deck",
+          "url": "https://www.kingslide.com/media/wysiwyg/company/investor/document/205920260224E001.pdf",
+          "note": "Rail Kit"
+        },
+        {
+          "label": "2기 공장",
+          "url": "https://www.kingslide.com/blog/post/news/identifier/company-news-020-en/",
+          "note": "NT$2B·56,000㎡"
+        }
+      ],
+      "fin_q": [
+        {
+          "period_end": "2024-09",
+          "fiscal_label": "2024Q3",
+          "rev": 2.577,
+          "op": 1.612,
+          "status": "실적",
+          "est": false,
+          "basis": "MOPS 단일분기"
+        },
+        {
+          "period_end": "2024-12",
+          "fiscal_label": "2024Q4",
+          "rev": 3.098,
+          "op": 1.942,
+          "status": "실적",
+          "est": false,
+          "basis": "MOPS 단일분기"
+        },
+        {
+          "period_end": "2025-03",
+          "fiscal_label": "2025Q1",
+          "rev": 3.954,
+          "op": 2.723,
+          "status": "실적",
+          "est": false,
+          "basis": "공식 월매출 합계·MOPS"
+        },
+        {
+          "period_end": "2025-06",
+          "fiscal_label": "2025Q2",
+          "rev": 4.229,
+          "op": 2.966,
+          "status": "실적",
+          "est": false,
+          "basis": "공식 월매출 합계·MOPS"
+        },
+        {
+          "period_end": "2025-09",
+          "fiscal_label": "2025Q3",
+          "rev": 4.369,
+          "op": 2.975,
+          "status": "실적",
+          "est": false,
+          "basis": "공식 월매출 합계·MOPS"
+        },
+        {
+          "period_end": "2025-12",
+          "fiscal_label": "2025Q4",
+          "rev": 4.949,
+          "op": 3.424,
+          "status": "실적",
+          "est": false,
+          "basis": "공식 월매출 합계·MOPS"
+        },
+        {
+          "period_end": "2026-03",
+          "fiscal_label": "2026Q1",
+          "rev": 5.45,
+          "op": 3.654,
+          "status": "실적",
+          "est": false,
+          "basis": "공식 월매출 합계·MOPS"
+        },
+        {
+          "period_end": "2026-06",
+          "fiscal_label": "2026Q2",
+          "rev": 10.83,
+          "op": 8.89,
+          "status": "실적",
+          "est": false,
+          "basis": "공식 월매출 합계(2.596+3.791+4.443)·MOPS 단일분기"
+        }
+      ],
+      "monthly": [
+        {
+          "month": "2025-01",
+          "rev_twd_m": 1233.439
+        },
+        {
+          "month": "2025-02",
+          "rev_twd_m": 1339.536
+        },
+        {
+          "month": "2025-03",
+          "rev_twd_m": 1381.226
+        },
+        {
+          "month": "2025-04",
+          "rev_twd_m": 1449.099
+        },
+        {
+          "month": "2025-05",
+          "rev_twd_m": 1393.592
+        },
+        {
+          "month": "2025-06",
+          "rev_twd_m": 1386.041
+        },
+        {
+          "month": "2025-07",
+          "rev_twd_m": 1406.573
+        },
+        {
+          "month": "2025-08",
+          "rev_twd_m": 1454.984
+        },
+        {
+          "month": "2025-09",
+          "rev_twd_m": 1507.097
+        },
+        {
+          "month": "2025-10",
+          "rev_twd_m": 1567.264
+        },
+        {
+          "month": "2025-11",
+          "rev_twd_m": 1659.348
+        },
+        {
+          "month": "2025-12",
+          "rev_twd_m": 1722.455
+        },
+        {
+          "month": "2026-01",
+          "rev_twd_m": 1774.956
+        },
+        {
+          "month": "2026-02",
+          "rev_twd_m": 1756.868
+        },
+        {
+          "month": "2026-03",
+          "rev_twd_m": 1918.166
+        },
+        {
+          "month": "2026-04",
+          "rev_twd_m": 2595.892
+        },
+        {
+          "month": "2026-05",
+          "rev_twd_m": 3791.303
+        },
+        {
+          "month": "2026-06",
+          "rev_twd_m": 4442.581
+        },
+        {
+          "month": "2026-07",
+          "rev_twd_m": 6407.256
+        }
+      ]
+    }
+  },
+  "backlog": {
+    "ledger_total_rows": 92,
+    "filtered_rows": 59,
+    "companies": {
+      "DELL": {
+        "ai_server_backlog": [
+          {
+            "period": "FY24Q4",
+            "value": 2.9,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q1",
+            "value": 3.8,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q2",
+            "value": 3.8,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q3",
+            "value": 4.5,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q4",
+            "value": 4.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q1",
+            "value": 14.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q2",
+            "value": 11.7,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q3",
+            "value": 18.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q4",
+            "value": 43.0,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/news-releases/news-release-details/dell-technologies-delivers-fourth-quarter-and-full-year-fiscal-3"
+          },
+          {
+            "period": "FY27Q1",
+            "value": 51.3,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b63ffff9-b729-403b-a231-c6af05667759"
+          },
+          {
+            "period": "FY27Q2",
+            "value": 95.0,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/a24f97e4-63b2-460d-a4be-44738826e8ce"
+          }
+        ],
+        "ai_server_orders": [
+          {
+            "period": "FY24Q4",
+            "value": 2.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q1",
+            "value": 2.6,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q2",
+            "value": 3.2,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q3",
+            "value": 3.6,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q4",
+            "value": 1.7,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q1",
+            "value": 12.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q2",
+            "value": 5.6,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q3",
+            "value": 12.3,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q4",
+            "value": 34.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/news-releases/news-release-details/dell-technologies-delivers-fourth-quarter-and-full-year-fiscal-3"
+          },
+          {
+            "period": "FY27Q1",
+            "value": 24.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b63ffff9-b729-403b-a231-c6af05667759"
+          },
+          {
+            "period": "FY27Q2",
+            "value": 60.9,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/a24f97e4-63b2-460d-a4be-44738826e8ce"
+          }
+        ],
+        "ai_server_shipments_revenue": [
+          {
+            "period": "FY24Q4",
+            "value": 0.8,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q1",
+            "value": 1.7,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q2",
+            "value": 3.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q3",
+            "value": 2.9,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY25Q4",
+            "value": 2.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q1",
+            "value": 1.8,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q2",
+            "value": 8.2,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q3",
+            "value": 5.6,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b4c4b753-04b5-4ed8-aaf1-55b0e6026181"
+          },
+          {
+            "period": "FY26Q4",
+            "value": 8.952,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/news-releases/news-release-details/dell-technologies-delivers-fourth-quarter-and-full-year-fiscal-3"
+          },
+          {
+            "period": "FY27Q1",
+            "value": 16.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/b63ffff9-b729-403b-a231-c6af05667759"
+          },
+          {
+            "period": "FY27Q2",
+            "value": 16.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.delltechnologies.com/static-files/a24f97e4-63b2-460d-a4be-44738826e8ce"
+          }
+        ]
+      },
+      "HPE": {
+        "ai_systems_backlog": [
+          {
+            "period": "FY23Q1",
+            "value": 1.3,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY23Q2",
+            "value": 1.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY23Q3",
+            "value": 3.0,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY23Q4",
+            "value": 3.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q1",
+            "value": 3.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q2",
+            "value": 3.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q3",
+            "value": 3.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q4",
+            "value": 2.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY25Q1",
+            "value": 3.1,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY25Q2",
+            "value": 3.2,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY25Q3",
+            "value": 3.7,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY25Q4",
+            "value": 4.7,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q2-2026/q2-2026-earnings-presentation.pdf"
+          },
+          {
+            "period": "FY26Q1",
+            "value": 5.3,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q2-2026/q2-2026-earnings-presentation.pdf"
+          },
+          {
+            "period": "FY26Q2",
+            "value": 6.3,
+            "unit": "USD_B",
+            "status": "minimum",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q2-2026/q2-2026-earnings-presentation.pdf"
+          }
+        ],
+        "ai_systems_revenue": [
+          {
+            "period": "FY23Q1",
+            "value": 0.5,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY23Q2",
+            "value": 0.3,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY23Q3",
+            "value": 0.3,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY23Q4",
+            "value": 0.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q1",
+            "value": 0.4,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q2",
+            "value": 0.9,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q3",
+            "value": 1.3,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY24Q4",
+            "value": 1.5,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY25Q1",
+            "value": 0.9,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY25Q2",
+            "value": 1.0,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          },
+          {
+            "period": "FY25Q3",
+            "value": 1.6,
+            "unit": "USD_B",
+            "status": "exact",
+            "url": "https://investors.hpe.com/~/media/Files/H/HP-Enterprise-IR/documents/q3-2025/q3-2025-earning-presentation.pdf"
+          }
+        ]
+      },
+      "SMCI": {
+        "new_orders": [
+          {
+            "period": "FY26Q4",
+            "value": 60.0,
+            "unit": "USD_B",
+            "status": "minimum",
+            "url": "https://ir.supermicro.com/news/news-details/2026/Supermicro-Provides-Fourth-Quarter-of-Fiscal-Year-2026-Preliminary-Business-Update/default.aspx"
+          }
+        ]
+      }
+    }
+  },
+  "proxies": [
+    {
+      "id": "us_847150_import",
+      "label": "미국 HS847150 수입 총량",
+      "unit": "USD_B",
+      "series": [
+        {
+          "q": "2023-Q1",
+          "value_usd_b": 8.242,
+          "yoy_pct": -6.2
+        },
+        {
+          "q": "2023-Q2",
+          "value_usd_b": 8.104,
+          "yoy_pct": -24.6
+        },
+        {
+          "q": "2023-Q3",
+          "value_usd_b": 9.472,
+          "yoy_pct": -21.0
+        },
+        {
+          "q": "2023-Q4",
+          "value_usd_b": 11.241,
+          "yoy_pct": 0.8
+        },
+        {
+          "q": "2024-Q1",
+          "value_usd_b": 11.143,
+          "yoy_pct": 35.2
+        },
+        {
+          "q": "2024-Q2",
+          "value_usd_b": 15.02,
+          "yoy_pct": 85.4
+        },
+        {
+          "q": "2024-Q3",
+          "value_usd_b": 19.91,
+          "yoy_pct": 110.2
+        },
+        {
+          "q": "2024-Q4",
+          "value_usd_b": 15.856,
+          "yoy_pct": 41.1
+        },
+        {
+          "q": "2025-Q1",
+          "value_usd_b": 20.754,
+          "yoy_pct": 86.3
+        },
+        {
+          "q": "2025-Q2",
+          "value_usd_b": 35.727,
+          "yoy_pct": 137.9
+        },
+        {
+          "q": "2025-Q3",
+          "value_usd_b": 48.264,
+          "yoy_pct": 142.4
+        },
+        {
+          "q": "2025-Q4",
+          "value_usd_b": 59.825,
+          "yoy_pct": 277.3
+        },
+        {
+          "q": "2026-Q1",
+          "value_usd_b": 66.617,
+          "yoy_pct": 221.0
+        },
+        {
+          "q": "2026-Q2",
+          "value_usd_b": 76.567,
+          "yoy_pct": 114.3
+        }
+      ],
+      "parsed_rows": 2793,
+      "first_month": "2022-01",
+      "last_month": "2026-06",
+      "rho": "NOT FOUND(공통 풀 전용)",
+      "holdout": "NOT FOUND",
+      "gate": "게이트 미검증 — 기업 매출에 합산 금지",
+      "caveat": "847150은 'processing units' 공용 풀로 AI 서버 전용 세번이 아니다. 금액 증가는 대수 증가와 동일하지 않다."
+    },
+    {
+      "id": "rack_8471_export_pool",
+      "label": "rack 5관문 HS8471 수출 풀",
+      "unit": "USD_B",
+      "series": [
+        {
+          "q": "2023-Q1",
+          "value_usd_b": 16.161,
+          "yoy_pct": -9.0
+        },
+        {
+          "q": "2023-Q2",
+          "value_usd_b": 16.109,
+          "yoy_pct": -13.1
+        },
+        {
+          "q": "2023-Q3",
+          "value_usd_b": 14.616,
+          "yoy_pct": -26.0
+        },
+        {
+          "q": "2023-Q4",
+          "value_usd_b": 16.691,
+          "yoy_pct": -15.2
+        },
+        {
+          "q": "2024-Q1",
+          "value_usd_b": 13.613,
+          "yoy_pct": -15.8
+        },
+        {
+          "q": "2024-Q2",
+          "value_usd_b": 15.072,
+          "yoy_pct": -6.4
+        },
+        {
+          "q": "2024-Q3",
+          "value_usd_b": 17.84,
+          "yoy_pct": 22.1
+        },
+        {
+          "q": "2024-Q4",
+          "value_usd_b": 20.304,
+          "yoy_pct": 21.6
+        },
+        {
+          "q": "2025-Q1",
+          "value_usd_b": 22.939,
+          "yoy_pct": 68.5
+        },
+        {
+          "q": "2025-Q2",
+          "value_usd_b": 28.248,
+          "yoy_pct": 87.4
+        },
+        {
+          "q": "2025-Q3",
+          "value_usd_b": 32.834,
+          "yoy_pct": 84.0
+        },
+        {
+          "q": "2025-Q4",
+          "value_usd_b": 44.729,
+          "yoy_pct": 120.3
+        },
+        {
+          "q": "2026-Q1",
+          "value_usd_b": 47.348,
+          "yoy_pct": 106.4
+        },
+        {
+          "q": "2026-Q2",
+          "value_usd_b": 67.695,
+          "yoy_pct": 139.6
+        }
+      ],
+      "parsed_rows": 31742,
+      "first_month": "2018-01",
+      "last_month": "2026-06",
+      "rho": "NOT FOUND(공통 풀 전용)",
+      "holdout": "NOT FOUND",
+      "gate": "게이트 미검증 — 기업 매출에 합산 금지",
+      "caveat": "CZE·HUN·MYS·MEX·VNM 신고의 8471 수출 합. PC·부품·비AI 장비와 회사간 중복 공급망이 섞이므로 섹터 모멘텀 전용."
+    }
+  ],
+  "implications": [
+    {
+      "title": "1차 랠리 — 브랜드 주문이 먼저",
+      "text": "DELL은 FY27Q2 AI 주문 $60.9B·매출 $16.4B·기말 백로그 $95B로 수요 레짐을 직접 공시했다. 다만 $95B/차기 AI 매출 가이드 약 $19B≈5배라 한 분기 매출로 환산할 수 없다.",
+      "status": "실적+파생"
+    },
+    {
+      "title": "2차 랠리 — ODM/EMS와 부품으로 확산",
+      "text": "2026Q2 연결매출 YoY는 Quanta +105.6%, Celestica +62.4%, Inventec +44.6%, GIGABYTE +41.0%, Hon Hai +40.8%, Wiwynn +26.0%; King Slide는 +156.1%다. 통화별 YoY 비교이며 절대액 합산은 하지 않았다.",
+      "status": "실적 파생"
+    },
+    {
+      "title": "가치 포착은 매출 점유와 다르다",
+      "text": "최신 OPM은 King Slide 82.1%, Supermicro 13.4%, Dell 11.5%, Celestica 9.8% 대 Quanta 3.3%, Hon Hai 3.8%, Inventec 1.8%다. 고ASP GPU 통과 매출이 큰 ODM 점유 확대가 같은 폭의 이익 확대를 뜻하지 않는다.",
+      "status": "실적 파생"
+    },
+    {
+      "title": "ODM 직납 vs 브랜드 점유",
+      "text": "공개자료는 고객별 L10/L11 직납 물량을 일관되게 분해하지 않는다. 따라서 ODM 성장률을 브랜드 점유율 하락으로 등치하지 않는다. 브랜드는 설계·판매·서비스 매출, ODM은 제조/랙 통합 매출을 서로 다른 범위로 인식한다.",
+      "status": "해석 게이트"
+    },
+    {
+      "title": "다음 병목은 통합·전력·기구부품",
+      "text": "Celestica의 power envelope 확대, Wiwynn의 2028년까지 고전력 랙 계획, Jabil의 multi-GW 플랫폼, King Slide 월매출 급증을 함께 보면 병목이 GPU 단품에서 랙 통합·전력·냉각·레일로 넓어지는 정황이다. 이는 공개 설비계획을 묶은 추론이며 확정 수주량은 NOT FOUND.",
+      "status": "추론"
+    }
+  ],
+  "source_register": [
+    {
+      "label": "Studio financials.json",
+      "url": "/Users/kioxia/phalanx/jem_data/financials.json",
+      "note": "10사 분기 재무; cur 태그 오류를 보고통화로 보정"
+    },
+    {
+      "label": "Studio tw_revenue.json",
+      "url": "/Users/kioxia/phalanx/jem_data/tw_revenue.json",
+      "note": "King Slide 공식 월매출 컴파일"
+    },
+    {
+      "label": "E03 backlog_observations.csv",
+      "url": "/Users/kioxia/Downloads/ens_wave/out/E03_BACKLOG/backlog_observations.csv",
+      "note": "92행 중 대상 59행 필터"
+    },
+    {
+      "label": "Studio us_long.csv",
+      "url": "/Users/kioxia/phalanx/jem_data/us_long.csv",
+      "note": "HS847150 수입 실집계"
+    },
+    {
+      "label": "Studio rack_long.csv",
+      "url": "/Users/kioxia/phalanx/jem_data/rack_long.csv",
+      "note": "HS8471 5관문 수출 실집계"
+    },
+    {
+      "label": "U.S. Census Schedule B 84",
+      "url": "https://www.census.gov/foreign-trade/schedules/b/2024/c84.pdf",
+      "note": "HS 정의"
+    }
+  ],
+  "disclaimer": "투자판단 참고용. 본 자료는 매수·매도 권유가 아니며 공시 정정, 주문 취소, 공급제약, 환율·회계정책 변화로 실제 결과와 달라질 수 있습니다."
+}</script>
+<script>
+'use strict';
+const D=JSON.parse(document.getElementById('rack-data').textContent), ORDER=D.order;
+const state={co:'DELL',cat:'전체'}; const COLORS=['#2f7fe0','#7557d8','#0f9d76','#c98a12','#d84557','#3aa9ad'];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=(v,d=1)=>v==null?'—':(typeof v==='number'?v.toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d}):esc(v));
+const pct=(v,d=1)=>v==null?'—':`${v>0?'+':''}${v.toFixed(d)}%`;
+const yoy=(rows,i)=>i>=4&&rows[i-4].rev?((rows[i].rev/rows[i-4].rev)-1)*100:null;
+function tag(text,kind=''){return `<span class="tag ${kind}">${esc(text)}</span>`}
+function lineChart(labels,series,H=230){
+  const W=980,L=52,R=18,T=18,B=35,all=series.flatMap(s=>s.data.filter(v=>typeof v==='number')),max=Math.max(...all,1),min=Math.min(0,...all),n=labels.length;
+  const x=i=>L+(W-L-R)*(n===1?.5:i/(n-1)), y=v=>T+(max-v)/(max-min||1)*(H-T-B);
+  let z=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="시계열 차트">`;
+  for(let i=0;i<4;i++){const yy=T+(H-T-B)*i/3,val=max-(max-min)*i/3;z+=`<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" stroke="var(--line)"/><text x="${L-6}" y="${yy+3}" text-anchor="end" font-size="8" fill="var(--dim)">${val.toFixed(1)}</text>`}
+  series.forEach((s,si)=>{let p='';s.data.forEach((v,i)=>{if(v==null)return;p+=(p?'L':'M')+x(i)+','+y(v)});z+=`<path d="${p}" fill="none" stroke="${s.color||COLORS[si]}" stroke-width="2"/>`;s.data.forEach((v,i)=>{if(v==null)return;z+=`<circle cx="${x(i)}" cy="${y(v)}" r="2.7" fill="${s.color||COLORS[si]}"><title>${esc(labels[i])} · ${esc(s.label)} ${v}</title></circle>`})});
+  const step=Math.max(1,Math.ceil(n/8));labels.forEach((v,i)=>{if(i%step&&i!==n-1)return;z+=`<text x="${x(i)}" y="${H-10}" text-anchor="middle" font-size="8" fill="var(--dim)">${esc(v)}</text>`});return z+'</svg>';
+}
+function combo(labels,bars,line,H=230){
+  const W=980,L=50,R=50,T=18,B=34,n=labels.length,mx=Math.max(...bars,1),lm=Math.max(...line.filter(v=>v!=null),1),ln=Math.min(0,...line.filter(v=>v!=null));
+  const x=i=>L+(W-L-R)*(i+.5)/n,bw=Math.max(7,(W-L-R)/n*.56),yb=v=>T+(mx-v)/mx*(H-T-B),yl=v=>T+(lm-v)/(lm-ln||1)*(H-T-B);
+  let z=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="매출 및 영업이익률 차트">`;
+  for(let i=0;i<4;i++){const yy=T+(H-T-B)*i/3;z+=`<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" stroke="var(--line)"/><text x="${L-5}" y="${yy+3}" text-anchor="end" font-size="8" fill="var(--dim)">${(mx*(1-i/3)).toFixed(1)}</text>`}
+  bars.forEach((v,i)=>z+=`<rect x="${x(i)-bw/2}" y="${yb(v)}" width="${bw}" height="${H-B-yb(v)}" rx="2" fill="var(--accSoft)"><title>${esc(labels[i])} 매출 ${v}</title></rect>`);
+  let p='';line.forEach((v,i)=>{if(v==null)return;p+=(p?'L':'M')+x(i)+','+yl(v)});z+=`<path d="${p}" fill="none" stroke="var(--acc)" stroke-width="2"/>`;line.forEach((v,i)=>{if(v==null)return;z+=`<circle cx="${x(i)}" cy="${yl(v)}" r="2.8" fill="var(--acc)"><title>${esc(labels[i])} OPM ${v.toFixed(1)}%</title></circle>`});
+  labels.forEach((v,i)=>{if(n>9&&i%2&&i!==n-1)return;z+=`<text x="${x(i)}" y="${H-9}" text-anchor="middle" font-size="8" fill="var(--dim)">${esc(v)}</text>`});z+=`<text x="${W-R+6}" y="${T+4}" font-size="8" fill="var(--acc)">OPM ${lm.toFixed(0)}%</text>`;return z+'</svg>';
+}
+function filtered(){return ORDER.filter(k=>state.cat==='전체'||D.companies[k].category===state.cat)}
+function drawControls(){const cats=['전체','브랜드 OEM','EMS/HPS','ODM','부품'];document.getElementById('cats').innerHTML=cats.map(c=>`<span class="chip ${c===state.cat?'on':''}" data-cat="${c}">${c}</span>`).join('');document.querySelectorAll('[data-cat]').forEach(e=>e.onclick=()=>{state.cat=e.dataset.cat;if(!filtered().includes(state.co))state.co=filtered()[0];render()});document.getElementById('chips').innerHTML=filtered().map(k=>`<span class="chip ${k===state.co?'on':''}" data-co="${k}">${esc(D.companies[k].label)}</span>`).join('');document.querySelectorAll('[data-co]').forEach(e=>e.onclick=()=>{state.co=e.dataset.co;render()})}
+function overview(){let h='<thead><tr><th>레이어</th><th>기업</th><th>최신</th><th class="num">매출</th><th class="num">영업이익</th><th class="num">OPM</th><th class="num">매출 YoY</th><th>백로그</th><th>BM-프록시</th></tr></thead><tbody>';filtered().forEach(k=>{const c=D.companies[k],r=c.fin_q,i=r.length-1,v=r[i],yy=yoy(r,i),opm=v.rev?v.op/v.rev*100:null;h+=`<tr class="pick ${k===state.co?'sel':''}" data-row="${k}"><td>${tag(c.category)}</td><td><b>${esc(c.label)}</b><br><span class="stamp">${esc(c.ticker)} · ${esc(c.ccy)}</span></td><td class="stamp">${esc(v.fiscal_label)}</td><td class="num">${fmt(v.rev,3)}</td><td class="num ${v.op>0?'pos':'neg'}">${fmt(v.op,3)}</td><td class="num">${pct(opm)}</td><td class="num ${yy>0?'pos':yy<0?'neg':''}">${pct(yy)}</td><td>${c.backlog_status==='NOT FOUND'?tag('NOT FOUND','nf'):tag(c.backlog_status,'actual')}</td><td>${tag(c.bm_grade)}</td></tr>`});document.getElementById('overview').innerHTML=h+'</tbody>';document.querySelectorAll('[data-row]').forEach(e=>e.onclick=()=>{state.co=e.dataset.row;render()})}
+function detail(){const c=D.companies[state.co],r=c.fin_q,i=r.length-1,v=r[i],yy=yoy(r,i),opm=v.rev?v.op/v.rev*100:null,prev=i?((v.rev/r[i-1].rev)-1)*100:null;
+  let h=`<div class="stat"><div class="box"><div class="k">${esc(v.fiscal_label)} 매출 · ${esc(c.ccy)}</div><div class="v">${fmt(v.rev,3)}</div><div class="s">YoY <b class="${yy>0?'pos':'neg'}">${pct(yy)}</b> · QoQ ${pct(prev)}</div></div><div class="box"><div class="k">영업이익</div><div class="v ${v.op>0?'pos':'neg'}">${fmt(v.op,3)}</div><div class="s">${esc(v.status)} · 통화 미환산</div></div><div class="box"><div class="k">OPM</div><div class="v">${pct(opm).replace('+','')}</div><div class="s">GAAP/회사 공시 영업이익</div></div><div class="box"><div class="k">레이어 · BM 적합</div><div class="v" style="font-size:15px">${esc(c.category)} · ${esc(c.bm_grade)}</div><div class="s">투자등급 아님</div></div></div>`;
+  h+=`<section class="panel callout"><h2>${esc(c.label)} — 체인 판독</h2><div style="font-size:11.8px;line-height:1.75;margin-top:6px">${esc(c.bm)}</div><div class="note" style="margin-top:7px"><b>최신 근거.</b> ${esc(c.latest_basis)} · <b>백로그.</b> ${esc(c.backlog_note)}</div></section>`;
+  const labs=r.map(x=>x.fiscal_label),opms=r.map(x=>x.rev?x.op/x.rev*100:null);h+=`<section class="panel"><h2>분기 재무</h2><div class="cap">막대=매출(좌, ${esc(c.ccy)}) · 선=OPM%(우) · 전부 실적, est 없음</div>${combo(labs,r.map(x=>x.rev),opms)}<div class="scroll"><table><thead><tr><th>회계분기</th><th>분기말</th><th class="num">매출</th><th class="num">영업이익</th><th class="num">OPM</th><th class="num">YoY</th><th>구분</th></tr></thead><tbody>${r.map((x,j)=>`<tr><td class="stamp">${esc(x.fiscal_label)}</td><td class="stamp">${esc(x.period_end)}</td><td class="num">${fmt(x.rev,3)}</td><td class="num">${fmt(x.op,3)}</td><td class="num">${pct(x.rev?x.op/x.rev*100:null).replace('+','')}</td><td class="num">${pct(yoy(r,j))}</td><td>${tag('실적','actual')}</td></tr>`).join('')}</tbody></table></div><div class="note">${esc(v.basis)}</div></section>`;
+  h+=`<div class="grid2"><section class="panel scroll"><h2>제품·세그먼트</h2><div class="cap">같은 계층만 합산 · 하위지표는 basis에 명시</div><table><thead><tr><th>항목</th><th>기간</th><th class="num">값</th><th>근거</th></tr></thead><tbody>${c.segments.map(s=>`<tr><td>${esc(s.name)}</td><td class="stamp">${esc(s.period)}</td><td class="num">${s.value==null?tag('NOT FOUND','nf'):fmt(s.value,typeof s.value==='number'?3:0)}</td><td>${s.basis.includes('NOT FOUND')?tag(s.basis,'nf'):tag(s.basis,s.basis.includes('파생')?'est':'actual')}</td></tr>`).join('')}</tbody></table><div class="note">${esc(c.segment_note)}</div></section>`;
+  h+=`<section class="panel scroll"><h2>가이던스</h2><div class="cap">원/수정·실적 분리 · 미래값은 est:true+reason</div><table><thead><tr><th>공시</th><th>항목</th><th>값</th><th>상태</th><th>reason</th></tr></thead><tbody>${c.guidance.map(g=>`<tr><td class="stamp">${esc(g.when)}</td><td>${esc(g.item)}</td><td>${esc(g.value)}</td><td>${g.status==='미공시'?tag(g.status,'nf'):tag(g.status,'est')}</td><td class="wide note">${esc(g.reason)}</td></tr>`).join('')}</tbody></table></section></div>`;
+  h+=backlogPanel(state.co,c);
+  h+=`<section class="panel"><h2>캐파·증설 로드맵</h2><div style="font-size:11.5px;line-height:1.75;margin-top:6px">${esc(c.capa)}</div></section>`;
+  h+=`<section class="panel source"><h2>회사 원문 출처</h2><div class="cap">숫자·정성 근거. 링크를 새 탭에서 열 수 있음.</div><div class="scroll"><table><tbody>${c.sources.map(s=>`<tr><td><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></td><td class="wide note">${esc(s.note)}</td></tr>`).join('')}</tbody></table></div></section>`;document.getElementById('detail').innerHTML=h;
+}
+function backlogPanel(k,c){const bc=D.backlog.companies[k]||{},names=Object.keys(bc);if(!names.length)return `<section class="panel"><h2>AI 서버 수주·백로그</h2><div class="empty"><b>${esc(c.backlog_status)}</b> — ${esc(c.backlog_note)}</div></section>`;
+  if(k==='SMCI'){const p=bc.new_orders?.[0];return `<section class="panel"><h2>AI 서버 수주·백로그</h2><div class="stat" style="margin-top:8px"><div class="box"><div class="k">FY26 신규 주문</div><div class="v">&gt;$${fmt(p.value,0)}B</div><div class="s">하한·실적 이벤트</div></div><div class="box"><div class="k">백로그 잔액</div><div class="v" style="font-size:15px">NOT FOUND</div><div class="s">회사는 record라고만 공시</div></div></div><div class="note">${esc(c.backlog_note)}</div></section>`}
+  const map=k==='DELL'?[['ai_server_backlog','백로그',COLORS[0]],['ai_server_orders','주문',COLORS[1]],['ai_server_shipments_revenue','AI 매출',COLORS[2]]]:[['ai_systems_backlog','백로그',COLORS[0]],['ai_systems_revenue','AI 매출',COLORS[2]]];const labels=[...new Set(map.flatMap(([m])=>(bc[m]||[]).map(x=>x.period)))];const sr=map.map(([m,l,color])=>({label:l,color,data:labels.map(q=>{const x=(bc[m]||[]).find(v=>v.period===q);return x?x.value:null})}));return `<section class="panel"><h2>AI 서버 수주·백로그</h2><div class="cap">단위 USD_B · DELL AI 서버/HPE AI systems로 범위가 다름 · minimum은 하한</div>${lineChart(labels,sr)}<div class="legend">${sr.map(s=>`<span><i style="background:${s.color}"></i>${s.label}</span>`).join('')}</div><div class="note">${esc(c.backlog_note)} · E03 원장 92행 중 대상 59행을 재사용.</div></section>`;
+}
+function global(){const p=D.proxies,labels=p[0].series.map(x=>x.q),srs=p.map((x,i)=>({label:x.label,color:COLORS[i],data:labels.map(q=>x.series.find(v=>v.q===q)?.value_usd_b??null)}));let h=`<h2 style="font-size:15px;margin:20px 0 10px">🌐 체인 공통판</h2><section class="panel"><h2>세관 프록시 — CSV 실집계</h2><div class="cap">분기 합계 USD_B · 환율변환 없음 · 847150/8471은 AI 서버 전용 코드가 아님</div>${lineChart(labels,srs)}<div class="legend">${srs.map(s=>`<span><i style="background:${s.color}"></i>${esc(s.label)}</span>`).join('')}</div><div class="scroll"><table><thead><tr><th>프록시</th><th>행수</th><th>기간</th><th>ρ</th><th>홀드아웃</th><th>게이트</th><th>최신 YoY</th></tr></thead><tbody>${p.map(x=>{const z=x.series[x.series.length-1];return `<tr><td>${esc(x.label)}</td><td class="num">${x.parsed_rows.toLocaleString()}</td><td class="stamp">${x.first_month}~${x.last_month}</td><td>${tag(x.rho,'nf')}</td><td>${tag(x.holdout,'nf')}</td><td>${tag(x.gate,'est')}</td><td class="num pos">${pct(z.yoy_pct)}</td></tr><tr><td colspan="7" class="note wide">${esc(x.caveat)}</td></tr>`}).join('')}</tbody></table></div></section>`;
+  h+=`<section class="panel scroll"><h2>11사 캐파 로드맵</h2><div class="cap">발표된 투자·완공·램프만 기재 · 수량 미공시는 NOT FOUND</div><table><thead><tr><th>레이어</th><th>기업</th><th>로드맵</th></tr></thead><tbody>${ORDER.map(k=>{const c=D.companies[k];return `<tr><td>${tag(c.category)}</td><td><b>${esc(c.label)}</b></td><td class="wide" style="font-size:11px;line-height:1.6">${esc(c.capa)}</td></tr>`}).join('')}</tbody></table></section>`;
+  h+=`<section class="panel callout"><h2>읽는 법 — 1차→2차 랠리 구조</h2>${D.implications.map(x=>`<div class="imp"><b>${esc(x.title)}<br>${tag(x.status,x.status==='추론'?'est':x.status.includes('실적')?'actual':'')}</b><div>${esc(x.text)}</div></div>`).join('')}</section>`;
+  h+=`<section class="panel source"><h2>데이터 계보</h2><div class="cap">로컬 실물·공식 정의. 로컬 경로는 재현용.</div><table><tbody>${D.source_register.map(s=>`<tr><td>${/^https?:/.test(s.url)?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`:`<span class="stamp">${esc(s.label)}</span>`}</td><td class="wide note">${esc(s.note)}${/^\//.test(s.url)?` · ${esc(s.url)}`:''}</td></tr>`).join('')}</tbody></table></section>`;document.getElementById('global').innerHTML=h;
+}
+function render(){drawControls();overview();detail();global();document.getElementById('headSub').textContent=`브랜드·EMS/HPS·ODM·레일 부품 · 기준일 ${D.asof} · 실적/가이던스/파생 분리 · ${D.unit_policy}`;document.getElementById('foot').innerHTML=`<b>방법·한계</b> — ${Object.values(D.method).map(esc).join(' / ')}<br><b>면책</b> — ${esc(D.disclaimer)}`}
+document.getElementById('themeBtn').onclick=()=>{const r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'};render();
+</script>

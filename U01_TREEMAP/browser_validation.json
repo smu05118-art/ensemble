@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "target": "preview_U01.html",
+  "desktop": {
+    "sector_groups": 5,
+    "company_buttons": 32,
+    "dell_card": {
+      "opened": true,
+      "aria_expanded": true,
+      "fields": [
+        "현 국면",
+        "품질 B",
+        "최신 나우캐스트 YoY +33.3%",
+        "다음 발표 2026-11-24T15:30:00-06:00"
+      ],
+      "closed": true,
+      "aria_expanded_after_close": false
+    },
+    "kioxia_card": {
+      "opened": true,
+      "aria_expanded": true,
+      "research_only_tag": true,
+      "quality": "미평가",
+      "phase": "R03 데이터 대기(placeholder)",
+      "nowcast": "데이터 대기(미산출)",
+      "next_report": "2026-11 예정 (정확한 날짜 모른다)"
+    }
+  },
+  "mobile_375px": {
+    "horizontal_overflow": false,
+    "map_width_px": 317,
+    "map_height_px": 330,
+    "sector_groups": 5,
+    "company_buttons": 32
+  },
+  "console_errors": 0
+}
