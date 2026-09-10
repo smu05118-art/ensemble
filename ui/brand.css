@@ -1,0 +1,20 @@
+/* Ensemble identity: a cut-terminal E and an outlined serif wordmark. */
+a.en-brand.en-wordmark {
+  display:inline-flex;align-items:center;flex:0 0 auto;
+  width:198px;min-height:44px;color:#e7e4dc;
+  line-height:1;letter-spacing:normal;text-decoration:none;
+}
+a.en-brand.en-wordmark::before {content:none}
+a.en-brand.en-wordmark:hover {text-decoration:none}
+a.en-brand.en-wordmark:focus-visible {outline:2px solid var(--acc,#89add0);outline-offset:4px;border-radius:2px}
+a.en-brand > svg {display:block;width:100%;height:40px;max-width:none;flex:none}
+.en-brand .en-brand-mark {fill:#bba17a}
+.en-brand .en-brand-type {fill:currentColor}
+html[data-theme=light] a.en-brand.en-wordmark {color:#263039}
+html[data-theme=light] .en-brand .en-brand-mark {fill:#8c672e}
+@media(max-width:640px) {
+  a.en-brand.en-wordmark {width:176px}
+}
+@media(max-width:380px) {
+  a.en-brand.en-wordmark {width:154px}
+}

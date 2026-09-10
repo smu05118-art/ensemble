@@ -26,8 +26,6 @@ html.ensemble-ui[data-theme=light] {
 .ensemble-ui :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 .ensemble-ui ::selection{background:var(--accSoft);color:var(--ink)}
 .ensemble-ui .en-masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:66px;border-bottom:1px solid var(--line)}
-.ensemble-ui .en-wordmark{color:var(--ink);font-size:20px;font-weight:600;letter-spacing:-.6px;line-height:1;text-decoration:none}
-.ensemble-ui .en-wordmark::before{content:'';display:inline-block;width:3px;height:17px;background:var(--acc);margin-right:10px;vertical-align:-1px}
 .ensemble-ui .en-context{font-size:12px;color:var(--muted);letter-spacing:.02em}
 .ensemble-ui .en-context b{font-weight:500;color:var(--ink);margin-right:12px}
 .ensemble-ui .en-chainnav{display:flex;gap:22px;align-items:center;overflow-x:auto;white-space:nowrap;border-bottom:1px solid var(--line);padding:13px 0;font-size:14px;scrollbar-width:thin}
