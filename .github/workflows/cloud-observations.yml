@@ -1,0 +1,56 @@
+name: Cloud observations
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/cloud-observations.yml']
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: cloud-observations
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 tools/collect_cloud.py
+        id: collect
+        continue-on-error: true
+      - run: |
+          python3 tools/inject_cloud_tab.py
+          node tools/export_cloud.cjs
+          node --test cloud/tests/*.test.cjs
+          python3 -m unittest discover -s cloud/tests -p 'test_*.py'
+          python3 tools/validate_cloud.py
+      - name: Save public observations
+        run: |
+          git config user.name 'ensemble-observations[bot]'
+          git config user.email 'ensemble-observations[bot]@users.noreply.github.com'
+          git add cloud/data/operations.json cloud/data/exports.json index.html ensemble_home.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public cloud observations'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      # Keep the existing branch-based Pages configuration.
+      - name: Request Pages rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+      - name: Surface collector failure after preserving last good data
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo 'A source failed. Last good data and explicit error status were preserved.'
+          exit 1

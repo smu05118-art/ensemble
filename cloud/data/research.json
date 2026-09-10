@@ -1,0 +1,945 @@
+{
+  "schema": "ensemble_cloud_research/2",
+  "updated": "2026-09-10",
+  "sources": {
+    "nbis_q2": {
+      "label": "NBIS Q2 주주서한",
+      "published_at": "2026-08-12",
+      "url": "https://assets.nebius.com/assets/4462517b-ce83-41f2-96ed-f2ac1bc06a05/SHLQ226%20%281%29.pdf",
+      "checked_at": "2026-09-10"
+    },
+    "nbis_fin": {
+      "label": "NBIS Q2 재무제표",
+      "published_at": "2026-08-12",
+      "url": "https://assets.nebius.com/assets/72a8c258-bbb7-4df7-ab9d-8698f6cb88fc/PR.pdf",
+      "checked_at": "2026-09-10"
+    },
+    "nbis_q1": {
+      "label": "NBIS Q1 주주서한",
+      "published_at": "2026-05-13",
+      "url": "https://assets.nebius.com/assets/aa1bc2e6-df83-40cd-a6a2-95e7cda3d16c/Nebius%20SHL_Q1%202026.pdf",
+      "checked_at": "2026-09-10"
+    },
+    "nbis_msft": {
+      "label": "NBIS·Microsoft 계약",
+      "published_at": "2025-09-08",
+      "url": "https://nebius.com/newsroom/nebius-announces-multi-billion-dollar-agreement-with-microsoft-for-ai-infrastructure",
+      "checked_at": "2026-09-10"
+    },
+    "nbis_meta": {
+      "label": "NBIS·Meta 계약",
+      "published_at": "2026-03-16",
+      "url": "https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta",
+      "checked_at": "2026-09-10"
+    },
+    "crwv_q2": {
+      "label": "CoreWeave Q2 실적",
+      "published_at": "2026-08-11",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+      "checked_at": "2026-09-10"
+    },
+    "iren_q3": {
+      "label": "IREN FY26 Q3 실적",
+      "published_at": "2026-05-07",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000025/irenreportsq3fy26results.htm",
+      "checked_at": "2026-09-10"
+    },
+    "iren_msft": {
+      "label": "IREN·Microsoft 계약",
+      "published_at": "2025-11-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036125040072/ef20058139_ex99-1.htm",
+      "checked_at": "2026-09-10"
+    },
+    "apld_q4": {
+      "label": "APLD FY26 Q4 실적",
+      "published_at": "2026-07-27",
+      "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000044/apldq426earningsreleaseasf.htm",
+      "checked_at": "2026-09-10"
+    },
+    "apld_q1": {
+      "label": "APLD PF1·PF2 일정",
+      "published_at": "2025-10-09",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/131/applied-digital-reports-fiscal-first-quarter-2026-results",
+      "checked_at": "2026-09-10"
+    },
+    "cifr_q2": {
+      "label": "Cipher Q2 업데이트",
+      "published_at": "2026-08-04",
+      "url": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-digital-provides-second-quarter-2026-business-update",
+      "checked_at": "2026-09-10"
+    },
+    "cifr_contract": {
+      "label": "Cipher 계약·총전력 기준",
+      "published_at": "2026-02-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000007/cipherdigital_businessup.htm",
+      "checked_at": "2026-09-10"
+    },
+    "wulf_q2": {
+      "label": "TeraWulf Q2 실적",
+      "published_at": "2026-08-05",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+      "checked_at": "2026-09-10"
+    },
+    "calculator": {
+      "label": "참고 계산 구조",
+      "published_at": "2026-09-10",
+      "url": "https://nbistracker.com/calculator",
+      "checked_at": "2026-09-10"
+    },
+    "methodology": {
+      "label": "참고 데이터 방법론",
+      "published_at": "2026-09-10",
+      "url": "https://nbistracker.com/methodology",
+      "checked_at": "2026-09-10"
+    }
+  },
+  "profiles": {
+    "NBIS": {
+      "scope": "매출 발생 용량 재구성 · 회사 가동 MW 공시 아님",
+      "baseline_month": "2026-06",
+      "baseline_mw": 159.5744680851064,
+      "baseline_customer": "고객별 MW 미공개",
+      "unit": "수익화 환산 MW",
+      "baseline_kind": "inferred",
+      "source": "nbis_q2",
+      "contracted_ceiling": 5000,
+      "tranches": [
+        {
+          "id": "nb-h2",
+          "title": "2026 H2 참고 계산기 시나리오",
+          "customer": "고객별 MW 미공개",
+          "mw": 265.4255319148936,
+          "start": "2026-07",
+          "end": "2026-12",
+          "source": "calculator",
+          "rate": null,
+          "mw_basis": "assumption",
+          "timing_basis": "assumption",
+          "note": "7.99B ARR를 재현하는 425MW 기본값. 월별 선형 보간.",
+          "fixed": false
+        },
+        {
+          "id": "nb-meta",
+          "title": "Meta 전용 Vera Rubin",
+          "customer": "Meta",
+          "mw": 200,
+          "start": "2027-01",
+          "end": "2027-12",
+          "source": "nbis_meta",
+          "rate": 12,
+          "mw_basis": "assumption",
+          "timing_basis": "assumption",
+          "note": "200MW 역산 가정. 회사가 공개한 것은 12B/5년·2027년 초 시작이며 개별 MW·완료월은 미공개.",
+          "fixed": false
+        },
+        {
+          "id": "nb-open",
+          "title": "2027 추가 AI cloud",
+          "customer": "고객별 MW 미공개",
+          "mw": 400,
+          "start": "2027-01",
+          "end": "2027-12",
+          "source": "nbis_q2",
+          "rate": null,
+          "mw_basis": "assumption",
+          "timing_basis": "assumption",
+          "note": "추가 600MW 가정 중 Meta 역산 물량 제외. 계약확정 물량이 아님.",
+          "fixed": false
+        }
+      ],
+      "notes": [
+        "2026년 말 425MW는 참고 계산기의 시나리오 기본값. 연결 전력·계약 전력과 다름.",
+        "2027년 추가 수익화 용량 600MW = 회사 연간 >1GW 공급 계획 중 60% 전환 가정.",
+        "Meta 전용 12B/5년/12M = 200MW는 계약 금액으로 역산한 가정. 15B 잔여 구매 약정은 중복 추가하지 않음.",
+        "Microsoft·Reflection·Cohere의 개별 MW가 미공개이므로 임의의 확정 고객 비중을 부여하지 않음."
+      ],
+      "calculator": {
+        "active_mw": 425,
+        "mix": [
+          40,
+          50,
+          10
+        ],
+        "rates": [
+          12,
+          20,
+          40
+        ],
+        "margin": 20,
+        "utilization": 100
+      },
+      "contracts": [
+        {
+          "customer": "Microsoft",
+          "mw": null,
+          "tcv_m": null,
+          "years": null,
+          "source": "nbis_msft",
+          "note": "Vineland 전용 용량. 캠퍼스 최대 300MW를 고객 배정 공시로 대체하지 않음.",
+          "rate": null,
+          "capacity_basis": "critical_it"
+        },
+        {
+          "customer": "Meta",
+          "mw": null,
+          "tcv_m": 12000,
+          "years": 5,
+          "source": "nbis_meta",
+          "note": "전용 용량·2027년 초 시작. 최대 15B 잔여 구매 약정은 별도이며 동일 용량 중복계상 금지.",
+          "rate": null,
+          "capacity_basis": "critical_it"
+        },
+        {
+          "customer": "Reflection",
+          "mw": null,
+          "tcv_m": null,
+          "years": null,
+          "source": "nbis_q2",
+          "note": "Q2 대형 4건 중 하나. 개별 MW·기간·금액 미공개.",
+          "rate": null,
+          "capacity_basis": "critical_it"
+        },
+        {
+          "customer": "Cohere",
+          "mw": null,
+          "tcv_m": null,
+          "years": null,
+          "source": "nbis_q2",
+          "note": "4건 평균 TCV >1B; 개별 1B 계약으로 해석하지 않음.",
+          "rate": null,
+          "capacity_basis": "critical_it"
+        }
+      ],
+      "changes": [
+        {
+          "label": "그룹 분기 매출",
+          "before": 399,
+          "after": 582.3,
+          "unit": "USD M",
+          "source": "nbis_fin",
+          "note": "Q1 = H1 981.3 − Q2 582.3. AI cloud 매출과 분리.",
+          "kind": "actual",
+          "periods": [
+            "2026-Q1",
+            "2026-Q2"
+          ]
+        },
+        {
+          "label": "ARR",
+          "before": 1920,
+          "after": 3000,
+          "unit": "USD M",
+          "source": "nbis_q2",
+          "note": "분기 마지막 달 매출 ×12. 분기 매출 아님.",
+          "kind": "actual",
+          "periods": [
+            "2026-Q1",
+            "2026-Q2"
+          ]
+        },
+        {
+          "label": "계약 전력 연말 목표",
+          "before": 4000,
+          "after": 5000,
+          "unit": "MW",
+          "source": "nbis_q2",
+          "note": "확보할 전력 목표 상향. 가동 증가로 점수화하지 않음.",
+          "kind": "target",
+          "periods": [
+            "2026-Q1",
+            "2026-Q2"
+          ]
+        },
+        {
+          "label": "CAPEX 현금지출",
+          "before": 2472.9,
+          "after": 5657.4,
+          "unit": "USD M",
+          "source": "nbis_fin",
+          "note": "Q1 = H1 8130.3 − Q2 5657.4. 차입·선수금의 부담도 함께 확인.",
+          "kind": "actual",
+          "periods": [
+            "2026-Q1",
+            "2026-Q2"
+          ]
+        },
+        {
+          "label": "영업현금흐름",
+          "before": 2258,
+          "after": 2246.1,
+          "unit": "USD M",
+          "source": "nbis_fin",
+          "note": "Q1 = H1 4504.1 − Q2 2246.1. 선수금 영향 포함.",
+          "kind": "actual",
+          "periods": [
+            "2026-Q1",
+            "2026-Q2"
+          ]
+        }
+      ],
+      "baseline_note": "Q2 ARR 3,000M ÷ 가정 혼합 단가 18.8M/MW·년. 실제 전력 또는 가동 MW가 아닌 역산값.",
+      "derived": [
+        {
+          "label": "Q2 FCF",
+          "value": -3411.2999999999997,
+          "unit": "USD M",
+          "formula": "영업현금흐름 2,246.1 − 현금 CAPEX 5,657.4",
+          "source": "nbis_fin"
+        },
+        {
+          "label": "선수수익 잔액",
+          "value": 5975.2,
+          "unit": "USD M",
+          "formula": "유동 979.4 + 비유동 4,995.8 · RPO 아님",
+          "source": "nbis_fin"
+        },
+        {
+          "label": "발행주식수",
+          "value": 271855218,
+          "unit": "주",
+          "formula": "2026-06-30 기말 발행주식 · 자기주식 제외",
+          "source": "nbis_fin"
+        },
+        {
+          "label": "Q2 신규 계약 CAPEX 선수금 커버",
+          "value": 55,
+          "unit": "%",
+          "formula": "회사 50–60% 범위의 중간값 · 전사 CAPEX 커버 비율 아님",
+          "source": "nbis_q2"
+        }
+      ]
+    },
+    "CRWV": {
+      "scope": "전사 active power · 고객별 배정 MW 미공개",
+      "baseline_month": "2026-06",
+      "baseline_mw": 1500,
+      "baseline_customer": "고객별 MW 미공개",
+      "unit": "active MW",
+      "baseline_kind": "reported",
+      "source": "crwv_q2",
+      "contracted_ceiling": 3700,
+      "tranches": [
+        {
+          "id": "cr-h2",
+          "title": "H2 추가 가동 가정",
+          "customer": "고객별 MW 미공개",
+          "mw": 500,
+          "start": "2026-07",
+          "end": "2026-12",
+          "source": "crwv_q2",
+          "rate": null,
+          "mw_basis": "assumption",
+          "timing_basis": "assumption",
+          "note": "Q2 가동 1.5GW에 0.5GW 추가 가정. 회사 가이던스로 표기하지 않음.",
+          "fixed": false
+        },
+        {
+          "id": "cr-27",
+          "title": "2027 추가 가동 가정",
+          "customer": "고객별 MW 미공개",
+          "mw": 1000,
+          "start": "2027-01",
+          "end": "2027-12",
+          "source": "crwv_q2",
+          "rate": null,
+          "mw_basis": "assumption",
+          "timing_basis": "assumption",
+          "note": "2027 월별 공개 일정 없음. 계약전력 3.7GW 안에서 1GW 가정.",
+          "fixed": false
+        }
+      ],
+      "notes": [
+        "단가는 Q2 매출×4/기말 active MW로 역산. 실제 계약단가나 정상화 가동률 아님.",
+        "고객별 MW 미공개로 전체 가동량은 미공개 배정색으로 표시."
+      ],
+      "calculator": {
+        "active_mw": 2000,
+        "mix": [
+          100,
+          0,
+          0
+        ],
+        "rates": [
+          6.866666666666666,
+          6.866666666666666,
+          6.866666666666666
+        ],
+        "margin": 20,
+        "utilization": 100
+      },
+      "contracts": [
+        {
+          "customer": "Meta",
+          "mw": null,
+          "tcv_m": null,
+          "years": null,
+          "source": "crwv_q2",
+          "note": "고객 관계 확인. MW·평균 계약기간 미확보.",
+          "rate": null,
+          "capacity_basis": "critical_it"
+        },
+        {
+          "customer": "Anthropic",
+          "mw": null,
+          "tcv_m": null,
+          "years": null,
+          "source": "crwv_q2",
+          "note": "고객 관계 확인. 미공개 MW에 임의 비중을 배정하지 않음.",
+          "rate": null,
+          "capacity_basis": "critical_it"
+        }
+      ],
+      "changes": [
+        {
+          "label": "전사 매출",
+          "before": 2078,
+          "after": 2575,
+          "unit": "USD M",
+          "source": "crwv_q2",
+          "note": "Q1 = H1 4,653 − Q2 2,575. 동일 연결 범위.",
+          "kind": "actual",
+          "periods": [
+            "2026-Q1",
+            "2026-Q2"
+          ]
+        },
+        {
+          "label": "Active power",
+          "before": 1000,
+          "after": 1500,
+          "unit": "MW",
+          "source": "crwv_q2",
+          "note": "가동 용량 약 500MW 증가.",
+          "kind": "actual",
+          "periods": [
+            "2026-Q1",
+            "2026-Q2"
+          ]
+        },
+        {
+          "label": "Contracted power",
+          "before": null,
+          "after": 3700,
+          "unit": "MW",
+          "source": "crwv_q2",
+          "note": "계약 전력과 가동 전력 구분.",
+          "kind": "actual",
+          "periods": [
+            "이전 값 미대조",
+            "2026-Q2"
+          ]
+        },
+        {
+          "label": "Q2 매출 YoY",
+          "before": 1212,
+          "after": 2575,
+          "unit": "USD M",
+          "source": "crwv_q2",
+          "note": "전년 동기 비교.",
+          "kind": "actual",
+          "periods": [
+            "2025-Q2",
+            "2026-Q2"
+          ]
+        }
+      ]
+    },
+    "IREN": {
+      "scope": "공시 고객 계약 260MW 부분집합 · 전사 가동량 아님",
+      "baseline_month": "2026-06",
+      "baseline_mw": 0,
+      "baseline_customer": "기준기간 이전·모델 범위 밖",
+      "unit": "critical IT MW",
+      "baseline_kind": "scope_start",
+      "source": "iren_msft",
+      "contracted_ceiling": 260,
+      "tranches": [
+        {
+          "id": "ir-ms",
+          "title": "Childress Horizon 1–4",
+          "customer": "Microsoft",
+          "mw": 200,
+          "start": "2026-09",
+          "end": "2026-12",
+          "source": "iren_msft",
+          "rate": 9.7,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "4×50MW·2026년 순차 공급. 정확한 월별 인도 배분은 추정.",
+          "fixed": false
+        },
+        {
+          "id": "ir-nv",
+          "title": "Childress air-cooled Blackwell",
+          "customer": "NVIDIA",
+          "mw": 60,
+          "start": "2027-01",
+          "end": "2027-06",
+          "source": "iren_q3",
+          "rate": 11.333333333333334,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "2027년 초 램프 시작. 6개월 균등 가동 전환 가정.",
+          "fixed": false
+        }
+      ],
+      "notes": [
+        "모델은 Microsoft·NVIDIA 공개 계약만. 캐나다와 기타 계약 물량을 제외.",
+        "0MW 기준값은 이 모델의 신규 계약 기준값이며 회사 전체 가동량 0을 뜻하지 않음."
+      ],
+      "calculator": {
+        "active_mw": 260,
+        "mix": [
+          100,
+          0,
+          0
+        ],
+        "rates": [
+          10.076923076923077,
+          10.076923076923077,
+          10.076923076923077
+        ],
+        "margin": 20,
+        "utilization": 100
+      },
+      "contracts": [
+        {
+          "customer": "Microsoft",
+          "mw": 200,
+          "tcv_m": 9700,
+          "years": 5,
+          "source": "iren_msft",
+          "note": "critical IT 200MW·20% 선수금·4단계. 750MW 캠퍼스 총전력과 분리.",
+          "rate": 9.7,
+          "capacity_basis": "critical_it"
+        },
+        {
+          "customer": "NVIDIA",
+          "mw": 60,
+          "tcv_m": 3400,
+          "years": 5,
+          "source": "iren_q3",
+          "note": "60MW 기존 시설 활용. 2027년 초 가동 목표.",
+          "rate": 11.333333333333334,
+          "capacity_basis": "critical_it"
+        }
+      ],
+      "changes": [
+        {
+          "label": "전사 매출",
+          "before": 184.7,
+          "after": 144.8,
+          "unit": "USD M",
+          "source": "iren_q3",
+          "note": "채굴 감소 영향. AI cloud 매출 추세로 해석 금지.",
+          "kind": "actual",
+          "periods": [
+            "FY26-Q2",
+            "FY26-Q3"
+          ]
+        },
+        {
+          "label": "조정 EBITDA",
+          "before": 75.3,
+          "after": 59.5,
+          "unit": "USD M",
+          "source": "iren_q3",
+          "note": "전사 비GAAP 지표.",
+          "kind": "actual",
+          "periods": [
+            "FY26-Q2",
+            "FY26-Q3"
+          ]
+        }
+      ]
+    },
+    "APLD": {
+      "scope": "Polaris Forge 1·2 계약 600MW 부분집합",
+      "baseline_month": "2026-06",
+      "baseline_mw": 175,
+      "baseline_customer": "CoreWeave",
+      "unit": "critical IT MW",
+      "baseline_kind": "reported",
+      "source": "apld_q4",
+      "contracted_ceiling": 600,
+      "tranches": [
+        {
+          "id": "ap-pf1b2",
+          "title": "PF1 Building 2 잔여",
+          "customer": "CoreWeave",
+          "mw": 75,
+          "start": "2026-08",
+          "end": "2026-12",
+          "source": "apld_q4",
+          "rate": 1.8333333333333335,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "B2 75MW는 6/30 인도 확인. 남은 75MW 월별 인도는 추정.",
+          "fixed": false
+        },
+        {
+          "id": "ap-pf1b3",
+          "title": "PF1 Building 3",
+          "customer": "CoreWeave",
+          "mw": 150,
+          "start": "2027-01",
+          "end": "2027-06",
+          "source": "apld_q1",
+          "rate": 1.8333333333333335,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "2027년 계획을 상반기 선형 가동으로 가정.",
+          "fixed": false
+        },
+        {
+          "id": "ap-pf2a",
+          "title": "PF2 초기 단계",
+          "customer": "미공개 IG 고객",
+          "mw": 100,
+          "start": "2026-11",
+          "end": "2027-03",
+          "source": "apld_q1",
+          "rate": 1.6666666666666665,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "2026년 시작·2027년 전량 목표. 단계별 100MW는 가정.",
+          "fixed": false
+        },
+        {
+          "id": "ap-pf2b",
+          "title": "PF2 후속 단계",
+          "customer": "미공개 IG 고객",
+          "mw": 100,
+          "start": "2027-04",
+          "end": "2027-12",
+          "source": "apld_q1",
+          "rate": 1.6666666666666665,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "전량 200MW 내 단계별 분할 가정.",
+          "fixed": false
+        }
+      ],
+      "notes": [
+        "전사 계약 1,410MW 중 PF1·PF2 600MW만 모델링. 다른 3개 캠퍼스는 포함하지 않음.",
+        "FY26 Q4 매출 258.7M 중 HPC tenant fit-out 152.4M이 포함되어 반복 임대료로 전액 연율화할 수 없음."
+      ],
+      "calculator": {
+        "active_mw": 600,
+        "mix": [
+          100,
+          0,
+          0
+        ],
+        "rates": [
+          1.777777777777778,
+          1.777777777777778,
+          1.777777777777778
+        ],
+        "margin": 60,
+        "utilization": 100
+      },
+      "contracts": [
+        {
+          "customer": "CoreWeave",
+          "mw": 400,
+          "tcv_m": 11000,
+          "years": 15,
+          "source": "apld_q1",
+          "note": "PF1 400MW 중 175MW는 6/30 가동 확인.",
+          "rate": 1.8333333333333335,
+          "capacity_basis": "critical_it"
+        },
+        {
+          "customer": "미공개 IG 고객",
+          "mw": 200,
+          "tcv_m": 5000,
+          "years": 15,
+          "source": "apld_q1",
+          "note": "PF2 고객명 비공개. 임의로 AWS·Microsoft로 라벨링하지 않음.",
+          "rate": 1.6666666666666665,
+          "capacity_basis": "critical_it"
+        }
+      ],
+      "changes": [
+        {
+          "label": "PF1 가동",
+          "before": 100,
+          "after": 175,
+          "unit": "MW",
+          "source": "apld_q4",
+          "note": "6월 30일 75MW 인도. FY26 Q4 종료일 5월 31일 이후 사건.",
+          "kind": "actual",
+          "periods": [
+            "2025-10",
+            "2026-06-30"
+          ]
+        },
+        {
+          "label": "분기 매출 YoY",
+          "before": 51.1,
+          "after": 258.7,
+          "unit": "USD M",
+          "source": "apld_q4",
+          "note": "ChronoScale 연결 포함. 반복 임대료와 fit-out 분리.",
+          "kind": "actual",
+          "periods": [
+            "FY25-Q4",
+            "FY26-Q4"
+          ]
+        }
+      ],
+      "derived": [
+        {
+          "label": "HPC 반복 기본임대료",
+          "value": 44.1,
+          "unit": "USD M",
+          "formula": "FY26 Q4 base rent · HPC 203.0M 전체와 구분",
+          "source": "apld_q4"
+        },
+        {
+          "label": "Tenant fit-out",
+          "value": 152.4,
+          "unit": "USD M",
+          "formula": "FY26 Q4 · 반복 기본 임대료로 연율화 금지",
+          "source": "apld_q4"
+        }
+      ],
+      "baseline_rate": 1.8333333333333335
+    },
+    "CIFR": {
+      "scope": "Black Pearl·Barber Lake · gross MW 기준",
+      "baseline_month": "2026-06",
+      "baseline_mw": 0,
+      "baseline_customer": "기준기간 이전·모델 범위 밖",
+      "unit": "gross MW",
+      "baseline_kind": "scope_start",
+      "source": "cifr_contract",
+      "contracted_ceiling": 600,
+      "tranches": [
+        {
+          "id": "ci-aws",
+          "title": "Black Pearl",
+          "customer": "AWS",
+          "mw": 300,
+          "start": "2026-08",
+          "end": "2026-12",
+          "source": "cifr_q2",
+          "rate": 1.2222222222222223,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "8월 첫 인도·임대 개시 확인. 초기 MW 미공개; 12월 전량 도달은 추정.",
+          "fixed": false
+        },
+        {
+          "id": "ci-fluid",
+          "title": "Barber Lake",
+          "customer": "Fluidstack",
+          "mw": 300,
+          "start": "2026-10",
+          "end": "2027-03",
+          "source": "cifr_contract",
+          "rate": 1.2666666666666666,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "계약 총전력 300MW·10월 임대 개시 기준. 6개월 가동 전환 추정.",
+          "fixed": false
+        }
+      ],
+      "notes": [
+        "두 캠퍼스 모두 총전력(gross) 기준. 다른 업체 critical IT MW와 합산하지 않음.",
+        "8월 Black Pearl 최초 인도는 확인됐지만 월별 인도 MW는 미공개.",
+        "Barber Lake 이전 244MW·168IT MW 계약을 최신 300 gross MW와 중복 집계하지 않음."
+      ],
+      "calculator": {
+        "active_mw": 600,
+        "mix": [
+          100,
+          0,
+          0
+        ],
+        "rates": [
+          1.2444444444444445,
+          1.2444444444444445,
+          1.2444444444444445
+        ],
+        "margin": 60,
+        "utilization": 100
+      },
+      "contracts": [
+        {
+          "customer": "AWS",
+          "mw": 300,
+          "tcv_m": 5500,
+          "years": 15,
+          "source": "cifr_contract",
+          "note": "Black Pearl. Amazon 보증. 2026년 8월 조기 임대 시작.",
+          "rate": 1.2222222222222223,
+          "capacity_basis": "gross"
+        },
+        {
+          "customer": "Fluidstack",
+          "mw": 300,
+          "tcv_m": 3800,
+          "years": 10,
+          "source": "cifr_contract",
+          "note": "Barber Lake 수정 계약. Google은 신용보강 제공자이며 별도 고객 아님.",
+          "rate": 1.2666666666666666,
+          "capacity_basis": "gross"
+        }
+      ],
+      "changes": [
+        {
+          "label": "Black Pearl 첫 인도월",
+          "before": 10,
+          "after": 8,
+          "unit": "2026 월",
+          "source": "cifr_q2",
+          "note": "계획 대비 2개월 조기 개시. 인도된 MW는 미공개.",
+          "kind": "milestone",
+          "periods": [
+            "기존 계획",
+            "실제 첫 인도"
+          ]
+        }
+      ]
+    },
+    "WULF": {
+      "scope": "Lake Mariner 438MW · Abernathy 제외",
+      "baseline_month": "2026-06",
+      "baseline_mw": 81,
+      "baseline_customer": "가동분 고객 배분 미공개",
+      "unit": "critical IT MW",
+      "baseline_kind": "reported",
+      "source": "wulf_q2",
+      "contracted_ceiling": 438,
+      "tranches": [
+        {
+          "id": "wu-cb3",
+          "title": "CB3 잔여 인도",
+          "customer": "Fluidstack",
+          "mw": 21,
+          "start": "2026-07",
+          "end": "2026-07",
+          "source": "wulf_q2",
+          "rate": null,
+          "mw_basis": "reported",
+          "timing_basis": "reported",
+          "note": "7월 102MW 도달 − 6월말 81MW. CB3 임대는 Fluidstack.",
+          "fixed": true
+        },
+        {
+          "id": "wu-cb4",
+          "title": "CB4 가동 전환",
+          "customer": "Fluidstack",
+          "mw": 168,
+          "start": "2026-10",
+          "end": "2026-12",
+          "source": "wulf_q2",
+          "rate": null,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "2H26 phased delivery. CB4·CB5 합산 336MW를 각각 168MW로 배분하는 가정.",
+          "fixed": false
+        },
+        {
+          "id": "wu-cb5",
+          "title": "CB5 가동 전환",
+          "customer": "Fluidstack",
+          "mw": 168,
+          "start": "2027-01",
+          "end": "2027-06",
+          "source": "wulf_q2",
+          "rate": null,
+          "mw_basis": "reported",
+          "timing_basis": "assumption",
+          "note": "2027년 초 시작 목표. 6월 전량 가동은 추정.",
+          "fixed": false
+        }
+      ],
+      "notes": [
+        "Lake Mariner 81→102MW 실제 인도와 향후 336MW를 구분.",
+        "매각 합의한 Abernathy JV는 모델에서 제외. Anthropic 401MW는 별도 캠퍼스 계약으로 현재 기간 합산 제외.",
+        "미공개 고객별 임대 단가는 2M/IT MW·년 가정. 회사 공시 단가로 표시하지 않음."
+      ],
+      "calculator": {
+        "active_mw": 438,
+        "mix": [
+          100,
+          0,
+          0
+        ],
+        "rates": [
+          2,
+          2,
+          2
+        ],
+        "margin": 60,
+        "utilization": 100
+      },
+      "contracts": [
+        {
+          "customer": "Fluidstack",
+          "mw": null,
+          "tcv_m": null,
+          "years": null,
+          "source": "wulf_q2",
+          "note": "Lake Mariner CB3·CB4·CB5. Google은 신용보강 제공자.",
+          "rate": null,
+          "capacity_basis": "critical_it"
+        },
+        {
+          "customer": "Anthropic",
+          "mw": 401,
+          "tcv_m": 19000,
+          "years": 20,
+          "source": "wulf_q2",
+          "note": "Justified 별도 신규 계약. 옵션 포함 33B를 확정 계약에 합산하지 않음.",
+          "rate": 2.369077306733167,
+          "capacity_basis": "critical_it"
+        }
+      ],
+      "changes": [
+        {
+          "label": "매출 발생 용량",
+          "before": 81,
+          "after": 102,
+          "unit": "MW",
+          "source": "wulf_q2",
+          "note": "Lake Mariner. 7월 인도는 다음 분기 매출에 기여.",
+          "kind": "actual",
+          "periods": [
+            "2026-06",
+            "2026-07"
+          ]
+        }
+      ],
+      "derived": [
+        {
+          "label": "Q2 HPC 임대 매출",
+          "value": 31.9,
+          "unit": "USD M",
+          "formula": "전사 매출 44.8M 중 71.2%",
+          "source": "wulf_q2"
+        }
+      ]
+    }
+  },
+  "methodology": {
+    "reference": "https://nbistracker.com/calculator",
+    "weights_note": "관측 방향 점수와 용량 기반 매출 시나리오는 별도 엔진",
+    "formulas": [
+      "혼합 단가 = Σ(계약 유형 비중 × 해당 유형 M USD/MW·년)",
+      "연율 매출(ARR) = 가동 MW × 가동률 × 혼합 단가",
+      "월 매출 = (월초 MW + 월말 MW)/2 × 가동률 × 연간 단가 /12",
+      "기간 매출 = 해당 월 매출 합계; EBIT = 매출 × 가정 EBIT 마진",
+      "파생값은 분자·분모 기간, 사업범위, 단위가 일치할 때만 계산"
+    ],
+    "rules": [
+      "월별 분할은 회사가 상세 일정을 공개한 경우 외에는 추정. 고객 계약금액으로 역산한 MW는 별도 추정 표시.",
+      "고객명이 미공개인 용량은 미공개 색상 유지. 고객과 보증 제공자를 중복 고객으로 세지 않음.",
+      "가동/연결/계약전력 및 gross/critical IT MW를 별도 표기하고 업체 간 무차별 합산 금지.",
+      "미검증·목표·예측은 과거 관측 점수에 넣지 않음. 변경일·공표일·검증일을 보존."
+    ]
+  }
+}

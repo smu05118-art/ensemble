@@ -1,2 +1,5 @@
 *.artifact.html
 chains/artifact/
+
+__pycache__/
+*.pyc
