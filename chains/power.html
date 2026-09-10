@@ -12,8 +12,9 @@
 @media print{.sticky,#theme{display:none}.panel,.stat{box-shadow:none}body{background:#fff;color:#111}section{break-inside:avoid}}
 </style>
 <link rel="stylesheet" href="../ui/ensemble.css?v=20260910-2" data-ensemble-ui="2">
+<link rel="stylesheet" href="../ui/sites.css?v=1" data-ensemble-sites="1">
 </head>
-<body><!-- ensemble-ui:start --><div class="en-siteframe"><div class="en-masthead"><a class="en-wordmark" href="../">ensemble</a><nav class="en-chainnav" aria-label="공급망"><a href="../chains/pcard.html">프로브카드</a><a href="../chains/rack.html">서버·랙</a><a href="../chains/memory.html">메모리</a><a href="../chains/optics.html">광통신</a><a href="../chains/passive.html">수동부품</a><a href="../chains/power.html" aria-current="page">전력·냉각</a><a href="../chains/lux.html">소비재</a></nav></div></div><!-- ensemble-ui:end -->
+<body><!-- ensemble-ui:start --><div class="en-siteframe"><div class="en-masthead"><a class="en-wordmark" href="../">ensemble</a><nav class="en-chainnav" aria-label="공급망"><a href="../chains/pcard.html">프로브카드</a><a href="../chains/rack.html">서버·랙</a><a href="../chains/memory.html">메모리</a><a href="../chains/optics.html">광통신</a><a href="../chains/passive.html">수동부품</a><a href="../chains/power.html" aria-current="page">전력·냉각</a><a href="../chains/lux.html">소비재</a></nav><details class="en-sites"><summary>사이트 이동</summary><nav class="en-sites-menu" aria-label="리서치 사이트"><a href="https://smu05118-art.github.io/ensemble/" aria-current="location"><span>앙상블</span><small>기업·공급망 리서치</small></a><a href="https://smu05118-art.github.io/phalanx/"><span>팔랑크스</span><small>무역·산업 데이터</small></a><a href="https://smu05118-art.github.io/phalanx/panoptes/"><span>파놉티스</span><small>국제분쟁 지도</small></a><a href="https://smu05118-art.github.io/phalanx/argus/"><span>아르고스</span><small>시클리컬 사이클 관제</small></a></nav></details></div></div><!-- ensemble-ui:end -->
 <header><div class="wrap hero"><div class="eyebrow">ENSEMBLE CHAIN WAVE · C06_POWER</div><h1>전력·냉각</h1><div class="subtitle">AI 계약이 데이터센터 전력 인입, 변압·배전, 랙 전력과 냉각으로 전환되는 경로를 실적·잔고·생산능력·무역 프록시로 점검한다.</div><div class="topline"><span class="pill">기준일 2026-09-02</span><span class="tag actual">실적</span><span class="tag est">est / 전망</span><span class="tag nf">NOT FOUND</span><span class="pill">통화 미환산</span><button id="theme" aria-label="테마 전환">◐ 테마</button></div></div></header>
 <div class="sticky"><nav><a href="#thesis">수요경로</a><a href="#companies">기업</a><a href="#product">제품·지역</a><a href="#peers">피어</a><a href="#backlog">잔고·리드타임</a><a href="#proxy">프록시</a><a href="#capacity">증설</a><a href="#guidance">가이던스</a><a href="#sources">출처</a></nav></div>
 <main class="wrap">
@@ -55,4 +56,5 @@ $('#guidance-body').innerHTML=D.guidance.map(x=>`<tr><td><b>${esc(x.company)}</b
 $('#imp-grid').innerHTML=D.implications.map(x=>`<div class="imp"><h3>${esc(x.title)}</h3><p>${esc(x.body)}</p></div>`).join('');
 $('#source-list').innerHTML=D.sources.map((x,i)=>`<div class="source"><b>${i+1}. <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a> <span class="tag">${esc(x.tier)}</span></b><span>${esc(x.claim)}</span></div>`).join('');
 </script>
+<script src="../ui/sites.js?v=1" data-ensemble-sites="1"></script>
 </body></html>

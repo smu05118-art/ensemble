@@ -1,0 +1,22 @@
+/* Cross-site navigation, shared by the host and standalone cloud workspace. */
+.en-sites{padding:0;border:0;border-radius:0;background:transparent;position:relative;flex-shrink:0;margin:0 0 0 12px;font-size:14px;line-height:1.5;z-index:70}
+.en-sites summary{display:flex;align-items:center;gap:12px;list-style:none;cursor:pointer;min-height:34px;padding:6px 10px;border:1px solid var(--line,#2a313b);border-radius:3px;background:var(--panel,#171b21);color:var(--ink,#e5e8ed);font-size:13px;font-weight:400;letter-spacing:normal;white-space:nowrap}
+.en-sites summary::-webkit-details-marker{display:none}
+.en-sites summary::after{content:'';width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.en-sites[open]{z-index:100}
+.en-sites[open]>summary{margin:0;border-color:var(--acc,var(--cyan,#89add0))}
+.en-sites[open]>summary::after{transform:translateY(2px) rotate(225deg)}
+.en-sites summary:focus-visible,.en-sites-menu a:focus-visible{outline:2px solid var(--acc,var(--cyan,#89add0));outline-offset:3px}
+.en-sites .en-sites-menu{position:absolute;right:0;top:calc(100% + 8px);width:250px;max-width:calc(100vw - 28px);display:grid;gap:2px;padding:6px;background:var(--panel,#171b21);border:1px solid var(--line,#2a313b);border-radius:4px;box-shadow:0 12px 30px #0005;white-space:normal}
+.en-sites .en-sites-menu a{display:grid;gap:2px;padding:10px 12px;border-radius:3px;text-decoration:none;color:var(--ink,#e5e8ed);line-height:1.5}
+.en-sites .en-sites-menu a:hover,.en-sites .en-sites-menu a:focus-visible{background:var(--panel2,#1c222a);text-decoration:none}
+.en-sites-menu a>span{font-size:14px;font-weight:500}.en-sites-menu a>small{font-size:12px;color:var(--muted,var(--dim,#9ba5b2))}
+.en-sites-menu a[aria-current=location]>span{color:var(--acc,var(--cyan,#89add0))}
+.en-sites-menu a[aria-current=location]>span::after{content:'현재 사이트';font-size:11px;font-weight:400;color:var(--muted,var(--dim,#9ba5b2));margin-left:12px}
+.top .en-sites{margin-left:auto}.top .source{margin-left:auto}
+@media(max-width:1100px){.en-masthead .en-context{display:none}}
+@media(max-width:640px){
+ .en-masthead .en-sites{order:1;margin-left:auto}.en-masthead .en-chainnav{order:2}
+ .top{height:auto;min-height:66px;flex-wrap:wrap;padding:12px 0}.top #asof{display:none}
+ .top .en-sites{margin-left:auto}.en-sites summary{font-size:12px}
+}

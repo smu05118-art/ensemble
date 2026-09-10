@@ -2,6 +2,7 @@
 """Apply the shared Ensemble presentation to existing standalone documents."""
 from pathlib import Path
 import re
+from site_navigation import menu, assets
 ROOT = Path(__file__).resolve().parents[1]
 CHAINS = [('pcard','프로브카드'),('rack','서버·랙'),('memory','메모리'),('optics','광통신'),('passive','수동부품'),('power','전력·냉각'),('lux','소비재')]
 TITLES = {'pcard':'프로브카드','rack':'서버·랙','memory':'메모리·스토리지','optics':'광통신·인터커넥트','passive':'MLCC·수동부품','power':'전력·냉각','lux':'럭셔리·소비재'}
@@ -25,7 +26,7 @@ def apply(path):
     s = s.replace('</head>', tag+'\n</head>', 1)
     nav = '<nav class="en-chainnav" aria-label="공급망">'+''.join('<a href="'+prefix+'chains/'+key+'.html"'+(' aria-current="page"' if not home and key==slug else '')+'>'+title+'</a>' for key,title in CHAINS)+'</nav>'
     stamp = '<span class="en-context">자료 기준 2026.09.09</span>' if home else ''
-    brand = START+'<div class="en-siteframe"><div class="en-masthead"><a class="en-wordmark" href="'+('./' if home else '../')+'">ensemble</a>'+nav+stamp+'</div></div>'+END
+    brand = START+'<div class="en-siteframe"><div class="en-masthead"><a class="en-wordmark" href="'+('./' if home else '../')+'">ensemble</a>'+nav+stamp+menu()+'</div></div>'+END
     if START in s:
         s = re.sub(re.escape(START)+r'.*?'+re.escape(END), brand, s, count=1, flags=re.S)
     elif home:
@@ -42,9 +43,21 @@ def apply(path):
         s = re.sub(r'<title>[^<]*</title>', '<title>'+TITLES[slug]+' | Ensemble</title>',s,count=1)
         if slug == 'power':
             s = s.replace("dataset.theme==='dark'?'':'dark'", "dataset.theme==='dark'?'light':'dark'")
+    s = assets(s, prefix)
     path.write_text(s)
     print(str(path.relative_to(ROOT))+': shared interface ready')
 
 if __name__ == '__main__':
     for file in [ROOT/'index.html',ROOT/'ensemble_home.html',*(ROOT/'chains'/f'{key}.html' for key,_ in CHAINS)]:
         apply(file)
+
+    cloud = ROOT / 'cloud/index.html'
+    s = cloud.read_text()
+    start, end = '<!-- ensemble-sites:start -->', '<!-- ensemble-sites:end -->'
+    block = start + menu() + end
+    if start in s:
+        s = re.sub(re.escape(start)+r'.*?'+re.escape(end), block, s, count=1, flags=re.S)
+    else:
+        s = s.replace('</header>', block+'</header>', 1)
+    cloud.write_text(assets(s, '../'))
+    print('cloud/index.html: site navigation ready')
