@@ -2,7 +2,7 @@
 
 The AI–Cloud workspace is owned by Ensemble. Entry: `/#tab=cloud&company=NBIS` or `/cloud/`.
 Both home documents load `ensemble-tab.js`; the existing home and chain views retain their original behavior.
-After regenerating either home, run `python3 tools/inject_cloud_tab.py` to preserve the entry.
+After regenerating home or chain documents, run `python3 tools/apply_ensemble_ui.py` and `python3 tools/inject_cloud_tab.py` to preserve the entry.
 
 ## Coverage
 

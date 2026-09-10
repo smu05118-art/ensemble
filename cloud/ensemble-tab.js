@@ -3,7 +3,7 @@
  'use strict';
  const tabs=document.querySelector('.shell > .tabs')||document.querySelector('.tabs');
  if(!tabs||document.getElementById('pane-cloud'))return;
- const button=document.createElement('button');button.className='tabbtn';button.dataset.tab='cloud';button.textContent='☁ AI·클라우드';button.setAttribute('aria-controls','pane-cloud');tabs.append(button);
+ const button=document.createElement('button');button.className='tabbtn';button.dataset.tab='cloud';button.textContent='AI·클라우드';button.setAttribute('aria-controls','pane-cloud');tabs.append(button);
  const pane=document.createElement('div');pane.className='pane';pane.id='pane-cloud';pane.innerHTML='<iframe title="앙상블 AI·클라우드 관측실" style="display:block;width:100%;height:1500px;border:0" loading="lazy"></iframe>';tabs.after(pane);
  const frame=pane.querySelector('iframe');
  function state(){const h=new URLSearchParams(location.hash.slice(1)),q=new URLSearchParams(location.search);return {company:h.get('company')||q.get('cloud')||'NBIS',view:h.get('view')||'overview'};}

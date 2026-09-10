@@ -29,6 +29,7 @@ jobs:
         id: collect
         continue-on-error: true
       - run: |
+          python3 tools/apply_ensemble_ui.py
           python3 tools/inject_cloud_tab.py
           node tools/export_cloud.cjs
           node --test cloud/tests/*.test.cjs
@@ -38,7 +39,7 @@ jobs:
         run: |
           git config user.name 'ensemble-observations[bot]'
           git config user.email 'ensemble-observations[bot]@users.noreply.github.com'
-          git add cloud/data/operations.json cloud/data/exports.json index.html ensemble_home.html
+          git add cloud/data/operations.json cloud/data/exports.json index.html ensemble_home.html chains
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh public cloud observations'
             git pull --rebase origin main

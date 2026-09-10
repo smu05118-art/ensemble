@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="ensemble-ui ensemble-chain">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI 전력·냉각 체인 | C06_POWER</title>
+<title>전력·냉각 | Ensemble</title>
 <style>
 :root{--bg:#f4f5f7;--panel:#fff;--panel2:#eef0f4;--ink:#1b202a;--dim:#6b7484;--line:#dde1e8;--acc:#2f7fe0;--amber:#c98a12;--pos:#0f9d76;--neg:#d84557;--shadow:0 8px 28px rgba(28,39,55,.08)}
 [data-theme="dark"]{--bg:#11151c;--panel:#1a202a;--panel2:#222a36;--ink:#eef2f7;--dim:#a4adbb;--line:#323c4b;--acc:#69a8ff;--amber:#e8b654;--pos:#42c99f;--neg:#ff7182;--shadow:0 10px 32px rgba(0,0,0,.28)}
@@ -11,9 +11,10 @@
 @media(max-width:820px){.stats{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr}.node:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-20px}.company-grid,.proxy-grid,.imp-grid{grid-template-columns:1fr}.sources{columns:1}.company-head{display:block}.metric-row{grid-template-columns:1fr}.wrap{padding:0 14px}.hero{padding-top:38px}}
 @media print{.sticky,#theme{display:none}.panel,.stat{box-shadow:none}body{background:#fff;color:#111}section{break-inside:avoid}}
 </style>
+<link rel="stylesheet" href="../ui/ensemble.css?v=20260910-2" data-ensemble-ui="2">
 </head>
-<body>
-<header><div class="wrap hero"><div class="eyebrow">ENSEMBLE CHAIN WAVE · C06_POWER</div><h1>AI 전력·냉각 체인</h1><div class="subtitle">AI 계약이 데이터센터 전력 인입, 변압·배전, 랙 전력과 냉각으로 전환되는 경로를 실적·잔고·생산능력·무역 프록시로 점검한다.</div><div class="topline"><span class="pill">기준일 2026-09-02</span><span class="tag actual">실적</span><span class="tag est">est / 전망</span><span class="tag nf">NOT FOUND</span><span class="pill">통화 미환산</span><button id="theme" aria-label="테마 전환">◐ 테마</button></div></div></header>
+<body><!-- ensemble-ui:start --><div class="en-siteframe"><div class="en-masthead"><a class="en-wordmark" href="../">ensemble</a><nav class="en-chainnav" aria-label="공급망"><a href="../chains/pcard.html">프로브카드</a><a href="../chains/rack.html">서버·랙</a><a href="../chains/memory.html">메모리</a><a href="../chains/optics.html">광통신</a><a href="../chains/passive.html">수동부품</a><a href="../chains/power.html" aria-current="page">전력·냉각</a><a href="../chains/lux.html">소비재</a></nav></div></div><!-- ensemble-ui:end -->
+<header><div class="wrap hero"><div class="eyebrow">ENSEMBLE CHAIN WAVE · C06_POWER</div><h1>전력·냉각</h1><div class="subtitle">AI 계약이 데이터센터 전력 인입, 변압·배전, 랙 전력과 냉각으로 전환되는 경로를 실적·잔고·생산능력·무역 프록시로 점검한다.</div><div class="topline"><span class="pill">기준일 2026-09-02</span><span class="tag actual">실적</span><span class="tag est">est / 전망</span><span class="tag nf">NOT FOUND</span><span class="pill">통화 미환산</span><button id="theme" aria-label="테마 전환">◐ 테마</button></div></div></header>
 <div class="sticky"><nav><a href="#thesis">수요경로</a><a href="#companies">기업</a><a href="#product">제품·지역</a><a href="#peers">피어</a><a href="#backlog">잔고·리드타임</a><a href="#proxy">프록시</a><a href="#capacity">증설</a><a href="#guidance">가이던스</a><a href="#sources">출처</a></nav></div>
 <main class="wrap">
 <section><div class="panel notice"><b>읽기 규칙</b><p>실적·역산·전망을 분리하고, 미공시는 0 대신 NOT FOUND로 남겼다. USD·KRW·TWD·JPY를 환산하거나 혼합통화 매출 순위를 만들지 않았다.</p><p><b>투자판단 참고용.</b> 매수·매도 권유가 아니며 공시 범위, 회계연도, 세그먼트와 통화가 서로 다르다.</p></div></section>
@@ -35,7 +36,7 @@ const D=JSON.parse(document.getElementById('power-data').textContent);
 const $=(s)=>document.querySelector(s); const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const fmt=(v,d=1)=>v==null?'NOT FOUND':Number(v).toLocaleString('ko-KR',{maximumFractionDigits:d});
 const opm=f=>(f.revenue!=null&&f.op!=null)?100*f.op/f.revenue:null;
-$('#theme').onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('c06-theme',n)};document.documentElement.dataset.theme=localStorage.getItem('c06-theme')||'';
+$('#theme').onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('c06-theme',n)};document.documentElement.dataset.theme=localStorage.getItem('c06-theme')||'';
 $('#flow').innerHTML=D.demand.path.map(x=>`<div class="node"><b>${esc(x.step)}</b><strong>${esc(x.signal)}</strong><small>${esc(x.risk)}</small></div>`).join(''); $('#capex-note').textContent=D.demand.capex_note;
 function barChart(svgId,items,valueKey,label='') {const svg=$(svgId),W=900,H=250,p={l:54,r:20,t:22,b:38},max=Math.max(...items.map(x=>x[valueKey]||0))*1.12||1,iw=W-p.l-p.r,ih=H-p.t-p.b,bw=iw/items.length*.58;let z='';for(let i=0;i<5;i++){const y=p.t+ih*i/4,v=max*(1-i/4);z+=`<line class="gridline" x1="${p.l}" y1="${y}" x2="${W-p.r}" y2="${y}"/><text class="axis" x="${p.l-8}" y="${y+3}" text-anchor="end">${fmt(v,0)}</text>`}items.forEach((x,i)=>{const cx=p.l+iw*(i+.5)/items.length,h=ih*(x[valueKey]||0)/max,y=p.t+ih-h;z+=`<rect class="bar" x="${cx-bw/2}" y="${y}" width="${bw}" height="${h}" rx="4"><title>${esc(x.period)} ${fmt(x[valueKey])}${label}</title></rect><text class="axis" x="${cx}" y="${H-17}" text-anchor="middle">${esc(x.period)}</text>`});svg.innerHTML=z}
 barChart('#demand-chart',D.demand.capex_quarterly,'value_b','bn USD');
