@@ -5,8 +5,8 @@
     "jobs": {
       "url": "https://boards-api.greenhouse.io/v1/boards/nebius/jobs",
       "health": "ok",
-      "attempted_at": "2026-09-10T12:43:44+00:00",
-      "updated_at": "2026-09-10T12:43:44+00:00",
+      "attempted_at": "2026-09-10T13:08:03+00:00",
+      "updated_at": "2026-09-10T13:08:03+00:00",
       "rows": [
         {
           "id": "4825124101",
@@ -3794,8 +3794,8 @@
     "regions": {
       "url": "https://status.nebius.com/api/v2/components.json",
       "health": "ok",
-      "attempted_at": "2026-09-10T12:43:44+00:00",
-      "updated_at": "2026-09-10T12:43:44+00:00",
+      "attempted_at": "2026-09-10T13:08:03+00:00",
+      "updated_at": "2026-09-10T13:08:03+00:00",
       "rows": [
         {
           "id": "g389s72ckww8",
@@ -3852,8 +3852,8 @@
     "incidents": {
       "url": "https://status.nebius.com/api/v2/incidents.json",
       "health": "ok",
-      "attempted_at": "2026-09-10T12:43:44+00:00",
-      "updated_at": "2026-09-10T12:43:44+00:00",
+      "attempted_at": "2026-09-10T13:08:03+00:00",
+      "updated_at": "2026-09-10T13:08:03+00:00",
       "rows": [
         {
           "id": "gdrrknjscq82",
@@ -4393,5 +4393,5 @@
       "region_groups": 7
     }
   ],
-  "attempted_at": "2026-09-10T12:43:44+00:00"
+  "attempted_at": "2026-09-10T13:08:03+00:00"
 }
