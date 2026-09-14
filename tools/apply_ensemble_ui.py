@@ -4,8 +4,8 @@ from pathlib import Path
 import re
 from site_navigation import menu, assets
 ROOT = Path(__file__).resolve().parents[1]
-CHAINS = [('pcard','프로브카드'),('rack','서버·랙'),('memory','메모리'),('optics','광통신'),('passive','수동부품'),('power','전력·냉각'),('lux','소비재')]
-TITLES = {'pcard':'프로브카드','rack':'서버·랙','memory':'메모리·스토리지','optics':'광통신·인터커넥트','passive':'MLCC·수동부품','power':'전력·냉각','lux':'럭셔리·소비재'}
+CHAINS = [('pcard','프로브카드'),('rack','서버·랙'),('memory','메모리'),('optics','광통신'),('passive','수동부품'),('power','전력·냉각'),('grid','전력기기'),('lux','소비재')]
+TITLES = {'pcard':'프로브카드','rack':'서버·랙','memory':'메모리·스토리지','optics':'광통신·인터커넥트','passive':'MLCC·수동부품','power':'전력·냉각','grid':'전력기기 밸류체인','lux':'럭셔리·소비재'}
 START, END = '<!-- ensemble-ui:start -->', '<!-- ensemble-ui:end -->'
 
 def wordmark(href):
@@ -31,8 +31,8 @@ def apply(path):
         body = s[s.index('<title>'):s.rindex('</body>')]
         end_style = body.index('</style>') + len('</style>')
         s = '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' + body[:end_style] + '</head><body>' + body[end_style:] + '</body></html>'
-    classes = 'ensemble-ui ' + ('ensemble-home' if home else 'ensemble-chain')
-    s = re.sub(r'<html\b[^>]*>', '<html lang="ko" class="'+classes+'">', s, count=1)
+    classes = 'ensemble-ui ' + ('ensemble-home' if home else ('ensemble-grid' if slug == 'grid' else 'ensemble-chain'))
+    s = re.sub(r'<html\b[^>]*>', '<html lang="ko" class="'+classes+'"'+(' data-theme="dark"' if slug == 'grid' else '')+'>', s, count=1)
     tag = '<link rel="stylesheet" href="'+prefix+'ui/ensemble.css?v=20260910-3" data-ensemble-ui="3">'
     s = re.sub(r'<link\b[^>]*data-ensemble-ui="[^"]*"[^>]*>\s*', '', s)
     s = s.replace('</head>', tag+'\n</head>', 1)
