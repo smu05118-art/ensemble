@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-16",
+  "series": 64,
+  "observations": 261,
+  "releases": 15,
+  "sources": 15,
+  "inventory": {
+    "products": 22,
+    "series": 28,
+    "observations": 142,
+    "sources": 48
+  },
+  "files": {
+    "updates.md": "545f7bc721c61aadbd0a85ca4922fe530ac06812c58b8d0ce69e787be23dc328",
+    "inventory-updates.md": "26a1c63a69274ad91e5f071ea6b2e231b20da4c6093436227656031a359a096d",
+    "data.json": "56e3f7cb3de82ad9c24dd65a8ca80dc0327e792c82863ba98fe1c0b02106df87",
+    "inventory.json": "d3ea90fae443f60d34d525613cc6bfe9731fca9983d0732dc1bdd44af1902b24",
+    "ensemble-tab.js": "8a2c0d516d9d6a62bdc64639c037be99337d556b1ed3516203c35091cc318539",
+    "leadtime.js": "8cac680afb0fa723cc923d32766e13fd0f744ceb6bc7e89c38be4331683ca313",
+    "leadtime.css": "b6b6f84399a530ad90679ded87d478a25f4ee17a881150025b91649c7c5b2ae0",
+    "inventory.js": "efeb2f4931638898b143da2a36b1e02ee156bb5ccc5989f68c57c4bce4f66639",
+    "inventory.css": "375a992bfac5d70ba6067d7bd27af838fa75d5ef2f396a80aeb73516ca05bf08",
+    "index.html": "dac0f2e3aed63284bf934d71dfb87c5a4654b4c6391188a07d84f0bce5a30b41"
+  }
+}

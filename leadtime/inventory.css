@@ -1,0 +1,67 @@
+.iv-app { --iv-ink:#172d39; --iv-muted:#526973; --iv-teal:#087f80; --iv-line:#d5e3e6; color:var(--iv-ink); background:#f5f9fa; font:15px/1.65 system-ui,-apple-system,"Noto Sans KR",sans-serif; padding:clamp(14px,3vw,36px); border-radius:16px; overflow-wrap:anywhere; }
+.iv-app *, .iv-app *::before, .iv-app *::after { box-sizing:border-box; }
+.iv-app h2, .iv-app h3, .iv-app h4, .iv-app p { margin:0 0 12px; }
+.iv-app h2 { font-size:clamp(26px,4vw,38px); letter-spacing:-.04em; line-height:1.25; }
+.iv-app h3 { font-size:19px; line-height:1.4; }
+.iv-app h4 { font-size:16px; }
+.iv-app .iv-eyebrow { color:var(--iv-teal); font-size:11px; font-weight:800; letter-spacing:.12em; }
+.iv-app .iv-caption { color:var(--iv-muted); font-size:12px; }
+.iv-app .iv-summary { display:flex; gap:12px 24px; flex-wrap:wrap; align-items:center; background:#e7f3f2; border:1px solid #c2dddd; border-radius:10px; padding:14px 18px; margin:20px 0; }
+.iv-app .iv-summary span { font-size:13px; }
+.iv-app .iv-method, .iv-app .iv-archive { border:1px solid var(--iv-line); border-radius:10px; background:white; padding:14px 18px; margin:18px 0; }
+.iv-app summary { cursor:pointer; font-weight:650; }
+.iv-app details[open] > summary { margin-bottom:14px; }
+.iv-app .iv-controls { display:grid; grid-template-columns:1fr 1fr auto; align-items:end; gap:14px; margin:26px 0; }
+.iv-app label { display:block; min-width:0; font-size:13px; font-weight:650; }
+.iv-app input, .iv-app select, .iv-app button { font:inherit; border:1px solid #a7bec6; border-radius:7px; padding:10px 12px; min-height:44px; max-width:100%; }
+.iv-app input, .iv-app select { display:block; width:100%; margin-top:6px; background:white; color:var(--iv-ink); }
+.iv-app select { text-overflow:ellipsis; }
+.iv-app button { background:var(--iv-teal); color:white; cursor:pointer; font-weight:650; }
+.iv-app button:hover { background:#066566; }
+.iv-app :focus-visible { outline:3px solid #bd740d; outline-offset:3px; }
+.iv-app .iv-roles { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:20px; }
+.iv-app .iv-panel { min-width:0; border:1px solid var(--iv-line); background:white; padding:20px; border-radius:12px; }
+.iv-app .iv-panel > label { margin:18px 0; }
+.iv-app .iv-badge { display:inline-block; padding:5px 10px; color:#065d60; background:#e3f2f1; border-radius:5px; font-size:12px; font-weight:750; }
+.iv-app .iv-warning { background:#fff2d9; color:#754908; padding:10px; border-left:3px solid #b77512; font-weight:750; }
+.iv-app .iv-chart { margin-top:20px; }
+.iv-app .iv-chart svg { display:block; width:100%; height:auto; overflow:visible; }
+.iv-app .iv-grid { stroke:#dfe8eb; stroke-width:1; }
+.iv-app .iv-axis { fill:#526973; font:12px system-ui,sans-serif; }
+.iv-app .iv-whisker { stroke:#087f80; stroke-width:3; }
+.iv-app .iv-dot { fill:#087f80; stroke:white; stroke-width:1.5; }
+.iv-app .iv-open { fill:white; stroke:#087f80; stroke-width:2; }
+.iv-app .iv-bound { fill:#065d60; font:bold 15px system-ui,sans-serif; }
+.iv-app .iv-hit { fill:transparent; }
+.iv-app .iv-mark { cursor:pointer; }
+.iv-app .iv-mark:hover .iv-hit, .iv-app .iv-mark:focus .iv-hit { fill:#087f801a; }
+.iv-app .iv-detail { background:#f1f7f8; padding:14px; border-radius:8px; margin:16px 0; }
+.iv-app .iv-evidence { font-size:12px; }
+.iv-app .iv-evidence p { margin-bottom:8px; }
+.iv-app .iv-value { font-size:19px; font-weight:750; color:#066568; }
+.iv-app .iv-inputs { white-space:pre-wrap; overflow-wrap:anywhere; font-size:11px; }
+.iv-app a { color:#086c80; text-decoration:underline; text-underline-offset:3px; }
+.iv-app .iv-table-wrap { max-width:100%; overflow-x:auto; border:1px solid var(--iv-line); border-radius:8px; }
+.iv-app table { border-collapse:collapse; width:100%; font-size:12px; background:white; }
+.iv-app caption { text-align:left; padding:12px; color:var(--iv-muted); font-size:12px; }
+.iv-app th, .iv-app td { padding:11px; border-bottom:1px solid var(--iv-line); text-align:left; vertical-align:top; min-width:105px; }
+.iv-app th { background:#edf4f6; font-weight:700; }
+.iv-app td p { margin-bottom:6px; }
+.iv-app td .iv-evidence { min-width:200px; }
+.iv-app .iv-coverage { margin-top:32px; }
+.iv-app .iv-archive ul { padding-left:20px; }
+.iv-app .iv-archive li { padding:8px 0; }
+.iv-app .iv-empty, .iv-app .iv-state { border:1px dashed #b4cbd1; border-radius:8px; background:#f1f7f8; padding:18px; color:#405b67; }
+@media (max-width:850px) {
+  .iv-app .iv-roles { grid-template-columns:minmax(0,1fr); }
+  .iv-app .iv-controls { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+  .iv-app .iv-controls > button { grid-column:1/-1; }
+}
+@media (max-width:480px) {
+  .iv-app .iv-controls { grid-template-columns:minmax(0,1fr); }
+  .iv-app .iv-panel { padding:12px; }
+  .iv-app .iv-summary { gap:5px; flex-direction:column; align-items:flex-start; }
+  .iv-app .iv-chart svg { min-height:185px; }
+}
+
+.iv-app .iv-secondary{background:#fff4dc;color:#775217;border-left:3px solid #bd8f31;padding:8px;font-size:12px}.iv-app .iv-plot-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain}.iv-app .iv-chart svg{min-width:560px}.iv-app .iv-panel .iv-detail{max-height:440px;overflow:auto}.iv-app .iv-panel>div>p{overflow-wrap:anywhere}.iv-app .iv-controls select{min-width:0}
