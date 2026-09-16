@@ -7,10 +7,10 @@
   "overseas": 90
  },
  "asof": "2026-09-15",
- "code_sha256": "983c85c0920d3c8b9c6b75d23974cf98c4d984923f0ca64217e68b6cf302ecb3",
+ "code_sha256": "f8f785ee8fbe6613912d20e82e615e6f1954aa318e231d91dccd2effa8fc729d",
  "counts": {
   "active_coverage": 0,
-  "backlog_unknown": 80,
+  "backlog_unknown": 70,
   "corporate_edges": 14,
   "count_units_total": 127,
   "crossref_edges": 7,
@@ -21,13 +21,13 @@
   "korean": 34,
   "nodes_total": 133,
   "overseas": 90,
-  "overseas_with_no_primary_source": 75,
-  "overseas_with_primary_evidence": 15,
+  "overseas_with_no_primary_source": 3,
+  "overseas_with_primary_evidence": 86,
   "proxy_links": 13,
   "proxy_passing_any_gate": 1,
   "queue_items": 113,
-  "reported_amount": 31,
-  "reported_change_only": 2,
+  "reported_amount": 40,
+  "reported_change_only": 3,
   "supply_edges": 9,
   "undisclosed_by_policy": 4
  },
@@ -50,11 +50,11 @@
   "linkage",
   "comparability_policy"
  ],
- "generated_at": "2026-09-14T23:44:39+00:00",
+ "generated_at": "2026-09-16T07:08:56+00:00",
  "held_observations": 1,
- "html_sha256": "548786429e7f7abbe1eb72caa50014449f5b20d93ec17c6e097b208ca90a302d",
+ "html_sha256": "0fb7f117b8ae4460709c3e5c2a16cd2aaae085eae9440eb94ed0654fd2d6c770",
  "input_sha256": {
-  "catalog": "d87bfd0021d75395398739707181a45c6d16e4eb3fad902fb8480b39065bbc21",
+  "catalog": "7e8e53daa5497b25c343bc494417a5a2f66920b31fe04d635453c830590452f8",
   "kgrid_reports": "6eca71dd9d37182fc5acfa350d51316b5e6f06a08559701013a57274957a0428",
   "linkage": "6e777db9b111cc37a2d6a65fe4ba8307cd74e7050351afd629990d621a3ecf6d",
   "power_data": "dcca9125e1228b06d8f6fb5c6908c46ed935e9e1d2585bafa68121b8f7f80ee5",
@@ -63,7 +63,7 @@
  },
  "inputs": {
   "catalog": "grid_catalog.json",
-  "kgrid_reports": "reports.json",
+  "kgrid_reports": "kgrid_reports.json",
   "linkage": "grid_linkage.json",
   "power_data": "power_data.json",
   "taxonomy": "grid_taxonomy.json",
@@ -75,36 +75,35 @@
   "grid_data.json",
   "grid_manifest.json"
  ],
- "payload_sha256": "a5c8d33c00159e96a6fd5033b74e81e1d53280812c7a6a6ea5da53e5fcd27c69",
+ "payload_sha256": "fb3ce9009e25a13b9d9cc63a715ec513db8239685cb5bd424e20abd7771d97c8",
  "policy_version": "grid-build/0.2-reviewed",
- "presentation": "Ensemble shared masthead",
  "status_counts": {
   "backlog_status": {
    "disclosed_none": 4,
-   "reported_amount": 34,
-   "reported_change_only": 2,
+   "reported_amount": 43,
+   "reported_change_only": 3,
    "see_power_page": 9,
    "undisclosed_by_policy": 4,
-   "unknown": 80
+   "unknown": 70
   },
   "entity_status": {
-   "candidate_unverified": 75,
+   "candidate_unverified": 4,
    "existing_lane_reference": 9,
    "kgrid_reference": 34,
-   "primary_evidence_partial": 15
+   "primary_evidence_partial": 86
   },
   "listing_class": {
    "listed": 34,
-   "listed_per_memo": 4,
-   "possibly_private": 9,
+   "listed_per_memo": 33,
+   "possibly_private": 6,
    "see_power_page": 9,
-   "unknown": 77
+   "unknown": 51
   },
   "source_status": {
    "existing_lane_verified": 9,
    "kgrid_dart_snapshot": 34,
-   "no_primary_source_collected": 75,
-   "primary_source_read": 15
+   "no_primary_source_collected": 3,
+   "primary_source_read": 87
   }
  },
  "tests": "see test_grid.py (실행 여부는 INTEGRATION.md 참조)",
