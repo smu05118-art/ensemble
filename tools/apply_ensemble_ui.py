@@ -4,8 +4,8 @@ from pathlib import Path
 import re
 from site_navigation import menu, assets
 ROOT = Path(__file__).resolve().parents[1]
-CHAINS = [('pcard','프로브카드'),('rack','서버·랙'),('memory','메모리'),('foundry','파운드리'),('optics','광통신'),('passive','수동부품'),('power','전력·냉각'),('grid','전력기기'),('lux','소비재')]
-TITLES = {'pcard':'프로브카드','rack':'서버·랙','memory':'메모리·스토리지','foundry':'파운드리·웨이퍼','optics':'광통신·인터커넥트','passive':'MLCC·수동부품','power':'전력·냉각','grid':'전력기기 밸류체인','lux':'럭셔리·소비재'}
+CHAINS = [('pcard','프로브카드'),('rack','서버·랙'),('memory','메모리'),('foundry','파운드리'),('optics','광통신'),('passive','수동부품'),('power','전력·냉각'),('grid','전력기기'),('lux','소비재'),('valuation','밸류에이션')]
+TITLES = {'pcard':'프로브카드','rack':'서버·랙','memory':'메모리·스토리지','foundry':'파운드리·웨이퍼','optics':'광통신·인터커넥트','passive':'MLCC·수동부품','power':'전력·냉각','grid':'전력기기 밸류체인','lux':'럭셔리·소비재','valuation':'밸류에이션 밴드'}
 START, END = '<!-- ensemble-ui:start -->', '<!-- ensemble-ui:end -->'
 
 def wordmark(href):
