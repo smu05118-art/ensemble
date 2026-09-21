@@ -5,8 +5,8 @@
     "jobs": {
       "url": "https://boards-api.greenhouse.io/v1/boards/nebius/jobs",
       "health": "ok",
-      "attempted_at": "2026-09-20T08:38:56+00:00",
-      "updated_at": "2026-09-20T08:38:56+00:00",
+      "attempted_at": "2026-09-21T09:01:34+00:00",
+      "updated_at": "2026-09-21T09:01:34+00:00",
       "rows": [
         {
           "id": "4825124101",
@@ -3541,9 +3541,9 @@
         {
           "id": "4911725101",
           "title": "Supply Chain Manager",
-          "location": "India; Singapore",
+          "location": "Singapore",
           "url": "https://careers.nebius.com/?gh_jid=4911725101",
-          "source_updated_at": "2026-09-15T07:21:51-04:00",
+          "source_updated_at": "2026-09-20T14:36:30-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3703,7 +3703,7 @@
           "title": "Technical Project Manager (Hardware) ",
           "location": "Remote - Europe",
           "url": "https://careers.nebius.com/?gh_jid=4867482101",
-          "source_updated_at": "2026-09-18T07:23:20-04:00",
+          "source_updated_at": "2026-09-21T04:01:04-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3864,8 +3864,8 @@
     "regions": {
       "url": "https://status.nebius.com/api/v2/components.json",
       "health": "ok",
-      "attempted_at": "2026-09-20T08:38:56+00:00",
-      "updated_at": "2026-09-20T08:38:56+00:00",
+      "attempted_at": "2026-09-21T09:01:34+00:00",
+      "updated_at": "2026-09-21T09:01:34+00:00",
       "rows": [
         {
           "id": "g389s72ckww8",
@@ -3922,8 +3922,8 @@
     "incidents": {
       "url": "https://status.nebius.com/api/v2/incidents.json",
       "health": "ok",
-      "attempted_at": "2026-09-20T08:38:56+00:00",
-      "updated_at": "2026-09-20T08:38:56+00:00",
+      "attempted_at": "2026-09-21T09:01:34+00:00",
+      "updated_at": "2026-09-21T09:01:34+00:00",
       "rows": [
         {
           "id": "471nh208bh8m",
@@ -5177,7 +5177,13 @@
       "jobs": 385,
       "dc_jobs": 56,
       "region_groups": 7
+    },
+    {
+      "date": "2026-09-21",
+      "jobs": 385,
+      "dc_jobs": 56,
+      "region_groups": 7
     }
   ],
-  "attempted_at": "2026-09-20T08:38:56+00:00"
+  "attempted_at": "2026-09-21T09:01:34+00:00"
 }
