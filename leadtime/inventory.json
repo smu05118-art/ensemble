@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-16",
+  "updated_at": "2026-09-23",
   "intro_ko": "분기별 제조사·고객사 재고 주수입니다. 직접 보고된 제품 재고와 기업 전체 재고회전일수의 주수 환산을 구분합니다. 원문이 없는 제품·역할·분기는 공백으로 남깁니다.",
   "products": [
     {
@@ -538,6 +538,33 @@
       "locator": "PDF page 5, Consolidated Balance Sheets, Net Inventory Turnover Days row",
       "sha256": "69840c6f7ae1550b1e159b9421efefd1675857e79459ce396cb6a8f8b031e4fa",
       "publication_date_basis": "TWSE dated filing 303720260729E001.pdf for the July 29, 2026 earnings conference. PDF cover states July 2026. The July 30 reissue preserves the inventory row."
+    },
+    {
+      "id": "tf-inventory-20190305",
+      "publisher": "TrendForce",
+      "title": "DRAM 공급사 재고 · 2019Q1",
+      "url": "https://www.trendforce.com/presscenter/news/20190305-10109.html",
+      "published_at": "2019-03-05",
+      "locator": "Second paragraph, most DRAM suppliers; wafer banks included",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-inventory-20211213",
+      "publisher": "TrendForce",
+      "title": "서버 DRAM 고객 재고 · 2021Q4",
+      "url": "https://www.trendforce.com/presscenter/news/20211213-11050.html",
+      "published_at": "2021-12-13",
+      "locator": "Server DRAM section, first paragraph; At the moment",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-inventory-20220704",
+      "publisher": "TrendForce",
+      "title": "서버 DRAM 고객 재고 · 2022Q3",
+      "url": "https://www.trendforce.com/presscenter/news/20220704-11286.html",
+      "published_at": "2022-07-04",
+      "locator": "Paragraph beginning At present, server DRAM inventory clients",
+      "evidence_tier": "primary"
     }
   ],
   "series": [
@@ -916,6 +943,62 @@
       "calendar": "calendar",
       "method_ko": "발행사 공식 분기 발표자료에 직접 보고된 순재고회전일수를 7로 나눕니다. 재고금액·매출원가로 새 지표를 계산하지 않습니다.",
       "note": "ABF·BT·PCB 등을 포함한 전사 참고값입니다. 각 표의 분기말 열을 사용하며 발간일과 관측 기간을 별도로 보존합니다."
+    },
+    {
+      "id": "tf-dram-suppliers-wafer-inclusive",
+      "product_id": "dram",
+      "role": "manufacturer",
+      "entity": "Most DRAM suppliers",
+      "name": "DRAM 공급사 · 웨이퍼 포함",
+      "scope": "DRAM inventory including wafer banks; most suppliers aggregate, not individual issuer or finished-goods-only",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고 주수 그대로; 근사값. 분기는 현재라는 표현과 발간일로 식별한 분기 중 관측",
+      "note": "정확한 조사일과 분기말 잔고는 미공개입니다. 주체·제품 범위가 다른 계열에 연결하지 않습니다.",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-server-dram-csp-customers",
+      "product_id": "dram",
+      "role": "customer",
+      "entity": "CSPs (region unspecified)",
+      "name": "CSP · 서버 DRAM",
+      "scope": "Server DRAM at CSPs; geography not specified",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고 주수 그대로; 근사값. 분기는 현재라는 표현과 발간일로 식별한 분기 중 관측",
+      "note": "정확한 조사일과 분기말 잔고는 미공개입니다. 주체·제품 범위가 다른 계열에 연결하지 않습니다.",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-server-dram-enterprise-customers",
+      "product_id": "dram",
+      "role": "customer",
+      "entity": "Enterprise clients",
+      "name": "기업 고객 · 서버 DRAM",
+      "scope": "Server DRAM at enterprise clients",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고 주수 그대로; 근사값. 분기는 현재라는 표현과 발간일로 식별한 분기 중 관측",
+      "note": "정확한 조사일과 분기말 잔고는 미공개입니다. 주체·제품 범위가 다른 계열에 연결하지 않습니다.",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-server-dram-client-aggregate",
+      "product_id": "dram",
+      "role": "customer",
+      "entity": "Server DRAM clients (aggregate)",
+      "name": "서버 DRAM 고객 전체",
+      "scope": "Server DRAM client aggregate; CSP/enterprise split not provided",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고 주수 그대로; 근사값. 분기는 현재라는 표현과 발간일로 식별한 분기 중 관측",
+      "note": "정확한 조사일과 분기말 잔고는 미공개입니다. 주체·제품 범위가 다른 계열에 연결하지 않습니다.",
+      "evidence_tier": "primary"
     }
   ],
   "observations": [
@@ -4339,6 +4422,94 @@
       "source_column": "JUN.30 2026",
       "narrative_ko": "Unimicron 2026-Q2의 전사 순재고회전일수는 56일입니다. 직접 보고한 일수를 7로 나누면 8.00주입니다. ABF 전용 물량 재고 또는 고객사 재고 주수로 해석하지 않습니다.",
       "locator": "PDF page 5, Consolidated Balance Sheets, Net Inventory Turnover Days row, JUN.30 2026 column"
+    },
+    {
+      "id": "tf-dram-suppliers-wafer-inclusive-2019-Q1",
+      "series_id": "tf-dram-suppliers-wafer-inclusive",
+      "source_id": "tf-inventory-20190305",
+      "quarter": "2019-Q1",
+      "period_label": "2019Q1 · 분기 중",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 6,
+      "value_max": 6,
+      "qualifier": "exact",
+      "approximate": true,
+      "raw_value_min": 6,
+      "raw_value_max": 6,
+      "raw_unit": "weeks",
+      "conversion": "identity",
+      "narrative_ko": "대부분 DRAM 공급사는 웨이퍼 재고를 포함해 약 6주 재고를 보유했습니다. 완제품만의 재고나 개별 제조사 수치가 아닙니다. 분기 중 조사치로, 정확한 조사일·분기말값은 공개되지 않았습니다.",
+      "locator": "Second paragraph, most DRAM suppliers; wafer banks included",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "tf-server-dram-csp-customers-2021-Q4",
+      "series_id": "tf-server-dram-csp-customers",
+      "source_id": "tf-inventory-20211213",
+      "quarter": "2021-Q4",
+      "period_label": "2021Q4 · 분기 중",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 6,
+      "value_max": 9,
+      "qualifier": "range",
+      "approximate": true,
+      "raw_value_min": 6,
+      "raw_value_max": 9,
+      "raw_unit": "weeks",
+      "conversion": "identity",
+      "narrative_ko": "CSP의 서버 DRAM 재고는 약 6–9주였습니다. 3분기 말보다 소폭 감소했지만 구매 수요를 크게 늘릴 정도는 아니었다고 설명합니다. 분기 중 조사치로, 정확한 조사일·분기말값은 공개되지 않았습니다.",
+      "locator": "Server DRAM section, first paragraph; At the moment",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "tf-server-dram-enterprise-customers-2021-Q4",
+      "series_id": "tf-server-dram-enterprise-customers",
+      "source_id": "tf-inventory-20211213",
+      "quarter": "2021-Q4",
+      "period_label": "2021Q4 · 분기 중",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 8,
+      "value_max": 10,
+      "qualifier": "range",
+      "approximate": true,
+      "raw_value_min": 8,
+      "raw_value_max": 10,
+      "raw_unit": "weeks",
+      "conversion": "identity",
+      "narrative_ko": "기업 고객의 서버 DRAM 재고는 약 8–10주였습니다. 기사에 별도로 제시된 2022년 1분기 가격 전망과 구분합니다. 분기 중 조사치로, 정확한 조사일·분기말값은 공개되지 않았습니다.",
+      "locator": "Server DRAM section, first paragraph; At the moment",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "tf-server-dram-client-aggregate-2022-Q3",
+      "series_id": "tf-server-dram-client-aggregate",
+      "source_id": "tf-inventory-20220704",
+      "quarter": "2022-Q3",
+      "period_label": "2022Q3 · 분기 중",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 7,
+      "value_max": 8,
+      "qualifier": "range",
+      "approximate": true,
+      "raw_value_min": 7,
+      "raw_value_max": 8,
+      "raw_unit": "weeks",
+      "conversion": "identity",
+      "narrative_ko": "서버 DRAM 고객은 2022년 3분기 초 약 7–8주 재고를 보유했습니다. CSP·기업 고객을 구분하지 않은 합계 범위입니다. 분기 중 조사치로, 정확한 조사일·분기말값은 공개되지 않았습니다.",
+      "locator": "Paragraph beginning At present, server DRAM inventory clients",
+      "period_end_source_url": null,
+      "period_end_locator": null
     }
   ],
   "coverage": [
@@ -4357,8 +4528,8 @@
     },
     {
       "product_id": "dram",
-      "manufacturer_status": "제품 재고 주수 3계열 · 보고 재고일수 환산 1계열",
-      "customer_status": "제품 재고 주수 8계열",
+      "manufacturer_status": "제품 재고 주수 4계열 · 보고 재고일수 환산 1계열",
+      "customer_status": "제품 재고 주수 11계열",
       "note": "공개 원문에서 제품·보유주체·분기·단위가 확인된 재고 주수만 추가합니다. 재고금액이나 납기로 역산하지 않습니다. LS증권 재인용 · TrendForce 원자료 별도 미확인",
       "source_urls": [
         "https://www.trendforce.com.tw/research/download/RP240531KA",
@@ -4367,7 +4538,8 @@
         "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf",
         "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
         "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
-        "https://msg.ls-sec.co.kr/eum/K_20241119_31780_104.pdf"
+        "https://msg.ls-sec.co.kr/eum/K_20241119_31780_104.pdf",
+        "https://www.trendforce.com/presscenter/news/20190305-10109.html"
       ]
     },
     {

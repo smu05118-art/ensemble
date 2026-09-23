@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-16",
-  "series": 64,
-  "observations": 261,
-  "releases": 15,
-  "sources": 15,
+  "updated_at": "2026-09-23",
+  "series": 84,
+  "observations": 313,
+  "releases": 19,
+  "sources": 19,
   "inventory": {
     "products": 22,
-    "series": 28,
-    "observations": 142,
-    "sources": 48
+    "series": 32,
+    "observations": 146,
+    "sources": 51
   },
   "files": {
-    "updates.md": "545f7bc721c61aadbd0a85ca4922fe530ac06812c58b8d0ce69e787be23dc328",
-    "inventory-updates.md": "26a1c63a69274ad91e5f071ea6b2e231b20da4c6093436227656031a359a096d",
-    "data.json": "56e3f7cb3de82ad9c24dd65a8ca80dc0327e792c82863ba98fe1c0b02106df87",
-    "inventory.json": "d3ea90fae443f60d34d525613cc6bfe9731fca9983d0732dc1bdd44af1902b24",
+    "updates.md": "08b2b8388143e4aab398924c8ab09268ae4e95f9cf512f5dbdd9403b77ef3800",
+    "inventory-updates.md": "574292f61652ee0f8ce750a319dfab5498fcb99ac3589c94a4712105fa272d52",
+    "data.json": "e77b0c9f428a629af26c42f2b1b97ffe2ed2aec3171a26c5e56c0ebdcacd5846",
+    "inventory.json": "70e5c33c664e50ec40a79414fedda62cc68c3d3f524a501b0bb709781243805e",
     "ensemble-tab.js": "8a2c0d516d9d6a62bdc64639c037be99337d556b1ed3516203c35091cc318539",
     "leadtime.js": "8cac680afb0fa723cc923d32766e13fd0f744ceb6bc7e89c38be4331683ca313",
     "leadtime.css": "b6b6f84399a530ad90679ded87d478a25f4ee17a881150025b91649c7c5b2ae0",
