@@ -1850,86 +1850,6 @@ UBS 보고서를 재인용한 기사에서 H100 80GB 납기를 3–4개월로 �
 
 [원문: Lead-Time Guide · 2024-01](https://my.avnet.com/wcm/connect/553f6350-6af3-44b5-884f-ea89ebe4907e/AVA-Lead-Time-Guide-January-2024-EN-Document.pdf?MOD=AJPERES)
 
-## Rebound Electronics · Market Insight 2023-Q2
-
-발간: 미확인 · 발간호 2023-Q2 · 자료 기준/보고대상: 2023-Q2
-
-2023-Q2 Rebound Market Insight의 메모리 납기 표에서 9개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 6–8주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 Kingston PC (Commodity) DRAM 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 4–10주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 Kingston Solid State Drives (SSD) 보고 납기는 4-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 6–10주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 Kingston eMMC 보고 납기는 6-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 4–22주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 4-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### NAND Flash
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–14주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 SkyHigh Memory SLC NAND Flash 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–14주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 SkyHigh Memory eMMC 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–14주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–18주
-- 기준: 2023-Q2
-- 내용: Rebound 2023-Q2호의 Greenliant Solid State Drives (SSD) 보고 납기는 10-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-[원문: Market Insight 2023-Q2](https://reboundeu.com/wp-content/uploads/2023/06/Market-Insights-Q2-20231-Read-Only.pdf)
-
 ## Fusion Worldwide · The Greensheet 2023-12
 
 발간: 2023-12-12 · 자료 기준/보고대상: 2023-12
@@ -2226,6 +2146,86 @@ Mellanox 스위치·NIC의 표준 주문 납기는 최소 8–10주 수준입니
 
 [원문: The Greensheet 2023-05](https://info.fusionww.com/blog/the-greensheet-may-2023)
 
+## Rebound Electronics · Market Insight 2023-Q2
+
+발간: 미확인 · 발간호 2023-Q2 · 자료 기준/보고대상: 2023-Q2
+
+2023-Q2 Rebound Market Insight의 메모리 납기 표에서 9개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Kingston PC (Commodity) DRAM 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–10주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Kingston Solid State Drives (SSD) 보고 납기는 4-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Kingston eMMC 보고 납기는 6-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 4-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 SkyHigh Memory SLC NAND Flash 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 SkyHigh Memory eMMC 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Greenliant Solid State Drives (SSD) 보고 납기는 10-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2023-Q2](https://reboundeu.com/wp-content/uploads/2023/06/Market-Insights-Q2-20231-Read-Only.pdf)
+
 ## Fusion Worldwide · The Greensheet 2023-01
 
 발간: 2023-01-04 · 자료 기준/보고대상: 2023-01
@@ -2241,142 +2241,6 @@ Mellanox 스위치 납기는 8–12개월이며 7800·7890 계열이 가장 큰 
 - 내용: Mellanox 스위치 납기는 8–12개월이며 7800·7890 계열이 가장 큰 영향을 받습니다. 원문 개월 단위를 보존합니다.
 
 [원문: The Greensheet 2023-01](https://info.fusionww.com/blog/the-greensheet-january-2023)
-
-## Rebound Electronics · Market Insight 2022-Q1
-
-발간: 미확인 · 발간호 2022-Q1 · 자료 기준/보고대상: 2022-Q1
-
-2022-Q1 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Micron Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Samsung Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 6–8주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Kingston PC (Commodity) DRAM 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–14주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Kingston Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 6–12주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Kingston eMMC 보고 납기는 6-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 4–32주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 4-32주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### NAND Flash
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 20–22주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 SkyHigh Memory SLC NAND Flash 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 20–22주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 SkyHigh Memory eMMC 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### NAND Flash
-
-- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 30–34주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Macronix SLC NAND Flash 보고 납기는 30-34주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–14주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 20–28주
-- 기준: 2022-Q1
-- 내용: Rebound 2022-Q1호의 Greenliant Solid State Drives (SSD) 보고 납기는 20-28주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-[원문: Market Insight 2022-Q1](https://reboundeu.com/wp-content/uploads/2022/04/Market-Insight-Q1-2022.pdf)
 
 ## Avnet Abacus · Lead-Time Guide · 2022-12
 
@@ -2674,6 +2538,182 @@ Mellanox NIC 납기는 26–32주이며 MCX5·MCX6 공급이 가장 부족합니
 
 [원문: The Greensheet 2022-02](https://info.fusionww.com/blog/the-greensheet-2022-february)
 
+## Rebound Electronics · Market Insight 2022-Q1
+
+발간: 미확인 · 발간호 2022-Q1 · 자료 기준/보고대상: 2022-Q1
+
+2022-Q1 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Micron Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Samsung Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Kingston PC (Commodity) DRAM 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Kingston Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–12주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Kingston eMMC 보고 납기는 6-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–32주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 4-32주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 SkyHigh Memory SLC NAND Flash 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 SkyHigh Memory eMMC 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 30–34주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Macronix SLC NAND Flash 보고 납기는 30-34주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Greenliant Solid State Drives (SSD) 보고 납기는 20-28주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2022-Q1](https://reboundeu.com/wp-content/uploads/2022/04/Market-Insight-Q1-2022.pdf)
+
+## Fusion Worldwide · The Greensheet 2021-11
+
+발간: 2021-12-02 · 자료 기준/보고대상: 2021-11
+
+Mellanox CX 계열 네트워크 어댑터 납기는 26–32주입니다. 중국 시장의 Mellanox HDR 200G 광케이블·Y케이블 납기는 35–36주입니다. 광트랜시버와 다른 제품입니다.
+
+### Mellanox CX NIC
+
+- 범위: Mellanox CX series network adapter cards; generation mix
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 26–32주
+- 기준: 2021-12-02
+- 내용: Mellanox CX 계열 네트워크 어댑터 납기는 26–32주입니다.
+
+### Mellanox HDR 200G 광케이블·Y케이블
+
+- 범위: Mellanox HDR200G fiber cables and Y cables; China allocations
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 35–36주
+- 기준: 2021-12-02
+- 내용: 중국 시장의 Mellanox HDR 200G 광케이블·Y케이블 납기는 35–36주입니다. 광트랜시버와 다른 제품입니다.
+
+[원문: The Greensheet 2021-11](https://info.fusionww.com/resources/the-greensheet-2021-november)
+
+## Fusion Worldwide · The Greensheet 2021-10
+
+발간: 2021-11-04 · 자료 기준/보고대상: 2021-10
+
+Seagate 4TB 및 기타 저용량 드라이브의 일부 고객 납기는 12–16주입니다. 고용량 니어라인 HDD와 사양이 다릅니다.
+
+### Seagate 4TB·저용량 HDD
+
+- 범위: Seagate 4TB HDDs and other low-capacity drives; some customers
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2021-11-04
+- 내용: Seagate 4TB 및 기타 저용량 드라이브의 일부 고객 납기는 12–16주입니다. 고용량 니어라인 HDD와 사양이 다릅니다.
+
+[원문: The Greensheet 2021-10](https://info.fusionww.com/resources/the-greensheet-2021-october)
+
 ## Rebound Electronics · Market Insight 2021-Q4
 
 발간: 미확인 · 발간호 2021-Q4 · 자료 기준/보고대상: 2021-Q4
@@ -2946,318 +2986,6 @@ Mellanox NIC 납기는 26–32주이며 MCX5·MCX6 공급이 가장 부족합니
 
 [원문: Market Insight 2021-Q3](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q3-2021.pdf)
 
-## Rebound Electronics · Market Insight 2021-Q2
-
-발간: 미확인 · 발간호 2021-Q2 · 자료 기준/보고대상: 2021-Q2
-
-2021-Q2 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Micron Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Samsung Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–12주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Kingston PC (Commodity) DRAM 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 8–12주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Kingston Solid State Drives (SSD) 보고 납기는 8-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–12주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Kingston eMMC 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 12–22주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 12-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### NAND Flash
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 14–20주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 SkyHigh Memory SLC NAND Flash 보고 납기는 14-20주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 14–18주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 SkyHigh Memory eMMC 보고 납기는 14-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### NAND Flash
-
-- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 22–30주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Macronix SLC NAND Flash 보고 납기는 22-30주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 54–56주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–14주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 12–14주
-- 기준: 2021-Q2
-- 내용: Rebound 2021-Q2호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-[원문: Market Insight 2021-Q2](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q2-2021.pdf)
-
-## Rebound Electronics · Market Insight 2021-Q1
-
-발간: 미확인 · 발간호 2021-Q1 · 자료 기준/보고대상: 2021-Q1
-
-2021-Q1 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 12–16주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Micron PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 12–16주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Samsung PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 16–18주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Micron Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 16–18주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Samsung Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 14–16주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Micron eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 14–16주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Samsung eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 8–10주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Kingston PC (Commodity) DRAM 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 8–10주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Kingston Solid State Drives (SSD) 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 8–10주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Kingston eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### DRAM
-
-- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–12주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### NAND Flash
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 8–10주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 SkyHigh Memory SLC NAND Flash 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 8–10주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 SkyHigh Memory eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### NAND Flash
-
-- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 22–30주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Macronix SLC NAND Flash 보고 납기는 22-30주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### eMMC
-
-- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 12–14주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Macronix eMMC 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 10–12주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 ADATA Solid State Drives (SSD) 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-### SSD
-
-- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 12–14주
-- 기준: 2021-Q1
-- 내용: Rebound 2021-Q1호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
-
-[원문: Market Insight 2021-Q1](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q1-20212.pdf)
-
-## Fusion Worldwide · The Greensheet 2021-11
-
-발간: 2021-12-02 · 자료 기준/보고대상: 2021-11
-
-Mellanox CX 계열 네트워크 어댑터 납기는 26–32주입니다. 중국 시장의 Mellanox HDR 200G 광케이블·Y케이블 납기는 35–36주입니다. 광트랜시버와 다른 제품입니다.
-
-### Mellanox CX NIC
-
-- 범위: Mellanox CX series network adapter cards; generation mix
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 26–32주
-- 기준: 2021-12-02
-- 내용: Mellanox CX 계열 네트워크 어댑터 납기는 26–32주입니다.
-
-### Mellanox HDR 200G 광케이블·Y케이블
-
-- 범위: Mellanox HDR200G fiber cables and Y cables; China allocations
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 35–36주
-- 기준: 2021-12-02
-- 내용: 중국 시장의 Mellanox HDR 200G 광케이블·Y케이블 납기는 35–36주입니다. 광트랜시버와 다른 제품입니다.
-
-[원문: The Greensheet 2021-11](https://info.fusionww.com/resources/the-greensheet-2021-november)
-
-## Fusion Worldwide · The Greensheet 2021-10
-
-발간: 2021-11-04 · 자료 기준/보고대상: 2021-10
-
-Seagate 4TB 및 기타 저용량 드라이브의 일부 고객 납기는 12–16주입니다. 고용량 니어라인 HDD와 사양이 다릅니다.
-
-### Seagate 4TB·저용량 HDD
-
-- 범위: Seagate 4TB HDDs and other low-capacity drives; some customers
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 12–16주
-- 기준: 2021-11-04
-- 내용: Seagate 4TB 및 기타 저용량 드라이브의 일부 고객 납기는 12–16주입니다. 고용량 니어라인 HDD와 사양이 다릅니다.
-
-[원문: The Greensheet 2021-10](https://info.fusionww.com/resources/the-greensheet-2021-october)
-
 ## Avnet Abacus · Lead-Time Guide · 2021-07
 
 발간: 2021-07 · 자료 기준/보고대상: 2021-07
@@ -3489,6 +3217,142 @@ HDD 주문 납기가 최대 13주로 늘어났습니다. 기사에 12·14·16TB 
 - 내용: HDD 주문 납기가 최대 13주로 늘어났습니다. 기사에 12·14·16TB 가격을 언급하지만 납기 수치를 해당 용량 전용으로 한정하지 않았습니다.
 
 [원문: The Greensheet 2021-05](https://info.fusionww.com/resources/the-greensheet-may-2021)
+
+## Rebound Electronics · Market Insight 2021-Q2
+
+발간: 미확인 · 발간호 2021-Q2 · 자료 기준/보고대상: 2021-Q2
+
+2021-Q2 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Micron Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Samsung Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Kingston PC (Commodity) DRAM 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Kingston Solid State Drives (SSD) 보고 납기는 8-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Kingston eMMC 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–22주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 12-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–20주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 SkyHigh Memory SLC NAND Flash 보고 납기는 14-20주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–18주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 SkyHigh Memory eMMC 보고 납기는 14-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–30주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Macronix SLC NAND Flash 보고 납기는 22-30주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2021-Q2](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q2-2021.pdf)
 
 ## Avnet Abacus · Lead-Time Guide · 2021-04
 
@@ -3722,6 +3586,182 @@ IC 패키지 기판 14주 이상을 확인했습니다. FC-BGA를 포함한 범�
 
 [원문: The Substrate Crisis Deepens](https://www.semi.org/en/blogs/business-markets/the-substrate-crisis-deepens)
 
+## Rebound Electronics · Market Insight 2021-Q1
+
+발간: 미확인 · 발간호 2021-Q1 · 자료 기준/보고대상: 2021-Q1
+
+2021-Q1 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Micron PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Samsung PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–18주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Micron Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–18주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Samsung Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Micron eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Samsung eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Kingston PC (Commodity) DRAM 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Kingston Solid State Drives (SSD) 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Kingston eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 SkyHigh Memory SLC NAND Flash 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 SkyHigh Memory eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–30주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Macronix SLC NAND Flash 보고 납기는 22-30주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Macronix eMMC 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 ADATA Solid State Drives (SSD) 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2021-Q1](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q1-20212.pdf)
+
+## TTI · MLCC market assessment · November 2020
+
+발간: 2020-11-23 · 자료 기준/보고대상: 2020-11-23
+
+TTI의 케이스 크기·CV·등급별 4개 납기 관측을 확인했습니다. 이 중 소형 차량용은 약 24주, 대형 고용량 차량용과 1206–2220은 20–24주, 대형 저용량 상용은 17–22주입니다.
+
+### 차량용 MLCC · 소형
+
+- 범위: 0201/0402, low-CV 및 high-CV 차량용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 약 24주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 0201/0402, low-CV 및 high-CV 차량용 MLCC 납기는 약 24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+### 차량용 고용량 MLCC · 대형
+
+- 범위: ≥0603, high-CV 차량용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–24주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 ≥0603, high-CV 차량용 MLCC 납기는 20–24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+### 상용 저용량 MLCC · 대형
+
+- 범위: ≥0603, low-CV 상용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 17–22주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 ≥0603, low-CV 상용 MLCC 납기는 17–22주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+### MLCC · 1206–2220
+
+- 범위: 1206–2220, low-CV/high-CV, 상용·차량용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–24주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 1206–2220, low-CV/high-CV, 상용·차량용 MLCC 납기는 20–24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+[원문: As Lead Times Grow, Expect the MLCC Market to Tighten Throughout 2021](https://www.tti.com/content/ttiinc/en/resources/marketeye/categories/tti-insights/me-ray-20201123.html)
+
 ## Rebound Electronics · Market Insight 2020-Q4
 
 발간: 미확인 · 발간호 2020-Q4 · 자료 기준/보고대상: 2020-Q4
@@ -3857,46 +3897,6 @@ IC 패키지 기판 14주 이상을 확인했습니다. FC-BGA를 포함한 범�
 - 내용: Rebound 2020-Q4호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
 
 [원문: Market Insight 2020-Q4](https://reboundeu.com/wp-content/uploads/2020/09/Market-Insight-Q4-2020.pdf)
-
-## TTI · MLCC market assessment · November 2020
-
-발간: 2020-11-23 · 자료 기준/보고대상: 2020-11-23
-
-TTI의 케이스 크기·CV·등급별 4개 납기 관측을 확인했습니다. 이 중 소형 차량용은 약 24주, 대형 고용량 차량용과 1206–2220은 20–24주, 대형 저용량 상용은 17–22주입니다.
-
-### 차량용 MLCC · 소형
-
-- 범위: 0201/0402, low-CV 및 high-CV 차량용
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 약 24주
-- 기준: 2020-11-23
-- 내용: TTI가 직접 관찰한 0201/0402, low-CV 및 high-CV 차량용 MLCC 납기는 약 24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
-
-### 차량용 고용량 MLCC · 대형
-
-- 범위: ≥0603, high-CV 차량용
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 20–24주
-- 기준: 2020-11-23
-- 내용: TTI가 직접 관찰한 ≥0603, high-CV 차량용 MLCC 납기는 20–24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
-
-### 상용 저용량 MLCC · 대형
-
-- 범위: ≥0603, low-CV 상용
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 17–22주
-- 기준: 2020-11-23
-- 내용: TTI가 직접 관찰한 ≥0603, low-CV 상용 MLCC 납기는 17–22주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
-
-### MLCC · 1206–2220
-
-- 범위: 1206–2220, low-CV/high-CV, 상용·차량용
-- 상태: 원문 별도 분류 없음
-- 보고 리드타임: 20–24주
-- 기준: 2020-11-23
-- 내용: TTI가 직접 관찰한 1206–2220, low-CV/high-CV, 상용·차량용 MLCC 납기는 20–24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
-
-[원문: As Lead Times Grow, Expect the MLCC Market to Tighten Throughout 2021](https://www.tti.com/content/ttiinc/en/resources/marketeye/categories/tti-insights/me-ray-20201123.html)
 
 ## Avnet Abacus · Lead-Time Guide · 2020-04
 

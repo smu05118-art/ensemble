@@ -32,7 +32,7 @@
     const seriesOf = o => seriesMap.get(o.series_id) || {};
     const isTF = p => /trendforce/i.test(clean(p));
     const periodStamp = value => { const v=clean(value), q=v.match(/^(\d{4})-Q([1-4])$/); return q ? Date.UTC(Number(q[1]),(Number(q[2])-1)*3,1) : Date.parse(v); };
-    const ordered = list => [...list].sort((a, b) => clean(a.published_at || a.edition_period).localeCompare(clean(b.published_at || b.edition_period)) || clean(a.id).localeCompare(clean(b.id)));
+    const ordered = list => [...list].sort((a, b) => periodStamp(a.published_at || a.edition_period) - periodStamp(b.published_at || b.edition_period) || clean(a.id).localeCompare(clean(b.id)));
     const releases = ordered(data.releases).reverse();
     const initial = releases.find(r => isTF(r.publisher));
     const latest = ordered(data.sources.filter(s => s.published_at)).at(-1);
