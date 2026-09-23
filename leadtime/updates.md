@@ -538,6 +538,22 @@ NIC와 네트워크 부품 납기 확대를 보고했습니다. ConnectX-7은 52
 
 [원문: NIC·스위치·광모듈 · 2026-07-13](https://info.fusionww.com/blog/nic-lead-times-just-hit-52-weeks.-what-chinas-h200-move-means-for-whats-next)
 
+## Fusion Worldwide · The Greensheet 2026-06
+
+발간: 2026-06-24 · 자료 기준/보고대상: 2026-06
+
+Mellanox CX6·CX7의 100G·200G·400G NIC 납기는 30–52주입니다.
+
+### Mellanox CX6·CX7 NIC
+
+- 범위: Mellanox CX6 and CX7, 100G/200G/400G NICs
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 30–52주
+- 기준: 2026-06-24
+- 내용: Mellanox CX6·CX7의 100G·200G·400G NIC 납기는 30–52주입니다.
+
+[원문: The Greensheet 2026-06](https://info.fusionww.com/blog/the-greensheet-june-2026)
+
 ## Linesight · Americas · June 2026 · 과거 분기 이력
 
 발간: 2026-06 · 자료 기준/보고대상: 2025-Q4
@@ -770,6 +786,22 @@ NIC와 네트워크 부품 납기 확대를 보고했습니다. ConnectX-7은 52
 
 [원문: State of the Industry · Q1 2026](https://info.fusionww.com/blog/state-of-the-industry-q1-2026)
 
+## Fusion Worldwide · The Greensheet 2026-02
+
+발간: 2026-02-25 · 자료 기준/보고대상: 2026-02
+
+본문 ConnectX-7 납기는 20–50주입니다. 요약의 50주 이상이라는 표현과 범위가 달라 불일치를 남깁니다. 종전 2–4주는 날짜가 없어 추가하지 않습니다.
+
+### Mellanox ConnectX-7 NIC
+
+- 범위: Mellanox ConnectX7; specific speeds unspecified
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–50주
+- 기준: 2026-02-25
+- 내용: 본문 ConnectX-7 납기는 20–50주입니다. 요약의 50주 이상이라는 표현과 범위가 달라 불일치를 남깁니다. 종전 2–4주는 날짜가 없어 추가하지 않습니다.
+
+[원문: The Greensheet 2026-02](https://info.fusionww.com/blog/the-greensheet-february-2026)
+
 ## Nautilus Data Technologies · EcoCore FCD CDU · 2025-10-08
 
 발간: 2025-10-08 · 자료 기준/보고대상: 2025-10-08
@@ -785,6 +817,22 @@ EcoCore FCD CDU의 제품별 납기를 확인했습니다. 시장 평균이나 �
 - 내용: EcoCore FCD CDU의 제조사 납기는 12–16주였습니다. 특정 제품 조건이며 RCD의 출하 가능 분기는 납기 주수로 변환하지 않았습니다.
 
 [원문: EcoCore FCD CDU · 2025-10-08](https://nautilusdt.com/in-the-news/all-news/blog/cdu-comparison-rcd-vs-fcd-which-ecocore-cdu-is-right-for-you/)
+
+## Fusion Worldwide · Enterprise SSD Supply: What Buyers Need to Know
+
+발간: 2025-10-02 · 자료 기준/보고대상: 2025-10-02
+
+고용량 기업용 SSD 납기는 16–20주 또는 그 이상입니다. 종전 8–12주의 날짜는 없어 과거 관측으로 추가하지 않습니다.
+
+### 고용량 기업용 SSD
+
+- 범위: High-capacity enterprise SSDs; 3.8TB,7.6TB and above context; SATA/SAS/NVMe mixed
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–20+주
+- 기준: 2025-10-02
+- 내용: 고용량 기업용 SSD 납기는 16–20주 또는 그 이상입니다. 종전 8–12주의 날짜는 없어 과거 관측으로 추가하지 않습니다.
+
+[원문: Enterprise SSD Supply: What Buyers Need to Know](https://info.fusionww.com/blog/enterprise-ssd-supply-what-buyers-need-to-know)
 
 ## TrendForce · Nearline HDD·QLC SSD · 2025-09-15
 
@@ -809,6 +857,30 @@ AI 저장 수요 속 HDD와 QLC SSD의 납기 차이를 보여준 원문 표입�
 - 내용: 같은 표에서 QLC SSD는 8주입니다. HDD 부족을 보완하는 저장장치로 설명되며, 최신 주간 eSSD 전체 집계와 제품 범위가 다릅니다.
 
 [원문: Nearline HDD·QLC SSD · 2025-09-15](https://www.trendforce.com/presscenter/news/20250915-12714.html)
+
+## Fusion Worldwide · The Greensheet 2025-07
+
+발간: 2025-07-30 · 자료 기준/보고대상: 2025-07
+
+제조사가 18TB 이상으로 생산을 이동하면서 2–8TB HDD 납기는 20주를 초과합니다. 고용량 AI HDD와 다른 사양입니다. Fusion의 2025년 7월 Greensheet는 H100 94GB 납기를 4–6주로 보고했습니다. H100 80GB·94GB의 EOL과 제한적 공급도 함께 기술했습니다. 94GB GPU 단품 범위를 전체 H100 서버와 구분합니다.
+
+### 2–8TB HDD
+
+- 범위: HDD 2–8TB; vendor unspecified
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20 초과주
+- 기준: 2025-07-30
+- 내용: 제조사가 18TB 이상으로 생산을 이동하면서 2–8TB HDD 납기는 20주를 초과합니다. 고용량 AI HDD와 다른 사양입니다.
+
+### GPU H100 94GB
+
+- 범위: NVIDIA H10094GB model, distributor channel; not whole server
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2025-07
+- 내용: Fusion의 2025년 7월 Greensheet는 H100 94GB 납기를 4–6주로 보고했습니다. H100 80GB·94GB의 EOL과 제한적 공급도 함께 기술했습니다. 94GB GPU 단품 범위를 전체 H100 서버와 구분합니다.
+
+[원문: The Greensheet 2025-07](https://info.fusionww.com/blog/the-greensheet-july-2025)
 
 ## Avnet Abacus · Lead-Time Guide · 2025-07
 
@@ -1042,6 +1114,46 @@ AI 서버 전원 보호용 AOTL66935의 제조사 공개 납기는 14–16주였
 
 [원문: AOTL66935 MOSFET · 2025-05-01](https://www.aosmd.com/sites/default/files/2025-05/AOS_66935_HotSwap_MOSFET_PR.pdf)
 
+## Fusion Worldwide · The Greensheet 2024-12
+
+발간: 2024-12-11 · 자료 기준/보고대상: 2024-12
+
+AI 부문의 SATA 22TB·24TB HDD 납기는 6–8주입니다. Seagate 고용량 집계와 용량·대상 고객 범위가 달라 직접 변화율 산출 시 범위 차이를 표시해야 합니다.
+
+### SATA 22TB·24TB HDD
+
+- 범위: SATA 22TB and 24TB HDDs; AI segments; vendor unspecified
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2024-12-11
+- 내용: AI 부문의 SATA 22TB·24TB HDD 납기는 6–8주입니다. Seagate 고용량 집계와 용량·대상 고객 범위가 달라 직접 변화율 산출 시 범위 차이를 표시해야 합니다.
+
+[원문: The Greensheet 2024-12](https://info.fusionww.com/blog/the-greensheet-december-2024)
+
+## Fusion Worldwide · The Greensheet 2024-10
+
+발간: 2024-10-30 · 자료 기준/보고대상: 2024-10
+
+Seagate 고용량 HDD의 납기 지연은 30–33주입니다. 같은 기사의 52주 주문 약정 요구는 공급 가시성 조건이므로 별도 리드타임으로 채택하지 않았습니다. SK hynix 신규 HBM 주문 납기는 1년 초과입니다. 원문 over a year를 보존하고 달력 단위 1년=12개월로만 표시했습니다. 세대·밀도는 미공개이며 공급능력 예약이나 재고 주수와 구분합니다.
+
+### Seagate 고용량 HDD
+
+- 범위: Seagate high-capacity HDD; delivery delays, capacity unspecified; mid-tier server OEM context
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 30–33주
+- 기준: 2024-10-30
+- 내용: Seagate 고용량 HDD의 납기 지연은 30–33주입니다. 같은 기사의 52주 주문 약정 요구는 공급 가시성 조건이므로 별도 리드타임으로 채택하지 않았습니다.
+
+### HBM
+
+- 범위: SK hynix 신규 HBM 주문; 세대·밀도 미공개
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12 초과개월
+- 기준: 2024-10
+- 내용: SK hynix 신규 HBM 주문 납기는 1년 초과입니다. 원문 over a year를 보존하고 달력 단위 1년=12개월로만 표시했습니다. 세대·밀도는 미공개이며 공급능력 예약이나 재고 주수와 구분합니다.
+
+[원문: The Greensheet 2024-10](https://info.fusionww.com/blog/the-greensheet-october-2024)
+
 ## Avnet Abacus · Lead-Time Guide · 2024-09
 
 발간: 2024-09 · 자료 기준/보고대상: 2024-09
@@ -1273,6 +1385,38 @@ CoWoS·HBM 공급 확대 이후 H100 납기 단축을 보고한 별도 기사입
 - 내용: H100 솔루션 납기가 16주 미만으로 줄었다고 보고했습니다. 원문의 이전 40–50주는 날짜가 없어 과거 점으로 만들지 않았습니다. 최신 Blackwell 계열과 범위가 다릅니다.
 
 [원문: H100 납기 · 2024-07-17](https://www.trendforce.com/presscenter/news/20240717-12227.html)
+
+## TrendForce News (Economic Daily News·Dell Taiwan 발언 인용) · GPU H100 서버 납기 보도
+
+발간: 2024-04-10 · 자료 기준/보고대상: 2024-04-10
+
+2024년 4월 9일 Dell 대만 경영진 발언을 인용한 보도에서 H100 공급 개선에 따른 서버 납기를 8–12주로 전했습니다. 일부는 이보다 짧다는 단서도 있습니다. Dell 대만 범위이므로 전체 H100 시장과 구분합니다.
+
+### GPU H100 서버
+
+- 범위: Dell Taiwan server delivery in H100 supply discussion; OEM/geography-specific
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2024-04-09
+- 내용: 2024년 4월 9일 Dell 대만 경영진 발언을 인용한 보도에서 H100 공급 개선에 따른 서버 납기를 8–12주로 전했습니다. 일부는 이보다 짧다는 단서도 있습니다. Dell 대만 범위이므로 전체 H100 시장과 구분합니다.
+
+[원문: GPU H100 서버 납기 보도](https://www.trendforce.com/news/2024/04/10/news-dell-taiwan-highlights-significant-improvement-in-gpu-supply-times/)
+
+## Tom's Hardware (UBS·SeekingAlpha 재인용) · GPU H100 80GB 납기 보도
+
+발간: 2024-02-16 · 자료 기준/보고대상: 2024-02-16
+
+UBS 보고서를 재인용한 기사에서 H100 80GB 납기를 3–4개월로 전했습니다. 원문의 개월 단위를 유지합니다. 과거 8–11개월의 정확한 기준일은 특정되지 않아 과거 별도 관측점으로 만들지 않습니다.
+
+### GPU H100 80GB
+
+- 범위: UBS channel note, NVIDIA H100 80GB GPU; original delivery formulation in months
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 3–4개월
+- 기준: 2024-02-16
+- 내용: UBS 보고서를 재인용한 기사에서 H100 80GB 납기를 3–4개월로 전했습니다. 원문의 개월 단위를 유지합니다. 과거 8–11개월의 정확한 기준일은 특정되지 않아 과거 별도 관측점으로 만들지 않습니다.
+
+[원문: GPU H100 80GB 납기 보도](https://www.tomshardware.com/tech-industry/artificial-intelligence/wait-times-for-nvidias-ai-gpus-eases-to-three-to-four-months-suggesting-peak-in-near-term-growth-the-wait-list-for-an-h100-was-previously-eleven-months-ubs)
 
 ## Avnet Abacus · Lead-Time Guide · 2024-02
 
@@ -1705,4 +1849,2500 @@ CoWoS·HBM 공급 확대 이후 H100 납기 단축을 보고한 별도 기사입
 - 내용: 2024-01 가이드의 전원 커넥터 납기는 19주입니다. 일반 유통시장 보고값으로 AI 서버용 집계와 구분합니다.
 
 [원문: Lead-Time Guide · 2024-01](https://my.avnet.com/wcm/connect/553f6350-6af3-44b5-884f-ea89ebe4907e/AVA-Lead-Time-Guide-January-2024-EN-Document.pdf?MOD=AJPERES)
+
+## Rebound Electronics · Market Insight 2023-Q2
+
+발간: 미확인 · 발간호 2023-Q2 · 자료 기준/보고대상: 2023-Q2
+
+2023-Q2 Rebound Market Insight의 메모리 납기 표에서 9개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Kingston PC (Commodity) DRAM 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–10주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Kingston Solid State Drives (SSD) 보고 납기는 4-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Kingston eMMC 보고 납기는 6-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 4-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 SkyHigh Memory SLC NAND Flash 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 SkyHigh Memory eMMC 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2023-Q2
+- 내용: Rebound 2023-Q2호의 Greenliant Solid State Drives (SSD) 보고 납기는 10-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2023-Q2](https://reboundeu.com/wp-content/uploads/2023/06/Market-Insights-Q2-20231-Read-Only.pdf)
+
+## Fusion Worldwide · The Greensheet 2023-12
+
+발간: 2023-12-12 · 자료 기준/보고대상: 2023-12
+
+SSD 전반의 생산·할당 축소로 납기가 6–8주까지 늘었습니다. 기업용 고용량 전용 집계는 아닙니다. 고급 스위치·NIC·광모듈 수요가 늘며 대부분 네트워크 제품의 신규 주문 납기가 3–6개월입니다.
+
+### SSD 전체
+
+- 범위: SSD general; capacity and interface unspecified; allocations to distributors/end customers
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2023-12-12
+- 내용: SSD 전반의 생산·할당 축소로 납기가 6–8주까지 늘었습니다. 기업용 고용량 전용 집계는 아닙니다.
+
+### 고급 스위치·NIC·광모듈
+
+- 범위: High-end switches, NIC and optical transceivers; most networking products
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 3–6개월
+- 기준: 2023-12-12
+- 내용: 고급 스위치·NIC·광모듈 수요가 늘며 대부분 네트워크 제품의 신규 주문 납기가 3–6개월입니다.
+
+[원문: The Greensheet 2023-12](https://info.fusionww.com/blog/the-greensheet-december-2023)
+
+## Tom's Hardware (Omdia 인용) · GPU H100 서버 납기 보도
+
+발간: 2023-11-28 · 자료 기준/보고대상: 2023-11-28
+
+Omdia 조사에 대한 2023년 11월 28일 보도에서 H100 탑재 완성 서버 납기는 36–52주였습니다. 원 연구사 공개 글에서도 같은 범위를 확인했습니다. 조사일은 별도 공개되지 않아 보도일 기준으로 배치합니다.
+
+### GPU H100 서버
+
+- 범위: Server OEM H100-based complete servers; not standalone GPU chips
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 36–52주
+- 기준: 2023-11-28
+- 내용: Omdia 조사에 대한 2023년 11월 28일 보도에서 H100 탑재 완성 서버 납기는 36–52주였습니다. 원 연구사 공개 글에서도 같은 범위를 확인했습니다. 조사일은 별도 공개되지 않아 보도일 기준으로 배치합니다.
+
+[원문: GPU H100 서버 납기 보도](https://www.tomshardware.com/tech-industry/nvidia-ai-and-hpc-gpu-sales-reportedly-approached-half-a-million-units-in-q3-thanks-to-meta-facebook)
+
+## Avnet Abacus · Lead-Time Guide · 2023-11
+
+발간: 2023-11 · 자료 기준/보고대상: 2023-11
+
+2023-11 Avnet Abacus 원본 가이드에서 26개 품목군의 납기를 확인했습니다. MLCC와 커패시터, 인덕터·페라이트, 전원, 냉각, 커넥터의 동일 사양명을 연결했습니다. PDF 표지·본문·각 페이지 기준월을 사용했습니다. URL 파일명은 November-2022이나 PDF 표지와 표 하단은 November 2023입니다. 숫자가 없는 Allocation, 전망 화살표는 납기 숫자로 바꾸지 않았습니다.
+
+### MLCC 일반 SMD
+
+- 범위: Avnet Abacus 일반 유통시장 · MLCC 일반 SMD
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 MLCC 일반 SMD 리드타임은 8–26+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 고용량 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 고용량 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 고용량 MLCC 리드타임은 8–26+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 차량용 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 차량용 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 차량용 MLCC 리드타임은 8–26+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 탄탈륨 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 탄탈륨 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–18주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 탄탈륨 SMD 커패시터는 8–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 탄탈륨 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 탄탈륨 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–18주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 리드형 탄탈륨 커패시터는 8–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 필름 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 필름 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 필름 SMD 커패시터는 8–26+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 필름 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 필름 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 리드형 필름 커패시터는 8–26+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 알루미늄 전해 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 알루미늄 전해 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 알루미늄 전해 SMD 커패시터는 8–26+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 폴리머 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 폴리머 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 폴리머 커패시터는 8–26+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 크리스털·오실레이터
+
+- 범위: Avnet Abacus 일반 유통시장 · 크리스털·오실레이터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–30+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 크리스털·오실레이터는 12–30+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공진자
+
+- 범위: Avnet Abacus 일반 유통시장 · 공진자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 공진자는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 퓨즈
+
+- 범위: Avnet Abacus 일반 유통시장 · 퓨즈
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 퓨즈는 8–26+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리셋 가능 보호소자
+
+- 범위: Avnet Abacus 일반 유통시장 · 리셋 가능 보호소자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 리셋 가능 보호소자는 8–26+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### SMD 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · SMD 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–80주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 SMD 인덕터는 8–80주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14+주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 리드형 인덕터는 10–14+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공통 모드 초크
+
+- 범위: Avnet Abacus 일반 유통시장 · 공통 모드 초크 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–30주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 공통 모드 초크는 10–30주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 칩 비드
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 칩 비드 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 페라이트 칩 비드는 10–12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 코어
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 코어 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–42주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 페라이트 코어는 12–42주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 범용 AC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 범용 AC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–48주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 범용 AC–DC 전원는 20–48주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 정류기·프런트엔드 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 정류기·프런트엔드 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–48주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 정류기·프런트엔드 전원는 22–48주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 산업용·브릭 DC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 산업용·브릭 DC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–48주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 산업용·브릭 DC–DC 전원는 12–48주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 팬
+
+- 범위: Avnet Abacus 일반 유통시장 · 팬
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 19–52주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 팬는 19–52주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 방열판
+
+- 범위: Avnet Abacus 일반 유통시장 · 방열판
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 방열판는 8–12주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 백플레인 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 백플레인 커넥터 (DIN 41612·2MM·고속·전력신호) · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 백플레인 커넥터는 14주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 보드 간 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 보드 간 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 15주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 보드 간 커넥터는 15주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 전원 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 전원 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 19주
+- 기준: 2023-11
+- 내용: 2023-11 Avnet Abacus의 전원 커넥터는 19주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+[원문: Lead-Time Guide · 2023-11](https://my.avnet.com/wcm/connect/affeb8c0-65e8-46cb-84bc-15fca9dae0bd/AVA-Lead-Time-Guide-November-2022-EN-Document.pdf?MOD=AJPERES)
+
+## Fusion Worldwide · The Greensheet 2023-07
+
+발간: 2023-06-30 · 자료 기준/보고대상: 2023-07
+
+Mellanox MCX6·MCX7 이더넷 카드 다수의 납기는 10–15주입니다. Mellanox 고성능 스위치의 당시 추정 납기는 30주 초과입니다. 원문 표기 200GB를 임의로 수정하지 않았습니다.
+
+### Mellanox MCX6·MCX7 NIC
+
+- 범위: Most Mellanox MCX6 and MCX7 Ethernet cards
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–15주
+- 기준: 2023-06-30
+- 내용: Mellanox MCX6·MCX7 이더넷 카드 다수의 납기는 10–15주입니다.
+
+### Mellanox 200GB 스위치
+
+- 범위: Mellanox high-end 200GB switches (original says GB, not silently changed to Gbps)
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 30 초과주
+- 기준: 2023-06-30
+- 내용: Mellanox 고성능 스위치의 당시 추정 납기는 30주 초과입니다. 원문 표기 200GB를 임의로 수정하지 않았습니다.
+
+[원문: The Greensheet 2023-07](https://info.fusionww.com/blog/the-greensheet-july-2023)
+
+## Fusion Worldwide · The Greensheet 2023-05
+
+발간: 2023-05-03 · 자료 기준/보고대상: 2023-05
+
+Mellanox 스위치·NIC의 표준 주문 납기는 최소 8–10주 수준입니다. NIC 전용 시계열과 구분합니다.
+
+### Mellanox NIC·스위치 복합
+
+- 범위: Most Mellanox product lines; switches and NIC cards mixed; minimum quoted range
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10+주
+- 기준: 2023-05-03
+- 내용: Mellanox 스위치·NIC의 표준 주문 납기는 최소 8–10주 수준입니다. NIC 전용 시계열과 구분합니다.
+
+[원문: The Greensheet 2023-05](https://info.fusionww.com/blog/the-greensheet-may-2023)
+
+## Fusion Worldwide · The Greensheet 2023-01
+
+발간: 2023-01-04 · 자료 기준/보고대상: 2023-01
+
+Mellanox 스위치 납기는 8–12개월이며 7800·7890 계열이 가장 큰 영향을 받습니다. 원문 개월 단위를 보존합니다.
+
+### Mellanox 7800·7890 스위치
+
+- 범위: Mellanox switches; 7800/7890 most affected
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12개월
+- 기준: 2023-01-04
+- 내용: Mellanox 스위치 납기는 8–12개월이며 7800·7890 계열이 가장 큰 영향을 받습니다. 원문 개월 단위를 보존합니다.
+
+[원문: The Greensheet 2023-01](https://info.fusionww.com/blog/the-greensheet-january-2023)
+
+## Rebound Electronics · Market Insight 2022-Q1
+
+발간: 미확인 · 발간호 2022-Q1 · 자료 기준/보고대상: 2022-Q1
+
+2022-Q1 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Micron Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Samsung Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Kingston PC (Commodity) DRAM 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Kingston Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–12주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Kingston eMMC 보고 납기는 6-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–32주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 4-32주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 SkyHigh Memory SLC NAND Flash 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 SkyHigh Memory eMMC 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 30–34주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Macronix SLC NAND Flash 보고 납기는 30-34주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2022-Q1
+- 내용: Rebound 2022-Q1호의 Greenliant Solid State Drives (SSD) 보고 납기는 20-28주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2022-Q1](https://reboundeu.com/wp-content/uploads/2022/04/Market-Insight-Q1-2022.pdf)
+
+## Avnet Abacus · Lead-Time Guide · 2022-12
+
+발간: 2022-12 · 자료 기준/보고대상: 2022-12
+
+2022-12 Avnet Abacus 원본 가이드에서 26개 품목군의 납기를 확인했습니다. MLCC와 커패시터, 인덕터·페라이트, 전원, 냉각, 커넥터의 동일 사양명을 연결했습니다. PDF 표지·본문·각 페이지 기준월을 사용했습니다. 숫자가 없는 Allocation, 전망 화살표는 납기 숫자로 바꾸지 않았습니다.
+
+### MLCC 일반 SMD
+
+- 범위: Avnet Abacus 일반 유통시장 · MLCC 일반 SMD
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–40+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 MLCC 일반 SMD 리드타임은 12–40+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 고용량 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 고용량 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–52+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 고용량 MLCC 리드타임은 12–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 차량용 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 차량용 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–52+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 차량용 MLCC 리드타임은 12–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 탄탈륨 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 탄탈륨 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–30주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 탄탈륨 SMD 커패시터는 12–30주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 탄탈륨 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 탄탈륨 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 리드형 탄탈륨 커패시터는 8–26주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 필름 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 필름 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 필름 SMD 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 필름 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 필름 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 리드형 필름 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 알루미늄 전해 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 알루미늄 전해 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 알루미늄 전해 SMD 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 폴리머 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 폴리머 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 폴리머 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 크리스털·오실레이터
+
+- 범위: Avnet Abacus 일반 유통시장 · 크리스털·오실레이터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–40+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 크리스털·오실레이터는 16–40+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공진자
+
+- 범위: Avnet Abacus 일반 유통시장 · 공진자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 공진자는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 퓨즈
+
+- 범위: Avnet Abacus 일반 유통시장 · 퓨즈
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–25주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 퓨즈는 6–25주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리셋 가능 보호소자
+
+- 범위: Avnet Abacus 일반 유통시장 · 리셋 가능 보호소자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–15주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 리셋 가능 보호소자는 10–15주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### SMD 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · SMD 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–80주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 SMD 인덕터는 8–80주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14+주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 리드형 인덕터는 10–14+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공통 모드 초크
+
+- 범위: Avnet Abacus 일반 유통시장 · 공통 모드 초크 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–30주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 공통 모드 초크는 10–30주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 칩 비드
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 칩 비드 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 페라이트 칩 비드는 10–12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 코어
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 코어 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–42주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 페라이트 코어는 12–42주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 범용 AC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 범용 AC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–48주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 범용 AC–DC 전원는 20–48주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 정류기·프런트엔드 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 정류기·프런트엔드 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–48주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 정류기·프런트엔드 전원는 22–48주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 산업용·브릭 DC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 산업용·브릭 DC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–48주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 산업용·브릭 DC–DC 전원는 12–48주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 팬
+
+- 범위: Avnet Abacus 일반 유통시장 · 팬
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 19–52주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 팬는 19–52주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 방열판
+
+- 범위: Avnet Abacus 일반 유통시장 · 방열판
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 방열판는 8–12주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 백플레인 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 백플레인 커넥터 (DIN 41612·2MM·고속·전력신호) · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 21주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 백플레인 커넥터는 21주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 보드 간 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 보드 간 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 21주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 보드 간 커넥터는 21주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 전원 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 전원 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 19주
+- 기준: 2022-12
+- 내용: 2022-12 Avnet Abacus의 전원 커넥터는 19주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+[원문: Lead-Time Guide · 2022-12](https://www.avnet.com/wcm/connect/b496febc-6ece-4ee2-a4ae-eae91a34d9d1/AVA-Lead-Time-Guide-December-2022-EN-Document.pdf?MOD=AJPERES)
+
+## Fusion Worldwide · The Greensheet 2022-09
+
+발간: 2022-10-04 · 자료 기준/보고대상: 2022-09
+
+Mellanox 신규 주문 납기는 약 20주입니다. 종전 32주의 정확한 시점은 따로 제시하지 않았습니다.
+
+### Mellanox NIC 전체
+
+- 범위: Mellanox cards new booking orders; MCX4/5 recovery, MCX6 remains constrained
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 약 20주
+- 기준: 2022-10-04
+- 내용: Mellanox 신규 주문 납기는 약 20주입니다. 종전 32주의 정확한 시점은 따로 제시하지 않았습니다.
+
+[원문: The Greensheet 2022-09](https://info.fusionww.com/blog/the-greensheet-2022-september-0)
+
+## Fusion Worldwide · The Greensheet 2022-06
+
+발간: 2022-07-13 · 자료 기준/보고대상: 2022-06
+
+Mellanox MCX6 평균 납기는 32주입니다. MCX4·MCX5와 범위가 다른 단일 세대 자료입니다.
+
+### Mellanox MCX6 NIC
+
+- 범위: Mellanox MCX6 average lead time
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 32주
+- 기준: 2022-07-13
+- 내용: Mellanox MCX6 평균 납기는 32주입니다. MCX4·MCX5와 범위가 다른 단일 세대 자료입니다.
+
+[원문: The Greensheet 2022-06](https://info.fusionww.com/blog/the-greensheet-2022-0june-0-0)
+
+## Fusion Worldwide · The Greensheet 2022-04
+
+발간: 2022-06-07 · 자료 기준/보고대상: 2022-04
+
+Mellanox 제품의 평균 납기는 36주입니다. 같은 문단의 일부 생산 제약은 1년을 초과한다고 서술되어 평균과 최악 조건을 혼동하지 않아야 합니다.
+
+### Mellanox MCX4·MCX5·MCX6
+
+- 범위: Mellanox products average; MCX4/5/6 most constrained
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 36주
+- 기준: 2022-06-07
+- 내용: Mellanox 제품의 평균 납기는 36주입니다. 같은 문단의 일부 생산 제약은 1년을 초과한다고 서술되어 평균과 최악 조건을 혼동하지 않아야 합니다.
+
+[원문: The Greensheet 2022-04](https://info.fusionww.com/blog/the-greensheet-2022-0april-0)
+
+## Fusion Worldwide · The Greensheet 2022-03
+
+발간: 2022-04-21 · 자료 기준/보고대상: 2022-03
+
+Mellanox NIC 납기는 26–32주이며 MCX5·MCX6 공급이 가장 부족합니다.
+
+### Mellanox MCX5·MCX6 NIC
+
+- 범위: Mellanox network adapter cards; MCX5/MCX6 highlighted
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 26–32주
+- 기준: 2022-04-21
+- 내용: Mellanox NIC 납기는 26–32주이며 MCX5·MCX6 공급이 가장 부족합니다.
+
+[원문: The Greensheet 2022-03](https://info.fusionww.com/blog/the-greensheet-2022-0march)
+
+## Fusion Worldwide · The Greensheet 2022-02
+
+발간: 2022-03-18 · 자료 기준/보고대상: 2022-02
+
+8TB HDD 수급이 불안정해지며 Seagate 납기가 현재 18주로 늘었습니다. 종전 16주는 기준일을 알 수 없어 별도 과거점으로 만들지 않습니다.
+
+### Seagate 8TB SATA HDD
+
+- 범위: Seagate 8TB SATA HDD; OEM reports, China demand context
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 18주
+- 기준: 2022-03-18
+- 내용: 8TB HDD 수급이 불안정해지며 Seagate 납기가 현재 18주로 늘었습니다. 종전 16주는 기준일을 알 수 없어 별도 과거점으로 만들지 않습니다.
+
+[원문: The Greensheet 2022-02](https://info.fusionww.com/blog/the-greensheet-2022-february)
+
+## Rebound Electronics · Market Insight 2021-Q4
+
+발간: 미확인 · 발간호 2021-Q4 · 자료 기준/보고대상: 2021-Q4
+
+2021-Q4 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Micron Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Samsung Solid State Drives (SSD) 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Kingston PC (Commodity) DRAM 보고 납기는 8-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Kingston Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Kingston eMMC 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–22주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 8-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 SkyHigh Memory SLC NAND Flash 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 SkyHigh Memory eMMC 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 30–34주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Macronix SLC NAND Flash 보고 납기는 30-34주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2021-Q4
+- 내용: Rebound 2021-Q4호의 Greenliant Solid State Drives (SSD) 보고 납기는 20-28주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2021-Q4](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q4-2021.pdf)
+
+## Rebound Electronics · Market Insight 2021-Q3
+
+발간: 미확인 · 발간호 2021-Q3 · 자료 기준/보고대상: 2021-Q3
+
+2021-Q3 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Micron Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Samsung Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Kingston PC (Commodity) DRAM 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Kingston Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Kingston eMMC 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–28주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 22-28주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 SkyHigh Memory SLC NAND Flash 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 SkyHigh Memory eMMC 보고 납기는 20-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 30–34주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Macronix SLC NAND Flash 보고 납기는 30-34주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다. 원문은 allocation 중이며 신규 견적·주문을 받지 않는다고 명시합니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2021-Q3
+- 내용: Rebound 2021-Q3호의 Greenliant Solid State Drives (SSD) 보고 납기는 20-28주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2021-Q3](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q3-2021.pdf)
+
+## Rebound Electronics · Market Insight 2021-Q2
+
+발간: 미확인 · 발간호 2021-Q2 · 자료 기준/보고대상: 2021-Q2
+
+2021-Q2 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Micron PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Samsung PC (Commodity) DRAM 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Micron Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Samsung Solid State Drives (SSD) 보고 납기는 54주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Micron eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Samsung eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Kingston PC (Commodity) DRAM 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Kingston Solid State Drives (SSD) 보고 납기는 8-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Kingston eMMC 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–22주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 12-22주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–20주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 SkyHigh Memory SLC NAND Flash 보고 납기는 14-20주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–18주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 SkyHigh Memory eMMC 보고 납기는 14-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–30주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Macronix SLC NAND Flash 보고 납기는 22-30주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Macronix eMMC 보고 납기는 54-56주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 ADATA Solid State Drives (SSD) 보고 납기는 10-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q2
+- 내용: Rebound 2021-Q2호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2021-Q2](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q2-2021.pdf)
+
+## Rebound Electronics · Market Insight 2021-Q1
+
+발간: 미확인 · 발간호 2021-Q1 · 자료 기준/보고대상: 2021-Q1
+
+2021-Q1 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Micron PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Samsung PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–18주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Micron Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–18주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Samsung Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Micron eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–16주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Samsung eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Kingston PC (Commodity) DRAM 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Kingston Solid State Drives (SSD) 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Kingston eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 SkyHigh Memory SLC NAND Flash 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 SkyHigh Memory eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–30주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Macronix SLC NAND Flash 보고 납기는 22-30주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Macronix eMMC 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 ADATA Solid State Drives (SSD) 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2021-Q1
+- 내용: Rebound 2021-Q1호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2021-Q1](https://reboundeu.com/wp-content/uploads/2022/06/Market-Insight-Q1-20212.pdf)
+
+## Fusion Worldwide · The Greensheet 2021-11
+
+발간: 2021-12-02 · 자료 기준/보고대상: 2021-11
+
+Mellanox CX 계열 네트워크 어댑터 납기는 26–32주입니다. 중국 시장의 Mellanox HDR 200G 광케이블·Y케이블 납기는 35–36주입니다. 광트랜시버와 다른 제품입니다.
+
+### Mellanox CX NIC
+
+- 범위: Mellanox CX series network adapter cards; generation mix
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 26–32주
+- 기준: 2021-12-02
+- 내용: Mellanox CX 계열 네트워크 어댑터 납기는 26–32주입니다.
+
+### Mellanox HDR 200G 광케이블·Y케이블
+
+- 범위: Mellanox HDR200G fiber cables and Y cables; China allocations
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 35–36주
+- 기준: 2021-12-02
+- 내용: 중국 시장의 Mellanox HDR 200G 광케이블·Y케이블 납기는 35–36주입니다. 광트랜시버와 다른 제품입니다.
+
+[원문: The Greensheet 2021-11](https://info.fusionww.com/resources/the-greensheet-2021-november)
+
+## Fusion Worldwide · The Greensheet 2021-10
+
+발간: 2021-11-04 · 자료 기준/보고대상: 2021-10
+
+Seagate 4TB 및 기타 저용량 드라이브의 일부 고객 납기는 12–16주입니다. 고용량 니어라인 HDD와 사양이 다릅니다.
+
+### Seagate 4TB·저용량 HDD
+
+- 범위: Seagate 4TB HDDs and other low-capacity drives; some customers
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2021-11-04
+- 내용: Seagate 4TB 및 기타 저용량 드라이브의 일부 고객 납기는 12–16주입니다. 고용량 니어라인 HDD와 사양이 다릅니다.
+
+[원문: The Greensheet 2021-10](https://info.fusionww.com/resources/the-greensheet-2021-october)
+
+## Avnet Abacus · Lead-Time Guide · 2021-07
+
+발간: 2021-07 · 자료 기준/보고대상: 2021-07
+
+2021-07 Avnet Abacus 원본 가이드에서 26개 품목군의 납기를 확인했습니다. MLCC와 커패시터, 인덕터·페라이트, 전원, 냉각, 커넥터의 동일 사양명을 연결했습니다. PDF 표지·본문·각 페이지 기준월을 사용했습니다. 숫자가 없는 Allocation, 전망 화살표는 납기 숫자로 바꾸지 않았습니다.
+
+### MLCC 일반 SMD
+
+- 범위: Avnet Abacus 일반 유통시장 · MLCC 일반 SMD
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 MLCC 일반 SMD 리드타임은 20–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 고용량 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 고용량 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 고용량 MLCC 리드타임은 20–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 차량용 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 차량용 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–52+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 차량용 MLCC 리드타임은 16–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 탄탈륨 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 탄탈륨 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 탄탈륨 SMD 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 탄탈륨 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 탄탈륨 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 리드형 탄탈륨 커패시터는 8–26주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 필름 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 필름 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–24+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 필름 SMD 커패시터는 10–24+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 필름 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 필름 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–30+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 리드형 필름 커패시터는 10–30+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 알루미늄 전해 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 알루미늄 전해 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 알루미늄 전해 SMD 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 폴리머 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 폴리머 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 폴리머 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 크리스털·오실레이터
+
+- 범위: Avnet Abacus 일반 유통시장 · 크리스털·오실레이터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–40+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 크리스털·오실레이터는 16–40+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공진자
+
+- 범위: Avnet Abacus 일반 유통시장 · 공진자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 공진자는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 퓨즈
+
+- 범위: Avnet Abacus 일반 유통시장 · 퓨즈
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–25주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 퓨즈는 6–25주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리셋 가능 보호소자
+
+- 범위: Avnet Abacus 일반 유통시장 · 리셋 가능 보호소자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–15주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 리셋 가능 보호소자는 10–15주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### SMD 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · SMD 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–80주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 SMD 인덕터는 8–80주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 리드형 인덕터는 10–14+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공통 모드 초크
+
+- 범위: Avnet Abacus 일반 유통시장 · 공통 모드 초크 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–30주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 공통 모드 초크는 10–30주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 칩 비드
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 칩 비드 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 페라이트 칩 비드는 10–12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 코어
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 코어 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–22+주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 페라이트 코어는 10–22+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 범용 AC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 범용 AC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 5–44주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 범용 AC–DC 전원는 5–44주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 정류기·프런트엔드 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 정류기·프런트엔드 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–44주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 정류기·프런트엔드 전원는 14–44주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 산업용·브릭 DC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 산업용·브릭 DC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 5–44주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 산업용·브릭 DC–DC 전원는 5–44주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 팬
+
+- 범위: Avnet Abacus 일반 유통시장 · 팬
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–21주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 팬는 8–21주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 방열판
+
+- 범위: Avnet Abacus 일반 유통시장 · 방열판
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 방열판는 8–10주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 백플레인 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 백플레인 커넥터 (DIN 41612·2MM·고속·전력신호) · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 백플레인 커넥터는 20주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 보드 간 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 보드 간 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 보드 간 커넥터는 20주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 전원 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 전원 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 18주
+- 기준: 2021-07
+- 내용: 2021-07 Avnet Abacus의 전원 커넥터는 18주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+[원문: Lead-Time Guide · 2021-07](https://www.avnet.com/wcm/connect/677978a9-b285-4a92-a841-00c85b0cefc5/AVA-Lead-Time-Guide-July-2021-EN-Document.pdf?MOD=AJPERES)
+
+## Fusion Worldwide · The Greensheet 2021-05
+
+발간: 2021-05-26 · 자료 기준/보고대상: 2021-05
+
+HDD 주문 납기가 최대 13주로 늘어났습니다. 기사에 12·14·16TB 가격을 언급하지만 납기 수치를 해당 용량 전용으로 한정하지 않았습니다.
+
+### HDD 전체 주문
+
+- 범위: HDD orders; capacity not defined
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 13 이하주
+- 기준: 2021-05-26
+- 내용: HDD 주문 납기가 최대 13주로 늘어났습니다. 기사에 12·14·16TB 가격을 언급하지만 납기 수치를 해당 용량 전용으로 한정하지 않았습니다.
+
+[원문: The Greensheet 2021-05](https://info.fusionww.com/resources/the-greensheet-may-2021)
+
+## Avnet Abacus · Lead-Time Guide · 2021-04
+
+발간: 2021-04 · 자료 기준/보고대상: 2021-04
+
+2021-04 Avnet Abacus 원본 가이드에서 26개 품목군의 납기를 확인했습니다. MLCC와 커패시터, 인덕터·페라이트, 전원, 냉각, 커넥터의 동일 사양명을 연결했습니다. PDF 표지·본문·각 페이지 기준월을 사용했습니다. 숫자가 없는 Allocation, 전망 화살표는 납기 숫자로 바꾸지 않았습니다.
+
+### MLCC 일반 SMD
+
+- 범위: Avnet Abacus 일반 유통시장 · MLCC 일반 SMD
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–30주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 MLCC 일반 SMD 리드타임은 12–30주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다.
+
+### 고용량 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 고용량 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–52+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 고용량 MLCC 리드타임은 16–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 차량용 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 차량용 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–52+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 차량용 MLCC 리드타임은 16–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 탄탈륨 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 탄탈륨 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 탄탈륨 SMD 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 탄탈륨 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 탄탈륨 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 리드형 탄탈륨 커패시터는 8–26주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 필름 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 필름 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–22+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 필름 SMD 커패시터는 10–22+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 필름 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 필름 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–24+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 리드형 필름 커패시터는 6–24+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 알루미늄 전해 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 알루미늄 전해 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–40주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 알루미늄 전해 SMD 커패시터는 20–40주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 폴리머 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 폴리머 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–52+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 폴리머 커패시터는 20–52+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 크리스털·오실레이터
+
+- 범위: Avnet Abacus 일반 유통시장 · 크리스털·오실레이터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–30+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 크리스털·오실레이터는 8–30+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공진자
+
+- 범위: Avnet Abacus 일반 유통시장 · 공진자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 공진자는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 퓨즈
+
+- 범위: Avnet Abacus 일반 유통시장 · 퓨즈
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–25주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 퓨즈는 6–25주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리셋 가능 보호소자
+
+- 범위: Avnet Abacus 일반 유통시장 · 리셋 가능 보호소자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–15주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 리셋 가능 보호소자는 10–15주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### SMD 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · SMD 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–80주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 SMD 인덕터는 8–80주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 리드형 인덕터는 10–14+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공통 모드 초크
+
+- 범위: Avnet Abacus 일반 유통시장 · 공통 모드 초크 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–30주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 공통 모드 초크는 10–30주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 칩 비드
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 칩 비드 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 페라이트 칩 비드는 10–12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 코어
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 코어 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–22+주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 페라이트 코어는 10–22+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 범용 AC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 범용 AC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–24주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 범용 AC–DC 전원는 4–24주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 정류기·프런트엔드 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 정류기·프런트엔드 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–24주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 정류기·프런트엔드 전원는 10–24주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 산업용·브릭 DC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 산업용·브릭 DC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–24주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 산업용·브릭 DC–DC 전원는 4–24주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 팬
+
+- 범위: Avnet Abacus 일반 유통시장 · 팬
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–21주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 팬는 8–21주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 방열판
+
+- 범위: Avnet Abacus 일반 유통시장 · 방열판
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 방열판는 8–10주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 백플레인 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 백플레인 커넥터 (DIN 41612·2MM·고속·전력신호) · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 백플레인 커넥터는 14주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 보드 간 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 보드 간 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 17주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 보드 간 커넥터는 17주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 전원 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 전원 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 15주
+- 기준: 2021-04
+- 내용: 2021-04 Avnet Abacus의 전원 커넥터는 15주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+[원문: Lead-Time Guide · 2021-04](https://www.avnet.com/wcm/connect/6466625f-04e6-4164-bd2e-9acdd402fc9b/AVA-Lead-Time-Guide-April-2021-EN-Document.pdf?MOD=AJPERES)
+
+## SEMI / TechSearch International · Substrate Crisis · March 2021
+
+발간: 2021-03-01 · 자료 기준/보고대상: 2021-03-01
+
+IC 패키지 기판 14주 이상을 확인했습니다. FC-BGA를 포함한 범위이며 ABF 단독 값으로 합치지 않습니다.
+
+### IC 패키지 기판 · FC-BGA 포함
+
+- 범위: IC 패키지 기판 전반, FC-BGA가 가장 심한 부족으로 지목됨; ABF 단독 집계 아님
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14 이상주
+- 기준: 2021-03-01
+- 내용: SEMI에 직접 기고한 TechSearch는 IC 패키지 기판 납기를 14주 이상으로 설명하고 FC-BGA를 가장 심한 부족 품목으로 지목했습니다. ABF 단독 납기로 바꾸지 않은 참고 관측입니다.
+
+[원문: The Substrate Crisis Deepens](https://www.semi.org/en/blogs/business-markets/the-substrate-crisis-deepens)
+
+## Rebound Electronics · Market Insight 2020-Q4
+
+발간: 미확인 · 발간호 2020-Q4 · 자료 기준/보고대상: 2020-Q4
+
+2020-Q4 Rebound Market Insight의 메모리 납기 표에서 16개 제조사·제품 조합을 확인했습니다. 분기는 표지 발간호를 뜻하며 조사일·정확한 발간일·분기말 실측은 확인되지 않았습니다. 같은 제조사와 제품 표기 안에서 하단·상단을 각각 비교합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Micron / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Micron PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–16주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Samsung PC (Commodity) DRAM 보고 납기는 12-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–18주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Micron Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–18주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Samsung Solid State Drives (SSD) 보고 납기는 16-18주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–16주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Micron eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14–16주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Samsung eMMC 보고 납기는 14-16주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Kingston PC (Commodity) DRAM 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Kingston Solid State Drives (SSD) 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Kingston eMMC 보고 납기는 6-8주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Alliance Memory PC (Commodity) DRAM 보고 납기는 6-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 SkyHigh Memory SLC NAND Flash 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 SkyHigh Memory eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / Macronix / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Macronix SLC NAND Flash 보고 납기는 10-12주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Macronix eMMC 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 ADATA Solid State Drives (SSD) 보고 납기는 8-10주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2020-Q4
+- 내용: Rebound 2020-Q4호의 Greenliant Solid State Drives (SSD) 보고 납기는 12-14주입니다. 분기는 발간호 표지 기준이며 정확한 조사일은 공개되지 않았습니다.
+
+[원문: Market Insight 2020-Q4](https://reboundeu.com/wp-content/uploads/2020/09/Market-Insight-Q4-2020.pdf)
+
+## TTI · MLCC market assessment · November 2020
+
+발간: 2020-11-23 · 자료 기준/보고대상: 2020-11-23
+
+TTI의 케이스 크기·CV·등급별 4개 납기 관측을 확인했습니다. 이 중 소형 차량용은 약 24주, 대형 고용량 차량용과 1206–2220은 20–24주, 대형 저용량 상용은 17–22주입니다.
+
+### 차량용 MLCC · 소형
+
+- 범위: 0201/0402, low-CV 및 high-CV 차량용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 약 24주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 0201/0402, low-CV 및 high-CV 차량용 MLCC 납기는 약 24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+### 차량용 고용량 MLCC · 대형
+
+- 범위: ≥0603, high-CV 차량용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–24주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 ≥0603, high-CV 차량용 MLCC 납기는 20–24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+### 상용 저용량 MLCC · 대형
+
+- 범위: ≥0603, low-CV 상용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 17–22주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 ≥0603, low-CV 상용 MLCC 납기는 17–22주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+### MLCC · 1206–2220
+
+- 범위: 1206–2220, low-CV/high-CV, 상용·차량용
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–24주
+- 기준: 2020-11-23
+- 내용: TTI가 직접 관찰한 1206–2220, low-CV/high-CV, 상용·차량용 MLCC 납기는 20–24주입니다. 케이스 크기와 등급이 다른 집계 사이 변화율은 참고 비교로만 사용합니다.
+
+[원문: As Lead Times Grow, Expect the MLCC Market to Tighten Throughout 2021](https://www.tti.com/content/ttiinc/en/resources/marketeye/categories/tti-insights/me-ray-20201123.html)
+
+## Avnet Abacus · Lead-Time Guide · 2020-04
+
+발간: 2020-04 · 자료 기준/보고대상: 2020-04
+
+2020-04 Avnet Abacus 원본 가이드에서 25개 품목군의 납기를 확인했습니다. MLCC와 커패시터, 인덕터·페라이트, 전원, 냉각, 커넥터의 동일 사양명을 연결했습니다. PDF 표지·본문·각 페이지 기준월을 사용했습니다. URL 파일명은 March-2020이나 PDF 표지와 표 하단은 April 2020입니다. 숫자가 없는 Allocation, 전망 화살표는 납기 숫자로 바꾸지 않았습니다.
+
+### MLCC 일반 SMD
+
+- 범위: Avnet Abacus 일반 유통시장 · MLCC 일반 SMD
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–30+주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 MLCC 일반 SMD 리드타임은 6–30+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 고용량 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 고용량 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–30+주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 고용량 MLCC 리드타임은 6–30+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 탄탈륨 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 탄탈륨 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–28주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 탄탈륨 SMD 커패시터는 6–28주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 탄탈륨 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 탄탈륨 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–26주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 리드형 탄탈륨 커패시터는 8–26주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 필름 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 필름 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–22+주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 필름 SMD 커패시터는 10–22+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 필름 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 필름 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–24+주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 리드형 필름 커패시터는 6–24+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 알루미늄 전해 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 알루미늄 전해 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–24주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 알루미늄 전해 SMD 커패시터는 6–24주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 폴리머 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 폴리머 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–24주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 폴리머 커패시터는 6–24주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 크리스털·오실레이터
+
+- 범위: Avnet Abacus 일반 유통시장 · 크리스털·오실레이터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 크리스털·오실레이터는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 공진자
+
+- 범위: Avnet Abacus 일반 유통시장 · 공진자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 공진자는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 퓨즈
+
+- 범위: Avnet Abacus 일반 유통시장 · 퓨즈
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–25주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 퓨즈는 6–25주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리셋 가능 보호소자
+
+- 범위: Avnet Abacus 일반 유통시장 · 리셋 가능 보호소자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–15주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 리셋 가능 보호소자는 10–15주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### SMD 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · SMD 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–80주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 SMD 인덕터는 8–80주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14+주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 리드형 인덕터는 10–14+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공통 모드 초크
+
+- 범위: Avnet Abacus 일반 유통시장 · 공통 모드 초크 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–30주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 공통 모드 초크는 10–30주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 칩 비드
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 칩 비드 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 페라이트 칩 비드는 10–12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 코어
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 코어 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–22+주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 페라이트 코어는 10–22+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 범용 AC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 범용 AC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 범용 AC–DC 전원는 6–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 정류기·프런트엔드 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 정류기·프런트엔드 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 정류기·프런트엔드 전원는 10–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 산업용·브릭 DC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 산업용·브릭 DC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–18주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 산업용·브릭 DC–DC 전원는 8–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 팬
+
+- 범위: Avnet Abacus 일반 유통시장 · 팬
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–21주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 팬는 8–21주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 방열판
+
+- 범위: Avnet Abacus 일반 유통시장 · 방열판
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 방열판는 8–10주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 백플레인 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 백플레인 커넥터 (DIN 41612·2MM·고속·전력신호) · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 백플레인 커넥터는 16주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 보드 간 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 보드 간 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 14주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 보드 간 커넥터는 14주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 전원 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 전원 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12주
+- 기준: 2020-04
+- 내용: 2020-04 Avnet Abacus의 전원 커넥터는 12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+[원문: Lead-Time Guide · 2020-04](https://www.avnet.com/wcm/connect/101b4984-151c-4e9e-8c42-e55a2da865af/AVA-Lead-Time-guide-March-2020-EN-Document.pdf?MOD=AJPERES)
+
+## Avnet Abacus · Lead-Time Guide · 2019-09
+
+발간: 2019-09 · 자료 기준/보고대상: 2019-09
+
+2019-09 Avnet Abacus 원본 가이드에서 25개 품목군의 납기를 확인했습니다. MLCC와 커패시터, 인덕터·페라이트, 전원, 냉각, 커넥터의 동일 사양명을 연결했습니다. PDF 표지·본문·각 페이지 기준월을 사용했습니다. 숫자가 없는 Allocation, 전망 화살표는 납기 숫자로 바꾸지 않았습니다.
+
+### MLCC 일반 SMD
+
+- 범위: Avnet Abacus 일반 유통시장 · MLCC 일반 SMD
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–52+주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 MLCC 일반 SMD 리드타임은 16–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 고용량 MLCC
+
+- 범위: Avnet Abacus 일반 유통시장 · 고용량 MLCC
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–52+주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 고용량 MLCC 리드타임은 16–52+주입니다. 일반 유통시장 집계이며 AI 서버 전용 수치와 범위를 구분합니다. +는 열린 상한으로 보존했습니다.
+
+### 탄탈륨 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 탄탈륨 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–28주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 탄탈륨 SMD 커패시터는 12–28주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 탄탈륨 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 탄탈륨 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–26주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 리드형 탄탈륨 커패시터는 16–26주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 필름 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 필름 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16–24+주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 필름 SMD 커패시터는 16–24+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 리드형 필름 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 필름 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 18–22+주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 리드형 필름 커패시터는 18–22+주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 알루미늄 전해 SMD 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 알루미늄 전해 SMD 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–24주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 알루미늄 전해 SMD 커패시터는 12–24주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 폴리머 커패시터
+
+- 범위: Avnet Abacus 일반 유통시장 · 폴리머 커패시터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–24주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 폴리머 커패시터는 12–24주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 크리스털·오실레이터
+
+- 범위: Avnet Abacus 일반 유통시장 · 크리스털·오실레이터
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 크리스털·오실레이터는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 공진자
+
+- 범위: Avnet Abacus 일반 유통시장 · 공진자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–14주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 공진자는 8–14주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 퓨즈
+
+- 범위: Avnet Abacus 일반 유통시장 · 퓨즈
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–25주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 퓨즈는 6–25주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리셋 가능 보호소자
+
+- 범위: Avnet Abacus 일반 유통시장 · 리셋 가능 보호소자
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–15주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 리셋 가능 보호소자는 10–15주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### SMD 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · SMD 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–80주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 SMD 인덕터는 8–80주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 리드형 인덕터
+
+- 범위: Avnet Abacus 일반 유통시장 · 리드형 인덕터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14+주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 리드형 인덕터는 10–14+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 공통 모드 초크
+
+- 범위: Avnet Abacus 일반 유통시장 · 공통 모드 초크 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–30주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 공통 모드 초크는 10–30주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 칩 비드
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 칩 비드 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 페라이트 칩 비드는 10–12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 페라이트 코어
+
+- 범위: Avnet Abacus 일반 유통시장 · 페라이트 코어 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–22+주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 페라이트 코어는 10–22+주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다. +는 열린 상한으로 보존했습니다.
+
+### 범용 AC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 범용 AC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 범용 AC–DC 전원는 6–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 정류기·프런트엔드 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 정류기·프런트엔드 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 정류기·프런트엔드 전원는 10–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 산업용·브릭 DC–DC 전원
+
+- 범위: Avnet Abacus 일반 유통시장 · 산업용·브릭 DC–DC 전원
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–18주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 산업용·브릭 DC–DC 전원는 8–18주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 팬
+
+- 범위: Avnet Abacus 일반 유통시장 · 팬
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–21주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 팬는 8–21주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 방열판
+
+- 범위: Avnet Abacus 일반 유통시장 · 방열판
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–10주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 방열판는 8–10주입니다. 원문 납기(주) 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 백플레인 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 백플레인 커넥터 (DIN 41612·2MM·고속·전력신호) · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 16주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 백플레인 커넥터는 16주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 보드 간 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 보드 간 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 11주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 보드 간 커넥터는 11주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+### 전원 커넥터
+
+- 범위: Avnet Abacus 일반 유통시장 · 전원 커넥터 · 평균 납기 열
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12주
+- 기준: 2019-09
+- 내용: 2019-09 Avnet Abacus의 전원 커넥터는 12주입니다. 원문 평균 납기 열의 같은 품목명을 연결했으며 일반 유통시장 집계입니다.
+
+[원문: Lead-Time Guide · 2019-09](https://www.avnet.com/wcm/connect/b7202770-5e3f-4369-95f9-70bf9c04defe/AVA-Lead-Time-guide-September-2019-EN-Document.pdf?MOD=AJPERES&attachment=true&id=1568983700586&id=1568983700586%3FMOD%3DAJPERES)
+
+## Vishay Intertechnology · Commercial MLCC support · March 2018
+
+발간: 2018-03-08 · 자료 기준/보고대상: 2018-03-08
+
+Vishay 제조사 보도자료의 특정 상용 MLCC 생산주문 12–14주를 확인했습니다.
+
+### 상용 MLCC · Vishay 대체제품
+
+- 범위: Vishay NP0/X7R 0402·0603·0805·1206·1210·1812, SMD/리드형, 공지된 생산주문
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12–14주
+- 기준: 2018-03-08
+- 내용: Vishay가 공급하는 공지 대상 NP0/X7R 상용 MLCC의 생산 주문 납기는 보통 12–14주였습니다. 모든 업체의 시장 평균으로 해석하지 않습니다.
+
+[원문: Support for Commercial MLCCs Being Discontinued by Certain Suppliers](https://www.globenewswire.com/news-release/2018/03/08/1418583/0/en/Vishay-Intertechnology-Announces-Support-for-Commercial-MLCCs-Being-Discontinued-by-Certain-Suppliers.html)
+
+## Paumanok / TTI Europe · MLCC Supply Chain Review · November 2017
+
+발간: 2017-12-04 · 자료 기준/보고대상: 2017-11
+
+2017년 11월 MLCC 전체 케이스 평균 약 20주를 확인했습니다. 그림 선을 역산해 월별 수치를 만들지는 않았습니다.
+
+### MLCC 전체 케이스 평균
+
+- 범위: 세계 MLCC 전체 케이스 크기 합산 평균; AI 전용·고용량 단독 집계 아님
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 약 20주
+- 기준: 2017-11
+- 내용: 2017년 11월 세계 MLCC 전체 케이스 합산 평균 납기가 약 20주 수준으로 늘었다고 Paumanok의 직접 기고가 설명합니다. 특정 고용량·AI 품목군 범위와 다릅니다.
+
+[원문: MLCC and Thick Film Chip Resistors: Supply Chain Review November 2017](https://www.ttieurope.com/content/ttieurope/en/resources/marketeye/categories/passives/me-zogi-20171204.html)
 

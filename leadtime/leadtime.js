@@ -32,13 +32,13 @@
     const seriesOf = o => seriesMap.get(o.series_id) || {};
     const isTF = p => /trendforce/i.test(clean(p));
     const periodStamp = value => { const v=clean(value), q=v.match(/^(\d{4})-Q([1-4])$/); return q ? Date.UTC(Number(q[1]),(Number(q[2])-1)*3,1) : Date.parse(v); };
-    const ordered = list => [...list].sort((a, b) => clean(a.published_at).localeCompare(clean(b.published_at)) || clean(a.id).localeCompare(clean(b.id)));
+    const ordered = list => [...list].sort((a, b) => clean(a.published_at || a.edition_period).localeCompare(clean(b.published_at || b.edition_period)) || clean(a.id).localeCompare(clean(b.id)));
     const releases = ordered(data.releases).reverse();
     const initial = releases.find(r => isTF(r.publisher));
     const latest = ordered(data.sources.filter(s => s.published_at)).at(-1);
     root.replaceChildren();
     const header = add(el('header', 'lt-header'), el('p', 'lt-eyebrow', 'ENSEMBLE / SUPPLY RESEARCH'), el('h1', '', '공급망 리드타임·재고'), el('p', 'lt-intro', data.intro_ko || '공개된 발행 자료에서 확인한 부품별 리드타임과 수급 상태입니다.'));
-    add(header, add(el('div', 'lt-stats'), el('span', '', `리드타임 최근 발행일 ${latest ? date(latest.published_at) : '미확인'}`), el('span', '', `리드타임 관측 ${data.observations.length}건`), el('span', '', `리드타임 갱신 ${date(data.updated_at)}`)), el('p', 'lt-notice', '원문 발행 시점의 역사 자료입니다. 제품·주체·측정 방법이 같은 계열 안에서 비교합니다.'));
+    add(header, add(el('div', 'lt-stats'), el('span', '', `리드타임 최근 발행일 ${latest ? date(latest.published_at) : '미확인'}`), el('span', '', `리드타임 관측 ${data.observations.length}건`), el('span', '', `리드타임 갱신 ${date(data.updated_at)}`)), el('p', 'lt-notice', '확인된 과거 납기와 변화율입니다. 동일 계열 비교와 여러 출처의 참고 비교를 구분해 볼 수 있습니다.'));
     root.append(header);
     const views = el('div','lt-view-tabs');
     const leadButton=el('button','','리드타임'), inventoryButton=el('button','','분기 재고 주수');
@@ -51,11 +51,14 @@
       if(inventory&&!inventoryLoaded){inventoryLoaded=true;const css=el('link');css.rel='stylesheet';css.href=new URL('inventory.css',dataURL);document.head.append(css);const js=el('script');js.src=new URL('inventory.js',dataURL);js.onerror=()=>{inventoryView.textContent='재고 화면을 불러오지 못했습니다.';};document.body.append(js);}}
     leadButton.onclick=()=>selectView(false);inventoryButton.onclick=()=>selectView(true);
 
+    const trendRoot=el('section');trendRoot.id='leadtime-trends-root';leadView.append(trendRoot);
+    const trendCss=el('link');trendCss.rel='stylesheet';trendCss.href=new URL('trends.css',dataURL);document.head.append(trendCss);
+    const trendJs=el('script');trendJs.src=new URL('trends.js',dataURL);trendJs.onerror=()=>{trendRoot.textContent='장기 시계열을 불러오지 못했습니다. 새로고침해 주세요.';};document.body.append(trendJs);
     const overview = el('section', 'lt-section');
     overview.append(heading('발행 호별 핵심 부품', '기본 선택: 가장 최근 TrendForce 발행 호 · 균형 범위는 원문 제공값만 표시'));
     const picker = el('select'); picker.id = 'lt-release'; picker.setAttribute('aria-label', '발행 호 선택');
     if (!initial) add(picker, el('option', '', 'TrendForce 발행 호 없음'));
-    releases.forEach(r => { const option = el('option', '', `${date(r.published_at)} · ${r.publisher} · ${r.label}`); option.value = r.id; picker.append(option); });
+    releases.forEach(r => { const option = el('option', '', `${r.published_at ? date(r.published_at) : '발간호 '+date(r.edition_period)+' (발간일 미확인)'} · ${r.publisher} · ${r.label}`); option.value = r.id; picker.append(option); });
     if (initial) picker.value = initial.id;
     const edition = el('div'); add(overview, add(el('div', 'lt-control'), el('label', '', '발행 호'), picker), edition); overview.querySelector('label').htmlFor = picker.id;
     function showEdition() {
@@ -95,8 +98,9 @@
     }
     function showHistory() {
       chartArea.replaceChildren(); const s = seriesMap.get(seriesPicker.value); if (!s) { chartArea.append(el('p', 'lt-empty', '조건에 맞는 시리즈가 없습니다.')); return; }
-      const dateOf = o => s.axis === 'observation' ? o.as_of : sourceOf(o).published_at;
-      const axisLabel = s.axis === 'observation' ? '자료 기준 분기' : '발간일';
+      const dateOf = o => s.axis === 'observation' || s.axis === 'edition' ? o.as_of : sourceOf(o).published_at;
+      const axisLabel = s.axis === 'edition' ? '발간호 분기' : s.axis === 'observation' ? '자료 기준 분기' : '발간일';
+      if(s.axis === 'edition') chartArea.append(el('p','lt-notice','가로축은 표지의 발간호 분기입니다. 정확한 발간일·조사일은 미확인이며 분기말 실측을 뜻하지 않습니다.'));
       const rows = data.observations.filter(o => o.series_id === s.id).sort((a,b)=>clean(dateOf(a)).localeCompare(clean(dateOf(b))) || clean(a.id).localeCompare(clean(b.id)));
       if(s.axis === 'observation') chartArea.append(el('p','lt-notice','단일 보고서의 과거 분기 이력입니다. 가로축은 발간일이 아닌 자료 기준 분기입니다.'));
       add(chartArea, el('h3', '', s.name), el('p', 'lt-meta', `${s.component} · ${s.publisher} · ${s.scope} · 단위 ${unitLabel[s.unit] || s.unit} · 발행 주기 ${s.cadence || '미확인'}`), el('p', 'lt-count', rows.length === 1 ? '첫 관측 · 이력 1건 (제공된 데이터 기준)' : `관측 ${rows.length}건`));
@@ -116,8 +120,8 @@
     add(coverage, data.coverage.length ? coverageGrid : el('p', 'lt-empty', '관측 범위 안내가 아직 제공되지 않았습니다.')); leadView.append(coverage);
     const archive = el('section', 'lt-section'); archive.append(heading('출처 아카이브', '전체 관측과 원문을 확인하거나 CSV로 저장할 수 있습니다.'));
     const download = el('button', '', `전체 관측 CSV 저장 (${data.observations.length}건)`); download.type = 'button'; download.onclick = () => {
-      const headers = ['observation_id', 'series_id', 'source_id', 'release_id', 'component', 'name', 'scope', 'publisher', 'unit', 'published_at', 'as_of', 'value_min', 'value_max', 'qualifier', 'upper_open', 'balanced_min', 'balanced_max', 'status', 'narrative_ko', 'source_title', 'source_url', 'evidence_type', 'observed_at', 'locator'];
-      const records = data.observations.map(o => { const s = seriesOf(o), src = sourceOf(o); return [o.id, o.series_id, o.source_id, o.release_id, s.component, s.name, s.scope, s.publisher, s.unit, src.published_at, o.as_of, o.value_min, o.value_max, o.qualifier, o.upper_open || false, o.balanced_min, o.balanced_max, o.status, o.narrative_ko, src.title, validURL(src.url) || '', src.evidence_type, src.observed_at, src.locator]; });
+      const headers = ['observation_id', 'series_id', 'source_id', 'release_id', 'component', 'name', 'scope', 'publisher', 'unit', 'published_at', 'as_of', 'value_min', 'value_max', 'qualifier', 'upper_open', 'balanced_min', 'balanced_max', 'status', 'narrative_ko', 'source_title', 'source_url', 'evidence_type', 'observed_at', 'locator', 'edition_period', 'date_precision', 'axis'];
+      const records = data.observations.map(o => { const s = seriesOf(o), src = sourceOf(o); return [o.id, o.series_id, o.source_id, o.release_id, s.component, s.name, s.scope, s.publisher, s.unit, src.published_at, o.as_of, o.value_min, o.value_max, o.qualifier, o.upper_open || false, o.balanced_min, o.balanced_max, o.status, o.narrative_ko, src.title, validURL(src.url) || '', src.evidence_type, src.observed_at, src.locator, src.edition_period, src.date_precision, s.axis]; });
       const blob = new Blob(['\uFEFF' + [headers, ...records].map(row => row.map(csvCell).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' }); const url = URL.createObjectURL(blob); const a = el('a'); a.href = url; a.download = 'ensemble-leadtime-observations.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
     };
     add(archive, download);const updates=el('a','','발간별 한국어 업데이트 문서');updates.href=new URL('updates.md',dataURL);updates.className='lt-update-link';archive.append(updates); const all = el('details', 'lt-details'); add(all, el('summary', '', '전체 관측 보기'), observationTable(data.observations)); archive.append(all);

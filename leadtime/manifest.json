@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "updated_at": "2026-09-23",
-  "series": 84,
-  "observations": 313,
-  "releases": 19,
-  "sources": 19,
+  "series": 133,
+  "observations": 605,
+  "releases": 57,
+  "sources": 57,
   "inventory": {
     "products": 22,
     "series": 32,
@@ -12,15 +12,18 @@
     "sources": 51
   },
   "files": {
-    "updates.md": "08b2b8388143e4aab398924c8ab09268ae4e95f9cf512f5dbdd9403b77ef3800",
+    "updates.md": "ba3a4a67c95424588a307b82eb0b108e88feb162be9138aa66e21b6f9964b785",
     "inventory-updates.md": "574292f61652ee0f8ce750a319dfab5498fcb99ac3589c94a4712105fa272d52",
-    "data.json": "e77b0c9f428a629af26c42f2b1b97ffe2ed2aec3171a26c5e56c0ebdcacd5846",
+    "data.json": "e982712ef77dbcbadd17098390202b8f14ea0ee3228a318d396c3f5cbc9f997e",
     "inventory.json": "70e5c33c664e50ec40a79414fedda62cc68c3d3f524a501b0bb709781243805e",
     "ensemble-tab.js": "8a2c0d516d9d6a62bdc64639c037be99337d556b1ed3516203c35091cc318539",
-    "leadtime.js": "8cac680afb0fa723cc923d32766e13fd0f744ceb6bc7e89c38be4331683ca313",
+    "trends.json": "80b0939d11794cd27b013a58b02a871aa25aedab63445ac71453302fabc3bd4a",
+    "leadtime.js": "e419472d019bc9f149e9f69d6cfd04bde2ee9d44273511645219f5f3c7bdcfae",
     "leadtime.css": "b6b6f84399a530ad90679ded87d478a25f4ee17a881150025b91649c7c5b2ae0",
     "inventory.js": "efeb2f4931638898b143da2a36b1e02ee156bb5ccc5989f68c57c4bce4f66639",
     "inventory.css": "375a992bfac5d70ba6067d7bd27af838fa75d5ef2f396a80aeb73516ca05bf08",
+    "trends.js": "8d048f288a918c4da34e34a0ef55088b6b49335586b3f3fda0adf3d9197d18ed",
+    "trends.css": "7727bcb79d4b3dfa1b17ffa162b5444e95c7bb9f43ed1b7ec7c540840792f318",
     "index.html": "dac0f2e3aed63284bf934d71dfb87c5a4654b4c6391188a07d84f0bce5a30b41"
   }
 }
