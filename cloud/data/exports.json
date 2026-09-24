@@ -1,6 +1,6 @@
 {
   "schema": "ensemble_cloud_exports/1",
-  "asof": "2026-09-23",
+  "asof": "2026-09-24",
   "primary_key": [
     "provider",
     "metric",
@@ -10,7 +10,7 @@
   ],
   "source_updated_at": {
     "financial_review": "2026-09-10",
-    "operations": "2026-09-23T08:38:40+00:00",
+    "operations": "2026-09-24T08:31:23+00:00",
     "legacy": "2026-08-13"
   },
   "observations": [
@@ -1145,7 +1145,7 @@
   "ensemble": [
     {
       "provider": "0700.HK",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1164,7 +1164,7 @@
     },
     {
       "provider": "0728.HK",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1183,7 +1183,7 @@
     },
     {
       "provider": "0762.HK",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1202,7 +1202,7 @@
     },
     {
       "provider": "0941.HK",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1221,7 +1221,7 @@
     },
     {
       "provider": "3896.HK",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1240,7 +1240,7 @@
     },
     {
       "provider": "9888.HK",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1259,7 +1259,7 @@
     },
     {
       "provider": "9988.HK",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1278,14 +1278,14 @@
     },
     {
       "provider": "AMZN",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": 82,
       "coverage": 55,
       "axis_count": 3,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "b67a2bdb0c98e17bbc27"
@@ -1295,7 +1295,7 @@
         "contracts": null,
         "pricing": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "eb6cef2851616b21ae4a"
@@ -1303,7 +1303,7 @@
         },
         "funding": {
           "direction": -1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "56332fc2331cf289faa8"
@@ -1322,7 +1322,7 @@
     },
     {
       "provider": "APLD",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 25,
       "axis_count": 1,
@@ -1330,7 +1330,7 @@
         "demand": null,
         "delivery": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "b9eda703bc2d146a153b"
@@ -1350,7 +1350,7 @@
     },
     {
       "provider": "CIFR",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 25,
       "axis_count": 1,
@@ -1358,7 +1358,7 @@
         "demand": null,
         "delivery": {
           "direction": 1,
-          "freshness": 0.6803950000871885,
+          "freshness": 0.675174973084095,
           "groups": 1,
           "ids": [
             "f8b87b20cf666937fc8a"
@@ -1378,7 +1378,7 @@
     },
     {
       "provider": "CRUSOE",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1397,14 +1397,14 @@
     },
     {
       "provider": "CRWV",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": 69,
       "coverage": 80,
       "axis_count": 4,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "73781c9208d64e96e7e4"
@@ -1412,7 +1412,7 @@
         },
         "delivery": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "837604877c2c0cb89819"
@@ -1421,7 +1421,7 @@
         "contracts": null,
         "pricing": {
           "direction": -1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "29bf28cefd5b0ca37d06"
@@ -1429,7 +1429,7 @@
         },
         "funding": {
           "direction": -1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "c180cab8d579498048c8"
@@ -1449,14 +1449,14 @@
     },
     {
       "provider": "GOOGL",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": 100,
       "coverage": 45,
       "axis_count": 2,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "baa3c5d76e1c97432e9b"
@@ -1466,7 +1466,7 @@
         "contracts": null,
         "pricing": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "c8e28a2d7622de51ccd9"
@@ -1485,7 +1485,7 @@
     },
     {
       "provider": "IBM",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1504,7 +1504,7 @@
     },
     {
       "provider": "IREN",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 20,
       "axis_count": 1,
@@ -1513,7 +1513,7 @@
         "delivery": null,
         "contracts": {
           "direction": 1,
-          "freshness": 0.3428276925231832,
+          "freshness": 0.3401975000435942,
           "groups": 1,
           "ids": [
             "1127165daaef206f36a3"
@@ -1532,7 +1532,7 @@
     },
     {
       "provider": "LAMBDA",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1551,14 +1551,14 @@
     },
     {
       "provider": "MSFT",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 30,
       "axis_count": 1,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "fd55d764078e0b077178"
@@ -1579,14 +1579,14 @@
     },
     {
       "provider": "NBIS",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": 87,
       "coverage": 75,
       "axis_count": 4,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 2,
           "ids": [
             "f53320d72ef6fd43c379",
@@ -1596,7 +1596,7 @@
         "delivery": null,
         "contracts": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "4ddeb23112629ee32f15"
@@ -1604,7 +1604,7 @@
         },
         "pricing": {
           "direction": 1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "2571e4c9393b040b1396"
@@ -1612,7 +1612,7 @@
         },
         "funding": {
           "direction": -1,
-          "freshness": 0.5196296130159217,
+          "freshness": 0.5156429867014977,
           "groups": 1,
           "ids": [
             "70eae776051833ed17e6"
@@ -1633,14 +1633,14 @@
     },
     {
       "provider": "ORCL",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": 75,
       "coverage": 40,
       "axis_count": 2,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.4124302971676513,
+          "freshness": 0.40926610976499084,
           "groups": 1,
           "ids": [
             "5643886198bb559c03b8"
@@ -1651,7 +1651,7 @@
         "pricing": null,
         "funding": {
           "direction": -1,
-          "freshness": 0.4124302971676513,
+          "freshness": 0.40926610976499084,
           "groups": 1,
           "ids": [
             "8525142d47bc5f41ceb4"
@@ -1669,7 +1669,7 @@
     },
     {
       "provider": "WULF",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": 100,
       "coverage": 45,
       "axis_count": 2,
@@ -1677,7 +1677,7 @@
         "demand": null,
         "delivery": {
           "direction": 1,
-          "freshness": 0.6597539553864471,
+          "freshness": 0.6546922875874867,
           "groups": 1,
           "ids": [
             "1d39be1ea09ffcfd09db"
@@ -1685,7 +1685,7 @@
         },
         "contracts": {
           "direction": 1,
-          "freshness": 0.6856553850463665,
+          "freshness": 0.6803950000871885,
           "groups": 1,
           "ids": [
             "9a93d1e497c5fd44775c"
@@ -1705,7 +1705,7 @@
     },
     {
       "provider": "huawei",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -1724,7 +1724,7 @@
     },
     {
       "provider": "ucloud",
-      "asof": "2026-09-23",
+      "asof": "2026-09-24",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
