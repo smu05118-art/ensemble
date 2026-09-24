@@ -8,3 +8,18 @@
 .lt-app .lt-view-tabs{display:flex;gap:8px;margin:24px 0;flex-wrap:wrap}.lt-app .lt-view-tabs button[aria-pressed="true"]{background:var(--lt-teal);color:var(--lt-panel)}.lt-app [hidden]{display:none!important}.lt-app .lt-update-link{display:inline-block;margin:10px 16px}.lt-app .lt-status{border:1px solid var(--lt-line)}
 
 .lt-app .lt-status.lt-severe{background:#fde8e7;color:#a42b32;border-color:#efc2c2}.lt-app .lt-status.lt-tight{background:#fff1d7;color:#88540d;border-color:#ebd2a3}.lt-app .lt-status.lt-balanced{background:#e4f3eb;color:#276244;border-color:#b7dac7}
+
+/* Quarterly research workspace: compact framing gives the chart priority. */
+#leadtime-root{padding:clamp(16px,2.6vw,36px);border-radius:18px}
+#leadtime-root>.lt-header{padding-bottom:20px;border-bottom:1px solid var(--lt-line)}
+#leadtime-root>.lt-header h1{font-size:clamp(27px,3vw,38px);margin:8px 0 10px;letter-spacing:-.045em}
+#leadtime-root>.lt-header .lt-intro{font-size:14px;color:var(--lt-muted)}
+#leadtime-root>.lt-header .lt-stats{margin:16px 0 0;gap:8px;font-size:12px;font-weight:550}
+#leadtime-root>.lt-header .lt-stats span{padding:4px 10px;border:1px solid var(--lt-line);border-radius:20px}
+#leadtime-root>.lt-header .lt-notice{display:none}
+#leadtime-root>.lt-view-tabs{gap:4px;padding:4px;background:var(--lt-soft);border-radius:12px;width:fit-content;margin:20px 0}
+#leadtime-root>.lt-view-tabs button{border-color:transparent;border-radius:9px;padding:8px 22px}
+#leadtime-root .lt-supporting{border:1px solid var(--lt-line);border-radius:12px;background:var(--lt-panel);padding:8px 20px}
+#leadtime-root .lt-supporting>summary{font-size:16px}
+#leadtime-root .lt-supporting[open]>summary{margin-bottom:18px}
+@media(max-width:480px){#leadtime-root{padding:14px 10px;border-radius:12px}#leadtime-root>.lt-header .lt-stats span{font-size:11px;padding:3px 8px}#leadtime-root .lt-supporting{padding:6px 12px}}

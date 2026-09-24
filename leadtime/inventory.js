@@ -53,11 +53,83 @@
     return `${prefix}${range} ${unit}`;
   }
   function rawLabel(s) { return s.metric === 'financial_dio_proxy' ? '계산 재고일수' : '원문'; }
+  // Ordinal quarters preserve fiscal labels and give missing quarters real space.
   function quarterPosition(o) {
-    if (o.period_end) return Date.parse(o.period_end + 'T00:00:00Z');
     const [year, q] = o.quarter.split('-Q').map(Number);
-    // Internal placement only; this synthetic timestamp is never printed as a date.
-    return Date.UTC(year, (q - 1) * 3 + 1, 15);
+    return year * 4 + q - 1;
+  }
+  function quarterAt(position) { return `${Math.floor(position / 4)}-Q${position % 4 + 1}`; }
+  function timing(o, s) {
+    const explicit = o.observation_timing || s.observation_timing;
+    if (explicit) return String(explicit);
+    const label = String(o.period_label || ''), text = String(o.narrative_ko || '');
+    if (/초/.test(label) || /분기\s*초/.test(text)) return 'quarter_start';
+    if (s.metric === 'financial_dio_proxy') return 'quarter_calculation';
+    if (o.as_of && o.period_end && o.as_of === o.period_end) return 'quarter_end';
+    // Match an affirmative source statement, never the phrase "분기말 여부 미명시".
+    if (/분기\s*말 기준|\dQ\d{2}말로 설명/.test(text)) return 'quarter_end';
+    if (/분기 중/.test(label + ' ' + text)) return 'within_quarter';
+    return 'quarter_reported';
+  }
+  function timingLabel(o, s) {
+    return { quarter_start: '분기 초', quarter_end: '분기말', within_quarter: '분기 중 조사', quarter_calculation: '분기 재무 계산', quarter_reported: '분기 보고 · 측정시점 미확인' }[timing(o, s)] || `관측 기준: ${timing(o, s)}`;
+  }
+  function pointValue(o) { return ['exact', 'range', 'about'].includes(o.qualifier); }
+  function closedUpper(o) { return o.upper_open ? null : (o.value_max === null ? o.value_min : o.value_max); }
+  function quarterly(obs, s) {
+    const groups = new Map();
+    obs.forEach(o => { const q = quarterPosition(o); if (!groups.has(q)) groups.set(q, []); groups.get(q).push(o); });
+    const first = Math.min(...groups.keys()), last = Math.max(...groups.keys()), rows = [];
+    for (let pos = first; pos <= last; pos++) {
+      const items = groups.get(pos) || [], previous = groups.get(pos - 1) || [];
+      const row = { quarter: quarterAt(pos), position: pos, items, change: null, comparable: false, reason: '' };
+      if (!items.length) row.reason = '공개 관측 없음';
+      else if (items.length > 1) row.reason = '동일 분기 복수 관측 · 비교값 미선택';
+      else if (previous.length !== 1) row.reason = previous.length ? '전분기 복수 관측 · 비교값 미선택' : '직전 분기 자료 없음';
+      else {
+        const o = items[0], p = previous[0];
+        const pub = id => data.sources.find(source => source.id === id)?.publisher || '';
+        const basis = v => [timing(v, s), v.conversion, v.raw_unit, v.measure_type || 'reported', v.reported_metric_label || ''].join('|');
+        if (o.series_id !== p.series_id || basis(o) !== basis(p)) row.reason = '측정 기준 변경 · 전분기 비교 중단';
+        else if (pub(o.source_id) !== pub(p.source_id)) row.reason = '출처 변경 · 전분기 비교 중단';
+        else if (!pointValue(o) || !pointValue(p)) row.reason = '미만·이상 경계값 · 변화율 미계산';
+        else {
+          row.comparable = true;
+          const upper = closedUpper(o), previousUpper = closedUpper(p);
+          const lowerPct = p.value_min === 0 ? null : (o.value_min / p.value_min - 1) * 100;
+          const upperPct = upper === null || previousUpper === null || previousUpper === 0 ? null : (upper / previousUpper - 1) * 100;
+          const single = upper === o.value_min && previousUpper === p.value_min;
+          row.change = { lowerPct, upperPct, lowerDelta: o.value_min - p.value_min, upperDelta: upper === null || previousUpper === null ? null : upper - previousUpper, single, previous: p, reference: timing(o, s) === 'quarter_reported', approximate: !!(o.approximate || p.approximate || o.qualifier === 'about' || p.qualifier === 'about') };
+          if (lowerPct === null && upperPct === null) row.reason = '전분기 0 또는 열린 경계 · 변화율 미계산';
+        }
+      }
+      rows.push(row);
+    }
+    return rows;
+  }
+  function signed(value, unit = '%') {
+    if (value === null || !Number.isFinite(value)) return '—';
+    const rounded = Math.abs(value) < 0.0000001 ? 0 : value;
+    return `${rounded > 0 ? '+' : ''}${fmt(rounded)}${unit}`;
+  }
+  function changeText(row, delta = false) {
+    const c = row.change;
+    if (!c) return '비교 불가';
+    const lo = delta ? c.lowerDelta : c.lowerPct, hi = delta ? c.upperDelta : c.upperPct, unit = delta ? '주' : '%';
+    if (lo === null && hi === null) return '비교 불가';
+    if (c.single) return signed(lo, unit);
+    return `하단 ${signed(lo, unit)} · 상단 ${signed(hi, unit)}`;
+  }
+  function changeDetails(row, s) {
+    const box = el('div', null, 'iv-comparison');
+    box.append(el('strong', row.change ? `전분기 대비 ${changeText(row)}` : row.reason));
+    if (row.change) {
+      box.append(el('p', `${periodLabel(row.change.previous, s)} → ${periodLabel(row.items[0], s)} · 증감 ${changeText(row, true)}`));
+      if (row.change.reference) box.append(el('p', '분기 보고값 참고 비교 · 정확한 측정시점은 미확인'));
+      if (row.change.approximate) box.append(el('p', '원문의 근삿값을 포함한 변화율'));
+      if (!row.change.single) box.append(el('p', '하단끼리 · 상단끼리 계산합니다. 두 변화율은 하나의 최솟값~최댓값 범위가 아닙니다.'));
+    }
+    return box;
   }
   function validate(d) {
     if (!d || d.schema_version !== 1 || !['products', 'sources', 'series', 'observations', 'coverage'].every(k => Array.isArray(d[k]))) throw new Error('지원하지 않는 데이터 구조입니다.');
@@ -91,6 +163,7 @@
     const box = el('div', null, 'iv-evidence');
     box.append(el('h4', `${o.quarter} · ${o.period_label || '기간 명칭 미제공'}`), el('p', bound(o), 'iv-value'));
     box.append(el('p', `계열: ${s.name} · ${s.entity}`), el('p', `${metricLabel(s)} · 범위: ${s.scope}`));
+    box.append(el('p', timingLabel(o,s), 'iv-timing'));
     box.append(el('p', `기간 시작: ${o.period_start || '미제공'} / 종료: ${o.period_end || '미제공'} / 관측 기준일 (as_of): ${o.as_of || '미제공'}`));
     box.append(el('p', `${rawLabel(s)}: ${bound(o, true)} → ${bound(o)} · ${conversions[o.conversion]}`));
     box.append(el('p', o.narrative_ko), el('p', s.method_ko));
@@ -104,51 +177,128 @@
     box.append(link(source), el('p', `발행일: ${source.published_at || '미제공'} · 위치: ${o.locator || source.locator || '미제공'} · 관측 ID: ${o.id}`));
     return box;
   }
-  function graph(obs, s, detail) {
-    const wrap = el('div', null, 'iv-chart');
-    const chart = svg('svg', { viewBox: '0 0 620 300', role: 'group', 'aria-label': `${s.name} 분기별 관측치. 연결선 없음. 아래 표에서 동일한 자료와 출처 확인 가능.` });
-    chart.append(svg('title', {}, `${s.name}: 보고된 관측점과 범위`));
-    const values = obs.flatMap(o => [o.value_min, o.value_max === null ? o.value_min : o.value_max]);
-    const min = Math.min(...values), max = Math.max(...values);
-    const top = max + Math.max(1, (max - min) * 0.18);
-    const times = obs.map(quarterPosition), first = Math.min(...times), last = Math.max(...times);
-    const x = t => first === last ? 330 : 70 + (t - first) / (last - first) * 450;
-    const y = v => 230 - v / top * 180;
-    [0, top / 2, top].forEach(v => {
-      chart.append(svg('line', { x1: 65, x2: 570, y1: y(v), y2: y(v), class: 'iv-grid' }), svg('text', { x: 57, y: y(v) + 4, 'text-anchor': 'end', class: 'iv-axis' }, fmt(v)));
+  function graph(rows, s, detail, mode, scale) {
+    const wrap = el('div', null, 'iv-chart'), width = Math.max(560, rows.length * 68 + 90), height = 300;
+    const chart = svg('svg', { viewBox: `0 0 ${width} ${height}`, width, height, role: 'group', 'aria-label': `${s.name} · ${mode === 'level' ? '분기 재고 주수' : '전분기 대비 변화율'} · 누락 분기는 공백` });
+    chart.style.width = `${width}px`;
+    chart.append(svg('title', {}, `${s.name}: 분기별 ${mode === 'level' ? '재고 주수와 보고 범위' : '변화율'}`));
+    const left = 58, right = width - 28, top = 28, bottom = 230;
+    const step = (right - left) / rows.length, x = i => left + step * (i + .5);
+    const values = mode === 'level' ? rows.flatMap(r => r.items.flatMap(o => [o.value_min, o.value_max ?? o.value_min])) : rows.flatMap(r => r.change ? [r.change.lowerPct, r.change.upperPct].filter(v => v !== null) : []);
+    const min = values.length ? Math.min(...values) : 0, max = values.length ? Math.max(...values) : 1;
+    let low, high;
+    if (mode === 'change') { const extent = Math.max(5, Math.abs(min), Math.abs(max)) * 1.15; low = -extent; high = extent; }
+    else { const padding = Math.max(1, (max - min) * .2); low = scale === 'focus' ? Math.max(0, min - padding) : 0; high = max + padding; }
+    const y = v => bottom - (v - low) / (high - low) * (bottom - top);
+    const count = rows.filter(r => r.items.length).length;
+    [0, 1, 2, 3, 4].forEach(i => {
+      const value = low + (high - low) * i / 4;
+      chart.append(svg('line', { x1: left, x2: right, y1: y(value), y2: y(value), class: mode === 'change' && i === 2 ? 'iv-zero' : 'iv-grid' }), svg('text', { x: left - 9, y: y(value) + 4, 'text-anchor': 'end', class: 'iv-axis' }, fmt(value)));
     });
-    chart.append(svg('text', { x: 65, y: 20, class: 'iv-axis' }, s.metric === 'financial_dio_proxy' ? '계산값 (주)' : '주 단위 값'));
-    const quarters = [...new Set(obs.map(o => o.quarter))].sort();
-    const stride = Math.max(1, Math.ceil(quarters.length / 5));
-    const ticks=quarters.map((q,i)=>i).filter(i=>i%stride===0);if(ticks.at(-1)!==quarters.length-1){if(quarters.length-1-ticks.at(-1)<stride)ticks.pop();ticks.push(quarters.length-1);}
-    quarters.forEach((q, i) => {
-      if (!ticks.includes(i)) return;
-      const o = obs.find(v => v.quarter === q);
-      chart.append(svg('text', { x: x(quarterPosition(o)), y: 257, 'text-anchor': 'middle', class: 'iv-axis' }, periodLabel(o,s)));
-    });
-    chart.append(svg('text', { x: 65, y: 287, class: 'iv-axis' }, `관측 경계 최솟값 ${fmt(min)}주 · 최댓값 ${fmt(max)}주`));
-    obs.forEach(o => {
-      const px = x(quarterPosition(o)), low = y(o.value_min), high = y(o.value_max === null ? o.value_min : o.value_max);
-      const g = svg('g', { tabindex: '0', role: 'button', 'aria-label': `${periodLabel(o,s)}, ${bound(o)}. 상세 및 출처 보기`, class: 'iv-mark' });
-      const title = `${periodLabel(o,s)} · ${bound(o)} · 종료 ${o.period_end || '미제공'} · 기준일 ${o.as_of || '미제공'}`;
-      g.append(svg('title', {}, title), svg('rect', { x: px - 13, y: Math.min(high, low) - 18, width: 26, height: Math.abs(low - high) + 36, class: 'iv-hit' }));
-      if (o.value_max !== null && o.value_max !== o.value_min) {
-        g.append(svg('line', { x1: px, x2: px, y1: low, y2: high, class: 'iv-whisker' }), svg('line', { x1: px - 6, x2: px + 6, y1: low, y2: low, class: 'iv-whisker' }));
-        g.append(svg('circle', { cx: px, cy: high, r: 4, class: o.upper_open ? 'iv-open' : 'iv-dot' }));
-      } else {
-        g.append(svg('circle', { cx: px, cy: low, r: 5, class: (['more_than', 'less_than', 'about'].includes(o.qualifier) || o.upper_open) ? 'iv-open' : 'iv-dot' }));
+    chart.append(svg('text', { x: left, y: 15, class: 'iv-axis' }, mode === 'change' ? '전분기 대비 % · 증가 / 감소' : `${s.metric === 'financial_dio_proxy' ? '재무 계산값' : '재고'} (주)`));
+    rows.forEach((row, i) => {
+      if (!row.items.length) {
+        chart.append(svg('rect', { x: x(i) - step * .38, y: top, width: step * .76, height: bottom - top, rx: 5, class: 'iv-gap' }));
+        chart.append(svg('text', { x: x(i), y: top + 18, 'text-anchor': 'middle', class: 'iv-axis iv-gap-label' }, '자료 없음'));
       }
-      const symbol = { at_least: '≥', more_than: '>', less_than: '<', at_most: '≤', about: '≈' }[o.qualifier];
-      if (symbol) g.append(svg('text', { x: px + 9, y: low - 7, class: 'iv-bound' }, symbol));
-      const show = () => detail.replaceChildren(evidence(o, s));
-      g.addEventListener('mouseenter', show); g.addEventListener('focus', show); g.addEventListener('click', show);
-      g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(); } });
-      chart.append(g);
+      const firstOfYear = row.quarter.endsWith('Q1') || i === 0;
+      chart.append(svg('text', { x: x(i), y: 253, 'text-anchor': 'middle', class: 'iv-axis' }, row.quarter.split('-')[1]));
+      if (firstOfYear) chart.append(svg('text', { x: x(i), y: 275, 'text-anchor': 'middle', class: 'iv-year' }, `${s.calendar === 'fiscal' ? 'FY ' : ''}${row.quarter.slice(0, 4)}`));
+      if (mode === 'level' && i && row.comparable) {
+        const a = rows[i - 1].items[0], b = row.items[0];
+        const upperA = closedUpper(a), upperB = closedUpper(b);
+        if (upperA !== null && upperB !== null) chart.append(svg('path', { d: `M ${x(i-1)} ${y(a.value_min)} L ${x(i)} ${y(b.value_min)} L ${x(i)} ${y(upperB)} L ${x(i-1)} ${y(upperA)} Z`, class: 'iv-band' }));
+        chart.append(svg('line', { x1: x(i-1), x2: x(i), y1: y(a.value_min), y2: y(b.value_min), class: 'iv-trend' }));
+        if (upperA !== null && upperB !== null && (upperA !== a.value_min || upperB !== b.value_min)) chart.append(svg('line', { x1: x(i-1), x2: x(i), y1: y(upperA), y2: y(upperB), class: 'iv-trend iv-upper-line' }));
+      }
     });
-    const scroll=el('div',null,'iv-plot-scroll');scroll.setAttribute('tabindex','0');scroll.setAttribute('role','region');scroll.setAttribute('aria-label','분기 그래프 · 좌우로 이동 가능');scroll.append(chart);
-    wrap.append(scroll, el('p', obs.length === 1 ? '단일 관측치 1건입니다. 추세를 뜻하지 않습니다.' : `${obs.length}개 분기 자료 · 연결선·보간 없음 · 누락 분기 채우지 않음`, 'iv-caption'));
-    wrap.append(el('p', '범위는 경계와 수직선으로 표시하며 중간값은 생성하지 않습니다. ≥ / > / ≤ / < / ≈는 원문의 한계·근삿값입니다. 경계 최댓값은 미만·이상 자료의 확정 재고 최댓값이 아닙니다. 분기 위치는 종료일 우선이며, 종료일이 없으면 분기만 사용합니다. 표에서 정확한 날짜를 확인하세요. 작은 화면의 그래프는 좌우로 움직일 수 있습니다.', 'iv-caption'));
+    rows.forEach((row, i) => {
+      const show = o => {
+        detail.replaceChildren();
+        const headline = el('div', null, 'iv-point-head');
+        headline.append(el('strong', `${periodLabel(o, s)} · ${bound(o)}`), el('span', timingLabel(o, s), 'iv-caption'));
+        detail.append(headline, changeDetails(row, s));
+        const raw = el('details'); raw.append(el('summary', '원문·계산 근거 보기'), evidence(o, s)); detail.append(raw);
+        chart.querySelectorAll('.iv-mark').forEach(mark => mark.classList.toggle('iv-active', mark.dataset.observation === o.id));
+      };
+      if (!row.items.length) return;
+      if (mode === 'change' && (!row.change || (row.change.lowerPct === null && row.change.upperPct === null))) {
+        chart.append(svg('text', { x: x(i), y: y(0) - 8, 'text-anchor': 'middle', class: 'iv-axis' }, '—'));
+      }
+      row.items.forEach((o, j) => {
+        const px = x(i) + (j - (row.items.length - 1) / 2) * 12;
+        const g = svg('g', { tabindex: '0', role: 'button', 'aria-label': `${periodLabel(o,s)}, ${bound(o)}, ${mode === 'change' ? changeText(row) : timingLabel(o,s)}. 상세 및 출처 보기`, class: 'iv-mark', 'data-observation': o.id });
+        g.append(svg('title', {}, `${periodLabel(o,s)} · ${bound(o)} · ${row.change ? changeText(row) : row.reason} · ${timingLabel(o,s)}`));
+        g.append(svg('rect', { x: px - 21, y: top - 6, width: 42, height: bottom - top + 14, rx: 5, class: 'iv-hit' }));
+        if (mode === 'level') {
+          const ly = y(o.value_min), uy = y(o.value_max ?? o.value_min), upper = o.value_max;
+          if (upper !== null && upper !== o.value_min) {
+            g.append(svg('line', { x1: px, x2: px, y1: ly, y2: uy, class: 'iv-whisker' }));
+            g.append(svg('circle', { cx: px, cy: uy, r: 4, class: o.upper_open ? 'iv-open' : 'iv-dot iv-upper-dot' }));
+          }
+          g.append(svg('circle', { cx: px, cy: ly, r: 4.5, class: !pointValue(o) || o.qualifier === 'about' ? 'iv-open' : 'iv-dot' }));
+          const symbol = { at_least: '≥', more_than: '>', less_than: '<', at_most: '≤', about: '≈' }[o.qualifier];
+          if (symbol) g.append(svg('text', { x: px + 7, y: ly - 7, class: 'iv-bound' }, symbol));
+          if (o.upper_open) g.append(svg('text', { x: px + 7, y: uy - 6, class: 'iv-bound' }, '+'));
+          if (i === rows.length - 1) g.append(svg('text', { x: px, y: Math.min(ly, uy) - 13, 'text-anchor': 'middle', class: 'iv-last-label' }, bound(o)));
+        } else if (row.change) {
+          const entries = row.change.single ? [['값', row.change.lowerPct]] : [['하단', row.change.lowerPct], ['상단', row.change.upperPct]];
+          entries.forEach(([endpoint, value], k) => {
+            if (value === null) return;
+            const bx = px + (entries.length === 1 ? -9 : k === 0 ? -17 : 2), yy = y(value), zero = y(0);
+            const bar = svg('rect', { x: bx, y: value === 0 ? zero - 1 : Math.min(yy, zero), width: entries.length === 1 ? 18 : 14, height: Math.max(2, Math.abs(yy - zero)), rx: 2, class: `iv-bar ${value === 0 ? 'iv-unchanged' : value > 0 ? 'iv-rise' : 'iv-fall'}${k === 1 ? ' iv-upper-bar' : ''}` });
+            bar.append(svg('title', {}, `${endpoint} ${signed(value)}`)); g.append(bar);
+          });
+        }
+        g.addEventListener('mouseenter', () => show(o)); g.addEventListener('focus', () => show(o)); g.addEventListener('click', () => show(o));
+        g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(o); } });
+        chart.append(g);
+      });
+    });
+    const scroll = el('div', null, 'iv-plot-scroll'); scroll.setAttribute('tabindex', '0'); scroll.setAttribute('role', 'region'); scroll.setAttribute('aria-label', '분기 그래프 · 모든 분기를 순서대로 표시 · 좌우 이동 가능'); scroll.append(chart);
+    const legend = el('div', null, 'iv-legend');
+    if (mode === 'level') legend.append(el('span', '● 하단 / 단일값', 'iv-legend-lower'), el('span', '● 상단 · 음영은 보고 범위', 'iv-legend-upper'));
+    else legend.append(el('span', '▮ 증가', 'iv-legend-rise'), el('span', '▮ 감소', 'iv-legend-fall'), el('span', '채움=하단 / 단일값 · 윤곽=상단', 'iv-caption'));
+    wrap.append(scroll, legend, el('p', `${count}/${rows.length}개 분기 관측 · 누락 ${rows.length - count}분기 · ${s.calendar === 'fiscal' ? 'FY 회계분기' : '달력분기'}${mode === 'level' && scale === 'focus' ? ` · 변화 강조 축 ${fmt(low)}–${fmt(high)}주` : ''}`, 'iv-caption'));
+    if (mode === 'change') wrap.append(el('p', '0선 위는 증가, 아래는 감소입니다. 재고 증감은 그 자체로 수급의 좋고 나쁨을 뜻하지 않습니다.', 'iv-caption'));
     return wrap;
+  }
+  function seriesDashboard(obs, s) {
+    const rows = quarterly(obs, s), dashboard = el('div', null, 'iv-dashboard'), latest = rows.at(-1);
+    const kpis = el('div', null, 'iv-kpis');
+    const card = (label, value, note, cls = '') => { const n = el('div', null, `iv-kpi ${cls}`); n.append(el('span', label), el('strong', value), el('small', note)); return n; };
+    kpis.append(card('최근 관측', latest.items.length === 1 ? bound(latest.items[0]) : `${latest.items.length}건`, `${s.calendar === 'fiscal' ? 'FY ' : ''}${latest.quarter}${latest.items.length === 1 ? ` · ${timingLabel(latest.items[0], s)}` : ' · 동일 분기 복수 관측'}`));
+    const delta = latest.change && latest.change.single ? latest.change.lowerPct : null;
+    kpis.append(card('최근 전분기 대비', changeText(latest), latest.change ? `증감 ${changeText(latest, true)}${latest.change.reference ? ' · 측정시점 미확인' : ''}` : latest.reason, delta === null ? '' : delta > 0 ? 'iv-kpi-rise' : delta < 0 ? 'iv-kpi-fall' : ''));
+    kpis.append(card('분기 관측률', `${rows.filter(r => r.items.length).length} / ${rows.length}`, `${rows[0].quarter} → ${latest.quarter} · ${rows.filter(r => !r.items.length).length}개 분기 공백`));
+    dashboard.append(kpis);
+    const toolbar = el('div', null, 'iv-chart-tools'), modes = el('div', null, 'iv-mode'); modes.setAttribute('role', 'group'); modes.setAttribute('aria-label', '재고 그래프 표현');
+    const levelButton = el('button', '재고 주수'), changeButton = el('button', '전분기 대비 %');
+    levelButton.type = changeButton.type = 'button'; modes.append(levelButton, changeButton);
+    const spanLabel = el('label', '표시 기간'), span = el('select'); span.setAttribute('aria-label', `${s.entity} 재고 표시 기간`);
+    [['all', '전체 분기'], ['12', '최근 12분기']].forEach(([value, label]) => { const option = el('option', label); option.value = value; span.append(option); }); spanLabel.append(span);
+    const scaleLabel = el('label', '세로축'), scaleSelect = el('select'); scaleSelect.setAttribute('aria-label', `${s.entity} 재고 세로축`);
+    [['focus', '변화 강조'], ['zero', '0부터 보기']].forEach(([value, label]) => { const option = el('option', label); option.value = value; scaleSelect.append(option); }); scaleLabel.append(scaleSelect);
+    toolbar.append(modes, spanLabel, scaleLabel); dashboard.append(toolbar);
+    const plot = el('div'), detail = el('div', null, 'iv-detail'); detail.setAttribute('aria-live', 'polite');
+    let mode = 'level';
+    const draw = () => {
+      levelButton.setAttribute('aria-pressed', String(mode === 'level')); changeButton.setAttribute('aria-pressed', String(mode === 'change')); scaleLabel.hidden = mode !== 'level';
+      const visible = span.value === '12' ? rows.slice(-12) : rows;
+      plot.replaceChildren(graph(visible, s, detail, mode, scaleSelect.value));
+      requestAnimationFrame(() => { const scroll = plot.querySelector('.iv-plot-scroll'); if (scroll) scroll.scrollLeft = scroll.scrollWidth; });
+      detail.replaceChildren();
+      const o = latest.items.at(-1), head = el('div', null, 'iv-point-head'); head.append(el('strong', `${periodLabel(o,s)} · ${bound(o)}`), el('span', timingLabel(o,s), 'iv-caption'));
+      detail.append(head, changeDetails(latest, s));
+      const raw = el('details'); raw.append(el('summary', '원문·계산 근거 보기'), evidence(o,s)); detail.append(raw);
+    };
+    levelButton.addEventListener('click', () => { mode = 'level'; draw(); }); changeButton.addEventListener('click', () => { mode = 'change'; draw(); });
+    span.addEventListener('change', draw); scaleSelect.addEventListener('change', draw);
+    dashboard.append(plot, el('p', '그래프를 좌우로 이동해 전체 분기를 확인하세요. 관측점을 선택하면 해당 분기 값과 변화율, 원문 근거가 표시됩니다.', 'iv-caption'), detail);
+    const notes = el('details', null, 'iv-chart-notes'); notes.append(el('summary', '분기 비교 방법'), el('p', '인접한 두 분기에 각각 한 관측이 있고 계열·출처·측정 기준이 같을 때만 연결하고 전분기 변화율을 계산합니다. 정확한 측정일이 미확인인 동일 분기 표는 참고 비교로 표시합니다. 분기 초/말 변경, 복수 관측, 누락 분기는 연결하지 않습니다. 범위 하단과 상단을 각각 계산하며 중간값·보간·누락값 대입은 하지 않습니다. 미만·이상 경계는 변화율을 계산하지 않으며 열린 상단은 상단 변화율을 비웁니다. 근삿값 여부와 FY 표기는 유지합니다.'));
+    dashboard.append(notes);
+    const rawTable = el('details', null, 'iv-raw-table'); rawTable.append(el('summary', `관측 원장 · ${obs.length}건`), table(obs, s)); dashboard.append(rawTable); draw();
+    return dashboard;
   }
   function table(obs, s) {
     const wrap = el('div', null, 'iv-table-wrap');
@@ -189,12 +339,10 @@
       content.append(el('p', metricLabel(s), 'iv-badge'));
       if(s.evidence_tier === 'secondary') content.append(el('p','LS증권 재인용 · TrendForce 원자료 별도 미확인','iv-secondary'));
       if (companywide(s)) content.append(el('p', '기업 전체 참고 · 제품별 재고 아님', 'iv-warning'));
-      content.append(el('p', `역할: ${s.role === 'channel' ? '유통 채널 (channel)' : s.role === 'customer' ? '고객 (customer)' : '제조사 (manufacturer)'} · ${s.entity} · 범위: ${s.scope || '미상'}`), el('p', s.method_ko), el('p', s.note, 'iv-caption'));
+      const method = el('details', null, 'iv-series-method'); method.append(el('summary', `${s.entity} · 범위와 측정 방법`), el('p', `역할: ${s.role === 'channel' ? '유통 채널' : s.role === 'customer' ? '고객' : '제조사'} · 범위: ${s.scope || '미상'}`), el('p', s.method_ko), el('p', s.note, 'iv-caption')); content.append(method);
       const obs = data.observations.filter(o => o.series_id === s.id).sort((a, b) => quarterPosition(a) - quarterPosition(b));
       if (!obs.length) { content.append(el('p', '이 시리즈에는 수치 관측치가 없습니다.', 'iv-empty')); return; }
-      const detail = el('div', null, 'iv-detail');
-      detail.append(evidence(obs[obs.length-1], s));
-      content.append(graph(obs, s, detail), el('p', '점을 가리키거나 키보드로 선택하면 아래 근거가 바뀝니다.', 'iv-caption'), detail, table(obs, s));
+      content.append(seriesDashboard(obs, s));
     }
     select.addEventListener('change', renderSeries); renderSeries(); return panel;
   }
@@ -204,10 +352,10 @@
     return '"' + text.replace(/"/g, '""') + '"';
   };
   function csvText() {
-    const headers = ['id', 'series_id', 'product_id', 'product_name', 'entity', 'series_name', 'role', 'scope', 'scope_level', 'calendar', 'evidence_tier', 'metric', 'method_ko', 'series_note', 'quarter', 'period_label', 'period_start', 'period_end', 'as_of', 'value_min', 'value_max', 'qualifier', 'upper_open', 'raw_value_min', 'raw_value_max', 'raw_unit', 'conversion', 'narrative_ko', 'inputs', 'source_id', 'source_ids', 'source_urls', 'period_end_source_url', 'publisher', 'title', 'url', 'published_at', 'locator'];
+    const headers = ['id', 'series_id', 'product_id', 'product_name', 'entity', 'series_name', 'role', 'scope', 'scope_level', 'calendar', 'evidence_tier', 'metric', 'method_ko', 'series_note', 'quarter', 'period_label', 'period_start', 'period_end', 'as_of', 'observation_timing', 'observation_timing_display', 'measure_type', 'value_min', 'value_max', 'qualifier', 'upper_open', 'raw_value_min', 'raw_value_max', 'raw_unit', 'conversion', 'narrative_ko', 'inputs', 'source_id', 'source_ids', 'source_urls', 'period_end_source_url', 'publisher', 'title', 'url', 'published_at', 'locator'];
     const rows = data.observations.map(o => {
       const s = data.series.find(v => v.id === o.series_id), source = data.sources.find(v => v.id === o.source_id), p = data.products.find(v => v.id === s.product_id);
-      const row = { ...source, ...s, ...o, series_name: s.name, series_note: s.note, product_name: p.name, inputs: o.inputs ? JSON.stringify(o.inputs) : '', evidence_tier:o.evidence_tier || s.evidence_tier || 'primary', source_ids:JSON.stringify(o.source_ids || [o.source_id]), source_urls:JSON.stringify((o.source_ids || [o.source_id]).map(id=>safeURL(data.sources.find(v=>v.id===id).url))), upper_open: o.upper_open === true, url: safeURL(source.url) || '' };
+      const row = { ...source, ...s, ...o, series_name: s.name, series_note: s.note, product_name: p.name, observation_timing_display:timingLabel(o,s), inputs: o.inputs ? JSON.stringify(o.inputs) : '', evidence_tier:o.evidence_tier || s.evidence_tier || 'primary', source_ids:JSON.stringify(o.source_ids || [o.source_id]), source_urls:JSON.stringify((o.source_ids || [o.source_id]).map(id=>safeURL(data.sources.find(v=>v.id===id).url))), upper_open: o.upper_open === true, url: safeURL(source.url) || '' };
       return headers.map(k => csvCell(row[k])).join(',');
     });
     return '\uFEFF' + [headers.map(csvCell).join(','), ...rows].join('\r\n');
@@ -215,12 +363,12 @@
   function render() {
     mount.replaceChildren();
     const header = el('header', null, 'iv-header');
-    header.append(el('p', 'ENSEMBLE / INVENTORY EVIDENCE', 'iv-eyebrow'), el('h2', '분기별 재고 주수'), el('p', data.intro_ko), el('p', `자료 갱신: ${data.updated_at}`, 'iv-caption'));
+    header.append(el('p', 'ENSEMBLE / INVENTORY EVIDENCE', 'iv-eyebrow'), el('h2', '재고, 분기마다 얼마나 변했나'), el('p', data.intro_ko), el('p', `자료 갱신: ${data.updated_at}`, 'iv-caption'));
     const summary = el('div', null, 'iv-summary');
     summary.append(el('strong', `출처 연결 관측치 ${data.observations.length}건`), el('span', `비교 계열 ${data.series.length}개`), el('span', '기업 전체 재무 참고 포함 · 제품 전체 커버리지 아님'));
     const updatesLink=el('a','발간별 한국어 재고 업데이트');updatesLink.href=new URL('inventory-updates.md',scriptURL).href;updatesLink.target='_blank';updatesLink.rel='noopener noreferrer';header.append(summary,updatesLink);mount.append(header);
     const method = el('details', null, 'iv-method'); method.append(el('summary', '방법론과 지표 구분'));
-    method.append(el('p', '납기는 주문~인도, 재고 주수는 보유재고의 소진기간으로 서로 다른 지표입니다. DIO 주수는 재무 회전기간이며 제품 물량 기반 재고 주수와 구분합니다.'), el('p', '직접 보고 제품 재고 주수, 제품별·전사 보고 재고일수 환산, 계산된 전사 재무 참고를 구분합니다. 기업 전체 지표의 제조사·고객 역할은 발행사의 공급 관계 문맥이며 제품별 재고 근거가 아닙니다. 미상 범위와 집계 고객은 원문대로 유지합니다.'), el('p', '각 계열의 달력분기 또는 FY 회계분기를 보존합니다. 분기 중 관측일(as_of)이 분기 말과 다를 수 있습니다. 같은 series_id 안에서만 확인하며 시리즈 간 연결·평균·보간·추정·전망을 생성하지 않습니다. 환산값은 제공 데이터를 사용하고 화면은 최대 소수 둘째 자리로 표시합니다.'));
+    method.append(el('p', '납기는 주문~인도, 재고 주수는 보유재고의 소진기간으로 서로 다른 지표입니다. DIO 주수는 재무 회전기간이며 제품 물량 기반 재고 주수와 구분합니다.'), el('p', '직접 보고 제품 재고 주수, 제품별·전사 보고 재고일수 환산, 계산된 전사 재무 참고를 구분합니다. 기업 전체 지표의 제조사·고객 역할은 발행사의 공급 관계 문맥이며 제품별 재고 근거가 아닙니다. 미상 범위와 집계 고객은 원문대로 유지합니다.'), el('p', '각 계열의 달력분기 또는 FY 회계분기를 보존합니다. 동일 계열·출처·측정 기준의 인접 분기만 비교합니다. 분기 초·중·말과 측정시점 미확인을 구분합니다. 원문 범위의 하단과 상단은 각각 계산하며 누락 분기·측정 기준 변경은 그래프의 공백으로 남깁니다. 환산값은 제공 데이터를 사용하고 화면은 최대 소수 둘째 자리로 표시합니다.'));
     mount.append(method);
     const controls = el('div', null, 'iv-controls'), searchLabel = el('label', '제품 검색'), search = el('input');
     search.type = 'search'; search.placeholder = '제품명 또는 메모'; search.value = query;

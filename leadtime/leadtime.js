@@ -38,7 +38,7 @@
     const latest = ordered(data.sources.filter(s => s.published_at)).at(-1);
     root.replaceChildren();
     const header = add(el('header', 'lt-header'), el('p', 'lt-eyebrow', 'ENSEMBLE / SUPPLY RESEARCH'), el('h1', '', '공급망 리드타임·재고'), el('p', 'lt-intro', data.intro_ko || '공개된 발행 자료에서 확인한 부품별 리드타임과 수급 상태입니다.'));
-    add(header, add(el('div', 'lt-stats'), el('span', '', `리드타임 최근 발행일 ${latest ? date(latest.published_at) : '미확인'}`), el('span', '', `리드타임 관측 ${data.observations.length}건`), el('span', '', `리드타임 갱신 ${date(data.updated_at)}`)), el('p', 'lt-notice', '확인된 과거 납기와 변화율입니다. 동일 계열 비교와 여러 출처의 참고 비교를 구분해 볼 수 있습니다.'));
+    add(header, add(el('div', 'lt-stats'), el('span', '', `리드타임 최근 발행일 ${latest ? date(latest.published_at) : '미확인'}`), el('span', '', `리드타임 관측 ${data.observations.length}건`), el('span', '', `리드타임 갱신 ${date(data.updated_at)}`)), el('p', 'lt-notice', '분기별 납기·재고와 변화율을 비교합니다. 분기 내 마지막 확인값을 사용하며 원문 날짜와 출처를 함께 제공합니다.'));
     root.append(header);
     const views = el('div','lt-view-tabs');
     const leadButton=el('button','','리드타임'), inventoryButton=el('button','','분기 재고 주수');
@@ -52,9 +52,10 @@
     leadButton.onclick=()=>selectView(false);inventoryButton.onclick=()=>selectView(true);
 
     const trendRoot=el('section');trendRoot.id='leadtime-trends-root';leadView.append(trendRoot);
+    const quarterlyDownload=el('a','lt-update-link','전체 계열 분기 데이터 CSV');quarterlyDownload.href=new URL('quarterly.csv',dataURL);quarterlyDownload.download='ensemble-leadtime-quarterly.csv';leadView.append(quarterlyDownload);
     const trendCss=el('link');trendCss.rel='stylesheet';trendCss.href=new URL('trends.css',dataURL);document.head.append(trendCss);
     const trendJs=el('script');trendJs.src=new URL('trends.js',dataURL);trendJs.onerror=()=>{trendRoot.textContent='장기 시계열을 불러오지 못했습니다. 새로고침해 주세요.';};document.body.append(trendJs);
-    const overview = el('section', 'lt-section');
+    const overview = el('details', 'lt-section lt-supporting'); overview.append(el('summary', '', '발간호별 원문·한국어 업데이트'));
     overview.append(heading('발행 호별 핵심 부품', '기본 선택: 가장 최근 TrendForce 발행 호 · 균형 범위는 원문 제공값만 표시'));
     const picker = el('select'); picker.id = 'lt-release'; picker.setAttribute('aria-label', '발행 호 선택');
     if (!initial) add(picker, el('option', '', 'TrendForce 발행 호 없음'));
@@ -84,37 +85,7 @@
       (release.source_ids || []).forEach(id => { const s = sourceMap.get(id); if (s) add(update, add(el('p'), link(`${s.publisher} · ${s.title}`, s.url))); }); edition.append(update);
     }
     picker.addEventListener('change', showEdition); showEdition(); leadView.append(overview);
-    const history = el('section', 'lt-section'); history.append(heading('전체 발행 이력', '한 시리즈의 실제 관측만 표시합니다. 점은 단일값, 세로 막대는 범위이며 누락 기간은 보간하지 않습니다.'));
-    const search = el('input'); search.type = 'search'; search.id = 'lt-search'; search.placeholder = '부품, 이름, 공급처, 범위 검색';
-    const seriesPicker = el('select'); seriesPicker.id = 'lt-series';
-    const controls = el('div', 'lt-controls'); const searchLabel = el('label', '', '시리즈 검색'); searchLabel.htmlFor = search.id; const seriesLabel = el('label', '', '비교할 시리즈'); seriesLabel.htmlFor = seriesPicker.id;
-    add(controls, add(el('div', 'lt-control'), searchLabel, search), add(el('div', 'lt-control'), seriesLabel, seriesPicker));
-    const chartArea = el('div'); add(history, controls, chartArea); leadView.append(history);
-    function filterSeries() {
-      const previous = seriesPicker.value; seriesPicker.replaceChildren(); const q = search.value.trim().toLocaleLowerCase();
-      data.series.filter(s => [s.component, s.name, s.publisher, s.scope, s.unit].join(' ').toLocaleLowerCase().includes(q)).forEach(s => { const option = el('option', '', `${s.component} · ${s.name} · ${s.publisher} · ${s.scope} · ${unitLabel[s.unit] || s.unit}`); option.value = s.id; seriesPicker.append(option); });
-      if ([...seriesPicker.options].some(o => o.value === previous)) seriesPicker.value = previous;
-      showHistory();
-    }
-    function showHistory() {
-      chartArea.replaceChildren(); const s = seriesMap.get(seriesPicker.value); if (!s) { chartArea.append(el('p', 'lt-empty', '조건에 맞는 시리즈가 없습니다.')); return; }
-      const dateOf = o => s.axis === 'observation' || s.axis === 'edition' ? o.as_of : sourceOf(o).published_at;
-      const axisLabel = s.axis === 'edition' ? '발간호 분기' : s.axis === 'observation' ? '자료 기준 분기' : '발간일';
-      if(s.axis === 'edition') chartArea.append(el('p','lt-notice','가로축은 표지의 발간호 분기입니다. 정확한 발간일·조사일은 미확인이며 분기말 실측을 뜻하지 않습니다.'));
-      const rows = data.observations.filter(o => o.series_id === s.id).sort((a,b)=>clean(dateOf(a)).localeCompare(clean(dateOf(b))) || clean(a.id).localeCompare(clean(b.id)));
-      if(s.axis === 'observation') chartArea.append(el('p','lt-notice','단일 보고서의 과거 분기 이력입니다. 가로축은 발간일이 아닌 자료 기준 분기입니다.'));
-      add(chartArea, el('h3', '', s.name), el('p', 'lt-meta', `${s.component} · ${s.publisher} · ${s.scope} · 단위 ${unitLabel[s.unit] || s.unit} · 발행 주기 ${s.cadence || '미확인'}`), el('p', 'lt-count', rows.length === 1 ? '첫 관측 · 이력 1건 (제공된 데이터 기준)' : `관측 ${rows.length}건`));
-      if (!rows.length) { chartArea.append(el('p', 'lt-empty', '아직 확인된 관측이 없습니다.')); return; }
-      const facts = el('div', 'lt-facts'); facts.setAttribute('aria-live', 'polite');
-      const showFact = o => { const src = sourceOf(o); facts.replaceChildren(el('strong', '', `발행 ${date(src.published_at)} · ${bounds(o, s.unit)}`), el('p', 'lt-meta', `기준 ${date(o.as_of)} · ${statusLabel[o.status] || '상태 미확인'} · 균형 ${balanced(o, s.unit)}`), el('p', '', o.narrative_ko || '상세 설명 미제공'), link(`${src.publisher || s.publisher} · ${src.title || '출처 미확인'}`, src.url)); };
-      const plotRows = rows.filter(o => finite(o.value_min) && Number.isFinite(periodStamp(dateOf(o))));
-      if (plotRows.length) chartArea.append(historySVG(plotRows, s.unit, sourceOf, showFact, dateOf, axisLabel, periodStamp));
-      if (plotRows.length !== rows.length) chartArea.append(el('p', 'lt-muted', '발행일 또는 수치가 미확인된 관측은 아래 표에만 표시됩니다.'));
-      add(chartArea, facts); showFact(rows.at(-1));
-      const details = el('details', 'lt-details'); details.open = true; add(details, el('summary', '', '관측 표 · 그래프와 동일한 자료'), observationTable(rows)); chartArea.append(details);
-    }
-    search.addEventListener('input', filterSeries); seriesPicker.addEventListener('change', showHistory); filterSeries();
-    const coverage = el('section', 'lt-section'); coverage.append(heading('관측 범위와 공백', '미확인 항목의 수급 상태나 전망을 추정하지 않습니다.'));
+    const coverage = el('details', 'lt-section lt-supporting'); coverage.append(el('summary', '', '제품별 자료 범위와 미확인 항목')); coverage.append(heading('관측 범위와 공백', '미확인 항목의 수급 상태나 전망을 추정하지 않습니다.'));
     const coverageGrid = el('div', 'lt-coverage');
     data.coverage.forEach(c => { const card = add(el('article', 'lt-coverage-card'), el('h3', '', c.component), el('p', 'lt-meta', c.status), el('p', '', c.note)); (c.source_urls || []).forEach((url, i) => add(card, link(`관련 출처 ${i + 1}`, url))); coverageGrid.append(card); });
     add(coverage, data.coverage.length ? coverageGrid : el('p', 'lt-empty', '관측 범위 안내가 아직 제공되지 않았습니다.')); leadView.append(coverage);
@@ -142,30 +113,5 @@
       if (finite(min)) { const hi = finite(upper) && (label === '균형' || o.qualifier === 'range') ? upper : min; svg.append(svgEl('line', { x1: x(min), x2: x(hi), y1: y, y2: y, class: cls, 'stroke-width': 7 })); svg.append(svgEl('circle', { cx: x(min), cy: y, r: 4, class: cls })); if (label === '관측' && (o.upper_open || ['at_least','more_than','less_than','at_most'].includes(o.qualifier))) svg.append(svgEl('text', { x: x(o.upper_open ? hi : min) + 7, y: y + 4 }, o.upper_open ? '→+' : ({at_least:'≥',more_than:'>',less_than:'<',at_most:'≤'}[o.qualifier]))); }
       else svg.append(svgEl('text', { x: 60, y: y + 4 }, '범위 미제공'));
     }); add(box, svg, el('p', 'lt-scale', `공통 눈금 0–${Number(max.toFixed(1))} ${unitLabel[unit] || unit}`)); return box;
-  }
-  function historySVG(rows, unit, sourceOf, select, dateOf, axisLabel, periodStamp) {
-    const width = Math.max(680, rows.length * 70 + 100), height = 340, left = 62, bottom = 260;
-    const stamps = rows.map(o => periodStamp(dateOf(o))); const lo = Math.min(...stamps), hi = Math.max(...stamps);
-    const max = Math.max(1, ...rows.flatMap(o => [o.value_min, o.qualifier === 'range' ? o.value_max : null]).filter(finite)) * 1.18;
-    const x = t => hi === lo ? width / 2 : left + 20 + (t - lo) / (hi - lo) * (width - left - 60); const y = v => bottom - v / max * 210;
-    const wrap = el('div', 'lt-chart-wrap'); wrap.tabIndex = 0; wrap.setAttribute('role', 'region'); wrap.setAttribute('aria-label', '발행일별 그래프. 관측을 탭 또는 클릭하면 상세 정보가 표시됩니다. 많은 관측은 가로 스크롤할 수 있습니다.');
-    const svg = svgEl('svg', { viewBox: `0 0 ${width} ${height}`, width, height, role: 'group', 'aria-label': `${axisLabel}별 리드타임, ${rows.length}건, 단위 ${unitLabel[unit] || unit}` });
-    svg.append(svgEl('text', { x: 8, y: 20 }, `리드타임 (${unitLabel[unit] || unit})`));
-    for (let i = 0; i <= 4; i++) { const v = max * i / 4; svg.append(svgEl('line', { x1: left, x2: width - 20, y1: y(v), y2: y(v), class: 'lt-grid' })); svg.append(svgEl('text', { x: left - 10, y: y(v) + 4, 'text-anchor': 'end' }, Number(v.toFixed(1)))); }
-    const uniqueDates = [...new Set(stamps)];
-    rows.forEach((o, i) => {
-      const cx = x(stamps[i]); const top = finite(o.value_max) && o.qualifier === 'range' ? o.value_max : o.value_min;
-      const description = `발행 ${date(sourceOf(o).published_at)}, 기준 ${date(o.as_of)}, ${bounds(o, unit)}`;
-      const g = svgEl('g', { tabindex: 0, role: 'button', 'aria-label': description, class: 'lt-point' });
-      g.append(svgEl('title', {}, description)); g.append(svgEl('rect', { x: cx - 13, y: Math.max(28, y(top) - 18), width: 26, height: Math.max(36, y(o.value_min) - y(top) + 36), fill: 'transparent' }));
-      if (top !== o.value_min) { g.append(svgEl('line', { x1: cx, x2: cx, y1: y(o.value_min), y2: y(top), class: 'lt-current', 'stroke-width': 5 })); (o.upper_open ? [o.value_min] : [top, o.value_min]).forEach(v => g.append(svgEl('line', { x1: cx - 7, x2: cx + 7, y1: y(v), y2: y(v), class: 'lt-current', 'stroke-width': 2 }))); }
-      else g.append(svgEl('circle', { cx, cy: y(o.value_min), r: 5, class: 'lt-current' }));
-      if (['about', 'at_least', 'more_than', 'less_than', 'at_most'].includes(o.qualifier) || o.upper_open || (o.qualifier === 'range' && !finite(o.value_max))) g.append(svgEl('text', { x: cx + 8, y: y(top) - 9 }, (o.upper_open ? '↑+' : { about: '약', at_least: '≥', more_than: '>', less_than: '<', at_most: '≤' }[o.qualifier]) || '상한 ?'));
-      g.addEventListener('mouseenter', () => select(o)); g.addEventListener('focus', () => select(o)); g.addEventListener('click', () => select(o)); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(o); } }); svg.append(g);
-    });
-    // Only actual publication dates label the time axis. Close dates stay available in point facts and the table.
-    let lastX = -Infinity;
-    uniqueDates.forEach((t, i) => { const cx = x(t); if (cx - lastX < 85 && i !== uniqueDates.length - 1) return; if (i === uniqueDates.length - 1 && cx - lastX < 75) return; lastX = cx; svg.append(svgEl('text', { x: cx, y: bottom + 24, 'text-anchor': 'middle' }, dateOf(rows[stamps.indexOf(t)]))); });
-    svg.append(svgEl('text', { x: width / 2, y: 320, 'text-anchor': 'middle' }, axisLabel + ' · 보고된 값만 표시')); svg.style.width = `${width}px`; svg.style.minWidth = '100%'; wrap.append(svg); return wrap;
   }
 })();
