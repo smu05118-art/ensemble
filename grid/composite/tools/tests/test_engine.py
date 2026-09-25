@@ -161,6 +161,44 @@ class EngineTest(unittest.TestCase):
         self.assertEqual(e['class'], 'lead', e)
         self.assertEqual(e['k_star'], 3)
 
+    def test_break_blocks_prior_point_yoy(self):
+        rows = [{'key': 'FY2019Q4', 'end_mi': bc.month_index('2019-12'), 'value': 100.0, 'comparative': None, 'months': 3, 'currency': None},
+                {'key': 'FY2020Q4', 'end_mi': bc.month_index('2020-12'), 'value': 20.0, 'comparative': None, 'months': 3, 'currency': None},
+                {'key': 'FY2021Q4', 'end_mi': bc.month_index('2021-12'), 'value': 30.0, 'comparative': 25.0, 'months': 3, 'currency': None}]
+        brk = [{'date': '2020-01-01', 'type': 'divestiture'}]
+        yy = bc.target_yoy(rows, brk, 'revenue_segment')
+        self.assertNotIn(bc.month_index('2020-12'), yy)           # 매각을 가로지르는 YoY 는 만들지 않는다
+        self.assertIn(bc.month_index('2021-12'), yy)              # 같은 보고서 비교값이 있으면 그대로
+        brk2 = [{'date': '2020-01-01', 'type': 'divestiture', 'affects_target': False}]
+        self.assertIn(bc.month_index('2020-12'), bc.target_yoy(rows, brk2, 'revenue_segment'))
+        brk3 = [{'date': '2020-01-01', 'type': 'divestiture', 'target': 'revenue_total'}]
+        self.assertIn(bc.month_index('2020-12'), bc.target_yoy(rows, brk3, 'revenue_segment'))
+        brk4 = [{'date': '2019-01-01', 'type': 'acquisition', 'affected_fiscal_keys': ['FY2020Q4']}]
+        self.assertNotIn(bc.month_index('2020-12'), bc.target_yoy(rows, brk4, 'revenue_segment'))
+
+    def test_untested_class(self):
+        rows = [{'k': k, 'n': 5, 'r': None, 'p': None, 'signed_r': None} for k in bc.LAGS]
+        self.assertEqual(bc.classify(rows, 0.1)[0], 'untested')
+
+    def test_grade_counts_only_model_quarters(self):
+        y = {i * 3 + 2: 0.1 for i in range(30)}
+        base = bc.baselines(y, 3)
+        preds = {t: base[t]['last'] for t in base}
+        ev = bc.evaluate(y, preds, base, {t: True for t in base})
+        self.assertEqual(ev['n_model'], 0)
+        self.assertEqual(bc.grade(ev, 30)[0], 'N')
+
+    def test_sanil_proxy_excludes_target_aggregates(self):
+        cat = {k: {'obs': {1: 1.0}} for k in ('trass_kr_8504212', 'kr_exp_850422_p0', 'us_imp_850422_p410',
+                                              'trass_kr_8504212_exansan', 'fred_IPG3353S', 'trass_sanil_ansan_850421')}
+        peer = {'id': 'SANIL_PROXY', 'region': 'Korea'}
+        doc = {'profile': {'proxy_routes': [{'proxy_hint': 'us_imp_850422_p410'}, {'proxy_hint': 'trass_sanil_ansan_850421'}]}}
+        ids, roles, _, _ = bc.candidate_ids(peer, doc, cat)
+        for bad in ('trass_kr_8504212', 'kr_exp_850422_p0', 'us_imp_850422_p410', 'trass_sanil_ansan_850421'):
+            self.assertNotIn(bad, ids)
+        self.assertIn('trass_kr_8504212_exansan', ids)
+        self.assertIn('fred_IPG3353S', ids)
+
     def test_t_pvalue(self):
         self.assertAlmostEqual(sc.t_sf_two_sided(2.0, 10), 0.0734, places=3)
         self.assertAlmostEqual(sc.t_sf_two_sided(2.228, 10), 0.05, places=3)

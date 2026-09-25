@@ -1,892 +1,28 @@
 {
- "schema": "grid-composite-actuals/1",
- "id": "SU",
- "grid_node": "GRID_SCHNEIDER",
- "name": "Schneider Electric SE",
- "ticker": "SU FP",
- "listed": true,
- "currency": "EUR",
- "unit": "million",
  "accounting_basis": "IFRS",
- "fiscal_year_end_month": 12,
- "quarter_calendar": "calendar",
  "collected_at": "2026-09-25",
- "targets": {
-  "revenue_total": {
-   "label_ko": "연결 매출",
-   "scope": "consolidated",
-   "freq": "Q",
-   "primary": false,
-   "note": "2016Q1–Q3 = 발표 당시 값(Solar·Telvent DTN 포함), 2016Q4 이후 = 중단영업 재작성 기준. 2017 분기에는 재작성 전년 비교치 저장",
-   "points": [
-    {
-     "fiscal_key": "FY2016Q1",
-     "period_start": "2016-01-01",
-     "period_end": "2016-03-31",
-     "value": 5773.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2016/04/FCBWR092320_20160421.pdf",
-     "locator": "Schneider Q1 2016 revenues release (2016-04-21), p.1 table 'Q1 2016 € million Revenues', row 'Group' (as reported, incl. businesses later classified discontinued) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2016-04-21"
-    },
-    {
-     "fiscal_key": "FY2016Q2",
-     "period_start": "2016-04-01",
-     "period_end": "2016-06-30",
-     "value": 6207.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2016/07/FCBWR094607_20160728.pdf",
-     "locator": "Schneider H1 2016 results release (2016-07-28), p.9 appendix 'Second quarter 2016 revenues by business', row 'Group' (as reported) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2016-07-28"
-    },
-    {
-     "fiscal_key": "FY2016Q3",
-     "period_start": "2016-07-01",
-     "period_end": "2016-09-30",
-     "value": 6064.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2016/10/FCBWR096480_20161027.pdf",
-     "locator": "Schneider Q3 2016 revenues release (2016-10-27), p.1 table 'Q3 2016', row 'Group' (as reported) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2016-10-27"
-    },
-    {
-     "fiscal_key": "FY2016Q4",
-     "period_start": "2016-10-01",
-     "period_end": "2016-12-31",
-     "value": 6702.0,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/02/FCECO045916_20180215.pdf",
-     "locator": "FY2016 restated revenue 24,459 (FY2017 consolidated accounts p.21 note 3.1 'Full year 2016*', restated for Solar discontinued ops) minus 9M 2016 restated 17,757 (Q3 2017 release p.7 'Appendix – Revenues breakdown with Year-to-date 2016 restated', https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf). RESTATED basis (excl. Solar), unlike 2016Q1–Q3 as-reported values; FY2016 original press release not found in OAM.",
-     "published_date": "2018-02-15"
-    },
-    {
-     "fiscal_key": "FY2017Q1",
-     "period_start": "2017-01-01",
-     "period_end": "2017-03-31",
-     "value": 5840.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/04/FCECO043041_20170420.pdf",
-     "locator": "Schneider Q1 2017 revenues release (2017-04-20), p.6 appendix table 'Q1 2016 / Q1 2017', row 'Group' (Q1 2016 restated for discontinued operations = 5,589) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "prior_year_comparative": 5589.0,
-     "published_date": "2017-04-20"
-    },
-    {
-     "fiscal_key": "FY2017Q2",
-     "period_start": "2017-04-01",
-     "period_end": "2017-06-30",
-     "value": 6333.0,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/07/FCECO044143_20170727.pdf",
-     "locator": "H1 2017 revenue 12,173 (Half-year financial report 2017-07-27, p.3 consolidated statement of income 'Revenue') minus Q1 2017 5,840 (Q1 2017 release, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/04/FCECO043041_20170420.pdf). prior_year_comparative = H1 2016 restated 11,742 (same report p.3) minus Q1 2016 restated 5,589 (Q1 2017 release p.6) — both restated for discontinued ops.",
-     "prior_year_comparative": 6153.0,
-     "published_date": "2017-07-27",
-     "prior_year_comparative_method": "ytd_difference of restated comparatives (H1 2016* − Q1 2016*)"
-    },
-    {
-     "fiscal_key": "FY2017Q3",
-     "period_start": "2017-07-01",
-     "period_end": "2017-09-30",
-     "value": 5904.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf",
-     "locator": "Schneider Q3 2017 revenues release (2017-10-26), p.7 'Appendix – Revenues breakdown with Q3 2016 restated', row 'Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "prior_year_comparative": 6015.0,
-     "published_date": "2017-10-26"
-    },
-    {
-     "fiscal_key": "FY2017Q4",
-     "period_start": "2017-10-01",
-     "period_end": "2017-12-31",
-     "value": 6666.0,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/02/FCECO045916_20180215.pdf",
-     "locator": "FY2017 revenue 24,743 (FY2017 consolidated accounts 2018-02-15 p.21 note 3.1 'Full year 2017') minus 9M 2017 18,077 (Q3 2017 release p.7 YTD table, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf). FY2017 results press release not in OAM.",
-     "published_date": "2018-02-15"
-    },
-    {
-     "fiscal_key": "FY2018Q1",
-     "period_start": "2018-01-01",
-     "period_end": "2018-03-31",
-     "value": 5800.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf",
-     "locator": "Schneider Q1 2018 revenues release (2018-04-19), p.2 table 'Q1 2018 € million', row 'Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2018-04-19"
-    },
-    {
-     "fiscal_key": "FY2018Q2",
-     "period_start": "2018-04-01",
-     "period_end": "2018-06-30",
-     "value": 6517.0,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
-     "locator": "H1 2018 revenue 12,317 (H1 2019 results release 2019-07-25 p.17 'Appendix - Results breakdown by business', 'Total Group Revenues' H1 2018 column) minus Q1 2018 5,800 (Q1 2018 release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf). H1 2018 release itself not in OAM.",
-     "published_date": "2019-07-25"
-    },
-    {
-     "fiscal_key": "FY2018Q3",
-     "period_start": "2018-07-01",
-     "period_end": "2018-09-30",
-     "value": 6377.0,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
-     "locator": "H2 2018 revenue 13,403 (FY2019 results release 2020-02-20 p.24 appendix 'H2 2018 / H2 2019', 'Total Group Revenues') minus Q4 2018 7,026 (FY2018 results release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf). Q3 2018 release not in OAM. Check: 5,800+6,517+6,377+7,026 = FY2018 25,720.",
-     "published_date": "2020-02-20"
-    },
-    {
-     "fiscal_key": "FY2018Q4",
-     "period_start": "2018-10-01",
-     "period_end": "2018-12-31",
-     "value": 7026.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf",
-     "locator": "Schneider FY2018 results release (2019-02-14), p.2 table 'FY 2018 / Q4 2018', row 'Group' Q4 column (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-02-14"
-    },
-    {
-     "fiscal_key": "FY2019Q1",
-     "period_start": "2019-01-01",
-     "period_end": "2019-03-31",
-     "value": 6307.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/04/FCECO050660_20190418.pdf",
-     "locator": "'Strong start to 2019. Growth momentum continues in Q1. Revenues up +9% reported. Full Year Target reaffirmed.' (2019-04-18), p.2 Q1 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-04-18"
-    },
-    {
-     "fiscal_key": "FY2019Q2",
-     "period_start": "2019-04-01",
-     "period_end": "2019-06-30",
-     "value": 6895.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
-     "locator": "'Half Year 2019 results' (2019-07-25), p.3 Q2 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-07-25"
-    },
-    {
-     "fiscal_key": "FY2019Q3",
-     "period_start": "2019-07-01",
-     "period_end": "2019-09-30",
-     "value": 6646.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/10/FCECO052835_20191024.pdf",
-     "locator": "'Good growth in Q3 2019, Revenue up +4.2% despite macro uncertainty' (2019-10-24), p.2 Q3 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-10-24"
-    },
-    {
-     "fiscal_key": "FY2019Q4",
-     "period_start": "2019-10-01",
-     "period_end": "2019-12-31",
-     "value": 7310.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
-     "locator": "'Successful execution of strategy drives record 2019 performance' (2020-02-20), p.3 Q4 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-02-20"
-    },
-    {
-     "fiscal_key": "FY2020Q1",
-     "period_start": "2020-01-01",
-     "period_end": "2020-03-31",
-     "value": 5830.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/04/FCECO054839_20200423.pdf",
-     "locator": "'First Quarter Revenues 2020' (2020-04-23), p.3 Q1 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-04-23"
-    },
-    {
-     "fiscal_key": "FY2020Q2",
-     "period_start": "2020-04-01",
-     "period_end": "2020-06-30",
-     "value": 5745.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/07/FCECO055955_20200729.pdf",
-     "locator": "'Half year 2020 results' (2020-07-29), p.3 Q2 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-07-29"
-    },
-    {
-     "fiscal_key": "FY2020Q3",
-     "period_start": "2020-07-01",
-     "period_end": "2020-09-30",
-     "value": 6458.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/10/FCECO056767_20201022.pdf",
-     "locator": "'Strong rebound in Q3 2020; Revenue up +1.3% organic; Full Year 2020 targets upgraded' (2020-10-22), p.3 Q3 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-10-22"
-    },
-    {
-     "fiscal_key": "FY2020Q4",
-     "period_start": "2020-10-01",
-     "period_end": "2020-12-31",
-     "value": 7126.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/02/FCECO057790_20210211.pdf",
-     "locator": "'Strong execution and resilient business model drives H2 rebound to cap signature 2020 performance' (2021-02-11), p.3 Q4 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-02-11"
-    },
-    {
-     "fiscal_key": "FY2021Q1",
-     "period_start": "2021-01-01",
-     "period_end": "2021-03-31",
-     "value": 6526.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/04/FCECO058703_20210427.pdf",
-     "locator": "'First Quarter Revenues 2021' (2021-04-27), p.3 Q1 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-04-27"
-    },
-    {
-     "fiscal_key": "FY2021Q2",
-     "period_start": "2021-04-01",
-     "period_end": "2021-06-30",
-     "value": 7248.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/07/FCECO059855_20210730.pdf",
-     "locator": "'Half Year 2021 Results' (2021-07-30), p.4 Q2 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-07-30"
-    },
-    {
-     "fiscal_key": "FY2021Q3",
-     "period_start": "2021-07-01",
-     "period_end": "2021-09-30",
-     "value": 7221.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/10/FCECO060677_20211027.pdf",
-     "locator": "'Third Quarter 2021 Revenues' (2021-10-27), p.3 Q3 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-10-27"
-    },
-    {
-     "fiscal_key": "FY2021Q4",
-     "period_start": "2021-10-01",
-     "period_end": "2021-12-31",
-     "value": 7910.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/02/FCECO062184_20220217.pdf",
-     "locator": "'2021: Record year setting foundation for ongoing sustainable growth All-time high Revenues, Adj. EBITA margin and Net Income' (2022-02-17), p.4 Q4 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-02-17"
-    },
-    {
-     "fiscal_key": "FY2022Q1",
-     "period_start": "2022-01-01",
-     "period_end": "2022-03-31",
-     "value": 7566.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/04/FCECO067005_20220427.pdf",
-     "locator": "'First Quarter Revenues 2022' (2022-04-27), p.3 Q1 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-04-27"
-    },
-    {
-     "fiscal_key": "FY2022Q2",
-     "period_start": "2022-04-01",
-     "period_end": "2022-06-30",
-     "value": 8511.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/07/FCECO068075_20220728.pdf",
-     "locator": "'Half Year 2022 Results' (2022-07-28), p.4 Q2 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-07-28"
-    },
-    {
-     "fiscal_key": "FY2022Q3",
-     "period_start": "2022-07-01",
-     "period_end": "2022-09-30",
-     "value": 8779.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/10/FCECO069061_20221027.pdf",
-     "locator": "'Third Quarter Revenues 2022' (2022-10-27), p.3 Q3 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-10-27"
-    },
-    {
-     "fiscal_key": "FY2022Q4",
-     "period_start": "2022-10-01",
-     "period_end": "2022-12-31",
-     "value": 9320.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/02/FCECO070106_20230216.pdf",
-     "locator": "'Full Year 2022 Results Press Release' (2023-02-16), p.4 Q4 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-02-16"
-    },
-    {
-     "fiscal_key": "FY2023Q1",
-     "period_start": "2023-01-01",
-     "period_end": "2023-03-31",
-     "value": 8493.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/04/FCECO070923_20230427.pdf",
-     "locator": "'First Quarter Revenues 2023' (2023-04-27), p.3 Q1 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-04-27"
-    },
-    {
-     "fiscal_key": "FY2023Q2",
-     "period_start": "2023-04-01",
-     "period_end": "2023-06-30",
-     "value": 9140.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/07/FCECO071952_20230727.pdf",
-     "locator": "'Half Year 2023 Results' (2023-07-27), p.3 Q2 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-07-27"
-    },
-    {
-     "fiscal_key": "FY2023Q3",
-     "period_start": "2023-07-01",
-     "period_end": "2023-09-30",
-     "value": 8789.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/10/FCECO072812_20231026.pdf",
-     "locator": "'Third Quarter Revenues 2023' (2023-10-26), p.3 Q3 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-10-26"
-    },
-    {
-     "fiscal_key": "FY2023Q4",
-     "period_start": "2023-10-01",
-     "period_end": "2023-12-31",
-     "value": 9480.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/02/FCECO073782_20240215.pdf",
-     "locator": "'Full Year 2023 Results Press Release' (2024-02-15), p.3 Q4 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-02-15"
-    },
-    {
-     "fiscal_key": "FY2024Q1",
-     "period_start": "2024-01-01",
-     "period_end": "2024-03-31",
-     "value": 8606.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/04/FCECO074550_20240425.pdf",
-     "locator": "'First Quarter Revenues 2024' (2024-04-25), p.3 Q1 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-04-25"
-    },
-    {
-     "fiscal_key": "FY2024Q2",
-     "period_start": "2024-04-01",
-     "period_end": "2024-06-30",
-     "value": 9567.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/07/FCECO075700_20240731.pdf",
-     "locator": "'Half Year 2024 Results' (2024-07-31), p.3 Q2 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-07-31"
-    },
-    {
-     "fiscal_key": "FY2024Q3",
-     "period_start": "2024-07-01",
-     "period_end": "2024-09-30",
-     "value": 9311.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/10/FCECO076472_20241030.pdf",
-     "locator": "'Third Quarter Revenues 2024' (2024-10-30), p.3 Q3 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-10-30"
-    },
-    {
-     "fiscal_key": "FY2024Q4",
-     "period_start": "2024-10-01",
-     "period_end": "2024-12-31",
-     "value": 10669.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/02/FCECO077559_20250220.pdf",
-     "locator": "'Full Year 2024 Results Press Release' (2025-02-20), p.3 Q4 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-02-20"
-    },
-    {
-     "fiscal_key": "FY2025Q1",
-     "period_start": "2025-01-01",
-     "period_end": "2025-03-31",
-     "value": 9325.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/04/FCECO078328_20250428.pdf",
-     "locator": "'First Quarter Revenues 2025' (2025-04-28), p.3 Q1 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-04-28"
-    },
-    {
-     "fiscal_key": "FY2025Q2",
-     "period_start": "2025-04-01",
-     "period_end": "2025-06-30",
-     "value": 10011.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/07/FCECO079331_20250731.pdf",
-     "locator": "'Half Year 2025 Results' (2025-07-31), p.3 Q2 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-07-31"
-    },
-    {
-     "fiscal_key": "FY2025Q3",
-     "period_start": "2025-07-01",
-     "period_end": "2025-09-30",
-     "value": 9721.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/10/FCECO080070_20251030.pdf",
-     "locator": "'Third Quarter Revenues 2025' (2025-10-30), p.3 Q3 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-10-30"
-    },
-    {
-     "fiscal_key": "FY2025Q4",
-     "period_start": "2025-10-01",
-     "period_end": "2025-12-31",
-     "value": 11095.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/02/FCECO081066_20260226.pdf",
-     "locator": "'Full Year 2025 Results Press Release' (2026-02-26), p.5 Q4 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2026-02-26"
-    },
-    {
-     "fiscal_key": "FY2026Q1",
-     "period_start": "2026-01-01",
-     "period_end": "2026-03-31",
-     "value": 9767.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/04/FCECO081812_20260430.pdf",
-     "locator": "'First Quarter Revenues 2026' (2026-04-30), p.4 Q1 2026 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2026-04-30"
-    },
-    {
-     "fiscal_key": "FY2026Q2",
-     "period_start": "2026-04-01",
-     "period_end": "2026-06-30",
-     "value": 11459.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/07/FCECO082813_20260730.pdf",
-     "locator": "'Half Year 2026 Results' (2026-07-30), p.5 Q2 2026 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2026-07-30"
-    }
-   ]
-  },
-  "revenue_segment": {
-   "label_ko": "Energy Management 매출",
-   "scope": "segment",
-   "freq": "Q",
-   "primary": true,
-   "segment_name": "Energy Management (reported as a business from Q1 2018; = Medium Voltage + Low Voltage + Secure Power until 2018, single business from 2019)",
-   "note": "Schneider does not print prior-year absolute values for quarters (only growth rates) → no prior_year_comparative. No recasts of EM quarterly history found 2018–2026 (reported growth reconciles with prior-year values).",
-   "points": [
-    {
-     "fiscal_key": "FY2018Q1",
-     "period_start": "2018-01-01",
-     "period_end": "2018-03-31",
-     "value": 4325.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf",
-     "locator": "Schneider Q1 2018 revenues release (2018-04-19), p.2 table 'Q1 2018', row 'Total Energy Management' (= MV 883 + LV 2,667 + Secure Power 775) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2018-04-19"
-    },
-    {
-     "fiscal_key": "FY2018Q2",
-     "period_start": "2018-04-01",
-     "period_end": "2018-06-30",
-     "value": 4928.0,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
-     "locator": "H1 2018 Energy Management revenues 9,253 (H1 2019 results release p.17 appendix, H1 2018 column) minus Q1 2018 4,325 (Q1 2018 release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf)",
-     "published_date": "2019-07-25"
-    },
-    {
-     "fiscal_key": "FY2018Q3",
-     "period_start": "2018-07-01",
-     "period_end": "2018-09-30",
-     "value": 4846.0,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
-     "locator": "H2 2018 Energy Management revenues 10,267 (FY2019 results release p.24 appendix, H2 2018 column) minus Q4 2018 5,421 (FY2018 results release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf). Check: 4,325+4,928+4,846+5,421 = FY2018 EM 19,520.",
-     "published_date": "2020-02-20"
-    },
-    {
-     "fiscal_key": "FY2018Q4",
-     "period_start": "2018-10-01",
-     "period_end": "2018-12-31",
-     "value": 5421.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf",
-     "locator": "Schneider FY2018 results release (2019-02-14), p.2 table 'FY 2018 / Q4 2018', Energy Management 'Total' row, Q4 column (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-02-14"
-    },
-    {
-     "fiscal_key": "FY2019Q1",
-     "period_start": "2019-01-01",
-     "period_end": "2019-03-31",
-     "value": 4738.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/04/FCECO050660_20190418.pdf",
-     "locator": "'Strong start to 2019. Growth momentum continues in Q1. Revenues up +9% reported. Full Year Target reaffirmed.' (2019-04-18), p.2 Q1 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-04-18"
-    },
-    {
-     "fiscal_key": "FY2019Q2",
-     "period_start": "2019-04-01",
-     "period_end": "2019-06-30",
-     "value": 5334.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
-     "locator": "'Half Year 2019 results' (2019-07-25), p.3 Q2 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-07-25"
-    },
-    {
-     "fiscal_key": "FY2019Q3",
-     "period_start": "2019-07-01",
-     "period_end": "2019-09-30",
-     "value": 5106.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/10/FCECO052835_20191024.pdf",
-     "locator": "'Good growth in Q3 2019, Revenue up +4.2% despite macro uncertainty' (2019-10-24), p.2 Q3 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2019-10-24"
-    },
-    {
-     "fiscal_key": "FY2019Q4",
-     "period_start": "2019-10-01",
-     "period_end": "2019-12-31",
-     "value": 5669.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
-     "locator": "'Successful execution of strategy drives record 2019 performance' (2020-02-20), p.3 Q4 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-02-20"
-    },
-    {
-     "fiscal_key": "FY2020Q1",
-     "period_start": "2020-01-01",
-     "period_end": "2020-03-31",
-     "value": 4383.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/04/FCECO054839_20200423.pdf",
-     "locator": "'First Quarter Revenues 2020' (2020-04-23), p.3 Q1 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-04-23"
-    },
-    {
-     "fiscal_key": "FY2020Q2",
-     "period_start": "2020-04-01",
-     "period_end": "2020-06-30",
-     "value": 4372.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/07/FCECO055955_20200729.pdf",
-     "locator": "'Half year 2020 results' (2020-07-29), p.3 Q2 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-07-29"
-    },
-    {
-     "fiscal_key": "FY2020Q3",
-     "period_start": "2020-07-01",
-     "period_end": "2020-09-30",
-     "value": 5005.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/10/FCECO056767_20201022.pdf",
-     "locator": "'Strong rebound in Q3 2020; Revenue up +1.3% organic; Full Year 2020 targets upgraded' (2020-10-22), p.3 Q3 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2020-10-22"
-    },
-    {
-     "fiscal_key": "FY2020Q4",
-     "period_start": "2020-10-01",
-     "period_end": "2020-12-31",
-     "value": 5584.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/02/FCECO057790_20210211.pdf",
-     "locator": "'Strong execution and resilient business model drives H2 rebound to cap signature 2020 performance' (2021-02-11), p.3 Q4 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-02-11"
-    },
-    {
-     "fiscal_key": "FY2021Q1",
-     "period_start": "2021-01-01",
-     "period_end": "2021-03-31",
-     "value": 4949.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/04/FCECO058703_20210427.pdf",
-     "locator": "'First Quarter Revenues 2021' (2021-04-27), p.3 Q1 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-04-27"
-    },
-    {
-     "fiscal_key": "FY2021Q2",
-     "period_start": "2021-04-01",
-     "period_end": "2021-06-30",
-     "value": 5538.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/07/FCECO059855_20210730.pdf",
-     "locator": "'Half Year 2021 Results' (2021-07-30), p.4 Q2 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-07-30"
-    },
-    {
-     "fiscal_key": "FY2021Q3",
-     "period_start": "2021-07-01",
-     "period_end": "2021-09-30",
-     "value": 5569.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/10/FCECO060677_20211027.pdf",
-     "locator": "'Third Quarter 2021 Revenues' (2021-10-27), p.3 Q3 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2021-10-27"
-    },
-    {
-     "fiscal_key": "FY2021Q4",
-     "period_start": "2021-10-01",
-     "period_end": "2021-12-31",
-     "value": 6123.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/02/FCECO062184_20220217.pdf",
-     "locator": "'2021: Record year setting foundation for ongoing sustainable growth All-time high Revenues, Adj. EBITA margin and Net Income' (2022-02-17), p.4 Q4 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-02-17"
-    },
-    {
-     "fiscal_key": "FY2022Q1",
-     "period_start": "2022-01-01",
-     "period_end": "2022-03-31",
-     "value": 5673.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/04/FCECO067005_20220427.pdf",
-     "locator": "'First Quarter Revenues 2022' (2022-04-27), p.3 Q1 2022 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-04-27"
-    },
-    {
-     "fiscal_key": "FY2022Q2",
-     "period_start": "2022-04-01",
-     "period_end": "2022-06-30",
-     "value": 6634.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/07/FCECO068075_20220728.pdf",
-     "locator": "'Half Year 2022 Results' (2022-07-28), p.4 Q2 2022 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-07-28"
-    },
-    {
-     "fiscal_key": "FY2022Q3",
-     "period_start": "2022-07-01",
-     "period_end": "2022-09-30",
-     "value": 6808.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/10/FCECO069061_20221027.pdf",
-     "locator": "'Third Quarter Revenues 2022' (2022-10-27), p.3 Q3 2022 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2022-10-27"
-    },
-    {
-     "fiscal_key": "FY2022Q4",
-     "period_start": "2022-10-01",
-     "period_end": "2022-12-31",
-     "value": 7327.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/02/FCECO070106_20230216.pdf",
-     "locator": "'Full Year 2022 Results Press Release' (2023-02-16), p.17 Q4 2022 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-02-16"
-    },
-    {
-     "fiscal_key": "FY2023Q1",
-     "period_start": "2023-01-01",
-     "period_end": "2023-03-31",
-     "value": 6485.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/04/FCECO070923_20230427.pdf",
-     "locator": "'First Quarter Revenues 2023' (2023-04-27), p.10 Q1 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-04-27"
-    },
-    {
-     "fiscal_key": "FY2023Q2",
-     "period_start": "2023-04-01",
-     "period_end": "2023-06-30",
-     "value": 7184.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/07/FCECO071952_20230727.pdf",
-     "locator": "'Half Year 2023 Results' (2023-07-27), p.15 Q2 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-07-27"
-    },
-    {
-     "fiscal_key": "FY2023Q3",
-     "period_start": "2023-07-01",
-     "period_end": "2023-09-30",
-     "value": 6935.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/10/FCECO072812_20231026.pdf",
-     "locator": "'Third Quarter Revenues 2023' (2023-10-26), p.10 Q3 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2023-10-26"
-    },
-    {
-     "fiscal_key": "FY2023Q4",
-     "period_start": "2023-10-01",
-     "period_end": "2023-12-31",
-     "value": 7637.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/02/FCECO073782_20240215.pdf",
-     "locator": "'Full Year 2023 Results Press Release' (2024-02-15), p.16 Q4 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-02-15"
-    },
-    {
-     "fiscal_key": "FY2024Q1",
-     "period_start": "2024-01-01",
-     "period_end": "2024-03-31",
-     "value": 6859.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/04/FCECO074550_20240425.pdf",
-     "locator": "'First Quarter Revenues 2024' (2024-04-25), p.9 Q1 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-04-25"
-    },
-    {
-     "fiscal_key": "FY2024Q2",
-     "period_start": "2024-04-01",
-     "period_end": "2024-06-30",
-     "value": 7793.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/07/FCECO075700_20240731.pdf",
-     "locator": "'Half Year 2024 Results' (2024-07-31), p.16 Q2 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-07-31"
-    },
-    {
-     "fiscal_key": "FY2024Q3",
-     "period_start": "2024-07-01",
-     "period_end": "2024-09-30",
-     "value": 7652.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/10/FCECO076472_20241030.pdf",
-     "locator": "'Third Quarter Revenues 2024' (2024-10-30), p.12 Q3 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2024-10-30"
-    },
-    {
-     "fiscal_key": "FY2024Q4",
-     "period_start": "2024-10-01",
-     "period_end": "2024-12-31",
-     "value": 8827.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/02/FCECO077559_20250220.pdf",
-     "locator": "'Full Year 2024 Results Press Release' (2025-02-20), p.15 Q4 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-02-20"
-    },
-    {
-     "fiscal_key": "FY2025Q1",
-     "period_start": "2025-01-01",
-     "period_end": "2025-03-31",
-     "value": 7570.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/04/FCECO078328_20250428.pdf",
-     "locator": "'First Quarter Revenues 2025' (2025-04-28), p.11 Q1 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-04-28"
-    },
-    {
-     "fiscal_key": "FY2025Q2",
-     "period_start": "2025-04-01",
-     "period_end": "2025-06-30",
-     "value": 8322.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/07/FCECO079331_20250731.pdf",
-     "locator": "'Half Year 2025 Results' (2025-07-31), p.16 Q2 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-07-31"
-    },
-    {
-     "fiscal_key": "FY2025Q3",
-     "period_start": "2025-07-01",
-     "period_end": "2025-09-30",
-     "value": 8039.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/10/FCECO080070_20251030.pdf",
-     "locator": "'Third Quarter Revenues 2025' (2025-10-30), p.11 Q3 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2025-10-30"
-    },
-    {
-     "fiscal_key": "FY2025Q4",
-     "period_start": "2025-10-01",
-     "period_end": "2025-12-31",
-     "value": 9199.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/02/FCECO081066_20260226.pdf",
-     "locator": "'Full Year 2025 Results Press Release' (2026-02-26), p.16 Q4 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2026-02-26"
-    },
-    {
-     "fiscal_key": "FY2026Q1",
-     "period_start": "2026-01-01",
-     "period_end": "2026-03-31",
-     "value": 8047.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/04/FCECO081812_20260430.pdf",
-     "locator": "'First Quarter Revenues 2026' (2026-04-30), p.4 Q1 2026 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2026-04-30"
-    },
-    {
-     "fiscal_key": "FY2026Q2",
-     "period_start": "2026-04-01",
-     "period_end": "2026-06-30",
-     "value": 9594.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/07/FCECO082813_20260730.pdf",
-     "locator": "'Half Year 2026 Results' (2026-07-30), p.20 Q2 2026 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
-     "published_date": "2026-07-30"
-    }
-   ]
-  }
- },
- "primary_target": "revenue_segment",
- "structural_breaks": [
-  {
-   "date": "2017-01-01",
-   "type": "restatement",
-   "note": "Solar business (announced sale 2017-04-20) and Telvent DTN reclassified to discontinued operations; 2016 comparatives restated (Q1 2016 group 5,773 → 5,589; Q3 2016 6,064 → 6,015).",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/04/FCECO043041_20170420.pdf"
-  },
-  {
-   "date": "2017-07-01",
-   "type": "segment_reorg",
-   "note": "Businesses renamed Low Voltage (Building), Medium Voltage (Infrastructure), Secure Power (IT), Industrial Automation (Industry).",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf"
-  },
-  {
-   "date": "2017-10-31",
-   "type": "acquisition",
-   "note": "ASCO Power Technologies consolidated in Low Voltage (→ Energy Management).",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044983_20171031.pdf"
-  },
-  {
-   "date": "2018-01-01",
-   "type": "segment_reorg",
-   "note": "Energy Management (MV+LV+Secure Power) and Industrial Automation presented; from Q1 2019 Energy Management reported as a single business (no MV split). AVEVA (IA) consolidated 2018-03-01.",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf"
-  },
-  {
-   "date": "2019-05-27",
-   "type": "divestiture",
-   "note": "Pelco (Energy Management) sale finalized.",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/05/FCECO051210_20190527.pdf"
-  },
-  {
-   "date": "2023-08-02",
-   "type": "divestiture",
-   "note": "Gutor disposal completed; Telemecanique Sensors disposal 2023-10-31; Schneider Electric Russia divestment agreed 2022-07-04.",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/08/FCECO072071_20230802.pdf"
-  },
-  {
-   "date": "2025-02-28",
-   "type": "acquisition",
-   "note": "Motivair (liquid cooling for data centers) acquisition completed — Energy Management/Secure Power.",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/02/FCECO077655_20250228.pdf"
-  },
-  {
-   "date": "2026-01-01",
-   "type": "segment_reorg",
-   "note": "Regions redefined (four regions) with re-cast 2023–2025 regional data; business split (EM/IA) unchanged.",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/02/FCECO081070_20260226.pdf"
-  }
+ "collection_notes": [
+  "se.com (IR site and PDFs) returns Akamai 403 to this environment; all documents were retrieved from the French OAM (info-financiere.gouv.fr, flux-amf-new-prod dataset, url_de_recuperation) which stores the regulated releases filed by Schneider.",
+  "Quarter sums reconcile to printed FY totals for 2017–2025 (group) and 2018–2025 (EM).",
+  "published_date = OAM filing date embedded in document id; derived points use the latest source document date.",
+  "verify 2026-09-25: checked revenue_segment at FY2018Q1-Q4, FY2019Q1, FY2019Q2, FY2019Q4, FY2020Q2, FY2023Q1, FY2025Q4, FY2026Q1 and FY2026Q2, and revenue_total at FY2016Q1, FY2016Q4, FY2017Q1-Q4, FY2018Q1-Q4, FY2019Q1, FY2019Q2, FY2019Q4, FY2020Q2, FY2023Q1, FY2025Q4, FY2026Q1 and FY2026Q2, against the OAM PDFs. All 30 match, including every derived point: 2016Q4 = 24,459−17,757, 2017Q2 = 12,173−5,840 (comparative 11,742−5,589), 2017Q4 = 24,743−18,077, 2018Q2 EM 9,253−4,325 and group 12,317−5,800, 2018Q3 EM 10,267−5,421 and group 13,403−7,026. Q1 2018 'Total Energy Management' 4,325 is printed. FY2018 EM 19,520 is identical in the FY2018 and FY2019 releases, so there is no EM recast between 2018 and 2019. Printed reported-growth rates reconcile with the stored prior-year values at every sampled 2019–2026 quarter, so there is no EM recast after that either. Plant spot-checks: Mt. Juliet TN, El Paso TX, Welcome NC and Columbia MO all appear in the 2025-03-25 release; fixed 0",
+  "annotate 2026-09-25: structural_break 2026-01-01 affects_target=False (근거: 기존 note — regions redefined; business split (EM/IA) unchanged)"
  ],
+ "currency": "EUR",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "Energy Management not reported as a business before Q1 2018 (2016 four businesses; 2017 LV/MV/Secure Power/IA) → revenue_segment starts FY2018Q1 (34 quarters). Summing LV+MV+SP for 2016–17 not done (no printed EM total).",
+  "Medium Voltage (closest to transformers) disclosed only 2016–2018 (as Infrastructure/Medium Voltage) with gaps → not stored as target.",
+  "No prior_year_comparative for 2018+ quarters: Schneider prints only growth rates vs prior year, not prior-year absolute quarterly values (back-calculation from growth is prohibited).",
+  "OAM (info-financiere.gouv.fr) lacks the FY2016 results, H1 2018 and Q3 2018 releases → 2016Q4, 2017Q2, 2017Q4, 2018Q2, 2018Q3 derived by differencing printed cumulative figures (method field).",
+  "FY2026Q3 not yet reported (Q3 2026 revenues due 2026-10-29)."
+ ],
+ "grid_node": "GRID_SCHNEIDER",
+ "id": "SU",
+ "listed": true,
+ "name": "Schneider Electric SE",
+ "primary_target": "revenue_segment",
  "profile": {
-  "products": "Energy Management: LV & MV power distribution (switchgear, switchboards, ring-main units, breakers — Square D in US), distribution transformers (not separately disclosed), Secure Power (UPS, cooling incl. Motivair liquid cooling, prefabricated data-center modules), building automation, EcoStruxure software/services, ETAP/RIB agnostic software. Q1 2026: Systems +16% led by data center; Power & Grid cited as strong end-market.",
-  "plants": [
-   {
-    "country": "US",
-    "city": "Mt. Juliet, TN",
-    "products": "new facility to grow medium-voltage presence / new MV products (2025–27 plan)",
-    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
-   },
-   {
-    "country": "US",
-    "city": "El Paso, TX",
-    "products": "switchgear and power distribution products (campus expansion)",
-    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
-   },
-   {
-    "country": "US",
-    "city": "Welcome, NC",
-    "products": "switchgear and power distribution products",
-    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
-   },
-   {
-    "country": "US",
-    "city": "Columbia, MO",
-    "products": "molded case and air circuit breakers",
-    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
-   },
-   {
-    "country": "US",
-    "city": "Lexington, KY / Lincoln, NE",
-    "products": "circuit breaker and related electrical products (2022 modernization)",
-    "source_url": "https://www.se.com/us/en/about-us/newsroom/news/press-releases/schneider-electric-to-invest-46-million-to-modernize-manufacturing-plants-in-kentucky-and-nebraska-63370ffe66a920fa830da6e7"
-   },
-   {
-    "country": "MX",
-    "city": "Monterrey",
-    "products": "customized switchgear for commercial buildings (per 2022 release)",
-    "source_url": "https://www.se.com/us/en/about-us/newsroom/news/press-releases/schneider-electric-to-invest-46-million-to-modernize-manufacturing-plants-in-kentucky-and-nebraska-63370ffe66a920fa830da6e7"
-   }
-  ],
   "end_markets": "Data Center & Networks (main growth driver 2023–26), Buildings (residential & commercial), Industry, Infrastructure incl. Power & Grid. North America ≈38% of Q1 2026 revenue; EM ≈82% of group revenue.",
   "export_routes": [
    "US-domestic (>20 US smart factories/DCs)",
@@ -903,98 +39,965 @@
    "850440",
    "853521"
   ],
+  "plants": [
+   {
+    "city": "Mt. Juliet, TN",
+    "country": "US",
+    "products": "new facility to grow medium-voltage presence / new MV products (2025–27 plan)",
+    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
+   },
+   {
+    "city": "El Paso, TX",
+    "country": "US",
+    "products": "switchgear and power distribution products (campus expansion)",
+    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
+   },
+   {
+    "city": "Welcome, NC",
+    "country": "US",
+    "products": "switchgear and power distribution products",
+    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
+   },
+   {
+    "city": "Columbia, MO",
+    "country": "US",
+    "products": "molded case and air circuit breakers",
+    "source_url": "https://www.prnewswire.com/news-releases/schneider-electric-plans-to-invest-over-700-million-in-the-us-supporting-energy--ai-sectors-and-job-growth-302409612.html"
+   },
+   {
+    "city": "Lexington, KY / Lincoln, NE",
+    "country": "US",
+    "products": "circuit breaker and related electrical products (2022 modernization)",
+    "source_url": "https://www.se.com/us/en/about-us/newsroom/news/press-releases/schneider-electric-to-invest-46-million-to-modernize-manufacturing-plants-in-kentucky-and-nebraska-63370ffe66a920fa830da6e7"
+   },
+   {
+    "city": "Monterrey",
+    "country": "MX",
+    "products": "customized switchgear for commercial buildings (per 2022 release)",
+    "source_url": "https://www.se.com/us/en/about-us/newsroom/news/press-releases/schneider-electric-to-invest-46-million-to-modernize-manufacturing-plants-in-kentucky-and-nebraska-63370ffe66a920fa830da6e7"
+   }
+  ],
+  "products": "Energy Management: LV & MV power distribution (switchgear, switchboards, ring-main units, breakers — Square D in US), distribution transformers (not separately disclosed), Secure Power (UPS, cooling incl. Motivair liquid cooling, prefabricated data-center modules), building automation, EcoStruxure software/services, ETAP/RIB agnostic software. Q1 2026: Systems +16% led by data center; Power & Grid cited as strong end-market.",
   "proxy_routes": [
    {
+    "expected_sign": "+",
     "proxy_hint": "fred_A35SVS",
-    "why": "US electrical equipment shipments — North America ≈38% of revenue, EM product sales",
-    "expected_sign": "+",
-    "role": "primary"
+    "role": "primary",
+    "why": "US electrical equipment shipments — North America ≈38% of revenue, EM product sales"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "fred_A35SNO",
-    "why": "US electrical equipment new orders — leads EM systems revenue",
-    "expected_sign": "+",
-    "role": "primary"
+    "role": "primary",
+    "why": "US electrical equipment new orders — leads EM systems revenue"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "fred_IPG3353S",
-    "why": "US electrical equipment production (switchgear/breakers/transformers)",
-    "expected_sign": "+",
-    "role": "primary"
+    "role": "primary",
+    "why": "US electrical equipment production (switchgear/breakers/transformers)"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "mx_exp_853710_p842",
-    "why": "Mexico ≤1 kV switchboard exports to US — Monterrey/Mexican plants supplying US (Square D)",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "Mexico ≤1 kV switchboard exports to US — Monterrey/Mexican plants supplying US (Square D)"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "us_imp_853710_p484",
-    "why": "US imports of LV boards from Mexico (mirror of MX->US route)",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "US imports of LV boards from Mexico (mirror of MX->US route)"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "fr_exp_853720_p0",
-    "why": "France >1 kV switchgear exports — Schneider French MV plants",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "France >1 kV switchgear exports — Schneider French MV plants"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "fr_exp_853710_p0",
-    "why": "France LV board exports",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "France LV board exports"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "eurostat_ip_C271_FR",
-    "why": "French NACE C27.1 output — Schneider is a dominant French C27.1 producer",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "French NACE C27.1 output — Schneider is a dominant French C27.1 producer"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "eurostat_turnover_C271_FR",
-    "why": "French C27.1 turnover",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "French C27.1 turnover"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "cn_exp_853710_p0",
-    "why": "China LV board exports — China & East Asia hub",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "China LV board exports — China & East Asia hub"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "nea_grid_investment",
-    "why": "China grid investment — China & East Asia ≈18% of revenue",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "China grid investment — China & East Asia ≈18% of revenue"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "fred_TLPWRCONS",
-    "why": "US power construction — Power & Grid end-market",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "US power construction — Power & Grid end-market"
    },
    {
-    "proxy_hint": "wishlist:us_census_datacenter_construction",
-    "why": "US private data-center construction put-in-place (Census) — Data Center end-market driver; wishlist",
     "expected_sign": "+",
-    "role": "wishlist"
+    "proxy_hint": "wishlist:us_census_datacenter_construction",
+    "role": "wishlist",
+    "why": "US private data-center construction put-in-place (Census) — Data Center end-market driver; wishlist"
    }
   ]
  },
- "gaps": [
-  "Energy Management not reported as a business before Q1 2018 (2016 four businesses; 2017 LV/MV/Secure Power/IA) → revenue_segment starts FY2018Q1 (34 quarters). Summing LV+MV+SP for 2016–17 not done (no printed EM total).",
-  "Medium Voltage (closest to transformers) disclosed only 2016–2018 (as Infrastructure/Medium Voltage) with gaps → not stored as target.",
-  "No prior_year_comparative for 2018+ quarters: Schneider prints only growth rates vs prior year, not prior-year absolute quarterly values (back-calculation from growth is prohibited).",
-  "OAM (info-financiere.gouv.fr) lacks the FY2016 results, H1 2018 and Q3 2018 releases → 2016Q4, 2017Q2, 2017Q4, 2018Q2, 2018Q3 derived by differencing printed cumulative figures (method field).",
-  "FY2026Q3 not yet reported (Q3 2026 revenues due 2026-10-29)."
+ "quarter_calendar": "calendar",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2017-01-01",
+   "note": "Solar business (announced sale 2017-04-20) and Telvent DTN reclassified to discontinued operations; 2016 comparatives restated (Q1 2016 group 5,773 → 5,589; Q3 2016 6,064 → 6,015).",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/04/FCECO043041_20170420.pdf",
+   "type": "restatement"
+  },
+  {
+   "date": "2017-07-01",
+   "note": "Businesses renamed Low Voltage (Building), Medium Voltage (Infrastructure), Secure Power (IT), Industrial Automation (Industry).",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2017-10-31",
+   "note": "ASCO Power Technologies consolidated in Low Voltage (→ Energy Management).",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044983_20171031.pdf",
+   "type": "acquisition"
+  },
+  {
+   "date": "2018-01-01",
+   "note": "Energy Management (MV+LV+Secure Power) and Industrial Automation presented; from Q1 2019 Energy Management reported as a single business (no MV split). AVEVA (IA) consolidated 2018-03-01.",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2019-05-27",
+   "note": "Pelco (Energy Management) sale finalized.",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/05/FCECO051210_20190527.pdf",
+   "type": "divestiture"
+  },
+  {
+   "date": "2023-08-02",
+   "note": "Gutor disposal completed; Telemecanique Sensors disposal 2023-10-31; Schneider Electric Russia divestment agreed 2022-07-04.",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/08/FCECO072071_20230802.pdf",
+   "type": "divestiture"
+  },
+  {
+   "date": "2025-02-28",
+   "note": "Motivair (liquid cooling for data centers) acquisition completed — Energy Management/Secure Power.",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/02/FCECO077655_20250228.pdf",
+   "type": "acquisition"
+  },
+  {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: regions redefined; business split (EM/IA) unchanged",
+   "date": "2026-01-01",
+   "note": "Regions redefined (four regions) with re-cast 2023–2025 regional data; business split (EM/IA) unchanged.",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/02/FCECO081070_20260226.pdf",
+   "type": "segment_reorg"
+  }
  ],
- "collection_notes": [
-  "se.com (IR site and PDFs) returns Akamai 403 to this environment; all documents were retrieved from the French OAM (info-financiere.gouv.fr, flux-amf-new-prod dataset, url_de_recuperation) which stores the regulated releases filed by Schneider.",
-  "Quarter sums reconcile to printed FY totals for 2017–2025 (group) and 2018–2025 (EM).",
-  "published_date = OAM filing date embedded in document id; derived points use the latest source document date.",
-  "verify 2026-09-25: checked revenue_segment at FY2018Q1-Q4, FY2019Q1, FY2019Q2, FY2019Q4, FY2020Q2, FY2023Q1, FY2025Q4, FY2026Q1 and FY2026Q2, and revenue_total at FY2016Q1, FY2016Q4, FY2017Q1-Q4, FY2018Q1-Q4, FY2019Q1, FY2019Q2, FY2019Q4, FY2020Q2, FY2023Q1, FY2025Q4, FY2026Q1 and FY2026Q2, against the OAM PDFs. All 30 match, including every derived point: 2016Q4 = 24,459−17,757, 2017Q2 = 12,173−5,840 (comparative 11,742−5,589), 2017Q4 = 24,743−18,077, 2018Q2 EM 9,253−4,325 and group 12,317−5,800, 2018Q3 EM 10,267−5,421 and group 13,403−7,026. Q1 2018 'Total Energy Management' 4,325 is printed. FY2018 EM 19,520 is identical in the FY2018 and FY2019 releases, so there is no EM recast between 2018 and 2019. Printed reported-growth rates reconcile with the stored prior-year values at every sampled 2019–2026 quarter, so there is no EM recast after that either. Plant spot-checks: Mt. Juliet TN, El Paso TX, Welcome NC and Columbia MO all appear in the 2025-03-25 release; fixed 0"
- ]
+ "targets": {
+  "revenue_segment": {
+   "freq": "Q",
+   "label_ko": "Energy Management 매출",
+   "note": "Schneider does not print prior-year absolute values for quarters (only growth rates) → no prior_year_comparative. No recasts of EM quarterly history found 2018–2026 (reported growth reconciles with prior-year values).",
+   "points": [
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Schneider Q1 2018 revenues release (2018-04-19), p.2 table 'Q1 2018', row 'Total Energy Management' (= MV 883 + LV 2,667 + Secure Power 775) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "published_date": "2018-04-19",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf",
+     "value": 4325.0
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "H1 2018 Energy Management revenues 9,253 (H1 2019 results release p.17 appendix, H1 2018 column) minus Q1 2018 4,325 (Q1 2018 release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf)",
+     "method": "ytd_difference",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2019-07-25",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
+     "value": 4928.0
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "H2 2018 Energy Management revenues 10,267 (FY2019 results release p.24 appendix, H2 2018 column) minus Q4 2018 5,421 (FY2018 results release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf). Check: 4,325+4,928+4,846+5,421 = FY2018 EM 19,520.",
+     "method": "ytd_difference",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "published_date": "2020-02-20",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
+     "value": 4846.0
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Schneider FY2018 results release (2019-02-14), p.2 table 'FY 2018 / Q4 2018', Energy Management 'Total' row, Q4 column (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "published_date": "2019-02-14",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf",
+     "value": 5421.0
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "'Strong start to 2019. Growth momentum continues in Q1. Revenues up +9% reported. Full Year Target reaffirmed.' (2019-04-18), p.2 Q1 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "published_date": "2019-04-18",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/04/FCECO050660_20190418.pdf",
+     "value": 4738.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "'Half Year 2019 results' (2019-07-25), p.3 Q2 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "published_date": "2019-07-25",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
+     "value": 5334.0
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "'Good growth in Q3 2019, Revenue up +4.2% despite macro uncertainty' (2019-10-24), p.2 Q3 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "published_date": "2019-10-24",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/10/FCECO052835_20191024.pdf",
+     "value": 5106.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "'Successful execution of strategy drives record 2019 performance' (2020-02-20), p.3 Q4 2019 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "published_date": "2020-02-20",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
+     "value": 5669.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "'First Quarter Revenues 2020' (2020-04-23), p.3 Q1 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "published_date": "2020-04-23",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/04/FCECO054839_20200423.pdf",
+     "value": 4383.0
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "'Half year 2020 results' (2020-07-29), p.3 Q2 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "published_date": "2020-07-29",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/07/FCECO055955_20200729.pdf",
+     "value": 4372.0
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "'Strong rebound in Q3 2020; Revenue up +1.3% organic; Full Year 2020 targets upgraded' (2020-10-22), p.3 Q3 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "published_date": "2020-10-22",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/10/FCECO056767_20201022.pdf",
+     "value": 5005.0
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "'Strong execution and resilient business model drives H2 rebound to cap signature 2020 performance' (2021-02-11), p.3 Q4 2020 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "published_date": "2021-02-11",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/02/FCECO057790_20210211.pdf",
+     "value": 5584.0
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "'First Quarter Revenues 2021' (2021-04-27), p.3 Q1 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "published_date": "2021-04-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/04/FCECO058703_20210427.pdf",
+     "value": 4949.0
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "'Half Year 2021 Results' (2021-07-30), p.4 Q2 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "published_date": "2021-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/07/FCECO059855_20210730.pdf",
+     "value": 5538.0
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "'Third Quarter 2021 Revenues' (2021-10-27), p.3 Q3 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "published_date": "2021-10-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/10/FCECO060677_20211027.pdf",
+     "value": 5569.0
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "'2021: Record year setting foundation for ongoing sustainable growth All-time high Revenues, Adj. EBITA margin and Net Income' (2022-02-17), p.4 Q4 2021 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "published_date": "2022-02-17",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/02/FCECO062184_20220217.pdf",
+     "value": 6123.0
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "'First Quarter Revenues 2022' (2022-04-27), p.3 Q1 2022 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "published_date": "2022-04-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/04/FCECO067005_20220427.pdf",
+     "value": 5673.0
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "'Half Year 2022 Results' (2022-07-28), p.4 Q2 2022 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "published_date": "2022-07-28",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/07/FCECO068075_20220728.pdf",
+     "value": 6634.0
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "'Third Quarter Revenues 2022' (2022-10-27), p.3 Q3 2022 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "published_date": "2022-10-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/10/FCECO069061_20221027.pdf",
+     "value": 6808.0
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "'Full Year 2022 Results Press Release' (2023-02-16), p.17 Q4 2022 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2023-02-16",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/02/FCECO070106_20230216.pdf",
+     "value": 7327.0
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "'First Quarter Revenues 2023' (2023-04-27), p.10 Q1 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2023-04-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/04/FCECO070923_20230427.pdf",
+     "value": 6485.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "'Half Year 2023 Results' (2023-07-27), p.15 Q2 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2023-07-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/07/FCECO071952_20230727.pdf",
+     "value": 7184.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "'Third Quarter Revenues 2023' (2023-10-26), p.10 Q3 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2023-10-26",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/10/FCECO072812_20231026.pdf",
+     "value": 6935.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "'Full Year 2023 Results Press Release' (2024-02-15), p.16 Q4 2023 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2024-02-15",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/02/FCECO073782_20240215.pdf",
+     "value": 7637.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "'First Quarter Revenues 2024' (2024-04-25), p.9 Q1 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "published_date": "2024-04-25",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/04/FCECO074550_20240425.pdf",
+     "value": 6859.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "'Half Year 2024 Results' (2024-07-31), p.16 Q2 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "published_date": "2024-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/07/FCECO075700_20240731.pdf",
+     "value": 7793.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "'Third Quarter Revenues 2024' (2024-10-30), p.12 Q3 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2024-10-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/10/FCECO076472_20241030.pdf",
+     "value": 7652.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "'Full Year 2024 Results Press Release' (2025-02-20), p.15 Q4 2024 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2025-02-20",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/02/FCECO077559_20250220.pdf",
+     "value": 8827.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "'First Quarter Revenues 2025' (2025-04-28), p.11 Q1 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "published_date": "2025-04-28",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/04/FCECO078328_20250428.pdf",
+     "value": 7570.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "'Half Year 2025 Results' (2025-07-31), p.16 Q2 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2025-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/07/FCECO079331_20250731.pdf",
+     "value": 8322.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "'Third Quarter Revenues 2025' (2025-10-30), p.11 Q3 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2025-10-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/10/FCECO080070_20251030.pdf",
+     "value": 8039.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "'Full Year 2025 Results Press Release' (2026-02-26), p.16 Q4 2025 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-02-26",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/02/FCECO081066_20260226.pdf",
+     "value": 9199.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "'First Quarter Revenues 2026' (2026-04-30), p.4 Q1 2026 revenue table, row 'Total Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-04-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/04/FCECO081812_20260430.pdf",
+     "value": 8047.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "'Half Year 2026 Results' (2026-07-30), p.20 Q2 2026 revenue table, row 'Energy Management' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/07/FCECO082813_20260730.pdf",
+     "value": 9594.0
+    }
+   ],
+   "primary": true,
+   "scope": "segment",
+   "segment_name": "Energy Management (reported as a business from Q1 2018; = Medium Voltage + Low Voltage + Secure Power until 2018, single business from 2019)"
+  },
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "note": "2016Q1–Q3 = 발표 당시 값(Solar·Telvent DTN 포함), 2016Q4 이후 = 중단영업 재작성 기준. 2017 분기에는 재작성 전년 비교치 저장",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "Schneider Q1 2016 revenues release (2016-04-21), p.1 table 'Q1 2016 € million Revenues', row 'Group' (as reported, incl. businesses later classified discontinued) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "published_date": "2016-04-21",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2016/04/FCBWR092320_20160421.pdf",
+     "value": 5773.0
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "Schneider H1 2016 results release (2016-07-28), p.9 appendix 'Second quarter 2016 revenues by business', row 'Group' (as reported) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "published_date": "2016-07-28",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2016/07/FCBWR094607_20160728.pdf",
+     "value": 6207.0
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "Schneider Q3 2016 revenues release (2016-10-27), p.1 table 'Q3 2016', row 'Group' (as reported) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "published_date": "2016-10-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2016/10/FCBWR096480_20161027.pdf",
+     "value": 6064.0
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "FY2016 restated revenue 24,459 (FY2017 consolidated accounts p.21 note 3.1 'Full year 2016*', restated for Solar discontinued ops) minus 9M 2016 restated 17,757 (Q3 2017 release p.7 'Appendix – Revenues breakdown with Year-to-date 2016 restated', https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf). RESTATED basis (excl. Solar), unlike 2016Q1–Q3 as-reported values; FY2016 original press release not found in OAM.",
+     "method": "annual_minus_9m",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "published_date": "2018-02-15",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/02/FCECO045916_20180215.pdf",
+     "value": 6702.0
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "Schneider Q1 2017 revenues release (2017-04-20), p.6 appendix table 'Q1 2016 / Q1 2017', row 'Group' (Q1 2016 restated for discontinued operations = 5,589) (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 5589.0,
+     "published_date": "2017-04-20",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/04/FCECO043041_20170420.pdf",
+     "value": 5840.0
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "H1 2017 revenue 12,173 (Half-year financial report 2017-07-27, p.3 consolidated statement of income 'Revenue') minus Q1 2017 5,840 (Q1 2017 release, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/04/FCECO043041_20170420.pdf). prior_year_comparative = H1 2016 restated 11,742 (same report p.3) minus Q1 2016 restated 5,589 (Q1 2017 release p.6) — both restated for discontinued ops.",
+     "method": "ytd_difference",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "prior_year_comparative": 6153.0,
+     "prior_year_comparative_method": "ytd_difference of restated comparatives (H1 2016* − Q1 2016*)",
+     "published_date": "2017-07-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/07/FCECO044143_20170727.pdf",
+     "value": 6333.0
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "Schneider Q3 2017 revenues release (2017-10-26), p.7 'Appendix – Revenues breakdown with Q3 2016 restated', row 'Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 6015.0,
+     "published_date": "2017-10-26",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf",
+     "value": 5904.0
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "FY2017 revenue 24,743 (FY2017 consolidated accounts 2018-02-15 p.21 note 3.1 'Full year 2017') minus 9M 2017 18,077 (Q3 2017 release p.7 YTD table, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2017/10/FCECO044933_20171026.pdf). FY2017 results press release not in OAM.",
+     "method": "annual_minus_9m",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "published_date": "2018-02-15",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/02/FCECO045916_20180215.pdf",
+     "value": 6666.0
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Schneider Q1 2018 revenues release (2018-04-19), p.2 table 'Q1 2018 € million', row 'Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "published_date": "2018-04-19",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf",
+     "value": 5800.0
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "H1 2018 revenue 12,317 (H1 2019 results release 2019-07-25 p.17 'Appendix - Results breakdown by business', 'Total Group Revenues' H1 2018 column) minus Q1 2018 5,800 (Q1 2018 release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2018/04/FCECO046635_20180419.pdf). H1 2018 release itself not in OAM.",
+     "method": "ytd_difference",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2019-07-25",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
+     "value": 6517.0
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "H2 2018 revenue 13,403 (FY2019 results release 2020-02-20 p.24 appendix 'H2 2018 / H2 2019', 'Total Group Revenues') minus Q4 2018 7,026 (FY2018 results release p.2, https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf). Q3 2018 release not in OAM. Check: 5,800+6,517+6,377+7,026 = FY2018 25,720.",
+     "method": "ytd_difference",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "published_date": "2020-02-20",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
+     "value": 6377.0
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Schneider FY2018 results release (2019-02-14), p.2 table 'FY 2018 / Q4 2018', row 'Group' Q4 column (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "published_date": "2019-02-14",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/02/FCECO049825_20190214.pdf",
+     "value": 7026.0
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "'Strong start to 2019. Growth momentum continues in Q1. Revenues up +9% reported. Full Year Target reaffirmed.' (2019-04-18), p.2 Q1 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "published_date": "2019-04-18",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/04/FCECO050660_20190418.pdf",
+     "value": 6307.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "'Half Year 2019 results' (2019-07-25), p.3 Q2 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "published_date": "2019-07-25",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/07/FCECO051907_20190725.pdf",
+     "value": 6895.0
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "'Good growth in Q3 2019, Revenue up +4.2% despite macro uncertainty' (2019-10-24), p.2 Q3 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "published_date": "2019-10-24",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2019/10/FCECO052835_20191024.pdf",
+     "value": 6646.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "'Successful execution of strategy drives record 2019 performance' (2020-02-20), p.3 Q4 2019 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "published_date": "2020-02-20",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/02/FCECO053919_20200220.pdf",
+     "value": 7310.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "'First Quarter Revenues 2020' (2020-04-23), p.3 Q1 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "published_date": "2020-04-23",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/04/FCECO054839_20200423.pdf",
+     "value": 5830.0
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "'Half year 2020 results' (2020-07-29), p.3 Q2 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "published_date": "2020-07-29",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/07/FCECO055955_20200729.pdf",
+     "value": 5745.0
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "'Strong rebound in Q3 2020; Revenue up +1.3% organic; Full Year 2020 targets upgraded' (2020-10-22), p.3 Q3 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "published_date": "2020-10-22",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2020/10/FCECO056767_20201022.pdf",
+     "value": 6458.0
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "'Strong execution and resilient business model drives H2 rebound to cap signature 2020 performance' (2021-02-11), p.3 Q4 2020 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "published_date": "2021-02-11",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/02/FCECO057790_20210211.pdf",
+     "value": 7126.0
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "'First Quarter Revenues 2021' (2021-04-27), p.3 Q1 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "published_date": "2021-04-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/04/FCECO058703_20210427.pdf",
+     "value": 6526.0
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "'Half Year 2021 Results' (2021-07-30), p.4 Q2 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "published_date": "2021-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/07/FCECO059855_20210730.pdf",
+     "value": 7248.0
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "'Third Quarter 2021 Revenues' (2021-10-27), p.3 Q3 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "published_date": "2021-10-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2021/10/FCECO060677_20211027.pdf",
+     "value": 7221.0
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "'2021: Record year setting foundation for ongoing sustainable growth All-time high Revenues, Adj. EBITA margin and Net Income' (2022-02-17), p.4 Q4 2021 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "published_date": "2022-02-17",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/02/FCECO062184_20220217.pdf",
+     "value": 7910.0
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "'First Quarter Revenues 2022' (2022-04-27), p.3 Q1 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "published_date": "2022-04-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/04/FCECO067005_20220427.pdf",
+     "value": 7566.0
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "'Half Year 2022 Results' (2022-07-28), p.4 Q2 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "published_date": "2022-07-28",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/07/FCECO068075_20220728.pdf",
+     "value": 8511.0
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "'Third Quarter Revenues 2022' (2022-10-27), p.3 Q3 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "published_date": "2022-10-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2022/10/FCECO069061_20221027.pdf",
+     "value": 8779.0
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "'Full Year 2022 Results Press Release' (2023-02-16), p.4 Q4 2022 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2023-02-16",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/02/FCECO070106_20230216.pdf",
+     "value": 9320.0
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "'First Quarter Revenues 2023' (2023-04-27), p.3 Q1 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2023-04-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/04/FCECO070923_20230427.pdf",
+     "value": 8493.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "'Half Year 2023 Results' (2023-07-27), p.3 Q2 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2023-07-27",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/07/FCECO071952_20230727.pdf",
+     "value": 9140.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "'Third Quarter Revenues 2023' (2023-10-26), p.3 Q3 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2023-10-26",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2023/10/FCECO072812_20231026.pdf",
+     "value": 8789.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "'Full Year 2023 Results Press Release' (2024-02-15), p.3 Q4 2023 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2024-02-15",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/02/FCECO073782_20240215.pdf",
+     "value": 9480.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "'First Quarter Revenues 2024' (2024-04-25), p.3 Q1 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "published_date": "2024-04-25",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/04/FCECO074550_20240425.pdf",
+     "value": 8606.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "'Half Year 2024 Results' (2024-07-31), p.3 Q2 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "published_date": "2024-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/07/FCECO075700_20240731.pdf",
+     "value": 9567.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "'Third Quarter Revenues 2024' (2024-10-30), p.3 Q3 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2024-10-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2024/10/FCECO076472_20241030.pdf",
+     "value": 9311.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "'Full Year 2024 Results Press Release' (2025-02-20), p.3 Q4 2024 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2025-02-20",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/02/FCECO077559_20250220.pdf",
+     "value": 10669.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "'First Quarter Revenues 2025' (2025-04-28), p.3 Q1 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "published_date": "2025-04-28",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/04/FCECO078328_20250428.pdf",
+     "value": 9325.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "'Half Year 2025 Results' (2025-07-31), p.3 Q2 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2025-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/07/FCECO079331_20250731.pdf",
+     "value": 10011.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "'Third Quarter Revenues 2025' (2025-10-30), p.3 Q3 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2025-10-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2025/10/FCECO080070_20251030.pdf",
+     "value": 9721.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "'Full Year 2025 Results Press Release' (2026-02-26), p.5 Q4 2025 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-02-26",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/02/FCECO081066_20260226.pdf",
+     "value": 11095.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "'First Quarter Revenues 2026' (2026-04-30), p.4 Q1 2026 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-04-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/04/FCECO081812_20260430.pdf",
+     "value": 9767.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "'Half Year 2026 Results' (2026-07-30), p.5 Q2 2026 revenue-by-region/business table, row 'Total Group' (via AMF-designated OAM info-financiere.gouv.fr (DILA) — se.com blocked by CDN from this environment)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/ECO/2026/07/FCECO082813_20260730.pdf",
+     "value": 11459.0
+    }
+   ],
+   "primary": false,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "SU FP",
+ "unit": "million"
 }

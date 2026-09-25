@@ -7,7 +7,8 @@
   "revenue_total FY2016Q1–FY2018Q4 12개 추가(HPS IR 분기·연차 보고서 원문, CAD 천→백만).",
   "revenue_segment = 지역(미국·멕시코) 매출 — 계약상 scope=\"geographic\". 제품 세그먼트가 아니므로 primary 는 revenue_total 유지(HPS 전체가 변압기 단일 세그먼트, 이력도 더 김: 42 vs 34분기).",
   "원문 PDF(각 1–37MB)는 용량 문제로 raw/에 저장하지 않음 — source_url 은 americas.hammondpowersolutions.com 의 원 PDF.",
-  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2017Q1-Q4,FY2018Q1,FY2018Q4,FY2019Q1-FY2026Q2 (all 30 seed points re-extracted from their own cited PDF, incl. FY2019Q1-Q4 PYC from 2019 AR) and revenue_segment FY2018Q1,FY2018Q4,FY2019Q4,FY2022Q1,FY2022Q2(adjusted),FY2023Q1,FY2023Q2,FY2023Q4,FY2024Q4,FY2025Q4,FY2026Q2 (annual Note 'Sales' − 9M recomputed); period_end Saturday/Dec-31 convention, CAD thousand→million scale, no duplicates — all values match; fixed 38: 30 non-specific seed locators ('phalanx composite_preview …') replaced with page/table/row of the cited PDF, 7 revenue_total Q4 points FY2019Q4–FY2025Q4 relabelled annual_minus_9m→direct_reported_quarter (cited AR prints 'Quarter ended December 31' directly), break type 'Italy_closure_and_discontinued_operations'→'divestiture'."
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2017Q1-Q4,FY2018Q1,FY2018Q4,FY2019Q1-FY2026Q2 (all 30 seed points re-extracted from their own cited PDF, incl. FY2019Q1-Q4 PYC from 2019 AR) and revenue_segment FY2018Q1,FY2018Q4,FY2019Q4,FY2022Q1,FY2022Q2(adjusted),FY2023Q1,FY2023Q2,FY2023Q4,FY2024Q4,FY2025Q4,FY2026Q2 (annual Note 'Sales' − 9M recomputed); period_end Saturday/Dec-31 convention, CAD thousand→million scale, no duplicates — all values match; fixed 38: 30 non-specific seed locators ('phalanx composite_preview …') replaced with page/table/row of the cited PDF, 7 revenue_total Q4 points FY2019Q4–FY2025Q4 relabelled annual_minus_9m→direct_reported_quarter (cited AR prints 'Quarter ended December 31' directly), break type 'Italy_closure_and_discontinued_operations'→'divestiture'.",
+  "annotate 2026-09-25: structural_break 2022-12-31 target=revenue_segment (근거: 기존 note — note: revenue_total unaffected — 지리 구분(세그먼트)만 재분류)"
  ],
  "currency": "CAD",
  "fiscal_year_end_month": 12,
@@ -198,9 +199,11 @@
    "type": "acquisition"
   },
   {
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: note: revenue_total unaffected — 지리 구분(세그먼트)만 재분류",
    "date": "2022-12-31",
    "note": "Geographic sales 2022: company disclosed misclassification (Canada vs US&Mexico, ~C$33.4M for FY2022); 2022 comparatives adjusted from Q2 2023 report onward (Q1 2022 unaffected: 6M adjusted 177,035 − Q2 adjusted 93,924 = 83,111 = original). revenue_segment uses adjusted FY2022Q2–Q4. revenue_total unaffected.",
    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-ANNUAL-REPORT-2023---FINAL.pdf",
+   "target": "revenue_segment",
    "type": "restatement"
   },
   {

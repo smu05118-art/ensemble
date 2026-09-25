@@ -1,490 +1,27 @@
 {
- "schema": "grid-composite-actuals/1",
- "id": "LR",
- "grid_node": "GRID_LEGRAND",
- "name": "Legrand SA",
- "ticker": "LR FP",
- "listed": true,
- "currency": "EUR",
- "unit": "million",
  "accounting_basis": "IFRS",
- "fiscal_year_end_month": 12,
- "quarter_calendar": "calendar",
  "collected_at": "2026-09-25",
- "targets": {
-  "revenue_total": {
-   "label_ko": "연결 매출(Net sales)",
-   "scope": "consolidated",
-   "freq": "Q",
-   "primary": true,
-   "note": "Legrand prints Q1 and cumulative H1/9M/FY; Q2/Q3/Q4 (2017+) derived by differencing. 2016 quarters printed directly in the FY2016 quarterly-data note.",
-   "points": [
-    {
-     "fiscal_key": "FY2016Q1",
-     "period_start": "2016-01-01",
-     "period_end": "2016-03-31",
-     "value": 1189.6,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
-     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.26 note 'Quarterly data – non-audited / Quarterly income statements', 1st quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1164.7,
-     "published_date": "2017-02-09"
-    },
-    {
-     "fiscal_key": "FY2016Q2",
-     "period_start": "2016-04-01",
-     "period_end": "2016-06-30",
-     "value": 1258.8,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
-     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.26 note 'Quarterly data – non-audited / Quarterly income statements', 2nd quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1247.0,
-     "published_date": "2017-02-09"
-    },
-    {
-     "fiscal_key": "FY2016Q3",
-     "period_start": "2016-07-01",
-     "period_end": "2016-09-30",
-     "value": 1256.2,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
-     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.27 note 'Quarterly data – non-audited / Quarterly income statements', 3rd quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1148.6,
-     "published_date": "2017-02-09"
-    },
-    {
-     "fiscal_key": "FY2016Q4",
-     "period_start": "2016-10-01",
-     "period_end": "2016-12-31",
-     "value": 1314.3,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
-     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.27 note 'Quarterly data – non-audited / Quarterly income statements', 4th quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1249.6,
-     "published_date": "2017-02-09"
-    },
-    {
-     "fiscal_key": "FY2017Q1",
-     "period_start": "2017-01-01",
-     "period_end": "2017-03-31",
-     "value": 1318.8,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/05/FCBWR100964_20170510.pdf",
-     "locator": "Legrand Q1 2017 release/financial information: FCBWR100964_20170510 (2017-05-10) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2017 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1189.6,
-     "published_date": "2017-05-10"
-    },
-    {
-     "fiscal_key": "FY2017Q2",
-     "period_start": "2017-04-01",
-     "period_end": "2017-06-30",
-     "value": 1352.8,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR103032_20170731.pdf",
-     "locator": "H1 2017 2,671.6 [FCBWR103032_20170731 (2017-07-31) p.6 key-figures table '1st half', row 'Sales/Net sales', 2017 column] minus Q1 2017 1,318.8 [FCBWR100964_20170510 (2017-05-10) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2017 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/05/FCBWR100964_20170510.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2017-07-31"
-    },
-    {
-     "fiscal_key": "FY2017Q3",
-     "period_start": "2017-07-01",
-     "period_end": "2017-09-30",
-     "value": 1316.7,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/11/FCBWR105285_20171107.pdf",
-     "locator": "9M 2017 3,988.3 [FCBWR105285_20171107 (2017-11-07) p.2 key-figures table '9 months', row 'Sales/Net sales', 2017 column] minus H1 2017 2,671.6 [FCBWR103032_20170731 (2017-07-31) p.6 key-figures table '1st half', row 'Sales/Net sales', 2017 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR103032_20170731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2017-11-07"
-    },
-    {
-     "fiscal_key": "FY2017Q4",
-     "period_start": "2017-10-01",
-     "period_end": "2017-12-31",
-     "value": 1532.5,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR107237_20180208.pdf",
-     "locator": "FY 2017 5,520.8 [FCBWR107237_20180208 (2018-02-08) p.10 key-figures table 'full year', row 'Sales/Net sales', 2017 column] minus 9M 2017 3,988.3 [FCBWR105285_20171107 (2017-11-07) p.2 key-figures table '9 months', row 'Sales/Net sales', 2017 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/11/FCBWR105285_20171107.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2018-02-08"
-    },
-    {
-     "fiscal_key": "FY2018Q1",
-     "period_start": "2018-01-01",
-     "period_end": "2018-03-31",
-     "value": 1445.2,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR109431_20180503.pdf",
-     "locator": "Legrand Q1 2018 release/financial information: FCBWR109431_20180503 (2018-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2018 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1318.8,
-     "published_date": "2018-05-03"
-    },
-    {
-     "fiscal_key": "FY2018Q2",
-     "period_start": "2018-04-01",
-     "period_end": "2018-06-30",
-     "value": 1541.6,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf",
-     "locator": "H1 2018 2,986.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', prior-year comparative column] minus Q1 2018 1,445.2 [FCBWR109431_20180503 (2018-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2018 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR109431_20180503.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2019-07-30"
-    },
-    {
-     "fiscal_key": "FY2018Q3",
-     "period_start": "2018-07-01",
-     "period_end": "2018-09-30",
-     "value": 1450.6,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2018/11/FCBWR113649_20181108.pdf",
-     "locator": "9M 2018 4,437.4 [FCBWR113649_20181108 (2018-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2018 column] minus H1 2018 2,986.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', prior-year comparative column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2019-07-30"
-    },
-    {
-     "fiscal_key": "FY2018Q4",
-     "period_start": "2018-10-01",
-     "period_end": "2018-12-31",
-     "value": 1559.8,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/02/FCBWR115632_20190214.pdf",
-     "locator": "FY 2018 5,997.2 [FCBWR115632_20190214 (2019-02-14) p.4 key-figures table 'full year', row 'Sales/Net sales', 2018 column] minus 9M 2018 4,437.4 [FCBWR113649_20181108 (2018-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2018 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2018/11/FCBWR113649_20181108.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2019-02-14"
-    },
-    {
-     "fiscal_key": "FY2019Q1",
-     "period_start": "2019-01-01",
-     "period_end": "2019-03-31",
-     "value": 1550.0,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/05/FCBWR117574_20190502.pdf",
-     "locator": "Legrand Q1 2019 release/financial information: FCBWR117574_20190502 (2019-05-02) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2019 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1445.2,
-     "published_date": "2019-05-02"
-    },
-    {
-     "fiscal_key": "FY2019Q2",
-     "period_start": "2019-04-01",
-     "period_end": "2019-06-30",
-     "value": 1676.8,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf",
-     "locator": "H1 2019 3,226.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2019 column] minus Q1 2019 1,550.0 [FCBWR117574_20190502 (2019-05-02) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2019 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/05/FCBWR117574_20190502.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2019-07-30"
-    },
-    {
-     "fiscal_key": "FY2019Q3",
-     "period_start": "2019-07-01",
-     "period_end": "2019-09-30",
-     "value": 1662.1,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/11/FCBWR121697_20191107.pdf",
-     "locator": "9M 2019 4,888.9 [FCBWR121697_20191107 (2019-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2019 column] minus H1 2019 3,226.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2019 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2019-11-07"
-    },
-    {
-     "fiscal_key": "FY2019Q4",
-     "period_start": "2019-10-01",
-     "period_end": "2019-12-31",
-     "value": 1733.4,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/02/FCBWR123553_20200213.pdf",
-     "locator": "FY 2019 6,622.3 [FCBWR123553_20200213 (2020-02-13) p.3 key-figures table 'full year', row 'Sales/Net sales', 2019 column] minus 9M 2019 4,888.9 [FCBWR121697_20191107 (2019-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2019 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/11/FCBWR121697_20191107.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2020-02-13"
-    },
-    {
-     "fiscal_key": "FY2020Q1",
-     "period_start": "2020-01-01",
-     "period_end": "2020-03-31",
-     "value": 1515.7,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf",
-     "locator": "Legrand Q1 2021 results press release (Q1 2020 = prior-year comparative column; Q1 2020 release not in OAM): FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', prior-year comparative column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2021-05-06"
-    },
-    {
-     "fiscal_key": "FY2020Q2",
-     "period_start": "2020-04-01",
-     "period_end": "2020-06-30",
-     "value": 1316.9,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/07/FCBWR127648_20200731.pdf",
-     "locator": "H1 2020 2,832.6 [FCBWR127648_20200731 (2020-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2020 column] minus Q1 2020 1,515.7 [FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', prior-year comparative column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2021-05-06"
-    },
-    {
-     "fiscal_key": "FY2020Q3",
-     "period_start": "2020-07-01",
-     "period_end": "2020-09-30",
-     "value": 1661.3,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/11/FCBWR129611_20201105.pdf",
-     "locator": "9M 2020 4,493.9 [FCBWR129611_20201105 (2020-11-05) p.3 key-figures table '9 months', row 'Sales/Net sales', 2020 column] minus H1 2020 2,832.6 [FCBWR127648_20200731 (2020-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2020 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/07/FCBWR127648_20200731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2020-11-05"
-    },
-    {
-     "fiscal_key": "FY2020Q4",
-     "period_start": "2020-10-01",
-     "period_end": "2020-12-31",
-     "value": 1605.6,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/02/FCBWR131713_20210211.pdf",
-     "locator": "FY 2020 6,099.5 [FCBWR131713_20210211 (2021-02-11) p.4 key-figures table 'full year', row 'Sales/Net sales', 2020 column] minus 9M 2020 4,493.9 [FCBWR129611_20201105 (2020-11-05) p.3 key-figures table '9 months', row 'Sales/Net sales', 2020 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/11/FCBWR129611_20201105.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2021-02-11"
-    },
-    {
-     "fiscal_key": "FY2021Q1",
-     "period_start": "2021-01-01",
-     "period_end": "2021-03-31",
-     "value": 1674.1,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf",
-     "locator": "Legrand Q1 2021 release/financial information: FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2021 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1515.7,
-     "published_date": "2021-05-06"
-    },
-    {
-     "fiscal_key": "FY2021Q2",
-     "period_start": "2021-04-01",
-     "period_end": "2021-06-30",
-     "value": 1779.3,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/07/FCBWR135696_20210730.pdf",
-     "locator": "H1 2021 3,453.4 [FCBWR135696_20210730 (2021-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2021 column] minus Q1 2021 1,674.1 [FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2021 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2021-07-30"
-    },
-    {
-     "fiscal_key": "FY2021Q3",
-     "period_start": "2021-07-01",
-     "period_end": "2021-09-30",
-     "value": 1715.3,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/11/FCBWR137613_20211104.pdf",
-     "locator": "9M 2021 5,168.7 [FCBWR137613_20211104 (2021-11-04) p.2 key-figures table '9 months', row 'Sales/Net sales', 2021 column] minus H1 2021 3,453.4 [FCBWR135696_20210730 (2021-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2021 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/07/FCBWR135696_20210730.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2021-11-04"
-    },
-    {
-     "fiscal_key": "FY2021Q4",
-     "period_start": "2021-10-01",
-     "period_end": "2021-12-31",
-     "value": 1825.5,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/02/FCBWR139649_20220210.pdf",
-     "locator": "FY 2021 6,994.2 [FCBWR139649_20220210 (2022-02-10) p.3 key-figures table 'full year', row 'Sales/Net sales', 2021 column] minus 9M 2021 5,168.7 [FCBWR137613_20211104 (2021-11-04) p.2 key-figures table '9 months', row 'Sales/Net sales', 2021 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/11/FCBWR137613_20211104.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2022-02-10"
-    },
-    {
-     "fiscal_key": "FY2022Q1",
-     "period_start": "2022-01-01",
-     "period_end": "2022-03-31",
-     "value": 1972.3,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/05/FCBWR141751_20220505.pdf",
-     "locator": "Legrand Q1 2022 release/financial information: FCBWR141751_20220505 (2022-05-05) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2022 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1674.1,
-     "published_date": "2022-05-05"
-    },
-    {
-     "fiscal_key": "FY2022Q2",
-     "period_start": "2022-04-01",
-     "period_end": "2022-06-30",
-     "value": 2120.1,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/07/FCBWR143808_20220729.pdf",
-     "locator": "H1 2022 4,092.4 [FCBWR143808_20220729 (2022-07-29) p.3 key-figures table '1st half', row 'Sales/Net sales', 2022 column] minus Q1 2022 1,972.3 [FCBWR141751_20220505 (2022-05-05) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2022 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/05/FCBWR141751_20220505.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2022-07-29"
-    },
-    {
-     "fiscal_key": "FY2022Q3",
-     "period_start": "2022-07-01",
-     "period_end": "2022-09-30",
-     "value": 2061.3,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/11/FCBWR145694_20221103.pdf",
-     "locator": "9M 2022 6,153.7 [FCBWR145694_20221103 (2022-11-03) p.3 key-figures table '9 months', row 'Sales/Net sales', 2022 column] minus H1 2022 4,092.4 [FCBWR143808_20220729 (2022-07-29) p.3 key-figures table '1st half', row 'Sales/Net sales', 2022 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/07/FCBWR143808_20220729.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2022-11-03"
-    },
-    {
-     "fiscal_key": "FY2022Q4",
-     "period_start": "2022-10-01",
-     "period_end": "2022-12-31",
-     "value": 2185.7,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/02/FCBWR147655_20230209.pdf",
-     "locator": "FY 2022 8,339.4 [FCBWR147655_20230209 (2023-02-09) p.3 key-figures table 'full year', row 'Sales/Net sales', 2022 column] minus 9M 2022 6,153.7 [FCBWR145694_20221103 (2022-11-03) p.3 key-figures table '9 months', row 'Sales/Net sales', 2022 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/11/FCBWR145694_20221103.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2023-02-09"
-    },
-    {
-     "fiscal_key": "FY2023Q1",
-     "period_start": "2023-01-01",
-     "period_end": "2023-03-31",
-     "value": 2149.6,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/05/FCBWR149551_20230504.pdf",
-     "locator": "Legrand Q1 2023 release/financial information: FCBWR149551_20230504 (2023-05-04) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2023 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 1972.3,
-     "published_date": "2023-05-04"
-    },
-    {
-     "fiscal_key": "FY2023Q2",
-     "period_start": "2023-04-01",
-     "period_end": "2023-06-30",
-     "value": 2145.2,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/07/FCBWR151497_20230731.pdf",
-     "locator": "H1 2023 4,294.8 [FCBWR151497_20230731 (2023-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2023 column] minus Q1 2023 2,149.6 [FCBWR149551_20230504 (2023-05-04) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2023 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/05/FCBWR149551_20230504.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2023-07-31"
-    },
-    {
-     "fiscal_key": "FY2023Q3",
-     "period_start": "2023-07-01",
-     "period_end": "2023-09-30",
-     "value": 2012.5,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/11/FCBWR153458_20231108.pdf",
-     "locator": "9M 2023 6,307.3 [FCBWR153458_20231108 (2023-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2023 column] minus H1 2023 4,294.8 [FCBWR151497_20230731 (2023-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2023 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/07/FCBWR151497_20230731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2023-11-08"
-    },
-    {
-     "fiscal_key": "FY2023Q4",
-     "period_start": "2023-10-01",
-     "period_end": "2023-12-31",
-     "value": 2109.6,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/02/FCBWR155156_20240215.pdf",
-     "locator": "FY 2023 8,416.9 [FCBWR155156_20240215 (2024-02-15) p.3 key-figures table 'full year', row 'Sales/Net sales', 2023 column] minus 9M 2023 6,307.3 [FCBWR153458_20231108 (2023-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2023 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/11/FCBWR153458_20231108.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2024-02-15"
-    },
-    {
-     "fiscal_key": "FY2024Q1",
-     "period_start": "2024-01-01",
-     "period_end": "2024-03-31",
-     "value": 2028.2,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/05/FCBWR156798_20240503.pdf",
-     "locator": "Legrand Q1 2024 release/financial information: FCBWR156798_20240503 (2024-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2024 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 2149.6,
-     "published_date": "2024-05-03"
-    },
-    {
-     "fiscal_key": "FY2024Q2",
-     "period_start": "2024-04-01",
-     "period_end": "2024-06-30",
-     "value": 2182.1,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/07/FCBWR158446_20240731.pdf",
-     "locator": "H1 2024 4,210.3 [FCBWR158446_20240731 (2024-07-31) p.2 key-figures table '1st half', row 'Sales/Net sales', 2024 column] minus Q1 2024 2,028.2 [FCBWR156798_20240503 (2024-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2024 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/05/FCBWR156798_20240503.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2024-07-31"
-    },
-    {
-     "fiscal_key": "FY2024Q3",
-     "period_start": "2024-07-01",
-     "period_end": "2024-09-30",
-     "value": 2018.7,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/11/FCBWR160015_20241107.pdf",
-     "locator": "9M 2024 6,229.0 [FCBWR160015_20241107 (2024-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2024 column] minus H1 2024 4,210.3 [FCBWR158446_20240731 (2024-07-31) p.2 key-figures table '1st half', row 'Sales/Net sales', 2024 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/07/FCBWR158446_20240731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2024-11-07"
-    },
-    {
-     "fiscal_key": "FY2024Q4",
-     "period_start": "2024-10-01",
-     "period_end": "2024-12-31",
-     "value": 2419.9,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/02/FCBWR161489_20250213.pdf",
-     "locator": "FY 2024 8,648.9 [FCBWR161489_20250213 (2025-02-13) p.3 key-figures table 'full year', row 'Sales/Net sales', 2024 column] minus 9M 2024 6,229.0 [FCBWR160015_20241107 (2024-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2024 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/11/FCBWR160015_20241107.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2025-02-13"
-    },
-    {
-     "fiscal_key": "FY2025Q1",
-     "period_start": "2025-01-01",
-     "period_end": "2025-03-31",
-     "value": 2277.8,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/05/FCBWR162937_20250507.pdf",
-     "locator": "Legrand Q1 2025 release/financial information: FCBWR162937_20250507 (2025-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2025 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 2028.2,
-     "published_date": "2025-05-07"
-    },
-    {
-     "fiscal_key": "FY2025Q2",
-     "period_start": "2025-04-01",
-     "period_end": "2025-06-30",
-     "value": 2496.5,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/07/FCBWR164145_20250731.pdf",
-     "locator": "H1 2025 4,774.3 [FCBWR164145_20250731 (2025-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2025 column] minus Q1 2025 2,277.8 [FCBWR162937_20250507 (2025-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2025 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/05/FCBWR162937_20250507.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2025-07-31"
-    },
-    {
-     "fiscal_key": "FY2025Q3",
-     "period_start": "2025-07-01",
-     "period_end": "2025-09-30",
-     "value": 2197.1,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/11/FCBWR165369_20251106.pdf",
-     "locator": "9M 2025 6,971.4 [FCBWR165369_20251106 (2025-11-06) p.3 key-figures table '9 months', row 'Sales/Net sales', 2025 column] minus H1 2025 4,774.3 [FCBWR164145_20250731 (2025-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2025 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/07/FCBWR164145_20250731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2025-11-06"
-    },
-    {
-     "fiscal_key": "FY2025Q4",
-     "period_start": "2025-10-01",
-     "period_end": "2025-12-31",
-     "value": 2509.2,
-     "method": "annual_minus_9m",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/02/FCBWR166517_20260212.pdf",
-     "locator": "FY 2025 9,480.6 [FCBWR166517_20260212 (2026-02-12) p.3 key-figures table 'full year', row 'Sales/Net sales', 2025 column] minus 9M 2025 6,971.4 [FCBWR165369_20251106 (2025-11-06) p.3 key-figures table '9 months', row 'Sales/Net sales', 2025 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/11/FCBWR165369_20251106.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2026-02-12"
-    },
-    {
-     "fiscal_key": "FY2026Q1",
-     "period_start": "2026-01-01",
-     "period_end": "2026-03-31",
-     "value": 2537.6,
-     "method": "direct_reported_quarter",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/05/FCBWR167775_20260507.pdf",
-     "locator": "Legrand Q1 2026 release/financial information: FCBWR167775_20260507 (2026-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2026 column (via AMF-designated OAM info-financiere.gouv.fr)",
-     "prior_year_comparative": 2277.8,
-     "published_date": "2026-05-07"
-    },
-    {
-     "fiscal_key": "FY2026Q2",
-     "period_start": "2026-04-01",
-     "period_end": "2026-06-30",
-     "value": 2862.7,
-     "method": "ytd_difference",
-     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/07/FCBWR168887_20260729.pdf",
-     "locator": "H1 2026 5,400.3 [FCBWR168887_20260729 (2026-07-29) p.3 key-figures table '1st half', row 'Sales/Net sales', 2026 column] minus Q1 2026 2,537.6 [FCBWR167775_20260507 (2026-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2026 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/05/FCBWR167775_20260507.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
-     "published_date": "2026-07-29"
-    }
-   ]
-  }
- },
- "primary_target": "revenue_total",
- "structural_breaks": [
-  {
-   "date": "2019-01-01",
-   "type": "segment_reorg",
-   "note": "Geographic segment redefinition (Europe region from 2019); consolidated net sales unaffected.",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/04/FCBWR116816_20190404.pdf"
-  },
-  {
-   "date": "2019-06-30",
-   "type": "acquisition",
-   "note": "Universal Electric Corporation (Starline busway, US datacenter power distribution) acquired in 2019 (main 9M 2019 acquisition).",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/11/FCBWR121699_20191107.pdf"
-  },
-  {
-   "date": "2023-10-12",
-   "type": "divestiture",
-   "note": "Sale of Russian activities announced (exit from Russia; sales not restated).",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/10/FCBWR152831_20231012.pdf"
-  },
-  {
-   "date": "2025-10-02",
-   "type": "acquisition",
-   "note": "Avtron Power Solutions (US load banks) acquisition announced; 2025 datacenter acquisitions (Linkk Busway, Amperio, etc.) — datacenters 26% of 2025 sales.",
-   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/10/FCBWR164851_20251002.pdf"
-  }
+ "collection_notes": [
+  "All documents retrieved from the French OAM info-financiere.gouv.fr (regulated information filed by Legrand).",
+  "Checks: 2016 quarters sum to FY2016 5,018.9; each year Q1..Q4 sum equals printed FY by construction.",
+  "verify 2026-09-25: checked all 42 revenue_total points (83 printed numbers: values, Q1 comparatives and every H1/9M/FY input of the 28 derived ytd_difference/annual_minus_9m points) against the 'Sales/Net sales' rows of the 37 cited OAM PDFs. Every number is present, and every difference recomputes to the stored value (for example FY2017Q4 5,520.8−3,988.3, FY2020Q2 2,832.6−1,515.7, FY2025Q4 9,480.6−6,971.4 and FY2026Q2 5,400.3−2,537.6). The FY2016 quarterly note (p.25–27) prints Q1-Q4 2016 and 2015. Later releases print the same prior-period cumulatives, so no restatement was found; fixed 0",
+  "annotate 2026-09-25: structural_break 2019-01-01 affects_target=False (근거: 기존 note — consolidated net sales unaffected (geographic redefinition))"
  ],
+ "currency": "EUR",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "No segment related to transformers/power-distribution equipment: Legrand reports geographic segments only (Europe, North & Central America, Rest of World) → revenue_segment not built; primary_target = revenue_total.",
+  "Q2/Q3/Q4 of 2017–2025 and Q2 2026 derived by differencing printed cumulative net sales (H1−Q1, 9M−H1, FY−9M); no printed prior-year quarterly comparatives for those (except Q1 each year).",
+  "Q1 2020 and H1 2018 releases not stored in OAM → Q1 2020 taken from Q1 2021 release comparative column; H1 2018 from H1 2019 release comparative column.",
+  "Plants not filled (no primary source verified in this session).",
+  "FY2026Q3 not yet reported (9M 2026 release due Nov 2026)."
+ ],
+ "grid_node": "GRID_LEGRAND",
+ "id": "LR",
+ "listed": true,
+ "name": "Legrand SA",
+ "primary_target": "revenue_total",
  "profile": {
-  "products": "LV electrical & digital building infrastructure: wiring devices, LV circuit breakers/distribution (DX3), cable management, UPS, datacenter white-space (Starline Track busway, PDUs, cabinets/containment, liquid cooling, Avtron load banks), building systems/AV. No MV/HV transformers — exposure to Sanil is only via US datacenter/non-residential construction power-distribution demand.",
-  "plants": [],
   "end_markets": "Datacenters (26% of 2025 sales), non-residential & residential buildings, infrastructure. North & Central America 42.2% of 2025 revenue (US 39.2%); Europe 38.0% (FY2025 release).",
   "export_routes": [
    "US-domestic (hypothesis: US-made Starline/Wiremold/P&S lines)",
@@ -498,73 +35,539 @@
    "850440",
    "854449"
   ],
+  "plants": [],
+  "products": "LV electrical & digital building infrastructure: wiring devices, LV circuit breakers/distribution (DX3), cable management, UPS, datacenter white-space (Starline Track busway, PDUs, cabinets/containment, liquid cooling, Avtron load banks), building systems/AV. No MV/HV transformers — exposure to Sanil is only via US datacenter/non-residential construction power-distribution demand.",
   "proxy_routes": [
    {
+    "expected_sign": "+",
     "proxy_hint": "fred_A35SVS",
-    "why": "US electrical equipment & component shipments — US ≈39% of Legrand sales",
-    "expected_sign": "+",
-    "role": "primary"
+    "role": "primary",
+    "why": "US electrical equipment & component shipments — US ≈39% of Legrand sales"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "fred_A35SNO",
-    "why": "US electrical equipment new orders — short-cycle LV demand",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "US electrical equipment new orders — short-cycle LV demand"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "fred_IPG3353S",
-    "why": "US electrical equipment IP",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "US electrical equipment IP"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "us_imp_853710_p0",
-    "why": "US imports of ≤1 kV boards/panels — LV distribution demand incl. datacenters",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "US imports of ≤1 kV boards/panels — LV distribution demand incl. datacenters"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "eurostat_ip_C271_FR",
-    "why": "French C27.1 production — Legrand French LV plants (Limoges)",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "French C27.1 production — Legrand French LV plants (Limoges)"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "eurostat_ip_C271_IT",
-    "why": "Italian C27.1 production — BTicino (Italy)",
-    "expected_sign": "+",
-    "role": "diagnostic"
+    "role": "diagnostic",
+    "why": "Italian C27.1 production — BTicino (Italy)"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "wishlist:fred_TLNRESCONS",
-    "why": "US total non-residential construction spending (FRED TLNRESCONS) — buildings end-market; not in pre-built proxy list",
-    "expected_sign": "+",
-    "role": "wishlist"
+    "role": "wishlist",
+    "why": "US total non-residential construction spending (FRED TLNRESCONS) — buildings end-market; not in pre-built proxy list"
    },
    {
+    "expected_sign": "+",
     "proxy_hint": "wishlist:us_census_datacenter_construction",
-    "why": "US private data-center construction put-in-place (Census) — datacenters 26% of sales",
-    "expected_sign": "+",
-    "role": "wishlist"
+    "role": "wishlist",
+    "why": "US private data-center construction put-in-place (Census) — datacenters 26% of sales"
    },
    {
-    "proxy_hint": "wishlist:eurostat_building_production_EU27",
-    "why": "EU building construction production index — Europe 38% of sales",
     "expected_sign": "+",
-    "role": "wishlist"
+    "proxy_hint": "wishlist:eurostat_building_production_EU27",
+    "role": "wishlist",
+    "why": "EU building construction production index — Europe 38% of sales"
    }
   ]
  },
- "gaps": [
-  "No segment related to transformers/power-distribution equipment: Legrand reports geographic segments only (Europe, North & Central America, Rest of World) → revenue_segment not built; primary_target = revenue_total.",
-  "Q2/Q3/Q4 of 2017–2025 and Q2 2026 derived by differencing printed cumulative net sales (H1−Q1, 9M−H1, FY−9M); no printed prior-year quarterly comparatives for those (except Q1 each year).",
-  "Q1 2020 and H1 2018 releases not stored in OAM → Q1 2020 taken from Q1 2021 release comparative column; H1 2018 from H1 2019 release comparative column.",
-  "Plants not filled (no primary source verified in this session).",
-  "FY2026Q3 not yet reported (9M 2026 release due Nov 2026)."
+ "quarter_calendar": "calendar",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: consolidated net sales unaffected (geographic redefinition)",
+   "date": "2019-01-01",
+   "note": "Geographic segment redefinition (Europe region from 2019); consolidated net sales unaffected.",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/04/FCBWR116816_20190404.pdf",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2019-06-30",
+   "note": "Universal Electric Corporation (Starline busway, US datacenter power distribution) acquired in 2019 (main 9M 2019 acquisition).",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/11/FCBWR121699_20191107.pdf",
+   "type": "acquisition"
+  },
+  {
+   "date": "2023-10-12",
+   "note": "Sale of Russian activities announced (exit from Russia; sales not restated).",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/10/FCBWR152831_20231012.pdf",
+   "type": "divestiture"
+  },
+  {
+   "date": "2025-10-02",
+   "note": "Avtron Power Solutions (US load banks) acquisition announced; 2025 datacenter acquisitions (Linkk Busway, Amperio, etc.) — datacenters 26% of 2025 sales.",
+   "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/10/FCBWR164851_20251002.pdf",
+   "type": "acquisition"
+  }
  ],
- "collection_notes": [
-  "All documents retrieved from the French OAM info-financiere.gouv.fr (regulated information filed by Legrand).",
-  "Checks: 2016 quarters sum to FY2016 5,018.9; each year Q1..Q4 sum equals printed FY by construction.",
-  "verify 2026-09-25: checked all 42 revenue_total points (83 printed numbers: values, Q1 comparatives and every H1/9M/FY input of the 28 derived ytd_difference/annual_minus_9m points) against the 'Sales/Net sales' rows of the 37 cited OAM PDFs. Every number is present, and every difference recomputes to the stored value (for example FY2017Q4 5,520.8−3,988.3, FY2020Q2 2,832.6−1,515.7, FY2025Q4 9,480.6−6,971.4 and FY2026Q2 5,400.3−2,537.6). The FY2016 quarterly note (p.25–27) prints Q1-Q4 2016 and 2015. Later releases print the same prior-period cumulatives, so no restatement was found; fixed 0"
- ]
+ "targets": {
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출(Net sales)",
+   "note": "Legrand prints Q1 and cumulative H1/9M/FY; Q2/Q3/Q4 (2017+) derived by differencing. 2016 quarters printed directly in the FY2016 quarterly-data note.",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.26 note 'Quarterly data – non-audited / Quarterly income statements', 1st quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 1164.7,
+     "published_date": "2017-02-09",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
+     "value": 1189.6
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.26 note 'Quarterly data – non-audited / Quarterly income statements', 2nd quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 1247.0,
+     "published_date": "2017-02-09",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
+     "value": 1258.8
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.27 note 'Quarterly data – non-audited / Quarterly income statements', 3rd quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 1148.6,
+     "published_date": "2017-02-09",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
+     "value": 1256.2
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "Legrand consolidated financial information as of Dec 31, 2016 (filed 2017-02-09), p.27 note 'Quarterly data – non-audited / Quarterly income statements', 4th quarter 2016 column, row 'Net sales' (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 1249.6,
+     "published_date": "2017-02-09",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR098614_20170209.pdf",
+     "value": 1314.3
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "Legrand Q1 2017 release/financial information: FCBWR100964_20170510 (2017-05-10) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2017 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 1189.6,
+     "published_date": "2017-05-10",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/05/FCBWR100964_20170510.pdf",
+     "value": 1318.8
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "H1 2017 2,671.6 [FCBWR103032_20170731 (2017-07-31) p.6 key-figures table '1st half', row 'Sales/Net sales', 2017 column] minus Q1 2017 1,318.8 [FCBWR100964_20170510 (2017-05-10) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2017 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/05/FCBWR100964_20170510.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "published_date": "2017-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR103032_20170731.pdf",
+     "value": 1352.8
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "9M 2017 3,988.3 [FCBWR105285_20171107 (2017-11-07) p.2 key-figures table '9 months', row 'Sales/Net sales', 2017 column] minus H1 2017 2,671.6 [FCBWR103032_20170731 (2017-07-31) p.6 key-figures table '1st half', row 'Sales/Net sales', 2017 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR103032_20170731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "published_date": "2017-11-07",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/11/FCBWR105285_20171107.pdf",
+     "value": 1316.7
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "FY 2017 5,520.8 [FCBWR107237_20180208 (2018-02-08) p.10 key-figures table 'full year', row 'Sales/Net sales', 2017 column] minus 9M 2017 3,988.3 [FCBWR105285_20171107 (2017-11-07) p.2 key-figures table '9 months', row 'Sales/Net sales', 2017 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2017/11/FCBWR105285_20171107.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "published_date": "2018-02-08",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR107237_20180208.pdf",
+     "value": 1532.5
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Legrand Q1 2018 release/financial information: FCBWR109431_20180503 (2018-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2018 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 1318.8,
+     "published_date": "2018-05-03",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR109431_20180503.pdf",
+     "value": 1445.2
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "H1 2018 2,986.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', prior-year comparative column] minus Q1 2018 1,445.2 [FCBWR109431_20180503 (2018-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2018 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/8888/01/FCBWR109431_20180503.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2019-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf",
+     "value": 1541.6
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "9M 2018 4,437.4 [FCBWR113649_20181108 (2018-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2018 column] minus H1 2018 2,986.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', prior-year comparative column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "published_date": "2019-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2018/11/FCBWR113649_20181108.pdf",
+     "value": 1450.6
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "FY 2018 5,997.2 [FCBWR115632_20190214 (2019-02-14) p.4 key-figures table 'full year', row 'Sales/Net sales', 2018 column] minus 9M 2018 4,437.4 [FCBWR113649_20181108 (2018-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2018 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2018/11/FCBWR113649_20181108.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "published_date": "2019-02-14",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/02/FCBWR115632_20190214.pdf",
+     "value": 1559.8
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "Legrand Q1 2019 release/financial information: FCBWR117574_20190502 (2019-05-02) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2019 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 1445.2,
+     "published_date": "2019-05-02",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/05/FCBWR117574_20190502.pdf",
+     "value": 1550.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "H1 2019 3,226.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2019 column] minus Q1 2019 1,550.0 [FCBWR117574_20190502 (2019-05-02) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2019 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/05/FCBWR117574_20190502.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "published_date": "2019-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf",
+     "value": 1676.8
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "9M 2019 4,888.9 [FCBWR121697_20191107 (2019-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2019 column] minus H1 2019 3,226.8 [FCBWR119690_20190730 (2019-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2019 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/07/FCBWR119690_20190730.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "published_date": "2019-11-07",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/11/FCBWR121697_20191107.pdf",
+     "value": 1662.1
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "FY 2019 6,622.3 [FCBWR123553_20200213 (2020-02-13) p.3 key-figures table 'full year', row 'Sales/Net sales', 2019 column] minus 9M 2019 4,888.9 [FCBWR121697_20191107 (2019-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2019 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2019/11/FCBWR121697_20191107.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "published_date": "2020-02-13",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/02/FCBWR123553_20200213.pdf",
+     "value": 1733.4
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "Legrand Q1 2021 results press release (Q1 2020 = prior-year comparative column; Q1 2020 release not in OAM): FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', prior-year comparative column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "published_date": "2021-05-06",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf",
+     "value": 1515.7
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "H1 2020 2,832.6 [FCBWR127648_20200731 (2020-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2020 column] minus Q1 2020 1,515.7 [FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', prior-year comparative column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "published_date": "2021-05-06",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/07/FCBWR127648_20200731.pdf",
+     "value": 1316.9
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "9M 2020 4,493.9 [FCBWR129611_20201105 (2020-11-05) p.3 key-figures table '9 months', row 'Sales/Net sales', 2020 column] minus H1 2020 2,832.6 [FCBWR127648_20200731 (2020-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2020 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/07/FCBWR127648_20200731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "published_date": "2020-11-05",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/11/FCBWR129611_20201105.pdf",
+     "value": 1661.3
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "FY 2020 6,099.5 [FCBWR131713_20210211 (2021-02-11) p.4 key-figures table 'full year', row 'Sales/Net sales', 2020 column] minus 9M 2020 4,493.9 [FCBWR129611_20201105 (2020-11-05) p.3 key-figures table '9 months', row 'Sales/Net sales', 2020 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2020/11/FCBWR129611_20201105.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "published_date": "2021-02-11",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/02/FCBWR131713_20210211.pdf",
+     "value": 1605.6
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "Legrand Q1 2021 release/financial information: FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2021 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 1515.7,
+     "published_date": "2021-05-06",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf",
+     "value": 1674.1
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "H1 2021 3,453.4 [FCBWR135696_20210730 (2021-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2021 column] minus Q1 2021 1,674.1 [FCBWR133731_20210506 (2021-05-06) p.3 key-figures table '1st quarter', row 'Sales/Net sales', 2021 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/05/FCBWR133731_20210506.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "published_date": "2021-07-30",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/07/FCBWR135696_20210730.pdf",
+     "value": 1779.3
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "9M 2021 5,168.7 [FCBWR137613_20211104 (2021-11-04) p.2 key-figures table '9 months', row 'Sales/Net sales', 2021 column] minus H1 2021 3,453.4 [FCBWR135696_20210730 (2021-07-30) p.3 key-figures table '1st half', row 'Sales/Net sales', 2021 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/07/FCBWR135696_20210730.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "published_date": "2021-11-04",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/11/FCBWR137613_20211104.pdf",
+     "value": 1715.3
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "FY 2021 6,994.2 [FCBWR139649_20220210 (2022-02-10) p.3 key-figures table 'full year', row 'Sales/Net sales', 2021 column] minus 9M 2021 5,168.7 [FCBWR137613_20211104 (2021-11-04) p.2 key-figures table '9 months', row 'Sales/Net sales', 2021 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2021/11/FCBWR137613_20211104.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "published_date": "2022-02-10",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/02/FCBWR139649_20220210.pdf",
+     "value": 1825.5
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "Legrand Q1 2022 release/financial information: FCBWR141751_20220505 (2022-05-05) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2022 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 1674.1,
+     "published_date": "2022-05-05",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/05/FCBWR141751_20220505.pdf",
+     "value": 1972.3
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "H1 2022 4,092.4 [FCBWR143808_20220729 (2022-07-29) p.3 key-figures table '1st half', row 'Sales/Net sales', 2022 column] minus Q1 2022 1,972.3 [FCBWR141751_20220505 (2022-05-05) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2022 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/05/FCBWR141751_20220505.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "published_date": "2022-07-29",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/07/FCBWR143808_20220729.pdf",
+     "value": 2120.1
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "9M 2022 6,153.7 [FCBWR145694_20221103 (2022-11-03) p.3 key-figures table '9 months', row 'Sales/Net sales', 2022 column] minus H1 2022 4,092.4 [FCBWR143808_20220729 (2022-07-29) p.3 key-figures table '1st half', row 'Sales/Net sales', 2022 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/07/FCBWR143808_20220729.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "published_date": "2022-11-03",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/11/FCBWR145694_20221103.pdf",
+     "value": 2061.3
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "FY 2022 8,339.4 [FCBWR147655_20230209 (2023-02-09) p.3 key-figures table 'full year', row 'Sales/Net sales', 2022 column] minus 9M 2022 6,153.7 [FCBWR145694_20221103 (2022-11-03) p.3 key-figures table '9 months', row 'Sales/Net sales', 2022 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2022/11/FCBWR145694_20221103.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2023-02-09",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/02/FCBWR147655_20230209.pdf",
+     "value": 2185.7
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "Legrand Q1 2023 release/financial information: FCBWR149551_20230504 (2023-05-04) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2023 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 1972.3,
+     "published_date": "2023-05-04",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/05/FCBWR149551_20230504.pdf",
+     "value": 2149.6
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "H1 2023 4,294.8 [FCBWR151497_20230731 (2023-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2023 column] minus Q1 2023 2,149.6 [FCBWR149551_20230504 (2023-05-04) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2023 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/05/FCBWR149551_20230504.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2023-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/07/FCBWR151497_20230731.pdf",
+     "value": 2145.2
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "9M 2023 6,307.3 [FCBWR153458_20231108 (2023-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2023 column] minus H1 2023 4,294.8 [FCBWR151497_20230731 (2023-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2023 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/07/FCBWR151497_20230731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2023-11-08",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/11/FCBWR153458_20231108.pdf",
+     "value": 2012.5
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "FY 2023 8,416.9 [FCBWR155156_20240215 (2024-02-15) p.3 key-figures table 'full year', row 'Sales/Net sales', 2023 column] minus 9M 2023 6,307.3 [FCBWR153458_20231108 (2023-11-08) p.3 key-figures table '9 months', row 'Sales/Net sales', 2023 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2023/11/FCBWR153458_20231108.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2024-02-15",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/02/FCBWR155156_20240215.pdf",
+     "value": 2109.6
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "Legrand Q1 2024 release/financial information: FCBWR156798_20240503 (2024-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2024 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 2149.6,
+     "published_date": "2024-05-03",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/05/FCBWR156798_20240503.pdf",
+     "value": 2028.2
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "H1 2024 4,210.3 [FCBWR158446_20240731 (2024-07-31) p.2 key-figures table '1st half', row 'Sales/Net sales', 2024 column] minus Q1 2024 2,028.2 [FCBWR156798_20240503 (2024-05-03) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2024 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/05/FCBWR156798_20240503.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "published_date": "2024-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/07/FCBWR158446_20240731.pdf",
+     "value": 2182.1
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "9M 2024 6,229.0 [FCBWR160015_20241107 (2024-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2024 column] minus H1 2024 4,210.3 [FCBWR158446_20240731 (2024-07-31) p.2 key-figures table '1st half', row 'Sales/Net sales', 2024 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/07/FCBWR158446_20240731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2024-11-07",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/11/FCBWR160015_20241107.pdf",
+     "value": 2018.7
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "FY 2024 8,648.9 [FCBWR161489_20250213 (2025-02-13) p.3 key-figures table 'full year', row 'Sales/Net sales', 2024 column] minus 9M 2024 6,229.0 [FCBWR160015_20241107 (2024-11-07) p.3 key-figures table '9 months', row 'Sales/Net sales', 2024 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2024/11/FCBWR160015_20241107.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2025-02-13",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/02/FCBWR161489_20250213.pdf",
+     "value": 2419.9
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "Legrand Q1 2025 release/financial information: FCBWR162937_20250507 (2025-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2025 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 2028.2,
+     "published_date": "2025-05-07",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/05/FCBWR162937_20250507.pdf",
+     "value": 2277.8
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "H1 2025 4,774.3 [FCBWR164145_20250731 (2025-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2025 column] minus Q1 2025 2,277.8 [FCBWR162937_20250507 (2025-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2025 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/05/FCBWR162937_20250507.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2025-07-31",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/07/FCBWR164145_20250731.pdf",
+     "value": 2496.5
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "9M 2025 6,971.4 [FCBWR165369_20251106 (2025-11-06) p.3 key-figures table '9 months', row 'Sales/Net sales', 2025 column] minus H1 2025 4,774.3 [FCBWR164145_20250731 (2025-07-31) p.3 key-figures table '1st half', row 'Sales/Net sales', 2025 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/07/FCBWR164145_20250731.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2025-11-06",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/11/FCBWR165369_20251106.pdf",
+     "value": 2197.1
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "FY 2025 9,480.6 [FCBWR166517_20260212 (2026-02-12) p.3 key-figures table 'full year', row 'Sales/Net sales', 2025 column] minus 9M 2025 6,971.4 [FCBWR165369_20251106 (2025-11-06) p.3 key-figures table '9 months', row 'Sales/Net sales', 2025 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2025/11/FCBWR165369_20251106.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "annual_minus_9m",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-02-12",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/02/FCBWR166517_20260212.pdf",
+     "value": 2509.2
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "Legrand Q1 2026 release/financial information: FCBWR167775_20260507 (2026-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2026 column (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 2277.8,
+     "published_date": "2026-05-07",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/05/FCBWR167775_20260507.pdf",
+     "value": 2537.6
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "H1 2026 5,400.3 [FCBWR168887_20260729 (2026-07-29) p.3 key-figures table '1st half', row 'Sales/Net sales', 2026 column] minus Q1 2026 2,537.6 [FCBWR167775_20260507 (2026-05-07) p.2 key-figures table '1st quarter', row 'Sales/Net sales', 2026 column; https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/05/FCBWR167775_20260507.pdf] (via AMF-designated OAM info-financiere.gouv.fr)",
+     "method": "ytd_difference",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-07-29",
+     "source_url": "https://fr.ftp.opendatasoft.com/datadila/INFOFI/BWR/2026/07/FCBWR168887_20260729.pdf",
+     "value": 2862.7
+    }
+   ],
+   "primary": true,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "LR FP",
+ "unit": "million"
 }

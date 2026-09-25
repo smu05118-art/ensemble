@@ -1,7 +1,7 @@
 # 전력기기 컴포짓 — 데이터 계약 (grid-composite/1)
 
 산일전기(062040) 피어의 **공식 실적(타깃)** 과 **외부 프록시(월별 관측)** 를 모아
-선행성·동행성을 검정하고, 검증을 통과한 프록시만 앙상블 컴포짓으로 묶는다.
+선행성·동행성을 검정하고(표본 내 진단), 원점마다 학습 구간 선별을 통과한 프록시로 앙상블 컴포짓을 만든다.
 이 문서는 수집 에이전트·빌더·화면이 공유하는 파일 계약이다. 계약에 맞지 않는 파일은
 빌더가 **읽지 않고 실패 사유를 남긴다**(fail-closed).
 
@@ -61,7 +61,9 @@
   "primary_target": "revenue_segment",
   "structural_breaks": [
     {"date": "2024-10-07", "type": "acquisition|divestiture|segment_reorg|restatement|listing",
-     "note": "…", "source_url": "…"}
+     "note": "…", "source_url": "…",
+     "target": "revenue_segment (선택 — 해당 타깃만)", "affected_fiscal_keys": ["FY2024Q4"],
+     "affects_target": false}
   ],
   "profile": {
     "products": "변압기 종류·전압·용량 범위 등 원문 근거 요약",
@@ -84,10 +86,14 @@
 - `period_end` 는 원문 결산일(4-4-5·토요일 결산이면 그 날짜). 모르면 `null` + `period_end_note`.
 - `prior_year_comparative`: 같은 보고서가 인쇄한 전년 동기 값(재작성 반영). 없으면 생략.
   빌더는 이 값이 있으면 YoY 분모로 우선 쓴다(동일 범위 YoY).
-- `primary_target`: 모델 타깃. 세그먼트가 회사의 변압기·배전 노출을 더 잘 대표하면 세그먼트.
+- `primary_target`: 수집자가 권하는 타깃. **빌더 규칙**: 관련 세그먼트(`revenue_segment`, scope=segment, 분기 16개 이상)가
+  있으면 빌더는 그것을 모델 타깃으로 쓰고, 예외는 빌더의 `TARGET_OVERRIDES` 에 사유와 함께 둔다.
 - 월매출(`freq=M`) 은 `month` 키를 쓰고 `period_start/end` 는 생략 가능.
 - 비상장·실적 미공시 회사는 `listed=false`, `targets={}` 로 두고 `profile` 만 채운다.
 - 최소 이력 목표: 2016Q1 이후 가능한 전 분기(최소 2019Q1~최신).
+- `structural_breaks` 는 YoY 계산에 쓰인다: 비교값이 없는 분기의 YoY 는 범위를 바꾸는 변화(`divestiture`·`restatement`·
+  `segment_reorg` 등, 또는 `affected_fiscal_keys`)를 가로질러 만들지 않는다. 원문 메모가 타깃 무관을 밝히면 `affects_target: false`,
+  특정 타깃에만 해당하면 `target` 에 이름을 적는다.
 
 ## 2. 프록시 파일 `data/proxies/<family>.json`
 
@@ -132,12 +138,7 @@
 | 회사 월매출 | `mops_<code>` | `mops_1519` |
 | TRASS 회사 수출 | `trass_<name>_<port>` | `trass_sanil_T267` |
 
-## 4. 빌더가 하는 일 (요약 — 상세는 README.md)
+## 4. 빌더가 하는 일
 
-1. 회계 분기 ↔ 달력 월 정렬(명목 분기 월, 3/3 개월 완결만).
-2. 로그 YoY 변환(타깃은 `prior_year_comparative` 우선).
-3. 선후행: 시차 k=−2…+4 분기(월 타깃은 −6…+12 개월) 교차상관 — 원계열·사전백색화 두 가지,
-   자기상관 보정 유효표본(n_eff), BH-FDR. 전환점(국면) 선행 개월/분기 중앙값·일치율.
-4. rolling-origin(확장창, 최소 학습 8분기) 단일 프록시 OOS — 시차는 각 원점의 학습 구간에서만 선택.
-5. 앙상블: 학습 구간 선별 → 동일가중·역MSE 결합 → OOS, 기준모형(0YoY·직전YoY·학습평균·AR1) 대비.
-6. 게이트 통과 회사만 현재 분기 나우캐스트(적합 오차 기반 conformal 80% 구간) 공개.
+README.md 의 방법 표가 정본이다(선후행 판정은 사전백색화 상관 + n_eff 보정 p + 회사 안 BH-FDR, OOS 는 가속 모형
+rolling-origin, 나우캐스트는 창이 완결된 시차만 쓴 나우캐스트 앙상블 등급이 A·B 일 때만 공개).

@@ -6,7 +6,8 @@
   "2026-09-25 G1_NA: 시드 8개 값을 SEC XBRL로 검증 — FY2025Q1 154.013 = 6M(329.351)−Q2(175.338), FY2025Q4 237.613 = FY2025 연간(753.188)−9M(515.575), FY2026Q1 283.274 = 6M(579.678)−Q2(296.404), FY2026Q4 461.672 = FY2026 연간(1,420.059, 10-K 2026-09-15)−9M(958.387). 전부 일치, 무변경.",
   "profile 은 FY2026 10-K(2026-09-15) Item 1·Item 2 원문.",
   "(moved from structural_breaks 2026-09-25) 2026-09-15 capacity ramp / revenue mix: Data-center revenue mix increases from 42% FY2025 to 59% FY2026. Incremental USD35M PTS expansion announced for expected FY2027Q4 availability; capacity is not sales guidance. — not a consolidation-scope change under CONTRACT §1 (would falsely flag a scope change in the nowcast window). Source: https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
-  "verify 2026-09-25: checked revenue_total all 8 points (424B4 'Three Months Ended September 30' columns for FY2025Q1/FY2026Q1 — printed directly, so direct_reported_quarter is correct; 10-Q XBRL 3M facts for Q2/Q3; IR Q4 release statement of operations for Q4) — all values match; fixed 11: 8 non-specific seed locators replaced, break types 'IPO_Up_C_reorganization'→'listing', 'common_control_combination'→'restatement', capacity_ramp entry moved to collection_notes."
+  "verify 2026-09-25: checked revenue_total all 8 points (424B4 'Three Months Ended September 30' columns for FY2025Q1/FY2026Q1 — printed directly, so direct_reported_quarter is correct; 10-Q XBRL 3M facts for Q2/Q3; IR Q4 release statement of operations for Q4) — all values match; fixed 11: 8 non-specific seed locators replaced, break types 'IPO_Up_C_reorganization'→'listing', 'common_control_combination'→'restatement', capacity_ramp entry moved to collection_notes.",
+  "annotate 2026-09-25: structural_break 2025-05-08 affects_target=False (근거: 기존 note — combined presentation from formation/acquisition dates; not a revenue addition)"
  ],
  "currency": "USD",
  "fiscal_year_end_month": 6,
@@ -159,6 +160,8 @@
    "type": "acquisition"
   },
   {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: combined presentation from formation/acquisition dates; not a revenue addition",
    "date": "2025-05-08",
    "note": "PwrQ and States contributed to Opco. Historical combined presentation includes transferred entities from formation/acquisition dates, not a sudden FY2025Q4 revenue addition.",
    "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",

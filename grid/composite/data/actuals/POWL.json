@@ -8,7 +8,8 @@
   "orders_segment 43개(FY2016Q1–FY2026Q3): 분기 실적 보도자료(8-K Ex.99.1) 본문 \"New orders … totaled $X million\". 2018-02-06 보도자료는 문장에 \"fourth quarter of fiscal 2018\"로 오기 — 실제 FY2018Q1(2017-10~12) 발표문이며 PYC 문구(\"$91 million in the first quarter of fiscal 2017\")로 확인.",
   "FY2020Q4 $57M 은 순수주(총 $75M − 취소/범위축소 $18M), FY2022Q1 $108M 도 순수주(총 $122M) — 회사 헤드라인 값 그대로.",
   "(moved from structural_breaks 2026-09-25) 2026-04-02 share split: per-share metrics only; revenue/orders scope unchanged — not a structural break under CONTRACT §1 (would falsely flag a scope change in the nowcast window).",
-  "verify 2026-09-25: checked revenue_total all 43 points vs SEC XBRL 3-month facts inside each cited filing (Q4 = 10-K quarterly table), orders_segment FY2016Q1, FY2016Q3, FY2017Q2, FY2018Q2, FY2019Q1, FY2020Q4, FY2021Q2, FY2021Q4, FY2023Q2, FY2023Q3, FY2024Q2, FY2026Q1, FY2026Q2, FY2026Q3 (release text 'New orders … totaled $X million' incl. printed PYC) — all values match; fixed 64: 31 non-specific seed locators replaced, 31 seed methods 'reported'→'direct_reported_quarter', 2022 break type 'disposal'→'divestiture' with note+source from FY2022 10-K, share_split moved out of structural_breaks."
+  "verify 2026-09-25: checked revenue_total all 43 points vs SEC XBRL 3-month facts inside each cited filing (Q4 = 10-K quarterly table), orders_segment FY2016Q1, FY2016Q3, FY2017Q2, FY2018Q2, FY2019Q1, FY2020Q4, FY2021Q2, FY2021Q4, FY2023Q2, FY2023Q3, FY2024Q2, FY2026Q1, FY2026Q2, FY2026Q3 (release text 'New orders … totaled $X million' incl. printed PYC) — all values match; fixed 64: 31 non-specific seed locators replaced, 31 seed methods 'reported'→'direct_reported_quarter', 2022 break type 'disposal'→'divestiture' with note+source from FY2022 10-K, share_split moved out of structural_breaks.",
+  "annotate 2026-09-25: structural_break 2022-06-30 affects_target=False (근거: 기존 note — immaterial to revenue — reported history retained)"
  ],
  "currency": "USD",
  "fiscal_year_end_month": 9,
@@ -147,6 +148,8 @@
  "schema": "grid-composite-actuals/1",
  "structural_breaks": [
   {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: immaterial to revenue — reported history retained",
    "date": "2022-06-30",
    "note": "Fiscal 2022: sale of a small, non-core industrial valve repair and servicing business within the Canadian operations (proceeds ≈ $4.3M; gain in 'Other income'); immaterial to revenue — reported history retained. Exact closing date not stated in the 10-K; 2022-06-30 kept as approximate.",
    "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042022000036/powl-20220930.htm",

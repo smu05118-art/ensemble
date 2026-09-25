@@ -33,7 +33,10 @@ SCREEN_T = 1.0
 FDR_Q = 0.10
 LEAD_MARGIN = 0.05
 MAX_CANDIDATES = 28
-ASOF_DEFAULT = '2026-09-25'
+# 범위를 바꾸는 구조 변화 유형 — 같은 보고서 비교값이 없는 분기의 YoY 를 이 변화에 걸쳐 만들지 않는다.
+SCOPE_BREAK_TYPES = {'divestiture', 'restatement', 'segment_reorg', 'excluded_predecessor_successor_history', 'pending_disposal'}
+# 나우캐스트 공개를 막지 않는 유형(매출 범위와 무관)
+NON_GATING_BREAK_TYPES = {'capacity_expansion', 'capacity', 'listing', 'ownership_change', 'equity_method_investment'}
 ANCHOR_RAW = 'trass_sanil_ansan_8504212'
 ANCHOR_SERIES = 'trass_sanil_ansan_8504212_post'
 # 산일전기 대미 수출이 분기 1천만 달러를 처음 넘은 2022Q3 부터만 쓴다 — 그 전 YoY 는 신규 고객 진입(램프업) 기저효과라
@@ -141,6 +144,14 @@ def load_proxies():
         catalog[ANCHOR_SERIES] = dict(raw, id=ANCHOR_SERIES, obs=post, first=ym_of(min(post)), last=ym_of(max(post)),
                                       label_ko='안산시 HS850421·22 수출(램프업 이후 2022-07~, 산일전기 출하 대리)',
                                       notes=(raw.get('notes') or '') + ' 램프업 이후만(2022-07~).')
+    kr, an = catalog.get('trass_kr_8504212'), catalog.get(ANCHOR_RAW)
+    if kr and an:
+        res_obs = {m: kr['obs'][m] - an['obs'][m] for m in kr['obs'] if m in an['obs'] and kr['obs'][m] - an['obs'][m] > 0}
+        if len(res_obs) >= 24:
+            catalog['trass_kr_8504212_exansan'] = dict(kr, id='trass_kr_8504212_exansan', obs=res_obs,
+                                                       label_ko='한국 HS850421·22 수출 − 안산(산일 제외 국내 동업계, TRASS)',
+                                                       first=ym_of(min(res_obs)), last=ym_of(max(res_obs)),
+                                                       notes='같은 TRASS 원천·단위(천 USD)의 국가 합계에서 안산시 신고분을 뺀 잔차.')
     ytd = catalog.get('nea_grid_investment_ytd')
     if ytd:
         # 누계(YTD) → 분기 유량: 3월 = 1~3월 누계, 그 외 = 누계(m) − 누계(m−3) (같은 해 안에서만)
@@ -245,7 +256,18 @@ def target_quarters(doc, tname):
     return rows, months
 
 
-def target_yoy(rows):
+def applies(b, tname):
+    """구조 변화가 이 타깃에 해당하는가(target 필드·affects_target=false 주석 반영)."""
+    if b.get('affects_target') is False:
+        return False
+    tg = b.get('target')
+    return not tg or tname in str(tg)
+
+
+def target_yoy(rows, breaks=None, tname=None):
+    """로그 YoY. 같은 보고서의 전년 비교값이 있으면 그것을 분모로(동일 범위). 없으면 12개월 전 포인트를 쓰되,
+    통화가 다르거나 그 사이에 범위를 바꾸는 구조 변화(매각·재작성·세그먼트 재편, 또는 affected_fiscal_keys 에 든 분기)가
+    있으면 YoY 를 만들지 않는다(범위가 다른 두 값을 나누지 않는다)."""
     by_end = {r['end_mi']: r for r in rows}
     out = {}
     for r in rows:
@@ -258,6 +280,12 @@ def target_yoy(rows):
             for off in (12, 11, 13):
                 prev = by_end.get(r['end_mi'] - off)
                 if prev and prev['value'] and prev['value'] > 0 and prev.get('currency') == r.get('currency'):
+                    if any(applies(b, tname) and (r['key'] in (b.get('affected_fiscal_keys') or [])
+                                                  or (b.get('type') in SCOPE_BREAK_TYPES and b.get('date')
+                                                      and prev['end_mi'] < month_index(b['date'][:7]) <= r['end_mi']))
+                           for b in (breaks or [])):
+                        basis = 'blocked_break'
+                        break
                     base, basis = prev['value'], 'prior_point'
                     break
         if base:
@@ -331,10 +359,13 @@ def pw_ccf(pw, lags, sign, step=3, min_n=12):
     for k in lags:
         pairs = [(xf[q - k], v, q) for q, v in yf.items() if (q - k) in xf]
         n = len(pairs)
-        r = sc.pearson([a for a, _, _ in pairs], [b for _, b, _ in pairs]) if n >= min_n else None
+        xs_, ys_ = [a for a, _, _ in pairs], [b for _, b, _ in pairs]
+        r = sc.pearson(xs_, ys_) if n >= min_n else None
         p_one = None
         if r is not None:
-            p2 = sc.corr_pvalue(r, n)
+            # 사전백색화 뒤에도 남는 계절(겹치는 YoY) 자기상관을 유효표본으로 보정한다(분기 lag≤6, 월 lag≤12).
+            neff = sc.n_effective(xs_, ys_, max_lag=max(1, min(12 if step == 1 else 6, n // 3)))
+            p2 = sc.corr_pvalue(r, neff)
             p_one = p2 / 2 if r * sign > 0 else 1 - p2 / 2
         ex = [(a, b) for a, b, q in pairs if not in_covid(q) and not in_covid(q - k)]
         r_ex = sc.pearson([a for a, _ in ex], [b for _, b in ex]) if len(ex) >= 8 else None
@@ -358,7 +389,7 @@ def turning_point_lead(y, x_lag0, step):
 def classify(rows, fdr_q):
     """사전 규칙(사전백색화 상관 기준): 유의(BH q<0.10, 기대 부호) 시차 중 부호 조정 상관 최대 k*.
     선행 = k*≥1 이고 r_k* ≥ r_0 + 0.05 · 후행 = k*<0 이고 r_k* ≥ r_0 + 0.05 · 그 외 유의 = 동행.
-    FDR 은 못 넘었지만 명목 p<0.05 인 경우 strength='nominal' 로 따로 표시(판정 수에는 넣지 않는다)."""
+    검정 가능한 시차가 하나도 없으면 'untested'. (명목 p 단계는 두지 않는다 — 7개 시차 중 하나가 우연히 넘는 비율이 30% 다.)"""
     def pick(sig):
         r0 = next((row['signed_r'] for row in rows if row['k'] == 0 and row['signed_r'] is not None), None)
         best = max(sig, key=lambda r: r['signed_r'])
@@ -369,12 +400,15 @@ def classify(rows, fdr_q):
         if k < 0 and best['signed_r'] >= base + LEAD_MARGIN:
             return 'lag', k
         return 'coincident', (0 if any(row['k'] == 0 for row in sig) else k)
+    if not any(row['signed_r'] is not None for row in rows):
+        return 'untested', None, None
     sig = [row for row in rows if row.get('q') is not None and row['q'] < fdr_q and (row['signed_r'] or 0) > 0]
     if sig:
+        best = max(sig, key=lambda r: r['signed_r'])
+        r0 = next((row['signed_r'] for row in rows if row['k'] == 0 and row['signed_r'] is not None), None)
+        if best['k'] != 0 and r0 is None:
+            return 'none', best['k'], 'undetermined'  # r(0) 을 못 구해 선행·후행 여유 검사를 할 수 없다
         return pick(sig) + ('fdr',)
-    nom = [row for row in rows if row.get('p') is not None and row['p'] < 0.05 and (row['signed_r'] or 0) > 0]
-    if nom:
-        return ('none',) + (pick(nom)[1],) + ('nominal:' + pick(nom)[0],)
     best_any = max((row for row in rows if row['signed_r'] is not None), key=lambda r: r['signed_r'], default=None)
     return 'none', (best_any['k'] if best_any else None), None
 
@@ -455,12 +489,13 @@ def baselines(y, step):
     return out
 
 
-def evaluate(y, preds, base):
+def evaluate(y, preds, base, fallback=None):
     ts = [t for t in sorted(preds) if t in base and t in y]
     if not ts:
         return None
     e = [preds[t] - y[t] for t in ts]
-    res = {'n': len(ts), 'mae': sc.mae(e), 'rmse': sc.rmse(e)}
+    res = {'n': len(ts), 'mae': sc.mae(e), 'rmse': sc.rmse(e),
+           'n_model': sum(1 for t in ts if not (fallback or {}).get(t))}
     for b in ('zero', 'last', 'mean', 'ar1'):
         eb = [base[t][b] - y[t] for t in ts]
         res['mae_' + b] = sc.mae(eb)
@@ -515,8 +550,9 @@ def ensemble(y, singles, base, sign_map):
 
 
 def grade(ev, n_hist):
-    if ev is None or ev['n'] < MIN_OOS:
-        return 'N', f'OOS 표본 {0 if ev is None else ev["n"]}개 < {MIN_OOS}'
+    n_model = None if ev is None else ev.get('n_model', ev['n'])
+    if ev is None or n_model < MIN_OOS:
+        return 'N', f'프록시가 실제로 쓰인 OOS 분기 {0 if ev is None else n_model}개 < {MIN_OOS}'
     rel = ev['rel_mae_best']
     if rel is None:
         return 'N', '기준모형 오차 0'
@@ -554,8 +590,16 @@ def candidate_ids(peer, doc, catalog):
         add(pid, 'global')
     if peer['id'] not in ('SANIL', 'SANIL_PROXY'):
         add(ANCHOR_SERIES, 'anchor_diag', ensemble=False)
-    if peer['id'] == 'SANIL_PROXY':  # 타깃 구성요소(안산 하위 계열)는 후보에서 뺀다
-        ids = [i for i in ids if not i.startswith('trass_sanil_')]
+    if peer['id'] == 'SANIL_PROXY':
+        # 타깃(안산 HS850421·22 수출)을 포함하는 계열은 후보에서 뺀다 — 안산 하위 계열, 한국 전체 합계,
+        # 한국발 미국 수입 거울 계열(같은 선적의 다른 통계). 대신 '한국 전체 − 안산' 잔차를 쓴다.
+        contains = ('trass_sanil_', 'trass_kr_', 'kre_85042190', 'kr_exp_850421_', 'kr_exp_850422_',
+                    'us_imp_850421_p410', 'us_imp_850422_p410', 'us_imp_8504dist_p410')
+        ids = [i for i in ids if not i.startswith(contains) or i == 'trass_kr_8504212_exansan']
+        if 'trass_kr_8504212_exansan' in catalog and 'trass_kr_8504212_exansan' not in ids:
+            ids.insert(0, 'trass_kr_8504212_exansan')
+            roles['trass_kr_8504212_exansan'] = {'role': 'route', 'sign': 1, 'ensemble': True,
+                                                 'why': '한국 HS850421·22 수출 중 안산 외 — 산일 제외 국내 동업계 흐름'}
     keep = ids[:MAX_CANDIDATES]
     if ANCHOR_SERIES in ids and ANCHOR_SERIES not in keep:
         keep.append(ANCHOR_SERIES)
@@ -581,17 +625,20 @@ TARGET_OVERRIDES = {
     'TBEA': ('revenue_segment', '연결 매출이 폴리실리콘·석탄 등에 좌우되어 변압기(전기설비) 제품 반기 매출로 고정'),
     # 세그먼트 정의가 2018·2019·2025 에 바뀌어 연결 매출 유지
     'SIEYUAN': ('revenue_total', '제품 세그먼트 정의가 2018·2019·2025 에 바뀌어 연결 매출 유지'),
+    # IR 전력기기 구간은 알라바마 공장 제외·2024Q1 배전변압기 재분류(3Q24·4Q24 비교값 혼합 기준)
+    'HDHE': ('revenue_total', 'IR 전력기기 구간이 알라바마 공장 제외·2024Q1 재분류로 단절 — 연결 매출 유지'),
 }
 
 
 def choose_target(peer, doc):
-    """계약 §1 규칙: 관련 세그먼트(scope=segment, 분기, 16개 이상)가 있으면 세그먼트, 없으면 파일의 primary_target."""
+    """빌더 규칙(CONTRACT §1): 관련 세그먼트(scope=segment, 분기, 16개 이상)가 있으면 세그먼트, 없으면 파일의 primary_target.
+    예외는 TARGET_OVERRIDES 에 사유와 함께 둔다."""
     targets = doc.get('targets') or {}
     if peer['id'] in TARGET_OVERRIDES and TARGET_OVERRIDES[peer['id']][0] in targets:
         return TARGET_OVERRIDES[peer['id']][0], 'override', TARGET_OVERRIDES[peer['id']][1]
     seg = targets.get('revenue_segment')
     if seg and seg.get('scope') == 'segment' and seg.get('freq') == 'Q' and len(seg.get('points') or []) >= 16:
-        return 'revenue_segment', 'contract_segment', '관련 세그먼트 분기 16개 이상 — 계약 규칙으로 세그먼트 사용'
+        return 'revenue_segment', 'contract_segment', '관련 세그먼트 분기 16개 이상 — 빌더 규칙(CONTRACT §1)으로 세그먼트 사용'
     return doc.get('primary_target'), 'file_primary', '수집 파일의 primary_target'
 
 
@@ -609,14 +656,18 @@ def analyze_peer(peer, doc, catalog, asof_mi):
     t = doc['targets'][tname]
     rows, months = target_quarters(doc, tname)
     step = months
-    yy = target_yoy(rows)
+    breaks_all = doc.get('structural_breaks') or []
+    yy_all = target_yoy(rows, breaks_all, tname)
+    yy = dict(yy_all)
+    yy_raw = target_yoy(rows, None, tname)  # 구조 변화 규칙이 없을 때와 비교해 막힌 분기를 기록
     y = {k: v[0] for k, v in yy.items()}
-    res['target'] = {'name': tname, 'rule': trule, 'rule_note': tnote, 'file_primary': doc.get('primary_target'),
+    res['target'] = {'lag_unit': 'H' if months == 6 else 'Q','name': tname, 'rule': trule, 'rule_note': tnote, 'file_primary': doc.get('primary_target'),
                      'label_ko': t.get('label_ko'), 'scope': t.get('scope'),
                      'segment_name': t.get('segment_name'), 'freq': t.get('freq'), 'window_months': months,
                      'n_levels': len(rows), 'n_yoy': len(y),
                      'first': rows[0]['key'] if rows else None, 'last': rows[-1]['key'] if rows else None,
-                     'yoy_basis_comparative': sum(1 for v in yy.values() if v[1] == 'comparative')}
+                     'yoy_basis_comparative': sum(1 for v in yy.values() if v[1] == 'comparative'),
+                     'yoy_blocked_by_break': [r['key'] for r in rows if r['end_mi'] in yy_raw and r['end_mi'] not in yy]}
     res['series'] = [{'key': r['key'], 'm': ym_of(r['end_mi']), 'v': rnd(r['value'], 3),
                       'yoy': rnd(yy[r['end_mi']][0]) if r['end_mi'] in yy else None} for r in rows]
     other = {}
@@ -624,14 +675,15 @@ def analyze_peer(peer, doc, catalog, asof_mi):
         if oname == tname or ot.get('freq') not in ('Q', 'M'):
             continue
         orows, om = target_quarters(doc, oname)
-        oy = target_yoy(orows)
+        oy = target_yoy(orows, breaks_all, oname)
         other[oname] = {'label_ko': ot.get('label_ko'), 'scope': ot.get('scope'), 'freq': ot.get('freq'),
                         'series': [{'key': r['key'], 'm': ym_of(r['end_mi']), 'v': rnd(r['value'], 3),
                                     'yoy': rnd(oy[r['end_mi']][0]) if r['end_mi'] in oy else None} for r in orows]}
     res['other_targets'] = other
-    if len(y) < MIN_TRAIN + 4:
+    min_hist = max(MIN_TRAIN + 4, PW_MIN_N + 1)
+    if len(y) < min_hist:
         res['status'] = 'short_history'
-        res['reasons'].append(f'YoY 관측 {len(y)}개 — 선후행 검정 최소 {MIN_TRAIN + 4}개 미만')
+        res['reasons'].append(f'YoY 관측 {len(y)}개 — 선후행 검정 최소 {min_hist}개 미만')
     cand, roles, dropped, missing = candidate_ids(peer, doc, catalog)
     res['candidates_dropped'] = dropped
     res['hints_missing'] = missing
@@ -656,7 +708,7 @@ def analyze_peer(peer, doc, catalog, asof_mi):
                  'sign': sign, 'kind': pr['kind'], 'family': pr['family'], 'first': pr['first'], 'last': pr['last'],
                  'ccf': ccf, 'pw': pw}
         per.append((entry, xl, pr))
-        if roles[pid]['ensemble'] and len(y) >= MIN_TRAIN + 4:
+        if roles[pid]['ensemble'] and len(y) >= min_hist:
             singles[pid] = honest_single_proxy(y, {k: xl[k] for k in LEAD_LAGS}, sign, step)
     # BH-FDR: 회사 안 모든 (프록시, 시차) 사전백색화 단측 검정(앵커 진단은 따로)
     for group in (lambda e: e['role'] != 'anchor_diag', lambda e: e['role'] == 'anchor_diag'):
@@ -670,7 +722,7 @@ def analyze_peer(peer, doc, catalog, asof_mi):
         raw_k = next((row for row in entry['ccf'] if row['k'] == kstar), None) if kstar is not None else None
         pw_k = next((row for row in entry['pw'] if row['k'] == kstar), None) if kstar is not None else None
         # 강건: 원계열 동조 ≥0.3 + 팬데믹 분기를 빼도 사전백색화 상관이 같은 부호로 ≥0.2
-        entry['robust'] = bool(cls != 'none' and raw_k and (raw_k['signed_r'] or 0) >= 0.3 and pw_k
+        entry['robust'] = bool(cls in ('lead', 'coincident', 'lag') and raw_k and (raw_k['signed_r'] or 0) >= 0.3 and pw_k
                                and pw_k.get('r_excovid') is not None and pw_k['r_excovid'] * entry['sign'] >= 0.2)
         entry['turning'] = turning_point_lead(y, xl[0], step) if xl.get(0) and len(xl[0]) >= 12 else None
         if entry['id'] in singles and base:
@@ -684,14 +736,18 @@ def analyze_peer(peer, doc, catalog, asof_mi):
         # 타이트: 회사 경로 프록시 + FDR 유의(사전백색화) + 원계열 동조 ≥0.3 + OOS 가 최선 기준모형을 이김
         entry['tight'] = bool(entry['role'] in ('pre_registered', 'route') and entry['robust']
                               and oos.get('rel_mae_best') is not None and oos['rel_mae_best'] < 1.0)
-        entry['validated_lead'] = bool(cls == 'lead' and oos.get('n', 0) >= MIN_OOS and oos.get('rel_mae_best') is not None
-                                       and oos['rel_mae_best'] < 1.0 and (entry.get('oos_lag_mode') or 0) >= 1)
+        rel, dmp = oos.get('rel_mae_best'), oos.get('dm_p')
+        base_ok = bool(cls == 'lead' and oos.get('n', 0) >= MIN_OOS and rel is not None and (entry.get('oos_lag_mode') or 0) >= 1)
+        # 검증된 선행 = 등급 A 기준(최선 기준모형 대비 MAE ≤0.9 & DM p<0.10). 개선이 있으나 유의하지 않으면 'OOS 우위'로만.
+        entry['validated_lead'] = bool(base_ok and rel <= 0.9 and dmp is not None and dmp < 0.10)
+        entry['oos_edge_lead'] = bool(base_ok and rel < 1.0 and not entry['validated_lead'])
     res['candidates'] = [compact_candidate(e) for e, _, _ in per]
     # 앙상블
     if singles and base:
         ew, imse, detail = ensemble(y, singles, base, {pid: roles[pid]['sign'] for pid in singles})
-        ev_ew = evaluate(y, ew, base)
-        ev_imse = evaluate(y, imse, base)
+        fb = {t: d['fallback'] for t, d in detail.items()}
+        ev_ew = evaluate(y, ew, base, fb)
+        ev_imse = evaluate(y, imse, base, fb)
         g, why = grade(ev_ew, len(y))
         fallback_share = (sum(1 for d in detail.values() if d['fallback']) / len(detail)) if detail else None
         res['composite'] = {
@@ -702,10 +758,32 @@ def analyze_peer(peer, doc, catalog, asof_mi):
                      'members': detail[t]['members'], 'fallback': detail[t]['fallback']}
                     for t in sorted(ew) if t in y],
         }
-        comp_abs = [abs(ew[t] - y[t]) for t in ew if t in y]
         res['composite']['eval_ew'] = round_dict(ev_ew)
         res['composite']['eval_imse'] = round_dict(ev_imse)
-        res['nowcast'] = nowcast(doc, y, rows, per, singles, base, g, step, months, target_mi, comp_abs)
+        # 나우캐스트 전용 앙상블: 지금 시점에 창이 완결된 시차만 쓰는 같은 절차를 rolling-origin 으로 다시 돌려
+        # 실제로 공개할 예측기의 등급·오차 구간을 잰다(전체 앙상블 등급을 빌려 쓰지 않는다).
+        xl_by = {e['id']: xl for e, xl, _ in per}
+        pr_by = {e['id']: pr for e, _, pr in per}
+        feas = {}
+        for pid in singles:
+            ks = [k for k in LEAD_LAGS if proxy_yoy(pr_by[pid], target_mi - step * k, months) is not None
+                  and proxy_yoy(pr_by[pid], target_mi - step * (k + 1), months) is not None]
+            if ks:
+                feas[pid] = ks
+        singles_nc = {pid: honest_single_proxy(y, {k: xl_by[pid][k] for k in ks}, roles[pid]['sign'], step, lags=ks)
+                      for pid, ks in feas.items()}
+        singles_nc = {pid: v for pid, v in singles_nc.items() if v}
+        if singles_nc:
+            ew_nc, _, det_nc = ensemble(y, singles_nc, base, None)
+            ev_nc = evaluate(y, ew_nc, base, {t: d['fallback'] for t, d in det_nc.items()})
+            g_nc, why_nc = grade(ev_nc, len(y))
+            comp_abs_nc = [abs(ew_nc[t] - y[t]) for t in ew_nc if t in y]
+        else:
+            ev_nc, g_nc, why_nc, comp_abs_nc = None, 'N', '지금 창이 완결된 프록시 없음', []
+        res['composite']['nowcast_eval'] = round_dict(ev_nc) if ev_nc else None
+        res['composite']['nowcast_grade'] = g_nc
+        res['composite']['nowcast_grade_reason'] = why_nc
+        res['nowcast'] = nowcast(doc, y, rows, per, singles_nc, feas, base, g_nc, step, months, target_mi, comp_abs_nc, tname)
     else:
         res['composite'] = None
         res['nowcast'] = None
@@ -717,7 +795,7 @@ def analyze_peer(peer, doc, catalog, asof_mi):
 
 def compact_candidate(e):
     out = {k: e.get(k) for k in ('id', 'label_ko', 'role', 'why', 'sign', 'kind', 'family', 'first', 'last', 'class', 'in_ensemble',
-                                 'k_star', 'strength', 'robust', 'tight', 'validated_lead', 'oos_lag_mode')}
+                                 'k_star', 'strength', 'robust', 'tight', 'validated_lead', 'oos_edge_lead', 'oos_lag_mode')}
     out['ccf'] = [{'k': r['k'], 'n': r['n'], 'r': rnd(r['r'], 3), 'n_eff': rnd(r['n_eff'], 1), 'p': rnd(r.get('p'), 4)}
                   for r in e['ccf']]
     out['pw'] = [{'k': r['k'], 'n': r['n'], 'r': rnd(r['r'], 3), 'p': rnd(r.get('p'), 4), 'q': rnd(r.get('q'), 4),
@@ -729,29 +807,26 @@ def compact_candidate(e):
     return out
 
 
-def nowcast(doc, y, rows, per, singles, base, g, step, months, target_mi, comp_abs):
-    """현재 대상 분기(마지막 실적 다음 분기)와, 선행 프록시가 있으면 그다음 분기."""
+def nowcast(doc, y, rows, per, singles, feas, base, g, step, months, target_mi, comp_abs, tname):
+    """현재 대상 분기(마지막 실적 다음 분기) 나우캐스트. 창이 완결된 시차만 쓰고(부분 관측 없음),
+    등급·구간은 같은 조건의 rolling-origin 앙상블(nowcast_grade)에서 가져온다."""
     if target_mi is None:
         return None
     by_end = {r['end_mi']: r for r in rows}
-    out = {'target_m': ym_of(target_mi), 'members': [], 'status': None, 'published': False, 'reasons': []}
-    qs = sorted(y)
+    out = {'target_m': ym_of(target_mi), 'members': [], 'status': None, 'published': False, 'reasons': [],
+           'lag_unit': 'H' if step == 6 else 'Q'}
+    prev = y.get(target_mi - step)
     members = []
     for entry, xl, pr in per:
         pid = entry['id']
-        if pid not in singles:
-            continue
-        # 전체 이력으로 시차 선택·가속 모형 적합(현재 원점 = 마지막 실적 분기 다음)
-        prev = y.get(target_mi - step)
-        if prev is None:
+        if pid not in singles or prev is None:
             continue
         best = None
-        for k in LEAD_LAGS:
-            x = xl.get(k) or {}
-            rows = accel_rows(y, x, step)
-            if len(rows) < MIN_TRAIN:
+        for k in feas.get(pid, []):
+            rows_ = accel_rows(y, xl.get(k) or {}, step)
+            if len(rows_) < MIN_TRAIN:
                 continue
-            fit = accel_fit(rows)
+            fit = accel_fit(rows_)
             if fit is None:
                 continue
             if best is None or fit[1] * entry['sign'] > best[0]:
@@ -760,37 +835,24 @@ def nowcast(doc, y, rows, per, singles, base, g, step, months, target_mi, comp_a
             continue
         preds = singles[pid]
         past = [s for s in preds if s in base]
-        if len(past) >= 4:
-            if sc.mae([preds[s][0] - y[s] for s in past]) >= sc.mae([base[s]['last'] - y[s] for s in past]):
-                continue
+        if len(past) >= 4 and sc.mae([preds[s][0] - y[s] for s in past]) >= sc.mae([base[s]['last'] - y[s] for s in past]):
+            continue
         bcoef, k = best[2], best[1]
         src_end = target_mi - step * k
-        full = proxy_yoy(pr, src_end, months)
-        x_prev = proxy_yoy(pr, src_end - step, months)
-        if x_prev is None:
+        x_now, x_prev = proxy_yoy(pr, src_end, months), proxy_yoy(pr, src_end - step, months)
+        if x_now is None or x_prev is None:
             continue
-        status = 'complete'
-        obs_months = [ym_of(m) for m in range(src_end - months + 1, src_end + 1)]
-        if full is None:
-            part = proxy_partial_yoy(pr, src_end, months)
-            if part is None or len(part[1]) < 2:
-                continue
-            full, obs_months = part
-            status = 'partial'
-        pred = prev + bcoef * (full - x_prev)
-        members.append({'id': pid, 'k': k, 't_full': rnd(best[0], 3), 'x_yoy': rnd(full), 'pred_yoy': rnd(pred),
-                        'status': status, 'months': obs_months})
+        members.append({'id': pid, 'k': k, 't_full': rnd(best[0], 3), 'x_yoy': rnd(x_now),
+                        'pred_yoy': rnd(prev + bcoef * (x_now - x_prev)),
+                        'months': [ym_of(m) for m in range(src_end - months + 1, src_end + 1)]})
     out['members'] = members
     if not members:
         out['status'] = 'no_member'
-        out['reasons'].append('현재 분기에 쓸 수 있는 선별 프록시 없음')
+        out['reasons'].append('현재 대상 기간에 창이 완결된 선별 프록시 없음')
         return out
-    complete = [m for m in members if m['status'] == 'complete']
-    use = complete if complete else members
-    out['status'] = 'complete' if complete else 'partial'
-    yhat = sc.mean([m['pred_yoy'] for m in use])
+    out['status'] = 'complete'
+    yhat = sc.mean([m['pred_yoy'] for m in members])
     out['pred_yoy'] = rnd(yhat)
-    # 앙상블 OOS 절대오차로 분할 conformal 80% 구간(로그 YoY 단위)
     halfw = sc.conformal_halfwidth(comp_abs, 0.8)
     out['halfwidth_80'] = rnd(halfw)
     out['interval_yoy'] = [rnd(yhat - halfw), rnd(yhat + halfw)] if halfw is not None else None
@@ -800,21 +862,35 @@ def nowcast(doc, y, rows, per, singles, base, g, step, months, target_mi, comp_a
             base_row = by_end[target_mi - off]
             break
     out['base'] = {'key': base_row['key'], 'value': base_row['value']} if base_row else None
-    if base_row:
+    # 레벨 = 전년 동기 값 × exp(ŷ). 최근 비교값이 최초 공시값과 2% 넘게 다르면(재작성) 범위가 달라 레벨을 내지 않는다.
+    restated = []
+    for r in rows[-6:]:
+        pr0 = by_end.get(r['end_mi'] - 12)
+        if r.get('comparative') and pr0 and pr0['value']:
+            restated.append(r['comparative'] / pr0['value'])
+    level_ok = base_row is not None and all(abs(x - 1) <= 0.02 for x in restated)
+    if level_ok:
         out['level'] = rnd(base_row['value'] * math.exp(yhat), 3)
         if halfw is not None:
             out['level_interval'] = [rnd(base_row['value'] * math.exp(yhat - halfw), 3),
                                      rnd(base_row['value'] * math.exp(yhat + halfw), 3)]
+    elif base_row is not None:
+        out['reasons'].append('최근 비교값이 최초 공시와 2% 넘게 달라(재작성) 레벨 환산을 생략')
     out['grade'] = g
-    breaks = [b for b in (doc.get('structural_breaks') or []) if b.get('date') and b['date'][:7] >= ym_of(target_mi - 15)]
+    breaks = [b for b in (doc.get('structural_breaks') or []) if b.get('date') and b['date'][:7] >= ym_of(target_mi - 15)
+              and applies(b, tname) and b.get('type') not in NON_GATING_BREAK_TYPES]
     out['recent_breaks'] = breaks
     if g not in ('A', 'B'):
-        out['reasons'].append(f'앙상블 등급 {g} — 수치 공개 보류(A·B 만 공개)')
-    if out['status'] != 'complete':
-        out['reasons'].append('선별 프록시의 현재 창이 미완결(부분 관측) — 잠정')
+        out['reasons'].append(f'나우캐스트 앙상블 등급 {g} — 수치 공개 보류(A·B 만 공개)')
     if breaks:
-        out['reasons'].append('최근/대상 분기 범위 변경: ' + '; '.join(str(b.get('type')) + ' ' + str(b.get('date')) for b in breaks))
+        out['reasons'].append('최근/대상 기간 구조 변화: ' + '; '.join(str(b.get('type')) + ' ' + str(b.get('date')) for b in breaks))
     out['published'] = (g in ('A', 'B')) and not breaks
+    if not out['published']:
+        for key in ('pred_yoy', 'interval_yoy', 'level', 'level_interval', 'halfwidth_80'):
+            out.pop(key, None)
+        for m in members:
+            m.pop('pred_yoy', None)
+            m.pop('x_yoy', None)
     return out
 
 
@@ -825,12 +901,17 @@ def summarize(res):
     lag = [c for c in cands if c['class'] == 'lag' and c['role'] != 'anchor_diag']
 
     def top(lst):
-        lst = sorted(lst, key=lambda c: -max(((r['r'] or -1) * c['sign'] for r in c['pw'] if r['r'] is not None), default=-1))
-        return [c['id'] for c in lst[:3]]
+        def key(c):
+            rk = next((r['r'] for r in c['pw'] if r['k'] == c['k_star'] and r['r'] is not None), -1)
+            return (c.get('validated_lead', False), c.get('robust', False), rk * c['sign'])
+        return [c['id'] for c in sorted(lst, key=key, reverse=True)[:3]]
     anchor = next((c for c in cands if c['role'] == 'anchor_diag'), None)
     comp = res.get('composite') or {}
     return {'n_candidates': len([c for c in cands if c['role'] != 'anchor_diag']),
             'n_lead': len(lead), 'n_coincident': len(coin), 'n_lag': len(lag),
+            'n_tested': sum(1 for c in cands if c['class'] != 'untested' and c['role'] != 'anchor_diag'),
+            'n_untested': sum(1 for c in cands if c['class'] == 'untested' and c['role'] != 'anchor_diag'),
+            'n_oos_edge_lead': sum(1 for c in cands if c.get('oos_edge_lead')),
             'n_robust': sum(1 for c in cands if c['robust'] and c['role'] != 'anchor_diag'),
             'n_tight': sum(1 for c in cands if c['tight']), 'n_validated_lead': sum(1 for c in cands if c['validated_lead']),
             'top_lead': top(lead), 'top_coincident': top(coin),
@@ -875,8 +956,8 @@ def monthly_ccf(doc, catalog, cand_ids, roles, min_months=36):
                     'raw_r0': rnd(raw.get(0), 3),
                     'pw': [{'k': r['k'], 'n': r['n'], 'r': rnd(r['r'], 3), 'q': rnd(r.get('q'), 4), 'rx': rnd(r.get('r_excovid'), 3)}
                            for r in pw]})
-    order = {'lead': 0, 'coincident': 1, 'lag': 2, 'none': 3}
-    out.sort(key=lambda e: (order[e['class']], -max(((r['r'] or -1) for r in e['pw'] if r['r'] is not None), default=-1)))
+    order = {'lead': 0, 'coincident': 1, 'lag': 2, 'none': 3, 'untested': 4}
+    out.sort(key=lambda e: (order.get(e['class'], 5), -max(((r['r'] or -1) for r in e['pw'] if r['r'] is not None), default=-1)))
     return {'n_months': len(y), 'first': ym_of(min(y)), 'last': ym_of(max(y)), 'lags': MONTH_LAGS, 'proxies': out}
 
 
@@ -884,7 +965,7 @@ def monthly_ccf(doc, catalog, cand_ids, roles, min_months=36):
 def peer_cycle(results, catalog):
     by_q = {}
     for r in results:
-        if r.get('status') not in ('ok', 'short_history') or not r.get('series'):
+        if r.get('status') not in ('ok', 'short_history') or not r.get('series') or r['id'] == 'SANIL':
             continue
         if r.get('target', {}).get('window_months') != 3:
             continue
@@ -900,7 +981,8 @@ def peer_cycle(results, catalog):
     anc = catalog.get(ANCHOR_SERIES)
     if anc and index:
         xl = proxy_yoy_by_lag(anc, sorted(index), 3, LAGS, 3)
-        out['anchor_vs_index'] = [{'k': row['k'], 'n': row['n'], 'r': rnd(row['r'], 3), 'p': rnd(row['p'], 4)}
+        out['anchor_vs_index'] = [{'k': row['k'], 'n': row['n'], 'r': rnd(row['r'], 3) if row['n'] >= PW_MIN_N else None,
+                                   'p': rnd(row['p'], 4) if row['n'] >= PW_MIN_N else None}
                                   for row in ccf_table(index, xl, 1)]
     return out
 
@@ -976,7 +1058,8 @@ def sanil_proxy(catalog, asof_mi):
 
 
 def main():
-    asof = os.environ.get('GRID_COMPOSITE_ASOF', ASOF_DEFAULT)
+    import datetime as _dt
+    asof = _dt.date.today().isoformat()  # 빌드일(데이터 절단 기준이 아님 — 각 계열의 마지막 관측월은 화면에 따로 표시)
     asof_mi = month_index(asof[:7])
     peers = load_json(ROOT / 'spec' / 'peers.json')
     catalog = load_proxies()
@@ -1010,7 +1093,8 @@ def main():
         'proxies': {pid: {k: catalog[pid][k] for k in ('label_ko', 'unit', 'agg', 'kind', 'family', 'first', 'last',
                                                       'release_lag_days', 'source', 'notes')} for pid in used},
         'proxy_yoy': {pid: [{'m': ym_of(m), 'yoy': rnd(proxy_yoy(catalog[pid], m, 3))}
-                            for m in range(max(min(catalog[pid]['obs']) + 14, month_index('2016-03')), max(catalog[pid]['obs']) + 1)
+                            for m in range(max(min(catalog[pid]['obs']) + (12 if catalog[pid].get('qonly') else 14), month_index('2016-03')),
+                                           max(catalog[pid]['obs']) + 1)
                             if m % 3 == 2 and proxy_yoy(catalog[pid], m, 3) is not None] for pid in used},
         'peers': results,
         'peer_cycle': peer_cycle([r for r in results if not r.get('pseudo')], catalog),
