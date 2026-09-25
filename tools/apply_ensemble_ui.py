@@ -28,9 +28,13 @@ def apply(path):
     if path.name == 'pcard.html' and '<!-- frame-runtime -->' in s:
         # The exported artifact bootstrap is unused by the standalone research document.
         # Preserve its actual styles, application script and JSON payload byte-for-byte.
+        # W01_VIZ 자산은 부트스트랩과 달리 문서가 실제로 쓴다. 이 문서는 <title>이 <body> 안에 있어
+        # 아래 슬라이스가 head 의 자산 태그를 잘라내므로, 원문에서 건져 재구성 head 에 다시 넣는다.
+        viz = re.search(r'<!-- W01_VIZ assets -->\s*(?:<script src="[^"<>]+\.js"></script>\s*)+', s)
+        viz_block = viz.group(0) if viz else ''
         body = s[s.index('<title>'):s.rindex('</body>')]
         end_style = body.index('</style>') + len('</style>')
-        s = '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' + body[:end_style] + '</head><body>' + body[end_style:] + '</body></html>'
+        s = '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' + body[:end_style] + '\n' + viz_block + '</head><body>' + body[end_style:] + '</body></html>'
     classes = 'ensemble-ui ' + ('ensemble-home' if home else ('ensemble-grid' if slug == 'grid' else 'ensemble-chain'))
     s = re.sub(r'<html\b[^>]*>', '<html lang="ko" class="'+classes+'"'+(' data-theme="dark"' if slug == 'grid' else '')+'>', s, count=1)
     tag = '<link rel="stylesheet" href="'+prefix+'ui/ensemble.css?v=20260910-3" data-ensemble-ui="3">'
