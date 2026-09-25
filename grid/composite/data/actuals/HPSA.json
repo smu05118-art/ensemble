@@ -1,0 +1,368 @@
+{
+ "accounting_basis": "IFRS",
+ "collected_at": "2026-09-23",
+ "collection_notes": [
+  "seed: phalanx composite_preview.html DATA.companies[].official_financials (asof 2026-09-23); 원문 URL 보존, 값 무변경"
+ ],
+ "currency": "CAD",
+ "gaps": [],
+ "grid_node": "GRID_HAMMOND_POWER",
+ "id": "HPSA",
+ "listed": true,
+ "name": "Hammond Power Solutions Inc.",
+ "primary_target": "revenue_total",
+ "profile": {
+  "end_markets": null,
+  "export_routes": [],
+  "hs_candidates": [],
+  "plants": [],
+  "products": "Dry-type transformers and related power-quality electrical products; historical production footprint in Canada, United States, Mexico and India. AEG adds global power supply/conversion, industrial UPS, rectifiers/battery chargers and service after Q2 2026.",
+  "proxy_routes": []
+ },
+ "quarter_calendar": null,
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2018-12",
+   "note": "2019 comparative statements separate discontinued Italian operations; ledger uses continuing sales and OP. 2020 investment property remains in continuing operations.",
+   "source_url": null,
+   "type": "Italy_closure_and_discontinued_operations"
+  },
+  {
+   "date": "2021-07-23",
+   "note": "100% equity acquired; active filters and induction heating broaden product scope from FY2021Q3 onward. No invented constant-scope history.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-03-28",
+   "note": "Title transfer after March14 settlement; property disposal is not a resumed transformer business or comparable sales growth driver.",
+   "source_url": null,
+   "type": "Italy_investment_property_disposal"
+  },
+  {
+   "date": "2024-10-07",
+   "note": "Control and low-voltage transformers/DC supplies; reported contributions begin FY2024Q4. No pro forma pre-acquisition quarters inserted.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2026-06-29",
+   "note": "After Q2 actual end June27. Q2 statements exclude acquired assets/liabilities and operating results; target Q3 has expanded consolidated scope, Transformers/IES business units and wider geography/products.",
+   "source_url": null,
+   "type": "acquisition"
+  }
+ ],
+ "targets": {
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2020_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-30",
+     "period_start": "2019-01-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q1-Interim-Report.pdf",
+     "value": 84.69
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2020_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-29",
+     "period_start": "2019-03-31",
+     "published_date": "2020-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q2-Interim-Report.pdf",
+     "value": 91.937
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "phalanx composite_preview official_financials · q3_2020_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-28",
+     "period_start": "2019-06-30",
+     "published_date": "2020-11-04",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPS-Q3-2020.pdf",
+     "value": 91.502
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "phalanx composite_preview official_financials · annual_2020",
+     "method": "annual_minus_9m",
+     "period_end": "2019-12-31",
+     "period_start": "2019-09-29",
+     "published_date": "2021-03-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2020-ANNUAL-REPORT.pdf",
+     "value": 90.653
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2020_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-28",
+     "period_start": "2020-01-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q1-Interim-Report.pdf",
+     "value": 88.42
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2020_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-27",
+     "period_start": "2020-03-29",
+     "published_date": "2020-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q2-Interim-Report.pdf",
+     "value": 75.393
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "phalanx composite_preview official_financials · q3_2020_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-26",
+     "period_start": "2020-06-28",
+     "published_date": "2020-11-04",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPS-Q3-2020.pdf",
+     "value": 78.115
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "phalanx composite_preview official_financials · annual_2020",
+     "method": "annual_minus_9m",
+     "period_end": "2020-12-31",
+     "period_start": "2020-09-27",
+     "published_date": "2021-03-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2020-ANNUAL-REPORT.pdf",
+     "value": 80.169
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2022_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-27",
+     "period_start": "2021-01-01",
+     "published_date": "2022-05-02",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2022-Report-FINAL.pdf",
+     "value": 80.121
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2022_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-26",
+     "period_start": "2021-03-28",
+     "published_date": "2022-08-02",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-QUARTER-2-2022-REPORT---FINAL.pdf",
+     "value": 88.277
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "phalanx composite_preview official_financials · q3_2022_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-25",
+     "period_start": "2021-06-27",
+     "published_date": "2022-10-27",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-QUARTER-3-2022-REPORT---FINAL-P.pdf",
+     "value": 95.526
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "phalanx composite_preview official_financials · annual_2022",
+     "method": "annual_minus_9m",
+     "period_end": "2021-12-31",
+     "period_start": "2021-09-26",
+     "published_date": "2023-03-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2022_FINAL.pdf",
+     "value": 116.278
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2023_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-04-02",
+     "period_start": "2022-01-01",
+     "published_date": "2023-05-02",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2023-Report.pdf",
+     "value": 127.782
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2023_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-07-02",
+     "period_start": "2022-04-03",
+     "published_date": "2023-08-01",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2023-Report.pdf",
+     "value": 137.476
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "phalanx composite_preview official_financials · q3_2023_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-10-01",
+     "period_start": "2022-07-03",
+     "published_date": "2023-10-26",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-Report-2023_FINAL.pdf",
+     "value": 148.953
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "phalanx composite_preview official_financials · annual_2022",
+     "method": "annual_minus_9m",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-02",
+     "published_date": "2023-03-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2022_FINAL.pdf",
+     "value": 144.253
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2024_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-04-01",
+     "period_start": "2023-01-01",
+     "published_date": "2024-04-29",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2024-REPORT.pdf",
+     "value": 171.134
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2024_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-07-01",
+     "period_start": "2023-04-02",
+     "published_date": "2024-07-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2024-REPORT.pdf",
+     "value": 172.451
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "phalanx composite_preview official_financials · q3_2024_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-02",
+     "published_date": "2024-10-29",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2024-REPORT.pdf",
+     "value": 179.521
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "phalanx composite_preview official_financials · annual_2024",
+     "method": "annual_minus_9m",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2025-03-20",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2024-Annual-Report---Hammond-Power-Solutions-Inc---March-20-2025.pdf",
+     "value": 186.958
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2024_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-30",
+     "period_start": "2024-01-01",
+     "published_date": "2024-04-29",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2024-REPORT.pdf",
+     "value": 190.68
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2024_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-29",
+     "period_start": "2024-03-31",
+     "published_date": "2024-07-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2024-REPORT.pdf",
+     "value": 197.212
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "phalanx composite_preview official_financials · q3_2025_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-28",
+     "period_start": "2024-06-30",
+     "published_date": "2025-10-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2025-Report---102325-FP.pdf",
+     "value": 191.972
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "phalanx composite_preview official_financials · annual_2025",
+     "method": "annual_minus_9m",
+     "period_end": "2024-12-31",
+     "period_start": "2024-09-29",
+     "published_date": "2026-03-19",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-Annual-Report-and-Q4-2024-PR/2025-HPS-Annual-Report-031926-FP.pdf",
+     "value": 208.476
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2026_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-29",
+     "period_start": "2025-01-01",
+     "published_date": "2026-05-05",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q1-2026/2026-HPS-Q1-Report_FINAL.pdf",
+     "value": 201.403
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2026_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-28",
+     "period_start": "2025-03-30",
+     "published_date": "2026-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf",
+     "value": 224.419
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "phalanx composite_preview official_financials · q3_2025_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-27",
+     "period_start": "2025-06-29",
+     "published_date": "2025-10-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2025-Report---102325-FP.pdf",
+     "value": 218.341
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "phalanx composite_preview official_financials · annual_2025",
+     "method": "annual_minus_9m",
+     "period_end": "2025-12-31",
+     "period_start": "2025-09-28",
+     "published_date": "2026-03-19",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-Annual-Report-and-Q4-2024-PR/2025-HPS-Annual-Report-031926-FP.pdf",
+     "value": 254.092
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "phalanx composite_preview official_financials · q1_2026_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-28",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-05",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q1-2026/2026-HPS-Q1-Report_FINAL.pdf",
+     "value": 264.84
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "phalanx composite_preview official_financials · q2_2026_report",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-27",
+     "period_start": "2026-03-29",
+     "published_date": "2026-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf",
+     "value": 324.802
+    }
+   ],
+   "primary": true,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "HPS.A CN",
+ "unit": "million"
+}

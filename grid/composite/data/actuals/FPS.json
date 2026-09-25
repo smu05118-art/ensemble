@@ -1,0 +1,166 @@
+{
+ "accounting_basis": "US GAAP",
+ "collected_at": "2026-09-23",
+ "collection_notes": [
+  "seed: phalanx composite_preview.html DATA.companies[].official_financials (asof 2026-09-23); 원문 URL 보존, 값 무변경"
+ ],
+ "currency": "USD",
+ "gaps": [],
+ "grid_node": null,
+ "id": "FPS",
+ "listed": true,
+ "name": "Forgent Power Solutions, Inc.",
+ "primary_target": "revenue_total",
+ "profile": {
+  "end_markets": null,
+  "export_routes": [],
+  "hs_candidates": [],
+  "plants": [],
+  "products": "Designs and manufactures engineered-to-order transformers, switchgear, switchboards, distribution panels, PDUs, modular electrical houses/power skids and related services for data centers, grid and industrial facilities.",
+  "proxy_routes": []
+ },
+ "quarter_calendar": null,
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2023-10-31",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-03-13",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-05-31",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-06-14",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2025-05-08",
+   "note": "PwrQ and States contributed to Opco. Historical combined presentation includes transferred entities from formation/acquisition dates, not a sudden FY2025Q4 revenue addition.",
+   "source_url": null,
+   "type": "common_control_combination"
+  },
+  {
+   "date": "2026-02-06",
+   "note": "Consolidated group continues; noncontrolling ownership, attribution and EPS scope change. Use consolidated GAAP OP before attribution.",
+   "source_url": null,
+   "type": "IPO_Up_C_reorganization"
+  },
+  {
+   "date": null,
+   "note": "Predecessor July 1-October 31, 2023 and successor inception-June 30, 2024 are irregular. Textual inception September 8, 2023; do not invent FY2024 regular quarters or use pro forma annual amounts.",
+   "source_url": null,
+   "type": "excluded_predecessor_successor_history"
+  },
+  {
+   "date": "2026-09-15",
+   "note": "Data-center revenue mix increases from 42% FY2025 to 59% FY2026. Incremental USD35M PTS expansion announced for expected FY2027Q4 availability; capacity is not sales guidance.",
+   "source_url": null,
+   "type": "capacity_ramp_and_revenue_mix"
+  }
+ ],
+ "targets": {
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "phalanx composite_preview official_financials · ipo_prospectus",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2026-02-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000119312526040029/d890989d424b4.htm",
+     "value": 154.013
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "phalanx composite_preview official_financials · fy2026_q2_10q",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2026-03-16",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000011/fps-20251231.htm",
+     "value": 175.338
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "phalanx composite_preview official_financials · fy2026_q3_10q",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "published_date": "2026-05-14",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000018/fps-20260331.htm",
+     "value": 186.224
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "phalanx composite_preview official_financials · fy2026_release",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2026-09-15",
+     "source_url": "https://ir.forgentpower.com/news-events/press-releases/detail/107/forgent-reports-record-fourth-quarter-and-full-year-2026-results-exceeds-high-end-of-guidance-and-enters-fiscal-2027-with-all-time-high-backlog",
+     "value": 237.613
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "phalanx composite_preview official_financials · ipo_prospectus",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2026-02-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000119312526040029/d890989d424b4.htm",
+     "value": 283.274
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "phalanx composite_preview official_financials · fy2026_q2_10q",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-03-16",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000011/fps-20251231.htm",
+     "value": 296.404
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "locator": "phalanx composite_preview official_financials · fy2026_q3_10q",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-14",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000018/fps-20260331.htm",
+     "value": 378.709
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "locator": "phalanx composite_preview official_financials · fy2026_release",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-09-15",
+     "source_url": "https://ir.forgentpower.com/news-events/press-releases/detail/107/forgent-reports-record-fourth-quarter-and-full-year-2026-results-exceeds-high-end-of-guidance-and-enters-fiscal-2027-with-all-time-high-backlog",
+     "value": 461.672
+    }
+   ],
+   "primary": true,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "FPS US",
+ "unit": "million"
+}
