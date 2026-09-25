@@ -1,0 +1,911 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "SIEYUAN",
+ "grid_node": "GRID_SIEYUAN",
+ "name": "思源电气股份有限公司 (Sieyuan Electric Co., Ltd.)",
+ "ticker": "002028 CH (SZSE)",
+ "listed": true,
+ "currency": "CNY",
+ "unit": "million",
+ "accounting_basis": "CAS (China Accounting Standards for Business Enterprises)",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters (Jan-Mar ... Oct-Dec); fiscal_key = calendar year",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 영업수익(营业收入)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "unit_note": "CNY million; source figures printed in 元 (yuan), divided by 1e6 (scale conversion only, 4 decimals kept).",
+   "points": [
+    {
+     "fiscal_key": "FY2015Q1",
+     "period_start": "2015-01-01",
+     "period_end": "2015-03-31",
+     "value": 602.9046,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-04-01/1202121900.PDF",
+     "locator": "思源电气 2015年年度报告（更新后） (published 2016-04-01) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-04-01",
+     "prior_year_comparative": 421.5467,
+     "prior_year_comparative_source": "思源电气 2015年第一季度报告全文 (published 2015-04-30) PDF p.13: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2015-04-30/1200943958.PDF"
+    },
+    {
+     "fiscal_key": "FY2015Q2",
+     "period_start": "2015-04-01",
+     "period_end": "2015-06-30",
+     "value": 911.6582,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-04-01/1202121900.PDF",
+     "locator": "思源电气 2015年年度报告（更新后） (published 2016-04-01) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-04-01"
+    },
+    {
+     "fiscal_key": "FY2015Q3",
+     "period_start": "2015-07-01",
+     "period_end": "2015-09-30",
+     "value": 936.0626,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-04-01/1202121900.PDF",
+     "locator": "思源电气 2015年年度报告（更新后） (published 2016-04-01) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-04-01",
+     "prior_year_comparative": 984.3448,
+     "prior_year_comparative_source": "思源电气 2015年第三季度报告全文 (published 2015-10-24) PDF p.14: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2015-10-24/1201717222.PDF"
+    },
+    {
+     "fiscal_key": "FY2015Q4",
+     "period_start": "2015-10-01",
+     "period_end": "2015-12-31",
+     "value": 1546.7953,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-04-01/1202121900.PDF",
+     "locator": "思源电气 2015年年度报告（更新后） (published 2016-04-01) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-04-01"
+    },
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 699.0713,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203215066.PDF",
+     "locator": "思源电气 2016年年度报告（更新后） (published 2017-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-29",
+     "prior_year_comparative": 602.9046,
+     "prior_year_comparative_source": "思源电气 2016年第一季度报告全文 (published 2016-04-30) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2016-04-30/1202279627.PDF"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 995.0501,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203215066.PDF",
+     "locator": "思源电气 2016年年度报告（更新后） (published 2017-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-29"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 1071.9098,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203215066.PDF",
+     "locator": "思源电气 2016年年度报告（更新后） (published 2017-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-29",
+     "prior_year_comparative": 936.0626,
+     "prior_year_comparative_source": "思源电气 2016年第三季度报告全文 (published 2016-10-22) PDF p.14: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2016-10-22/1202775149.PDF"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 1637.6992,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203215066.PDF",
+     "locator": "思源电气 2016年年度报告（更新后） (published 2017-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-29"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 600.4847,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511531.PDF",
+     "locator": "思源电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24",
+     "prior_year_comparative": 699.0713,
+     "prior_year_comparative_source": "思源电气 2017年第一季度报告全文 (published 2017-04-22) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2017-04-22/1203355761.PDF"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 1271.4539,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511531.PDF",
+     "locator": "思源电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 963.0701,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511531.PDF",
+     "locator": "思源电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24",
+     "prior_year_comparative": 1071.9098,
+     "prior_year_comparative_source": "思源电气 2017年第三季度报告全文 (published 2017-10-21) PDF p.15: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2017-10-21/1204055861.PDF"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 1659.7793,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511531.PDF",
+     "locator": "思源电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 581.6652,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF",
+     "locator": "思源电气 2018年年度报告 (published 2019-03-23) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-23",
+     "prior_year_comparative": 600.4847,
+     "prior_year_comparative_source": "思源电气 2018年第一季度报告全文 (published 2018-04-21) PDF p.13: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2018-04-21/1204673448.PDF"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 1169.6793,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF",
+     "locator": "思源电气 2018年年度报告 (published 2019-03-23) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-23"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 1309.9702,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF",
+     "locator": "思源电气 2018年年度报告 (published 2019-03-23) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-23",
+     "prior_year_comparative": 963.0701,
+     "prior_year_comparative_source": "思源电气 2018年第三季度报告全文 (published 2018-10-22) PDF p.15: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2018-10-22/1205515225.PDF"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 1745.302,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF",
+     "locator": "思源电气 2018年年度报告 (published 2019-03-23) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-23"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 842.312,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF",
+     "locator": "思源电气 2019年年度报告 (published 2020-04-18) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-18",
+     "prior_year_comparative": 581.6652,
+     "prior_year_comparative_source": "思源电气 2019年第一季度报告全文 (published 2019-04-27) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2019-04-27/1206116781.PDF"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 1569.4893,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF",
+     "locator": "思源电气 2019年年度报告 (published 2020-04-18) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-18"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 1791.4893,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF",
+     "locator": "思源电气 2019年年度报告 (published 2020-04-18) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-18",
+     "prior_year_comparative": 1309.9702,
+     "prior_year_comparative_source": "思源电气 2019年第三季度报告全文 (published 2019-10-25) PDF p.15: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2019-10-25/1207012528.PDF"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 2176.8046,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF",
+     "locator": "思源电气 2019年年度报告 (published 2020-04-18) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-18"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 864.9497,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-17/1209713671.PDF",
+     "locator": "思源电气 2020年年度报告 (published 2021-04-17) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-17",
+     "prior_year_comparative": 842.312,
+     "prior_year_comparative_source": "思源电气 2020年第一季度报告全文 (published 2020-04-25) PDF p.15: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2020-04-25/1207598841.PDF"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 2065.8092,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-17/1209713671.PDF",
+     "locator": "思源电气 2020年年度报告 (published 2021-04-17) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-17"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 2136.9747,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-17/1209713671.PDF",
+     "locator": "思源电气 2020年年度报告 (published 2021-04-17) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-17",
+     "prior_year_comparative": 1791.4893,
+     "prior_year_comparative_source": "思源电气 2020年第三季度报告全文 (published 2020-10-17) PDF p.17: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2020-10-17/1208577060.PDF"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 2304.7863,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-17/1209713671.PDF",
+     "locator": "思源电气 2020年年度报告 (published 2021-04-17) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-17"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 1812.0152,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212942957.PDF",
+     "locator": "思源电气 2021年年度报告 (published 2022-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16",
+     "prior_year_comparative": 864.9497,
+     "prior_year_comparative_source": "思源电气 2021年第一季度报告全文 (published 2021-04-24) PDF p.3: 主要会计数据 table 营业收入 row — 上年同期 column; https://static.cninfo.com.cn/finalpage/2021-04-24/1209787228.PDF"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 2027.5337,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212942957.PDF",
+     "locator": "思源电气 2021年年度报告 (published 2022-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 2282.6168,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212942957.PDF",
+     "locator": "思源电气 2021年年度报告 (published 2022-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 2573.1693,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212942957.PDF",
+     "locator": "思源电气 2021年年度报告 (published 2022-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 1739.3085,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-15/1216417256.PDF",
+     "locator": "思源电气 2022年年度报告 (published 2023-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-15",
+     "prior_year_comparative": 1812.0152,
+     "prior_year_comparative_source": "思源电气 2022年一季度报告 (published 2022-04-23) PDF p.6: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2022-04-23/1213042874.PDF"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 2605.8636,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-15/1216417256.PDF",
+     "locator": "思源电气 2022年年度报告 (published 2023-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-15"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 2656.5695,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-15/1216417256.PDF",
+     "locator": "思源电气 2022年年度报告 (published 2023-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-15"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 3535.356,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-15/1216417256.PDF",
+     "locator": "思源电气 2022年年度报告 (published 2023-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-15"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 2171.9774,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-20/1219702367.PDF",
+     "locator": "思源电气 2023年年度报告 (published 2024-04-20) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-20",
+     "prior_year_comparative": 1739.3085,
+     "prior_year_comparative_source": "思源电气 2023年一季度报告 (published 2023-04-22) PDF p.7: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2023-04-22/1216520667.PDF"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 3131.2606,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-20/1219702367.PDF",
+     "locator": "思源电气 2023年年度报告 (published 2024-04-20) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-20"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 3277.6586,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-20/1219702367.PDF",
+     "locator": "思源电气 2023年年度报告 (published 2024-04-20) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-20"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 3879.1317,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-20/1219702367.PDF",
+     "locator": "思源电气 2023年年度报告 (published 2024-04-20) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-20"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 2657.5485,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-19/1223145398.PDF",
+     "locator": "思源电气 2024年年度报告 (published 2025-04-19) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-19",
+     "prior_year_comparative": 2171.9774,
+     "prior_year_comparative_source": "思源电气 2024年一季度报告 (published 2024-04-29) PDF p.7: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2024-04-29/1219854310.PDF"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 3508.6829,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-19/1223145398.PDF",
+     "locator": "思源电气 2024年年度报告 (published 2025-04-19) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-19"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 4241.0358,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-19/1223145398.PDF",
+     "locator": "思源电气 2024年年度报告 (published 2025-04-19) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-19"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 5050.8013,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-19/1223145398.PDF",
+     "locator": "思源电气 2024年年度报告 (published 2025-04-19) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-19"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 3226.558,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+     "locator": "思源电气 2025年年度报告 (published 2026-04-18) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-18",
+     "prior_year_comparative": 2657.5485,
+     "prior_year_comparative_source": "思源电气 2025年一季度报告 (published 2025-04-26) PDF p.7: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2025-04-26/1223332309.PDF"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 5270.3212,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+     "locator": "思源电气 2025年年度报告 (published 2026-04-18) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-18"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 5330.098,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+     "locator": "思源电气 2025年年度报告 (published 2026-04-18) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-18"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 7712.0542,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+     "locator": "思源电气 2025年年度报告 (published 2026-04-18) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-18"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 4568.6639,
+     "prior_year_comparative": 3226.558,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225177123.PDF",
+     "locator": "思源电气 2026年一季度报告 (published 2026-04-25) PDF p.7: 合并利润表 营业收入 line (本期 = 2026年1-3月; 上年同期 = prior_year_comparative); 元 → CNY million",
+     "published_date": "2026-04-25"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 6226.5438,
+     "method": "ytd_difference",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225473691.PDF",
+     "locator": "思源电气 2026年半年度报告 (published 2026-08-15) PDF p.7: 主要会计数据 table 营业收入 row 本期(1-6月) 10795.2077 minus Q1 4568.6639 from 2026年一季度报告 p.7; 元 → CNY million",
+     "published_date": "2026-08-15",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225177123.PDF"
+    }
+   ]
+  },
+  "revenue_segment": {
+   "label_ko": "코일류(线圈类: 변압기·리액터·계기용변성기) 제품 매출 — 반기",
+   "scope": "segment",
+   "freq": "H",
+   "primary": false,
+   "segment_name": "线圈类产品 → 线圈类及相关产品 (neutral-grounding, reactors, instrument transformers; +power transformers from FY2018 definition; +DGA online monitoring from FY2019) → 变压器类业务 (2025 product re-organisation). Main-business revenue by product (营业收入构成 分产品).",
+   "unit_note": "CNY million; H2 = FY − H1 of the same product label (annual_minus_h1).",
+   "points": [
+    {
+     "fiscal_key": "FY2016H1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-06-30",
+     "value": 327.5524,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-08-22/1203833808.PDF",
+     "locator": "思源电气 2017年半年度报告 (published 2017-08-22) PDF p.12: 2017年半年度报告 营业收入构成 table: '线圈类产品' 上年同期金额 (FY2016 H1 value printed as prior-year column of the 2017 H1 report; the 2016 H1 report's own table was not machine-readable); printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2017-08-22"
+    },
+    {
+     "fiscal_key": "FY2016H2",
+     "period_start": "2016-07-01",
+     "period_end": "2016-12-31",
+     "value": 412.3147,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-29/1203215066.PDF",
+     "locator": "思源电气 2016年年度报告（更新后） (published 2017-03-29) PDF p.12: 营业收入构成 table '线圈类产品' 2016年金额 FY 739.8671 minus H1 327.5524 (思源电气 2017年半年度报告 p.12); FY printed in 元; stored as CNY million",
+     "published_date": "2017-08-22",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2017-08-22/1203833808.PDF",
+     "published_date_note": "later of the FY source and the H1 source"
+    },
+    {
+     "fiscal_key": "FY2017H1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-06-30",
+     "value": 314.3098,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-08-22/1203833808.PDF",
+     "locator": "思源电气 2017年半年度报告 (published 2017-08-22) PDF p.12: 营业收入构成 table '线圈类产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2017-08-22",
+     "prior_year_comparative": 327.5524,
+     "prior_year_comparative_source": "思源电气 2017年半年度报告 PDF p.12: 营业收入构成 table '线圈类产品' 上年同期金额; https://static.cninfo.com.cn/finalpage/2017-08-22/1203833808.PDF"
+    },
+    {
+     "fiscal_key": "FY2017H2",
+     "period_start": "2017-07-01",
+     "period_end": "2017-12-31",
+     "value": 506.4834,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511531.PDF",
+     "locator": "思源电气 2017年年度报告 (published 2018-03-24) PDF p.13: 营业收入构成 table '线圈类产品' 2017年金额 FY 820.7931 minus H1 314.3098 (思源电气 2017年半年度报告 p.12); FY printed in 元; stored as CNY million",
+     "published_date": "2018-03-24",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2017-08-22/1203833808.PDF"
+    },
+    {
+     "fiscal_key": "FY2018H1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-06-30",
+     "value": 313.5361,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-08-22/1205312314.PDF",
+     "locator": "思源电气 2018年半年度报告 (published 2018-08-22) PDF p.12: 营业收入构成 table '线圈类产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2018-08-22",
+     "prior_year_comparative": 314.3098,
+     "prior_year_comparative_source": "思源电气 2018年半年度报告 PDF p.12: 营业收入构成 table '线圈类产品' 上年同期金额; https://static.cninfo.com.cn/finalpage/2018-08-22/1205312314.PDF"
+    },
+    {
+     "fiscal_key": "FY2018H2",
+     "period_start": "2018-07-01",
+     "period_end": "2018-12-31",
+     "value": 652.0696,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF",
+     "locator": "思源电气 2018年年度报告 (published 2019-03-23) PDF p.13: 营业收入构成 table '线圈类产品' 2018年金额 FY 965.6057 minus H1 313.5361 (思源电气 2018年半年度报告 p.12); FY printed in 元; stored as CNY million",
+     "published_date": "2019-03-23",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2018-08-22/1205312314.PDF"
+    },
+    {
+     "fiscal_key": "FY2019H1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-06-30",
+     "value": 543.3071,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-08-10/1206507909.PDF",
+     "locator": "思源电气 2019年半年度报告 (published 2019-08-10) PDF p.12: 营业收入构成 table '线圈类产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2019-08-10",
+     "prior_year_comparative": 313.5361,
+     "prior_year_comparative_source": "思源电气 2019年半年度报告 PDF p.12: 营业收入构成 table '线圈类产品' 上年同期金额; https://static.cninfo.com.cn/finalpage/2019-08-10/1206507909.PDF"
+    },
+    {
+     "fiscal_key": "FY2019H2",
+     "period_start": "2019-07-01",
+     "period_end": "2019-12-31",
+     "value": 827.6524,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF",
+     "locator": "思源电气 2019年年度报告 (published 2020-04-18) PDF p.14: 营业收入构成 table '线圈类及相关产品' 2019年金额 FY 1370.9594 minus H1 543.3071 (思源电气 2019年半年度报告 p.12); FY printed in 元; stored as CNY million",
+     "published_date": "2020-04-18",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2019-08-10/1206507909.PDF"
+    },
+    {
+     "fiscal_key": "FY2020H1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-06-30",
+     "value": 643.3808,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-07-28/1208079011.PDF",
+     "locator": "思源电气 2020年半年度报告 (published 2020-07-28) PDF p.12: 营业收入构成 table '线圈类及相关产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2020-07-28",
+     "prior_year_comparative": 543.3071,
+     "prior_year_comparative_source": "思源电气 2020年半年度报告 PDF p.12: 营业收入构成 table '线圈类及相关产品' 上年同期金额; https://static.cninfo.com.cn/finalpage/2020-07-28/1208079011.PDF"
+    },
+    {
+     "fiscal_key": "FY2020H2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-12-31",
+     "value": 806.6508,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-17/1209713671.PDF",
+     "locator": "思源电气 2020年年度报告 (published 2021-04-17) PDF p.14: 营业收入构成 table '线圈类及相关产品' 2020年金额 FY 1450.0315 minus H1 643.3808 (思源电气 2020年半年度报告 p.12); FY printed in 元; stored as CNY million",
+     "published_date": "2021-04-17",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2020-07-28/1208079011.PDF"
+    },
+    {
+     "fiscal_key": "FY2021H1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-06-30",
+     "value": 819.0525,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-08-14/1210748137.PDF",
+     "locator": "思源电气 2021年半年度报告 (published 2021-08-14) PDF p.11: 营业收入构成 table '线圈类产品及相关产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2021-08-14",
+     "prior_year_comparative": 643.3808,
+     "prior_year_comparative_source": "思源电气 2021年半年度报告 PDF p.11: 营业收入构成 table 上年同期金额; https://static.cninfo.com.cn/finalpage/2021-08-14/1210748137.PDF"
+    },
+    {
+     "fiscal_key": "FY2021H2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-12-31",
+     "value": 950.3409,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212942957.PDF",
+     "locator": "思源电气 2021年年度报告 (published 2022-04-16) PDF p.13: 营业收入构成 table '线圈类及相关产品' 2021年金额 FY 1769.3934 minus H1 819.0525 (思源电气 2021年半年度报告 p.11); FY printed in 元; stored as CNY million",
+     "published_date": "2022-04-16",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2021-08-14/1210748137.PDF"
+    },
+    {
+     "fiscal_key": "FY2022H1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-06-30",
+     "value": 868.1744,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-08-22/1214344699.PDF",
+     "locator": "思源电气 2022年半年度报告 (published 2022-08-22) PDF p.11: 营业收入构成 table '线圈类产品及相关产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2022-08-22",
+     "prior_year_comparative": 819.0525,
+     "prior_year_comparative_source": "思源电气 2022年半年度报告 PDF p.11: 营业收入构成 table 上年同期金额; https://static.cninfo.com.cn/finalpage/2022-08-22/1214344699.PDF"
+    },
+    {
+     "fiscal_key": "FY2022H2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-12-31",
+     "value": 1362.5333,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-15/1216417256.PDF",
+     "locator": "思源电气 2022年年度报告 (published 2023-04-15) PDF p.15: 营业收入构成 table '线圈类及相关产品' 2022年金额 FY 2230.7078 minus H1 868.1744 (思源电气 2022年半年度报告 p.11); FY printed in 元; stored as CNY million",
+     "published_date": "2023-04-15",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2022-08-22/1214344699.PDF"
+    },
+    {
+     "fiscal_key": "FY2023H1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-06-30",
+     "value": 1112.3678,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-08-19/1217574125.PDF",
+     "locator": "思源电气 2023年半年度报告 (published 2023-08-19) PDF p.12: 营业收入构成 table '线圈类及相关产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2023-08-19",
+     "prior_year_comparative": 868.1744,
+     "prior_year_comparative_source": "思源电气 2023年半年度报告 PDF p.12: 营业收入构成 table 上年同期金额; https://static.cninfo.com.cn/finalpage/2023-08-19/1217574125.PDF"
+    },
+    {
+     "fiscal_key": "FY2023H2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-12-31",
+     "value": 1634.3554,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-20/1219702367.PDF",
+     "locator": "思源电气 2023年年度报告 (published 2024-04-20) PDF p.17: 营业收入构成 table '线圈类及相关产品' 2023年金额 FY 2746.7232 minus H1 1112.3678 (思源电气 2023年半年度报告 p.12); FY printed in 元; stored as CNY million",
+     "published_date": "2024-04-20",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2023-08-19/1217574125.PDF"
+    },
+    {
+     "fiscal_key": "FY2024H1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-06-30",
+     "value": 1673.9089,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-08-17/1220896467.PDF",
+     "locator": "思源电气 2024年半年度报告 (published 2024-08-17) PDF p.13: 营业收入/营业成本 by product table '线圈类及相关产品' 营业收入 (no prior-year amount printed, only YoY %); printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2024-08-17"
+    },
+    {
+     "fiscal_key": "FY2025H1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-06-30",
+     "value": 2010.1035,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225473691.PDF",
+     "locator": "思源电气 2026年半年度报告 (published 2026-08-15) PDF p.11: 2026年半年度报告 营业收入构成 table: '变压器类业务' 上年同期金额 (FY2025 H1 on the recast 2025 product structure; the 2025 H1 report itself printed no product split); printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2026-08-15"
+    },
+    {
+     "fiscal_key": "FY2025H2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-12-31",
+     "value": 2623.2809,
+     "method": "annual_minus_h1",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+     "locator": "思源电气 2025年年度报告 (published 2026-04-18) PDF p.17: 营业收入构成 table '变压器类业务' 2025年金额 FY 4633.3844 minus H1 2010.1035 (思源电气 2026年半年度报告 p.11); FY printed in 元; stored as CNY million",
+     "published_date": "2026-08-15",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225473691.PDF",
+     "published_date_note": "later of the FY source and the H1 source"
+    },
+    {
+     "fiscal_key": "FY2026H1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-06-30",
+     "value": 2260.5731,
+     "method": "direct_reported_half",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225473691.PDF",
+     "locator": "思源电气 2026年半年度报告 (published 2026-08-15) PDF p.11: 营业收入构成 table '变压器类业务' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2026-08-15",
+     "prior_year_comparative": 2010.1035,
+     "prior_year_comparative_source": "思源电气 2026年半年度报告 PDF p.11: 营业收入构成 table '变压器类业务' 上年同期金额 (recast); https://static.cninfo.com.cn/finalpage/2026-08-15/1225473691.PDF"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2018-12-31",
+   "type": "segment_reorg",
+   "target": "revenue_segment",
+   "note": "FY2018 annual report 释义 adds 变压器 (power transformers) to 线圈类产品 (2016-2018H1 definition: 中性点接地产品、电抗器、互感器). Prior-year FY2017 figure (820.79) was NOT recast, so the company treats the series as continuous; the transformer contribution before FY2018 is unknown.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF"
+  },
+  {
+   "date": "2019-12-31",
+   "type": "segment_reorg",
+   "target": "revenue_segment",
+   "note": "FY2019 annual report renames to 线圈类及相关产品 and adds 油色谱及在线监测系统 (DGA online monitoring, previously in 智能设备类); FY2018 comparative (965.61) not recast.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF"
+  },
+  {
+   "date": "2025-01-01",
+   "type": "segment_reorg",
+   "target": "revenue_segment",
+   "note": "2025 product structure: 开关类/变压器类/保护及自动化类/电力电子类/EPC类/储能系统及元件类/租赁. FY2024 annual report printed only an industry split (no product split) so FY2024H2 is missing; 2025 AR recasts FY2024 变压器类业务 = 3,348.38 and the 2026 H1 report recasts 2025H1 = 2,010.10. Values from FY2025H1 on are 变压器类业务 and are not strictly comparable with 线圈类及相关产品 (FY2024H1 1,673.91).",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+  }
+ ],
+ "profile": {
+  "products": "Per FY2025 annual report (p.10-11 主要业务): ≤1000kV GIS & GIL, ≤800kV SF6 circuit breakers and disconnectors, ≤500kV DC breakers, ≤35kV GIS/C-GIS and ring-main units, LV apparatus, ≤500kV current transformers, ≤1000kV voltage transformers, ±800kV AC/DC bushings, ≤750kV power transformers, ≤750kV reactors, ≤66kV neutral-grounding sets, ≤1000kV capacitor banks, ≤1000kV substation protection & monitoring (secondary) systems, DGA online monitoring, SVG/STATCOM, HV active filters, static synchronous condensers (SSC), utility-scale and residential storage systems, automotive electronics, supercapacitor cells/modules, high-power Li cells, mobile/prefabricated substations; plus EPC. Make-to-order/ETO. 2025 product revenue: 开关类 8,935m (41.5%), 变压器类 4,633m (21.5%), 保护及自动化 2,542m, 电力电子 1,525m, EPC 2,332m, 储能系统及元件 1,531m.",
+  "plants": [
+   {
+    "country": "CN",
+    "city": "Shanghai (上海思源高压开关 / 思源低压开关 / 思源电力电容器 / 思源弘瑞自动化 / 思源光电)",
+    "products": "HV switchgear (GIS/breakers), LV switchgear, power capacitors, protection & automation, optical/monitoring products",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Changzhou, Jiangsu (常州思源东芝变压器有限公司)",
+    "products": "power transformers",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Jiangsu (江苏思源特种变压器 / 江苏思源赫兹互感器 / 江苏省如高高压电器 / 江苏思源高压开关 / 江苏思源中压开关; cities not stated in the AR glossary)",
+    "products": "special transformers, instrument transformers, HV apparatus/reactors, HV & MV switchgear",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "(思源清能电气电子) — location not stated in AR glossary",
+    "products": "power electronics: SVG, HV active filter, SSC",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   },
+   {
+    "country": "MX",
+    "city": "Sieyuan Electric (Mexico) Co., Ltd — goods trade (100%)",
+    "products": "sales/trading subsidiary (no manufacturing stated)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   },
+   {
+    "country": "US",
+    "city": "Sieyuan Electric USA, LLC — goods trade (100%)",
+    "products": "sales/trading subsidiary (no manufacturing stated)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   },
+   {
+    "country": "EG",
+    "city": "Sieyuan Electric Egypt Co., Ltd — engineering services (100%)",
+    "products": "engineering/service subsidiary",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   },
+   {
+    "country": "IN",
+    "city": "Sieyuan Electric (India) Pvt. Ltd — goods trade (100%)",
+    "products": "sales/trading subsidiary",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   }
+  ],
+  "end_markets": "State Grid / China Southern Grid, power generation (incl. renewables), rail, industrial; overseas revenue 5,802.76m = 26.94% of FY2025 revenue (FY2024: 3,122.48m, 20.20%), subsidiaries in 20+ countries incl. Brazil, Egypt, Zambia, Spain, Switzerland; new orders (新增订单, excl. VAT) FY2024 214.57亿 / FY2025 288.91亿 (+34.64%), FY2026 target 375亿.",
+  "export_routes": [
+   "CN->World (Middle East, Latin America, Europe, Africa, Central Asia)",
+   "CN->MX (via trading subsidiary)",
+   "CN->US (via trading subsidiary; small)"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850431",
+   "850450",
+   "853529",
+   "853720"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "nea_grid_investment",
+    "why": "국가에너지국 전력망 투자 완성액 — 국내 매출 ~73%의 최종 수요(국가전망·남방전망 설비투자); 발주→납품 시차로 동행~선행 기대",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "nbs_transformer_output",
+    "why": "통계국 변압기 생산량(kVA) — 동사 변압기·리액터·개폐기 동행 산업 물량",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "cn_exp_853720_p0",
+    "why": "중국 1kV 초과 배전·제어반(GIS 조립품 포함) 수출 — 해외매출 27%의 주력(개폐기)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "cn_exp_850423_p0",
+    "why": "중국 10MVA 초과 대형 유입변압기 수출 — 변압기류 해외 수주/출하",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cn_exp_850422_p0",
+    "why": "중국 650kVA~10MVA 유입변압기 수출 — 중형 변압기 수출 경기",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p156",
+    "why": "미국의 중국산 대형 변압기 수입 — 미국 판매법인 경로(규모 작음, 관세 영향 진단용)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cn_exp_853529_p0",
+    "why": "중국 72.5kV 이상 차단기·개폐기 수출 — 고압 개폐기 해외 출하. 현재 패널에 CN 853529 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "sgcc_centralized_tender_awards",
+    "why": "국가전망 집중입찰(수변전 설비) 낙찰금액 월/차수별 — 수주 선행지표(ecp.sgcc.com.cn 공시). 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total: none from FY2015Q1 to FY2026Q2 (46 quarters).",
+  "revenue_total prior_year_comparative: stored only for Q1 (Q1 report 上年同期) and for Q3 in 2015-2020 (old-format Q3 reports print a 7-9月 comparative); Q2/Q4 and 2021+ Q3 have no printed 3-month comparative (new-format Q3 reports print only a % change) — builder should use the prior-year point.",
+  "revenue_segment: FY2024H2 missing — FY2024 annual report printed only an industry split (输配电设备行业/汽车电子电器), no product split; FY2025 H1 report printed no product split (2025H1 taken from 2026 H1 recast comparative). FY2015 and earlier not collected.",
+  "orders_segment: not stored — Sieyuan discloses company-wide 新增订单 only annually (FY2024 214.57亿, FY2025 288.91亿 excl. VAT, 2025 AR p.15/p.29); no half-year or segment orders."
+ ],
+ "collection_notes": [
+  "Primary sources only: periodic reports on cninfo (static.cninfo.com.cn finalpage PDFs, listed via the cninfo hisAnnouncement/query API). Text extracted with pypdf and pdfplumber; every quarter cross-checked.",
+  "revenue_total values FY2015-FY2025 = annual report 分季度主要财务指标 (direct 3-month figures). Verified: Σ4 quarters = FY 营业收入 (±0.05m) every year; Q1 = Q1 report; Q1+Q2 = H1 report; Q1..Q3 = Q3 report 年初至报告期末; Q3 = Q3 report 本报告期. No discrepancies for Sieyuan (no restatements affecting revenue; FY2023 AR shows 调整前=调整后 for FY2022).",
+  "FY2026Q1 = 2026 Q1 report (direct); FY2026Q2 = 2026 H1 report 营业收入 10,795.21 − Q1 4,568.66 (ytd_difference).",
+  "Text-layer of some Sieyuan PDFs (2020, 2021, 2023 AR) is character-scrambled in pypdf; values were re-read with pdfplumber and all passed the sum checks."
+ ]
+}

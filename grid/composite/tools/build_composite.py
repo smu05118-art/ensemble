@@ -38,42 +38,45 @@ ANCHOR_SERIES = 'trass_sanil_ansan_8504212'
 # ── 사전 등록 후보(결과를 보기 전에 제품·지역 논리로 고정) ─────────────
 GLOBAL_CANDIDATES = [
     'us_imp_8504dist_p0', 'us_imp_850423_p0', 'us_imp_8504dry_p0', 'fred_IPG3353S', 'fred_A35SNO',
-    'fred_A35SUO', 'fred_PCU335311335311', 'fred_TLPWRCONS', 'eurostat_ip_C271_EU27_2020',
+    'fred_A35SUO', 'fred_WPU117409', 'fred_TLPWRCONS', 'eurostat_ip_C271_EU27_2020',
 ]
 REGIONAL_CANDIDATES = {
-    'Korea': ['trass_kr_8504212', 'kr_exp_850421_p842', 'kr_exp_850422_p842', 'kr_exp_850423_p842',
-              'kr_exp_850423_p0', 'kr_exp_850422_p0', 'us_imp_8504dist_p410', 'us_imp_850423_p410',
-              'us_imp_850422_p410', 'us_imp_850421_p410'],
+    'Korea': ['trass_kr_8504212', 'us_imp_8504dist_p410', 'us_imp_850423_p410', 'us_imp_850422_p410',
+              'us_imp_850421_p410', 'kr_exp_850422_p842', 'kr_exp_850423_p842', 'kr_exp_850423_p0', 'kr_exp_850422_p0'],
     'North America': ['us_imp_8504dist_p484', 'us_imp_8504dry_p484', 'us_imp_8504dry_p124', 'us_imp_850423_p484',
-                      'mx_exp_850421_p842', 'mx_exp_850422_p842', 'mx_exp_850423_p842', 'statcan_mfg_sales_335',
-                      'statcan_mfg_sales_3353', 'fred_PCU33531335313', 'fred_A35SVS'],
-    'Europe': ['eurostat_ip_C271_DE', 'eurostat_ip_C271_IT', 'eurostat_ip_C271_ES', 'eurostat_ip_C271_SE',
-               'eurostat_ip_C271_AT', 'eurostat_turnover_C271_EU27_2020', 'de_exp_850423_p0', 'at_exp_850423_p0',
-               'se_exp_850423_p0', 'it_exp_850423_p0', 'es_exp_850423_p0', 'us_imp_850423_p276',
-               'us_imp_850423_p40', 'us_imp_853710_p0', 'us_imp_853720_p0'],
-    'Japan': ['jp_exp_850423_p0', 'jp_exp_850422_p0', 'jp_exp_850421_p0', 'meti_transformer_prod_value',
-              'meti_transformer_prod_kva', 'us_imp_850423_p392'],
+                      'us_imp_853710_p0', 'us_imp_853720_p0', 'statcan_mfg_sales_335', 'statcan_mfg_salesnsa_335311',
+                      'statcan_mfg_newordersnsa_335311', 'fred_A35SVS', 'fred_PCU335313335313', 'fred_PROFCONS',
+                      'fred_PRPWRCONS', 'inegi_emim_vp_335312', 'mx_exp_850422_p842', 'mx_exp_850423_p842'],
+    'Europe': ['eurostat_ip_C2711_DE', 'eurostat_ip_C2711_IT', 'eurostat_ip_C2711_ES', 'eurostat_ip_C2711_FR',
+               'eurostat_ip_C2712_EU27_2020', 'eurostat_ip_C27_AT', 'eurostat_ip_C27_SE', 'eurostat_turnover_C27_EU27_2020',
+               'eurostat_ppi_C2711_EU27_2020', 'de_exp_850423_p0', 'de_exp_850423_p842', 'se_exp_850423_p0',
+               'it_exp_850423_p0', 'es_exp_850423_p0', 'us_imp_850423_p276', 'us_imp_853710_p0', 'us_imp_853720_p0'],
+    'Japan': ['meti_transformer_prod_value', 'meti_transformer_nonstd_prod_value', 'meti_transformer_large_prod_value',
+              'meti_transformer_std_prod_value', 'meti_switchgear_prod_value', 'meti_gis_prod_value',
+              'jema_orders_transformer_q', 'jema_orders_total_q', 'jema_orders_utility_q', 'jp_exp_850423_p0',
+              'jp_exp_850422_p0', 'us_imp_850423_p392'],
     'Taiwan': ['us_imp_850423_p490', 'us_imp_8504dist_p490', 'us_imp_850422_p490', 'us_imp_850421_p490',
-               'moea_transformer_prod_value', 'moea_transformer_prod_qty'],
+               'moea_ip_2810', 'moea_pvi_28', 'moea_export_orders_electrical'],
     'China': ['cn_exp_850423_p0', 'cn_exp_850422_p0', 'cn_exp_850421_p0', 'cn_exp_850434_p0', 'cn_exp_850433_p0',
-              'nea_grid_investment_m', 'nbs_transformer_output', 'us_imp_8504dry_p156'],
+              'nea_grid_investment_q', 'us_imp_8504dry_p156', 'us_imp_850423_p156'],
     'India': ['in_exp_850423_p0', 'in_exp_850422_p0', 'in_exp_850421_p0', 'in_exp_850423_p842', 'in_exp_850422_p842',
-              'in_exp_850421_p842', 'us_imp_8504dist_p699', 'us_imp_850423_p699', 'india_iip_27'],
-    'Latin America and Middle East': ['br_exp_850423_p0', 'br_exp_850422_p0', 'br_exp_850421_p0', 'ibge_pim_c27',
-                                      'us_imp_850423_p76', 'us_imp_8504dist_p76', 'mx_exp_850422_p842',
-                                      'eg_exp_850421_p0', 'eg_exp_850422_p0', 'tr_exp_850423_p0'],
+              'in_exp_850421_p842', 'us_imp_8504dist_p699', 'us_imp_850423_p699', 'india_iip_27', 'india_iip_capgoods'],
+    'Latin America and Middle East': ['br_exp_850423_p0', 'br_exp_850422_p0', 'br_exp_850421_p0', 'br_exp_850423_p842',
+                                      'ibge_pim_c27', 'us_imp_850423_p76', 'us_imp_8504dist_p76', 'mx_exp_850422_p842',
+                                      'mx_exp_850423_p842', 'eg_exp_850421_p0', 'eg_exp_850422_p0', 'eg_exp_850423_p0',
+                                      'tr_exp_850423_p0'],
 }
 ID_OVERRIDES = {
     'SANIL': ['trass_sanil_ansan_8504212', 'trass_sanil_ansan_850421', 'trass_sanil_ansan_850422', 'kre_8504219010',
               'kre_8504219020'],
     'JERYONG': ['trass_jeryong_gwangjin', 'trass_jeryong_gwangjin_8504219020', 'kre_8504219010', 'kre_8504219020'],
-    'KOEI': ['hr_exp_850423_p0', 'hr_exp_850422_p0', 'eurostat_ip_C271_HR', 'us_imp_850423_p191'],
-    'KODT': ['hr_exp_850421_p0', 'hr_exp_850422_p0', 'hr_exp_850423_p0', 'eurostat_ip_C271_HR'],
-    'RSGN': ['ch_exp_850423_p0', 'pl_exp_850423_p0', 'eurostat_ip_C271_PL'],
+    'KOEI': ['hr_exp_850423_p0', 'hr_exp_850422_p0', 'hr_exp_850421_p0', 'us_imp_850423_p191'],
+    'KODT': ['hr_exp_850421_p0', 'hr_exp_850422_p0', 'hr_exp_850423_p0'],
+    'RSGN': ['ch_exp_850423_p0', 'pl_exp_850423_p0', 'eurostat_ip_C27_PL'],
     'SWDY': ['eg_exp_850421_p0', 'eg_exp_850422_p0', 'eg_exp_850423_p0'],
-    'WEG': ['br_exp_850423_p842', 'br_exp_850422_p842', 'mx_exp_850423_p842'],
-    'HPSA': ['us_imp_850433_p124', 'us_imp_850434_p124', 'us_imp_850433_p484', 'us_imp_850434_p484',
-             'us_imp_850433_p0', 'us_imp_850434_p0'],
+    'WEG': ['br_exp_850423_p842', 'br_exp_850422_p842', 'mx_exp_850423_p842', 'ibge_pim_c27'],
+    'HPSA': ['statcan_mfg_salesnsa_335311', 'statcan_mfg_newordersnsa_335311', 'statcan_mfg_salesnsa_335311_ON',
+             'us_imp_850433_p124', 'us_imp_850434_p124', 'us_imp_850433_p484', 'us_imp_850434_p484'],
     'FORTUNE': ['us_imp_850423_p490', 'us_imp_850422_p490'],
 }
 
@@ -108,22 +111,51 @@ def load_proxies():
         if doc.get('schema') != 'grid-composite-proxy/1':
             continue
         for sid, s in (doc.get('series') or {}).items():
-            if s.get('freq') != 'M':
+            freq = s.get('freq')
+            if freq == 'M':
+                obs = {month_index(k): float(v) for k, v in (s.get('obs') or {}).items()}
+                qonly = False
+            elif freq == 'Q':
+                # 분기 계열은 달력 분기 말 월에만 값을 둔다(3개월 창 = 그 분기). 월 진단에는 쓰지 않는다.
+                obs = {int(k[:4]) * 12 + int(k[-1]) * 3 - 1: float(v) for k, v in (s.get('obs') or {}).items()}
+                qonly = True
+            else:
                 continue
-            obs = {month_index(k): float(v) for k, v in (s.get('obs') or {}).items()}
-            if len(obs) < 24:
+            if len(obs) < (8 if qonly else 24):
                 continue
             catalog[sid] = {
                 'id': sid, 'family': doc.get('family'), 'label': s.get('label'), 'label_ko': s.get('label_ko') or s.get('label'),
-                'unit': s.get('unit'), 'agg': s.get('agg'), 'kind': s.get('kind'),
+                'unit': s.get('unit'), 'agg': s.get('agg'), 'kind': s.get('kind'), 'qonly': qonly,
                 'release_lag_days': s.get('release_lag_days'), 'notes': s.get('notes'), 'obs': obs,
                 'first': ym_of(min(obs)), 'last': ym_of(max(obs)), 'source': (doc.get('source') or {}).get('name'),
             }
+    ytd = catalog.get('nea_grid_investment_ytd')
+    if ytd:
+        # 누계(YTD) → 분기 유량: 3월 = 1~3월 누계, 그 외 = 누계(m) − 누계(m−3) (같은 해 안에서만)
+        q = {}
+        for m, v in ytd['obs'].items():
+            if m % 3 != 2:
+                continue
+            if m % 12 == 2:
+                q[m] = v
+            elif (m - 3) in ytd['obs'] and (m - 3) // 12 == m // 12:
+                q[m] = v - ytd['obs'][m - 3]
+        if len(q) >= 8:
+            catalog['nea_grid_investment_q'] = dict(ytd, id='nea_grid_investment_q', obs=q, qonly=True, agg='sum',
+                                                    label_ko='중국 전력망 공사 완료 투자(분기 유량, NEA 누계 차분)',
+                                                    first=ym_of(min(q)), last=ym_of(max(q)),
+                                                    notes='NEA 누계 발표를 같은 해 안에서 분기 차분. 2025-12 이후 발표에 투자 항목 없음.')
     return catalog
 
 
 def window_value(proxy, end_mi, months=3, allow_partial=False):
     """프록시 창 집계. 완결(3/3)이 아니면 None — allow_partial 이면 (값, 관측월들) 반환."""
+    if proxy.get('qonly'):
+        ends = list(range(end_mi, end_mi - months, -3))
+        if any(e not in proxy['obs'] for e in ends) or allow_partial:
+            return None
+        vals = [proxy['obs'][e] for e in ends]
+        return sum(vals) if proxy['agg'] == 'sum' else (sum(vals) / len(vals) if proxy['agg'] == 'mean' else vals[0])
     ms = list(range(end_mi - months + 1, end_mi + 1))
     have = [m for m in ms if m in proxy['obs']]
     if len(have) < months and not allow_partial:
@@ -259,7 +291,8 @@ def prewhiten(y, proxy, months, step, max_p=2):
         return None
     res = min(y) % step
     full = {}
-    for e in range(min(proxy['obs']) + 12 + months - 1, max(proxy['obs']) + 1):
+    start = min(proxy['obs']) + 12 + (0 if proxy.get('qonly') else months - 1)
+    for e in range(start, max(proxy['obs']) + 1):
         if e % step != res:
             continue
         v = proxy_yoy(proxy, e, months)
@@ -487,18 +520,20 @@ def grade(ev, n_hist):
 
 # ── 회사 단위 ─────────────────────────────────────────────────
 def candidate_ids(peer, doc, catalog):
-    ids, roles = [], {}
+    ids, roles, missing = [], {}, []
 
-    def add(pid, role, sign=1, why=None):
+    def add(pid, role, sign=1, why=None, ensemble=True):
         if pid in catalog and pid not in roles:
             ids.append(pid)
-            roles[pid] = {'role': role, 'sign': sign, 'why': why}
+            roles[pid] = {'role': role, 'sign': sign, 'why': why, 'ensemble': ensemble}
+        elif pid not in catalog and role == 'pre_registered' and pid not in missing:
+            missing.append(pid)
 
     for route in ((doc.get('profile') or {}).get('proxy_routes') or []):
         hint = route.get('proxy_hint') or route.get('id')
         sign = -1 if str(route.get('expected_sign', '+')).strip() in ('-', '−', 'negative') else 1
         if hint and route.get('role') != 'wishlist':
-            add(hint, 'pre_registered', sign, route.get('why'))
+            add(hint, 'pre_registered', sign, route.get('why'), ensemble=route.get('role') != 'diagnostic')
     for pid in ID_OVERRIDES.get(peer['id'], []):
         add(pid, 'route')
     for pid in REGIONAL_CANDIDATES.get(peer['region'], []):
@@ -506,11 +541,11 @@ def candidate_ids(peer, doc, catalog):
     for pid in GLOBAL_CANDIDATES:
         add(pid, 'global')
     if peer['id'] != 'SANIL':
-        add(ANCHOR_SERIES, 'anchor_diag')
+        add(ANCHOR_SERIES, 'anchor_diag', ensemble=False)
     keep = ids[:MAX_CANDIDATES]
     if ANCHOR_SERIES in ids and ANCHOR_SERIES not in keep:
         keep.append(ANCHOR_SERIES)
-    return keep, roles, ids[MAX_CANDIDATES:]
+    return keep, roles, [i for i in ids[MAX_CANDIDATES:] if i != ANCHOR_SERIES], missing
 
 
 def round_dict(d):
@@ -563,8 +598,9 @@ def analyze_peer(peer, doc, catalog, asof_mi):
     if len(y) < MIN_TRAIN + 4:
         res['status'] = 'short_history'
         res['reasons'].append(f'YoY 관측 {len(y)}개 — 선후행 검정 최소 {MIN_TRAIN + 4}개 미만')
-    cand, roles, dropped = candidate_ids(peer, doc, catalog)
+    cand, roles, dropped, missing = candidate_ids(peer, doc, catalog)
     res['candidates_dropped'] = dropped
+    res['hints_missing'] = missing
     end_mis = sorted(y)
     last_mi = rows[-1]['end_mi'] if rows else None
     target_mi = last_mi + step if last_mi is not None else None
@@ -582,10 +618,11 @@ def analyze_peer(peer, doc, catalog, asof_mi):
                 row['p'] = row['p'] / 2 if (row['signed_r'] or 0) > 0 else 1 - row['p'] / 2
         pw = pw_ccf(prewhiten(y, pr, months, step), LAGS, sign, step)
         entry = {'id': pid, 'label_ko': pr['label_ko'], 'role': roles[pid]['role'], 'why': roles[pid]['why'],
+                 'in_ensemble': roles[pid]['ensemble'],
                  'sign': sign, 'kind': pr['kind'], 'family': pr['family'], 'first': pr['first'], 'last': pr['last'],
                  'ccf': ccf, 'pw': pw}
         per.append((entry, xl, pr))
-        if roles[pid]['role'] != 'anchor_diag' and len(y) >= MIN_TRAIN + 4:
+        if roles[pid]['ensemble'] and len(y) >= MIN_TRAIN + 4:
             singles[pid] = honest_single_proxy(y, {k: xl[k] for k in LEAD_LAGS}, sign, step)
     # BH-FDR: 회사 안 모든 (프록시, 시차) 사전백색화 단측 검정(앵커 진단은 따로)
     for group in (lambda e: e['role'] != 'anchor_diag', lambda e: e['role'] == 'anchor_diag'):
@@ -645,7 +682,7 @@ def analyze_peer(peer, doc, catalog, asof_mi):
 
 
 def compact_candidate(e):
-    out = {k: e.get(k) for k in ('id', 'label_ko', 'role', 'why', 'sign', 'kind', 'family', 'first', 'last', 'class',
+    out = {k: e.get(k) for k in ('id', 'label_ko', 'role', 'why', 'sign', 'kind', 'family', 'first', 'last', 'class', 'in_ensemble',
                                  'k_star', 'strength', 'robust', 'tight', 'validated_lead', 'oos_lag_mode')}
     out['ccf'] = [{'k': r['k'], 'n': r['n'], 'r': rnd(r['r'], 3), 'n_eff': rnd(r['n_eff'], 1), 'p': rnd(r.get('p'), 4)}
                   for r in e['ccf']]
@@ -851,8 +888,8 @@ def main():
         doc = load_json(path)
         res = analyze_peer(peer, doc, catalog, asof_mi)
         if (doc.get('targets') or {}).get('revenue_monthly'):
-            cand, roles, _ = candidate_ids(peer, doc, catalog)
-            res['monthly'] = monthly_ccf(doc, catalog, cand, roles)
+            cand, roles, _, _ = candidate_ids(peer, doc, catalog)
+            res['monthly'] = monthly_ccf(doc, catalog, [c for c in cand if not catalog[c].get('qonly')], roles)
         results.append(res)
     used = sorted({c['id'] for r in results for c in (r.get('candidates') or [])})
     out = {

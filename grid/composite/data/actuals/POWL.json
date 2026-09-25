@@ -1,55 +1,768 @@
 {
  "accounting_basis": "US GAAP",
- "collected_at": "2026-09-23",
+ "collected_at": "2026-09-25",
  "collection_notes": [
-  "seed: phalanx composite_preview.html DATA.companies[].official_financials (asof 2026-09-23); 원문 URL 보존, 값 무변경"
+  "seed: phalanx composite_preview.html DATA.companies[].official_financials (asof 2026-09-23); 원문 URL 보존, 값 무변경",
+  "2026-09-25 G1_NA: 기존 revenue_total 31개(FY2019Q1–FY2026Q3)를 SEC XBRL과 대조 — 전부 일치(Q4는 10-K 분기표 3개월 값과 일치), 무변경.",
+  "revenue_total FY2016Q1–FY2018Q4 12개 추가: 10-Q 3개월 열(us-gaap:ContractsRevenue→RevenueFromContractWithCustomer…) + 같은 문서 PYC; Q4는 10-K \"quarterly results (unaudited)\" 3개월 값(XBRL 3M fact).",
+  "orders_segment 43개(FY2016Q1–FY2026Q3): 분기 실적 보도자료(8-K Ex.99.1) 본문 \"New orders … totaled $X million\". 2018-02-06 보도자료는 문장에 \"fourth quarter of fiscal 2018\"로 오기 — 실제 FY2018Q1(2017-10~12) 발표문이며 PYC 문구(\"$91 million in the first quarter of fiscal 2017\")로 확인.",
+  "FY2020Q4 $57M 은 순수주(총 $75M − 취소/범위축소 $18M), FY2022Q1 $108M 도 순수주(총 $122M) — 회사 헤드라인 값 그대로.",
+  "(moved from structural_breaks 2026-09-25) 2026-04-02 share split: per-share metrics only; revenue/orders scope unchanged — not a structural break under CONTRACT §1 (would falsely flag a scope change in the nowcast window).",
+  "verify 2026-09-25: checked revenue_total all 43 points vs SEC XBRL 3-month facts inside each cited filing (Q4 = 10-K quarterly table), orders_segment FY2016Q1, FY2016Q3, FY2017Q2, FY2018Q2, FY2019Q1, FY2020Q4, FY2021Q2, FY2021Q4, FY2023Q2, FY2023Q3, FY2024Q2, FY2026Q1, FY2026Q2, FY2026Q3 (release text 'New orders … totaled $X million' incl. printed PYC) — all values match; fixed 64: 31 non-specific seed locators replaced, 31 seed methods 'reported'→'direct_reported_quarter', 2022 break type 'disposal'→'divestiture' with note+source from FY2022 10-K, share_split moved out of structural_breaks."
  ],
  "currency": "USD",
- "gaps": [],
+ "fiscal_year_end_month": 9,
+ "gaps": [
+  "orders_segment: 보도자료가 전년 동기 수주를 문장으로 인쇄한 분기만 PYC 기재(FY2016Q1–FY2022Q1 대부분); 이후 분기는 PYC 없음 — 빌더는 전년 포인트 값 사용(동일 정의: 순수주 = 신규−취소/범위축소).",
+  "Powell은 세그먼트 1개 — revenue_segment 없음(연결=세그먼트)."
+ ],
  "grid_node": "GRID_POWELL",
  "id": "POWL",
  "listed": true,
  "name": "Powell Industries, Inc.",
  "primary_target": "revenue_total",
  "profile": {
-  "end_markets": null,
-  "export_routes": [],
-  "hs_candidates": [],
-  "plants": [],
-  "products": "Custom-engineered electrical power distribution and control systems, with related installation, commissioning and service; projects serve oil and gas, utilities, commercial/industrial, petrochemical and rail customers. One reporting segment; substantial revenue recognized over time using cost-to-cost progress.",
-  "proxy_routes": []
+  "end_markets": "FY2025 revenue mix: oil & gas 37%, electric utility 25%, commercial & other industrial 16%, petrochemical 14%, light-rail traction 4%, other 4% (FY2025 10-K)",
+  "export_routes": [
+   "US domestic",
+   "CA domestic",
+   "GB domestic",
+   "US->LNG/export projects"
+  ],
+  "hs_candidates": [
+   "853720",
+   "853521",
+   "853710",
+   "853529"
+  ],
+  "plants": [
+   {
+    "city": "Houston, TX (4 sites)",
+    "country": "US",
+    "products": "switchgear, PCR/E-Houses, fabrication, HQ",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+   },
+   {
+    "city": "North Canton, OH",
+    "country": "US",
+    "products": "office & manufacturing",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+   },
+   {
+    "city": "Northlake, IL",
+    "country": "US",
+    "products": "office & manufacturing",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+   },
+   {
+    "city": "Acheson, AB",
+    "country": "CA",
+    "products": "office & manufacturing (Powell Canada)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+   },
+   {
+    "city": "Bradford",
+    "country": "GB",
+    "products": "office & manufacturing (Powell UK)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+   },
+   {
+    "city": "Deeside",
+    "country": "GB",
+    "products": "office & manufacturing (substation automation, acq. 2025)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+   }
+  ],
+  "products": "Custom-engineered power distribution & control: integrated power control room substations (PCR), E-Houses/modules, traditional & arc-resistant distribution switchgear and control gear, medium-voltage circuit breakers, motor control centers, switches and bus duct; application voltages 480 V–38 kV (ANSI & IEC); field services. Powell does NOT make power/distribution transformers (it protects/controls them); UK SCADA/RTU substation automation added Aug-2025.",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SNO",
+    "role": "primary",
+    "why": "미국 전기장비 신규수주 — Powell 수주·매출 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SUO",
+    "role": "primary",
+    "why": "미국 전기장비 수주잔고 — 백로그 기반(원가진행률) 매출 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SVS",
+    "role": "diagnostic",
+    "why": "미국 전기장비 출하 — 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853720_p0",
+    "role": "primary",
+    "why": "미국 1kV 초과 배전반(중압 스위치기어) 수입 — Powell 핵심 제품 시장 수요(국내 공급부족 시 수입 증가)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853720_p484",
+    "role": "diagnostic",
+    "why": "멕시코산 중압 배전반 대미 수입 — 경쟁·수요 지표"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853521_p0",
+    "role": "diagnostic",
+    "why": "미국 72.5kV 미만 자동차단기 수입 — 중압 차단기 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLPWRCONS",
+    "role": "primary",
+    "why": "미국 전력 건설투자 — 유틸리티 매출(25%) 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_IPG3353S",
+    "role": "diagnostic",
+    "why": "미국 전기장비 산업생산 — 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "statcan_mfg_sales_3353",
+    "role": "diagnostic",
+    "why": "캐나다 전기장비 제조 판매 — Powell Canada(앨버타) 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_MCOILWTICO",
+    "role": "wishlist",
+    "why": "WISHLIST: WTI 월평균 유가 — 석유·가스(37%)·석유화학(14%) capex 선행(2–6분기)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLMFGCONS",
+    "role": "wishlist",
+    "why": "WISHLIST: 미국 제조업 건설투자 — 산업·석유화학 프로젝트 선행"
+   }
+  ]
  },
- "quarter_calendar": null,
+ "quarter_calendar": "fiscal year Oct 1–Sep 30; calendar-quarter ends (Q1 = Oct–Dec)",
  "schema": "grid-composite-actuals/1",
  "structural_breaks": [
   {
    "date": "2022-06-30",
-   "note": "Removes disposed business prospectively; reported history retained.",
-   "source_url": null,
-   "type": "disposal"
+   "note": "Fiscal 2022: sale of a small, non-core industrial valve repair and servicing business within the Canadian operations (proceeds ≈ $4.3M; gain in 'Other income'); immaterial to revenue — reported history retained. Exact closing date not stated in the 10-K; 2022-06-30 kept as approximate.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042022000036/powl-20220930.htm",
+   "type": "divestiture"
   },
   {
    "date": "2025-08-15",
    "note": "UK SCADA/RTU substation automation added; FY2025 Q4 partial contribution; future comparisons include acquired scope.",
-   "source_url": null,
+   "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm",
    "type": "acquisition"
-  },
-  {
-   "date": "2026-04-02",
-   "note": "Per-share metrics affected; revenue and OP amounts are not split-adjusted.",
-   "source_url": null,
-   "type": "share_split"
   }
  ],
  "targets": {
+  "orders_segment": {
+   "freq": "Q",
+   "label_ko": "신규 수주(New orders, 회사 전체=단일 세그먼트)",
+   "metric": "orders",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "Powell fiscal Q1 2016 earnings release (Form 8-K Ex.99.1): \"New orders placed during the first quarter of fiscal 2016 totaled $102 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$154 million in the first quarter of fiscal 2015\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-12-31",
+     "period_start": "2015-10-01",
+     "prior_year_comparative": 154.0,
+     "published_date": "2016-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000119312516449052/d132990dex991.htm",
+     "value": 102.0
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "Powell fiscal Q2 2016 earnings release (Form 8-K Ex.99.1): \"New orders placed during the second quarter of fiscal 2016 totaled $117 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$167 million in the second quarter of fiscal 2015\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 167.0,
+     "published_date": "2016-05-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000119312516576528/d189859dex991.htm",
+     "value": 117.0
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "Powell fiscal Q3 2016 earnings release (Form 8-K Ex.99.1): \"New orders placed during the third quarter of fiscal 2016 totaled $88 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$193 million in the third quarter of fiscal 2015\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 193.0,
+     "published_date": "2016-08-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000119312516669308/d236760dex991.htm",
+     "value": 88.0
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "Powell fiscal Q4 2016 earnings release (Form 8-K Ex.99.1): \"New orders placed during the fourth quarter of fiscal 2016 totaled $111 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$92 million in the fourth quarter of fiscal 2015\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 92.0,
+     "published_date": "2016-12-07",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000119312516787354/d255451dex991.htm",
+     "value": 111.0
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "Powell fiscal Q1 2017 earnings release (Form 8-K Ex.99.1): \"New orders placed during the first quarter of fiscal 2017 totaled $91 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$102 million in the first quarter of fiscal 2016\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 102.0,
+     "published_date": "2017-02-07",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000162828017000949/ex991-q117earningsrelease.htm",
+     "value": 91.0
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "Powell fiscal Q2 2017 earnings release (Form 8-K Ex.99.1): \"New orders placed during the second quarter of fiscal 2017 totaled $62.0 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$117 million in the second quarter of fiscal 2016\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 117.0,
+     "published_date": "2017-05-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042017000006/ex991-powlq217earnings.htm",
+     "value": 62.0
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "Powell fiscal Q3 2017 earnings release (Form 8-K Ex.99.1): \"New orders placed during the third quarter of fiscal 2017 totaled $91 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$88 million in the third quarter of fiscal 2016\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "prior_year_comparative": 88.0,
+     "published_date": "2017-08-09",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042017000017/ex991-powlq317earnings.htm",
+     "value": 91.0
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "Powell fiscal Q4 2017 earnings release (Form 8-K Ex.99.1): \"New orders placed during the fourth quarter of fiscal 2017 totaled $112 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$111 million in the fourth quarter of fiscal 2016\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 111.0,
+     "published_date": "2017-12-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042017000028/ex991-q417earningsrelease.htm",
+     "value": 112.0
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Powell fiscal Q1 2018 earnings release (Form 8-K Ex.99.1): \"New orders placed during the fourth quarter of fiscal 2018 totaled $100 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$91 million in the first quarter of fiscal 2017\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 91.0,
+     "published_date": "2018-02-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000003/ex991-q118earningsrelease.htm",
+     "value": 100.0
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "Powell fiscal Q2 2018 earnings release (Form 8-K Ex.99.1): \"New orders placed during the second quarter of fiscal 2018 totaled $142 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$62 million in the second quarter of fiscal 2017\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 62.0,
+     "published_date": "2018-05-09",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000011/ex991-q218earningsrelease.htm",
+     "value": 142.0
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "Powell fiscal Q3 2018 earnings release (Form 8-K Ex.99.1): \"New orders placed during the third quarter of fiscal 2018 totaled $139 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$91 million in the third quarter of fiscal 2017\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 91.0,
+     "published_date": "2018-08-07",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000020/ex991-q318earningsrelease.htm",
+     "value": 139.0
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Powell fiscal Q4 2018 earnings release (Form 8-K Ex.99.1): \"New orders placed during the fourth quarter of fiscal 2018 totaled $78 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$112 million in the fourth quarter of fiscal 2017\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 112.0,
+     "published_date": "2018-12-12",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000031/ex991-q418earningsrelease.htm",
+     "value": 78.0
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "Powell fiscal Q1 2019 earnings release (Form 8-K Ex.99.1): \"New orders placed during the first quarter of fiscal 2019 totaled $172 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$100 million in the first quarter of fiscal 2018\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "prior_year_comparative": 100.0,
+     "published_date": "2019-02-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042019000003/ex991-q219earningsrelease.htm",
+     "value": 172.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "Powell fiscal Q2 2019 earnings release (Form 8-K Ex.99.1): \"New orders placed during the second quarter of fiscal 2019 totaled $197 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$142 million in the second quarter of fiscal 2018\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 142.0,
+     "published_date": "2019-05-07",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042019000011/ex991-q219earningsrelease.htm",
+     "value": 197.0
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "Powell fiscal Q3 2019 earnings release (Form 8-K Ex.99.1): \"New orders placed during the third quarter of fiscal 2019 totaled $145 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$139 million in the third quarter of fiscal 2018\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 139.0,
+     "published_date": "2019-08-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042019000022/ex991-q319earningsrelease.htm",
+     "value": 145.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "Powell fiscal Q4 2019 earnings release (Form 8-K Ex.99.1): \"New orders placed during the fourth quarter of fiscal 2019 totaled $162 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$78 million in the fourth quarter of fiscal 2018\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 78.0,
+     "published_date": "2019-12-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000119312519306243/d843526dex991.htm",
+     "value": 162.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "Powell fiscal Q1 2020 earnings release (Form 8-K Ex.99.1): \"New orders placed during the first quarter of fiscal 2020 totaled $137 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$172 million in the first quarter of fiscal 2019\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 172.0,
+     "published_date": "2020-02-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042020000003/ex991-q120earningsrelease.htm",
+     "value": 137.0
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "Powell fiscal Q2 2020 earnings release (Form 8-K Ex.99.1): \"New orders placed during the second quarter of fiscal 2020 totaled $301 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$197 million in the second quarter of fiscal 2019\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 197.0,
+     "published_date": "2020-05-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042020000017/ex991-q220earningsrelease.htm",
+     "value": 301.0
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "Powell fiscal Q3 2020 earnings release (Form 8-K Ex.99.1): \"New orders placed during the third quarter of fiscal 2020 totaled $81 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$145 million in the third quarter of fiscal 2019\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "prior_year_comparative": 145.0,
+     "published_date": "2020-08-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042020000024/ex991-q320earningsrelease.htm",
+     "value": 81.0
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "Powell fiscal Q4 2020 earnings release (Form 8-K Ex.99.1): \"New orders placed in the fourth quarter of $57 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "published_date": "2020-12-08",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042020000032/ex991-q420earningsrelease.htm",
+     "value": 57.0
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "Powell fiscal Q1 2021 earnings release (Form 8-K Ex.99.1): \"New orders placed in the first quarter totaled $91 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$137 million of new orders in the first quarter of fiscal 2020\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "prior_year_comparative": 137.0,
+     "published_date": "2021-02-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042021000010/ex991-q121earningsrelease.htm",
+     "value": 91.0
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "Powell fiscal Q2 2021 earnings release (Form 8-K Ex.99.1): \"New orders in the second quarter were $89 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$301 million of new orders in the second quarter of fiscal 2020\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 301.0,
+     "published_date": "2021-05-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042021000026/ex991-q221earningsrelease.htm",
+     "value": 89.0
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "Powell fiscal Q3 2021 earnings release (Form 8-K Ex.99.1): \"New orders in the third quarter totaled $103 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$81 million in the third quarter of fiscal 2020\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "prior_year_comparative": 81.0,
+     "published_date": "2021-08-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042021000036/ex991-q321earningsrelease.htm",
+     "value": 103.0
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "Powell fiscal Q4 2021 earnings release (Form 8-K Ex.99.1): \"New orders in the fourth quarter totaled $121 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "published_date": "2021-12-07",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042021000043/ex991-q421earningsrelease.htm",
+     "value": 121.0
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "Powell fiscal Q1 2022 earnings release (Form 8-K Ex.99.1): \"New orders placed in the first quarter of $108 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded); PYC = \"$91 million of new orders in the first quarter of fiscal 2021\" in same release",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 91.0,
+     "published_date": "2022-02-08",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042022000005/ex991-q122earningsrelease.htm",
+     "value": 108.0
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "Powell fiscal Q2 2022 earnings release (Form 8-K Ex.99.1): \"New orders placed in the second quarter totaled $151 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "published_date": "2022-05-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042022000016/ex991-q222earningsrelease.htm",
+     "value": 151.0
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "Powell fiscal Q3 2022 earnings release (Form 8-K Ex.99.1): \"New orders placed in the third quarter totaled $202 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "published_date": "2022-08-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042022000030/ex991-q322earningsrelease.htm",
+     "value": 202.0
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "Powell fiscal Q4 2022 earnings release (Form 8-K Ex.99.1): \"New orders placed in the fourth quarter totaled $259 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "published_date": "2022-12-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042022000034/ex991-q422earningsrelease.htm",
+     "value": 259.0
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "Powell fiscal Q1 2023 earnings release (Form 8-K Ex.99.1): \"New orders totaled $212 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2023-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042023000004/ex99-1q12023earningsrelease.htm",
+     "value": 212.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "Powell fiscal Q2 2023 earnings release (Form 8-K Ex.99.1): \"new orders of $508 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2023-05-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042023000025/ex99-1q22023earningsrelease.htm",
+     "value": 508.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "Powell fiscal Q3 2023 earnings release (Form 8-K Ex.99.1): \"New orders placed in the third quarter totaled $505 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2023-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042023000036/ex99-1q32023earningsrelease.htm",
+     "value": 505.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "Powell fiscal Q4 2023 earnings release (Form 8-K Ex.99.1): \"Net new orders totaled $171 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2023-12-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042023000047/ex991-powlq4xfy2023earning.htm",
+     "value": 171.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "Powell fiscal Q1 2024 earnings release (Form 8-K Ex.99.1): \"New orders totaled $198 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2024-01-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042024000005/ex991-powlq1xfy2024earning.htm",
+     "value": 198.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "Powell fiscal Q2 2024 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $235 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042024000026/ex991-powlq2xfy2024earning.htm",
+     "value": 235.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "Powell fiscal Q3 2024 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $356 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "published_date": "2024-07-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042024000057/ex991-powlq3xfy2024earning.htm",
+     "value": 356.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "Powell fiscal Q4 2024 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $267 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2024-11-19",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042024000084/ex991-powlq4xfy2024earning.htm",
+     "value": 267.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "Powell fiscal Q1 2025 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $269 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2025-02-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000026/ex991-powlq1xfy2025earning.htm",
+     "value": 269.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "Powell fiscal Q2 2025 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $249 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "published_date": "2025-05-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000057/ex991-powlq2xfy2025earning.htm",
+     "value": 249.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "Powell fiscal Q3 2025 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $362 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2025-08-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000095/ex991-powlq3xfy2025earning.htm",
+     "value": 362.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Powell fiscal Q4 2025 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $271 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2025-11-18",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000145/ex991-powlq4xfy2025earning.htm",
+     "value": 271.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "Powell fiscal Q1 2026 earnings release (Form 8-K Ex.99.1): \"New orders (1) totaled $439 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000013/ex991-powlq1xfy2026earning.htm",
+     "value": 439.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "Powell fiscal Q2 2026 earnings release (Form 8-K Ex.99.1): \"New orders (2) totaled $490 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000063/ex991-powlq2xfy2026earning.htm",
+     "value": 490.0
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "locator": "Powell fiscal Q3 2026 earnings release (Form 8-K Ex.99.1): \"New orders (2) totaled $934 million…\" — new orders (bookings = estimated value of contracts added to backlog), company total (single reportable segment), USD million as printed (rounded)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-08-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000103/ex991-powlq3xfy2026earning.htm",
+     "value": 934.0
+    }
+   ],
+   "primary": false,
+   "scope": "consolidated",
+   "segment_name": "Company total (Powell reports one reportable segment)"
+  },
   "revenue_total": {
    "freq": "Q",
    "label_ko": "연결 매출",
    "points": [
     {
+     "fiscal_key": "FY2016Q1",
+     "locator": "10-Q for period ended 2015-12-31 (filed 2016-02-03), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-12-31",
+     "period_start": "2015-10-01",
+     "prior_year_comparative": 152.601,
+     "published_date": "2016-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000156459016012239/powl-10q_20151231.htm",
+     "value": 149.977
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "10-Q for period ended 2016-03-31 (filed 2016-05-04), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 170.199,
+     "published_date": "2016-05-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000156459016017619/powl-10q_20160331.htm",
+     "value": 152.266
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "10-Q for period ended 2016-06-30 (filed 2016-08-03), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 176.733,
+     "published_date": "2016-08-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000156459016022303/powl-10q_20160630.htm",
+     "value": 133.207
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "10-K FY ended 2016-09-30 (filed 2016-12-07), quarterly results (unaudited) table, fourth-quarter three-month column; Condensed Consolidated Statements of Operations, Revenues. XBRL us-gaap:ContractsRevenue",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 162.325,
+     "published_date": "2016-12-07",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000156459016029924/powl-10k_20160930.htm",
+     "value": 129.793
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "10-Q for period ended 2016-12-31 (filed 2017-02-08), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 149.977,
+     "published_date": "2017-02-08",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000162828017000997/powl10-qq12017.htm",
+     "value": 110.341
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "10-Q for period ended 2017-03-31 (filed 2017-05-03), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 152.266,
+     "published_date": "2017-05-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042017000009/powl10-qq22017.htm",
+     "value": 104.68
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "10-Q for period ended 2017-06-30 (filed 2017-08-09), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "prior_year_comparative": 133.207,
+     "published_date": "2017-08-09",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042017000020/powl10-qq32017.htm",
+     "value": 85.927
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "10-K FY ended 2017-09-30 (filed 2017-12-06), quarterly results (unaudited) table, fourth-quarter three-month column; Condensed Consolidated Statements of Operations, Revenues. XBRL us-gaap:ContractsRevenue",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 129.793,
+     "published_date": "2017-12-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042017000032/powl10-k2017.htm",
+     "value": 94.963
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "10-Q for period ended 2017-12-31 (filed 2018-02-07), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 110.341,
+     "published_date": "2018-02-07",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000007/powl10-qq12018.htm",
+     "value": 90.184
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "10-Q for period ended 2018-03-31 (filed 2018-05-09), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:ContractsRevenue {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 104.68,
+     "published_date": "2018-05-09",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000013/powl10-qq22018.htm",
+     "value": 101.505
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "10-Q for period ended 2018-06-30 (filed 2018-08-08), Condensed Consolidated Statements of Operations, Revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 85.927,
+     "published_date": "2018-08-08",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000022/powl10-qq32018.htm",
+     "value": 122.13
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "10-K FY ended 2018-09-30 (filed 2018-12-12), quarterly results (unaudited) table, fourth-quarter three-month column; Condensed Consolidated Statements of Operations, Revenues. XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 94.963,
+     "published_date": "2018-12-12",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/80420/000008042018000036/powl10-k2018.htm",
+     "value": 134.897
+    },
+    {
      "fiscal_key": "FY2019Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-20-000005",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-20-000005, filed 2020-02-05): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2018-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2018-10-01–2018-12-31 = 109.351",
+     "method": "direct_reported_quarter",
      "period_end": "2018-12-31",
      "period_start": "2018-10-01",
      "published_date": "2020-02-05",
@@ -58,8 +771,8 @@
     },
     {
      "fiscal_key": "FY2019Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-20-000020",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-20-000020, filed 2020-05-06): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2019-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2019-01-01–2019-03-31 = 123.737",
+     "method": "direct_reported_quarter",
      "period_end": "2019-03-31",
      "period_start": "2019-01-01",
      "published_date": "2020-05-06",
@@ -68,8 +781,8 @@
     },
     {
      "fiscal_key": "FY2019Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-20-000027",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-20-000027, filed 2020-08-05): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2019-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2019-04-01–2019-06-30 = 135.588",
+     "method": "direct_reported_quarter",
      "period_end": "2019-06-30",
      "period_start": "2019-04-01",
      "published_date": "2020-08-05",
@@ -78,8 +791,8 @@
     },
     {
      "fiscal_key": "FY2019Q4",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-20-000036",
-     "method": "reported",
+     "locator": "Form 10-K (accession 0000080420-20-000036, filed 2020-12-09): quarterly results table, fourth-quarter column (three months ended 2019-09-30), row 'Revenues'; XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax 3-month context 2019-07-01–2019-09-30 = 148.504",
+     "method": "direct_reported_quarter",
      "period_end": "2019-09-30",
      "period_start": "2019-07-01",
      "published_date": "2020-12-09",
@@ -88,8 +801,8 @@
     },
     {
      "fiscal_key": "FY2020Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-21-000013",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-21-000013, filed 2021-02-03): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2019-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2019-10-01–2019-12-31 = 134.150",
+     "method": "direct_reported_quarter",
      "period_end": "2019-12-31",
      "period_start": "2019-10-01",
      "published_date": "2021-02-03",
@@ -98,8 +811,8 @@
     },
     {
      "fiscal_key": "FY2020Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-21-000029",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-21-000029, filed 2021-05-05): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2020-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2020-01-01–2020-03-31 = 151.570",
+     "method": "direct_reported_quarter",
      "period_end": "2020-03-31",
      "period_start": "2020-01-01",
      "published_date": "2021-05-05",
@@ -108,8 +821,8 @@
     },
     {
      "fiscal_key": "FY2020Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-21-000041",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-21-000041, filed 2021-08-04): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2020-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2020-04-01–2020-06-30 = 118.062",
+     "method": "direct_reported_quarter",
      "period_end": "2020-06-30",
      "period_start": "2020-04-01",
      "published_date": "2021-08-04",
@@ -118,8 +831,8 @@
     },
     {
      "fiscal_key": "FY2020Q4",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-21-000045",
-     "method": "reported",
+     "locator": "Form 10-K (accession 0000080420-21-000045, filed 2021-12-08): quarterly results table, fourth-quarter column (three months ended 2020-09-30), row 'Revenues'; XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax 3-month context 2020-07-01–2020-09-30 = 114.717",
+     "method": "direct_reported_quarter",
      "period_end": "2020-09-30",
      "period_start": "2020-07-01",
      "published_date": "2021-12-08",
@@ -128,8 +841,8 @@
     },
     {
      "fiscal_key": "FY2021Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-22-000007",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-22-000007, filed 2022-02-09): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2020-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2020-10-01–2020-12-31 = 106.575",
+     "method": "direct_reported_quarter",
      "period_end": "2020-12-31",
      "period_start": "2020-10-01",
      "published_date": "2022-02-09",
@@ -138,8 +851,8 @@
     },
     {
      "fiscal_key": "FY2021Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-22-000019",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-22-000019, filed 2022-05-04): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2021-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2021-01-01–2021-03-31 = 118.716",
+     "method": "direct_reported_quarter",
      "period_end": "2021-03-31",
      "period_start": "2021-01-01",
      "published_date": "2022-05-04",
@@ -148,8 +861,8 @@
     },
     {
      "fiscal_key": "FY2021Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-22-000032",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-22-000032, filed 2022-08-03): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2021-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2021-04-01–2021-06-30 = 115.813",
+     "method": "direct_reported_quarter",
      "period_end": "2021-06-30",
      "period_start": "2021-04-01",
      "published_date": "2022-08-03",
@@ -158,8 +871,8 @@
     },
     {
      "fiscal_key": "FY2021Q4",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-22-000036",
-     "method": "reported",
+     "locator": "Form 10-K (accession 0000080420-22-000036, filed 2022-12-06): quarterly results table, fourth-quarter column (three months ended 2021-09-30), row 'Revenues'; XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax 3-month context 2021-07-01–2021-09-30 = 129.455",
+     "method": "direct_reported_quarter",
      "period_end": "2021-09-30",
      "period_start": "2021-07-01",
      "published_date": "2022-12-06",
@@ -168,8 +881,8 @@
     },
     {
      "fiscal_key": "FY2022Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-23-000007",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-23-000007, filed 2023-02-01): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2021-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2021-10-01–2021-12-31 = 106.569",
+     "method": "direct_reported_quarter",
      "period_end": "2021-12-31",
      "period_start": "2021-10-01",
      "published_date": "2023-02-01",
@@ -178,8 +891,8 @@
     },
     {
      "fiscal_key": "FY2022Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-23-000027",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-23-000027, filed 2023-05-03): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2022-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2022-01-01–2022-03-31 = 127.854",
+     "method": "direct_reported_quarter",
      "period_end": "2022-03-31",
      "period_start": "2022-01-01",
      "published_date": "2023-05-03",
@@ -188,8 +901,8 @@
     },
     {
      "fiscal_key": "FY2022Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-23-000038",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-23-000038, filed 2023-08-02): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2022-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2022-04-01–2022-06-30 = 135.483",
+     "method": "direct_reported_quarter",
      "period_end": "2022-06-30",
      "period_start": "2022-04-01",
      "published_date": "2023-08-02",
@@ -198,8 +911,8 @@
     },
     {
      "fiscal_key": "FY2022Q4",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-23-000051",
-     "method": "reported",
+     "locator": "Form 10-K (accession 0000080420-23-000051, filed 2023-12-06): quarterly results table, fourth-quarter column (three months ended 2022-09-30), row 'Revenues'; XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax 3-month context 2022-07-01–2022-09-30 = 162.676",
+     "method": "direct_reported_quarter",
      "period_end": "2022-09-30",
      "period_start": "2022-07-01",
      "published_date": "2023-12-06",
@@ -208,8 +921,8 @@
     },
     {
      "fiscal_key": "FY2023Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-24-000008",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-24-000008, filed 2024-01-31): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2022-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2022-10-01–2022-12-31 = 126.858",
+     "method": "direct_reported_quarter",
      "period_end": "2022-12-31",
      "period_start": "2022-10-01",
      "published_date": "2024-01-31",
@@ -218,8 +931,8 @@
     },
     {
      "fiscal_key": "FY2023Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-24-000030",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-24-000030, filed 2024-05-01): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2023-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2023-01-01–2023-03-31 = 171.444",
+     "method": "direct_reported_quarter",
      "period_end": "2023-03-31",
      "period_start": "2023-01-01",
      "published_date": "2024-05-01",
@@ -228,8 +941,8 @@
     },
     {
      "fiscal_key": "FY2023Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-24-000059",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-24-000059, filed 2024-07-31): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2023-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2023-04-01–2023-06-30 = 192.365",
+     "method": "direct_reported_quarter",
      "period_end": "2023-06-30",
      "period_start": "2023-04-01",
      "published_date": "2024-07-31",
@@ -238,8 +951,8 @@
     },
     {
      "fiscal_key": "FY2023Q4",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-24-000086",
-     "method": "reported",
+     "locator": "Form 10-K (accession 0000080420-24-000086, filed 2024-11-20): quarterly results table, fourth-quarter column (three months ended 2023-09-30), row 'Revenues'; XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax 3-month context 2023-07-01–2023-09-30 = 208.641",
+     "method": "direct_reported_quarter",
      "period_end": "2023-09-30",
      "period_start": "2023-07-01",
      "published_date": "2024-11-20",
@@ -248,8 +961,8 @@
     },
     {
      "fiscal_key": "FY2024Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-25-000029",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-25-000029, filed 2025-02-07): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2023-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2023-10-01–2023-12-31 = 194.017",
+     "method": "direct_reported_quarter",
      "period_end": "2023-12-31",
      "period_start": "2023-10-01",
      "published_date": "2025-02-07",
@@ -258,8 +971,8 @@
     },
     {
      "fiscal_key": "FY2024Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-25-000061",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-25-000061, filed 2025-05-07): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2024-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2024-01-01–2024-03-31 = 255.108",
+     "method": "direct_reported_quarter",
      "period_end": "2024-03-31",
      "period_start": "2024-01-01",
      "published_date": "2025-05-07",
@@ -268,8 +981,8 @@
     },
     {
      "fiscal_key": "FY2024Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-25-000098",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-25-000098, filed 2025-08-06): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2024-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2024-04-01–2024-06-30 = 288.168",
+     "method": "direct_reported_quarter",
      "period_end": "2024-06-30",
      "period_start": "2024-04-01",
      "published_date": "2025-08-06",
@@ -278,8 +991,8 @@
     },
     {
      "fiscal_key": "FY2024Q4",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-25-000152",
-     "method": "reported",
+     "locator": "Form 10-K (accession 0000080420-25-000152, filed 2025-11-19): quarterly results table, fourth-quarter column (three months ended 2024-09-30), row 'Revenues'; XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax 3-month context 2024-07-01–2024-09-30 = 275.063",
+     "method": "direct_reported_quarter",
      "period_end": "2024-09-30",
      "period_start": "2024-07-01",
      "published_date": "2025-11-19",
@@ -288,8 +1001,8 @@
     },
     {
      "fiscal_key": "FY2025Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-26-000015",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-26-000015, filed 2026-02-04): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2024-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2024-10-01–2024-12-31 = 241.431",
+     "method": "direct_reported_quarter",
      "period_end": "2024-12-31",
      "period_start": "2024-10-01",
      "published_date": "2026-02-04",
@@ -298,8 +1011,8 @@
     },
     {
      "fiscal_key": "FY2025Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-26-000070",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-26-000070, filed 2026-05-05): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2025-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2025-01-01–2025-03-31 = 278.631",
+     "method": "direct_reported_quarter",
      "period_end": "2025-03-31",
      "period_start": "2025-01-01",
      "published_date": "2026-05-05",
@@ -308,8 +1021,8 @@
     },
     {
      "fiscal_key": "FY2025Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-26-000107",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-26-000107, filed 2026-08-04): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2025-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2025-04-01–2025-06-30 = 286.273",
+     "method": "direct_reported_quarter",
      "period_end": "2025-06-30",
      "period_start": "2025-04-01",
      "published_date": "2026-08-04",
@@ -318,8 +1031,8 @@
     },
     {
      "fiscal_key": "FY2025Q4",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-25-000152",
-     "method": "reported",
+     "locator": "Form 10-K (accession 0000080420-25-000152, filed 2025-11-19): quarterly results table, fourth-quarter column (three months ended 2025-09-30), row 'Revenues'; XBRL us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax 3-month context 2025-07-01–2025-09-30 = 297.983",
+     "method": "direct_reported_quarter",
      "period_end": "2025-09-30",
      "period_start": "2025-07-01",
      "published_date": "2025-11-19",
@@ -328,8 +1041,8 @@
     },
     {
      "fiscal_key": "FY2026Q1",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-26-000015",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-26-000015, filed 2026-02-04): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2025-12-31 (current-period column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2025-10-01–2025-12-31 = 251.184",
+     "method": "direct_reported_quarter",
      "period_end": "2025-12-31",
      "period_start": "2025-10-01",
      "published_date": "2026-02-04",
@@ -338,8 +1051,8 @@
     },
     {
      "fiscal_key": "FY2026Q2",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-26-000070",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-26-000070, filed 2026-05-05): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2026-03-31 (current-period column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2026-01-01–2026-03-31 = 296.615",
+     "method": "direct_reported_quarter",
      "period_end": "2026-03-31",
      "period_start": "2026-01-01",
      "published_date": "2026-05-05",
@@ -348,8 +1061,8 @@
     },
     {
      "fiscal_key": "FY2026Q3",
-     "locator": "phalanx composite_preview official_financials · SEC 0000080420-26-000107",
-     "method": "reported",
+     "locator": "Form 10-Q (accession 0000080420-26-000107, filed 2026-08-04): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2026-06-30 (current-period column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2026-04-01–2026-06-30 = 311.740",
+     "method": "direct_reported_quarter",
      "period_end": "2026-06-30",
      "period_start": "2026-04-01",
      "published_date": "2026-08-04",

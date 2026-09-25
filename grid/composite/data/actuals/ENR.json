@@ -1,0 +1,1055 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "ENR",
+ "grid_node": "GRID_SIEMENS_ENERGY",
+ "name": "Siemens Energy AG",
+ "ticker": "ENR GR",
+ "listed": true,
+ "currency": "EUR",
+ "unit": "million",
+ "accounting_basis": "IFRS",
+ "fiscal_year_end_month": 9,
+ "quarter_calendar": "calendar months, fiscal year Oct–Sep (FY2025Q1 = Oct–Dec 2024)",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 매출",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": false,
+   "note": "FY2019Q4–FY2020Q3 = 상장 전(2020-09-28 분사) 합산재무 기준, 이후 분기 보고서의 전년 비교치로만 공표된 값",
+   "points": [
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 8293.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/4a754ded-6ddd-40ee-9e16-b0290183cfd0/2020-11-10-q4-fy2020-earnings-release-and-financial-results-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2020, p.13 'Overview of Segment figures' (Q4 table), row 'Siemens Energy', Revenue column FY 2019 (prior-year comparative; no earlier quarterly release)",
+     "published_date": "2020-11-10"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 6373.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/c37487a1-4fef-44a3-a290-b0290185b6fa/Siemens-Energy-Earnings-Release-Q1-FY-2021-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2021, p.14 'Overview of Segment figures' (Q1 table), row 'Siemens Energy', Revenue column FY 2020 (prior-year comparative; no earlier quarterly release)",
+     "published_date": "2021-02-02"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 6780.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/35aa6f34-aaa4-486e-a593-b03b008b5438/SE-Q2FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2021, p.13 'Overview of Segment figures' (Q2 table), row 'Siemens Energy', Revenue column FY 2020 (prior-year comparative; no earlier quarterly release)",
+     "published_date": "2021-05-05"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 6675.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/45855aee-a6fd-47ed-89bb-b03b008c7453/SE-Q3FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2021, p.13 'Overview of Segment figures' (Q3 table), row 'Siemens Energy', Revenue column FY 2020 (prior-year comparative; no earlier quarterly release)",
+     "published_date": "2021-08-04"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 7629.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/4a754ded-6ddd-40ee-9e16-b0290183cfd0/2020-11-10-q4-fy2020-earnings-release-and-financial-results-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2020, p.13 'Overview of Segment figures' (Q4 table), row 'Siemens Energy', Revenue column FY 2020",
+     "prior_year_comparative": 8293.0,
+     "published_date": "2020-11-10"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 6541.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/c37487a1-4fef-44a3-a290-b0290185b6fa/Siemens-Energy-Earnings-Release-Q1-FY-2021-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2021, p.14 'Overview of Segment figures' (Q1 table), row 'Siemens Energy', Revenue column FY 2021",
+     "prior_year_comparative": 6373.0,
+     "published_date": "2021-02-02"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 6484.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/35aa6f34-aaa4-486e-a593-b03b008b5438/SE-Q2FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2021, p.13 'Overview of Segment figures' (Q2 table), row 'Siemens Energy', Revenue column FY 2021",
+     "prior_year_comparative": 6780.0,
+     "published_date": "2021-05-05"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 7262.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/45855aee-a6fd-47ed-89bb-b03b008c7453/SE-Q3FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2021, p.13 'Overview of Segment figures' (Q3 table), row 'Siemens Energy', Revenue column FY 2021",
+     "prior_year_comparative": 6675.0,
+     "published_date": "2021-08-04"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 8196.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/fe7059df-0726-4b0f-9c5f-b03b008e5bef/SE-Q4FY21-Earnings-Release-Including-FY22-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2021, p.13 'Overview of Segment figures' (Q4 table), row 'Siemens Energy', Revenue column FY 2021",
+     "prior_year_comparative": 7629.0,
+     "published_date": "2021-11-10"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 5956.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/ad1f75c8-9270-48f5-a0ff-b03b00904df9/SE-Q1FY22-Earnings-Release-Including-FY22-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2022, p.13 'Overview of Segment figures' (Q1 table), row 'Siemens Energy', Revenue column FY 2022",
+     "prior_year_comparative": 6541.0,
+     "published_date": "2022-02-09"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 6582.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/d835e992-b16a-4e0a-90d3-b03b00923736/SE-Q2FY22-Earnings-Release-Including-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2022, p.13 'Overview of Segment figures' (Q2 table), row 'Siemens Energy', Revenue column FY 2022",
+     "prior_year_comparative": 6484.0,
+     "published_date": "2022-05-11"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 7279.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/50edf33b-6a0c-4812-bbad-b03b007f8898/2022-08-08-Siemens-Energy-Q3-Earnings-Release-including-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2022, p.13 'Overview of Segment figures' (Q3 table), row 'Siemens Energy', Revenue column FY 2022",
+     "prior_year_comparative": 7262.0,
+     "published_date": "2022-08-08"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 9180.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b0239714-af5f-4a34-82ab-b03b007d983a/2022-11-16-Siemens-Energy-Q4-Earnings-Release-including-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2022, p.13 'Overview of Segment figures' (Q4 table), row 'Siemens Energy', Revenue column FY 2022",
+     "prior_year_comparative": 8196.0,
+     "published_date": "2022-11-16"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 7064.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b5d3944f-4bed-4d34-9839-b03d017e2ea9/2023-02-07-Siemens-Energy-Q1-FY2023-Earnings-Release-including-Guidance-2-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2023, p.14 'Overview of Segment figures' (Q1 table), row 'Siemens Energy', Revenue column FY 2023",
+     "prior_year_comparative": 5956.0,
+     "published_date": "2023-02-07"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 8028.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b4dd8983-7c90-4374-8edc-b02f000092ad/2023-05-15-earnings-release-q2-fy23-en-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2023, p.14 'Overview of Segment figures' (Q2 table), row 'Siemens Energy', Revenue column FY 2023",
+     "prior_year_comparative": 6583.0,
+     "published_date": "2023-05-15"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 7506.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/75fbc908-ba94-4e6a-960e-b0740123892a/2023-08-07-Earnings-Release-Q3-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2023, p.14 'Overview of Segment figures' (Q3 table), row 'Siemens Energy', Revenue column FY 2023",
+     "prior_year_comparative": 7280.0,
+     "published_date": "2023-08-07"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 8521.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/e0872591-2bff-46a9-833f-b0ba015a476c/2023-11-15-Earnings-Release-Q4-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2023, p.14 'Overview of Segment figures' (Q4 table), row 'Siemens Energy', Revenue column FY 2023",
+     "prior_year_comparative": 9186.0,
+     "published_date": "2023-11-15"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 7649.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/db7c8e99-29a4-4c5c-b70e-b10e00e4b8f1/2024-02-07-Earnings-Release-Q1-FY24-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2024, p.14 'Overview of Segment figures' (Q1 table), row 'Siemens Energy', Revenue column FY 2024",
+     "prior_year_comparative": 7064.0,
+     "published_date": "2024-02-07"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 8278.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/5d37b77c-3e71-4a3c-a96b-b16a0044ecff/2024-05-08-Earnings-Release_Q2-FY-2024_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2024, p.14 'Overview of Segment figures' (Q2 table), row 'Siemens Energy', Revenue column FY 2024",
+     "prior_year_comparative": 8028.0,
+     "published_date": "2024-05-08"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 8797.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/cef1e912-2cc9-4e90-b32a-b1c500420e11/2024-08-07-Earnings-Release-and-Financial-Results-Q3-FY-2024-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2024, p.14 'Overview of Segment figures' (Q3 table), row 'Siemens Energy', Revenue column FY 2024",
+     "prior_year_comparative": 7506.0,
+     "published_date": "2024-08-07"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 9741.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/ed099e7a-c429-46b9-8e57-b2260127e834/Earnings-Release-Q4_EN_final-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2024, p.14 'Overview of Segment figures' (Q4 table), row 'Siemens Energy', Revenue column FY 2024",
+     "prior_year_comparative": 8521.0,
+     "published_date": "2024-11-13"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 8942.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/a90e9048-69be-4ae7-95b5-b2820050888b/Earnings_Release_Q1_FY_2025-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2025, p.14 'Overview of Segment figures' (Q1 table), row 'Siemens Energy', Revenue column FY 2025",
+     "prior_year_comparative": 7649.0,
+     "published_date": "2025-02-12"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 9962.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/8da371bf-4d93-459d-8716-b2d7004418d9/Earnings_Release_Q2_FY_2025-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2025, p.14 'Overview of Segment figures' (Q2 table), row 'Siemens Energy', Revenue column FY 2025",
+     "prior_year_comparative": 8278.0,
+     "published_date": "2025-05-08"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 9745.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/026eab51-c5ff-450d-9e58-b33100475ccd/ER_E_final-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2025, p.14 'Overview of Segment figures' (Q3 table), row 'Siemens Energy', Revenue column FY 2025",
+     "prior_year_comparative": 8797.0,
+     "published_date": "2025-08-06"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 10428.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b17980ef-1d11-4d4a-8c24-b394012dd9f4/2025-11-13_Earnings-Release-Q4-FY25-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2025, p.14 'Overview of Segment figures' (Q4 table), row 'Siemens Energy', Revenue column FY 2025",
+     "prior_year_comparative": 9741.0,
+     "published_date": "2025-11-13"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 9675.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/f8b7f2d2-e4f2-4fe5-8295-b3ee005765a4/2026-02-11_Earnings-Release-Q1-FY26-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2026, p.13 'Overview of Segment figures' (Q1 table), row 'Siemens Energy', Revenue column FY 2026",
+     "prior_year_comparative": 8942.0,
+     "published_date": "2026-02-11"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 10294.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/d38d682a-d64f-4f9e-b4fe-b4480041e5ea/2026-05-12-Earnings_Release_Q2_FY26_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2026, p.13 'Overview of Segment figures' (Q2 table), row 'Siemens Energy', Revenue column FY 2026",
+     "prior_year_comparative": 9962.0,
+     "published_date": "2026-05-12"
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 11447.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/30018eed-275d-4e73-811e-b49d004cdc3d/2026-08-05-Earnings_Release_Q3_FY26_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2026, p.13 'Overview of Segment figures' (Q3 table), row 'Siemens Energy', Revenue column FY 2026",
+     "prior_year_comparative": 9745.0,
+     "published_date": "2026-08-05"
+    }
+   ]
+  },
+  "revenue_segment": {
+   "label_ko": "Grid Technologies 매출",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": true,
+   "segment_name": "Grid Technologies (segment reported from FY2023; FY2022 quarters = recast comparatives)",
+   "note": "Segment total revenue (incl. intersegment) from Overview of Segment figures. Transformers, HVDC, switchgear, grid solutions.",
+   "points": [
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 1323.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b5d3944f-4bed-4d34-9839-b03d017e2ea9/2023-02-07-Siemens-Energy-Q1-FY2023-Earnings-Release-including-Guidance-2-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2023, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Revenue FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-02-07"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 1385.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b4dd8983-7c90-4374-8edc-b02f000092ad/2023-05-15-earnings-release-q2-fy23-en-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2023, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Revenue FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-05-15"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 1588.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/75fbc908-ba94-4e6a-960e-b0740123892a/2023-08-07-Earnings-Release-Q3-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2023, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Revenue FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-08-07"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 1989.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/e0872591-2bff-46a9-833f-b0ba015a476c/2023-11-15-Earnings-Release-Q4-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2023, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Revenue FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-11-15"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 1593.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b5d3944f-4bed-4d34-9839-b03d017e2ea9/2023-02-07-Siemens-Energy-Q1-FY2023-Earnings-Release-including-Guidance-2-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2023, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Revenue FY 2023",
+     "prior_year_comparative": 1323.0,
+     "published_date": "2023-02-07"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 1743.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b4dd8983-7c90-4374-8edc-b02f000092ad/2023-05-15-earnings-release-q2-fy23-en-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2023, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Revenue FY 2023",
+     "prior_year_comparative": 1385.0,
+     "published_date": "2023-05-15"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 1823.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/75fbc908-ba94-4e6a-960e-b0740123892a/2023-08-07-Earnings-Release-Q3-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2023, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Revenue FY 2023",
+     "prior_year_comparative": 1588.0,
+     "published_date": "2023-08-07"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 2021.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/e0872591-2bff-46a9-833f-b0ba015a476c/2023-11-15-Earnings-Release-Q4-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2023, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Revenue FY 2023",
+     "prior_year_comparative": 1989.0,
+     "published_date": "2023-11-15"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 2082.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/db7c8e99-29a4-4c5c-b70e-b10e00e4b8f1/2024-02-07-Earnings-Release-Q1-FY24-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2024, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Revenue FY 2024",
+     "prior_year_comparative": 1593.0,
+     "published_date": "2024-02-07"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 2195.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/5d37b77c-3e71-4a3c-a96b-b16a0044ecff/2024-05-08-Earnings-Release_Q2-FY-2024_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2024, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Revenue FY 2024",
+     "prior_year_comparative": 1743.0,
+     "published_date": "2024-05-08"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 2299.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/cef1e912-2cc9-4e90-b32a-b1c500420e11/2024-08-07-Earnings-Release-and-Financial-Results-Q3-FY-2024-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2024, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Revenue FY 2024",
+     "prior_year_comparative": 1823.0,
+     "published_date": "2024-08-07"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 2704.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/ed099e7a-c429-46b9-8e57-b2260127e834/Earnings-Release-Q4_EN_final-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2024, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Revenue FY 2024",
+     "prior_year_comparative": 2021.0,
+     "published_date": "2024-11-13"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 2480.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/a90e9048-69be-4ae7-95b5-b2820050888b/Earnings_Release_Q1_FY_2025-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2025, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Revenue FY 2025",
+     "prior_year_comparative": 2082.0,
+     "published_date": "2025-02-12"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 2861.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/8da371bf-4d93-459d-8716-b2d7004418d9/Earnings_Release_Q2_FY_2025-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2025, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Revenue FY 2025",
+     "prior_year_comparative": 2195.0,
+     "published_date": "2025-05-08"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 2819.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/026eab51-c5ff-450d-9e58-b33100475ccd/ER_E_final-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2025, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Revenue FY 2025",
+     "prior_year_comparative": 2299.0,
+     "published_date": "2025-08-06"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 3145.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b17980ef-1d11-4d4a-8c24-b394012dd9f4/2025-11-13_Earnings-Release-Q4-FY25-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2025, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Revenue FY 2025",
+     "prior_year_comparative": 2704.0,
+     "published_date": "2025-11-13"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 3054.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/f8b7f2d2-e4f2-4fe5-8295-b3ee005765a4/2026-02-11_Earnings-Release-Q1-FY26-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2026, p.13 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Revenue FY 2026",
+     "prior_year_comparative": 2480.0,
+     "published_date": "2026-02-11"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 3067.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/d38d682a-d64f-4f9e-b4fe-b4480041e5ea/2026-05-12-Earnings_Release_Q2_FY26_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2026, p.13 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Revenue FY 2026",
+     "prior_year_comparative": 2861.0,
+     "published_date": "2026-05-12"
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 3624.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/30018eed-275d-4e73-811e-b49d004cdc3d/2026-08-05-Earnings_Release_Q3_FY26_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2026, p.13 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Revenue FY 2026",
+     "prior_year_comparative": 2819.0,
+     "published_date": "2026-08-05"
+    }
+   ]
+  },
+  "orders_segment": {
+   "label_ko": "Grid Technologies 수주",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "Grid Technologies",
+   "metric": "orders (3 months)",
+   "points": [
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 1910.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b5d3944f-4bed-4d34-9839-b03d017e2ea9/2023-02-07-Siemens-Energy-Q1-FY2023-Earnings-Release-including-Guidance-2-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2023, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Orders FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-02-07"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 2015.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b4dd8983-7c90-4374-8edc-b02f000092ad/2023-05-15-earnings-release-q2-fy23-en-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2023, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Orders FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-05-15"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 2660.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/75fbc908-ba94-4e6a-960e-b0740123892a/2023-08-07-Earnings-Release-Q3-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2023, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Orders FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-08-07"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 3831.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/e0872591-2bff-46a9-833f-b0ba015a476c/2023-11-15-Earnings-Release-Q4-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2023, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Orders FY 2022 (recast prior-year comparative for new segment structure)",
+     "published_date": "2023-11-15"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 6309.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b5d3944f-4bed-4d34-9839-b03d017e2ea9/2023-02-07-Siemens-Energy-Q1-FY2023-Earnings-Release-including-Guidance-2-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2023, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Orders FY 2023",
+     "prior_year_comparative": 1910.0,
+     "published_date": "2023-02-07"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 2913.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b4dd8983-7c90-4374-8edc-b02f000092ad/2023-05-15-earnings-release-q2-fy23-en-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2023, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Orders FY 2023",
+     "prior_year_comparative": 2015.0,
+     "published_date": "2023-05-15"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 4294.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/75fbc908-ba94-4e6a-960e-b0740123892a/2023-08-07-Earnings-Release-Q3-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2023, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Orders FY 2023",
+     "prior_year_comparative": 2660.0,
+     "published_date": "2023-08-07"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 2283.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/e0872591-2bff-46a9-833f-b0ba015a476c/2023-11-15-Earnings-Release-Q4-FY23-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2023, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Orders FY 2023",
+     "prior_year_comparative": 3831.0,
+     "published_date": "2023-11-15"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 8236.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/db7c8e99-29a4-4c5c-b70e-b10e00e4b8f1/2024-02-07-Earnings-Release-Q1-FY24-EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2024, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Orders FY 2024",
+     "prior_year_comparative": 6309.0,
+     "published_date": "2024-02-07"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 3737.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/5d37b77c-3e71-4a3c-a96b-b16a0044ecff/2024-05-08-Earnings-Release_Q2-FY-2024_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2024, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Orders FY 2024",
+     "prior_year_comparative": 2913.0,
+     "published_date": "2024-05-08"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 3532.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/cef1e912-2cc9-4e90-b32a-b1c500420e11/2024-08-07-Earnings-Release-and-Financial-Results-Q3-FY-2024-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2024, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Orders FY 2024",
+     "prior_year_comparative": 4294.0,
+     "published_date": "2024-08-07"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 5395.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/ed099e7a-c429-46b9-8e57-b2260127e834/Earnings-Release-Q4_EN_final-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2024, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Orders FY 2024",
+     "prior_year_comparative": 2282.0,
+     "published_date": "2024-11-13"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 5117.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/a90e9048-69be-4ae7-95b5-b2820050888b/Earnings_Release_Q1_FY_2025-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2025, p.14 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Orders FY 2025",
+     "prior_year_comparative": 8236.0,
+     "published_date": "2025-02-12"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 5209.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/8da371bf-4d93-459d-8716-b2d7004418d9/Earnings_Release_Q2_FY_2025-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2025, p.14 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Orders FY 2025",
+     "prior_year_comparative": 3737.0,
+     "published_date": "2025-05-08"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 4218.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/026eab51-c5ff-450d-9e58-b33100475ccd/ER_E_final-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2025, p.14 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Orders FY 2025",
+     "prior_year_comparative": 3532.0,
+     "published_date": "2025-08-06"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 6880.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b17980ef-1d11-4d4a-8c24-b394012dd9f4/2025-11-13_Earnings-Release-Q4-FY25-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2025, p.14 'Overview of Segment figures' (Q4 table), row 'Grid Technologies', Orders FY 2025",
+     "prior_year_comparative": 5395.0,
+     "published_date": "2025-11-13"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 5964.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/f8b7f2d2-e4f2-4fe5-8295-b3ee005765a4/2026-02-11_Earnings-Release-Q1-FY26-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2026, p.13 'Overview of Segment figures' (Q1 table), row 'Grid Technologies', Orders FY 2026",
+     "prior_year_comparative": 5117.0,
+     "published_date": "2026-02-11"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 6996.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/d38d682a-d64f-4f9e-b4fe-b4480041e5ea/2026-05-12-Earnings_Release_Q2_FY26_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2026, p.13 'Overview of Segment figures' (Q2 table), row 'Grid Technologies', Orders FY 2026",
+     "prior_year_comparative": 5209.0,
+     "published_date": "2026-05-12"
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 5367.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/30018eed-275d-4e73-811e-b49d004cdc3d/2026-08-05-Earnings_Release_Q3_FY26_EN-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2026, p.13 'Overview of Segment figures' (Q3 table), row 'Grid Technologies', Orders FY 2026",
+     "prior_year_comparative": 4218.0,
+     "published_date": "2026-08-05"
+    }
+   ]
+  },
+  "revenue_division_legacy": {
+   "label_ko": "(구) Gas and Power 내 Transmission 사업 외부매출",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "Transmission business within Gas and Power segment (disaggregation of external revenue), FY2020Q1–FY2022Q4",
+   "note": "Different scope/metric from Grid Technologies (external revenue only, pre-2023 structure). Do NOT splice with revenue_segment.",
+   "points": [
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 1429.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/c37487a1-4fef-44a3-a290-b0290185b6fa/Siemens-Energy-Earnings-Release-Q1-FY-2021-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2021, p.17 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2020, prior-year comparative)",
+     "published_date": "2021-02-02"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 1318.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/35aa6f34-aaa4-486e-a593-b03b008b5438/SE-Q2FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2021, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2020, prior-year comparative)",
+     "published_date": "2021-05-05"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 1262.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/45855aee-a6fd-47ed-89bb-b03b008c7453/SE-Q3FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2021, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2020, prior-year comparative)",
+     "published_date": "2021-08-04"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 1520.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/fe7059df-0726-4b0f-9c5f-b03b008e5bef/SE-Q4FY21-Earnings-Release-Including-FY22-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2021, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2020, prior-year comparative)",
+     "published_date": "2021-11-10"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 1295.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/c37487a1-4fef-44a3-a290-b0290185b6fa/Siemens-Energy-Earnings-Release-Q1-FY-2021-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2021, p.17 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2021)",
+     "prior_year_comparative": 1429.0,
+     "published_date": "2021-02-02"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 1241.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/35aa6f34-aaa4-486e-a593-b03b008b5438/SE-Q2FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2021, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2021)",
+     "prior_year_comparative": 1318.0,
+     "published_date": "2021-05-05"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 1440.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/45855aee-a6fd-47ed-89bb-b03b008c7453/SE-Q3FY21-Earnings-Release-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2021, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2021)",
+     "prior_year_comparative": 1262.0,
+     "published_date": "2021-08-04"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 1672.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/fe7059df-0726-4b0f-9c5f-b03b008e5bef/SE-Q4FY21-Earnings-Release-Including-FY22-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2021, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2021)",
+     "prior_year_comparative": 1520.0,
+     "published_date": "2021-11-10"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 1298.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/ad1f75c8-9270-48f5-a0ff-b03b00904df9/SE-Q1FY22-Earnings-Release-Including-FY22-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q1 FY 2022, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2022)",
+     "prior_year_comparative": 1251.0,
+     "published_date": "2022-02-09"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 1358.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/d835e992-b16a-4e0a-90d3-b03b00923736/SE-Q2FY22-Earnings-Release-Including-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q2 FY 2022, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2022)",
+     "prior_year_comparative": 1241.0,
+     "published_date": "2022-05-11"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 1544.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/50edf33b-6a0c-4812-bbad-b03b007f8898/2022-08-08-Siemens-Energy-Q3-Earnings-Release-including-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q3 FY 2022, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2022)",
+     "prior_year_comparative": 1440.0,
+     "published_date": "2022-08-08"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 1926.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://assets.siemens-energy.com/dam/b0239714-af5f-4a34-82ab-b03b007d983a/2022-11-16-Siemens-Energy-Q4-Earnings-Release-including-Guidance-pdf_Original%20file.pdf",
+     "locator": "Siemens Energy Earnings Release Q4 FY 2022, p.16 'Disaggregation of revenue' — 'Types of businesses in reportable segment Gas and Power', row 'Transmission' (3-month column FY 2022)",
+     "prior_year_comparative": 1672.0,
+     "published_date": "2022-11-16"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_segment",
+ "structural_breaks": [
+  {
+   "date": "2020-09-28",
+   "type": "listing",
+   "note": "Spin-off from Siemens AG and listing; FY2020 and earlier quarters are combined (carve-out) figures printed as comparatives.",
+   "source_url": "https://assets.siemens-energy.com/dam/b8fad215-0a59-4767-89a2-b03d0176eaa9/Joint-Spin-off-Report-Convenience-Translation-22-May-2020-pdf_Original%20file.pdf"
+  },
+  {
+   "date": "2021-10-01",
+   "type": "restatement",
+   "note": "revenue_division_legacy only: the Q1 FY2022 release restated the Q1 FY2021 Transmission external-revenue comparative from 1,295 (as printed in the Q1 FY2021 release) to 1,251. Q2–Q4 FY2021 comparatives were unchanged. The FY2021Q1 point keeps the as-reported 1,295, and FY2022Q1 YoY uses the printed comparative 1,251. Grid Technologies and group revenue are not affected.",
+   "source_url": "https://assets.siemens-energy.com/dam/ad1f75c8-9270-48f5-a0ff-b03b00904df9/SE-Q1FY22-Earnings-Release-Including-FY22-Guidance-pdf_Original%20file.pdf"
+  },
+  {
+   "date": "2022-10-01",
+   "type": "segment_reorg",
+   "note": "From FY2023 new segments Gas Services, Grid Technologies, Transformation of Industry, Siemens Gamesa replace Gas and Power + SGRE; FY2022 quarters recast in FY2023 releases (e.g., GT Q1 FY22 revenue 1,323 vs legacy Transmission external revenue 1,298).",
+   "source_url": "https://assets.siemens-energy.com/dam/b5d3944f-4bed-4d34-9839-b03d017e2ea9/2023-02-07-Siemens-Energy-Q1-FY2023-Earnings-Release-including-Guidance-2-pdf_Original%20file.pdf"
+  },
+  {
+   "date": "2023-11-15",
+   "type": "divestiture",
+   "note": "Agreement to sell Trench (bushings, instrument transformers, coils; 9 factories, ~2,400 staff) to Triton; closing expected H1 CY2024. Trench-related special items booked in Grid Technologies (Q1 FY24). Not recast.",
+   "source_url": "https://www.siemens-energy.com/us/en/home/press-releases/Siemens-Energy-sells-Trench-to-sharpen-portfolio.html"
+  }
+ ],
+ "profile": {
+  "products": "Grid Technologies: power transformers (typically 10–1,300 MVA, 10–800 kV; range delivering well above 1,000 MVA and 1,100 kV), HVDC converter transformers, phase-shifters, wind-turbine (offshore) transformers, distribution transformers (10 kVA–10 MVA per SE product page), GIS/AIS HV switchgear & breakers, HVDC & FACTS systems, grid automation/substation solutions, transformer services.",
+  "plants": [
+   {
+    "country": "DE",
+    "city": "Nuremberg",
+    "products": "large power transformers; €220m expansion (+~50% capacity by 2028), ~1,000 staff, transformers since 1912",
+    "source_url": "https://www.siemens-energy.com/global/en/home/press-releases/siemens-energy-invests--220-million.html"
+   },
+   {
+    "country": "AT",
+    "city": "Weiz (+ new Wollsdorf site)",
+    "products": "offshore wind-turbine transformers (80% export quota, >70 countries) and compact low-noise power transformers (5,000th unit shipped to New York City 2024)",
+    "source_url": "https://www.siemens-energy.com/de/de/home/press-releases/Siemens-Energy-Werk-in-Weiz-verdreifacht-Produktionsflaeche.html"
+   },
+   {
+    "country": "US",
+    "city": "Charlotte, NC",
+    "products": "first SE large power transformer factory in US ($150m; 24→57 LPT units/yr; production start targeted 2026–27)",
+    "source_url": "https://www.siemens-energy.com/us/en/home/press-releases/siemens_energy_addresses_shortage_US_powertransformers_invests_new_factory.html"
+   }
+  ],
+  "end_markets": "TSOs/utilities (HVDC grid connections, offshore wind), data centers (transformer business growth cited Q3 FY26), industry, renewables integration. US cited as main order-growth driver; Europe and North America main GT demand regions (Q3 FY26 release).",
+  "export_routes": [
+   "AT->US (Weiz power transformers to New York)",
+   "AT->World (offshore wind transformers, 80% export)",
+   "DE->World/US (Nuremberg large power transformers)",
+   "US-domestic from 2026–27 (Charlotte)"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "853521",
+   "853529",
+   "850440"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "at_exp_850423_p0",
+    "why": "Austria exports of >10 MVA liquid transformers — Weiz/Linz power transformer output shipped abroad",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "at_exp_850423_p842",
+    "why": "Austria >10 MVA transformer exports to US — Weiz shipments to US utilities (e.g., New York)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "de_exp_850423_p0",
+    "why": "Germany exports of >10 MVA transformers — Nuremberg/Dresden large power transformer shipments",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "de_exp_850423_p842",
+    "why": "Germany >10 MVA transformer exports to US",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p40",
+    "why": "US imports of >10 MVA transformers from Austria (mirror of Weiz route)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p276",
+    "why": "US imports of >10 MVA transformers from Germany (mirror of Nuremberg route)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "at_exp_850422_p0",
+    "why": "Austria exports 650 kVA–10 MVA liquid transformers — wind-turbine/offshore transformer class from Weiz",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_DE",
+    "why": "German NACE C27.1 output (incl. transformers, switchgear) — GT European production cycle",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_AT",
+    "why": "Austrian NACE C27.1 output — Weiz/Linz transformer plants weigh heavily in Austrian C27.1",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_turnover_C271_DE",
+    "why": "German C27.1 turnover — value analogue of GT revenue",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_PCU335311335311",
+    "why": "US transformer PPI — pricing of power transformers in GT’s key growth market",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_TLPWRCONS",
+    "why": "US power construction spending — US grid/utility capex (orders lead revenue by years given backlog)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "wishlist:entsoe_tso_capex",
+    "why": "European TSO capex/HVDC awards (e.g., TenneT/Amprion annual reports, BNetzA grid development plan) — GT order driver; wishlist",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "Grid Technologies history starts FY2022Q1 (recast comparatives in FY2023 releases); no quarterly GT data before that. YoY for GT therefore available FY2023Q1–FY2026Q3 (15 quarters) plus levels FY2022.",
+  "Legacy Transmission division external revenue (Gas and Power disaggregation) FY2020Q1–FY2022Q4 is stored separately as revenue_division_legacy; not spliced (different scope/metric).",
+  "No quarterly Transmission orders were printed in FY2021–FY2022 releases (only annual/half-year in CMD data books) — orders_segment starts FY2022Q1.",
+  "FY2019Q4–FY2020Q3 group revenue exists only as prior-year comparative columns (pre-listing combined financials); no prior_year_comparative for those points.",
+  "FY2026Q4 (Jul–Sep 2026) not yet reported as of 2026-09-25 (release due Nov 2026)."
+ ],
+ "collection_notes": [
+  "Source: Siemens Energy Earnings Releases (assets.siemens-energy.com), table \"Overview of Segment figures\" — first (quarterly) block. Q3 FY2025 release found via SE press page (ER_E_final PDF).",
+  "Revenue = total segment revenue (incl. intersegment); group = Siemens Energy consolidated revenue.",
+  "Where a later release reprints a prior-year quarter with a restated value (e.g., Q4 FY22 total 9,180 as reported vs 9,186 as comparative in Q4 FY23; GT Q4 FY23 orders 2,283 vs 2,282), the as-reported value is kept in value and the restated one in the later point's prior_year_comparative.",
+  "verify 2026-09-25: checked revenue_segment and orders_segment (GT) at FY2022Q1-Q4 (recast comparatives), FY2023Q1-Q4, FY2024Q1, FY2024Q4, FY2025Q1, FY2025Q3 and FY2026Q1-Q3; revenue_total at FY2019Q4, FY2020Q1, FY2020Q4, FY2021Q1, FY2021Q4, FY2022Q1, FY2022Q4, FY2023Q1-Q4, FY2024Q1, FY2024Q4, FY2025Q1, FY2025Q3 and FY2026Q1-Q3; revenue_division_legacy at FY2020Q1, FY2021Q1 and FY2022Q1. All 52 match the 'Overview of Segment figures' or 'Disaggregation of revenue' tables. That includes the GT orders swings with |log YoY| > 0.4 (FY2023Q1 6,309, FY2023Q3 4,294, FY2023Q4 2,283, FY2024Q4 5,395, FY2025Q1 5,117) and the validator warning at FY2024Q1 (8,236), which is genuine, not a unit error. FY2022 GT quarters reconcile to the printed H1/9M/FY FY2022 totals (2,707/4,296/6,285). Oct–Sep fiscal labelling and period_end dates are correct. Fixed 1: added a structural_break for the undocumented legacy Q1 FY2021 restatement (1,295→1,251); fixed 1"
+ ]
+}

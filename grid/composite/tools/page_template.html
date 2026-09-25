@@ -148,6 +148,7 @@ const REG_KO={'Korea':'한국','North America':'북미','Europe':'유럽','Japan
 const ROLE_KO={pre_registered:'사전등록 경로',route:'회사 경로',regional:'지역',global:'글로벌',anchor_diag:'산일 비교'};
 const peers=D.peers.slice().sort((a,b)=>(a.id==='SANIL'?-1:b.id==='SANIL'?1:0)||REG_ORDER.indexOf(a.region)-REG_ORDER.indexOf(b.region)||String(a.name).localeCompare(String(b.name)));
 const P=id=>D.proxies[id]||{};
+const clip=(v,n)=>{v=String(v??'');return v.length>n?v.slice(0,n-1)+'…':v;};
 const plabel=id=>(P(id).label_ko||id);
 const badgeCls=(c,k,st,u)=>{u=u||'Q';if(c==='none'&&st&&String(st).startsWith('nominal:')){const w=String(st).slice(8);return '<span class="badge cls-'+esc(w)+'" style="border-style:dashed;opacity:.8" title="명목 p<0.05 · FDR 미통과"><i></i>약한 '+esc(CLS[w]||w)+(w==='lead'||w==='lag'?' '+(k>0?'+':'')+esc(k)+u:'')+'</span>';}return '<span class="badge cls-'+esc(c||'none')+'"><i></i>'+esc(CLS[c]||'무관')+(c==='lead'||c==='lag'?' '+(k>0?'+':'')+esc(k)+u:'')+'</span>';};
 const badgeG=g=>'<span class="badge g-'+esc(g||'N')+'"><i></i>'+esc(GR[g]||'N 표본 부족')+'</span>';
@@ -182,7 +183,7 @@ for(const p of peers){
   const nc=p.nowcast;const ncTxt=!p.composite?'<span class="dim">–</span>':(nc&&nc.published?'<b>'+pct(nc.pred_yoy)+'</b> <span class="dim small">'+esc(nc.target_m)+'</span>':'<span class="dim small">보류'+(nc&&nc.status==='partial'?'·부분관측':'')+'</span>');
   mx+='<tr class="pick'+(t?'':' muted-row')+'" data-id="'+esc(p.id)+'" tabindex="0"><td><b>'+esc(p.name)+'</b> <span class="dim small">'+esc(p.ticker||'비상장')+'</span></td>'+
    '<td>'+(p.composite?badgeG(g):'<span class="dim small">'+esc(p.status==='no_target'?'실적 미공시':p.status==='not_collected'?'미수집':p.status==='short_history'?'이력 부족':'–')+'</span>')+'</td>'+
-   '<td class="small">'+(t?esc(t.label_ko||t.name)+(t.segment_name?' · '+esc(t.segment_name):''):'–')+'</td><td class="num">'+(t?esc(t.n_yoy):'–')+'</td>'+
+   '<td class="small" title="'+esc(t?(t.label_ko||t.name)+(t.segment_name?' · '+t.segment_name:''):'')+'">'+(t?esc(t.scope==='segment'?'세그먼트':t.scope==='consolidated'?'연결':t.scope||'')+(t.segment_name?' · '+esc(clip(t.segment_name,26)):''):'–')+'</td><td class="num">'+(t?esc(t.n_yoy):'–')+'</td>'+
    '<td class="small">'+(bl?badgeCls('lead',bl.c.k_star)+' '+esc(plabel(bl.c.id))+' <span class="dim">r '+f2(bl.r)+'</span>'+(bl.c.validated_lead?'<span class="flag on">OOS 검증</span>':''):'<span class="dim">–</span>')+'</td>'+
    '<td class="small">'+(bc?badgeCls('coincident',0)+' '+esc(plabel(bc.c.id))+' <span class="dim">r '+f2(bc.r)+'</span>'+(bc.c.tight?'<span class="flag on">타이트</span>':''):'<span class="dim">–</span>')+'</td>'+
    '<td class="num">'+(t?esc(s.n_lead||0)+'/'+esc(s.n_coincident||0)+'/'+esc(s.n_lag||0):'–')+'</td><td class="small">'+(p.id==='SANIL'?'<span class="dim">앵커</span>':anchorText(anchorOf(p)))+'</td><td>'+ncTxt+'</td></tr>';
@@ -281,6 +282,7 @@ function profileCard(p){const pr=p.profile||{};let h='<div class="card"><h3>프�
   if((pr.proxy_routes||[]).length)h+='<div>사전등록 프록시</div><div class="small">'+pr.proxy_routes.map(r=>'<code>'+esc(r.proxy_hint||r.id||'')+'</code>'+(r.role==='wishlist'?' <span class="flag">위시리스트</span>':'')+' <span class="dim">'+esc(r.why||'')+'</span>').join('<br>')+'</div>';
   if((p.structural_breaks||[]).length)h+='<div>구조 변화</div><div class="small">'+p.structural_breaks.map(x=>esc(x.date)+' '+esc(x.type)+(x.note?' <span class="dim">'+esc(String(x.note).slice(0,160))+'</span>':'')).join('<br>')+'</div>';
   if((p.gaps||[]).length)h+='<div>빈 분기</div><div class="small dim">'+p.gaps.slice(0,8).map(esc).join('<br>')+'</div>';
+  if((p.hints_missing||[]).length)h+='<div>미수집 사전등록</div><div class="small dim">'+p.hints_missing.map(esc).join(', ')+' (계열 없음 — 검정 안 함)</div>';
   if((p.candidates_dropped||[]).length)h+='<div>후보 상한 초과</div><div class="small dim">'+p.candidates_dropped.map(esc).join(', ')+' (검정 안 함)</div>';
   return h+'</div></div>';}
 // cycle

@@ -1,0 +1,657 @@
+{
+ "accounting_basis": "US GAAP",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "SEC EDGAR: 10-Q/10-K XBRL(us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax, ConsolidationItemsAxis=gev:OperatingSegmentsExcludingIntersegmentEliminationMember × StatementBusinessSegmentsAxis=gev:ElectrificationSegmentMember = 보도자료의 세그먼트 \"Revenues\"와 동일, 내부거래 제거 전) + 분기 실적 보도자료(8-K Ex.99).",
+  "Q4 = Q4 보도자료 Electrification 표 3개월 열(FY2024Q4 PYC 1,964: 보도자료 직접값; 10-K 연간−9M 차분은 1,966 → 보도자료 채택). FY2023Q4 value 1,964 = Q4 2024 보도자료 전년 열.",
+  "orders_segment = 각 분기 보도자료 Electrification 표 \"Orders\" 행(현재·전년 열). FY2023Q1–Q4는 2024 각 분기 보도자료의 전년 열. Orders는 매출과 다른 지표 — 합산 금지.",
+  "보도자료 Electrification 매출(현재 열)이 XBRL 10-Q 값과 전 분기 일치함을 교차확인.",
+  "verify 2026-09-25: checked revenue_segment and orders_segment FY2023Q1, FY2024Q1, FY2023Q4, FY2024Q4, FY2024Q3, FY2025Q3, FY2025Q4, FY2026Q1 (recast PYC 1,840 / 3,366), FY2026Q2 (recast PYC 2,162 / 3,283) against the cited earnings releases' Electrification tables, revenue_total all 14 vs SEC XBRL — all values match; fixed 0."
+ ],
+ "currency": "USD",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "2016Q1–2022Q4 분기 없음: GE Vernova는 2024-04 분사; Form 10/Information Statement(8-K 2024-03-08 Ex.99.1)은 Electrification 연간(2021–2023)만 인쇄, 분기 세그먼트는 2024 10-Q 비교열의 2023Q1부터. GE(모회사) 2022 분기 세그먼트(Renewable Energy/Power)는 범위가 달라 사용 불가.",
+  "결과적으로 revenue_segment·orders_segment·revenue_total 모두 14개 분기(2023Q1–2026Q2) — YoY 가능 10개 분기. 계약의 ≥16분기 기준에는 미달하지만 연결매출도 같은 길이(14)라 더 긴 대안이 없어, 변압기 노출을 대표하는 Electrification을 primary 로 둠(연결매출은 가스터빈·풍력이 지배).",
+  "FY2023Q1–Q4: prior_year_comparative 없음(2022 분기 미공시).",
+  "Power Transmission(변압기·스위치기어, Prolec 포함) 사업부 매출은 2026 재편 후 2025Q1 비교치부터만 존재(6개 분기) — 별도 타깃으로 넣지 않음."
+ ],
+ "grid_node": "GRID_GEVERNOVA",
+ "id": "GEV",
+ "listed": true,
+ "name": "GE Vernova Inc.",
+ "primary_target": "revenue_segment",
+ "profile": {
+  "end_markets": "electric utilities & TSOs (T&D, HVDC), data centers/hyperscalers, renewables interconnection, industrial",
+  "export_routes": [
+   "MX->US",
+   "US domestic",
+   "BR->LatAm",
+   "EU/IN->global (Grid Solutions)"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850423",
+   "853529",
+   "853720",
+   "850440"
+  ],
+  "plants": [
+   {
+    "city": "Monterrey (Prolec)",
+    "country": "MX",
+    "products": "distribution & power transformers",
+    "source_url": "https://www.prolec.energy/"
+   },
+   {
+    "city": "Waukesha, WI (Prolec GE Waukesha)",
+    "country": "US",
+    "products": "power transformers",
+    "source_url": "https://www.prolec.energy/"
+   },
+   {
+    "city": "Goldsboro, NC (Prolec GE Waukesha)",
+    "country": "US",
+    "products": "medium power transformers; 2nd plant ($140M, 330 jobs) announced 2025-05-14 to double capacity",
+    "source_url": "https://governor.nc.gov/news/press-releases/2025/05/14/governor-stein-announces-additional-330-new-jobs-coming-wayne-county-production-facility"
+   },
+   {
+    "city": "Shreveport, LA (Prolec)",
+    "country": "US",
+    "products": "transformers (site listed on Prolec website)",
+    "source_url": "https://www.prolec.energy/"
+   },
+   {
+    "city": "(Prolec Brazil)",
+    "country": "BR",
+    "products": "transformers (site listed on Prolec website)",
+    "source_url": "https://www.prolec.energy/"
+   },
+   {
+    "city": "(Prolec GE total: ~10,000 employees, seven manufacturing sites in the Americas incl. five in the U.S.)",
+    "country": "US/MX",
+    "products": "transformers & components, transformer services",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/gev-20260331.htm"
+   }
+  ],
+  "products": "Electrification: Power Transmission (switchgear, power & distribution transformers — Prolec GE: pole-type, single/three-phase pad-mounted, network, secondary substation, collector step-up, GSU, substation & autotransformers, shunt reactors, voltage regulators), Grid Systems Integration (HVDC, AC substations), Power Conversion & Storage (synchronous condensers, converters, BESS), Grid Automation & Software. Before 2026-02-02 Prolec GE was a 50/50 JV with Xignux (equity method) — its transformer sales were NOT in Electrification revenue.",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850423_p0",
+    "role": "primary",
+    "why": "미국 대형(>10MVA) 유입식 변압기 수입 — 미국 송변전 수요·공급부족(Electrification 주력 시장)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850423_p484",
+    "role": "primary",
+    "why": "Prolec GE 몬테레이 → 미국 대형 변압기 경로(2026-02 연결 이후 직접 매출)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850422_p484",
+    "role": "primary",
+    "why": "Prolec 몬테레이 → 미국 중형(650–10,000kVA) 변압기"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850421_p484",
+    "role": "diagnostic",
+    "why": "Prolec 멕시코 → 미국 배전변압기(주상·패드) — 2026-02 이후 매출 편입, 이전은 JV 수요 진단용"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "mx_exp_850423_p842",
+    "role": "diagnostic",
+    "why": "멕시코 측 대형 변압기 대미 수출(미러)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853529_p0",
+    "role": "primary",
+    "why": "미국 고압(≥72.5kV) 자동차단기 수입 — 송전 변전소(GIS/차단기) 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLPWRCONS",
+    "role": "primary",
+    "why": "미국 전력 건설투자 — T&D capex 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_PCU335311335311",
+    "role": "diagnostic",
+    "why": "변압기 PPI — 가격 전가"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SNO",
+    "role": "diagnostic",
+    "why": "미국 전기장비 신규수주 — Electrification orders와 동행, 매출 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "br_exp_850423_p0",
+    "role": "diagnostic",
+    "why": "Prolec Brazil 대형 변압기 수출(브라질) — 2026 이후 진단용"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eurostat_turnover_C271_DE",
+    "role": "diagnostic",
+    "why": "독일 C271(변압기·배전장치) 매출 — Grid Solutions 유럽 HV 사업 경기(비미국 매출 진단)"
+   }
+  ]
+ },
+ "quarter_calendar": "calendar",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2024-04-02",
+   "note": "GE에서 분사·상장. 분기 세그먼트 이력은 2023Q1부터(2024 10-Q 비교열); 2022 이전은 연간(Information Statement: 2021 5,292 / 2022 5,076 / 2023 6,378)만 공시.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000119312524063739/d808872dex991.htm",
+   "type": "listing"
+  },
+  {
+   "date": "2026-01-01",
+   "note": "Business unit realignment: Grid Solutions → Power Transmission / Grid Systems Integration / Grid Automation & Software; former Electrification Software 일부를 Power 세그먼트(Gas Power)로 이관 → 2025 Electrification 비교치 하향 재작성(Q1 2025 1,879→1,840, Q2 2,201→2,162; orders Q1 3,393→3,366, Q2 3,338→3,283). value=당해 문서, PYC=같은 문서 재작성치.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/gev-20260331.htm",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2026-02-02",
+   "note": "Prolec GE 잔여 50%(Xignux) 인수, 현금 $5,254M — 이전 지분법 JV(매출 미포함) → 2026-02-02부터 Electrification(Power Transmission)에 연결. 2026Q1(2/3개월)·Q2부터 매출·수주 레벨 점프(Power Transmission Q1 1,380 vs 692). YoY 해석 시 인수효과 분리 필요(보도자료 organic: Q2 2026 +29% vs reported +68%).",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/gev-20260331.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2026-03-31",
+   "note": "Proficy 제조 소프트웨어 사업(Electrification, Grid Automation & Software) 매각 완료(1Q26), 순현금 $602M.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/gev-20260331.htm",
+   "type": "divestiture"
+  }
+ ],
+ "targets": {
+  "orders_segment": {
+   "freq": "Q",
+   "label_ko": "Electrification 세그먼트 수주(orders)",
+   "metric": "orders",
+   "points": [
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "GE Vernova Q1 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", prior-year column (three months ended 2023-03-31)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2024-04-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000004/gev1q2024earningsrelease.htm",
+     "value": 3856.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "GE Vernova Q2 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", prior-year column (three months ended 2023-06-30)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2024-07-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000065/gev2q2024earningsrelease.htm",
+     "value": 5011.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "GE Vernova Q3 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", prior-year column (three months ended 2023-09-30)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2024-10-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000080/gev3q2024earningsrelease.htm",
+     "value": 2143.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "GE Vernova Q4 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", prior-year column (three months ended 2023-12-31)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2025-01-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000004/gev4q2024earningsrelease.htm",
+     "value": 2193.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "GE Vernova Q1 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2024-03-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 3856.0,
+     "published_date": "2024-04-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000004/gev1q2024earningsrelease.htm",
+     "value": 3571.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "GE Vernova Q2 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2024-06-30); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 5011.0,
+     "published_date": "2024-07-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000065/gev2q2024earningsrelease.htm",
+     "value": 4823.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "GE Vernova Q3 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2024-09-30); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 2143.0,
+     "published_date": "2024-10-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000080/gev3q2024earningsrelease.htm",
+     "value": 2510.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "GE Vernova Q4 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2024-12-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 2193.0,
+     "published_date": "2025-01-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000004/gev4q2024earningsrelease.htm",
+     "value": 4786.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "GE Vernova Q1 2025 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2025-03-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 3571.0,
+     "published_date": "2025-04-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000072/gevpressrelease1q25.htm",
+     "value": 3393.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "GE Vernova Q2 2025 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2025-06-30); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 4823.0,
+     "published_date": "2025-07-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000132/gevpressrelease2q25.htm",
+     "value": 3338.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "GE Vernova Q3 2025 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2025-09-30); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 2510.0,
+     "published_date": "2025-10-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000159/gevpressrelease3q25.htm",
+     "value": 5110.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "GE Vernova Q4 2025 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2025-12-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 4786.0,
+     "published_date": "2026-01-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000012/gevpressrelease4q25.htm",
+     "value": 7424.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "GE Vernova Q1 2026 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2026-03-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 3366.0,
+     "published_date": "2026-04-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000063/gevpressrelease1q26.htm",
+     "value": 7112.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "GE Vernova Q2 2026 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Orders\", current column (three months ended 2026-06-30); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 3283.0,
+     "published_date": "2026-07-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000147/gevpressrelease2q26.htm",
+     "value": 6347.0
+    }
+   ],
+   "primary": false,
+   "scope": "segment",
+   "segment_name": "Electrification"
+  },
+  "revenue_segment": {
+   "freq": "Q",
+   "label_ko": "Electrification 세그먼트 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-04-30) prints this quarter as a comparative (recast basis of that filing), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations). XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000008/gev-20240331.htm",
+     "value": 1331.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-07-24) prints this quarter as a comparative (recast basis of that filing), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations). XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2024-07-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000067/gev-20240630.htm",
+     "value": 1505.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-23) prints this quarter as a comparative (recast basis of that filing), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations). XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2024-10-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000083/gev-20240930.htm",
+     "value": 1576.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "GE Vernova Q4 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Revenues\" (segment revenues before intersegment eliminations; matches \"Electrification (GAAP)\" row of segment EBITDA table), prior-year column (three months ended 2023-12-31)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2025-01-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000004/gev4q2024earningsrelease.htm",
+     "value": 1964.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-04-30), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 1331.0,
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000008/gev-20240331.htm",
+     "value": 1651.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-07-24), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 1505.0,
+     "published_date": "2024-07-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000067/gev-20240630.htm",
+     "value": 1790.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-23), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 1576.0,
+     "published_date": "2024-10-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000083/gev-20240930.htm",
+     "value": 1928.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "GE Vernova Q4 2024 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Revenues\" (segment revenues before intersegment eliminations; matches \"Electrification (GAAP)\" row of segment EBITDA table), current column (three months ended 2024-12-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 1964.0,
+     "published_date": "2025-01-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000004/gev4q2024earningsrelease.htm",
+     "value": 2181.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "10-Q for period ended 2025-03-31 (filed 2025-04-23), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 1651.0,
+     "published_date": "2025-04-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000073/gev-20250331.htm",
+     "value": 1879.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "10-Q for period ended 2025-06-30 (filed 2025-07-23), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 1790.0,
+     "published_date": "2025-07-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000133/gev-20250630.htm",
+     "value": 2201.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "10-Q for period ended 2025-09-30 (filed 2025-10-22), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 1928.0,
+     "published_date": "2025-10-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000160/gev-20250930.htm",
+     "value": 2601.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "GE Vernova Q4 2025 earnings release (Form 8-K Ex.99), Electrification segment table, row \"Revenues\" (segment revenues before intersegment eliminations; matches \"Electrification (GAAP)\" row of segment EBITDA table), current column (three months ended 2025-12-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 2181.0,
+     "published_date": "2026-01-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000012/gevpressrelease4q25.htm",
+     "value": 2960.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "10-Q for period ended 2026-03-31 (filed 2026-04-22), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 1840.0,
+     "published_date": "2026-04-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/gev-20260331.htm",
+     "value": 2959.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "10-Q for period ended 2026-06-30 (filed 2026-07-22), Note \"Segment and Geographic Information\": Electrification segment revenues (total segment revenues before intersegment eliminations); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"srt:ConsolidationItemsAxis\": \"gev:OperatingSegmentsExcludingIntersegmentEliminationMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"gev:ElectrificationSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 2162.0,
+     "published_date": "2026-07-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000148/gev-20260630.htm",
+     "value": 3637.0
+    }
+   ],
+   "primary": true,
+   "scope": "segment",
+   "segment_name": "Electrification (Power Transmission incl. Prolec GE from 2026-02-02, Grid Systems Integration, Power Conversion & Storage, Grid Automation & Software; pre-2026 business units: Grid Solutions, Power Conversion, Solar & Storage Solutions, Electrification Software)"
+  },
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-04-30) prints this quarter as a comparative (recast basis of that filing), Consolidated Statement of Income (Loss), Total revenues. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000008/gev-20240331.htm",
+     "value": 6822.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-07-24) prints this quarter as a comparative (recast basis of that filing), Consolidated Statement of Income (Loss), Total revenues. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2024-07-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000067/gev-20240630.htm",
+     "value": 8119.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-23) prints this quarter as a comparative (recast basis of that filing), Consolidated Statement of Income (Loss), Total revenues. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2024-10-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000083/gev-20240930.htm",
+     "value": 8253.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "GE Vernova Q4 2024 earnings release (Form 8-K Ex.99), summary table, row \"Total revenues\", prior-year column (three months ended 2023-12-31)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2025-01-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000004/gev4q2024earningsrelease.htm",
+     "value": 10045.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-04-30), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 6822.0,
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000008/gev-20240331.htm",
+     "value": 7260.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-07-24), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 8119.0,
+     "published_date": "2024-07-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000067/gev-20240630.htm",
+     "value": 8204.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-23), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 8253.0,
+     "published_date": "2024-10-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681024000083/gev-20240930.htm",
+     "value": 8913.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "GE Vernova Q4 2024 earnings release (Form 8-K Ex.99), summary table, row \"Total revenues\", current column (three months ended 2024-12-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 10045.0,
+     "published_date": "2025-01-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000004/gev4q2024earningsrelease.htm",
+     "value": 10559.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "10-Q for period ended 2025-03-31 (filed 2025-04-23), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 7260.0,
+     "published_date": "2025-04-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000073/gev-20250331.htm",
+     "value": 8032.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "10-Q for period ended 2025-06-30 (filed 2025-07-23), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 8204.0,
+     "published_date": "2025-07-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000133/gev-20250630.htm",
+     "value": 9111.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "10-Q for period ended 2025-09-30 (filed 2025-10-22), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 8913.0,
+     "published_date": "2025-10-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681025000160/gev-20250930.htm",
+     "value": 9969.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "GE Vernova Q4 2025 earnings release (Form 8-K Ex.99), summary table, row \"Total revenues\", current column (three months ended 2025-12-31); PYC = prior-year column of same table",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 10559.0,
+     "published_date": "2026-01-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000012/gevpressrelease4q25.htm",
+     "value": 10956.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "10-Q for period ended 2026-03-31 (filed 2026-04-22), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 8032.0,
+     "published_date": "2026-04-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000064/gev-20260331.htm",
+     "value": 9339.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "10-Q for period ended 2026-06-30 (filed 2026-07-22), Consolidated Statement of Income (Loss), Total revenues; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 9111.0,
+     "published_date": "2026-07-22",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000148/gev-20260630.htm",
+     "value": 11104.0
+    }
+   ],
+   "primary": false,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "GEV US",
+ "unit": "million"
+}

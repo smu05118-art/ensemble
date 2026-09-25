@@ -1,0 +1,1409 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "TARIL",
+ "grid_node": "GRID_TARIL",
+ "name": "Transformers and Rectifiers (India) Ltd",
+ "ticker": "TARIL IN",
+ "listed": true,
+ "currency": "INR",
+ "unit": "million",
+ "accounting_basis": "Ind AS from FY2018 (Apr-2017); Indian GAAP before",
+ "fiscal_year_end_month": 3,
+ "quarter_calendar": "calendar quarters; Indian fiscal year Apr-Mar labelled by the year in which it ends (FY2026Q1 = Apr-Jun 2025)",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 매출(단일 부문: 변압기)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 1730.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1fca8b0d-3dec-427f-99ed-865069f8e9d7.pdf",
+     "locator": "BSE filing 2019-08-14 (2019-08-14_1fca8b0d-3dec-427f-99ed-865069f8e9d7.pdf) p.4: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-06-30'; printed 17,305 (INR lakh)",
+     "published_date": "2019-08-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2266.3,
+     "cross_check": {
+      "bse_results_db_inr_mn": 1730.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=102.00&RType="
+     },
+     "comparative_note": "no prior lakh point in this scope; PY column 22663.0 accepted after check vs standalone revenue of the same quarter 2238.2 (ratio 1.013)"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 1539.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/2fd63250-2dc8-4f5e-8860-e7ddbb58402b.pdf",
+     "locator": "BSE filing 2019-11-14 (2019-11-14_2fd63250-2dc8-4f5e-8860-e7ddbb58402b.pdf) p.7: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-09-30'; printed 15,394 (INR lakh)",
+     "published_date": "2019-11-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1909.9,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1539.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_50963_171219_15112019024320_WEB.xml",
+      "bse_results_db_inr_mn": 1539.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=103.00&RType="
+     },
+     "comparative_note": "no prior lakh point in this scope; PY column 19099.0 accepted after check vs standalone revenue of the same quarter 1867.1 (ratio 1.023)"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 2108.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8a721b27-84de-41d7-8aed-1ff1502493bd.pdf",
+     "locator": "BSE filing 2020-02-14 (2020-02-14_8a721b27-84de-41d7-8aed-1ff1502493bd.pdf) p.4: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-12-31'; printed 21,084 (INR lakh)",
+     "published_date": "2020-02-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1958.7,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2108.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_54240_221779_14022020040229_WEB.xml",
+      "bse_results_db_inr_mn": 2108.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=104.00&RType="
+     },
+     "comparative_note": "no prior lakh point in this scope; PY column 19587.0 accepted after check vs standalone revenue of the same quarter 1936.7 (ratio 1.011)"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 1631.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5c74ba5b-18f4-4e71-b500-576923a46080.pdf",
+     "locator": "BSE filing 2020-06-30 (2020-06-30_5c74ba5b-18f4-4e71-b500-576923a46080.pdf) p.17: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-03-31'; printed 16,312 (INR lakh)",
+     "published_date": "2020-06-30",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1631.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_57310_272096_30062020045750_WEB.xml",
+      "bse_results_db_inr_mn": 1631.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=105.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 1147.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf",
+     "locator": "BSE filing 2020-11-27 (2020-11-27_6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf) p.7: consolidated Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2020-06-30; printed 11,476 (INR lakh). Original filing 2020-09-14 (2020-09-14_784705da-f01a-4a97-b9c9-c0d49a5ae925.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2020-09-14",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1147.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_61411_316578_14092020025259_WEB.xml",
+      "bse_results_db_inr_mn": 1147.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=106.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 1750.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf",
+     "locator": "BSE filing 2020-11-27 (2020-11-27_6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf) p.7: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-09-30'; printed 17,509 (INR lakh)",
+     "published_date": "2020-11-27",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1539.4,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1750.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_65809_366854_27112020035647_WEB.xml",
+      "bse_results_db_inr_mn": 1750.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=107.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 1684.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf",
+     "locator": "BSE filing 2022-02-07 (2022-02-07_e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf) p.7: consolidated Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2020-12-31; printed 16,845 (INR lakh). Original filing 2021-02-12 (2021-02-12_2ca23d19-0143-470f-b12b-e5d065a86345.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2021-02-12",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1684.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_68281_407203_12022021031148_WEB.xml",
+      "bse_results_db_inr_mn": 1684.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=108.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 2837.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fb0f42b9-a2ee-42b8-ac11-7f2e1fcd248b.pdf",
+     "locator": "BSE filing 2021-05-25 (2021-05-25_fb0f42b9-a2ee-42b8-ac11-7f2e1fcd248b.pdf) p.16: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-03-31'; printed 28,378 (INR lakh)",
+     "published_date": "2021-05-25",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2837.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_70338_450854_25052021034841_WEB.xml",
+      "bse_results_db_inr_mn": 2837.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=109.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 2169.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/632d7bbf-acc7-40e4-85a9-47291770b204.pdf",
+     "locator": "BSE filing 2021-08-10 (2021-08-10_632d7bbf-acc7-40e4-85a9-47291770b204.pdf) p.7: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2021-06-30); printed 21,699 (INR lakh); 3rd column (same quarter previous year) printed 11,476",
+     "published_date": "2021-08-10",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2169.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_74564_502133_10082021021708_WEB.xml",
+      "bse_results_db_inr_mn": 2169.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=110.00&RType="
+     },
+     "prior_year_comparative": 1147.6
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 2671.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf",
+     "locator": "BSE filing 2022-02-07 (2022-02-07_e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf) p.7: consolidated Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2021-09-30; printed 26,712 (INR lakh). Original filing 2021-11-12 (2021-11-12_ddd0672e-2bce-44e8-90b9-0c5405fa63ab.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2021-11-12",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2671.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_79224_557819_13112021025801_WEB.xml",
+      "bse_results_db_inr_mn": 2671.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=111.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 3349.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf",
+     "locator": "BSE filing 2022-02-07 (2022-02-07_e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf) p.7: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2021-12-31); printed 33,491 (INR lakh); 3rd column (same quarter previous year) printed 16,845",
+     "published_date": "2022-02-07",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3349.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_81425_604002_07022022035530_WEB.xml",
+      "bse_results_db_inr_mn": 3349.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=112.00&RType="
+     },
+     "prior_year_comparative": 1684.5
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 3393.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/abfd8284-ccd7-48e4-870e-ff5507330ddc.pdf",
+     "locator": "BSE filing 2022-05-14 (2022-05-14_abfd8284-ccd7-48e4-870e-ff5507330ddc.pdf) p.10: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2022-03-31); printed 33,931 (INR lakh); 3rd column (same quarter previous year) printed 28,378",
+     "published_date": "2022-05-14",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3393.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_84523_654814_14052022053555_WEB.xml",
+      "bse_results_db_inr_mn": 3393.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=113.00&RType="
+     },
+     "prior_year_comparative": 2837.8
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 2819.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/77006a47-cd23-40e5-b431-cb5b9ea3657e.pdf",
+     "locator": "BSE filing 2022-08-08 (2022-08-08_77006a47-cd23-40e5-b431-cb5b9ea3657e.pdf) p.6: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2022-06-30); printed 28,193 (INR lakh); 3rd column (same quarter previous year) printed 21,699",
+     "published_date": "2022-08-08",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2819.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_637304_3210_08082022133632_WEB.xml",
+      "bse_results_db_inr_mn": 2819.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=114.00&RType="
+     },
+     "prior_year_comparative": 2169.9
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 3074.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b6bf5be1-fbcb-4884-b956-f8b7d1d3d7a4.pdf",
+     "locator": "BSE filing 2022-11-10 (2022-11-10_b6bf5be1-fbcb-4884-b956-f8b7d1d3d7a4.pdf) p.10: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2022-09-30); printed 30,746 (INR lakh); 3rd column (same quarter previous year) printed 26,712",
+     "published_date": "2022-11-10",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3074.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_859383_5549_11112022155236_WEB.xml",
+      "bse_results_db_inr_mn": 3074.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=115.00&RType="
+     },
+     "prior_year_comparative": 2671.2
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 3282.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/169514c5-ef50-4d77-8f17-6d373b7c99c1.pdf",
+     "locator": "BSE filing 2023-02-06 (2023-02-06_169514c5-ef50-4d77-8f17-6d373b7c99c1.pdf) p.6: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2022-12-31); printed 32,829 (INR lakh); 3rd column (same quarter previous year) printed 33,701",
+     "published_date": "2023-02-06",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3282.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_88703_786416_06022023024521.xml",
+      "bse_results_db_inr_mn": 3282.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=116.00&RType="
+     },
+     "prior_year_comparative": 3370.1,
+     "comparative_note": "restated comparative (prior point 3349.1, printed 33,701)"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 4337.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/558cf161-7b62-491d-9c10-efc6a3552ce8.pdf",
+     "locator": "BSE filing 2023-05-04 (2023-05-04_558cf161-7b62-491d-9c10-efc6a3552ce8.pdf) p.14: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2023-03-31); printed 43,375 (INR lakh); 3rd column (same quarter previous year) printed 34,062",
+     "published_date": "2023-05-04",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4337.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_91189_837313_04052023050618.xml",
+      "bse_results_db_inr_mn": 4337.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=117.00&RType="
+     },
+     "prior_year_comparative": 3406.2,
+     "comparative_note": "restated comparative (prior point 3393.1, printed 34,062)"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 1555.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf",
+     "locator": "BSE filing 2024-07-19 (2024-07-19_eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf) p.7: consolidated Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2023-06-30; printed 15,557 (INR lakh). Original filing 2023-08-10 (2023-08-10_0985d702-ee54-4edb-b24a-5b9295f2362b.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2023-08-10",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1555.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_96258_913982_10082023081639.xml",
+      "bse_results_db_inr_mn": 1555.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=118.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 2570.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a687b610-5a9d-4aa9-a9ce-f848e404c579.pdf",
+     "locator": "BSE filing 2024-01-22 (2024-01-22_a687b610-5a9d-4aa9-a9ce-f848e404c579.pdf) p.7: consolidated Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2023-09-30; printed 25,706 (INR lakh). Original filing 2023-11-03 (2023-11-03_632e58b9-a17d-483d-bb40-b446dadbf077.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2023-11-03",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2570.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_98652_975467_03112023015708.xml",
+      "bse_results_db_inr_mn": 2570.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=119.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 3693.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a687b610-5a9d-4aa9-a9ce-f848e404c579.pdf",
+     "locator": "BSE filing 2024-01-22 (2024-01-22_a687b610-5a9d-4aa9-a9ce-f848e404c579.pdf) p.7: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-12-31'; printed 36,935 (INR lakh)",
+     "published_date": "2024-01-22",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3693.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_101271_1032943_22012024010628.xml",
+      "bse_results_db_inr_mn": 3693.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=120.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 5127.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d6adb14f-03b0-49d9-9ac9-0641538efd84.pdf",
+     "locator": "BSE filing 2024-04-08 (2024-04-08_d6adb14f-03b0-49d9-9ac9-0641538efd84.pdf) p.14: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-03-31'; printed 51,270 (INR lakh)",
+     "published_date": "2024-04-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 4383.5,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 5127.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_104540_1083474_08042024034813.xml",
+      "bse_results_db_inr_mn": 5127.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=121.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 4337.5, printed 43835.0)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 3220.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf",
+     "locator": "BSE filing 2024-07-19 (2024-07-19_eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf) p.7: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-06-30'; printed 32,200 (INR lakh)",
+     "published_date": "2024-07-19",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1555.7,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3220.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_109136_1194434_19072024034332.xml",
+      "bse_results_db_inr_mn": 3220.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=122.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 4615.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e3808ab-845a-4f91-b385-642a765d5128.pdf",
+     "locator": "BSE filing 2024-10-08 (2024-10-08_6e3808ab-845a-4f91-b385-642a765d5128.pdf) p.10: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-09-30'; printed 46,154 (INR lakh)",
+     "published_date": "2024-10-08",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 2570.6,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4615.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_112718_1261351_08102024013943.xml",
+      "bse_results_db_inr_mn": 4615.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=123.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 5593.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1f12a02c-534c-4799-9890-8ee1906cb5de.pdf",
+     "locator": "BSE filing 2025-01-08 (2025-01-08_1f12a02c-534c-4799-9890-8ee1906cb5de.pdf) p.8: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-12-31'; printed 55,936 (INR lakh)",
+     "published_date": "2025-01-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3693.5,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 5593.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_117177_1339340_08012025021942.xml",
+      "bse_results_db_inr_mn": 5593.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=124.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 6764.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0cadbb4a-b963-499e-8bd5-38f9bf669ba2.pdf",
+     "locator": "BSE filing 2025-04-08 (2025-04-08_0cadbb4a-b963-499e-8bd5-38f9bf669ba2.pdf) p.17: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-03-31'; printed 67,648 (INR lakh)",
+     "published_date": "2025-04-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 5127.0,
+     "cross_check": {
+      "bse_results_db_inr_mn": 6764.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=125.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 5293.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b9fca44f-1b76-45bc-8bba-ce7ab1aa187c.pdf",
+     "locator": "BSE filing 2025-08-01 (2025-08-01_b9fca44f-1b76-45bc-8bba-ce7ab1aa187c.pdf) p.6: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-06-30'; printed 529.33 (INR crore)",
+     "published_date": "2025-08-01",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3220.0,
+     "cross_check": {
+      "bse_results_db_inr_mn": 5293.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=126.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 4600.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e225ab62-4415-4cc9-8c4c-826a1215e0a6.pdf",
+     "locator": "BSE filing 2025-11-08 (2025-11-08_e225ab62-4415-4cc9-8c4c-826a1215e0a6.pdf) p.9: consolidated Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2025-09-30); printed 460.03 (INR crore); 3rd column (same quarter previous year) printed 461.54",
+     "published_date": "2025-11-08",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 4600.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=127.00&RType="
+     },
+     "prior_year_comparative": 4615.4
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 7367.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0d784a4f-24ee-4fef-b446-258d4b2a4d21.pdf",
+     "locator": "BSE filing 2026-04-21 (2026-04-21_0d784a4f-24ee-4fef-b446-258d4b2a4d21.pdf) p.16: consolidated Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2025-12-31; printed 736.76 (INR crore). Original filing 2026-01-08 (2026-01-08_1d5419bd-05d7-4661-a61c-409e02f502a4.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2026-01-08",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 7367.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=128.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 7826.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0d784a4f-24ee-4fef-b446-258d4b2a4d21.pdf",
+     "locator": "BSE filing 2026-04-21 (2026-04-21_0d784a4f-24ee-4fef-b446-258d4b2a4d21.pdf) p.16: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-03-31'; printed 782.67 (INR crore)",
+     "published_date": "2026-04-21",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 6764.8,
+     "cross_check": {
+      "bse_results_db_inr_mn": 7826.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=129.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2027Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 5723.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e79978bb-220c-4261-8aa6-ba2ab79116ec.pdf",
+     "locator": "BSE filing 2026-07-20 (2026-07-20_e79978bb-220c-4261-8aa6-ba2ab79116ec.pdf) p.7: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-06-30'; printed 572.34 (INR crore)",
+     "published_date": "2026-07-20",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 5293.3,
+     "cross_check": {
+      "bse_results_db_inr_mn": 5723.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=130.00&RType="
+     }
+    }
+   ]
+  },
+  "revenue_standalone": {
+   "label_ko": "별도 매출(참고: 연결 이전 장기 이력)",
+   "scope": "standalone",
+   "freq": "Q",
+   "primary": false,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2015-04-01",
+     "period_end": "2015-06-30",
+     "value": 621.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/7/5A2EF1DF_FDF6_4B54_B05A_1AB1932A9B41_140305.pdf",
+     "locator": "BSE filing 2016-07-25 (2016-07-25_5A2EF1DF_FDF6_4B54_B05A_1AB1932A9B41_140305.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2015-06-30; printed 6,211 (INR lakh). Original filing 2015-08-07 (2015-08-07_A3A32BFA_751D_42B9_85B0_D04F37B73885_103443.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2015-08-07",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 621.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=86.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2015-07-01",
+     "period_end": "2015-09-30",
+     "value": 1397.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2015/11/252764EC_C8F4_4009_98B0_935E0CBA2F3F_135604.pdf",
+     "locator": "BSE filing 2015-11-02 (2015-11-02_252764EC_C8F4_4009_98B0_935E0CBA2F3F_135604.pdf) p.1: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-09-30'; printed 13,979 (INR lakh)",
+     "published_date": "2015-11-02",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1397.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=87.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2015-10-01",
+     "period_end": "2015-12-31",
+     "value": 1264.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/2/433476C8_8090_46A2_93B9_364361C308A2_140058.pdf",
+     "locator": "BSE filing 2016-02-05 (2016-02-05_433476C8_8090_46A2_93B9_364361C308A2_140058.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-12-31'; printed 12,642 (INR lakh)",
+     "published_date": "2016-02-05",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1264.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=88.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 2480.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/5/8FE1A831_4305_479A_BD86_6C6D70CD4FFB_135302.pdf",
+     "locator": "BSE filing 2016-05-26 (2016-05-26_8FE1A831_4305_479A_BD86_6C6D70CD4FFB_135302.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-03-31'; printed 24805 (INR lakh)",
+     "published_date": "2016-05-26",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 2480.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=89.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 1591.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/7/5A2EF1DF_FDF6_4B54_B05A_1AB1932A9B41_140305.pdf",
+     "locator": "BSE filing 2016-07-25 (2016-07-25_5A2EF1DF_FDF6_4B54_B05A_1AB1932A9B41_140305.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-06-30'; printed 15,917 (INR lakh)",
+     "published_date": "2016-07-25",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 621.1,
+     "cross_check": {
+      "bse_results_db_inr_mn": 1591.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=90.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 2632.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/11/0592D6DC_3FF4_429D_8A19_9B771B599385_133034.pdf",
+     "locator": "BSE filing 2016-11-10 (2016-11-10_0592D6DC_3FF4_429D_8A19_9B771B599385_133034.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-09-30'; printed 26,324 (INR lakh)",
+     "published_date": "2016-11-10",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1397.9,
+     "cross_check": {
+      "bse_results_db_inr_mn": 2632.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=91.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 1916.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/2/E861CFF6_3AF2_4293_A92F_297F6DCA95A4_140210.pdf",
+     "locator": "BSE filing 2017-02-03 (2017-02-03_E861CFF6_3AF2_4293_A92F_297F6DCA95A4_140210.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-12-31'; printed 19167 (INR lakh)",
+     "published_date": "2017-02-03",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1264.2,
+     "cross_check": {
+      "bse_results_db_inr_mn": 1916.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=92.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 1881.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/5/E8E2CB9B_33E5_49E4_A455_B3C9A8D76914_164704.pdf",
+     "locator": "BSE filing 2017-05-05 (2017-05-05_E8E2CB9B_33E5_49E4_A455_B3C9A8D76914_164704.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-03-31'; printed 18816 (INR lakh)",
+     "published_date": "2017-05-05",
+     "verification": "pdf_txt+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1881.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=93.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 1658.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=95.00&RType=",
+     "locator": "BSE results record of the Reg-33 filing, 'Net Sales/Revenue From Operations' (Rs. million); original PDF filing 2017-11-25 (2017-11-25_3bc791a9-20a9-476a-971c-5198aa61572f.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2017-11-25",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1658.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=95.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 1513.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/2/b68173a8-1141-4741-92f1-285c839f2a2f.pdf",
+     "locator": "BSE filing 2018-02-12 (2018-02-12_b68173a8-1141-4741-92f1-285c839f2a2f.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-12-31'; printed 15,138) (INR lakh)",
+     "published_date": "2018-02-12",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1513.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=96.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 2445.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/081a4de5-6d9d-4d36-acd8-7c904e01887d.pdf",
+     "locator": "BSE filing 2018-08-03 (2018-08-03_081a4de5-6d9d-4d36-acd8-7c904e01887d.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2018-03-31; printed 24,454 (INR lakh). Original filing 2018-05-29 (2018-05-29_76e305d1-c631-49a2-9cb5-3a34a900213d.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2018-05-29",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2445.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_36070_12560_29052018041327_WEB.xml",
+      "bse_results_db_inr_mn": 2445.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=97.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 2238.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/081a4de5-6d9d-4d36-acd8-7c904e01887d.pdf",
+     "locator": "BSE filing 2018-08-03 (2018-08-03_081a4de5-6d9d-4d36-acd8-7c904e01887d.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-06-30'; printed 22,382 (INR lakh)",
+     "published_date": "2018-08-03",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2238.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_37836_31612_03082018030416_WEB.xml",
+      "bse_results_db_inr_mn": 2238.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=98.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 1867.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0e28dff0-b5ed-4679-846c-0da2063b0371.pdf",
+     "locator": "BSE filing 2019-02-13 (2019-02-13_0e28dff0-b5ed-4679-846c-0da2063b0371.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2018-09-30; printed 18,671 (INR lakh). Original filing 2018-11-14 (2018-11-14_9df90791-c480-4a8c-a3cc-dfdc1495e360.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2018-11-14",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1867.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_40831_59500_14112018022307_WEB.xml",
+      "bse_results_db_inr_mn": 1867.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=99.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 1936.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0e28dff0-b5ed-4679-846c-0da2063b0371.pdf",
+     "locator": "BSE filing 2019-02-13 (2019-02-13_0e28dff0-b5ed-4679-846c-0da2063b0371.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-12-31'; printed 19,367 (INR lakh)",
+     "published_date": "2019-02-13",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1513.8,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1936.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_43036_82129_13022019041219_WEB.xml",
+      "bse_results_db_inr_mn": 1936.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=100.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 2291.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7c313c11-395a-4ac7-aa4a-2a0eb607933b.pdf",
+     "locator": "BSE filing 2019-05-27 (2019-05-27_7c313c11-395a-4ac7-aa4a-2a0eb607933b.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-03-31'; printed 22,917 (INR lakh)",
+     "published_date": "2019-05-27",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2445.3,
+     "cross_check": {
+      "bse_results_db_inr_mn": 2291.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=101.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 2445.4, printed 24453.0)"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 1672.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1fca8b0d-3dec-427f-99ed-865069f8e9d7.pdf",
+     "locator": "BSE filing 2019-08-14 (2019-08-14_1fca8b0d-3dec-427f-99ed-865069f8e9d7.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-06-30'; printed 16,729 (INR lakh)",
+     "published_date": "2019-08-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2237.3,
+     "cross_check": {
+      "bse_results_db_inr_mn": 1672.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=102.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 2238.2, printed 22373.0)"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 1539.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/2fd63250-2dc8-4f5e-8860-e7ddbb58402b.pdf",
+     "locator": "BSE filing 2019-11-14 (2019-11-14_2fd63250-2dc8-4f5e-8860-e7ddbb58402b.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-09-30'; printed 15,394 (INR lakh)",
+     "published_date": "2019-11-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1539.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_50799_169246_15112019104009_WEB.xml",
+      "bse_results_db_inr_mn": 1491.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=103.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 2049.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8a721b27-84de-41d7-8aed-1ff1502493bd.pdf",
+     "locator": "BSE filing 2020-02-14 (2020-02-14_8a721b27-84de-41d7-8aed-1ff1502493bd.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-12-31'; printed 20,492 (INR lakh)",
+     "published_date": "2020-02-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1934.9,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2049.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_54238_221772_14022020040120_WEB.xml",
+      "bse_results_db_inr_mn": 2049.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=104.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 1936.7, printed 19349.0)"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 1617.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_57308_272086_30062020045633_WEB.xml",
+     "locator": "NSE XBRL of the Reg-33 results filing: RevenueFromOperations, context OneD (current quarter), INR; original PDF filing 2020-06-30 (2020-06-30_5c74ba5b-18f4-4e71-b500-576923a46080.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2020-06-30",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1617.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_57308_272086_30062020045633_WEB.xml",
+      "bse_results_db_inr_mn": 1617.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=105.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 1151.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf",
+     "locator": "BSE filing 2020-11-27 (2020-11-27_6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2020-06-30; printed 11,517 (INR lakh). Original filing 2020-09-14 (2020-09-14_784705da-f01a-4a97-b9c9-c0d49a5ae925.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2020-09-14",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1151.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_61410_316574_14092020025151_WEB.xml",
+      "bse_results_db_inr_mn": 1151.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=106.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 1717.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf",
+     "locator": "BSE filing 2020-11-27 (2020-11-27_6e5f0180-d7d0-4712-9412-1d72cdaec71a.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-09-30'; printed 17,179 (INR lakh)",
+     "published_date": "2020-11-27",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1717.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_65808_366849_27112020035549_WEB.xml",
+      "bse_results_db_inr_mn": 1717.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=107.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 1639.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fb0f42b9-a2ee-42b8-ac11-7f2e1fcd248b.pdf",
+     "locator": "BSE filing 2021-05-25 (2021-05-25_fb0f42b9-a2ee-42b8-ac11-7f2e1fcd248b.pdf) p.6: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2020-12-31; printed 16,394 (INR lakh). Original filing 2021-02-12 (2021-02-12_2ca23d19-0143-470f-b12b-e5d065a86345.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2021-02-12",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1639.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_68278_407194_12022021031042_WEB.xml",
+      "bse_results_db_inr_mn": 1639.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=108.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 2759.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fb0f42b9-a2ee-42b8-ac11-7f2e1fcd248b.pdf",
+     "locator": "BSE filing 2021-05-25 (2021-05-25_fb0f42b9-a2ee-42b8-ac11-7f2e1fcd248b.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-03-31'; printed 27,596 (INR lakh)",
+     "published_date": "2021-05-25",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2759.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_70336_450846_25052021034451_WEB.xml",
+      "bse_results_db_inr_mn": 2759.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=109.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 2131.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ddd0672e-2bce-44e8-90b9-0c5405fa63ab.pdf",
+     "locator": "BSE filing 2021-11-12 (2021-11-12_ddd0672e-2bce-44e8-90b9-0c5405fa63ab.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2021-06-30; printed 21,319 (INR lakh). Original filing 2021-08-10 (2021-08-10_632d7bbf-acc7-40e4-85a9-47291770b204.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2021-08-10",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2131.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_74563_502130_10082021021555_WEB.xml",
+      "bse_results_db_inr_mn": 2131.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=110.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 2580.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ddd0672e-2bce-44e8-90b9-0c5405fa63ab.pdf",
+     "locator": "BSE filing 2021-11-12 (2021-11-12_ddd0672e-2bce-44e8-90b9-0c5405fa63ab.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 25,803 (INR lakh)",
+     "published_date": "2021-11-12",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1717.9,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2580.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_79222_557812_13112021025655_WEB.xml",
+      "bse_results_db_inr_mn": 2580.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=111.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 3255.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf",
+     "locator": "BSE filing 2022-02-07 (2022-02-07_e9f6fb50-b098-47b4-af6a-3e0d1e458d6e.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-12-31'; printed 32,558 (INR lakh)",
+     "published_date": "2022-02-07",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1639.4,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3255.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_81424_603997_07022022035324_WEB.xml",
+      "bse_results_db_inr_mn": 3255.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=112.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 3257.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_84522_654811_14052022053437_WEB.xml",
+     "locator": "NSE XBRL of the Reg-33 results filing: RevenueFromOperations, context OneD (current quarter), INR; original PDF filing 2022-05-14 (2022-05-14_abfd8284-ccd7-48e4-870e-ff5507330ddc.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2022-05-14",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3257.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_84522_654811_14052022053437_WEB.xml",
+      "bse_results_db_inr_mn": 3257.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=113.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 2777.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_637303_3210_08082022133632_WEB.xml",
+     "locator": "NSE XBRL of the Reg-33 results filing: RevenueFromOperations, context OneD (current quarter), INR; original PDF filing 2022-08-08 (2022-08-08_77006a47-cd23-40e5-b431-cb5b9ea3657e.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2022-08-08",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2777.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_637303_3210_08082022133632_WEB.xml",
+      "bse_results_db_inr_mn": 2777.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=114.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 3098.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_859382_5549_11112022155236_WEB.xml",
+     "locator": "NSE XBRL of the Reg-33 results filing: RevenueFromOperations, context OneD (current quarter), INR; original PDF filing 2022-11-10 (2022-11-10_b6bf5be1-fbcb-4884-b956-f8b7d1d3d7a4.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2022-11-10",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3098.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_859382_5549_11112022155236_WEB.xml",
+      "bse_results_db_inr_mn": 3098.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=115.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 3195.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/558cf161-7b62-491d-9c10-efc6a3552ce8.pdf",
+     "locator": "BSE filing 2023-05-04 (2023-05-04_558cf161-7b62-491d-9c10-efc6a3552ce8.pdf) p.5: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2022-12-31; printed 31,953 (INR lakh). Original filing 2023-02-06 (2023-02-06_169514c5-ef50-4d77-8f17-6d373b7c99c1.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2023-02-06",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3195.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_88702_786413_06022023024314.xml",
+      "bse_results_db_inr_mn": 3195.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=116.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 4254.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/558cf161-7b62-491d-9c10-efc6a3552ce8.pdf",
+     "locator": "BSE filing 2023-05-04 (2023-05-04_558cf161-7b62-491d-9c10-efc6a3552ce8.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-03-31'; printed 42,547 (INR lakh)",
+     "published_date": "2023-05-04",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4254.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_91188_837309_04052023050445.xml",
+      "bse_results_db_inr_mn": 4254.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=117.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 1533.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf",
+     "locator": "BSE filing 2024-07-19 (2024-07-19_eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2023-06-30; printed 15,336 (INR lakh). Original filing 2023-08-10 (2023-08-10_0985d702-ee54-4edb-b24a-5b9295f2362b.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2023-08-10",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1533.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_96257_913979_10082023081453.xml",
+      "bse_results_db_inr_mn": 1533.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=118.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 2543.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e3808ab-845a-4f91-b385-642a765d5128.pdf",
+     "locator": "BSE filing 2024-10-08 (2024-10-08_6e3808ab-845a-4f91-b385-642a765d5128.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2023-09-30; printed 25,437 (INR lakh). Original filing 2023-11-03 (2023-11-03_632e58b9-a17d-483d-bb40-b446dadbf077.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2023-11-03",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2543.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_98650_975451_03112023015102.xml",
+      "bse_results_db_inr_mn": 2543.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=119.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 3653.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a687b610-5a9d-4aa9-a9ce-f848e404c579.pdf",
+     "locator": "BSE filing 2024-01-22 (2024-01-22_a687b610-5a9d-4aa9-a9ce-f848e404c579.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-12-31'; printed 36,530 (INR lakh)",
+     "published_date": "2024-01-22",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3653.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_101270_1032940_22012024010453.xml",
+      "bse_results_db_inr_mn": 3653.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=120.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 5002.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d6adb14f-03b0-49d9-9ac9-0641538efd84.pdf",
+     "locator": "BSE filing 2024-04-08 (2024-04-08_d6adb14f-03b0-49d9-9ac9-0641538efd84.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-03-31'; printed 50,028 (INR lakh)",
+     "published_date": "2024-04-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 4254.7,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 5002.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_104539_1083449_08042024034252.xml",
+      "bse_results_db_inr_mn": 5002.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=121.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 3115.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf",
+     "locator": "BSE filing 2024-07-19 (2024-07-19_eb780e31-aea8-4522-a3f0-09ffbda7c79b.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-06-30'; printed 31,159 (INR lakh)",
+     "published_date": "2024-07-19",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1533.6,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3115.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_109135_1194419_19072024034234.xml",
+      "bse_results_db_inr_mn": 3115.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=122.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 4459.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e3808ab-845a-4f91-b385-642a765d5128.pdf",
+     "locator": "BSE filing 2024-10-08 (2024-10-08_6e3808ab-845a-4f91-b385-642a765d5128.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-09-30'; printed 44,593 (INR lakh)",
+     "published_date": "2024-10-08",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 2543.7,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4459.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_112717_1261342_08102024013751.xml",
+      "bse_results_db_inr_mn": 4459.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=123.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 5453.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1f12a02c-534c-4799-9890-8ee1906cb5de.pdf",
+     "locator": "BSE filing 2025-01-08 (2025-01-08_1f12a02c-534c-4799-9890-8ee1906cb5de.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-12-31'; printed 54,531 (INR lakh)",
+     "published_date": "2025-01-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3653.0,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 5453.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_117176_1339335_08012025021831.xml",
+      "bse_results_db_inr_mn": 5453.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=124.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 6473.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5cefca18-13c8-4f07-b362-3f6665b3191a.pdf",
+     "locator": "BSE filing 2025-04-08 (2025-04-08_5cefca18-13c8-4f07-b362-3f6665b3191a.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-03-31'; printed 64,731 (INR lakh)",
+     "published_date": "2025-04-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 5002.8,
+     "cross_check": {
+      "bse_results_db_inr_mn": 6473.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=125.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 5105.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b9fca44f-1b76-45bc-8bba-ce7ab1aa187c.pdf",
+     "locator": "BSE filing 2025-08-01 (2025-08-01_b9fca44f-1b76-45bc-8bba-ce7ab1aa187c.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-06-30'; printed 510.53 (INR crore)",
+     "published_date": "2025-08-01",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3115.9,
+     "cross_check": {
+      "bse_results_db_inr_mn": 5105.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=126.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 4284.21,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1d5419bd-05d7-4661-a61c-409e02f502a4.pdf",
+     "locator": "BSE filing 2026-01-08 (2026-01-08_1d5419bd-05d7-4661-a61c-409e02f502a4.pdf) p.4: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2025-09-30; printed 428.421 (INR crore). Original filing 2025-11-08 (2025-11-08_e225ab62-4415-4cc9-8c4c-826a1215e0a6.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2025-11-08",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 4284.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=127.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 7042.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1d5419bd-05d7-4661-a61c-409e02f502a4.pdf",
+     "locator": "BSE filing 2026-01-08 (2026-01-08_1d5419bd-05d7-4661-a61c-409e02f502a4.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-12-31'; printed 704.21 (INR crore)",
+     "published_date": "2026-01-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 5453.1,
+     "cross_check": {
+      "bse_results_db_inr_mn": 7042.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=128.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 7523.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0d784a4f-24ee-4fef-b446-258d4b2a4d21.pdf",
+     "locator": "BSE filing 2026-04-21 (2026-04-21_0d784a4f-24ee-4fef-b446-258d4b2a4d21.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-03-31'; printed 752.33 (INR crore)",
+     "published_date": "2026-04-21",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 6473.1,
+     "cross_check": {
+      "bse_results_db_inr_mn": 7523.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=129.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2027Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 5592.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=130.00&RType=",
+     "locator": "BSE results record of the Reg-33 filing, 'Net Sales/Revenue From Operations' (Rs. million); original PDF filing 2026-07-20 (2026-07-20_e79978bb-220c-4261-8aa6-ba2ab79116ec.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2026-07-20",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "bse_results_db_inr_mn": 5592.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532928&Company=Transformers-Rectifiers-(India)-Ltd&qtr=130.00&RType="
+     }
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2017-04-01",
+   "type": "restatement",
+   "note": "Ind AS from FY2018; FY2016-FY2017 standalone quarters are IGAAP net-of-excise as originally filed",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/081a4de5-6d9d-4d36-acd8-7c904e01887d.pdf"
+  },
+  {
+   "date": "2017-07-01",
+   "type": "restatement",
+   "note": "GST; standalone FY2018Q1 omitted (excise-inclusive only)",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/081a4de5-6d9d-4d36-acd8-7c904e01887d.pdf"
+  },
+  {
+   "date": "2019-04-01",
+   "type": "listing",
+   "note": "Quarterly consolidated results start with Q1 FY2020 (subsidiaries Transpares, Transweld, TARIL Infrastructure, Savas Engineering etc.; consolidated ≈ standalone +1-4%)",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1fca8b0d-3dec-427f-99ed-865069f8e9d7.pdf"
+  },
+  {
+   "date": "2025-04-01",
+   "type": "restatement",
+   "note": "Presentation unit changed from Rs. lakh (integer) to Rs. crore (2 dp) in FY2026 filings; values converted to INR million",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b9fca44f-1b76-45bc-8bba-ce7ab1aa187c.pdf"
+  }
+ ],
+ "profile": {
+  "products": "Power transformers, auto-transformers and reactors up to 1,200 kV / 1,000 MVA (special transformers), furnace transformers up to 400 MVA, rectifier transformers up to 160 kA DC, distribution transformers up to 10 MVA / 33 kV; subsidiaries make parts/radiators (Transpares, Transweld, Savas Engineering) and EPC (TARIL Infrastructure). Single reportable segment (transformers). Source: AR FY2025-26 product portfolio pp.34-37 and plant table p.58.",
+  "plants": [
+   {
+    "country": "IN",
+    "city": "Moraiya (Sanand, Ahmedabad), Gujarat",
+    "products": "Furnace, rectifier, distribution & specialty transformers; large EHV units; ~40,000 MVA post expansion",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a2c9ff7a-43ae-4cb0-a4c7-4acf5cd1b7e1.pdf"
+   },
+   {
+    "country": "IN",
+    "city": "Changodar (Sarkhej-Bavla Hwy, Ahmedabad), Gujarat",
+    "products": "High-voltage/EHV power transformers, type-testing facility; ~37,000 MVA post expansion",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a2c9ff7a-43ae-4cb0-a4c7-4acf5cd1b7e1.pdf"
+   },
+   {
+    "country": "IN",
+    "city": "Odhav (Ahmedabad), Gujarat",
+    "products": "Smaller distribution transformers up to 66 kV, ~10 MVA; ~1,200 MVA",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a2c9ff7a-43ae-4cb0-a4c7-4acf5cd1b7e1.pdf"
+   },
+   {
+    "country": "IN",
+    "city": "Chiyada (Ahmedabad), Gujarat",
+    "products": "Backward integration: CTC wire, bushings, pressboard, structural fabrication",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a2c9ff7a-43ae-4cb0-a4c7-4acf5cd1b7e1.pdf"
+   }
+  ],
+  "end_markets": "Indian transmission utilities (PGCIL, GETCO, RRVPNL etc.), renewable developers, steel/aluminium smelters (furnace & rectifier), railways; exports small: FY2025-26 export sales INR 33.74 cr plus export services INR 4.46 cr (AR FY26 Directors' report p.80) vs standalone revenue ~INR 2,500 cr; export target ~10% by FY28 (AR p.75).",
+  "export_routes": [
+   "IN->US",
+   "IN->Middle East",
+   "IN->Africa"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "850450",
+   "850440"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "india_iip_27",
+    "why": "Indian electrical-equipment production — TARIL is ~98% domestic utility/industrial",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "india_iip_capgoods",
+    "why": "Capital goods cycle; furnace/rectifier transformers follow metals & industrial capex",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "in_exp_850423_p0",
+    "why": "India >10 MVA transformer exports — EHV power-transformer industry cycle (capacity tightness/pricing)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p699",
+    "why": "US imports of >10 MVA transformers from India — TARIL booked a US order (PDC AK LPIV LLC) in FY27 Q1 presentation",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cea_transformation_capacity_added_mva",
+    "why": "WISHLIST: CEA monthly transformation capacity (MVA) commissioned at 220 kV+ — physical demand for EHV transformers",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "pgcil_capex_quarterly",
+    "why": "WISHLIST: POWERGRID quarterly capex — major TARIL customer",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total(consolidated): 분기 연결 결산은 FY2020Q1(2019-06) 부터 공시(SEBI 가 FY2020 부터 분기 연결 의무화). FY2019 분기 연결값은 FY2020 공시의 비교칸(감사인 검토 전 경영진 수치)으로만 존재 — 포인트로 싣지 않고 FY2020 포인트의 prior_year_comparative 로만 사용(별도 매출 대비 0.97~1.15 범위 점검).",
+  "revenue_standalone: FY2018Q1 (2017-06-30): Q1 FY2018 (published 2017-09-13) printed only Ind AS 'Revenue from Operations (Gross)' incl. excise (13,150 lakh; excise duty 816 lakh as expense line, per Q1 FY2019 filing 2018-08-03) — no excise-exclusive revenue printed -> omitted"
+ ],
+ "collection_notes": [
+  "fiscal_key 규칙: 인도 회계연도(4월~3월)를 '끝나는 해'로 표기 — FY2026Q1 = 2025-04-01~2025-06-30, FY2026Q4 = 2026-01-01~2026-03-31. period_end 는 원문 결산일(달력 분기말).",
+  "단위: INR million. 원문은 INR lakh(=0.1 million) 또는 crore(=10 million) 로 인쇄 — 배율 환산만 했고 (lakh×0.1, crore×10, XBRL INR÷1e6) 통화 환산·추정 없음. printed 값은 locator 에 원문 그대로 남김.",
+  "인도 Reg-33 결산의 1~3월(4분기) 3개월 칸은 '연간 감사치 − 12월 누계 공시치' 로 회사가 산출·인쇄한 balancing figure 이다. 인쇄된 3개월 칸을 그대로 쓰므로 method=direct_reported_quarter.",
+  "검증: 모든 분기 값은 (1) BSE 결과 DB(Corp_detailedResult / 연결 API, Rs. million) (2) NSE XBRL·NSE 결과 레코드 중 가용한 거래소 구조화 공시와 대조했고, (3) BSE 원문 PDF(텍스트층·pdfplumber·tesseract OCR)에서 같은 숫자를 찾으면 그 PDF를 source_url 로 둔다(verification 필드). PDF 셀을 읽지 못한 분기는 거래소 구조화 공시(XBRL/NSE 레코드/BSE DB)를 source_url 로 둔다(CONTRACT §0-1 예외).",
+  "2017-07-01 GST 도입: 그 이전 매출(IGAAP 'Net sales (net of excise duty)' 또는 Ind AS 총액)은 물품세 포함 여부가 다르다. 2017-06 분기는 회사가 '물품세 제외 매출'을 인쇄한 경우에만 그 값을 쓰고, 아니면 비운다. FY2018Q1~FY2019Q1 공시의 전년동기 비교칸(Ind AS 재작성·물품세 포함)은 prior_year_comparative 로 싣지 않는다.",
+  "revenue_total = 연결(FY2020Q1~). revenue_standalone = 별도(FY2016Q1~, 연결 이전 장기 이력 참고용; 범위가 달라 revenue_total 과 섞지 않음).",
+  "단일 부문(transformers) → revenue_segment 없음, primary_target=revenue_total.",
+  "orders: IR 자료에 수주잔고·주요 수주 목록은 있으나 분기 수주액(order inflow) 시계열이 일관되게 인쇄되지 않아 orders_segment 미작성.",
+  "consolidated: FY2020Q4: PY column 2.0 != prior point None (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2021Q4: PY column 70095.0 != prior point 1631.2 (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2024Q3: PY column 33153.0 != prior point 3282.9 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2016Q2: PY column 12404.0 != prior point None (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2016Q3: PY column 10749.0 != prior point None (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2016Q4: PY column 16343.0 != prior point None (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2017Q4: PY column 80224.0 deviates >2% from prior point 2480.5 -> not stored",
+  "standalone: FY2018Q2: value from exchange structured filing only (bse_db); PDF cell not machine-verified",
+  "standalone: FY2019Q1: PY column 13150.0 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "standalone: FY2020Q2: PY column 19099.0 deviates >2% from prior point 1867.1 -> not stored",
+  "standalone: FY2020Q4: value from exchange structured filing only (nse_xbrl); PDF cell not machine-verified",
+  "standalone: FY2021Q2: PY column 14.911 deviates >2% from prior point 1539.4 -> not stored",
+  "standalone: FY2021Q4: PY column 6174.0 != prior point 1617.4 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2022Q4: value from exchange structured filing only (nse_xbrl); PDF cell not machine-verified",
+  "standalone: FY2023Q1: value from exchange structured filing only (nse_xbrl); PDF cell not machine-verified",
+  "standalone: FY2023Q2: value from exchange structured filing only (nse_xbrl); PDF cell not machine-verified",
+  "standalone: FY2023Q4: PY column 32801.0 != prior point 3257.8 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2024Q3: PY column 3276.0 != prior point 3195.3 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2027Q1: value from exchange structured filing only (bse_db); PDF cell not machine-verified"
+ ]
+}

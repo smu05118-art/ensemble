@@ -1,0 +1,681 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "CHINAXD",
+ "grid_node": "GRID_CHINA_XD",
+ "name": "中国西电电气股份有限公司 (China XD Electric Co., Ltd.)",
+ "ticker": "601179 CH (SSE)",
+ "listed": true,
+ "currency": "CNY",
+ "unit": "million",
+ "accounting_basis": "CAS (China Accounting Standards for Business Enterprises)",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters; fiscal_key = calendar year",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 영업수익(营业收入, 영업총수익 아님)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "unit_note": "CNY million; source printed in 元 (FY2025 quarterly table in 万元), scaled to million. Uses 营业收入, not 营业总收入 (which adds finance-company interest income).",
+   "points": [
+    {
+     "fiscal_key": "FY2015Q1",
+     "period_start": "2015-01-01",
+     "period_end": "2015-03-31",
+     "value": 2705.3369,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202116344.PDF",
+     "locator": "中国西电 2015年年度报告 (published 2016-03-31) PDF p.5: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31",
+     "prior_year_comparative": 2539.1837,
+     "prior_year_comparative_source": "中国西电 2015年第一季度报告 (published 2015-04-30) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2015-04-30/1200947346.PDF"
+    },
+    {
+     "fiscal_key": "FY2015Q2",
+     "period_start": "2015-04-01",
+     "period_end": "2015-06-30",
+     "value": 2987.909,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202116344.PDF",
+     "locator": "中国西电 2015年年度报告 (published 2016-03-31) PDF p.5: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31"
+    },
+    {
+     "fiscal_key": "FY2015Q3",
+     "period_start": "2015-07-01",
+     "period_end": "2015-09-30",
+     "value": 2561.9312,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202116344.PDF",
+     "locator": "中国西电 2015年年度报告 (published 2016-03-31) PDF p.5: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31",
+     "prior_year_comparative": 3622.238,
+     "prior_year_comparative_source": "中国西电 2015年第三季度报告 (published 2015-10-29) PDF p.17: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2015-10-29/1201735411.PDF"
+    },
+    {
+     "fiscal_key": "FY2015Q4",
+     "period_start": "2015-10-01",
+     "period_end": "2015-12-31",
+     "value": 4849.2547,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202116344.PDF",
+     "locator": "中国西电 2015年年度报告 (published 2016-03-31) PDF p.5: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31"
+    },
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 2431.6097,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-11/1203276642.PDF",
+     "locator": "中国西电 2016年年度报告 (published 2017-04-11) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-04-11",
+     "prior_year_comparative": 2705.3369,
+     "prior_year_comparative_source": "中国西电 2016年第一季度报告 (published 2016-04-28) PDF p.17: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2016-04-28/1202261801.PDF"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 3080.075,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-11/1203276642.PDF",
+     "locator": "中国西电 2016年年度报告 (published 2017-04-11) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-04-11"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 3241.5331,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-11/1203276642.PDF",
+     "locator": "中国西电 2016年年度报告 (published 2017-04-11) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-04-11"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 5226.6697,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-11/1203276642.PDF",
+     "locator": "中国西电 2016年年度报告 (published 2017-04-11) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-04-11"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 2478.6295,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-05/1204591028.PDF",
+     "locator": "中国西电 2017年年度报告 (published 2018-04-05) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-04-05",
+     "prior_year_comparative": 2431.6097,
+     "prior_year_comparative_source": "中国西电 2017年第一季度报告 (published 2017-04-29) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2017-04-29/1203425611.PDF"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 3668.2364,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-05/1204591028.PDF",
+     "locator": "中国西电 2017年年度报告 (published 2018-04-05) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-04-05"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 2663.0711,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-05/1204591028.PDF",
+     "locator": "中国西电 2017年年度报告 (published 2018-04-05) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-04-05",
+     "prior_year_comparative": 3241.5331,
+     "prior_year_comparative_source": "中国西电 2017年第三季度报告 (published 2017-10-31) PDF p.16: 合并利润表 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2017-10-31/1204097861.PDF"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 5336.1849,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-05/1204591028.PDF",
+     "locator": "中国西电 2017年年度报告 (published 2018-04-05) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-04-05"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 2412.7565,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-27/1206125699.PDF",
+     "locator": "中国西电 2018年年度报告（更新后） (published 2019-04-27) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-04-27",
+     "prior_year_comparative": 2478.6295,
+     "prior_year_comparative_source": "中国西电 2018年第一季度报告 (published 2018-04-28) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2018-04-28/1204828147.PDF"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 3306.0973,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-27/1206125699.PDF",
+     "locator": "中国西电 2018年年度报告（更新后） (published 2019-04-27) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-04-27"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 2542.631,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-27/1206125699.PDF",
+     "locator": "中国西电 2018年年度报告（更新后） (published 2019-04-27) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-04-27",
+     "prior_year_comparative": 2663.0711,
+     "prior_year_comparative_source": "中国西电 2018年第三季度报告 (published 2018-10-31) PDF p.14: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2018-10-31/1205562017.PDF"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 5428.391,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-27/1206125699.PDF",
+     "locator": "中国西电 2018年年度报告（更新后） (published 2019-04-27) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-04-27"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 2716.4629,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-29/1207668789.PDF",
+     "locator": "中国西电 2019年年度报告 (published 2020-04-29) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-29",
+     "prior_year_comparative": 2412.7565,
+     "prior_year_comparative_source": "中国西电 2019年第一季度报告 (published 2019-04-27) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2019-04-27/1206125698.PDF"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 3871.6563,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-29/1207668789.PDF",
+     "locator": "中国西电 2019年年度报告 (published 2020-04-29) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-29"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 2983.8982,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-29/1207668789.PDF",
+     "locator": "中国西电 2019年年度报告 (published 2020-04-29) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-29",
+     "prior_year_comparative": 2542.631,
+     "prior_year_comparative_source": "中国西电 2019年第三季度报告 (published 2019-10-31) PDF p.14: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2019-10-31/1207047078.PDF"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 5711.0708,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-29/1207668789.PDF",
+     "locator": "中国西电 2019年年度报告 (published 2020-04-29) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-29"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 2440.3779,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-30/1209875485.PDF",
+     "locator": "中国西电2020年年度报告 (published 2021-04-30) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-30",
+     "prior_year_comparative": 2716.4629,
+     "prior_year_comparative_source": "中国西电 2020年第一季度报告 (published 2020-04-29) PDF p.15: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2020-04-29/1207668787.PDF"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 3587.2772,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-30/1209875485.PDF",
+     "locator": "中国西电2020年年度报告 (published 2021-04-30) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-30"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 3417.9499,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-30/1209875485.PDF",
+     "locator": "中国西电2020年年度报告 (published 2021-04-30) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-30",
+     "prior_year_comparative": 2983.8982,
+     "prior_year_comparative_source": "中国西电 2020年第三季度报告 (published 2020-10-30) PDF p.15: 合并利润表 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2020-10-30/1208649712.PDF"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 6356.4248,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-30/1209875485.PDF",
+     "locator": "中国西电2020年年度报告 (published 2021-04-30) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-30"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 2844.8211,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-02-28/1215989739.PDF",
+     "locator": "中国西电2021年年度报告（修订版） (published 2023-02-28) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-02-28",
+     "prior_year_comparative": 2440.3779,
+     "prior_year_comparative_source": "中国西电2021年第一季度报告（修订版） (published 2023-02-28) PDF p.13: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2023-02-28/1215989735.PDF"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 3958.4589,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-02-28/1215989739.PDF",
+     "locator": "中国西电2021年年度报告（修订版） (published 2023-02-28) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-02-28"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 4078.149,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-02-28/1215989739.PDF",
+     "locator": "中国西电2021年年度报告（修订版） (published 2023-02-28) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-02-28",
+     "prior_year_comparative": 3419.3057,
+     "prior_year_comparative_source": "中国西电2021年第三季度报告（修订版） (published 2023-02-28) PDF p.2: manual read (see note) — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2023-02-28/1215989736.PDF"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 3299.234,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-02-28/1215989739.PDF",
+     "locator": "中国西电2021年年度报告（修订版） (published 2023-02-28) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-02-28"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 3413.1573,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-21/1216497311.PDF",
+     "locator": "中国西电2022年年度报告 (published 2023-04-21) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-21"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 4629.7598,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-21/1216497311.PDF",
+     "locator": "中国西电2022年年度报告 (published 2023-04-21) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-21"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 4184.2829,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-21/1216497311.PDF",
+     "locator": "中国西电2022年年度报告 (published 2023-04-21) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-21"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 5779.2918,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-21/1216497311.PDF",
+     "locator": "中国西电2022年年度报告 (published 2023-04-21) PDF p.6: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-21"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 4673.9479,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219567147.PDF",
+     "locator": "中国西电2023年年度报告 (published 2024-04-11) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 4545.9905,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219567147.PDF",
+     "locator": "中国西电2023年年度报告 (published 2024-04-11) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 4426.0713,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219567147.PDF",
+     "locator": "中国西电2023年年度报告 (published 2024-04-11) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 7201.9011,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219567147.PDF",
+     "locator": "中国西电2023年年度报告 (published 2024-04-11) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 4713.2624,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223094946.PDF",
+     "locator": "中国西电2024年年度报告 (published 2025-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-15"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 5632.9896,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223094946.PDF",
+     "locator": "中国西电2024年年度报告 (published 2025-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-15"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 4878.1451,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223094946.PDF",
+     "locator": "中国西电2024年年度报告 (published 2025-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-15",
+     "prior_year_comparative": 4677.5781,
+     "prior_year_comparative_source": "中国西电2024年第三季度报告 (published 2024-10-30) PDF p.2: manual read (see note) — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2024-10-30/1221552999.PDF"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 6950.3791,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223094946.PDF",
+     "locator": "中国西电2024年年度报告 (published 2025-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-15"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 5244.6342,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF",
+     "locator": "中国西电2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11",
+     "prior_year_comparative": 4713.2624,
+     "prior_year_comparative_source": "中国西电2025年第一季度报告 (published 2025-04-15) PDF p.10: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2025-04-15/1223094979.PDF"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 6056.6569,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF",
+     "locator": "中国西电2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 5657.7717,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF",
+     "locator": "中国西电2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 6797.3559,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF",
+     "locator": "中国西电2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 5511.5481,
+     "prior_year_comparative": 5244.6342,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225200541.PDF",
+     "locator": "中国西电2026年第一季度报告 (published 2026-04-28) PDF p.9: 合并利润表 营业收入 line (本期 = 2026年1-3月; 上年同期 = prior_year_comparative); 元 → CNY million",
+     "published_date": "2026-04-28"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 6701.4882,
+     "method": "ytd_difference",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482387.PDF",
+     "locator": "中国西电2026年半年度报告 (published 2026-08-20) PDF p.35: 合并利润表 营业收入 line 本期(1-6月) 12213.0362 minus Q1 5511.5481 from 中国西电2026年第一季度报告 p.9; 元 → CNY million",
+     "published_date": "2026-08-20",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225200541.PDF"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2021-12-31",
+   "type": "restatement",
+   "target": "revenue_total",
+   "note": "Subsidiary 西开电气 photovoltaic-project equipment TRADING switched to net (净额法) at FY2021 year-end; the FY2021 AR quarterly table carries net-basis quarters. All 2021 periodic reports were re-issued as 修订版 on 2023-02-28 (Q1 2,844.82; H1 6,803.28 vs original H1 7,575.30; Q3 4,078.15) — the revised versions are used. FY2020 restated 15,802.03 → 15,806.07 (+4.04, immaterial).",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2023-02-28/1215989739.PDF"
+  },
+  {
+   "date": "2022-12-31",
+   "type": "restatement",
+   "target": "revenue_total",
+   "note": "In Q4 2022 西开电气 changed its equipment-INTEGRATION business from gross (总额法) to net (净额法); the FY2022 AR quarterly table restates Q1–Q3 2022 (Q1 3,838.01 → 3,413.16; H1 8,587.40 → 8,042.92; Q3 4,613.08 → 4,184.28). FY2021 quarters were NOT restated for this business, so FY2022 YoY vs FY2021 is on mixed bases. The 2023 Q1/H1/Q3 reports nevertheless print the ORIGINAL gross 2022 comparatives (3,838.01 / 8,587.40 / 4,613.08); those comparatives are deliberately NOT stored for FY2023Q1/FY2023Q3 (scope differs from the FY2022 quarterly table); the builder should use the FY2022 points (net basis).",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-21/1216497311.PDF",
+   "affected_fiscal_keys": [
+    "FY2022Q1",
+    "FY2022Q2",
+    "FY2022Q3",
+    "FY2022Q4"
+   ]
+  },
+  {
+   "date": "2023-12-31",
+   "type": "acquisition",
+   "target": "revenue_total",
+   "note": "Dec 2023: acquired 62.96% of 江苏南瑞恒驰电气装备 (恒驰电气) from 中国西电集团 (same-control merger). FY2022 restated 18,006.49 → 18,554.29 (+547.80). The FY2023 AR quarterly table did NOT restate Q1–Q3 2023 (they equal the originally published reports), so FY2023Q4 = 7,201.90 = FY − original 9M and absorbs Hengchi’s Jan–Sep 2023 revenue (amount not printed; the FY2024 reports restate Q1 2023 by +120.60, H1 2023 by +281.19, Q3-2023 3-month by +251.51). Treat FY2023Q4 level and FY2024Q4 YoY with care.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-30/1219911134.PDF",
+   "affected_fiscal_keys": [
+    "FY2023Q4",
+    "FY2024Q4"
+   ]
+  },
+  {
+   "date": "2024-08-31",
+   "type": "acquisition",
+   "target": "revenue_total",
+   "note": "Aug 2024: subsidiary 西高院 bought 55% of 河南省高压电器研究所 (河高所) from 平高集团 (same-control). FY2023 restated 20,847.91 → 21,000.93 (+153.02); FY2024 quarterly table restates Q1 2024 4,681.88 → 4,713.26 and H1 10,284.01 → 10,346.25. FY2024Q1 comparative therefore omitted (Q1 report scope ≠ table scope); FY2024Q3 carries the Q3 report’s restated 3-month comparative 4,677.58.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223094946.PDF",
+   "affected_fiscal_keys": [
+    "FY2024Q1",
+    "FY2024Q2"
+   ]
+  }
+ ],
+ "profile": {
+  "products": "Per FY2025 AR p.10 (公司从事的业务): China’s broadest HV/EHV/UHV AC-DC T&D equipment maker — power & converter transformers, switchgear (GIS/breakers), HVDC converter valves, insulators & surge arresters, bushings, capacitors, AC/DC instrument transformers, power electronics, energy-equipment control; AC 10kV–1000kV, DC ±50kV–±1100kV. Main-business revenue by product (annual only): 变压器 FY2025 10,079.27m (FY2024 9,218.20m; FY2023 7,823.17m), 开关 FY2024 8,503.80m.",
+  "plants": [
+   {
+    "country": "CN",
+    "city": "Xi’an, Shaanxi (西安西电变压器, 西开电气/西安西电开关电气, 西安西电高压开关, 高压套管, 避雷器, 电力电容器, 电力系统(换流阀), 电力电子)",
+    "products": "UHV/EHV power & converter transformers, GIS/switchgear, bushings, arresters, capacitors, HVDC valves",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Changzhou, Jiangsu (常州西电变压器 90%)",
+    "products": "power transformers",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Jinan, Shandong (西电济南变压器 58.25%; 济南西电特种变压器)",
+    "products": "power and special transformers",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Chengdu, Sichuan (成都西电中特电气)",
+    "products": "transformers (变压器、整流器和电感器制造)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Guangzhou / Shanghai / Wuxi (广州西电高压电气; 上海西电高压开关 51%; 西电恒驰(江苏) 63%, 无锡恒驰中兴开关 55%)",
+    "products": "switchgear, power-electronic components",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   },
+   {
+    "country": "EG",
+    "city": "Egypt (西电-EGEMAC 高压电气 51%)",
+    "products": "assembles 66–550kV GIS, transformers and PF capacitors (AR 2025 p.24)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   },
+   {
+    "country": "ID",
+    "city": "Indonesia (西电印尼 SAKTI 51%)",
+    "products": "manufacturing (发电设备制造行业)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   },
+   {
+    "country": "IN",
+    "city": "India (西电高压电器设备（印度）有限公司 100%)",
+    "products": "manufacturing (制造业)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225094842.PDF"
+   }
+  ],
+  "end_markets": "State Grid / China Southern Grid (UHV AC/DC programmes), power generation, rail, industrial; international EPC & product exports (Belt and Road; Egyptian Electricity Transmission Co. (EETC) is the #2 customer in FY2025 AR p.17 with 545.77m = 2.29% of revenue). Controlled by 中国电气装备集团 (also controls XJ Electric).",
+  "export_routes": [
+   "CN->World (Belt and Road EPC/product exports)",
+   "EG->EG/MENA (local assembly)",
+   "ID->ID (local manufacturing)"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850450",
+   "853529",
+   "853720",
+   "854620",
+   "853540",
+   "853210"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "nea_grid_investment",
+    "why": "전력망 투자 완성액 — 특고압 변압기·GIS·직류설비 국내 수요의 직접 원천",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "nbs_transformer_output",
+    "why": "변압기 생산량(kVA) — 동사 최대 제품군(변압기 매출 ~42%) 산업 물량 동행",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "cn_exp_850423_p0",
+    "why": "중국 10MVA 초과 대형 변압기 수출 — 해외 변압기 출하(일대일로 EPC 포함)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cn_exp_853720_p0",
+    "why": "중국 1kV 초과 배전·제어반(GIS 조립품) 수출 — 개폐기 해외 출하",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "nea_uhv_project_approvals",
+    "why": "특고압 교류·직류 프로젝트 승인/착공 — 1~2년 선행 수주. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "sgcc_centralized_tender_awards",
+    "why": "국가전망 변압기·조합전기 집중입찰 낙찰 — 수주 선행지표. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total: none FY2015Q1–FY2026Q2 (46 quarters).",
+  "prior_year_comparative: stored only for same-scope 3-month comparatives printed in the Q1 report (Q1) or Q3 report (Q3); omitted for FY2022Q1/Q3 and FY2024Q1 (in-year restated tables) and deliberately for FY2023Q1/FY2023Q3 (gross-basis 2022 comparatives vs net-basis 2022 table). FY2016Q3 has no comparative (consolidated 7-9月 利润表 not machine-readable).",
+  "revenue_segment: not stored — product revenue (变压器 row) is printed only in annual reports from FY2018 on (H1 reports 2018+ carry no product split), so no Q/H series can be built. Annual 变压器 main-business revenue for reference (元→CNY m): FY2015 4,306.63; FY2016 5,290.14; FY2017 5,351.88; FY2018 5,346.66; FY2019 6,043.73; FY2020 5,363.16; FY2021 5,803.04; FY2022 5,575.65; FY2023 7,823.17; FY2024 9,218.20; FY2025 10,079.27 (AR 分产品 tables).",
+  "orders_segment: not stored — order intake/backlog appears only sporadically in narrative text (e.g. FY2020 AR: 在手订单 238.8亿 → 240.2亿)."
+ ],
+ "collection_notes": [
+  "Sources: China XD periodic reports from cninfo static PDFs (latest revised versions used: 2018 AR 更新后; 2021 Q1/H1/Q3/AR 修订版 of 2023-02-28).",
+  "Values FY2015–FY2025 = AR 分季度主要财务数据 (3-month figures). FY2019 and FY2021 tables had wrapped cells; digits reassembled by hand and verified: Q1+Q2 = H1, +Q3 = 9M, Σ = FY exactly.",
+  "Uses 营业收入 (operating revenue) rather than 营业总收入 (China XD consolidates a finance company whose interest income sits in 营业总收入).",
+  "FY2026Q2 = H1 2026 12,213.04 − Q1 5,511.55 (ytd_difference)."
+ ]
+}

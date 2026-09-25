@@ -17,6 +17,7 @@
 import argparse
 import csv
 import html
+import http.client
 import io
 import json
 import os
@@ -115,7 +116,9 @@ KNOWN_UNAVAILABLE = [
     'PCU335311335311G/WPU11741101(범용 변압기)·WPU117402: 2015-05 종료 → 제외',
     'IP8504(수입물가 HS8504 변압기·컨버터): 2021-12 종료 → 제외',
     'CES3133530001/CEU3133530001(전기장비 3353 고용): FRED 404',
-    '데이터센터 건설투자: FRED 검색("data center", "data center construction spending")에 Census C30 데이터센터 시계열 없음 → 민간 오피스(PROFCONS/PROFCON)로 대체',
+    '데이터센터 건설투자: FRED 에는 C30 대분류(PROFCONS 등)만 있고 데이터센터 단독 시계열 없음 → 민간 오피스(PROFCONS/PROFCON)로 대체. '
+    '단, Census C30 원표(https://www.census.gov/construction/c30/xlsx/privsatime.xlsx)에는 민간 Office 하위 "Data center"(SAAR)와 '
+    'Power 하위 "Electric"(SAAR) 세부 열이 있음 — FRED 패밀리 범위 밖이라 이 파일에는 미수록(2026-09-25 확인)',
     'A35ENO/A35DNO: FRED 404(M3 35 하위 E·D 범주 없음/배터리는 출하만)',
 ]
 
@@ -186,7 +189,7 @@ class Fetcher:
                         delay *= 2
                         continue
                 raise
-            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException) as e:
                 if attempt + 1 < RETRIES:
                     time.sleep(delay)
                     delay *= 2
@@ -307,7 +310,8 @@ def main(argv):
                 obs = parse_csv(sid, body)
                 meta = load_meta(f, sid)
             except FileNotFoundError:
-                errors.append(f'{sid}: FRED 404 (이번 실행) — 제외')
+                # SERIES 는 존재를 확인한 목록 — 404 는 종료·개명 신호이므로 조용히 빼지 않고 실패시킨다(fail-closed).
+                fatal.append(f'{sid}: FRED 404 — 목록 점검 필요(종료·개명?)')
                 continue
             except (ValueError, RuntimeError, urllib.error.HTTPError) as e:
                 fatal.append(f'{sid}: {e}')
@@ -320,8 +324,10 @@ def main(argv):
                 fatal.extend(probs)
                 continue
             sa = meta['seasonal_adjustment']
-            sa_code = ('SAAR' if 'Annual Rate' in sa else 'SA' if sa.startswith('Seasonally Adjusted') else
-                       'NSA' if sa.startswith('Not Seasonally Adjusted') else sa)
+            # 'Not Seasonally Adjusted Annual Rate' 가 SAAR 로 잘못 붙지 않도록 NSA 를 먼저 본다.
+            sa_code = ('NSA' if sa.startswith('Not Seasonally Adjusted') else
+                       'SAAR' if sa.startswith('Seasonally Adjusted Annual Rate') else
+                       'SA' if sa.startswith('Seasonally Adjusted') else sa)
             src = meta.get('source') or next((v for k, v in SOURCES.items() if sid.startswith(k)), 'U.S. Census Bureau')
             notes = [f'FRED {sid}; 원출처 {src}' + (f' · {meta["release"]}' if meta.get('release') else ''),
                      f'units="{meta["units"]}", {sa}']

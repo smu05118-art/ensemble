@@ -17,6 +17,7 @@
 사용: python3 fetch_eurostat.py [--max-seconds 480] [--max-age-hours 20] [--start 2015-01] [--offline]
 """
 import argparse
+import http.client
 import json
 import os
 import sys
@@ -112,7 +113,8 @@ class Fetcher:
                     continue
                 detail = e.read()[:300].decode('utf-8', 'replace') if hasattr(e, 'read') else ''
                 raise RuntimeError(f'HTTP {e.code} {url} {detail}') from e
-            except (urllib.error.URLError, TimeoutError, ConnectionError, json.JSONDecodeError) as e:
+            except (urllib.error.URLError, TimeoutError, ConnectionError, json.JSONDecodeError,
+                    http.client.HTTPException) as e:
                 if attempt + 1 < RETRIES:
                     time.sleep(delay)
                     delay *= 2
@@ -127,23 +129,41 @@ def build_url(dataset, indic, sadj, naces, geos, start):
     return API + dataset + '?' + urllib.parse.urlencode(params)
 
 
-def decode(doc, dataset):
-    """JSON-stat 2.0 → {(nace, geo): {ym: (value, flag)}} + 라벨."""
+def _as_sparse(x):
+    """JSON-stat 2.0 의 value/status 는 dict(희소) 또는 list(조밀) 둘 다 허용된다 → {문자열 위치: 값}."""
+    if isinstance(x, dict):
+        return x
+    if isinstance(x, list):
+        return {str(i): v for i, v in enumerate(x)}
+    return {}
+
+
+def decode(doc, dataset, expect=None):
+    """JSON-stat 2.0 → {(nace, geo): {ym: (value, flag)}} + 라벨.
+    expect={'indic_bt':…, 's_adj':…, 'unit':…}: 응답 차원이 요청과 다르면(필터 무시·코드 변경) 실패시킨다."""
     if doc.get('class') != 'dataset' or 'value' not in doc or 'dimension' not in doc:
         raise ValueError(f'{dataset}: JSON-stat dataset 아님 {str(doc)[:200]}')
     ids, size, dims = doc['id'], doc['size'], doc['dimension']
     need = {'freq', 'indic_bt', 'nace_r2', 's_adj', 'unit', 'geo', 'time'}
     if not need <= set(ids):
         raise ValueError(f'{dataset}: 차원 누락 {ids}')
-    inv = {k: {i: c for c, i in dims[k]['category']['index'].items()} for k in ids}
+    idx = {k: dims[k]['category']['index'] for k in ids}
+    for k, ix in idx.items():  # index 도 dict 또는 list 가능
+        if isinstance(ix, list):
+            idx[k] = {c: i for i, c in enumerate(ix)}
+    inv = {k: {i: c for c, i in idx[k].items()} for k in ids}
     for k in ('freq', 'indic_bt', 's_adj', 'unit'):
         if len(inv[k]) > 1:
             raise ValueError(f'{dataset}: {k} 가 둘 이상 {list(inv[k].values())}')
     if list(inv['freq'].values()) != ['M']:
         raise ValueError(f'{dataset}: 월별 아님')
-    status = doc.get('status') or {}
+    for k, want in (expect or {}).items():
+        got = list(inv[k].values())
+        if got != [want]:
+            raise ValueError(f'{dataset}: {k} 응답 {got} ≠ 요청 {want}')
+    status = _as_sparse(doc.get('status'))
     out = {}
-    for s, v in doc['value'].items():
+    for s, v in _as_sparse(doc['value']).items():
         if v is None:
             continue
         n = int(s)
@@ -185,7 +205,8 @@ def main(argv):
             cache = RAW / f'{ds}_{indic}_{sadj}_q{qi}.json'
             try:
                 body = f.get(url, cache)
-                data, labels, updated, ds_label = decode(json.loads(body), ds)
+                data, labels, updated, ds_label = decode(json.loads(body), ds,
+                                                         expect={'indic_bt': indic, 's_adj': sadj, 'unit': 'I21'})
             except (ValueError, RuntimeError, json.JSONDecodeError) as e:
                 fatal.append(f'{ds} {indic} {sadj}: {e}')
                 if isinstance(e, ValueError):  # 깨진 응답은 캐시에서 지워 다음 실행에 다시 받게 한다

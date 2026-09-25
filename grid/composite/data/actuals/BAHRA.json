@@ -1,0 +1,137 @@
+{
+ "accounting_basis": null,
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "원문 사본: data/raw/actuals/BAHRA/ (About·유입·건식·글로벌·뉴스 페이지 텍스트, TBS 카탈로그 p1–6 텍스트 — 원본 PDF 7MB 라 미보관, SEC 사전적격 목록 2024-03 PDF).",
+  "SEC 사전적격 목록(2024-03)에서 Bahra 는 도체·케이블(1.x)과 \"Rod items only\" 등에만 등재, 배전변압기(39.x) 명단에는 없음 — 2025-01 유입식 라인 신설 이후 변동 여부는 미확인.",
+  "사우디 수출입 시리즈는 수집기(comtrade_exports) 대상국에 없어 전부 wishlist. 등록된 실측 프록시는 이집트 수출(지역 수요 진단)뿐.",
+  "verify 2026-09-25: checked profile claims (no targets — private): oil-immersed page (BOIT ≤5,000 kVA, 36 kV, 3,500 units/yr, 50–2,500 & >2,500–5,000 kVA — OK), dry-type page (100–5,000 kVA, CESI — OK), catalogue p.4 (TBS 2015 with Legrand, acquired 2021, 50,000 m² — OK), news page (2025-01-07 inauguration of oil-type transformer lines — OK), SEC prequalified list Mar-2024 (Bahra only under cables p.1–5, an item on p.14 and 'Rod items only' p.19; absent from 39.x/40.x transformer lists — OK), no Tadawul/Nomu listing found, proxy_hint existence (2 collected, 5 wishlist — OK). fixed 0."
+ ],
+ "currency": null,
+ "fiscal_year_end_month": null,
+ "gaps": [
+  "전 기간: 비상장 — 매출·수주 공시 없음. 타깃 없음 → targets={}.",
+  "변압기 매출 비중·출하량 원문 없음(About 페이지 카운터는 미렌더링 자리표시자 \"0+\").",
+  "미국 수출 증거 없음(글로벌 페이지에 USA 영업 담당자만 표기) — SA->US 경로 미등록."
+ ],
+ "grid_node": "GRID_BAHRA",
+ "id": "BAHRA",
+ "listed": false,
+ "listing_status": "not listed — no Tadawul main-market or Nomu listing found (2026-09-25 search); company pages print no ticker or legal form. Treated as private.",
+ "name": "Bahra Electric (Bahra Cables Company)",
+ "primary_target": null,
+ "profile": {
+  "capacity_indicators": [
+   "Oil-immersed transformers: \"production capacity to produce 3,500 units/year\" (product page, accessed 2026-09-25)",
+   "Bahra TBS site 50,000 m² (catalogue)"
+  ],
+  "end_markets": "Saudi Arabia (giga-projects: Red Sea, Amaala, Diriyah, Qiddiyah; Saudi Aramco; utilities), GCC & Middle East since 2014, then Africa, parts of Europe and Asia — \"exported its products to more than 50+ countries\" (mostly cables). Note: in SEC's \"List of Prequalified Manufacturers/Suppliers for Distribution Networks Materials Till March 2024\", Bahra appears for cables/rods but NOT among prequalified distribution-transformer makers (items 39.x).",
+  "export_routes": [
+   "SA domestic",
+   "SA->GCC",
+   "SA->MENA",
+   "SA->Africa"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850433",
+   "850434",
+   "853720"
+  ],
+  "owners": "Bahra Electric group (\"Started as Bahra Cables in 2008, now Bahra Electric encompasses a group of companies\": Bahra Cables, Bahra Electrical Equipment, Bahra Metals, Bahra Electrical Devices, Transformers & Busways Solutions, FAME). Shareholders not disclosed.",
+  "plants": [
+   {
+    "city": "Bahra Industrial City (35 km from Jeddah) — Bahra-TBS plant",
+    "country": "SA",
+    "products": "oil-immersed distribution transformers 50–5,000 kVA ≤36 kV (3,500 units/yr capacity), cast-resin 100–5,000 kVA, unit/package substations, busways; new oil-type transformer lines inaugurated 2025-01-07",
+    "source_url": "https://bahra-electric.com/products/oil-immersed-transformers/"
+   },
+   {
+    "city": "Bahra Industrial City — Bahra Cables Factory (>500,000 m² complex)",
+    "country": "SA",
+    "products": "LV/MV/HV power cables, building wires, control/instrumentation, OPGW (non-transformer)",
+    "source_url": "https://bahra-electric.com/about-us/"
+   }
+  ],
+  "products": "Transformers are a small line inside a cable-led group. Bahra-TBS plant: oil-immersed distribution transformers (BOIT) up to 36 kV, 50–2,500 kVA and >2,500–5,000 kVA, ONAN, Cu/Al windings, oval cores; \"production capacity to produce 3,500 units/year\"; SEC-spec (51-SDMS) three-phase pad-mounted and pole-mounted units, unit substations 300–1,500 kVA (56-SDMS), KNAN ester units, package substations (RMU bought from SEC-approved makers). Cast-resin dry-type 100–5,000 kVA up to 36 kV (Legrand-licensed design, CESI type-tested). Also busways, LV panels, and (main business) LV/MV/HV cables, building wires, OPGW, wiring devices, cable trays, Al/Cu rods.",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eg_exp_850421_p0",
+    "role": "diagnostic",
+    "why": "이집트 ≤650kVA 유입식 세계 수출 — 같은 GCC·아프리카 배전변압기 시장 수요(엘스웨디 등 경쟁사 동행 신호)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eg_exp_850422_p0",
+    "role": "diagnostic",
+    "why": "이집트 650~10,000kVA 유입식 세계 수출 — 동일 지역 수요 신호"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "sa_exp_850421_p0",
+    "role": "wishlist",
+    "why": "(미수집) 사우디(Comtrade reporter 682) ≤650kVA 유입식 수출 — Bahra-TBS 배전변압기 수출 직접 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "sa_exp_850434_p0",
+    "role": "wishlist",
+    "why": "(미수집) 사우디 건식 >500kVA 수출 — Bahra-TBS 캐스트레진(≤5,000kVA)"
+   },
+   {
+    "expected_sign": "-",
+    "proxy_hint": "sa_imp_850421_p0",
+    "role": "wishlist",
+    "why": "(미수집) 사우디 ≤650kVA 수입 — 현지화(Vision 2030) 대체 관계"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "sec_5110_capex_q",
+    "role": "wishlist",
+    "why": "(미수집) Saudi Electricity Co.(Tadawul 5110) 분기 설비투자 — 국내 배전망 최대 발주처"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "gastat_ipi_c27",
+    "role": "wishlist",
+    "why": "(미수집) 사우디 통계청(GASTAT) 제조업 생산지수 ISIC 27(전기장비) 월별"
+   }
+  ],
+  "sources": [
+   "https://bahra-electric.com/about-us/",
+   "https://bahra-electric.com/products/oil-immersed-transformers/",
+   "https://bahra-electric.com/products/dry-type-transformers/",
+   "https://bahra-electric.com/global-presence/",
+   "https://bahra-electric.com/news/",
+   "https://bahra-electric.com/Downloads/BahraTBS_Transformers_Catalogue.pdf",
+   "https://www.se.com.sa/-/media/sec/Our-Partners/Our-Existing-Partners/LIST-OF-QUALIFIED-MANUFACTURERS-SUPPLIERSS--MARCH-2024-FINAL.ashx"
+  ]
+ },
+ "quarter_calendar": null,
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2015",
+   "note": "Transformers and Busways Solutions Company (TBS) factory created \"in partnership with Legrand France\" (cast resin transformers, busways).",
+   "source_url": "https://bahra-electric.com/Downloads/BahraTBS_Transformers_Catalogue.pdf",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2021",
+   "note": "Bahra Electric acquires TBS, signs license agreement with Legrand France SA for existing designs/know-how; rebranded Bahra TBS (50,000 sq m).",
+   "source_url": "https://bahra-electric.com/Downloads/BahraTBS_Transformers_Catalogue.pdf",
+   "type": "acquisition"
+  },
+  {
+   "date": "2025-01-07",
+   "note": "Deputy Minister of Energy visit \"with the inauguration of new production lines for MV Cable Accessories and Oil-Type Transformers\".",
+   "source_url": "https://bahra-electric.com/news/",
+   "type": "capacity_expansion"
+  }
+ ],
+ "targets": {},
+ "ticker": null,
+ "unit": null
+}

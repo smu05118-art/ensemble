@@ -1,0 +1,235 @@
+{
+ "accounting_basis": null,
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "howard-ind.com 은 중간 인증서(Sectigo Public Server Authentication CA DV R36)를 보내지 않아 기본 TLS 검증 실패 → 발급자 AIA(crt.sectigo.com) 의 공식 중간 인증서를 CA 번들에 추가해 검증을 유지한 채 수집(검증 비활성화 아님).",
+  "원문 사본: data/raw/actuals/HOWARD/ (데이터센터 시트 PDF 202606V8, Quitman 2023 PDF, 건식 2016 PDF, 2021 가격 인상 메모 PDF, 2025/2026 보도자료 텍스트).",
+  "mississippi.org(MDA) 보도자료는 캡차로 원문 접근 불가 → 같은 내용의 회사 보도자료(howard.com) 사용.",
+  "프록시 경로는 공장·제품 근거로만 사전등록(상관 미확인). 멕시코 경로는 2026Q3 이후에만 회사 경로.",
+  "verify 2026-09-25: checked profile claims (no targets — private): Mexico plant (howard.com 2026-05-08 live: ~$100M, ~825,000 sq ft, 750–10,000 kVA, Q3 2026, >600 jobs — OK), Ellisville expansion (2026-04-02: $100M, >230,000 sq ft, 168 MVA/230 kV/900 kV BIL → 250 MVA ONAN/345 kV/1175 kV BIL — OK), 2025-06-26 program (>$230M, Governor $236M, ≥450 jobs, 14 facilities — OK), Quitman 2023 PDF (170,000 sq ft, 2.3M sq ft Laurel — OK), data-center sheet 202606V8 (2.6M sq ft, 725,000 sq ft, 12 mfg facilities, >5,000 staff, 20 MVA/46 kV, 300 MVA/345 kV/1300 kV BIL — OK), 2016 dry-type PDF, 2021 price memo, founder passing (2026-01-28 release), proxy_hint existence in data/proxies (12 collected, 2 wishlist — OK). howard-ind.com product pages not re-fetched (server omits intermediate cert). fixed 3: Laurel street address (directory-only, removed) + per-plant product attribution reworded to the price memo; 2016 dry-type break note said 'VPI' but source says open-wound ventilated; founder-death claim lacked a source (added)."
+ ],
+ "currency": null,
+ "fiscal_year_end_month": null,
+ "gaps": [
+  "전 기간: 비상장 가족회사 — 분기·연간 매출 미공시(“multi-billion dollar” 문구만). 타깃 없음 → targets={}.",
+  "멕시코 신공장 소재 도시 미공개(2026-05-08 보도자료) — 도시 미기재로 둠.",
+  "Sandersville·Mendenhall 공장 생산 품목은 1차 자료에 없음 — 추정하지 않음.",
+  "725,000 sq ft 신공장(2026-06 데이터센터 시트: \"500 -20 mVA [sic] 3 phase pads and substation transformers\", \"operational early 2026\") 소재지 미기재 — 공장 목록에 site not stated 로 둠."
+ ],
+ "grid_node": "GRID_HOWARD",
+ "id": "HOWARD",
+ "listed": false,
+ "listing_status": "private — \"Privately Held, Family-Owned\"; \"Mississippi's largest privately held employer\" (Howard data-center sheet 202606V8). No exchange listing, no public filings.",
+ "name": "Howard Industries, Inc. (Howard Power Solutions division)",
+ "primary_target": null,
+ "profile": {
+  "capacity_indicators": [
+   "Laurel main facility \"2.3 million square feet under one roof\" (2023-01-25) → \"2.6 million sq feet\" and \"Plans are to add new facilities totaling over 2.6 million sq feet in 2026\" (2026-06 sheet)",
+   "\"Has the most production capacity in the world for data center units\" (company claim, 2026-06 sheet)",
+   "14 facilities and nearly 4,000 employees across Mississippi (2025-06-26 release); >5,000 team members (2026-06 sheet)"
+  ],
+  "end_markets": "US electric utilities (IOUs, REAs/co-ops, municipals), commercial/industrial, data centers, battery storage, EV, renewable generation; \"throughout the United States and abroad\" (2023 release, 2026 sheet). Demand drivers named by the company: DOE efficiency rule (final rule 2024-04-04, effective 5 years after publication), data centers, EVs, transportation, industry.",
+  "export_routes": [
+   "US domestic (Mississippi plants)",
+   "MX->US (new Mexico plant, 750–10,000 kVA, from ~2026Q3 — destination markets not stated)"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850423",
+   "850433",
+   "850434"
+  ],
+  "owners": "Howard family (founded 1968 by Billy W. Howard Sr. and Linda Howard; CEO Michael Howard; President Cyndi McCoy per 2026-04-02 release). Founder Billy Wilson Howard Sr. passed away — family announcement dated 2026-01-28 (https://www.howard.com/INFO/news/2026/01/28/the_howard_family_announces_the_passing_of_billy_wilson_howard_sr.cfm). Privately held.",
+  "plants": [
+   {
+    "city": "Laurel, MS (Jones County)",
+    "country": "US",
+    "products": "main distribution-transformer plant — \"2.3 million square feet under one roof\" (2023) / \"2.6 million sq feet\" (2026 sheet). Products: the 2021-06-21 price memo names Laurel and Ellisville jointly for overhead, pad-mounted and subsurface distribution transformers, distribution-substation, network and medium power transformers and step-voltage regulators (no per-plant split in source)",
+    "source_url": "https://howard-ind.com/Power/Content/News/HPSExpansionintoQuitman2023.pdf"
+   },
+   {
+    "city": "Ellisville, MS (Jones County; HQ 36 Howard Dr)",
+    "country": "US",
+    "products": "Howard Substation Transformers (opened 2005): medium power substation transformers (168 MVA/230 kV today → 250 MVA/345 kV by Q4 2026); MV VPI dry-type (since 2016). Also Ellisville Technology Facility (computers, non-transformer)",
+    "source_url": "https://www.howard.com/INFO/news/2026/04/02/howard-industries-announces-100-million-expansion-of-medium-power-transformer-plant-in-ellisville-mississippi.cfm"
+   },
+   {
+    "city": "Quitman, MS (Clarke County)",
+    "country": "US",
+    "products": "\"Quitman Amorphous Facility\" — 170,000 sq ft bought Jan 2023 for transformer production; amorphous cores; significant expansion in the June-2025 program",
+    "source_url": "https://www.howard.com/INFO/news/2025/06/26/howard-industries-invests-over-230-million-to-expand-operations-across-mississippi.cfm"
+   },
+   {
+    "city": "Sandersville, MS",
+    "country": "US",
+    "products": "Power Solutions engineering & manufacturing facility (products not specified in source)",
+    "source_url": "https://howard-ind.com/Power/Home/AboutUs"
+   },
+   {
+    "city": "Mendenhall, MS (Simpson County)",
+    "country": "US",
+    "products": "listed as Power Solutions engineering & manufacturing facility in Jan-2023 release (products not specified); Simpson County included in June-2025 program",
+    "source_url": "https://howard-ind.com/Power/Content/News/HPSExpansionintoQuitman2023.pdf"
+   },
+   {
+    "city": "site not stated in source",
+    "country": "US",
+    "products": "\"New 725,000 sqft facility making 500 -20 mVA [sic] 3 phase pads and substation transformers\" for data center, BESS, EV, renewables, C&I, utility, REA, municipal — \"operational early 2026\"",
+    "source_url": "https://media.howard.com/docs/downloads/hps_data_center_transformers.pdf"
+   },
+   {
+    "city": "site not named in release",
+    "country": "MX",
+    "products": "new ~825,000 sq ft plant, large three-phase distribution transformers 750–10,000 kVA (utilities, data centers, BESS); expected operational Q3 2026; >600 employees at full capacity",
+    "source_url": "https://www.howard.com/INFO/news/2026/05/08/howard-industries-announces-major-expansion-of-mexico-manufacturing-operations.cfm"
+   }
+  ],
+  "products": "Howard Power Solutions (a division of Howard Industries, Inc.) — liquid-filled distribution and power transformers: single-phase overhead (pole) incl. CSP, step-up/step-down, autotransformers, \"smart\"; three-phase overhead 30–300 kVA, 4.16–34.5 kV; single-phase pad-mounted (Type 1/2, Space-Saver); three-phase pad-mounted 45–10,000 kVA, 2.4–34.5 kV (dead-/live-front, Space-Saver 3, mobile power); subsurface/submersible, vault and network transformers; three-phase distribution-substation and medium power substation transformers (product page: ONAN/ONAF up to 300 MVA, 345 kV / 1175 kV BIL; Ellisville plant max today 168 MVA/230 kV, expanding to 250 MVA ONAN/345 kV by Q4 2026); medium-voltage VPI dry-type (since 2016, 225–2,500 kVA); single-phase step-voltage regulators; Switch-Pad cabinets; transformer OEM components; amorphous-metal cores (Quitman). 2026 data-center sheet: \"Distribution transformers up to 20 MVA with primary voltages through 46 kV / 250 BIL\", \"Medium and large power transformers up to 300 MVA ... 345 kV / 1300 kV BIL\", \"Over 12 million transformers in service\", \"multi-billion dollar company\", >5,000 team members, 12 manufacturing facilities. NOTE: the same private company also runs non-transformer divisions (Howard Technology Solutions computers, Howard Medical carts, Howard Transportation trucking).",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35CVS",
+    "role": "primary",
+    "why": "M3 전기장비(NAICS 3353) 출하액 — Howard 는 미시시피 공장 중심의 미국 최대급 배전·중형 전력변압기 국내 생산자 → 국내 출하가 매출에 가장 가까운 거시 대응"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_IPG3353S",
+    "role": "primary",
+    "why": "미국 전기장비(NAICS 3353, 변압기 포함) 산업생산 — 국내 생산 물량"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35CNO",
+    "role": "diagnostic",
+    "why": "M3 전기장비 신규수주 — 변압기 수주→출하 리드타임 때문에 매출 선행 기대"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35CUO",
+    "role": "diagnostic",
+    "why": "M3 전기장비 수주잔고 — 2025~26 증설 이전의 백로그 소화 강도"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_WPU117409",
+    "role": "diagnostic",
+    "why": "전력·배전 변압기 PPI(부품 제외) — 가격 인상(2021-06 평균 10% 인상 공지 등) 매출의 가격 성분"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_PCU335311335311",
+    "role": "diagnostic",
+    "why": "산업 PPI 335311(전력·특수 변압기) — 가격 성분 보조"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLPWRCONS",
+    "role": "diagnostic",
+    "why": "미국 전력 건설투자 — 유틸리티·신재생 최종수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_PROFCONS",
+    "role": "diagnostic",
+    "why": "민간 오피스(데이터센터 포함) 건설 — 회사가 데이터센터용 3상 패드·서브스테이션 변압기를 전면에 내세움(2026 시트)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_8504dist_p0",
+    "role": "diagnostic",
+    "why": "미국 유입식 배전변압기(HS850421+850422) 총수입 — 공급부족 국면에서 수입과 국내생산이 함께 늘어나는 수요 신호로 사전 기대 +(대체 관계가 지배하면 음수로 나올 수 있음을 기록)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850423_p0",
+    "role": "diagnostic",
+    "why": "미국 >10MVA 변압기 수입 — Ellisville 중형 전력변압기(168→250MVA)와 같은 시장의 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850422_p484",
+    "role": "diagnostic",
+    "why": "멕시코발 650~10,000kVA 대미 수입 — Howard 멕시코 신공장(750~10,000kVA, 2026Q3 가동 예정) 경로. 과거 구간은 타사(Prolec 등) 물량이라 2026Q3 이전엔 회사 경로 아님"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "mx_exp_850422_p842",
+    "role": "diagnostic",
+    "why": "멕시코 측 650~10,000kVA 대미 수출(미러) — 위 경로의 교차확인"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_HOUST",
+    "role": "wishlist",
+    "why": "(미수집) FRED HOUST 주택착공 — 단상 패드·주상 배전변압기 신규 배전 수요의 선행 지표"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "bls_qcew_335311_28067",
+    "role": "wishlist",
+    "why": "(미수집) BLS QCEW NAICS 335311 고용·임금, Jones County MS(FIPS 28067) 분기 — Howard 가 지배적 고용주라 회사 단위 활동 대용(비공개 처리 가능성 있음)"
+   }
+  ],
+  "sources": [
+   "https://media.howard.com/docs/downloads/hps_data_center_transformers.pdf",
+   "https://howard-ind.com/Power/Home/AboutUs",
+   "https://howard-ind.com/Power/Content/News/HPSExpansionintoQuitman2023.pdf",
+   "https://www.howard.com/INFO/news/2025/06/26/howard-industries-invests-over-230-million-to-expand-operations-across-mississippi.cfm",
+   "https://www.howard.com/INFO/news/2026/04/02/howard-industries-announces-100-million-expansion-of-medium-power-transformer-plant-in-ellisville-mississippi.cfm",
+   "https://www.howard.com/INFO/news/2026/05/08/howard-industries-announces-major-expansion-of-mexico-manufacturing-operations.cfm",
+   "https://howard-ind.com/Power/Content/News/DryTypeTransformerNews.pdf",
+   "https://howard-ind.com/Power/Content/News/PriceIncreaseAnnouncementLetter.pdf",
+   "https://howard-ind.com/Power/Product/Details/3",
+   "https://howard-ind.com/Power/Product/Products/30",
+   "https://howard-ind.com/Power/Product/Products/11",
+   "https://www.howard.com/info/aboutus.cfm",
+   "https://howard-ind.com/Power/Content/News/DOEFinalRule2024.pdf",
+   "https://www.howard.com/INFO/news/2026/01/28/the_howard_family_announces_the_passing_of_billy_wilson_howard_sr.cfm"
+  ]
+ },
+ "quarter_calendar": null,
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2005-04",
+   "note": "April 2005 (day not stated): Howard Substation Transformers opened in Ellisville, MS \"to manufacture transformers with higher MVA and voltage ratings\".",
+   "source_url": "https://howard-ind.com/Power/Content/News/HPSExpansionintoQuitman2023.pdf",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2016-04-04",
+   "note": "New line of three-phase, open-wound, ventilated medium-voltage dry-type transformers (225–2,500 kVA; HV 2.4–34.5 kV through 150 kV BIL) produced in the Ellisville facility; quotations from 2016-04-04. (The 2016 release does not say VPI — 'VPI' appears only on the current AboutUs product list.)",
+   "source_url": "https://howard-ind.com/Power/Content/News/DryTypeTransformerNews.pdf",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2023-01-25",
+   "note": "Power Solutions Division buys existing 170,000 sq ft plant in Quitman, MS (Clarke County; former Nazareth Knitting site) for transformer production, citing DOE efficiency rulemaking.",
+   "source_url": "https://howard-ind.com/Power/Content/News/HPSExpansionintoQuitman2023.pdf",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2025-06-26",
+   "note": ">$230M (Governor: $236M) program across Clarke, Jones and Simpson counties, >=450 jobs; significant expansions at the Quitman Amorphous Facility and Ellisville Technology Facility plus upgrades at all locations in the 3 counties.",
+   "source_url": "https://www.howard.com/INFO/news/2025/06/26/howard-industries-invests-over-230-million-to-expand-operations-across-mississippi.cfm",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2026-04-02",
+   "note": "$100M Ellisville medium-power plant expansion (+230,000 sq ft, 100 jobs); max rating rises from 168 MVA / 230 kV / 900 kV BIL to 250 MVA ONAN / 345 kV / 1175 kV BIL; capabilities online progressively through Q4 2026.",
+   "source_url": "https://www.howard.com/INFO/news/2026/04/02/howard-industries-announces-100-million-expansion-of-medium-power-transformer-plant-in-ellisville-mississippi.cfm",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2026-05-08",
+   "note": "New ~825,000 sq ft, ~$100M plant in Mexico (site not named) for large three-phase distribution transformers 750–10,000 kVA; expected operational Q3 2026; >600 employees at full capacity. First non-US transformer plant found in sources → MX->US route from 2026Q3.",
+   "source_url": "https://www.howard.com/INFO/news/2026/05/08/howard-industries-announces-major-expansion-of-mexico-manufacturing-operations.cfm",
+   "type": "capacity_expansion"
+  }
+ ],
+ "targets": {},
+ "ticker": null,
+ "unit": null
+}

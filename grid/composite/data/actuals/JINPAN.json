@@ -1,0 +1,462 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "JINPAN",
+ "grid_node": "GRID_JINPAN",
+ "name": "海南金盘智能科技股份有限公司 (Hainan Jinpan Smart Technology Co., Ltd.)",
+ "ticker": "688676 CH (SSE STAR)",
+ "listed": true,
+ "currency": "CNY",
+ "unit": "million",
+ "accounting_basis": "CAS (China Accounting Standards for Business Enterprises)",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters; fiscal_key = calendar year",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 영업수익(营业收入)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "unit_note": "CNY million; printed in 元, divided by 1e6 (scale conversion only).",
+   "points": [
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 350.8738,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-26/1209800746.PDF",
+     "locator": "金盘科技 2021年一季度报告 (published 2021-04-26) PDF p.15: 合并利润表 营业收入 line, 上期发生额 (2020年1-3月) column; 元 → CNY million; value taken from the prior-year (上年同期/上期) column of a FY2021 report — Jinpan was not listed before 2021-03-09 and published no 2020 quarterly reports",
+     "published_date": "2021-04-26"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 680.6183,
+     "method": "ytd_difference",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-08-20/1210793392.PDF",
+     "locator": "金盘科技 2021年半年度报告全文 (published 2021-08-20) PDF p.95: 合并利润表 营业收入 上期发生额 (2020年1-6月) 1031.4921 minus 2020年1-3月 350.8738 (2021年一季度报告 p.15); value taken from the prior-year (上年同期/上期) column of a FY2021 report — Jinpan was not listed before 2021-03-09 and published no 2020 quarterly reports",
+     "published_date": "2021-08-20",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2021-04-26/1209800746.PDF"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 691.6669,
+     "method": "ytd_difference",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-10-26/1211372436.PDF",
+     "locator": "金盘科技 2021年第三季度报告 (published 2021-10-26) PDF p.10: 合并利润表 一、营业总收入 2020年前三季度（1-9月） column 1723.1589 (其中：营业收入 not broken out; no finance revenue) minus 2020年1-6月 1031.4921 (2021年半年度报告全文 p.95); value taken from the prior-year (上年同期/上期) column of a FY2021 report — Jinpan was not listed before 2021-03-09 and published no 2020 quarterly reports",
+     "published_date": "2021-10-26",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2021-08-20/1210793392.PDF"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 699.4916,
+     "method": "annual_minus_9m",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212944863.PDF",
+     "locator": "金盘科技 2021年年度报告 (published 2022-04-16) PDF p.194: 合并利润表 营业收入 上期发生额 (2020年度, audited) 2422.6506 minus 2020年1-9月 1723.1589 (2021年第三季度报告 p.10); value taken from the prior-year (上年同期/上期) column of a FY2021 report — Jinpan was not listed before 2021-03-09 and published no 2020 quarterly reports",
+     "published_date": "2022-04-16",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2021-10-26/1211372436.PDF"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 566.9813,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212944863.PDF",
+     "locator": "金盘科技 2021年年度报告 (published 2022-04-16) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16",
+     "prior_year_comparative": 350.8738,
+     "prior_year_comparative_source": "金盘科技 2021年一季度报告 (published 2021-04-26) PDF p.15: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2021-04-26/1209800746.PDF"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 924.9877,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212944863.PDF",
+     "locator": "金盘科技 2021年年度报告 (published 2022-04-16) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 795.3836,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212944863.PDF",
+     "locator": "金盘科技 2021年年度报告 (published 2022-04-16) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 1015.224,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212944863.PDF",
+     "locator": "金盘科技 2021年年度报告 (published 2022-04-16) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-16"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 919.4761,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-03-21/1216169100.PDF",
+     "locator": "金盘科技 2022年年度报告 (published 2023-03-21) PDF p.13: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-03-21",
+     "prior_year_comparative": 566.9813,
+     "prior_year_comparative_source": "金盘科技 2022年第一季度报告 (published 2022-04-30) PDF p.9: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2022-04-30/1213273822.PDF"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 1055.0332,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-03-21/1216169100.PDF",
+     "locator": "金盘科技 2022年年度报告 (published 2023-03-21) PDF p.13: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-03-21"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 1212.9837,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-03-21/1216169100.PDF",
+     "locator": "金盘科技 2022年年度报告 (published 2023-03-21) PDF p.13: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-03-21"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 1558.1064,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-03-21/1216169100.PDF",
+     "locator": "金盘科技 2022年年度报告 (published 2023-03-21) PDF p.13: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-03-21"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 1297.0065,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-03-21/1219360066.PDF",
+     "locator": "金盘科技 2023年年度报告 (published 2024-03-21) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-03-21",
+     "prior_year_comparative": 919.4761,
+     "prior_year_comparative_source": "金盘科技 2023年第一季度报告 (published 2023-04-11) PDF p.9: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2023-04-11/1216368666.PDF"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 1596.3692,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-03-21/1219360066.PDF",
+     "locator": "金盘科技 2023年年度报告 (published 2024-03-21) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-03-21"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 1879.6419,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-03-21/1219360066.PDF",
+     "locator": "金盘科技 2023年年度报告 (published 2024-03-21) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-03-21"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 1894.5618,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-03-21/1219360066.PDF",
+     "locator": "金盘科技 2023年年度报告 (published 2024-03-21) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-03-21"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 1304.7798,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993457.PDF",
+     "locator": "金盘科技 2024年年度报告 (published 2025-04-03) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-03",
+     "prior_year_comparative": 1297.0065,
+     "prior_year_comparative_source": "金盘科技 2024年第一季度报告 (published 2024-04-23) PDF p.9: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2024-04-23/1219739271.PDF"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 1611.3907,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993457.PDF",
+     "locator": "金盘科技 2024年年度报告 (published 2025-04-03) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-03"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 1882.38,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993457.PDF",
+     "locator": "金盘科技 2024年年度报告 (published 2025-04-03) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-03"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 2102.3087,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993457.PDF",
+     "locator": "金盘科技 2024年年度报告 (published 2025-04-03) PDF p.11: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-03"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 1342.6784,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF",
+     "locator": "金盘科技 2025年年度报告 (published 2026-03-21) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-03-21",
+     "prior_year_comparative": 1304.7798,
+     "prior_year_comparative_source": "金盘科技 2025年第一季度报告 (published 2025-04-24) PDF p.9: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2025-04-24/1223242784.PDF"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 1811.5695,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF",
+     "locator": "金盘科技 2025年年度报告 (published 2026-03-21) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-03-21"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 2040.0558,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF",
+     "locator": "金盘科技 2025年年度报告 (published 2026-03-21) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-03-21"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 2100.6829,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF",
+     "locator": "金盘科技 2025年年度报告 (published 2026-03-21) PDF p.12: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-03-21"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 1522.7837,
+     "prior_year_comparative": 1342.6784,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225163072.PDF",
+     "locator": "金盘科技 2026年第一季度报告 (published 2026-04-24) PDF p.10: 合并利润表 营业收入 line (本期 = 2026年1-3月; 上年同期 = prior_year_comparative); 元 → CNY million",
+     "published_date": "2026-04-24"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 2032.9595,
+     "method": "ytd_difference",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-21/1225486537.PDF",
+     "locator": "金盘科技 2026年半年度报告 (published 2026-08-21) PDF p.104: 合并利润表 营业收入 line 本期(1-6月) 3555.7432 minus Q1 1522.7837 from 2026年第一季度报告 p.10; 元 → CNY million",
+     "published_date": "2026-08-21",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225163072.PDF"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2021-03-09",
+   "type": "listing",
+   "target": "revenue_total",
+   "note": "IPO on the SSE STAR Market (sponsor 浙商证券; continuous supervision from 2021-03-09). FY2020 quarters are reconstructed from the prior-year columns of the FY2021 Q1/H1/Q3/annual reports (FY2020Q1 direct; Q2/Q3 ytd_difference; Q4 annual_minus_9m). No pre-2020 quarterly figures exist for the A-share entity.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-16/1212944863.PDF"
+  },
+  {
+   "date": "2016-04-28",
+   "type": "listing",
+   "target": "none (predecessor, not merged)",
+   "note": "Predecessor/affiliate Jinpan International Ltd (NASDAQ: JST, SEC CIK 1053008, US-GAAP, reported in CNY) went private — Form 15F-12B filed 2016-04-28. Its history is NOT merged into this series (different issuer/GAAP); see collection_notes for the SEC XBRL quarterly net sales 2012–2014.",
+   "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001053008"
+  }
+ ],
+ "profile": {
+  "products": "Per FY2025 AR p.15-17: 变压器系列 — cast-resin and VPI dry-type transformers (standard and special: wind step-up up to 72.5kV, PV, SFC for pumped storage up to 50,000kVA, rail, data centre), dry-type reactors, amorphous-alloy (dry & liquid) transformers, liquid-immersed power/distribution/offshore-wind transformers; 成套系列 — MV/LV switchgear, box/prefabricated substations, AIDC modular power; 储能系列 — PCS & storage systems; digital-factory solutions; industrial robots. Annual-only product revenue (AR 分产品 tables): 变压器系列 FY2023 4,092.58m, FY2024 4,027.55m; from FY2025 the AR groups 变压器系列+成套系列 as 电气设备系列 = 6,273.27m (FY2024 recast 5,992.89m), 储能系列 620.77m. Customers include Vestas, GE, Siemens Gamesa, Goldwind (wind transformers).",
+  "plants": [
+   {
+    "country": "CN",
+    "city": "Haikou, Hainan (HQ; 海南金盘电气, 海南金盘科技数字化工厂)",
+    "products": "dry-type transformers, reactors, digital factory",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Wuhan, Hubei (武汉金盘智能科技, 武汉金拓电气)",
+    "products": "transformers, switchgear, energy storage",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Shanghai (金盘电气集团(上海))",
+    "products": "transformers / switchgear (R&D, production, sales)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Guilin, Guangxi (桂林君泰福电气)",
+    "products": "dry-type transformers & cores",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Yangzhou, Jiangsu (金盘(扬州)新能源装备制造) / Tongxiang, Zhejiang (浙江金盘实业) / Shaoyang, Hunan (金盘智能科技(湖南)新材料)",
+    "products": "new-energy equipment, transformers, materials",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF"
+   },
+   {
+    "country": "MX",
+    "city": "Mexico base (墨西哥基地 — expansion completed 2024 per FY2024 AR p.16)",
+    "products": "transformers for North America",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993457.PDF"
+   },
+   {
+    "country": "US",
+    "city": "USA (JST Power Equipment, Inc., 80% — R&D, production, sales; ex-Jinpan International (USA)); US transformer plant under preparation (FY2024 AR p.16)",
+    "products": "transformers sales/production",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF"
+   },
+   {
+    "country": "PL",
+    "city": "Poland (JST Power Equipment Sp. z o.o., 80%, acquired — first unit off the line 2024)",
+    "products": "transformers for Europe",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993457.PDF"
+   },
+   {
+    "country": "MY",
+    "city": "Malaysia (JST Energy Group Malaysia 85% / JST Smart Technology Malaysia 100%; plant in production 2025)",
+    "products": "transformers/equipment for SE Asia & global",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-03-21/1225021733.PDF"
+   }
+  ],
+  "end_markets": "Wind (onshore/offshore turbines), PV, energy storage, data centres (AIDC), rail, industrial/infrastructure, grid. FY2025 export sales 2,298m = 31.78% of main-business revenue; export backlog 3,491m = 48.44% of 7,207m backlog (FY2025 AR p.39). 2026H1: new orders 7,493m (+69.31%), of which overseas 4,190m (55.92%), data-centre 3,869m (2026 H1 report p.12).",
+  "export_routes": [
+   "CN->US",
+   "MX->US",
+   "CN->EU (wind OEMs)",
+   "PL->EU",
+   "MY->ASEAN/World",
+   "CN->World"
+  ],
+  "hs_candidates": [
+   "850433",
+   "850434",
+   "850432",
+   "850423",
+   "850422",
+   "850450",
+   "853720",
+   "850440"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "cn_exp_850434_p0",
+    "why": "중국 500kVA 초과 건식(비액체) 변압기 수출 — 동사 주력(건식) 해외 출하와 직접 대응",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "cn_exp_850433_p0",
+    "why": "중국 16~500kVA 건식 변압기 수출 — 소형 건식 수출",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850434_p156",
+    "why": "미국의 중국산 500kVA 초과 건식 변압기 수입 — JST USA 경로(데이터센터·신재생)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850434_p484",
+    "why": "미국의 멕시코산 500kVA 초과 건식 변압기 수입 — 멕시코 기지 경로(타사 물량 혼재)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "mx_exp_850434_p842",
+    "why": "멕시코의 대미 건식 대형 변압기 수출 — 멕시코 기지 경로 교차검증",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "nbs_transformer_output",
+    "why": "중국 변압기 생산량 — 국내 매출(~68%) 업황 동행",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_IPG3353S",
+    "why": "미국 전기장비 산업생산 — 미국 수요(데이터센터·전력망) 진단",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "nea_wind_solar_new_capacity",
+    "why": "국가에너지국 월별 풍력·태양광 신규 설치용량 — 풍력/태양광 승압 변압기 수요 선행. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "pl_exp_850434_p0",
+    "why": "폴란드 건식 대형 변압기 수출 — 폴란드 공장 경로. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total: FY2019 and earlier not available (A-share IPO 2021-03-09; prospectus gives annual/half-year figures only, no quarters). Coverage FY2020Q1–FY2026Q2 (26 quarters) — below the 2019Q1 minimum target by design of the listing date.",
+  "prior_year_comparative: only Q1 (Q1 report 上年同期); new-format Q3 reports print only a % change for the 3-month period.",
+  "revenue_segment: not stored — product revenue (变压器系列/成套系列/储能系列) is printed only in annual reports; H1 reports carry no product split, so no H or Q series can be formed.",
+  "orders_segment: not stored — new orders/backlog are disclosed irregularly in narrative (e.g. backlog 6,509.39m end-2024, 7,207m end-2025; 2026H1 new orders 7,493m), not as a consistent half-year series."
+ ],
+ "collection_notes": [
+  "Sources: Jinpan periodic reports from cninfo static PDFs. FY2021–FY2025 values = AR 分季度主要财务数据 (3-month figures); FY2022 table cells wrapped (Q1 printed on a separate line) — order verified: Q1 = Q1 report 919.48, Q1+Q2 = H1 1,974.51, Q1..Q3 = 9M 3,187.49, Σ = FY 4,745.60.",
+  "FY2020 quarters are derived from FY2021 reports’ prior-year columns (see structural_breaks); FY2020 FY total (2,422.65) is the audited comparative in the FY2021 AR.",
+  "Jinpan International Ltd (NASDAQ: JST, CIK 1053008) — SEC 20-F XBRL (us-gaap:SalesRevenueGoodsNet, CNY) quarterly net sales for reference only (NOT merged): 2012Q1 269.25m, Q2 351.20m, Q3 372.66m, Q4 331.84m; 2013Q1 220.78m, Q2 364.02m, Q3 425.93m, Q4 387.14m; 2014Q1 253.04m, Q2 402.49m, Q3 378.26m, Q4 438.26m (FY2014 1,472.05m; FY2013 1,397.86m; FY2012 1,324.95m; FY2011 1,414.29m). Source: https://data.sec.gov/api/xbrl/companyfacts/CIK0001053008.json (20-F for FY2014, accession 0001571049-15-003379). No FY2015 20-F was filed (went private; 15F-12B 2016-04-28)."
+ ]
+}

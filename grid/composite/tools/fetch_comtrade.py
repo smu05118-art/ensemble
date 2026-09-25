@@ -9,6 +9,14 @@ Families
       20 reporters, flow X, partners 0/842/124/484, HS 850421/22/23/33/34
       (+853710/853720 for DE IT FR MX CN).
 
+Also fetched (same host): the partner reference list and Comtrade's data-availability metadata
+(public/v1/getDA/C/M/HS?reporterCode=<r>) per reporter -> data/raw/comtrade_ref/. The build uses
+getDA to separate source gaps from "not yet released" months and to set release_lag_days =
+max(median firstReleased lag of the last 12 released months, days already waited for the next one).
+Build checks: US partner sum vs World (<=1%), bilateral <= World, reporter-months with bilateral rows
+but no World row are dropped as partially loaded, and exporter->US flows are mirrored against the
+US-reported imports (level ratio + 3M log-YoY correlation by exporter lead) in "mirror_check".
+
 Subcommands
   fetch   download missing/stale responses into data/raw/<family>/ (resumable).
           --max-seconds N stops scheduling new requests after N seconds (exit 3 if
@@ -30,6 +38,7 @@ import datetime as dt
 import gzip
 import http.client
 import json
+import math
 import os
 import socket
 import ssl
@@ -48,6 +57,7 @@ OUT = ROOT / 'data' / 'proxies'
 FETCH_TOOL = 'grid/composite/tools/fetch_comtrade.py'
 BASE = 'https://comtradeapi.un.org/public/v1/preview/C/M/HS'
 REF_PARTNERS = 'https://comtradeapi.un.org/files/v1/app/reference/partnerAreas.json'
+DA_URL = 'https://comtradeapi.un.org/public/v1/getDA/C/M/HS?reporterCode={rep}'
 ALLOWED_HOSTS = {'comtradeapi.un.org'}
 UA = 'grid-composite-proxy-fetcher/1 (research; stdlib urllib)'
 PREVIEW_ROW_CAP = 500
@@ -322,9 +332,15 @@ def http_get(url, gate, timeout=60, tries=7, log=None):
 def atomic_write_bytes(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_name(path.name + f'.tmp{os.getpid()}.{threading.get_ident()}')
-    with open(tmp, 'wb') as f:
-        f.write(data)
-    os.replace(tmp, path)
+    try:
+        with open(tmp, 'wb') as f:
+            f.write(data)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, path)
+    finally:
+        if tmp.exists():          # failed before os.replace: never leave a half-written tmp behind
+            tmp.unlink()
 
 
 def atomic_write_json(path, obj):
@@ -336,14 +352,28 @@ def read_cache(path):
         return json.loads(f.read().decode('utf-8'))
 
 
-def is_stale(q, rec, recent_months, ttl_hours, today):
-    """Old periods are immutable enough; recent ones are refreshed after ttl."""
-    if months_between(q.period, prev_month(today)) >= recent_months:
-        return False
+def is_stale(q, rec, recent_months, ttl_hours, today, da=None):
+    """Recent periods are refreshed after ttl. ANY period is refreshed when Comtrade's availability
+    metadata (getDA lastReleased) shows a (re)release for one of the query's reporters after the cached
+    fetch. Without that, an empty/partial response cached before a late reporter released the month
+    (KR/FR/TR ~9 months behind, CN/VN/AT years behind, DE 2026-05 partially loaded) would be treated as
+    immutable once the period is older than --recent-months and never picked up."""
     try:
         t = dt.datetime.fromisoformat(rec['fetched_at'].replace('Z', '+00:00'))
     except Exception:  # noqa: BLE001
         return True
+    for rep in q.reporters:
+        info = ((da or {}).get(rep) or {}).get(q.period)
+        ts = (info or {}).get('lastReleasedTs') or ''
+        try:
+            rel = dt.datetime.fromisoformat(ts[:19]).replace(tzinfo=dt.timezone.utc)
+        except ValueError:
+            continue
+        # getDA timestamps carry no zone: allow one day of slack (at worst one redundant re-fetch)
+        if rel + dt.timedelta(days=1) > t:
+            return True
+    if months_between(q.period, prev_month(today)) >= recent_months:
+        return False
     return (dt.datetime.now(dt.timezone.utc) - t).total_seconds() > ttl_hours * 3600
 
 
@@ -384,6 +414,13 @@ def fetch_one(q, gate, log):
 def cmd_fetch(args, family):
     today = dt.date.today()
     end = args.end or prev_month(today)
+    reps = ['842'] if family == 'us_imports' else [c for _, c in EXP_REPORTERS]
+    da = {}
+    for rep in reps:
+        try:
+            da[rep] = load_da(rep)[0]
+        except Exception:  # noqa: BLE001 — unreadable metadata: fall back to the age rule only
+            da[rep] = {}
     todo = []
     for q0 in plan(family, args.start, end):
         for q in leaves(q0):
@@ -391,7 +428,7 @@ def cmd_fetch(args, family):
             if p.exists() and not args.refresh:
                 try:
                     rec = read_cache(p)
-                    if not is_stale(q, rec, args.recent_months, args.ttl_hours, today):
+                    if not is_stale(q, rec, args.recent_months, args.ttl_hours, today, da):
                         continue
                 except Exception:  # noqa: BLE001 — corrupt cache -> refetch
                     pass
@@ -473,6 +510,86 @@ def partner_names(gate=None):
     return {str(r['PartnerCode']): r['PartnerDesc'] for r in doc['results']}, None
 
 
+def da_path(rep):
+    return RAW / 'comtrade_ref' / f'getDA_C_M_HS_{rep}.json.gz'
+
+
+def fetch_da(reporters, gate, ttl_hours, refresh):
+    """Comtrade data-availability metadata (one call per reporter): which monthly datasets exist
+    and when each was first released -> used for honest coverage notes and release_lag_days."""
+    errs = []
+    for rep in reporters:
+        p = da_path(rep)
+        if p.exists() and not refresh:
+            try:
+                rec = read_cache(p)
+                age = (dt.datetime.now(dt.timezone.utc)
+                       - dt.datetime.fromisoformat(rec['fetched_at'].replace('Z', '+00:00'))).total_seconds()
+                if age < ttl_hours * 3600:
+                    continue
+            except Exception:  # noqa: BLE001
+                pass
+        url = DA_URL.format(rep=rep)
+        try:
+            status, body = http_get(url, gate)
+            doc = json.loads(body.decode('utf-8'))
+            if not isinstance(doc, dict) or not isinstance(doc.get('data'), list):
+                raise FetchError('getDA: unexpected payload')
+            for r in doc['data']:
+                if str(r.get('reporterCode')) != rep:
+                    raise FetchError(f'getDA: row for reporter {r.get("reporterCode")}')
+        except (FetchError, ValueError) as e:
+            errs.append(f'getDA {rep}: {e}')
+            continue
+        rec = {'url': url, 'fetched_at': iso_now(), 'http_status': status, 'response': doc}
+        atomic_write_bytes(p, gzip.compress(json.dumps(rec, ensure_ascii=False, sort_keys=True).encode('utf-8'), 6))
+    return errs
+
+
+def load_da(rep):
+    """-> ({'YYYY-MM': {...}}, error_or_None)"""
+    p = da_path(rep)
+    if not p.exists():
+        return {}, f'reporter {rep}: Comtrade availability metadata (getDA) not cached'
+    rec = read_cache(p)
+    out = {}
+    for r in rec['response']['data']:
+        per = str(r.get('period'))
+        if r.get('freqCode') != 'M' or len(per) != 6:
+            continue
+        out[f'{per[:4]}-{per[4:]}'] = {
+            'firstReleased': (r.get('firstReleased') or '')[:10], 'lastReleased': (r.get('lastReleased') or '')[:10],
+            'lastReleasedTs': r.get('lastReleased') or '',
+            'totalRecords': r.get('totalRecords'), 'classificationCode': r.get('classificationCode'),
+            'isOriginalClassification': r.get('isOriginalClassification')}
+    return out, None
+
+
+def release_lag(da, fetched, fallback_latest):
+    """release_lag_days = max(median(firstReleased - month end) over the latest 12 released periods,
+    days already waited for the first not-yet-released month). Returns (days, note)."""
+    rel = []
+    for ym in sorted(da):
+        fr = da[ym].get('firstReleased')
+        if fr:
+            try:
+                rel.append((ym, (dt.date.fromisoformat(fr) - month_end(ym)).days))
+            except ValueError:
+                pass
+    if not rel:
+        d = (fetched - month_end(fallback_latest)).days
+        return d, f'release_lag_days={d}: no Comtrade release metadata; upper bound = fetch date - end of latest month with rows'
+    recent = sorted(d for _, d in rel[-12:])
+    med = recent[len(recent) // 2] if len(recent) % 2 else (recent[len(recent) // 2 - 1] + recent[len(recent) // 2]) // 2
+    latest = rel[-1][0]
+    waited = (fetched - month_end(next_of(latest))).days
+    lag = max(med, waited)
+    note = (f'release_lag_days={lag}: Comtrade firstReleased lag median {med}d over {rel[-12][0] if len(rel) >= 12 else rel[0][0]}..{latest} '
+            f'(range {recent[0]}..{recent[-1]}d); latest released period {latest} (first released {da[latest]["firstReleased"]})'
+            + (f'; {next_of(latest)} still unreleased after {waited}d at fetch' if waited > med else '') + '.')
+    return lag, note
+
+
 # ---------------------------------------------------------------- build
 class BuildError(Exception):
     pass
@@ -525,11 +642,26 @@ def load_rows(family, start, end, allow_partial):
                 m = meta.setdefault((rep, ym[:4]), {})
                 cc = f"{r.get('classificationCode')}{'' if orig else '(converted)'}"
                 m[cc] = m.get(cc, 0) + 1
-                periods_with_rows.setdefault(rep, set()).add(ym)
     if missing and not allow_partial:
         raise BuildError(f'{len(missing)} planned responses not in cache (first: {missing[0]!r}); run fetch or pass --allow-partial')
     for q in missing:
         errors.append(f'not fetched: {q.period} {q.name()}')
+    # Structural completeness: Comtrade always returns the World (partner 0) aggregate next to any
+    # bilateral row of the same reporter/HS/month. A bilateral row without its World row means the
+    # reporter-month dataset is only partially loaded (seen for DE 2026-05) -> drop the whole
+    # reporter-month rather than publish a partial month as if it were complete.
+    bad = {}
+    for (rep, cmd, par, ym) in rows:
+        if par != '0' and (rep, cmd, '0', ym) not in rows:
+            bad.setdefault((rep, ym), set()).add(cmd)
+    for key in [k for k in rows if (k[0], k[3]) in bad]:
+        del rows[key]
+    for (rep, ym), cmds in sorted(bad.items()):
+        errors.append(f'{ISO2_BY_CODE.get(rep, rep)} ({rep}) {ym}: Comtrade month looks partially loaded (bilateral rows '
+                      f'without World row for HS {",".join(sorted(cmds))}) - all rows of this reporter-month dropped')
+    periods_with_rows = {}
+    for (rep, cmd, par, ym) in rows:
+        periods_with_rows.setdefault(rep, set()).add(ym)
     return rows, meta, periods_with_rows, errors
 
 
@@ -549,9 +681,43 @@ def vintage_note(meta, rep):
     return 'HS vintage as reported: ' + ', '.join(f'{a}-{b} {c}' if a != b else f'{a} {c}' for a, b, c in spans)
 
 
-def lag_days(latest_ym, fetched):
-    """Upper bound: days from end of the latest available month to the fetch date."""
-    return (fetched - month_end(latest_ym)).days
+def reporter_coverage(rep, months_with_rows, start, end, fetched, meta, errors, tag):
+    """Coverage + release lag for one reporter from rows actually returned and Comtrade getDA."""
+    ms = sorted(months_with_rows)
+    da, derr = load_da(rep)
+    if derr:
+        errors.append(derr)
+    plan_m = ym_range(start, end)
+    avail = [m for m in plan_m if m in da]
+    cov = {'reporter': rep, 'n_months': len(ms)}
+    if ms:
+        cov.update({'first': ms[0], 'last': ms[-1],
+                    'missing_months_inside_span': [m for m in ym_range(ms[0], ms[-1]) if m not in set(ms)]})
+    cov['comtrade_available'] = {'n_months': len(avail), 'first': avail[0] if avail else None,
+                                 'last': avail[-1] if avail else None,
+                                 'not_available_in_plan': compress_months([m for m in plan_m if m not in da])}
+    no_rows = [m for m in avail if m not in set(ms)]
+    if no_rows:
+        cov['available_but_no_rows'] = compress_months(no_rows)
+    lag, lag_note = release_lag(da, fetched, ms[-1] if ms else end)
+    cov['release_lag_days'] = lag
+    cov['release_lag_note'] = lag_note
+    cov['hs_vintage'] = vintage_note(meta, rep)
+    if not ms:
+        errors.append(f'{tag} ({rep}): no monthly rows returned for any planned period {start}..{end}')
+        return cov
+    miss = [m for m in plan_m if m not in da]
+    last_da = avail[-1] if avail else None
+    trailing = [m for m in miss if last_da is None or m > last_da]
+    holes = [m for m in miss if m not in set(trailing)]
+    if holes:
+        errors.append(f'{tag} ({rep}): Comtrade has no monthly dataset (getDA) for {compress_months(holes)} - gap in source, left empty')
+    if trailing:
+        errors.append(f'{tag} ({rep}): not yet released on Comtrade at fetch: {compress_months(trailing)}'
+                      + (' (stale reporter)' if len(trailing) > 3 else ''))
+    if no_rows:
+        errors.append(f'{tag} ({rep}): monthly dataset exists but no rows for the requested HS/partners in {compress_months(no_rows)}')
+    return cov
 
 
 def validate_doc(doc):
@@ -586,8 +752,8 @@ def build_us_imports(args):
     if not months:
         raise BuildError('no US rows at all')
     latest = months[-1]
-    lag = lag_days(latest, fetched)
-    world = {}
+    cov = reporter_coverage('842', months, args.start, end, fetched, meta, errors, 'US')
+    lag = (cov['release_lag_days'], cov['release_lag_note'])
     by_hs = {}
     for (rep, cmd, par, ym), (v, _, _) in rows.items():
         by_hs.setdefault(cmd, {}).setdefault(par, {})[ym] = v
@@ -615,11 +781,11 @@ def build_us_imports(args):
             if share >= US_SHARE_MIN or par in US_ALWAYS:
                 sel.add(par)
         selected[cmd] = sel
-        world[cmd] = wsum
         for par in sorted(sel, key=int):
             obs = parts[par]
             share = sum(v for ym, v in obs.items() if ym >= US_SHARE_FROM) / wsum if wsum > 0 else 0.0
-            series[f'us_imp_{cmd}_p{par}'] = us_series(cmd, par, obs, names, lag, vnote, share, cmd_label=HS_LABEL[cmd])
+            series[f'us_imp_{cmd}_p{par}'] = us_series(cmd, par, obs, names, lag, vnote, share, cmd_label=HS_LABEL[cmd],
+                                                        us_months=months)
     # aggregates
     for agg, (a, b) in {'8504dist': ('850421', '850422'), '8504dry': ('850433', '850434')}.items():
         pa, pb = by_hs.get(a, {}), by_hs.get(b, {})
@@ -631,7 +797,7 @@ def build_us_imports(args):
                 errors.append(f'us_imp_{agg}_p{par}: no month with both {a} and {b} present — not emitted')
                 continue
             dropped = len(set(oa) ^ set(ob))
-            s = us_series(agg, par, obs, names, lag, vnote, None, cmd_label=AGG_LABEL[agg][1:])
+            s = us_series(agg, par, obs, names, lag, vnote, None, cmd_label=AGG_LABEL[agg][1:], us_months=months)
             s['hs'] = AGG_LABEL[agg][0]
             s['notes'] = (f'Sum of HS{a}+HS{b}; emitted only for months where BOTH components have a Comtrade row '
                           f'({dropped} month(s) with only one component omitted). ' + s['notes'])
@@ -643,34 +809,61 @@ def build_us_imports(args):
         'fetch_tool': FETCH_TOOL,
         'source': {'name': 'UN Comtrade public preview API (no key)', 'url': BASE,
                    'query': 'reporterCode=842&flowCode=M&customsCode=C00&motCode=0&partner2Code=0&cmdCode=<HS6 group>&period=<YYYYMM>'},
-        'coverage': {'first': months[0], 'last': latest, 'n_months': len(months),
-                     'missing_months': [m for m in ym_range(months[0], latest) if m not in set(months)],
-                     'selection': f'World + partners with >= {US_SHARE_MIN:.1%} of HS World value over {US_SHARE_FROM}..{latest} + fixed list {",".join(US_ALWAYS)} if present'},
+        'coverage': dict(cov, selection=f'World + partners with >= {US_SHARE_MIN:.1%} of HS World value over {US_SHARE_FROM}..{latest} + fixed list {",".join(US_ALWAYS)} if present'),
         'series': series,
         'errors': sorted(set(errors)),
     }
     return doc
 
 
-def us_series(cmd, par, obs, names, lag, vnote, share, cmd_label):
+def source_url(reporter, cmds, flow, partner, ym):
+    """Exact preview query that returns this series' value for month ym (one period per call)."""
+    q = Query('x', ym, [reporter], cmds, [partner], flow)
+    return q.url()
+
+
+def absent_note(obs, reporter_months):
+    rm = set(reporter_months)
+    n = len(rm - set(obs))
+    if not n:
+        return ''
+    return (f' No value in {n} of {len(rm)} months for which this reporter has any row (omitted, not zero-filled; '
+            'an absent Comtrade row means no reported value: zero trade or suppressed/confidential).')
+
+
+# Audited source anomalies: the value is what Comtrade publishes (kept, not edited), but a model
+# should know it is an outlier. key = (reporter, hs, partner, YYYY-MM).
+SOURCE_FLAGS = {
+    ('276', '850421', '0', '2025-09'): (
+        'DE-reported exports HS850421 2025-09 = 37.2M USD vs ~4-5M USD in adjacent months; 31.6M USD of it is '
+        '5 units / 579 t to Spain (~116 t per unit, implausible for <=650 kVA units -> probably misclassified '
+        'large transformers). Kept as published; treat 2025-09 (and 2025Q3 YoY) as a source outlier.'),
+}
+
+
+def us_series(cmd, par, obs, names, lag, vnote, share, cmd_label, us_months=()):
     pname = 'World' if par == '0' else names.get(par, f'partner {par}')
     ko = NAME_KO.get(par) or pname
     en, kol = cmd_label
     hs_txt = cmd if cmd.isdigit() else AGG_LABEL[cmd][0]
-    note = ('Comtrade primaryValue (US imports: CIF value, USD) for customsCode C00 / motCode 0 / partner2Code 0. '
-            'Months with no Comtrade row are omitted, not zero-filled. '
-            f'release_lag_days = days from end of latest available month to fetch date (upper bound; US Census FT900 itself publishes ~35 days after month end). {vnote}.')
+    note = ('Comtrade primaryValue (US imports: CIF value, USD), not seasonally adjusted, for customsCode C00 / '
+            'motCode 0 / partner2Code 0. Months with no Comtrade row are omitted, not zero-filled. '
+            f'{lag[1]} (US Census FT-900 itself publishes ~35 days after month end.) {vnote}.')
+    note += absent_note(obs, us_months)
     if share is not None and par != '0':
         note += f' Partner share of HS World value {US_SHARE_FROM}..latest: {share:.2%}.'
     if par == '490':
         note += ' Partner 490 "Other Asia, nes" = Taiwan in Comtrade.'
+    cmds = [cmd] if cmd.isdigit() else AGG_LABEL[cmd][0].split('+')
     return {
         'label': f'US imports HS{hs_txt} ({en}) from {pname}',
         'label_ko': f'미국 수입 HS{hs_txt}({kol}) · {ko}{"" if par == "0" else "발"}',
         'unit': 'USD', 'freq': 'M', 'agg': 'sum',
         'kind': 'trade_total' if par == '0' else 'trade_route',
+        'seasonal_adjustment': 'NSA',
         'geo': 'US', 'hs': hs_txt, 'reporter': '842', 'partner': par, 'flow': 'M',
-        'release_lag_days': lag,
+        'release_lag_days': lag[0],
+        'source_url': source_url('842', cmds, 'M', par, max(obs)),
         'notes': note,
         'obs': {k: obs[k] for k in sorted(obs)},
     }
@@ -686,25 +879,26 @@ def build_exports(args):
     all_months = ym_range(args.start, end)
     coverage = {}
     for iso, code in EXP_REPORTERS:
-        ms = sorted(pwr.get(code, ()))
-        if not ms:
-            coverage[iso] = {'reporter': code, 'n_months': 0}
-            errors.append(f'{iso} ({code}): no monthly export rows returned for any planned period {args.start}..{end}')
-            continue
-        gaps = [m for m in ym_range(ms[0], ms[-1]) if m not in set(ms)]
-        coverage[iso] = {'reporter': code, 'first': ms[0], 'last': ms[-1], 'n_months': len(ms),
-                         'missing_months_inside_span': gaps,
-                         'lag_upper_bound_days': lag_days(ms[-1], fetched),
-                         'hs_vintage': vintage_note(meta, code)}
-        if ms[0] > args.start:
-            errors.append(f'{iso} ({code}): monthly data starts {ms[0]} (nothing for {args.start}..{prev_of(ms[0])})')
-        if gaps:
-            errors.append(f'{iso} ({code}): {len(gaps)} month(s) with no rows inside {ms[0]}..{ms[-1]}: {compress_months(gaps)}')
-        if months_between(ms[-1], end) > 0:
-            errors.append(f'{iso} ({code}): latest month {ms[-1]} (not yet/never reported {next_of(ms[-1])}..{end})')
+        coverage[iso] = reporter_coverage(code, pwr.get(code, ()), args.start, end, fetched, meta, errors, iso)
     by = {}
     for (rep, cmd, par, ym), (v, _, _) in rows.items():
         by.setdefault((rep, cmd, par), {})[ym] = v
+    extra_notes = {}
+    # A reporter can suppress (confidentiality) the row of its dominant partner while still publishing the
+    # rest of that HS-month; the World row is then only the unsuppressed remainder (MX 850422 2015-08 and
+    # 2015-10: World = Guatemala only, ~1% of a normal month, while the US mirror shows 10-14M USD). Such a
+    # World value is not the reporter's total -> drop that World month (left empty, listed in errors).
+    for (rep, cmd, dom, ym, wv, med) in dominant_partner_gaps(by):
+        by[(rep, cmd, '0')].pop(ym)
+        msg = (f'{ISO2_BY_CODE.get(rep, rep)} {cmd} {ym}: World row ({wv:.0f} USD) published without the row of the '
+               f'dominant partner {dom} (median share {med:.0%} in other months) - World month dropped as incomplete')
+        errors.append(msg)
+        extra_notes.setdefault((rep, cmd, '0'), []).append(msg + '.')
+    # audited source outliers: kept as published, flagged in notes/errors
+    for (rep, cmd, par, ym), txt in SOURCE_FLAGS.items():
+        if ym in by.get((rep, cmd, par), {}):
+            errors.append(f'source anomaly kept ({ISO2_BY_CODE.get(rep, rep)} {cmd} p{par} {ym}): {txt}')
+            extra_notes.setdefault((rep, cmd, par), []).append('Source anomaly: ' + txt)
     # consistency: bilateral <= World
     for (rep, cmd, par), obs in by.items():
         if par == '0':
@@ -713,8 +907,6 @@ def build_exports(args):
         for ym, v in obs.items():
             if ym in w and v > w[ym] * 1.001 + 1:
                 errors.append(f'{ISO2_BY_CODE.get(rep, rep)} {cmd} {ym}: exports to {par} ({v:.0f}) exceed World ({w[ym]:.0f})')
-            if ym not in w:
-                errors.append(f'{ISO2_BY_CODE.get(rep, rep)} {cmd} {ym}: partner {par} row present but no World row')
     series = {}
     for (rep, cmd, par), obs in sorted(by.items(), key=lambda kv: (kv[0][0], kv[0][1], int(kv[0][2]))):
         iso = ISO2_BY_CODE[rep]
@@ -722,11 +914,15 @@ def build_exports(args):
         pname = 'World' if par == '0' else names.get(par, f'partner {par}')
         rname = names.get(rep, iso)
         en, kol = HS_LABEL[cmd]
-        note = (f'Comtrade primaryValue (exports: FOB value, USD) reported by {rname}; customsCode C00 / motCode 0 / partner2Code 0. '
+        note = (f'Comtrade primaryValue (exports: FOB value, USD), not seasonally adjusted, reported by {rname}; '
+                'customsCode C00 / motCode 0 / partner2Code 0. '
                 f'Months with no Comtrade row are omitted, not zero-filled. Reporter monthly coverage {cov["first"]}..{cov["last"]} '
                 f'({cov["n_months"]} months with any row'
                 + (f'; months with no rows at all: {compress_months(cov["missing_months_inside_span"])}' if cov['missing_months_inside_span'] else '')
-                + f'). release_lag_days = days from end of reporter latest month to fetch date (upper bound). {cov["hs_vintage"]}.')
+                + f'). {cov["release_lag_note"]} {cov["hs_vintage"]}.')
+        note += absent_note(obs, pwr.get(rep, ()))
+        for extra in extra_notes.get((rep, cmd, par), []):
+            note += ' ' + extra
         if rep == '484' and par == '842':
             note += ' Mirror check: compare with us_imp_' + cmd + '_p484 (US-reported imports, CIF).'
         series[f'{iso.lower()}_exp_{cmd}_p{par}'] = {
@@ -734,8 +930,10 @@ def build_exports(args):
             'label_ko': f'{NAME_KO.get(rep, rname)} 수출 HS{cmd}({kol}) → {NAME_KO.get(par, pname)}',
             'unit': 'USD', 'freq': 'M', 'agg': 'sum',
             'kind': 'trade_total' if par == '0' else 'trade_route',
+            'seasonal_adjustment': 'NSA',
             'geo': iso, 'hs': cmd, 'reporter': rep, 'partner': par, 'flow': 'X',
-            'release_lag_days': cov['lag_upper_bound_days'],
+            'release_lag_days': cov['release_lag_days'],
+            'source_url': source_url(rep, [cmd], 'X', par, max(obs)),
             'notes': note,
             'obs': {k: obs[k] for k in sorted(obs)},
         }
@@ -747,6 +945,7 @@ def build_exports(args):
         'source': {'name': 'UN Comtrade public preview API (no key)', 'url': BASE,
                    'query': 'reporterCode=<group>&flowCode=X&partnerCode=0,842,124,484&customsCode=C00&motCode=0&partner2Code=0&cmdCode=<HS6>&period=<YYYYMM>'},
         'coverage': coverage,
+        'mirror_check': mirror_check(series, errors, pwr),
         'planned_months': {'first': all_months[0], 'last': all_months[-1]},
         'series': series,
         'errors': sorted(set(errors)),
@@ -754,11 +953,23 @@ def build_exports(args):
     return doc
 
 
-def prev_of(ym):
-    y, m = int(ym[:4]), int(ym[5:7]) - 1
-    if m == 0:
-        y, m = y - 1, 12
-    return f'{y:04d}-{m:02d}'
+def dominant_partner_gaps(by, min_presence=0.9, min_share=0.95, min_n=24):
+    """(rep, cmd, partner, ym, world_value, median_share) for World months that lack the row of a partner
+    which is present in >= min_presence of that reporter/HS's World months with median share >= min_share."""
+    out = []
+    for (rep, cmd, par), obs in by.items():
+        if par == '0':
+            continue
+        w = by.get((rep, cmd, '0'), {})
+        both = [m for m in obs if m in w and w[m] > 0]
+        if len(both) < min_n or not w or len(both) / len(w) < min_presence:
+            continue
+        shares = sorted(obs[m] / w[m] for m in both)
+        med = shares[len(shares) // 2]
+        if med < min_share:
+            continue
+        out.extend((rep, cmd, par, m, w[m], med) for m in sorted(w) if m not in obs)
+    return out
 
 
 def next_of(ym):
@@ -780,6 +991,76 @@ def compress_months(ms):
             a = b = m
     out.append(a if a == b else f'{a}..{b}')
     return ', '.join(out)
+
+
+def _shift(ym, k):
+    y, m = int(ym[:4]), int(ym[5:7]) + k
+    y, m = y + (m - 1) // 12, (m - 1) % 12 + 1
+    return f'{y:04d}-{m:02d}'
+
+
+def _yoy3(obs):
+    r3 = {k: obs[k] + obs[_shift(k, -1)] + obs[_shift(k, -2)] for k in obs if _shift(k, -1) in obs and _shift(k, -2) in obs}
+    return {k: math.log(r3[k] / r3[_shift(k, -12)]) for k in r3 if _shift(k, -12) in r3 and r3[k] > 0 and r3[_shift(k, -12)] > 0}
+
+
+def _corr(a, b):
+    n = len(a)
+    if n < 12:
+        return None
+    ma, mb = sum(a) / n, sum(b) / n
+    va, vb = sum((x - ma) ** 2 for x in a), sum((y - mb) ** 2 for y in b)
+    if not va or not vb:
+        return None
+    return round(sum((x - ma) * (y - mb) for x, y in zip(a, b)) / math.sqrt(va * vb), 3)
+
+
+def mirror_check(series, errors, pwr=None):
+    """Exporter-reported X to USA vs US-reported M from that exporter (same HS): level ratio over common
+    months and corr of 3-month-sum log-YoY with the exporter leading by k=-1..3 months (shipping time)."""
+    path = OUT / OUT_NAME['us_imports']
+    if not path.exists():
+        errors.append('mirror check skipped: comtrade_us_imports.json not built yet')
+        return {}
+    us = json.loads(path.read_text(encoding='utf-8'))['series']
+    out = {}
+    for sid, s in series.items():
+        if s['partner'] != '842':
+            continue
+        u = us.get(f"us_imp_{s['hs']}_p{s['reporter']}")
+        if not u:
+            continue
+        common = sorted(set(s['obs']) & set(u['obs']))
+        if len(common) < 12:
+            continue
+        a, b = _yoy3(s['obs']), _yoy3(u['obs'])
+        ccf = {}
+        for k in range(-1, 4):
+            ks = [m for m in a if _shift(m, k) in b]
+            c = _corr([a[m] for m in ks], [b[_shift(m, k)] for m in ks])
+            if c is not None:
+                ccf[str(k)] = {'corr': c, 'n': len(ks)}
+        best = max(ccf, key=lambda k: ccf[k]['corr']) if ccf else None
+        rep_months = set((pwr or {}).get(s['reporter'], ()))
+        no_row = sorted(m for m, v in u['obs'].items() if v >= 1e6 and m in rep_months and m not in s['obs'])
+        rec = {'us_series': f"us_imp_{s['hs']}_p{s['reporter']}", 'n_common_months': len(common),
+               'ratio_X_over_M': round(sum(s['obs'][m] for m in common) / sum(u['obs'][m] for m in common), 3),
+               'yoy3_corr_by_exporter_lead_months': ccf, 'best_lead_months': int(best) if best is not None else None,
+               'us_months_ge_1m_usd_without_exporter_row': len(no_row)}
+        out[sid] = rec
+        if best is not None:
+            s['notes'] += (f" Mirror vs {rec['us_series']}: X/M level ratio {rec['ratio_X_over_M']} over {len(common)} common months; "
+                           f"3M-sum log-YoY corr peaks {ccf[best]['corr']} with exporter leading {best} month(s).")
+        if len(no_row) >= 3:
+            txt = (f" In {len(no_row)} months of the reporter's coverage the US reports >= 1M USD imports of HS{s['hs']} from "
+                   f"this exporter but the exporter publishes no row (suppressed/confidential or shipment timing; not zero): "
+                   f"{compress_months(no_row)}.")
+            s['notes'] += txt
+            w = series.get(sid[:-len('_p842')] + '_p0')
+            both = [m for m in s['obs'] if w is not None and m in w['obs']]
+            if both and sum(s['obs'][m] for m in both) >= 0.5 * sum(w['obs'][m] for m in both):
+                w['notes'] += txt          # the US is most of this exporter's HS total: same caveat for World
+    return out
 
 
 OUT_NAME = {'us_imports': 'comtrade_us_imports.json', 'exports': 'comtrade_exports.json'}
@@ -826,10 +1107,14 @@ def main(argv=None):
     fams = ['us_imports', 'exports'] if args.family == 'all' else [args.family]
     rc = 0
     if args.command in ('fetch', 'run'):
+        gate = Gate(args.spacing)
         try:
-            partner_names(Gate(args.spacing))
+            partner_names(gate)
         except (FetchError, ValueError, KeyError) as e:
             print(f'partner reference fetch failed: {e}', file=sys.stderr)
+        reps = (['842'] if 'us_imports' in fams else []) + ([c for _, c in EXP_REPORTERS] if 'exports' in fams else [])
+        for e in fetch_da(reps, gate, args.ttl_hours, args.refresh):
+            print(f'availability metadata: {e}', file=sys.stderr)
         t_start = time.monotonic()
         budget = args.max_seconds
         for fam in fams:

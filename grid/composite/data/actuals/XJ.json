@@ -1,0 +1,643 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "XJ",
+ "grid_node": "GRID_XJ",
+ "name": "许继电气股份有限公司 (XJ Electric Co., Ltd.)",
+ "ticker": "000400 CH (SZSE)",
+ "listed": true,
+ "currency": "CNY",
+ "unit": "million",
+ "accounting_basis": "CAS (China Accounting Standards for Business Enterprises)",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters; fiscal_key = calendar year",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 영업수익(营业收入)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "unit_note": "CNY million; source figures printed in 元, divided by 1e6 (scale conversion only).",
+   "points": [
+    {
+     "fiscal_key": "FY2015Q1",
+     "period_start": "2015-01-01",
+     "period_end": "2015-03-31",
+     "value": 815.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202111214.PDF",
+     "locator": "许继电气 2015年年度报告 (published 2016-03-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31",
+     "prior_year_comparative": 1277.4234,
+     "prior_year_comparative_source": "许继电气 2015年第一季度报告全文 (published 2015-04-29) PDF p.17: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2015-04-29/1200932774.PDF"
+    },
+    {
+     "fiscal_key": "FY2015Q2",
+     "period_start": "2015-04-01",
+     "period_end": "2015-06-30",
+     "value": 1364.5349,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202111214.PDF",
+     "locator": "许继电气 2015年年度报告 (published 2016-03-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31"
+    },
+    {
+     "fiscal_key": "FY2015Q3",
+     "period_start": "2015-07-01",
+     "period_end": "2015-09-30",
+     "value": 1247.6473,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202111214.PDF",
+     "locator": "许继电气 2015年年度报告 (published 2016-03-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31",
+     "prior_year_comparative": 1757.8099,
+     "prior_year_comparative_source": "许继电气 2015年第三季度报告全文 (published 2015-10-29) PDF p.17: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2015-10-29/1201734925.PDF"
+    },
+    {
+     "fiscal_key": "FY2015Q4",
+     "period_start": "2015-10-01",
+     "period_end": "2015-12-31",
+     "value": 3918.5182,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-03-31/1202111214.PDF",
+     "locator": "许继电气 2015年年度报告 (published 2016-03-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2016-03-31"
+    },
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 945.5176,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-25/1203195278.PDF",
+     "locator": "许继电气 2016年年度报告 (published 2017-03-25) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-25",
+     "prior_year_comparative": 815.6,
+     "prior_year_comparative_source": "许继电气 2016年第一季度报告全文 (published 2016-04-28) PDF p.18: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2016-04-28/1202257022.PDF"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 1952.8698,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-25/1203195278.PDF",
+     "locator": "许继电气 2016年年度报告 (published 2017-03-25) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-25"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 1908.9402,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-25/1203195278.PDF",
+     "locator": "许继电气 2016年年度报告 (published 2017-03-25) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-25",
+     "prior_year_comparative": 1247.6473,
+     "prior_year_comparative_source": "许继电气 2016年第三季度报告全文 (published 2016-10-28) PDF p.18: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2016-10-28/1202796475.PDF"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 4799.682,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-03-25/1203195278.PDF",
+     "locator": "许继电气 2016年年度报告 (published 2017-03-25) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2017-03-25"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 1133.5265,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511191.PDF",
+     "locator": "许继电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24",
+     "prior_year_comparative": 945.5176,
+     "prior_year_comparative_source": "许继电气 2017年第一季度报告全文 (published 2017-04-28) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2017-04-28/1203411503.PDF"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 2123.7535,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511191.PDF",
+     "locator": "许继电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 2008.7135,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511191.PDF",
+     "locator": "许继电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24",
+     "prior_year_comparative": 1908.9402,
+     "prior_year_comparative_source": "许继电气 2017年第三季度报告全文 (published 2017-10-26) PDF p.14: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2017-10-26/1204069069.PDF"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 5064.7275,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-03-24/1204511191.PDF",
+     "locator": "许继电气 2017年年度报告 (published 2018-03-24) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2018-03-24"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 894.8757,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-29/1205954957.PDF",
+     "locator": "许继电气 2018年年度报告 (published 2019-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-29",
+     "prior_year_comparative": 1133.5265,
+     "prior_year_comparative_source": "许继电气 2018年第一季度报告全文 (published 2018-04-26) PDF p.13: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2018-04-26/1204787768.PDF"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 1761.9834,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-29/1205954957.PDF",
+     "locator": "许继电气 2018年年度报告 (published 2019-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-29"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 1502.6879,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-29/1205954957.PDF",
+     "locator": "许继电气 2018年年度报告 (published 2019-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-29",
+     "prior_year_comparative": 2008.7135,
+     "prior_year_comparative_source": "许继电气 2018年第三季度报告全文 (published 2018-10-26) PDF p.13: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2018-10-26/1205535855.PDF"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 4057.0117,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-29/1205954957.PDF",
+     "locator": "许继电气 2018年年度报告 (published 2019-03-29) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2019-03-29"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 1032.5652,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-10/1207474268.PDF",
+     "locator": "许继电气 2019年年度报告 (published 2020-04-10) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-10",
+     "prior_year_comparative": 894.8757,
+     "prior_year_comparative_source": "许继电气 2019年第一季度报告全文 (published 2019-04-26) PDF p.14: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2019-04-26/1206097679.PDF"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 2021.9226,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-10/1207474268.PDF",
+     "locator": "许继电气 2019年年度报告 (published 2020-04-10) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-10"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 2183.7288,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-10/1207474268.PDF",
+     "locator": "许继电气 2019年年度报告 (published 2020-04-10) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-10",
+     "prior_year_comparative": 1502.6879,
+     "prior_year_comparative_source": "许继电气 2019年第三季度报告全文 (published 2019-10-12) PDF p.14: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2019-10-12/1206975029.PDF"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 4917.8664,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-10/1207474268.PDF",
+     "locator": "许继电气 2019年年度报告 (published 2020-04-10) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2020-04-10"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 1023.3278,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-09/1209658172.PDF",
+     "locator": "许继电气 2020年年度报告 (published 2021-04-09) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-09"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 3118.9593,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-09/1209658172.PDF",
+     "locator": "许继电气 2020年年度报告 (published 2021-04-09) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-09"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 2449.8894,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-09/1209658172.PDF",
+     "locator": "许继电气 2020年年度报告 (published 2021-04-09) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-09",
+     "prior_year_comparative": 2341.4203,
+     "prior_year_comparative_source": "许继电气 2020年第三季度报告全文 (published 2020-10-29) PDF p.16: 合并本报告期利润表 (7-9月) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2020-10-29/1208636692.PDF"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 4599.0252,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-09/1209658172.PDF",
+     "locator": "许继电气 2020年年度报告 (published 2021-04-09) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2021-04-09"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 1814.9434,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-26/1213108981.PDF",
+     "locator": "许继电气 2021年年度报告 (published 2022-04-26) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-26",
+     "prior_year_comparative": 1023.3278,
+     "prior_year_comparative_source": "许继电气 2021年第一季度报告全文 (published 2021-04-27) PDF p.16: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2021-04-27/1209811643.PDF"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 3139.5103,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-26/1213108981.PDF",
+     "locator": "许继电气 2021年年度报告 (published 2022-04-26) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-26"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 2580.2134,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-26/1213108981.PDF",
+     "locator": "许继电气 2021年年度报告 (published 2022-04-26) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-26"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 4456.0303,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-26/1213108981.PDF",
+     "locator": "许继电气 2021年年度报告 (published 2022-04-26) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2022-04-26"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 2469.0275,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-08/1216356279.PDF",
+     "locator": "许继电气 2022年年度报告 (published 2023-04-08) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-08",
+     "prior_year_comparative": 1814.9434,
+     "prior_year_comparative_source": "许继电气 2022年一季度报告 (published 2022-04-28) PDF p.8: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2022-04-28/1213160407.PDF"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 3660.556,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-08/1216356279.PDF",
+     "locator": "许继电气 2022年年度报告 (published 2023-04-08) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-08"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 2986.1841,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-08/1216356279.PDF",
+     "locator": "许继电气 2022年年度报告 (published 2023-04-08) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-08"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 5801.6818,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-08/1216356279.PDF",
+     "locator": "许继电气 2022年年度报告 (published 2023-04-08) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2023-04-08"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 3308.7669,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219568199.PDF",
+     "locator": "许继电气 2023年年度报告 (published 2024-04-11) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 3894.271,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219568199.PDF",
+     "locator": "许继电气 2023年年度报告 (published 2024-04-11) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 3626.9443,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219568199.PDF",
+     "locator": "许继电气 2023年年度报告 (published 2024-04-11) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 6230.9143,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219568199.PDF",
+     "locator": "许继电气 2023年年度报告 (published 2024-04-11) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2024-04-11"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 2809.5296,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223055724.PDF",
+     "locator": "许继电气 2024年年度报告 (published 2025-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-11",
+     "prior_year_comparative": 3308.7669,
+     "prior_year_comparative_source": "许继电气 2024年一季度报告 (published 2024-04-30) PDF p.7: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2024-04-30/1219912756.PDF"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 4026.0392,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223055724.PDF",
+     "locator": "许继电气 2024年年度报告 (published 2025-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-11"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 2750.4824,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223055724.PDF",
+     "locator": "许继电气 2024年年度报告 (published 2025-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-11"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 7503.0821,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223055724.PDF",
+     "locator": "许继电气 2024年年度报告 (published 2025-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2025-04-11"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 2348.1518,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF",
+     "locator": "许继电气 2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11",
+     "prior_year_comparative": 2809.5296,
+     "prior_year_comparative_source": "许继电气 2025年一季度报告 (published 2025-04-11) PDF p.6: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2025-04-11/1223055722.PDF"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 4099.0434,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF",
+     "locator": "许继电气 2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 3006.3194,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF",
+     "locator": "许继电气 2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 5538.3914,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF",
+     "locator": "许继电气 2025年年度报告 (published 2026-04-11) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "published_date": "2026-04-11"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 2377.7516,
+     "prior_year_comparative": 2348.1518,
+     "method": "direct_reported_quarter",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096189.PDF",
+     "locator": "许继电气 2026年一季度报告 (published 2026-04-11) PDF p.7: 合并利润表 营业收入 line (本期 = 2026年1-3月; 上年同期 = prior_year_comparative); 元 → CNY million",
+     "published_date": "2026-04-11"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 4147.4546,
+     "method": "ytd_difference",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483623.PDF",
+     "locator": "许继电气 2026年半年度报告 (published 2026-08-20) PDF p.49: 合并利润表 营业收入 line 本期(1-6月) 6525.2062 minus Q1 2377.7516 from 2026年一季度报告 p.7; 元 → CNY million",
+     "published_date": "2026-08-20",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096189.PDF"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2018-12-31",
+   "type": "restatement",
+   "target": "revenue_total",
+   "note": "FY2018 annual report restates FY2017 营业收入 10,330.72 → 10,329.49 (−1.23m, retrospective presentation adjustment; immaterial). FY2017 quarterly points keep the as-published 2017 AR quarterly table.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-29/1205954957.PDF"
+  },
+  {
+   "date": "2020-06-30",
+   "type": "restatement",
+   "target": "revenue_total",
+   "note": "同一控制下企业合并 during H1 2020: FY2019 restated 10,156.08 → 10,852.45 (+696.36m, +6.9%); H1 2019 3,054.49 → 3,317.46; 9M 2019 5,238.22 → 5,658.88. The FY2020 AR quarterly table restates FY2020Q1 to 1,023.33 (Q1 report as published: 917.40, comparative 1,032.57 old scope) — so FY2020Q1/Q2/Q4 YoY vs FY2019 points mixes scopes (no like-for-like 3-month comparative printed; Q1 comparative therefore omitted). FY2020Q3 carries the same-scope comparative 2,341.42 from the Q3 report.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-09/1209658172.PDF",
+   "affected_fiscal_keys": [
+    "FY2020Q1",
+    "FY2020Q2",
+    "FY2020Q4"
+   ]
+  },
+  {
+   "date": "2023-12-31",
+   "type": "restatement",
+   "target": "revenue_total",
+   "note": "同一控制下企业合并 + 会计政策变更 recognised in FY2023 AR: FY2022 restated 14,917.45 → 15,029.74 (+112.29m, +0.75%); FY2023 quarterly table restated in-year (Q1 3,263.67 → 3,308.77; H1 7,114.26 → 7,203.04; 9M 10,663.89 → 10,829.98). FY2023 quarters therefore have no same-scope printed comparative; YoY vs FY2022 points is biased up by ≈1%. FY2024 reports print restated FY2023 comparatives equal to the FY2023 quarterly table.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-11/1219568199.PDF",
+   "affected_fiscal_keys": [
+    "FY2023Q1",
+    "FY2023Q2",
+    "FY2023Q3",
+    "FY2023Q4"
+   ]
+  }
+ ],
+ "profile": {
+  "products": "Per FY2025 annual report (p.11-13): six product groups — 智能变配电系统 (relay protection, substation monitoring/automation, smart-substation systems, distribution terminals & DA systems), 直流输电系统 (±1100kV UHVDC and ±800kV VSC-HVDC converter valves, DC measurement, DC control & protection), 智能电表 (smart meters, terminals, AMI, MCBs), 智能中压供用电设备 (switchgear, transformers, reactors, arc-suppression-coil grounding sets, ring-main units), 新能源及系统集成 (PV/storage EPC & integration, grid-forming PCS, hydrogen power supplies), 充换电设备及其它制造服务 (EV chargers incl. liquid-cooled ultra-fast, battery swap, EMS contract manufacturing). FY2024 revenue split: 智能变配电 4,711m (27.6%), 智能电表 3,866m, 智能中压供用电 3,352m (19.6%), 新能源及系统集成 2,464m, 直流输电 1,444m, 充换电及其它 1,252m. Transformer exposure is small: subsidiary 许继变压器有限公司 (78%) revenue 1,134.95m in FY2025 (1,212.81m FY2024) per AR note.",
+  "plants": [
+   {
+    "country": "CN",
+    "city": "Xuchang, Henan (许昌 — HQ and most manufacturing subsidiaries: 许继变压器, 河南许继电气开关, 河南许继电力电子, 河南许继仪表, 许继德理施尔, 许继电源, 河南许继电气装备)",
+    "products": "transformers (许继变压器), MV switchgear, power electronics/converter valves, meters, protection & automation",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Zhuhai, Guangdong (珠海许继电气 45% controlled; 许继(珠海)自动化系统)",
+    "products": "distribution automation / secondary equipment",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Chengdu, Sichuan (成都交大许继电气)",
+    "products": "rail-transit power supply automation",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Jinan, Shandong (中电装备山东电子)",
+    "products": "smart meters / electrical instruments",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF"
+   },
+   {
+    "country": "CN",
+    "city": "Harbin, Heilongjiang (哈尔滨电工仪表研究所)",
+    "products": "electrical instruments/meters",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-11/1225096177.PDF"
+   }
+  ],
+  "end_markets": "State Grid / China Southern Grid (controlling shareholder is 中国电气装备集团, which also controls China XD), UHV AC/DC projects, renewables & storage, rail transit, EV charging, industrial. Overseas sales small (国际 309.49m = 1.81% of FY2024 revenue).",
+  "export_routes": [
+   "CN->World (minor, <2% of revenue)"
+  ],
+  "hs_candidates": [
+   "853720",
+   "850440",
+   "902830",
+   "850421",
+   "850422",
+   "850423"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "nea_grid_investment",
+    "why": "전력망 투자 완성액 — 국가전망 2차설비·계량기·직류설비 조달 원천(국내 매출 ~98%)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "nbs_transformer_output",
+    "why": "변압기 생산량 — 중압 배전설비(개폐기·변압기) 업황 동행",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cn_exp_853720_p0",
+    "why": "중국 1kV 초과 배전반 수출 — 동사 수출 비중 작아 진단용",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "sgcc_centralized_tender_awards",
+    "why": "국가전망 집중입찰(2차설비·스마트미터·직류) 낙찰 — 매출 선행 수주지표. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "nea_uhv_dc_project_approvals",
+    "why": "특고압 직류 프로젝트 승인·착공 건수 — 직류 컨버터 밸브 매출 선행. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total: none FY2015Q1–FY2026Q2 (46 quarters).",
+  "prior_year_comparative stored only where a same-scope 3-month comparative is printed: Q1 (Q1 report 上年同期) and Q3 2015-2020 (old-format Q3 report 7-9月 利润表). Omitted for FY2020Q1 and FY2023Q1 because the annual quarterly table was restated in-year (different scope from the Q1 report that printed the comparative).",
+  "revenue_segment: not stored. XJ prints product revenue (e.g. 智能中压供用电设备, which contains switchgear AND transformers) semi-annually, but (a) no product line isolates transformers and (b) several H1/AR tables have wrapped labels that could not be read reliably; transformer subsidiary 许继变压器 revenue is disclosed only annually.",
+  "orders_segment: XJ does not disclose order intake in periodic reports."
+ ],
+ "collection_notes": [
+  "Primary sources: XJ periodic reports (一季报/半年报/三季报/年报) PDF from cninfo static host. Extraction: pypdf + pdfplumber; values = annual report 分季度主要财务指标 (3-month figures) for FY2015-FY2025, FY2026Q1 from the Q1 report, FY2026Q2 = H1 − Q1.",
+  "Checks: Σ quarters = FY 营业收入 each year (exact); Q1/H1/9M/Q3 match quarterly reports except the documented restatement years (2020, 2023).",
+  "XJ 营业收入 is used (not 营业总收入).",
+  "Validator 3x-change warnings (Q4→Q1 and some Q1→Q2) are genuine: XJ revenue is strongly Q4-weighted (grid customers accept deliveries at year-end); every flagged value is confirmed by Σ4Q = FY and by the quarterly reports."
+ ]
+}

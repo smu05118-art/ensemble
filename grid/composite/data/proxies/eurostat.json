@@ -10,7 +10,7 @@
  ],
  "family": "eurostat",
  "fetch_tool": "grid/composite/tools/fetch_eurostat.py",
- "fetched_at": "2026-09-25T15:23:43Z",
+ "fetched_at": "2026-09-25T16:01:34Z",
  "schema": "grid-composite-proxy/1",
  "series": {
   "eurostat_ip_C2711_DE": {
