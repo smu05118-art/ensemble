@@ -73,7 +73,7 @@
      "method": "direct_reported_quarter",
      "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_48300_134872_31082019054822_WEB.xml",
      "locator": "NSE XBRL of the consolidated Reg-33 filing: SegmentRevenue for DescriptionOfReportableSegment='Power Systems', context OneReportableSegmentRevenue (current quarter), INR",
-     "published_date": "14-Jan-2020",
+     "published_date": "2019-08-31",
      "verification": "exchange_xbrl",
      "cross_check": {
       "nse_xbrl_segment_inr_mn": 10573.7,
@@ -281,7 +281,7 @@
      "method": "direct_reported_quarter",
      "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_87776_778283_25012023112142_WEB.xml",
      "locator": "NSE XBRL of the consolidated Reg-33 filing: SegmentRevenue for DescriptionOfReportableSegment='Power Systems', context OneReportableSegmentRevenue (current quarter), INR",
-     "published_date": "25-Jan-2023",
+     "published_date": "2023-01-24",
      "verification": "exchange_xbrl",
      "cross_check": {
       "nse_xbrl_segment_inr_mn": 5065.6,
