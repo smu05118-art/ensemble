@@ -1164,6 +1164,21 @@
      }
     },
     {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 27527.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf",
+     "locator": "BSE filing 2025-05-06 (2025-05-06_0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf) p.20: consolidated segment-wise revenue table, row 'Revenue from operations', 1st column (quarter ended 31.03.2025); printed 2752.77 (INR crore). Check: 9M FY2025 7155.89 + Q4 = FY2025 9908.66 printed; same figure printed as 2nd column of the Q1 FY2026 filing (2025-07-24)",
+     "published_date": "2025-05-06",
+     "verification": "pdf_plumb+annual_sum_check+later_filing",
+     "prior_year_comparative": 21917.2,
+     "cross_check": {
+      "note": "BSE results DB has no record for this quarter (API returns the Dec-2024 record) and NSE XBRL list ends Dec-2024"
+     }
+    },
+    {
      "fiscal_key": "FY2026Q1",
      "period_start": "2025-04-01",
      "period_end": "2025-06-30",
@@ -1224,7 +1239,9 @@
      "cross_check": {
       "bse_results_db_inr_mn": 34417.6,
       "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=129.00&RType="
-     }
+     },
+     "prior_year_comparative": 27527.7,
+     "comparative_note": "same filing (2026-05-06) p.18 consolidated segment table 'Revenue from operations', 3rd column (quarter ended 31.03.2025) = 2,752.77 cr"
     },
     {
      "fiscal_key": "FY2027Q1",
@@ -1920,6 +1937,21 @@
      }
     },
     {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 25634.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf",
+     "locator": "BSE filing 2025-05-06 (2025-05-06_0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf) p.10: standalone segment-wise revenue table, row 'Revenue from operations', 1st column (quarter ended 31.03.2025); printed 2563.40 (INR crore). Check: 9M FY2025 6765.57 + Q4 = FY2025 9328.97 printed; same figure printed as 2nd column of the Q1 FY2026 filing (2025-07-24)",
+     "published_date": "2025-05-06",
+     "verification": "pdf_plumb+annual_sum_check+later_filing",
+     "prior_year_comparative": 20835.4,
+     "cross_check": {
+      "note": "BSE results DB has no record for this quarter (API returns the Dec-2024 record) and NSE XBRL list ends Dec-2024"
+     }
+    },
+    {
      "fiscal_key": "FY2026Q1",
      "period_start": "2025-04-01",
      "period_end": "2025-06-30",
@@ -1980,7 +2012,9 @@
      "cross_check": {
       "bse_results_db_inr_mn": 31285.0,
       "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=129.00&RType="
-     }
+     },
+     "prior_year_comparative": 25634.0,
+     "comparative_note": "same filing (2026-05-06) p.7 standalone segment table 'Revenue from operations', 3rd column (quarter ended 31.03.2025) = 2,563.40 cr"
     },
     {
      "fiscal_key": "FY2027Q1",
@@ -2310,8 +2344,6 @@
  },
  "gaps": [
   "revenue_total/standalone FY2016Q1-Q2: 소비재(Consumer Products) 사업 분할(2015-10 기준) 이전 원공시 값은 소비재 포함이라 이후와 범위가 달라 비움(FY2016Q3 공시부터 분할 반영 비교칸 사용).",
-  "revenue_total: FY2025Q4 (2025-03-31): no consolidated quarterly result published/available",
-  "revenue_standalone: FY2025Q4 (2025-03-31): no standalone quarterly result published/available",
   "revenue_segment FY2019Q1 (2018-06-30): consolidated Power Systems revenue not machine-readable in filings and absent from XBRL — left empty",
   "revenue_segment FY2023Q2 (2022-09-30): consolidated Power Systems revenue not machine-readable in filings and absent from XBRL — left empty",
   "orders_segment: Power Systems 분기 수주액은 FY2021Q4·FY2022Q1·FY2023Q3~FY2024Q2·FY2025Q3~FY2027Q1 보도자료에만 인쇄. FY2022Q2~FY2023Q2, FY2024Q3~FY2025Q2 보도자료는 Power Systems 수주잔고(unexecuted order book)만 인쇄 — 비움. YoY 증가율(예: 111% growth YoY)로 전년 값을 역산하지 않음(비율 역산 금지)."

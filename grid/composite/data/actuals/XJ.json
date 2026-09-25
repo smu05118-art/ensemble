@@ -638,6 +638,7 @@
   "Primary sources: XJ periodic reports (一季报/半年报/三季报/年报) PDF from cninfo static host. Extraction: pypdf + pdfplumber; values = annual report 分季度主要财务指标 (3-month figures) for FY2015-FY2025, FY2026Q1 from the Q1 report, FY2026Q2 = H1 − Q1.",
   "Checks: Σ quarters = FY 营业收入 each year (exact); Q1/H1/9M/Q3 match quarterly reports except the documented restatement years (2020, 2023).",
   "XJ 营业收入 is used (not 营业总收入).",
-  "Validator 3x-change warnings (Q4→Q1 and some Q1→Q2) are genuine: XJ revenue is strongly Q4-weighted (grid customers accept deliveries at year-end); every flagged value is confirmed by Σ4Q = FY and by the quarterly reports."
+  "Validator 3x-change warnings (Q4→Q1 and some Q1→Q2) are genuine: XJ revenue is strongly Q4-weighted (grid customers accept deliveries at year-end); every flagged value is confirmed by Σ4Q = FY and by the quarterly reports.",
+  "verify 2026-09-25: checked revenue_total FY2015Q1-Q4 (Q1 815,599,976.53元; printed comparative 1,277.42 → |logYoY| 0.45 genuine), FY2016Q1-Q4 (Q3 |logYoY|>0.4), FY2020Q1-Q4 (Q1 restated 1,023.33; Q2 |logYoY|>0.4), FY2021Q1-Q4 (Q1 |logYoY| 0.57), FY2023Q1-Q4 (restated table), FY2025Q1-Q4, FY2026Q1 (2026 Q1 report, published with the AR on 2026-04-11), FY2026Q2 (ytd_difference: H1 6,525.21 − Q1 2,377.75) against the cninfo PDFs; all match; Q4-heavy seasonality behind the validator 3x WARNs confirmed in the AR tables. fixed 0."
  ]
 }

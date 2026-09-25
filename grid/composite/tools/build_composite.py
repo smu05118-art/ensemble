@@ -562,8 +562,27 @@ def rnd(v, n=4):
     return v
 
 
+TARGET_OVERRIDES = {
+    # 연결 매출이 폴리실리콘·석탄·발전·알루미늄에 좌우 — 변압기(전기설비) 제품 반기 매출을 타깃으로 쓴다.
+    'TBEA': ('revenue_segment', '연결 매출이 폴리실리콘·석탄 등에 좌우되어 변압기(전기설비) 제품 반기 매출로 고정'),
+    # 세그먼트 정의가 2018·2019·2025 에 바뀌어 연결 매출 유지
+    'SIEYUAN': ('revenue_total', '제품 세그먼트 정의가 2018·2019·2025 에 바뀌어 연결 매출 유지'),
+}
+
+
+def choose_target(peer, doc):
+    """계약 §1 규칙: 관련 세그먼트(scope=segment, 분기, 16개 이상)가 있으면 세그먼트, 없으면 파일의 primary_target."""
+    targets = doc.get('targets') or {}
+    if peer['id'] in TARGET_OVERRIDES and TARGET_OVERRIDES[peer['id']][0] in targets:
+        return TARGET_OVERRIDES[peer['id']][0], 'override', TARGET_OVERRIDES[peer['id']][1]
+    seg = targets.get('revenue_segment')
+    if seg and seg.get('scope') == 'segment' and seg.get('freq') == 'Q' and len(seg.get('points') or []) >= 16:
+        return 'revenue_segment', 'contract_segment', '관련 세그먼트 분기 16개 이상 — 계약 규칙으로 세그먼트 사용'
+    return doc.get('primary_target'), 'file_primary', '수집 파일의 primary_target'
+
+
 def analyze_peer(peer, doc, catalog, asof_mi):
-    tname = doc.get('primary_target')
+    tname, trule, tnote = choose_target(peer, doc)
     res = {'id': peer['id'], 'name': peer['name'], 'ticker': peer.get('ticker'), 'region': peer['region'],
            'tier': peer['tier'], 'grid_node': peer.get('grid_node'), 'note': peer.get('note'),
            'listed': doc.get('listed', True), 'currency': doc.get('currency'), 'unit': doc.get('unit'),
@@ -578,7 +597,8 @@ def analyze_peer(peer, doc, catalog, asof_mi):
     step = months
     yy = target_yoy(rows)
     y = {k: v[0] for k, v in yy.items()}
-    res['target'] = {'name': tname, 'label_ko': t.get('label_ko'), 'scope': t.get('scope'),
+    res['target'] = {'name': tname, 'rule': trule, 'rule_note': tnote, 'file_primary': doc.get('primary_target'),
+                     'label_ko': t.get('label_ko'), 'scope': t.get('scope'),
                      'segment_name': t.get('segment_name'), 'freq': t.get('freq'), 'window_months': months,
                      'n_levels': len(rows), 'n_yoy': len(y),
                      'first': rows[0]['key'] if rows else None, 'last': rows[-1]['key'] if rows else None,

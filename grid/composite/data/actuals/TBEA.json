@@ -372,7 +372,7 @@
      "value": 26487.1845,
      "method": "direct_reported_quarter",
      "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
-     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
      "published_date": "2024-04-09"
     },
     {
@@ -382,7 +382,7 @@
      "value": 23587.5243,
      "method": "direct_reported_quarter",
      "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
-     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
      "published_date": "2024-04-09"
     },
     {
@@ -392,7 +392,7 @@
      "value": 23816.6467,
      "method": "direct_reported_quarter",
      "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
-     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
      "published_date": "2024-04-09",
      "prior_year_comparative": 27642.8275,
      "prior_year_comparative_source": "特变电工股份有限公司2023年第三季度报告 (published 2023-10-28) PDF p.2: manual read (see note) — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2023-10-28/1218188142.PDF"
@@ -404,7 +404,7 @@
      "value": 24232.1282,
      "method": "direct_reported_quarter",
      "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
-     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
      "published_date": "2024-04-09"
     },
     {
@@ -1058,6 +1058,7 @@
   "Sources: TBEA periodic reports from cninfo static PDFs (2015 AR 修订版). Values FY2015–FY2025 = AR 分季度主要财务数据 3-month figures (FY2018 table read with pdfplumber: vertical label layout). FY2026Q1 = Q1 report; FY2026Q2 = H1 56,554.75 − Q1 24,946.05.",
   "Checks: Σ quarters = FY 营业收入 every year; Q1/H1/9M/Q3 = quarterly reports except documented restatement years (2022, 2023).",
   "TBEA consolidates a finance company (特变电工集团财务有限公司): 营业总收入 > 营业收入; 营业收入 is used throughout.",
-  "Because polysilicon/coal dominate consolidated revenue, revenue_segment (transformer/electrical-equipment products, H) and orders_segment are the relevant series for transformer-peer analysis; they are semi-annual only (no quarterly product disclosure)."
+  "Because polysilicon/coal dominate consolidated revenue, revenue_segment (transformer/electrical-equipment products, H) and orders_segment are the relevant series for transformer-peer analysis; they are semi-annual only (no quarterly product disclosure).",
+  "verify 2026-09-25: checked revenue_total FY2015Q1 (+ printed comparative 7,801.86), FY2015Q2-Q4, FY2016Q1-Q4 (Q4 1,377,720.00万元 as printed), FY2018Q1-Q4, FY2021Q1-Q4 (Q4 |logYoY|>0.4), FY2022Q1-Q4 (Q1-Q3 |logYoY|>0.4, restated for 新疆众和), FY2023Q1-Q4, FY2023Q3 comparative 27,642.83 (Q3 2023 report 调整后), FY2025Q1-Q4, FY2025Q3 comparative 24,490.46 (调整后), FY2026Q1, FY2026Q2 (ytd_difference: H1 56,554.75 − Q1 24,946.05); revenue_segment FY2024H1 (+ comparative 8,058.63), FY2025H1, FY2026H1; orders_segment FY2024H1, FY2026H1 — all match the cninfo PDFs (营业收入 not 营业总收入; 万元/元 → million). fixed 4: FY2023Q1-Q4 locators pointed to p.9 but the 营业收入 row is on p.10 of the FY2023 AR."
  ]
 }

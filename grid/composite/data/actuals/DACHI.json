@@ -18,8 +18,9 @@
    "date": "2026-04-22",
    "type": "acquisition",
    "target": "profile",
-   "note": "Ownership change: 青岛海信网络能源股份有限公司 (Hisense Network Energy, a Hisense Group company) acquiring 65% of 山东达驰电气有限公司 and two sister companies (水发驰翔, 达驰高压开关) from 水发集团/山东水发电力集团 (Shandong provincial SOE). Merger-control simple-case publicity: “青岛海信网络能源股份有限公司收购山东达驰电气有限公司等三家公司股权案”, publicity period 2026-04-03 to 2026-04-12 (Shanghai AMR, SAMR-delegated; read via a sina.com.cn mirror because the regulator page was not fetched). Completion on 2026-04-22 via 山东产权交易中心 (total ≈CNY 857m) is reported only in press coverage — NOT verified from a primary document. Before this, the company website describes Dachi as a wholly-owned subsidiary of Shandong Shuifa Electric Power Group.",
-   "source_url": "https://finance.sina.com.cn/jjxw/2026-04-07/doc-inhtsmhz7128568.shtml"
+   "note": "Ownership change: 青岛海信网络能源股份有限公司 (Hisense Network Energy, a Hisense Group company) acquiring 65% of 山东达驰电气有限公司 and two sister companies (水发驰翔, 达驰高压开关) from 水发集团/山东水发电力集团 (Shandong provincial SOE). Merger-control simple-case publicity “青岛海信网络能源股份有限公司收购山东达驰电气有限公司等三家公司股权案” on the Shanghai AMR site (SAMR-delegated; 索取号 AC61701002026268, 产生日期 2026-04-03), publicity period 2026-04-03 to 2026-04-12. Completion (2026-04-22, via 山东产权交易中心) and the deal amount appear only in press coverage — NOT verified from a primary document, so no amount is stored here. Before this, the company website describes Dachi as a wholly-owned subsidiary of Shandong Shuifa Electric Power Group.",
+   "source_url": "https://scjgj.sh.gov.cn/1571/20260403/2c984ad69d47cc69019d514ef4d02136.html",
+   "date_note": "Date = press-reported completion (unverified); the primary document only establishes the 2026-04-03..04-12 publicity window."
   }
  ],
  "profile": {
@@ -92,6 +93,7 @@
  "collection_notes": [
   "Identity: the peer list entry \"Shandong Dachi\" = 山东达驰电气有限公司 (Shandong Dachi Electric Co., Ltd.), Chengwu County, Heze, Shandong; distinct from any listed company.",
   "Company-site snapshot saved at grid/composite/data/raw/actuals/DACHI/chinadachi_en_about_us_2026-09-25.html (e-mail domain on the page is hisense.com, consistent with the 2026 Hisense acquisition).",
-  "Press reports (not used as data): Tencent/Sina/21jingji 2026-04-27/28 say Hisense Network Energy completed the purchase of 65% of 达驰电气, 水发驰翔, 达驰高压开关 for ≈CNY 857m on 2026-04-22 and mention exports to 60+ countries incl. North America — this conflicts with the company site (20+ countries, Asia/Africa/South America); the site wording is kept."
+  "Press reports (not used as data): Tencent/Sina/21jingji 2026-04-27/28 say Hisense Network Energy completed the purchase of 65% of 达驰电气, 水发驰翔, 达驰高压开关 for ≈CNY 857m on 2026-04-22 and mention exports to 60+ countries incl. North America — this conflicts with the company site (20+ countries, Asia/Africa/South America); the site wording is kept.",
+  "verify 2026-09-25: checked profile claims against https://www.chinadachi.com/en/about_us.html (live page and cached snapshot): plant address Dongjiao Industrial Park, Chengwu County, Heze, Shandong — confirmed; product range 750kV / 1.5 million kVA-and-below oil-immersed power transformers, S11–S22, SH15 amorphous, ≤35kV dry-type, GIS, annual capacity 80 million kVA, exports to 20+ countries in Asia/Africa/South America — confirmed. fixed 1: the 2026-04-22 structural_break cited a press mirror (finance.sina.com.cn); replaced with the primary Shanghai AMR publicity page (scjgj.sh.gov.cn, 2026-04-03) and removed the press-only deal amount from the break note."
  ]
 }

@@ -625,8 +625,7 @@
      "source_url": "https://static.cninfo.com.cn/finalpage/2020-07-28/1208079011.PDF",
      "locator": "思源电气 2020年半年度报告 (published 2020-07-28) PDF p.12: 营业收入构成 table '线圈类及相关产品' 本报告期金额; printed in 元; stored as CNY million (scale conversion only)",
      "published_date": "2020-07-28",
-     "prior_year_comparative": 543.3071,
-     "prior_year_comparative_source": "思源电气 2020年半年度报告 PDF p.12: 营业收入构成 table '线圈类及相关产品' 上年同期金额; https://static.cninfo.com.cn/finalpage/2020-07-28/1208079011.PDF"
+     "prior_year_comparative_note": "Printed 上年同期 543.3071 (2020 H1 report p.12) deliberately NOT stored as prior_year_comparative: it is the 2019 H1 '线圈类产品' figure on the OLD definition (excl. 油色谱及在线监测系统, which the 2019 H1 report still classed under 智能设备类), whereas the 2020 H1 value is on the new '线圈类及相关产品' definition (incl. DGA monitoring). Company did not recast; YoY FY2020H1 vs FY2019H1 is not like-for-like (see structural_breaks 2019-12-31)."
     },
     {
      "fiscal_key": "FY2020H2",
@@ -715,8 +714,10 @@
      "value": 1673.9089,
      "method": "direct_reported_half",
      "source_url": "https://static.cninfo.com.cn/finalpage/2024-08-17/1220896467.PDF",
-     "locator": "思源电气 2024年半年度报告 (published 2024-08-17) PDF p.13: 营业收入/营业成本 by product table '线圈类及相关产品' 营业收入 (no prior-year amount printed, only YoY %); printed in 元; stored as CNY million (scale conversion only)",
-     "published_date": "2024-08-17"
+     "locator": "思源电气 2024年半年度报告 (published 2024-08-17) PDF p.12: 营业收入构成 table '线圈类及相关产品' 本报告期金额 1,673,908,850.30 元 (上年同期 1,112,367,816.58 printed alongside; p.13 by-product 营业收入/营业成本 table repeats the current value); printed in 元; stored as CNY million (scale conversion only)",
+     "published_date": "2024-08-17",
+     "prior_year_comparative": 1112.3678,
+     "prior_year_comparative_source": "思源电气 2024年半年度报告 PDF p.12: 营业收入构成 table '线圈类及相关产品' 上年同期金额 1,112,367,816.58 元 (same product definition as the FY2023H1 point); https://static.cninfo.com.cn/finalpage/2024-08-17/1220896467.PDF"
     },
     {
      "fiscal_key": "FY2025H1",
@@ -761,22 +762,33 @@
    "date": "2018-12-31",
    "type": "segment_reorg",
    "target": "revenue_segment",
-   "note": "FY2018 annual report 释义 adds 变压器 (power transformers) to 线圈类产品 (2016-2018H1 definition: 中性点接地产品、电抗器、互感器). Prior-year FY2017 figure (820.79) was NOT recast, so the company treats the series as continuous; the transformer contribution before FY2018 is unknown.",
-   "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF"
+   "note": "FY2018 annual report 释义 adds 变压器 (power transformers) to 线圈类产品 (2016-2018H1 definition: 中性点接地产品、电抗器、互感器). Prior-year FY2017 figure (820.79) was NOT recast, so the company treats the series as continuous; the transformer contribution before FY2018 is unknown. FY2018H2 (= FY2018 new-definition total − FY2018H1 old-definition value) and FY2019H1 YoY therefore straddle the definition change.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2019-03-23/1205930782.PDF",
+   "affected_fiscal_keys": [
+    "FY2018H2",
+    "FY2019H1"
+   ]
   },
   {
    "date": "2019-12-31",
    "type": "segment_reorg",
    "target": "revenue_segment",
-   "note": "FY2019 annual report renames to 线圈类及相关产品 and adds 油色谱及在线监测系统 (DGA online monitoring, previously in 智能设备类); FY2018 comparative (965.61) not recast.",
-   "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF"
+   "note": "FY2019 annual report renames to 线圈类及相关产品 and adds 油色谱及在线监测系统 (DGA online monitoring, previously in 智能设备类); FY2018 comparative (965.61) not recast. The 2019 H1 report (释义 p.4) still classed 油色谱及在线监测系统 under 智能设备类, so FY2019H2 (= FY2019 1,370.96 new definition − FY2019H1 543.31 old definition) absorbs the FULL-YEAR DGA revenue, and the 2020 H1 report compares 643.38 (new) with an un-recast 543.31 (old) — verified 2026-09-25 from the 2019 H1 report p.4/p.12, FY2019 AR p.4/p.14 and 2020 H1 report p.4/p.12.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-18/1207522685.PDF",
+   "affected_fiscal_keys": [
+    "FY2019H2",
+    "FY2020H1"
+   ]
   },
   {
    "date": "2025-01-01",
    "type": "segment_reorg",
    "target": "revenue_segment",
    "note": "2025 product structure: 开关类/变压器类/保护及自动化类/电力电子类/EPC类/储能系统及元件类/租赁. FY2024 annual report printed only an industry split (no product split) so FY2024H2 is missing; 2025 AR recasts FY2024 变压器类业务 = 3,348.38 and the 2026 H1 report recasts 2025H1 = 2,010.10. Values from FY2025H1 on are 变压器类业务 and are not strictly comparable with 线圈类及相关产品 (FY2024H1 1,673.91).",
-   "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF"
+   "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+   "affected_fiscal_keys": [
+    "FY2025H1"
+   ]
   }
  ],
  "profile": {
@@ -906,6 +918,7 @@
   "Primary sources only: periodic reports on cninfo (static.cninfo.com.cn finalpage PDFs, listed via the cninfo hisAnnouncement/query API). Text extracted with pypdf and pdfplumber; every quarter cross-checked.",
   "revenue_total values FY2015-FY2025 = annual report 分季度主要财务指标 (direct 3-month figures). Verified: Σ4 quarters = FY 营业收入 (±0.05m) every year; Q1 = Q1 report; Q1+Q2 = H1 report; Q1..Q3 = Q3 report 年初至报告期末; Q3 = Q3 report 本报告期. No discrepancies for Sieyuan (no restatements affecting revenue; FY2023 AR shows 调整前=调整后 for FY2022).",
   "FY2026Q1 = 2026 Q1 report (direct); FY2026Q2 = 2026 H1 report 营业收入 10,795.21 − Q1 4,568.66 (ytd_difference).",
-  "Text-layer of some Sieyuan PDFs (2020, 2021, 2023 AR) is character-scrambled in pypdf; values were re-read with pdfplumber and all passed the sum checks."
+  "Text-layer of some Sieyuan PDFs (2020, 2021, 2023 AR) is character-scrambled in pypdf; values were re-read with pdfplumber and all passed the sum checks.",
+  "verify 2026-09-25: checked revenue_total FY2015Q1, FY2018Q1-Q4, FY2020Q1-Q4, FY2021Q1 (|logYoY| 0.74), FY2025Q1-Q4 (Q2/Q4 |logYoY|>0.4), FY2026Q1, FY2026Q2 (ytd_difference: H1 10,795.21 − Q1 4,568.66) and revenue_segment FY2019H1, FY2020H1, FY2024H1, FY2025H1, FY2025H2 (FY 4,633.38), FY2026H1 against the cninfo PDFs (FY2024 AR and 2025 H1 report confirmed to carry no product split); all values, period_end dates, 元→million scale and calendar FY labels match. fixed 2: (1) FY2024H1 segment — the 2024 H1 report DOES print the same-definition prior-year amount 1,112.37 (locator wrongly said only a YoY % was printed): prior_year_comparative added, locator corrected; (2) FY2020H1 segment — printed comparative 543.31 is on the pre-2019 definition (DGA monitoring excluded), so it was removed from prior_year_comparative (kept in prior_year_comparative_note); segment breaks now list affected_fiscal_keys (FY2018H2/FY2019H1, FY2019H2/FY2020H1, FY2025H1)."
  ]
 }

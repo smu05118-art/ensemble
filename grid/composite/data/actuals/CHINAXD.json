@@ -676,6 +676,7 @@
   "Sources: China XD periodic reports from cninfo static PDFs (latest revised versions used: 2018 AR 更新后; 2021 Q1/H1/Q3/AR 修订版 of 2023-02-28).",
   "Values FY2015–FY2025 = AR 分季度主要财务数据 (3-month figures). FY2019 and FY2021 tables had wrapped cells; digits reassembled by hand and verified: Q1+Q2 = H1, +Q3 = 9M, Σ = FY exactly.",
   "Uses 营业收入 (operating revenue) rather than 营业总收入 (China XD consolidates a finance company whose interest income sits in 营业总收入).",
-  "FY2026Q2 = H1 2026 12,213.04 − Q1 5,511.55 (ytd_difference)."
+  "FY2026Q2 = H1 2026 12,213.04 − Q1 5,511.55 (ytd_difference).",
+  "verify 2026-09-25: checked revenue_total FY2015Q1-Q4, FY2017Q1-Q4, FY2019Q1-Q4 (wrapped cells), FY2021Q1-Q4 (修订版 AR; Q4 |logYoY| 0.66), FY2021Q3 comparative 3,419.31 (revised Q3 report 调整后), FY2022Q1-Q4 (Q4 |logYoY| 0.56), FY2023Q1-Q4, FY2024Q3 + comparative 4,677.58 (Q3 2024 report 调整后), FY2026Q1 (营业收入 5,511.55, not 营业总收入 5,523.91), FY2026Q2 (ytd_difference: H1 1,221,303.62万元 − Q1) against the cninfo PDFs; all match (元/万元 → million, calendar quarters). fixed 0."
  ]
 }
