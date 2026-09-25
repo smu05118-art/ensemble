@@ -18,8 +18,25 @@ from site_navigation import menu, assets  # noqa: E402
 OUT = REPO / 'grid' / 'composite.html'
 
 
+def slim(data):
+    """화면이 쓰지 않는 필드를 뺀다(전체는 out/composite.json 에 남는다)."""
+    keep_yoy = {'trass_sanil_ansan_8504212_post'}
+    data['proxy_yoy'] = {k: v for k, v in (data.get('proxy_yoy') or {}).items() if k in keep_yoy}
+    for p in data.get('peers') or []:
+        p.pop('other_targets', None)
+        for c in p.get('candidates') or []:
+            for k in ('label_ko', 'family', 'kind', 'first', 'last'):
+                c.pop(k, None)
+            for row in c.get('ccf') or []:
+                row.pop('p', None)
+        mo = p.get('monthly') or {}
+        for x in mo.get('proxies') or []:
+            x.pop('label_ko', None)
+    return data
+
+
 def main():
-    data = json.loads((COMP / 'out' / 'composite.json').read_text(encoding='utf-8'))
+    data = slim(json.loads((COMP / 'out' / 'composite.json').read_text(encoding='utf-8')))
     payload = json.dumps(data, ensure_ascii=False, separators=(',', ':'), sort_keys=True)
     payload = payload.replace('</', '<\\/').replace('<!--', '<\\!--')
     html = (HERE / 'page_template.html').read_text(encoding='utf-8')
