@@ -1155,6 +1155,7 @@
   "revenue_total: DART 분기·반기·사업보고서 연결 포괄손익계산서 매출(3개월 열 / 4분기=연간−3분기 누계). 모든 연도에서 3개월 합=누계 검산 통과.",
   "revenue_segment: HD현대일렉트릭 IR 실적발표 자료(hd-hyundaielectric.com IR 자료실 PDF) '사업부문별 매출' 누적막대의 '전력기기' 라벨(억원). 막대 합계가 DART 연결 매출(억원 반올림)과 전 분기 일치, 같은 분기가 인쇄된 2~3개 덱 값이 모두 일치함을 확인. 2024년 1분기~2025년 1분기 덱 5개는 텍스트 레이어가 없어 렌더링 이미지에서 판독(렌더 PNG·원본 PDF를 data/raw/actuals/HDHE 에 보관), 해당 값은 후속 텍스트 덱 비교열과 일치.",
   "orders_segment: IR '실적 요약' 표 수주(백만불) — 통화 USD(타깃 레벨 currency=USD). 2023·2024 분기합이 연간 수주(3,564·3,816백만불, 2024년 4분기 덱)와 일치.",
-  "primary_target=revenue_total: IR 전력기기 구간은 본사 사업부 기준이라 알라바마 변압기 공장(종속법인) 매출이 빠지고 2024Q1 배전변압기 재분류 단절이 있어 연결 매출을 모델 타깃으로 유지."
+  "primary_target=revenue_total: IR 전력기기 구간은 본사 사업부 기준이라 알라바마 변압기 공장(종속법인) 매출이 빠지고 2024Q1 배전변압기 재분류 단절이 있어 연결 매출을 모델 타깃으로 유지.",
+  "verify 2026-09-25: checked revenue_total FY2017Q2,FY2017Q3,FY2017Q4,FY2018Q4,FY2019Q4,FY2020Q2,FY2021Q2,FY2023Q1,FY2023Q3,FY2024Q4,FY2026Q2 (DART 연결손익 재추출) + revenue_segment FY2018Q4,FY2019Q3,FY2019Q4,FY2020Q4,FY2021Q3,FY2021Q4,FY2024Q1–Q4,FY2025Q2,FY2026Q1,FY2026Q2 (IR 덱 4Q19·4Q21·2Q26 재다운로드·렌더, 1Q24–4Q24 보관 PNG) + orders_segment FY2025Q2,FY2026Q1,FY2026Q2; fixed 0. 참고: 3Q24·4Q24 덱은 전년 동기(3Q23 3,264·4Q23 3,857억)를 배전변압기 이관 전 기준으로 인쇄하고 회사 YoY(−4.1%·+50.6%)도 그 기준 — FY2024Q3·Q4 segment YoY는 기준 혼합(구조단절 기록됨), 연결 매출(primary)은 영향 없음."
  ]
 }

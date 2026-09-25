@@ -931,6 +931,7 @@
   "FY2023Q2: PY column 26.31998 deviates >2% from prior point 2631.998 -> not stored",
   "범위: 연결 결산 공시 없음(NSE·BSE 결과 목록이 standalone 만) — 별도(standalone)=회사 전체. 결산서 note: \"The activities of the Company relate to only one segment i.e. Electrical Transformers\" → revenue_segment 불필요, primary_target=revenue_total.",
   "orders: 분기 수주(order intake) 공시 없음 — 보도자료에 수주잔고(order backlog, 예: FY26 말 INR 1,200 cr / 10,270 MVA)만 간헐적으로 있어 orders_segment 미작성.",
-  "원문: BSE 공시 PDF 대부분이 스캔본(회사 OCR 텍스트층) — pdfplumber/tesseract 로 읽고 거래소 구조화 값과 일치할 때만 PDF 검증으로 표기."
+  "원문: BSE 공시 PDF 대부분이 스캔본(회사 OCR 텍스트층) — pdfplumber/tesseract 로 읽고 거래소 구조화 값과 일치할 때만 PDF 검증으로 표기.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2016Q4,FY2018Q1-Q4,FY2019Q1,FY2020Q4,FY2021Q1-Q4,FY2022Q1-Q4,FY2023Q1,FY2026Q3-Q4,FY2027Q1 (incl. prior_year_comparative) against BSE PDFs (text layer, tesseract) and 9M/H1 arithmetic; fixed 0."
  ]
 }

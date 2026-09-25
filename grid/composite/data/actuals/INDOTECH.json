@@ -903,6 +903,7 @@
   "FY2025Q3: PY column 13047.0 deviates >2% from prior point 1394.7 -> not stored",
   "범위: 연결 결산 공시 없음(NSE·BSE 결과 목록 standalone 만) — 별도=회사 전체. AR FY26 note: 변압기 단일 부문 → primary_target=revenue_total.",
   "단위: 2024 년까지 INR lakh 정수(소수점 없음)로 인쇄 → 0.1 INR mn 정밀도.",
-  "orders: 분기 수주액 공시 없음 — orders_segment 미작성."
+  "orders: 분기 수주액 공시 없음 — orders_segment 미작성.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2016Q3,FY2017Q1-Q3,FY2018Q1-Q4,FY2019Q1,FY2019Q4,FY2020Q3-Q4,FY2021Q1-Q4,FY2022Q1-Q4,FY2023Q1,FY2023Q4,FY2024Q1-Q3,FY2025Q1-Q2,FY2025Q4,FY2026Q1,FY2026Q4,FY2027Q1 (incl. prior_year_comparative) against BSE PDFs (text layer, tesseract); fixed 0. IGAAP-era values are 'Total income from operations (net of excise)', consistent with Ind AS revenue from operations."
  ]
 }

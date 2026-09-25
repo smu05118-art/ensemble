@@ -159,10 +159,10 @@
      "fiscal_key": "FY2018Q3",
      "period_start": "2017-10-01",
      "period_end": "2017-12-31",
-     "value": 204.7,
+     "value": 204.704,
      "method": "direct_reported_quarter",
      "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/5/c18fedbe-1baa-46d2-857d-f70b00e4c6e3.pdf",
-     "locator": "BSE filing 2018-05-28 (2018-05-28_c18fedbe-1baa-46d2-857d-f70b00e4c6e3.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-12-31'; printed 2047 (INR lakh)",
+     "locator": "BSE filing 2018-05-28 (2018-05-28_c18fedbe-1baa-46d2-857d-f70b00e4c6e3.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-12-31'; printed 2,047.04 (INR lakh; read visually; FY2018 check 2,856.89+1,345.19+2,047.04+2,551.38 = 8,800.50)",
      "published_date": "2018-05-28",
      "verification": "pdf_ocr+exchange_structured",
      "cross_check": {
@@ -392,10 +392,10 @@
      "fiscal_key": "FY2022Q2",
      "period_start": "2021-07-01",
      "period_end": "2021-09-30",
-     "value": 322.44,
+     "value": 322.444,
      "method": "direct_reported_quarter",
      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/859fa50e-2ab7-4f55-8a19-0b72748bfc78.pdf",
-     "locator": "BSE filing 2021-11-01 (2021-11-01_859fa50e-2ab7-4f55-8a19-0b72748bfc78.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 3,224.4 (INR lakh)",
+     "locator": "BSE filing 2021-11-01 (2021-11-01_859fa50e-2ab7-4f55-8a19-0b72748bfc78.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 3,224.44 (INR lakh; text layer truncated; confirmed by FY2023Q2 filing 3rd column 3,224.44 and H1 FY2022 6,868.52-3,644.08)",
      "published_date": "2021-11-01",
      "verification": "pdf_plumb+exchange_structured",
      "cross_check": {
@@ -863,6 +863,7 @@
   "범위: 연결 결산 공시 없음(BSE 결과 목록 standalone 만; NSE 미상장) — 별도(standalone)=회사 전체. AR FY26 note 39: \"only one segment i.e. Transformers & Parts\" → primary_target=revenue_total.",
   "수출 비중: 분기 결산서에는 인쇄되지 않음. 연간 수출 비중(IR 2026-08 slide 19: FY22 26%·FY23 56%·FY24 52%·FY25 43%·FY26 48%)과 AR FY26 지역별 매출(국내 33,701.62 / 해외 31,492.37 lakh)을 profile.export_share_annual 에 기록.",
   "orders: 분기 수주액 수치 공시 없음(IR 에 정성적 코멘트·수주잔고 약 INR 300 cr 수준만) — orders_segment 미작성.",
-  "원문: 2022-2026 결산 PDF 의 재무표 페이지가 이미지 — tesseract OCR 로 읽고 BSE DB 값과 일치 확인."
+  "원문: 2022-2026 결산 PDF 의 재무표 페이지가 이미지 — tesseract OCR 로 읽고 BSE DB 값과 일치 확인.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2017Q2-Q3,FY2018Q2-Q4,FY2019Q1-Q3,FY2020Q1-Q4,FY2021Q2-Q4,FY2022Q1-Q4,FY2023Q1-Q4,FY2024Q1-Q3,FY2025Q1-Q4,FY2026Q3-Q4,FY2027Q1 against BSE PDFs (text layer, tesseract, visual incl. rotated pages) and annual totals; fixed 2: FY2018Q3 204.7 -> 204.704, FY2022Q2 322.44 -> 322.444 (truncated reads). The large YoY swings (FY2018Q2 134.5, FY2025Q4 2,318.6, FY2026Q4 1,516.5) are as printed."
  ]
 }
