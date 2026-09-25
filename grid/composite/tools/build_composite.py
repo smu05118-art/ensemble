@@ -33,6 +33,7 @@ SCREEN_T = 1.0
 FDR_Q = 0.10
 LEAD_MARGIN = 0.05
 MAX_CANDIDATES = 28
+RECENT_OOS = 12  # 공개 안정성 조건: 최근 12개 OOS 분기에서도 직전YoY(최선 기준모형)보다 나아야 한다
 # 범위를 바꾸는 구조 변화 유형 — 같은 보고서 비교값이 없는 분기의 YoY 를 이 변화에 걸쳐 만들지 않는다.
 SCOPE_BREAK_TYPES = {'divestiture', 'restatement', 'segment_reorg', 'excluded_predecessor_successor_history', 'pending_disposal'}
 # 나우캐스트 공개를 막지 않는 유형(매출 범위와 무관)
@@ -171,31 +172,24 @@ def load_proxies():
     return catalog
 
 
-def window_value(proxy, end_mi, months=3, allow_partial=False):
-    """프록시 창 집계. 완결(3/3)이 아니면 None — allow_partial 이면 (값, 관측월들) 반환."""
+def window_value(proxy, end_mi, months=3):
+    """프록시 창 집계. 창의 모든 달이 없으면 None(부분 관측으로 값을 만들지 않는다)."""
     if proxy.get('qonly'):
         ends = list(range(end_mi, end_mi - months, -3))
-        if any(e not in proxy['obs'] for e in ends) or allow_partial:
+        if any(e not in proxy['obs'] for e in ends):
             return None
         vals = [proxy['obs'][e] for e in ends]
         return sum(vals) if proxy['agg'] == 'sum' else (sum(vals) / len(vals) if proxy['agg'] == 'mean' else vals[0])
     ms = list(range(end_mi - months + 1, end_mi + 1))
-    have = [m for m in ms if m in proxy['obs']]
-    if len(have) < months and not allow_partial:
+    if any(m not in proxy['obs'] for m in ms):
         return None
-    if not have:
-        return None
-    vals = [proxy['obs'][m] for m in have]
+    vals = [proxy['obs'][m] for m in ms]
     agg = proxy['agg']
     if agg == 'sum':
-        v = sum(vals)
-    elif agg == 'mean':
-        v = sum(vals) / len(vals)
-    else:
-        v = proxy['obs'][max(have)]
-    if allow_partial:
-        return v, have
-    return v
+        return sum(vals)
+    if agg == 'mean':
+        return sum(vals) / len(vals)
+    return vals[-1]
 
 
 def proxy_yoy(proxy, end_mi, months=3):
@@ -204,29 +198,6 @@ def proxy_yoy(proxy, end_mi, months=3):
     if a is None or b is None or a <= 0 or b <= 0:
         return None
     return math.log(a / b)
-
-
-def proxy_partial_yoy(proxy, end_mi, months=3):
-    """부분 관측 YoY — 현재 창에서 관측된 달과 같은 달의 전년 값만 비교한다."""
-    cur = window_value(proxy, end_mi, months, allow_partial=True)
-    if cur is None:
-        return None
-    _, have = cur
-    prev = [m - 12 for m in have]
-    if any(p not in proxy['obs'] for p in prev):
-        return None
-    agg = proxy['agg']
-    cv = [proxy['obs'][m] for m in have]
-    pv = [proxy['obs'][m] for m in prev]
-    if agg == 'sum':
-        a, b = sum(cv), sum(pv)
-    elif agg == 'mean':
-        a, b = sum(cv) / len(cv), sum(pv) / len(pv)
-    else:
-        a, b = cv[-1], pv[-1]
-    if a <= 0 or b <= 0:
-        return None
-    return math.log(a / b), [ym_of(m) for m in have]
 
 
 # ── 타깃 ──────────────────────────────────────────────────────
@@ -777,13 +748,20 @@ def analyze_peer(peer, doc, catalog, asof_mi):
             ew_nc, _, det_nc = ensemble(y, singles_nc, base, None)
             ev_nc = evaluate(y, ew_nc, base, {t: d['fallback'] for t, d in det_nc.items()})
             g_nc, why_nc = grade(ev_nc, len(y))
-            comp_abs_nc = [abs(ew_nc[t] - y[t]) for t in ew_nc if t in y]
+            # 분할 conformal 구간은 프록시가 실제로 쓰인(대체가 아닌) 분기의 오차로만 잰다
+            comp_abs_nc = [abs(ew_nc[t] - y[t]) for t in ew_nc if t in y and not det_nc[t]['fallback']]
+            recent = [t for t in sorted(ew_nc) if t in y and t in base][-RECENT_OOS:]
+            if len(recent) >= MIN_OOS:
+                ev_recent = evaluate(y, {t: ew_nc[t] for t in recent}, base, {t: det_nc[t]['fallback'] for t in recent})
+                ev_nc['recent_rel_mae_best'] = ev_recent['rel_mae_best']
+                ev_nc['recent_n'] = ev_recent['n']
         else:
             ev_nc, g_nc, why_nc, comp_abs_nc = None, 'N', '지금 창이 완결된 프록시 없음', []
         res['composite']['nowcast_eval'] = round_dict(ev_nc) if ev_nc else None
         res['composite']['nowcast_grade'] = g_nc
         res['composite']['nowcast_grade_reason'] = why_nc
-        res['nowcast'] = nowcast(doc, y, rows, per, singles_nc, feas, base, g_nc, step, months, target_mi, comp_abs_nc, tname)
+        res['nowcast'] = nowcast(doc, y, rows, per, singles_nc, feas, base, g_nc, step, months, target_mi, comp_abs_nc, tname,
+                                 (ev_nc or {}).get('recent_rel_mae_best'))
     else:
         res['composite'] = None
         res['nowcast'] = None
@@ -807,7 +785,7 @@ def compact_candidate(e):
     return out
 
 
-def nowcast(doc, y, rows, per, singles, feas, base, g, step, months, target_mi, comp_abs, tname):
+def nowcast(doc, y, rows, per, singles, feas, base, g, step, months, target_mi, comp_abs, tname, recent_rel=None):
     """현재 대상 분기(마지막 실적 다음 분기) 나우캐스트. 창이 완결된 시차만 쓰고(부분 관측 없음),
     등급·구간은 같은 조건의 rolling-origin 앙상블(nowcast_grade)에서 가져온다."""
     if target_mi is None:
@@ -842,8 +820,8 @@ def nowcast(doc, y, rows, per, singles, feas, base, g, step, months, target_mi, 
         x_now, x_prev = proxy_yoy(pr, src_end, months), proxy_yoy(pr, src_end - step, months)
         if x_now is None or x_prev is None:
             continue
-        members.append({'id': pid, 'k': k, 't_full': rnd(best[0], 3), 'x_yoy': rnd(x_now),
-                        'pred_yoy': rnd(prev + bcoef * (x_now - x_prev)),
+        members.append({'id': pid, 'k': k, 't_full': rnd(best[0], 3), 'x_yoy': rnd(x_now), 'dx': rnd(x_now - x_prev),
+                        'b': rnd(bcoef), 'pred_yoy': rnd(prev + bcoef * (x_now - x_prev)),
                         'months': [ym_of(m) for m in range(src_end - months + 1, src_end + 1)]})
     out['members'] = members
     if not members:
@@ -853,6 +831,8 @@ def nowcast(doc, y, rows, per, singles, feas, base, g, step, months, target_mi, 
     out['status'] = 'complete'
     yhat = sc.mean([m['pred_yoy'] for m in members])
     out['pred_yoy'] = rnd(yhat)
+    out['prev_yoy'] = rnd(prev)
+    out['adjustment'] = rnd(yhat - prev)  # 직전 YoY 대비 프록시가 옮긴 폭
     halfw = sc.conformal_halfwidth(comp_abs, 0.8)
     out['halfwidth_80'] = rnd(halfw)
     out['interval_yoy'] = [rnd(yhat - halfw), rnd(yhat + halfw)] if halfw is not None else None
@@ -880,17 +860,24 @@ def nowcast(doc, y, rows, per, singles, feas, base, g, step, months, target_mi, 
     breaks = [b for b in (doc.get('structural_breaks') or []) if b.get('date') and b['date'][:7] >= ym_of(target_mi - 15)
               and applies(b, tname) and b.get('type') not in NON_GATING_BREAK_TYPES]
     out['recent_breaks'] = breaks
+    out['recent_rel'] = rnd(recent_rel)
+    stable = recent_rel is not None and recent_rel < 1.0
     if g not in ('A', 'B'):
         out['reasons'].append(f'나우캐스트 앙상블 등급 {g} — 수치 공개 보류(A·B 만 공개)')
+    elif not stable:
+        out['reasons'].append('최근 %d개 OOS 분기에서 직전YoY 대비 우위 없음(상대 MAE %s) — 안정성 조건 미충족으로 공개 보류'
+                              % (RECENT_OOS, '–' if recent_rel is None else f'{recent_rel:.2f}'))
     if breaks:
         out['reasons'].append('최근/대상 기간 구조 변화: ' + '; '.join(str(b.get('type')) + ' ' + str(b.get('date')) for b in breaks))
-    out['published'] = (g in ('A', 'B')) and not breaks
+    out['published'] = (g in ('A', 'B')) and stable and not breaks
     if not out['published']:
         for key in ('pred_yoy', 'interval_yoy', 'level', 'level_interval', 'halfwidth_80'):
             out.pop(key, None)
+        for key in ('prev_yoy', 'adjustment'):
+            out.pop(key, None)
         for m in members:
-            m.pop('pred_yoy', None)
-            m.pop('x_yoy', None)
+            for key in ('pred_yoy', 'x_yoy', 'dx', 'b'):
+                m.pop(key, None)
     return out
 
 
@@ -1088,7 +1075,7 @@ def main():
         'asof': asof,
         'anchor': peers['anchor'],
         'selection_rule': peers.get('selection_rule'),
-        'params': {'pw_min_n': PW_MIN_N, 'lags': LAGS, 'lead_lags': LEAD_LAGS, 'min_train': MIN_TRAIN, 'min_oos': MIN_OOS, 'screen_t': SCREEN_T,
+        'params': {'pw_min_n': PW_MIN_N, 'recent_oos': RECENT_OOS, 'lags': LAGS, 'lead_lags': LEAD_LAGS, 'min_train': MIN_TRAIN, 'min_oos': MIN_OOS, 'screen_t': SCREEN_T,
                    'fdr_q': FDR_Q, 'lead_margin': LEAD_MARGIN, 'max_candidates': MAX_CANDIDATES},
         'proxies': {pid: {k: catalog[pid][k] for k in ('label_ko', 'unit', 'agg', 'kind', 'family', 'first', 'last',
                                                       'release_lag_days', 'source', 'notes')} for pid in used},

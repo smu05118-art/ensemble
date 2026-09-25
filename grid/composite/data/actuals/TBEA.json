@@ -7,7 +7,8 @@
   "TBEA consolidates a finance company (特变电工集团财务有限公司): 营业总收入 > 营业收入; 营业收入 is used throughout.",
   "Because polysilicon/coal dominate consolidated revenue, revenue_segment (transformer/electrical-equipment products, H) and orders_segment are the relevant series for transformer-peer analysis; they are semi-annual only (no quarterly product disclosure).",
   "verify 2026-09-25: checked revenue_total FY2015Q1 (+ printed comparative 7,801.86), FY2015Q2-Q4, FY2016Q1-Q4 (Q4 1,377,720.00万元 as printed), FY2018Q1-Q4, FY2021Q1-Q4 (Q4 |logYoY|>0.4), FY2022Q1-Q4 (Q1-Q3 |logYoY|>0.4, restated for 新疆众和), FY2023Q1-Q4, FY2023Q3 comparative 27,642.83 (Q3 2023 report 调整后), FY2025Q1-Q4, FY2025Q3 comparative 24,490.46 (调整后), FY2026Q1, FY2026Q2 (ytd_difference: H1 56,554.75 − Q1 24,946.05); revenue_segment FY2024H1 (+ comparative 8,058.63), FY2025H1, FY2026H1; orders_segment FY2024H1, FY2026H1 — all match the cninfo PDFs (营业收入 not 营业总收入; 万元/元 → million). fixed 4: FY2023Q1-Q4 locators pointed to p.9 but the 营业收入 row is on p.10 of the FY2023 AR.",
-  "fix 2026-09-25 (audit): FY2023H2 revenue_segment = FY2023 annual − restated 2023H1 (both post-自控 basis); previously used original 2023H1 7,783.7105 (mixed basis, +2.6%)."
+  "fix 2026-09-25 (audit): FY2023H2 revenue_segment = FY2023 annual − restated 2023H1 (both post-自控 basis); previously used original 2023H1 7,783.7105 (mixed basis, +2.6%).",
+  "annotate 2026-09-25: structural_break 2024-12-31 affects_target=false (근거: 기존 note — 동일 기준 품목명 변경)"
  ],
  "currency": "CNY",
  "fiscal_year_end_month": 12,
@@ -175,6 +176,8 @@
    "type": "acquisition"
   },
   {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: product row renamed 变压器产品→电气设备产品 on the same base (growth printed against the old figures)",
    "date": "2024-12-31",
    "note": "Product row renamed 变压器产品 → 电气设备产品 from the FY2024 AR; growth rates printed against the old 变压器产品 figures (FY2023 18,484.73; 2024H1 10,308.61) show the same base.",
    "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",

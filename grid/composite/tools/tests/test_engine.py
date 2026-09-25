@@ -199,6 +199,54 @@ class EngineTest(unittest.TestCase):
         self.assertIn('trass_kr_8504212_exansan', ids)
         self.assertIn('fred_IPG3353S', ids)
 
+    def _nowcast_fixture(self, comparative_ratio=1.0, breaks=None):
+        doc, proxy = synth(lead_q=1, noise=0.01, n_q=40)
+        rows, months = bc.target_quarters(doc, 'revenue_total')
+        if comparative_ratio != 1.0:  # 최근 비교값이 최초 공시와 다르게(재작성) 인쇄된 경우
+            by = {r['end_mi']: r for r in rows}
+            for r in rows[-3:]:
+                r['comparative'] = by[r['end_mi'] - 12]['value'] * comparative_ratio
+        y = {k: v[0] for k, v in bc.target_yoy(rows).items()}
+        xl = bc.proxy_yoy_by_lag(proxy, sorted(y), 3, bc.LAGS, 3)
+        base = bc.baselines(y, 3)
+        target_mi = rows[-1]['end_mi'] + 3
+        ks = [k for k in bc.LEAD_LAGS if bc.proxy_yoy(proxy, target_mi - 3 * k, 3) is not None
+              and bc.proxy_yoy(proxy, target_mi - 3 * (k + 1), 3) is not None]
+        singles = {'p': bc.honest_single_proxy(y, {k: xl[k] for k in ks}, 1, 3, lags=ks)}
+        entry = {'id': 'p', 'sign': 1}
+        doc['structural_breaks'] = breaks or []
+        return doc, y, rows, [(entry, xl, proxy)], singles, {'p': ks}, base, target_mi
+
+    def test_nowcast_gate(self):
+        doc, y, rows, per, singles, feas, base, tmi = self._nowcast_fixture()
+        out = bc.nowcast(doc, y, rows, per, singles, feas, base, 'A', 3, 3, tmi, [0.01] * 10, 'revenue_total', 0.8)
+        self.assertTrue(out['published'])
+        self.assertIn('pred_yoy', out)
+        self.assertIn('level', out)
+        held = bc.nowcast(doc, y, rows, per, singles, feas, base, 'A', 3, 3, tmi, [0.01] * 10, 'revenue_total', 1.05)
+        self.assertFalse(held['published'])                    # 최근 구간 우위 없음 → 보류
+        self.assertNotIn('pred_yoy', held)
+        self.assertTrue(all('pred_yoy' not in m for m in held['members']))
+        c = bc.nowcast(doc, y, rows, per, singles, feas, base, 'C', 3, 3, tmi, [0.01] * 10, 'revenue_total', 0.8)
+        self.assertFalse(c['published'])
+
+    def test_nowcast_break_and_level_rules(self):
+        doc, y, rows, per, singles, feas, base, tmi = self._nowcast_fixture()
+        doc['structural_breaks'] = [{'date': bc.ym_of(tmi - 2) + '-01', 'type': 'acquisition'}]
+        out = bc.nowcast(doc, y, rows, per, singles, feas, base, 'A', 3, 3, tmi, [0.01] * 10, 'revenue_total', 0.8)
+        self.assertFalse(out['published'])
+        doc['structural_breaks'] = [{'date': bc.ym_of(tmi - 2) + '-01', 'type': 'capacity_expansion'}]
+        out = bc.nowcast(doc, y, rows, per, singles, feas, base, 'A', 3, 3, tmi, [0.01] * 10, 'revenue_total', 0.8)
+        self.assertTrue(out['published'])                      # 생산능력 확대는 범위 변화가 아니다
+        doc, y, rows, per, singles, feas, base, tmi = self._nowcast_fixture(comparative_ratio=1.05)
+        out = bc.nowcast(doc, y, rows, per, singles, feas, base, 'A', 3, 3, tmi, [0.01] * 10, 'revenue_total', 0.8)
+        self.assertNotIn('level', out)                         # 재작성 5% → 레벨 환산 생략
+
+    def test_conformal_index(self):
+        errs = [i / 100 for i in range(1, 11)]                 # n=10 → ceil(0.8*11)=9 번째
+        self.assertAlmostEqual(sc.conformal_halfwidth(errs, 0.8), 0.09)
+        self.assertIsNone(sc.conformal_halfwidth([0.1, 0.2, 0.3], 0.8))
+
     def test_t_pvalue(self):
         self.assertAlmostEqual(sc.t_sf_two_sided(2.0, 10), 0.0734, places=3)
         self.assertAlmostEqual(sc.t_sf_two_sided(2.228, 10), 0.05, places=3)
