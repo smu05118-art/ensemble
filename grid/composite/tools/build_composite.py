@@ -28,12 +28,17 @@ LAGS = [-2, -1, 0, 1, 2, 3, 4]
 LEAD_LAGS = [0, 1, 2, 3, 4]
 MIN_TRAIN = 8
 MIN_OOS = 8
+PW_MIN_N = 12  # 사전백색화 상관을 판정에 쓰는 최소 짝 수(분기). 월은 24.
 SCREEN_T = 1.0
 FDR_Q = 0.10
 LEAD_MARGIN = 0.05
 MAX_CANDIDATES = 28
 ASOF_DEFAULT = '2026-09-25'
-ANCHOR_SERIES = 'trass_sanil_ansan_8504212'
+ANCHOR_RAW = 'trass_sanil_ansan_8504212'
+ANCHOR_SERIES = 'trass_sanil_ansan_8504212_post'
+# 산일전기 대미 수출이 분기 1천만 달러를 처음 넘은 2022Q3 부터만 쓴다 — 그 전 YoY 는 신규 고객 진입(램프업) 기저효과라
+# 산업 사이클과 무관하다(2018Q1 76만 달러 → 2025Q4 9,630만 달러). 상관 결과를 보기 전 규칙이 아니라 기저효과 확인 후 1회 도입.
+ANCHOR_RAMP_START = '2022-07'
 
 # ── 사전 등록 후보(결과를 보기 전에 제품·지역 논리로 고정) ─────────────
 GLOBAL_CANDIDATES = [
@@ -129,6 +134,13 @@ def load_proxies():
                 'release_lag_days': s.get('release_lag_days'), 'notes': s.get('notes'), 'obs': obs,
                 'first': ym_of(min(obs)), 'last': ym_of(max(obs)), 'source': (doc.get('source') or {}).get('name'),
             }
+    raw = catalog.get(ANCHOR_RAW)
+    if raw:
+        cut = month_index(ANCHOR_RAMP_START)
+        post = {m: v for m, v in raw['obs'].items() if m >= cut}
+        catalog[ANCHOR_SERIES] = dict(raw, id=ANCHOR_SERIES, obs=post, first=ym_of(min(post)), last=ym_of(max(post)),
+                                      label_ko='안산시 HS850421·22 수출(램프업 이후 2022-07~, 산일전기 출하 대리)',
+                                      notes=(raw.get('notes') or '') + ' 램프업 이후만(2022-07~).')
     ytd = catalog.get('nea_grid_investment_ytd')
     if ytd:
         # 누계(YTD) → 분기 유량: 3월 = 1~3월 누계, 그 외 = 누계(m) − 누계(m−3) (같은 해 안에서만)
@@ -307,7 +319,7 @@ def prewhiten(y, proxy, months, step, max_p=2):
 COVID_Q = (month_index('2020-03') // 3, month_index('2021-06') // 3)  # 팬데믹 급락·기저효과 분기(달력 분기 번호)
 
 
-def pw_ccf(pw, lags, sign, step=3):
+def pw_ccf(pw, lags, sign, step=3, min_n=12):
     rows = []
     if pw is None:
         return [{'k': k, 'n': 0, 'r': None, 'p': None, 'signed_r': None, 'r_excovid': None} for k in lags]
@@ -319,7 +331,7 @@ def pw_ccf(pw, lags, sign, step=3):
     for k in lags:
         pairs = [(xf[q - k], v, q) for q, v in yf.items() if (q - k) in xf]
         n = len(pairs)
-        r = sc.pearson([a for a, _, _ in pairs], [b for _, b, _ in pairs]) if n >= 8 else None
+        r = sc.pearson([a for a, _, _ in pairs], [b for _, b, _ in pairs]) if n >= min_n else None
         p_one = None
         if r is not None:
             p2 = sc.corr_pvalue(r, n)
@@ -540,8 +552,10 @@ def candidate_ids(peer, doc, catalog):
         add(pid, 'regional')
     for pid in GLOBAL_CANDIDATES:
         add(pid, 'global')
-    if peer['id'] != 'SANIL':
+    if peer['id'] not in ('SANIL', 'SANIL_PROXY'):
         add(ANCHOR_SERIES, 'anchor_diag', ensemble=False)
+    if peer['id'] == 'SANIL_PROXY':  # 타깃 구성요소(안산 하위 계열)는 후보에서 뺀다
+        ids = [i for i in ids if not i.startswith('trass_sanil_')]
     keep = ids[:MAX_CANDIDATES]
     if ANCHOR_SERIES in ids and ANCHOR_SERIES not in keep:
         keep.append(ANCHOR_SERIES)
@@ -636,7 +650,7 @@ def analyze_peer(peer, doc, catalog, asof_mi):
         for row in ccf:  # 원계열(동조 크기): n_eff 보정 단측 p — FDR 대상 아님
             if row['p'] is not None:
                 row['p'] = row['p'] / 2 if (row['signed_r'] or 0) > 0 else 1 - row['p'] / 2
-        pw = pw_ccf(prewhiten(y, pr, months, step), LAGS, sign, step)
+        pw = pw_ccf(prewhiten(y, pr, months, step), LAGS, sign, step, min_n=PW_MIN_N)
         entry = {'id': pid, 'label_ko': pr['label_ko'], 'role': roles[pid]['role'], 'why': roles[pid]['why'],
                  'in_ensemble': roles[pid]['ensemble'],
                  'sign': sign, 'kind': pr['kind'], 'family': pr['family'], 'first': pr['first'], 'last': pr['last'],
@@ -828,7 +842,7 @@ def summarize(res):
 MONTH_LAGS = list(range(-6, 13))
 
 
-def monthly_ccf(doc, catalog, cand_ids, roles):
+def monthly_ccf(doc, catalog, cand_ids, roles, min_months=36):
     """월매출 단월 로그 YoY 와 프록시 단월 YoY 를 AR(≤3) 사전백색화한 뒤 k=−6…+12 개월 교차상관.
     분기 판정과 같은 규칙(회사 안 BH-FDR q<0.10, 선행 여유 0.05)으로 선행 개월을 판정한다."""
     t = doc['targets'].get('revenue_monthly')
@@ -836,13 +850,13 @@ def monthly_ccf(doc, catalog, cand_ids, roles):
         return None
     obs = {month_index(p['month']): p['value'] for p in t['points'] if p.get('value') is not None and p['value'] > 0}
     y = {m: math.log(v / obs[m - 12]) for m, v in obs.items() if obs.get(m - 12)}
-    if len(y) < 36:
+    if len(y) < min_months:
         return None
     rows_by = []
     for pid in cand_ids:
         pr = catalog[pid]
         sign = roles[pid]['sign']
-        pw = pw_ccf(prewhiten(y, pr, 1, 1, max_p=3), MONTH_LAGS, sign, 1)
+        pw = pw_ccf(prewhiten(y, pr, 1, 1, max_p=3), MONTH_LAGS, sign, 1, min_n=24)
         raw = {}
         for k in (0,):
             xs = {m: proxy_yoy(pr, m - k, 1) for m in y}
@@ -891,6 +905,76 @@ def peer_cycle(results, catalog):
     return out
 
 
+def sanil_proxy(catalog, asof_mi):
+    """산일전기 출하 대리 분석 — 타깃 = 안산시 HS850421+850422 수출(달력 분기 합, 천 USD).
+    공식 매출이 아니므로 화면에 대리 타깃으로 표시하고, 산일전기 DART 매출과의 동조·암묵 환율로 타당성을 보인다."""
+    anc = catalog.get(ANCHOR_SERIES)
+    anc_raw = catalog.get(ANCHOR_RAW)
+    path = ROOT / 'data' / 'actuals' / 'SANIL.json'
+    if not anc or not path.exists():
+        return None, None
+    sanil = load_json(path)
+    pts = []
+    for e in range(min(anc['obs']) + 2, max(anc['obs']) + 1):
+        if e % 3 != 2:
+            continue
+        v = window_value(anc, e, 3)
+        if v is None:
+            continue
+        y, mo = divmod(e, 12)
+        pts.append({'fiscal_key': f'FY{y}Q{mo // 3 + 1}', 'period_start': f'{y:04d}-{mo - 1:02d}-01',
+                    'period_end': f'{y:04d}-{mo + 1:02d}-28', 'value': v, 'method': 'sum_of_monthly',
+                    'source_url': 'data/proxies/korea_trass.json#' + ANCHOR_SERIES, 'locator': 'TRASS 안산시→전체 월합'})
+    prof = dict(sanil.get('profile') or {})
+    prof['proxy_routes'] = [r for r in (prof.get('proxy_routes') or [])
+                            if not str(r.get('proxy_hint', '')).startswith('trass_sanil_')]
+    mpts = [{'month': ym_of(m), 'value': v, 'method': 'direct_reported_month',
+             'source_url': 'data/proxies/korea_trass.json#' + ANCHOR_RAW, 'locator': 'TRASS 안산시→전체'}
+            for m, v in sorted(anc['obs'].items())]
+    doc = {'id': 'SANIL_PROXY', 'listed': True, 'currency': 'USD', 'unit': 'thousand', 'primary_target': 'revenue_total',
+           'targets': {'revenue_total': {'freq': 'Q', 'scope': 'proxy_target',
+                                         'label_ko': '안산시 HS850421·850422 수출(산일전기 출하 대리 · 공식 매출 아님, 2022-07~)',
+                                         'points': pts},
+                       'revenue_monthly': {'freq': 'M', 'scope': 'proxy_target', 'points': mpts}},
+           'profile': prof, 'structural_breaks': [], 'gaps': []}
+    peer = {'id': 'SANIL_PROXY', 'name': '산일전기 출하 대리 · 안산 변압기 수출', 'ticker': '062040 KS', 'region': 'Korea',
+            'tier': 'anchor', 'grid_node': 'KGRID_062040',
+            'note': '산일전기 상장 전 분기 실적이 없어 공장 소재지(안산시) 유입식 배전변압기 수출을 대리 타깃으로 쓴다.'}
+    res = analyze_peer(peer, doc, catalog, asof_mi)
+    res['pseudo'] = True
+    cand, roles, _, _ = candidate_ids(peer, doc, catalog)
+    res['monthly'] = monthly_ccf(doc, catalog, [c for c in cand if not catalog[c].get('qonly')], roles, min_months=30)
+    res['ramp_note'] = ('램프업 제외: 안산 수출이 분기 1천만 달러를 처음 넘은 2022Q3 이후만 사용(그 전 YoY 는 신규 고객 진입 기저효과). '
+                        '분기 YoY 표본이 짧아 앙상블 등급은 N(표본 부족)이며 월 단위 선후행을 함께 본다.')
+    # 타당성: 산일 DART 매출과 YoY 동조, 수출매출(백만원)/안산 수출(천 USD)×1000 = 암묵 원/달러 (안산 전체 이력 사용)
+    rdoc = {'targets': {'revenue_total': {'freq': 'Q', 'points': [
+        {'fiscal_key': 'x', 'period_end': f'{e // 12:04d}-{e % 12 + 1:02d}-28', 'value': window_value(anc_raw, e, 3)}
+        for e in range(min(anc_raw['obs']) + 2, max(anc_raw['obs']) + 1) if e % 3 == 2 and window_value(anc_raw, e, 3)]}}}
+    arows, _ = target_quarters(rdoc, 'revenue_total')
+    ay = {k: v[0] for k, v in target_yoy(arows).items()}
+    alev = {r['end_mi']: r['value'] for r in arows}
+    val = {'yoy_pairs': [], 'ratio': []}
+    for tname in ('revenue_total', 'revenue_export'):
+        if tname not in (sanil.get('targets') or {}):
+            continue
+        srows, _ = target_quarters(sanil, tname)
+        sy = {k: v[0] for k, v in target_yoy(srows).items()}
+        ks = sorted(set(sy) & set(ay))
+        r = sc.pearson([ay[k] for k in ks], [sy[k] for k in ks]) if len(ks) >= 5 else None
+        val['yoy_' + tname] = {'n': len(ks), 'r': rnd(r, 3)}
+        if tname == 'revenue_total':
+            val['yoy_pairs'] = [{'m': ym_of(k), 'ansan': rnd(ay[k]), 'sanil': rnd(sy[k])} for k in ks]
+        fx = catalog.get('fx_krw_per_usd')
+        for row in srows:
+            e = row['end_mi']
+            if e in alev and alev[e] > 0:
+                implied = row['value'] * 1000.0 / alev[e]
+                fxq = window_value(fx, e, 3) if fx else None
+                val['ratio'].append({'target': tname, 'key': row['key'], 'm': ym_of(e), 'implied_krw_per_usd': rnd(implied, 1),
+                                     'fx': rnd(fxq, 1), 'share': rnd(implied / fxq, 3) if fxq else None})
+    return res, val
+
+
 def main():
     asof = os.environ.get('GRID_COMPOSITE_ASOF', ASOF_DEFAULT)
     asof_mi = month_index(asof[:7])
@@ -911,13 +995,17 @@ def main():
             cand, roles, _, _ = candidate_ids(peer, doc, catalog)
             res['monthly'] = monthly_ccf(doc, catalog, [c for c in cand if not catalog[c].get('qonly')], roles)
         results.append(res)
-    used = sorted({c['id'] for r in results for c in (r.get('candidates') or [])})
+    sp, validity = sanil_proxy(catalog, asof_mi)
+    if sp:
+        idx = next((i for i, r in enumerate(results) if r['id'] == 'SANIL'), -1)
+        results.insert(idx + 1, sp)
+    used = sorted({c['id'] for r in results for c in (r.get('candidates') or [])} | {ANCHOR_SERIES})
     out = {
         'schema': 'grid-composite-out/1',
         'asof': asof,
         'anchor': peers['anchor'],
         'selection_rule': peers.get('selection_rule'),
-        'params': {'lags': LAGS, 'lead_lags': LEAD_LAGS, 'min_train': MIN_TRAIN, 'min_oos': MIN_OOS, 'screen_t': SCREEN_T,
+        'params': {'pw_min_n': PW_MIN_N, 'lags': LAGS, 'lead_lags': LEAD_LAGS, 'min_train': MIN_TRAIN, 'min_oos': MIN_OOS, 'screen_t': SCREEN_T,
                    'fdr_q': FDR_Q, 'lead_margin': LEAD_MARGIN, 'max_candidates': MAX_CANDIDATES},
         'proxies': {pid: {k: catalog[pid][k] for k in ('label_ko', 'unit', 'agg', 'kind', 'family', 'first', 'last',
                                                       'release_lag_days', 'source', 'notes')} for pid in used},
@@ -925,7 +1013,8 @@ def main():
                             for m in range(max(min(catalog[pid]['obs']) + 14, month_index('2016-03')), max(catalog[pid]['obs']) + 1)
                             if m % 3 == 2 and proxy_yoy(catalog[pid], m, 3) is not None] for pid in used},
         'peers': results,
-        'peer_cycle': peer_cycle(results, catalog),
+        'peer_cycle': peer_cycle([r for r in results if not r.get('pseudo')], catalog),
+        'anchor_validity': validity,
         'missing_actuals': missing,
         'catalog_size': len(catalog),
     }

@@ -118,7 +118,7 @@
 
   <section id="cycle">
     <h2>피어 사이클 · 산일전기</h2>
-    <p class="h2sub">산일전기 실적 이력(2024 상장)이 짧아, 공장 소재지 안산시의 HS850421·850422 수출(TRASS, 천 USD)을 산일전기 출하 대리지표로 씁니다(지역 합계 — 회사 단독 아님). 피어 매출 YoY 중앙값(달력 분기 결산 피어, 5사 이상)과 비교합니다.</p>
+    <p class="h2sub">산일전기는 2024년 상장이라 공시 분기 실적이 2023Q1~ 14개뿐입니다. 공장 소재지 안산시의 HS850421·850422 수출(TRASS, 천 USD)을 출하 대리지표로 쓰되, 대미 수출이 분기 1천만 달러를 처음 넘은 <b>2022Q3 이후</b>만 씁니다(그 전 YoY 는 신규 고객 진입 램프업 기저효과). 아래 표로 대리지표의 타당성을 먼저 확인합니다.</p><div class="card scroll"><h3>대리지표 타당성 — 안산 수출 ≈ 산일전기 수출?</h3><p class="dim small" id="valNote"></p><table id="valTbl"></table></div>
     <div class="grid2">
       <div class="card"><h3>피어 매출 YoY 중앙값 vs 안산 변압기 수출 YoY</h3><div class="legend" id="cycLegend"></div><div id="cycChart"></div><details><summary>표로 보기</summary><div class="scroll" id="cycTable"></div></details></div>
       <div class="card"><h3>시차별 상관 — 안산 수출이 k 분기 먼저(+) / 피어가 먼저(−)</h3><div id="cycCcf"></div><p class="dim small" id="cycNote"></p></div>
@@ -172,7 +172,7 @@ $('#tiles').innerHTML=tiles.map(t=>'<div class="tile"><div class="v">'+esc(t[0])
 // matrix
 function bestOf(p,cls){const cs=(p.candidates||[]).filter(c=>c.class===cls&&c.role!=='anchor_diag');let best=null;for(const c of cs){const r=(c.pw.find(x=>x.k===c.k_star)||{}).r;if(r==null)continue;const s=r*c.sign;if(!best||s>best.s)best={c,s,r};}return best;}
 function anchorOf(p){return (p.candidates||[]).find(c=>c.role==='anchor_diag');}
-function anchorText(a){if(!a)return '<span class="dim">–</span>';if(a.class==='none')return a.strength?badgeCls('none',a.k_star,a.strength):'<span class="dim">무관</span>';const k=a.k_star;if(a.class==='lag')return badgeCls('lag',k)+' <span class="dim small">피어가 '+Math.abs(k)+'Q 먼저</span>';if(a.class==='lead')return badgeCls('lead',k)+' <span class="dim small">안산 수출이 '+k+'Q 먼저</span>';return badgeCls('coincident',0);}
+function anchorText(a){if(!a)return '<span class="dim">–</span>';if(!a.pw.some(x=>x.r!=null))return '<span class="dim small">표본 부족(n&lt;'+esc(D.params.pw_min_n)+')</span>';if(a.class==='none')return a.strength?badgeCls('none',a.k_star,a.strength):'<span class="dim">무관</span>';const k=a.k_star;if(a.class==='lag')return badgeCls('lag',k)+' <span class="dim small">피어가 '+Math.abs(k)+'Q 먼저</span>';if(a.class==='lead')return badgeCls('lead',k)+' <span class="dim small">안산 수출이 '+k+'Q 먼저</span>';return badgeCls('coincident',0);}
 let mx='<thead><tr><th>기업</th><th>등급</th><th>타깃</th><th class="num">YoY n</th><th>최강 선행 프록시</th><th>최강 동행 프록시</th><th class="num">선행/동행/후행</th><th>산일전기와</th><th>나우캐스트</th></tr></thead><tbody>';
 let lastReg=null;
 for(const p of peers){
@@ -243,7 +243,7 @@ function renderPeer(p){
   const t=p.target,c=p.composite,nc=p.nowcast;
   h+='<div class="card"><div class="kv"><div>타깃</div><div>'+esc(t.label_ko||t.name)+(t.segment_name?' · '+esc(t.segment_name):'')+' <span class="dim">('+esc(t.scope)+', '+esc(p.currency)+' '+esc(p.unit)+')</span>'+(t.rule&&t.rule!=='file_primary'?'<div class="dim small">'+esc(t.rule_note)+'</div>':'')+'</div><div>이력</div><div>'+esc(t.first)+' → '+esc(t.last)+' · 레벨 '+esc(t.n_levels)+' · YoY '+esc(t.n_yoy)+(t.yoy_basis_comparative?' · 동일범위 비교값 '+esc(t.yoy_basis_comparative):'')+'</div>'+
    (c?'<div>앙상블</div><div>'+badgeG(c.grade)+' <span class="small">'+esc(c.grade_reason)+'</span></div><div>OOS</div><div class="small">n '+esc(c.eval_ew&&c.eval_ew.n)+' · MAE '+pct(c.eval_ew&&c.eval_ew.mae)+'p · 직전YoY '+pct(c.eval_ew&&c.eval_ew.mae_last)+'p · 0YoY '+pct(c.eval_ew&&c.eval_ew.mae_zero)+'p · AR1 '+pct(c.eval_ew&&c.eval_ew.mae_ar1)+'p · 가속 방향 적중 '+(c.eval_ew?Math.round(c.eval_ew.accel_hit*100)+'%':'–')+' · 대체(직전YoY) 비중 '+(c.fallback_share!=null?Math.round(c.fallback_share*100)+'%':'–')+'</div>':'')+
-   ((p.reasons||[]).length?'<div>주의</div><div class="small">'+esc(p.reasons.join(' · '))+'</div>':'')+'</div></div>';
+   ((p.reasons||[]).length?'<div>주의</div><div class="small">'+esc(p.reasons.join(' · '))+'</div>':'')+(p.ramp_note?'<div>대리 타깃</div><div class="small">'+esc(p.note||'')+' '+esc(p.ramp_note)+'</div>':'')+'</div></div>';
   h+='<div class="grid2"><div class="card"><h3>매출 YoY — 실제 vs 앙상블 OOS 예측</h3><div class="legend"><span><i class="ln" style="background:var(--c1)"></i>실제 YoY</span><span><i class="ln" style="background:var(--c2)"></i>앙상블(동일가중) OOS</span><span><i class="ln" style="background:var(--neutral)"></i>직전 YoY 기준모형</span></div><div id="yoyChart"></div><details><summary>표로 보기</summary><div class="scroll" id="yoyTable"></div></details></div>';
   h+='<div class="card '+(nc&&nc.published?'nowcast':'held')+'"><h3>현재 분기 나우캐스트 · '+esc(nc?nc.target_m:'–')+'</h3>'+nowcastHtml(p)+'</div></div>';
   h+='<div class="card"><h3>프록시별 시차 상관 — 선행성·동행성</h3><p class="dim small">칸 = 프록시 YoY(k 분기 전)와 매출 YoY 상관. 판정은 <b>사전백색화</b> 상관(공통 지속성 제거) 기준, 굵은 테두리 = BH-FDR q&lt;0.10(기대 부호). k&gt;0 이면 프록시가 먼저. 행을 누르면 시차 막대가 열립니다.</p><div class="toolbar"><button type="button" class="pill" id="hmPw" aria-pressed="true">사전백색화 r</button><button type="button" class="pill" id="hmRaw" aria-pressed="false">원계열 r</button></div><div class="scroll"><table class="heat" id="heat"></table></div><div id="ccfOne"></div></div>';
@@ -272,7 +272,7 @@ function renderPeer(p){
 }
 function nowcastHtml(p){const nc=p.nowcast;if(!nc)return '<p class="dim small">앙상블을 만들 수 없어 나우캐스트가 없습니다.</p>';
   let h='';if(nc.published){h+='<div class="big">'+pct(nc.pred_yoy)+' <span class="small dim">YoY</span></div>'+(nc.interval_yoy?'<div class="small">80% 구간 '+pct(nc.interval_yoy[0])+' ~ '+pct(nc.interval_yoy[1])+'</div>':'')+(nc.level!=null?'<div class="small">레벨 '+esc(Number(nc.level).toLocaleString('en-US',{maximumFractionDigits:1}))+' '+esc(p.currency)+' '+esc(p.unit)+(nc.level_interval?' ('+esc(Number(nc.level_interval[0]).toLocaleString('en-US',{maximumFractionDigits:1}))+'~'+esc(Number(nc.level_interval[1]).toLocaleString('en-US',{maximumFractionDigits:1}))+')':'')+' · 기준 '+esc(nc.base&&nc.base.key)+'</div>':'');}
-  else{h+='<div class="small"><b>수치 공개 보류</b></div><ul class="tight">'+(nc.reasons||[]).map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul>';if(nc.pred_yoy!=null)h+='<details><summary>진단용 내부 추정 보기(공개 아님)</summary><p class="small dim">앙상블 '+pct(nc.pred_yoy)+(nc.interval_yoy?' · 80% '+pct(nc.interval_yoy[0])+'~'+pct(nc.interval_yoy[1]):'')+' · 상태 '+esc(nc.status)+'</p></details>';}
+  else{h+='<div class="small"><b>수치 공개 보류</b></div><ul class="tight">'+(nc.reasons||[]).map(r=>'<li>'+esc(r)+'</li>').join('')+'</ul>';if(nc.pred_yoy!=null&&(nc.grade==='C'))h+='<details><summary>진단용 내부 추정 보기(공개 아님 · C 등급만)</summary><p class="small dim">앙상블 '+pct(nc.pred_yoy)+(nc.interval_yoy?' · 80% '+pct(nc.interval_yoy[0])+'~'+pct(nc.interval_yoy[1]):'')+' · 상태 '+esc(nc.status)+'</p></details>';}
   if((nc.members||[]).length)h+='<table class="small"><thead><tr><th>구성 프록시</th><th class="num">시차</th><th class="num">프록시 YoY</th><th class="num">예측 YoY</th><th>창</th></tr></thead><tbody>'+nc.members.map(m=>'<tr><td>'+esc(plabel(m.id))+'</td><td class="num">+'+esc(m.k)+'Q</td><td class="num">'+pct(m.x_yoy)+'</td><td class="num">'+pct(m.pred_yoy)+'</td><td class="dim">'+esc(m.status==='partial'?'부분 ':'')+esc((m.months||[]).join(','))+'</td></tr>').join('')+'</tbody></table>';
   return h;}
 function profileCard(p){const pr=p.profile||{};let h='<div class="card"><h3>프로필 · 경로 · 구조 변화</h3><div class="kv">';
@@ -286,7 +286,11 @@ function profileCard(p){const pr=p.profile||{};let h='<div class="card"><h3>프�
   if((p.candidates_dropped||[]).length)h+='<div>후보 상한 초과</div><div class="small dim">'+p.candidates_dropped.map(esc).join(', ')+' (검정 안 함)</div>';
   return h+'</div></div>';}
 // cycle
-(function(){const pc=D.peer_cycle||{};const idx=(pc.index||[]);const anc=(D.proxy_yoy||{})['trass_sanil_ansan_8504212']||[];
+(function(){const v=D.anchor_validity||{};const rt=(v.ratio||[]).filter(r=>r.target==='revenue_export'),rtot=(v.ratio||[]).filter(r=>r.target==='revenue_total');const y=v.yoy_revenue_total||{};
+  $('#valNote').textContent='산일전기 DART 분기 매출 YoY 와 안산 수출 YoY 상관 r='+f2(y.r)+' (n='+(y.n||0)+'). 비율 = 산일 매출(백만원)÷안산 수출(천 USD)×1000 = 암묵 원/달러; 실제 분기 평균 환율(H.10)로 나눈 값이 1 에 가까우면 안산 수출이 산일 매출을 거의 그대로 대표합니다(통화 환산이 아니라 대응 확인).';
+  const rows=[...rtot.map(r=>Object.assign({lab:'연결 매출'},r)),...rt.map(r=>Object.assign({lab:'수출 매출'},r))];
+  $('#valTbl').innerHTML='<thead><tr><th>분기</th><th>산일 매출</th><th class="num">암묵 원/달러</th><th class="num">실제 환율</th><th class="num">배율</th></tr></thead><tbody>'+rows.map(r=>'<tr><td>'+esc(r.key)+' <span class="dim">'+esc(r.m)+'</span></td><td class="small">'+esc(r.lab)+'</td><td class="num">'+f2(r.implied_krw_per_usd,0)+'</td><td class="num">'+f2(r.fx,0)+'</td><td class="num">'+f2(r.share)+'</td></tr>').join('')+'</tbody>';})();
+(function(){const pc=D.peer_cycle||{};const idx=(pc.index||[]);const anc=(D.proxy_yoy||{})['trass_sanil_ansan_8504212_post']||[];
   $('#cycLegend').innerHTML='<span><i class="ln" style="background:var(--c1)"></i>피어 매출 YoY 중앙값</span><span><i class="ln" style="background:var(--c2)"></i>안산 HS850421·22 수출 YoY</span>';
   lineChart($('#cycChart'),[{name:'피어 중앙값',color:'var(--c1)',pts:idx.map(r=>({x:r.m,y:r.median_yoy}))},{name:'안산 수출',color:'var(--c2)',pts:anc.filter(r=>r.m>=((idx[0]||{}).m||'2019')).map(r=>({x:r.m,y:r.yoy}))}],{fmt:yoyFmt,aria:'피어 사이클'});
   $('#cycTable').innerHTML='<table><thead><tr><th>분기말</th><th class="num">피어 중앙값</th><th class="num">n</th><th class="num">안산 수출</th></tr></thead><tbody>'+idx.map(r=>{const a=anc.find(q=>q.m===r.m);return '<tr><td>'+esc(r.m)+'</td><td class="num">'+pct(r.median_yoy)+'</td><td class="num">'+esc(r.n)+'</td><td class="num">'+(a?pct(a.yoy):'–')+'</td></tr>';}).join('')+'</tbody></table>';

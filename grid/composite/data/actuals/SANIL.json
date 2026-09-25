@@ -1,0 +1,516 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "SANIL",
+ "grid_node": "KGRID_062040",
+ "name": "산일전기",
+ "ticker": "062040 KS",
+ "listed": true,
+ "currency": "KRW",
+ "unit": "million",
+ "accounting_basis": "K-IFRS",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters (Dec FYE); 분기 말일 03-31/06-30/09-30/12-31",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "매출액(2023 연결 계속영업 · 2024 별도(종속기업 없음) · 2025~ 연결)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 52971.516169,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240717000412",
+     "locator": "[기재정정] 투자설명서 [20240717000412] 제2부 III. 재무에 관한 사항 > 4. 재무제표 > 분기포괄손익계산서 — 행 'I.매출액', '제30(전)분기(검토받지 않은 재무제표)' 열 (원→백만원). 전분기는 연결 기준(중단영업 분리 후 계속영업)",
+     "published_date": "2024-07-17"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 49215.662071,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002566",
+     "locator": "분기보고서 (2024.09) [20241114002566] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 매출액 전년 누적(2023.1–9월) 162,563.804 − 전년 3개월(2023.7–9월) 60,376.626 − 투자설명서 [20240717000412] 2023Q1 52,971.516 (2023 반기보고서 없음: 상장 전)",
+     "published_date": "2024-11-14"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 60376.62567,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002566",
+     "locator": "분기보고서 (2024.09) [20241114002566] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 매출액, '제30기 3분기 3개월'(전년 동기 비교) 열 (원→백만원)",
+     "published_date": "2024-11-14"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 51974.025856,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250328001583",
+     "locator": "[기재정정] 사업보고서 (2024.12) [20250328001583] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 매출액 '제30기'(전기 연간) 214,537.83 − 분기보고서 (2024.09) [20241114002566] 전년 누적(2023.1–9월) 162,563.804 (원→백만원)",
+     "published_date": "2025-03-28"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 70643.76542,
+     "prior_year_comparative": 52971.516169,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240717000412",
+     "locator": "[기재정정] 투자설명서 [20240717000412] 제2부 III. 재무에 관한 사항 > 4. 재무제표 > 분기포괄손익계산서 — 행 'I.매출액', '제31(당)분기' 열 (원→백만원; 2025년 1분기보고서 전년 동기 열과 동일 70,643,765,420원)",
+     "published_date": "2024-07-17"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 75232.311893,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250825000438",
+     "locator": "반기보고서 (2025.06) [20250825000438] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 수익(매출액), '제31기 반기 3개월'(전년 동기 비교) 열 (원→백만원). 2024 반기보고서는 상장(2024-07-31) 전이라 미제출; 검산: 2024 3분기 누적 225,611.8 − 3분기 79,735.7 − 1분기 70,643.8 = 75,232.3",
+     "published_date": "2025-08-25"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 79735.745632,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002566",
+     "locator": "분기보고서 (2024.09) [20241114002566] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액 (주23,33)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-11-14",
+     "prior_year_comparative": 60376.62567
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 108384.727826,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250328001583",
+     "locator": "[기재정정] 사업보고서 (2024.12) [20250328001583] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기(연간)열 333,996.551 − 분기보고서 (2024.09) [20241114002566] 당기 누적 누계 225,611.823 (단위 원 → 백만원 환산)",
+     "published_date": "2025-03-28",
+     "prior_year_comparative": 51974.025856,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(214,537.83 − 162,563.804)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 98829.448704,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250515000788",
+     "locator": "분기보고서 (2025.03) [20250515000788] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-05-15",
+     "prior_year_comparative": 70643.76542
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 128255.019954,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250825000438",
+     "locator": "반기보고서 (2025.06) [20250825000438] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-08-25",
+     "prior_year_comparative": 75232.311893
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 132734.594216,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251121000329",
+     "locator": "분기보고서 (2025.09) [20251121000329] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-11-21",
+     "prior_year_comparative": 79735.745632
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 142127.158006,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260403003697",
+     "locator": "[기재정정] 사업보고서 (2025.12) [20260403003697] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액 (주23,35)', 당기(연간)열 501,946.221 − 분기보고서 (2025.09) [20251121000329] 당기 누적 누계 359,819.063 (단위 원 → 백만원 환산)",
+     "published_date": "2026-04-03",
+     "prior_year_comparative": 108384.727826,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(333,996.551 − 225,611.823)"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 150322.981077,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002664",
+     "locator": "분기보고서 (2026.03) [20260515002664] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액 (주23,24)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-05-15",
+     "prior_year_comparative": 98829.448704
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 164178.798154,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003544",
+     "locator": "반기보고서 (2026.06) [20260814003544] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액 (주23,34)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-08-14",
+     "prior_year_comparative": 128255.019954
+    }
+   ]
+  },
+  "revenue_export": {
+   "label_ko": "수출 매출(매출실적 표 합계·수출 행, 누계 차분)",
+   "scope": "geographic",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "수출(Export) — II. 사업의 내용 매출실적 표 합계-수출 행(연결 매출과 같은 범위, 표 합계=손익계산서 누계 일치 확인)",
+   "points": [
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 59947.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240717000412",
+     "locator": "[기재정정] 투자설명서 [20240717000412] 제2부 II. 사업의 내용 > 4. 매출 및 수주상황 > 가. 매출실적 표 — 행 '합계·수 출', '2024년 1분기 (제31기 1분기) 금액'열",
+     "published_date": "2024-07-17"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 100076.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250328001583",
+     "locator": "[기재정정] 사업보고서 (2024.12) [20250328001583] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '2024년 (제31기) 금액'열 301,066.0 − 분기보고서 (2024.09) [20241114002566] '2024년 3분기 (제31기 3분기) 금액' 누계 200,990.0",
+     "published_date": "2025-03-28"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 94581.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250515000788",
+     "locator": "분기보고서 (2025.03) [20250515000788] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '2025년 1분기말 (제32기) 금액'열",
+     "published_date": "2025-05-15"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 125772.0,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250825000438",
+     "locator": "반기보고서 (2025.06) [20250825000438] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '2025년 상반기 (제32기) 금액'열 220,353.0 − 분기보고서 (2025.03) [20250515000788] '2025년 1분기말 (제32기) 금액' 누계 94,581.0",
+     "published_date": "2025-08-25"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 130312.0,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251121000329",
+     "locator": "분기보고서 (2025.09) [20251121000329] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '2025년 3분기 (제32기) 금액'열 350,665.0 − 반기보고서 (2025.06) [20250825000438] '2025년 상반기 (제32기) 금액' 누계 220,353.0",
+     "published_date": "2025-11-21"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 137674.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260403003697",
+     "locator": "[기재정정] 사업보고서 (2025.12) [20260403003697] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '2025년 (제32기) 금액'열 488,339.0 − 분기보고서 (2025.09) [20251121000329] '2025년 3분기 (제32기) 금액' 누계 350,665.0",
+     "published_date": "2026-04-03"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 147449.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002664",
+     "locator": "분기보고서 (2026.03) [20260515002664] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '2026년 1분기말 (제33기) 금액'열",
+     "published_date": "2026-05-15"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 157477.0,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003544",
+     "locator": "반기보고서 (2026.06) [20260814003544] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '2026년 반기 (제33기)'열 304,926.0 − 분기보고서 (2026.03) [20260515002664] '2026년 1분기말 (제33기) 금액' 누계 147,449.0",
+     "published_date": "2026-08-14"
+    }
+   ]
+  },
+  "orders_segment": {
+   "label_ko": "신규 수주(누계 차분)",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "신규 수주(수주상황 표 수주총액 = 당해 1월1일~보고기간말 신규수주 합계, 회사 추정 환율 적용)",
+   "metric": "orders_received",
+   "points": [
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 119536.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250328001583",
+     "locator": "[기재정정] 사업보고서 (2024.12) [20250328001583] II. 사업의 내용 > 4. 매출 및 수주상황 > 수주상황 표 — 행 '변압기, 리액터, 소프트스타터 등 · 2024년 1월 1일부터 2024년 12월 31일까지 · 주3)', '수주총액 금액'열 408,592.0 − 분기보고서 (2024.09) [20241114002566] '수주총액 금액' 누계 289,056.0",
+     "published_date": "2025-03-28"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 169342.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250515000788",
+     "locator": "분기보고서 (2025.03) [20250515000788] II. 사업의 내용 > 4. 매출 및 수주상황 > 수주상황 표 — 행 '변압기, 리액터, 소프트스타터 등 · 2025년 1월 1일부터 2025년 3월 31일까지 · 주3)', '수주총액 금액'열",
+     "published_date": "2025-05-15"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 92441.0,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250825000438",
+     "locator": "반기보고서 (2025.06) [20250825000438] II. 사업의 내용 > 4. 매출 및 수주상황 > 수주상황 표 — 행 '변압기, 리액터, 소프트스타터 등 · 2025년 6월 30일 까지 · 주', '수주총액 금액'열 261,783.0 − 분기보고서 (2025.03) [20250515000788] '수주총액 금액' 누계 169,342.0",
+     "published_date": "2025-08-25"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 127532.0,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251121000329",
+     "locator": "분기보고서 (2025.09) [20251121000329] II. 사업의 내용 > 4. 매출 및 수주상황 > 수주상황 표 — 행 '변압기, 리액터, 소프트스타터 등 · 2025년 9월 30일 까지 · (주3)', '수주총액 금액'열 389,315.0 − 반기보고서 (2025.06) [20250825000438] '수주총액 금액' 누계 261,783.0",
+     "published_date": "2025-11-21"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 176659.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260403003697",
+     "locator": "[기재정정] 사업보고서 (2025.12) [20260403003697] II. 사업의 내용 > 4. 매출 및 수주상황 > 수주상황 표 — 행 '변압기, 리액터, 소프트스타터 등 · 2025년 1월 1일부터 2025년 12월 31일까지 · 주3)', '수주총액'열 565,974.0 − 분기보고서 (2025.09) [20251121000329] '수주총액 금액' 누계 389,315.0",
+     "published_date": "2026-04-03"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 178956.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002664",
+     "locator": "분기보고서 (2026.03) [20260515002664] II. 사업의 내용 > 4. 매출 및 수주상황 > 수주상황 표 — 행 '변압기, 리액터, 소프트스타터 등 · 2026년 1월 1일부터 2026년 3월 31일까지 · 주3)', '수주총액'열",
+     "published_date": "2026-05-15"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 243527.0,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003544",
+     "locator": "반기보고서 (2026.06) [20260814003544] II. 사업의 내용 > 4. 매출 및 수주상황 > 수주상황 표 — 행 '변압기, 리액터, 소프트스타터 등 · 2026년 1월 1일부터 2026년 6월 30일까지 · (*3)', '수주총액'열 422,483.0 − 분기보고서 (2026.03) [20260515002664] '수주총액' 누계 178,956.0",
+     "published_date": "2026-08-14"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2023-12-31",
+   "type": "divestiture",
+   "note": "2023년 중 종속기업(산일센서 전자사업부문·(주)틔움·SANIL ELECTRIC INDIA) 전량 매각 → 2023년 비교열은 중단영업 분리 후 계속영업(연결), 2024년은 종속기업 없음(별도).",
+   "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240717000412"
+  },
+  {
+   "date": "2024-07-23",
+   "type": "listing",
+   "note": "유가증권시장 신규상장(2024년 7월; 공모 증권발행실적보고서 2024-07-23). 2024 반기보고서 미제출 → FY2024Q2는 2025 반기보고서 전년 비교열, FY2023Q1–Q4는 투자설명서·2024 보고서 비교열.",
+   "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240723000042"
+  },
+  {
+   "date": "2025-04-01",
+   "type": "restatement",
+   "note": "2025년 4월 종속기업 산일파트너스(주)(前 산일에너지) 설립 → 2025 반기보고서부터 연결 재무제표(2024 비교열은 별도). 신재생 부문 매출 미발생으로 범위 차이 무시 가능.",
+   "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003544&dcmNo=11537534&eleId=11&offset=101017&length=10804&dtd=dart4.xsd"
+  }
+ ],
+ "profile": {
+  "products": "유입변압기: 전력용 최대 70MVA·72.5kV, 배전용 최대 10MVA(유입 배전 33kV), 주상(Pole-mounted) 최대 333kVA·33kV(IEEE C57.12.20), 지상(Pad-mounted) 최대 7MVA·33kV(IEEE C57.12.34/38); 몰드(Cast Resin)·건식 변압기(다펄스 인버터·정류기·선박·철도 55kV 단권), 리액터, 소프트스타터. 2026 상반기 매출 3,145억 중 수출 3,049억(97%), 미국 2,747억(87%). 72kV 이하 배전·특수 변압기가 주력.",
+  "plants": [
+   {
+    "country": "KR",
+    "city": "안산(경기) — 1공장·2공장(2024년 1월 인수, 부지 11,000평)",
+    "products": "변압기·리액터(생산실적 전량 안산공장)",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003544&dcmNo=11537534&eleId=12&offset=111825&length=33507&dtd=dart4.xsd"
+   },
+   {
+    "country": "KR",
+    "city": "안산 2공장(투자설명서)",
+    "products": "2공장 부지·건물 매입(2024-01 잔금) 및 설비 증설",
+    "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240717000412"
+   }
+  ],
+  "end_markets": "미국 전력청(유틸리티)·인버터/태양광·ESS 제조사·재생에너지 EPC·석유화학·선박(수출 97%), 일본 인버터·리액터 제조사, 국내 철도·중공업·공공(소수)",
+  "export_routes": [
+   "KR->US",
+   "KR->JP",
+   "KR domestic"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850423",
+   "850433",
+   "850434",
+   "850450"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_850421_p410",
+    "why": "미국의 한국산 유입식 ≤650kVA 수입 — 주상·패드 변압기(산일 대미 수출 주력)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850422_p410",
+    "why": "미국의 한국산 유입식 650–10,000kVA 수입 — 대형 패드·배전 변압기(재생에너지·EPC)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "kr_exp_850421_p842",
+    "why": "한국 측 HS850421 대미 수출(미러) — 같은 흐름의 수출국 통계",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "kr_exp_850422_p842",
+    "why": "한국 측 HS850422 대미 수출(미러)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "trass_sanil_ansan_8504212",
+    "why": "안산시 신고 HS850421+850422 수출 — 산일 공장 소재지 지역 합계(기업 근접 월간 경로)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "trass_sanil_ansan_850421",
+    "why": "안산시 신고 HS850421 수출 — 주상·소형 패드",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "trass_sanil_ansan_850422",
+    "why": "안산시 신고 HS850422 수출 — 중형 배전",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "kre_8504219010",
+    "why": "관세청 잠정 HSK 8504219010(≤100kVA) 수출 — 주상변압기 속보(2024-01~)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "kre_8504219020",
+    "why": "관세청 잠정 HSK 8504219020(100–650kVA) 수출 — 패드변압기 속보(2024-01~)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p410",
+    "why": "미국의 한국산 >10MVA 수입 — 최대 70MVA 전력변압기 일부(대형 3사 비중이 커 희석)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850434_p410",
+    "why": "미국의 한국산 건식·몰드 >500kVA 수입 — 몰드 다펄스(인버터·데이터센터) 품목",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850421_p0",
+    "why": "미국 HS850421 총수입 — 미국 배전변압기 부족(수요) 규모",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_PRPWRCONS",
+    "why": "미국 민간 전력 건설투자 — 태양광·ESS 발전소(인버터 고객) 투자",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850450_p410",
+    "why": "WISHLIST: 미국의 한국산 HS850450(인덕터·리액터) 수입 — 산일 리액터 품목(UN Comtrade/US Census, reporter 842, partner 410)",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "fred_PCU335311335311",
+    "why": "미국 전력·특수 변압기 PPI — 달러 판가 상승이 원화 매출에 전가(가격 효과)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_A35CNO",
+    "why": "미국 전기장비(NAICS 3353) 신규수주 — 미국 배전·전력기기 수요 선행",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_TLPWRCONS",
+    "why": "미국 전력 건설투자 — 송배전·발전 설비 투자 사이클",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total FY2016Q1–FY2022Q4: 상장(2024-07) 전 분기 실적 미공시 — 투자설명서는 연간(2021–2023)과 2024 1분기만 수록. 연간값은 collection_notes 에만 기록(분기 타깃에 넣지 않음).",
+  "revenue_total FY2023Q2: 2023 반기 재무제표 미공시 — 2024 3분기보고서 전년 누계(9개월)−전년 3분기 3개월−투자설명서 2023Q1 로 차분(두 문서, method=ytd_difference).",
+  "revenue_total FY2023Q1–Q4·FY2024Q2: 전년 동기 비교열이 인쇄되지 않아 prior_year_comparative 없음(빌더는 12개월 전 포인트 사용).",
+  "revenue_export FY2024Q2·FY2024Q3: 2024 반기보고서 미제출로 상반기 누계 수출 없음 — 9개월 누계−1분기(=2·3분기 합)만 가능하므로 비움.",
+  "orders_segment FY2024Q1–FY2024Q3: 투자설명서 수주표는 신고서 제출일 기준(분기말 아님), 2024 반기보고서 없음 → 2024년 9개월 누계 289,056백만원만 존재; FY2024Q4부터 적재."
+ ],
+ "collection_notes": [
+  "DART 원문(분기·반기·사업보고서, 투자설명서)을 dart.fss.or.kr viewer 절 단위로 수집해 표를 파싱. 손익계산서 3개월 열은 direct_reported_quarter, 4분기는 사업보고서 연간−3분기 누계(annual_minus_9m). 원→백만원 환산만 수행.",
+  "상장 전 연간 매출(투자설명서 요약재무정보, 백만원): 2021 64,832.7(K-GAAP, 감사받지 않은 K-IFRS 전환 전) · 2022 107,674.1(K-IFRS, 감사받지 않은 재무제표; 2022 손익 정정 후) · 2023 214,537.8. 수출(매출실적 표): 2021 37,902 · 2022 87,051 · 2023 178,460.",
+  "revenue_export = 매출실적 표 합계-수출 행(변압기+기타제품+상품+운송+기타 수출 합계); 표 합계는 손익계산서 누계와 일치 확인. 2026 상반기 수출 비중 97%.",
+  "orders_segment = 수주상황 표 수주총액(당해 신규수주 합계, 회사 추정 환율) 누계 차분.",
+  "앵커 타깃이 14분기(YoY 10개)로 짧음 — 빌더 short_history 가능. 월간 기업 근접 프록시(trass_sanil_ansan_*)가 핵심.",
+  "revenue_export FY2024Q3: 누계 차분에 필요한 직전 누계(2024.06) 없음",
+  "orders_segment FY2024Q3: 누계 차분에 필요한 직전 누계(2024.06) 없음"
+ ]
+}

@@ -857,6 +857,7 @@
  "collection_notes": [
   "ENRIN statements from https://www.siemens-energy-india.com/financial-results.html (Q2 FY25 and Q4 FY25 PDFs are scanned; read visually). Publication dates from BSE announcements (scrip 544390).",
   "Siemens Ltd statements from the Siemens India IR page (https://www.siemens.com/en-us/company/investor-relations-india/financial-results/, files on assets.ctfassets.net) plus BSE filings for Q3/Q4 FY2024 (not on the IR page). Scope: consolidated segment statements; Energy segment revenue is identical in standalone and consolidated statements in every quarter where both were checked (FY2019Q3, FY2020Q2-Q3, FY2021Q1-Q4, FY2022Q2-Q4, FY2023Q3-Q4, FY2024Q1-Q2, FY2025Q1), so the two standalone-sourced points (FY2020Q4, FY2022Q1) are same-scope.",
-  "Siemens Ltd Energy segment revenue is before inter-segment elimination (segment line), unit INR million as printed."
+  "Siemens Ltd Energy segment revenue is before inter-segment elimination (segment line), unit INR million as printed.",
+  "verify 2026-09-25: checked revenue_total and revenue_segment for all 9 quarters FY2024Q3-FY2026Q3, plus revenue_predecessor_segment FY2020Q3 and FY2025Q1, against the siemens-energy-india.com segment statements (scanned Q2 FY25 and Q4 FY25 read from images) and the Siemens Ltd ctfassets statements. The Oct-Sep FY labels are confirmed. The Q2 FY25 statement's 31 Mar 2024 column covers only 7 Feb-31 Mar 2024 (11,966), so leaving FY2025Q2 without a prior_year_comparative is correct. FY2024Q3 is a full quarter: the 7 Feb-30 Jun 2024 total of 26,808 = 11,966 + 14,842. BSE publication dates were confirmed; fixed 0"
  ]
 }

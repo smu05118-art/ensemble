@@ -1,0 +1,1160 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "HDHE",
+ "grid_node": "KGRID_267260",
+ "name": "HD현대일렉트릭",
+ "ticker": "267260 KS",
+ "listed": true,
+ "currency": "KRW",
+ "unit": "million",
+ "accounting_basis": "K-IFRS",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters (Dec FYE); 분기 말일 03-31/06-30/09-30/12-31",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 매출(매출액)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 491168.964866,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170829000276",
+     "locator": "반기보고서 (2017.06) [20170829000276] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-08-29"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 469046.042341,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20171129000650",
+     "locator": "분기보고서 (2017.09) [20171129000650] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-11-29"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 489358.273063,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180615000431",
+     "locator": "[기재정정] 사업보고서 (2017.12) [20180615000431] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기(연간)열 1,449,573.28 − 분기보고서 (2017.09) [20171129000650] 당기 누적 누계 960,215.007 (단위 원 → 백만원 환산)",
+     "published_date": "2018-06-15"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 430132.101814,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180615000433",
+     "locator": "[기재정정] 분기보고서 (2018.03) [20180615000433] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-06-15"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 507478.986386,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180814001341",
+     "locator": "반기보고서 (2018.06) [20180814001341] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-08-14",
+     "prior_year_comparative": 491168.964866
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 440243.906669,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20181114001768",
+     "locator": "분기보고서 (2018.09) [20181114001768] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-11-14",
+     "prior_year_comparative": 469046.042341
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 562557.141219,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190401004145",
+     "locator": "사업보고서 (2018.12) [20190401004145] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기(연간)열 1,940,412.136 − 분기보고서 (2018.09) [20181114001768] 당기 누적 누계 1,377,854.995 (단위 원 → 백만원 환산)",
+     "published_date": "2019-04-01",
+     "prior_year_comparative": 489358.273063,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(1,449,573.28 − 960,215.007)"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 417908.039437,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190515002753",
+     "locator": "분기보고서 (2019.03) [20190515002753] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-05-15",
+     "prior_year_comparative": 430132.101814
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 405192.044272,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190814001839",
+     "locator": "반기보고서 (2019.06) [20190814001839] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-08-14",
+     "prior_year_comparative": 507478.986386
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 385729.70101,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20191114002504",
+     "locator": "분기보고서 (2019.09) [20191114002504] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-11-14",
+     "prior_year_comparative": 440243.906669
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 562303.803763,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200330003384",
+     "locator": "사업보고서 (2019.12) [20200330003384] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기(연간)열 1,771,133.588 − 분기보고서 (2019.09) [20191114002504] 당기 누적 누계 1,208,829.785 (단위 원 → 백만원 환산)",
+     "published_date": "2020-03-30",
+     "prior_year_comparative": 562557.141219,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(1,940,412.136 − 1,377,854.995)"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 386436.879279,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200515002598",
+     "locator": "분기보고서 (2020.03) [20200515002598] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-05-15",
+     "prior_year_comparative": 417908.039437
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 535507.295555,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200814001713",
+     "locator": "반기보고서 (2020.06) [20200814001713] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-08-14",
+     "prior_year_comparative": 405192.044272
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 398033.932211,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20201116001663",
+     "locator": "분기보고서 (2020.09) [20201116001663] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-11-16",
+     "prior_year_comparative": 385729.70101
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 491366.627339,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210315001064",
+     "locator": "사업보고서 (2020.12) [20210315001064] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기(연간)열 1,811,344.734 − 분기보고서 (2020.09) [20201116001663] 당기 누적 누계 1,319,978.107 (단위 원 → 백만원 환산)",
+     "published_date": "2021-03-15",
+     "prior_year_comparative": 562303.803763,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(1,771,133.588 − 1,208,829.785)"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 380736.81684,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210517001540",
+     "locator": "분기보고서 (2021.03) [20210517001540] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-05-17",
+     "prior_year_comparative": 386436.879279
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 423597.566899,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210817001672",
+     "locator": "반기보고서 (2021.06) [20210817001672] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-08-17",
+     "prior_year_comparative": 535507.295555
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 394055.068603,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20211115002212",
+     "locator": "분기보고서 (2021.09) [20211115002212] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-11-15",
+     "prior_year_comparative": 398033.932211
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 607602.294541,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220311001108",
+     "locator": "사업보고서 (2021.12) [20220311001108] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기(연간)열 1,805,991.747 − 분기보고서 (2021.09) [20211115002212] 당기 누적 누계 1,198,389.452 (단위 원 → 백만원 환산)",
+     "published_date": "2022-03-11",
+     "prior_year_comparative": 491366.627339,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(1,811,344.734 − 1,319,978.107)"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 351810.756795,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220516002029",
+     "locator": "분기보고서 (2022.03) [20220516002029] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-05-16",
+     "prior_year_comparative": 380736.81684
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 540076.933239,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220816002540",
+     "locator": "반기보고서 (2022.06) [20220816002540] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-08-16",
+     "prior_year_comparative": 423597.566899
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 535101.794702,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20221114002487",
+     "locator": "분기보고서 (2022.09) [20221114002487] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-11-14",
+     "prior_year_comparative": 394055.068603
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 677510.002599,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230314001160",
+     "locator": "사업보고서 (2022.12) [20230314001160] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기(연간)열 2,104,499.487 − 분기보고서 (2022.09) [20221114002487] 당기 누적 누계 1,426,989.485 (단위 원 → 백만원 환산)",
+     "published_date": "2023-03-14",
+     "prior_year_comparative": 607602.294541,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(1,805,991.747 − 1,198,389.452)"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 568591.411601,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230515002477",
+     "locator": "분기보고서 (2023.03) [20230515002477] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-05-15",
+     "prior_year_comparative": 351810.756795
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 642482.076734,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230814002003",
+     "locator": "반기보고서 (2023.06) [20230814002003] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-08-14",
+     "prior_year_comparative": 540076.933239
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 694418.512934,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20231114001884",
+     "locator": "분기보고서 (2023.09) [20231114001884] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-11-14",
+     "prior_year_comparative": 535101.794702
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 797307.336101,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240318000722",
+     "locator": "사업보고서 (2023.12) [20240318000722] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액', 당기(연간)열 2,702,799.337 − 분기보고서 (2023.09) [20231114001884] 당기 누적 누계 1,905,492.001 (단위 원 → 백만원 환산)",
+     "published_date": "2024-03-18",
+     "prior_year_comparative": 677510.002599,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(2,104,499.487 − 1,426,989.485)"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 800977.985167,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240516001738",
+     "locator": "분기보고서 (2024.03) [20240516001738] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-05-16",
+     "prior_year_comparative": 568591.411601
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 916909.063295,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003128",
+     "locator": "반기보고서 (2024.06) [20240814003128] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-08-14",
+     "prior_year_comparative": 642482.076734
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 788748.82228,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114001965",
+     "locator": "분기보고서 (2024.09) [20241114001965] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-11-14",
+     "prior_year_comparative": 694418.512934
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 815713.136786,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250320001309",
+     "locator": "[기재정정] 사업보고서 (2024.12) [20250320001309] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액', 당기(연간)열 3,322,349.008 − 분기보고서 (2024.09) [20241114001965] 당기 누적 누계 2,506,635.871 (단위 원 → 백만원 환산)",
+     "published_date": "2025-03-20",
+     "prior_year_comparative": 797307.336101,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(2,702,799.337 − 1,905,492.001)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 1014667.829225,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250515002651",
+     "locator": "분기보고서 (2025.03) [20250515002651] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-05-15",
+     "prior_year_comparative": 800977.985167
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 906219.054679,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250814002832",
+     "locator": "반기보고서 (2025.06) [20250814002832] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-08-14",
+     "prior_year_comparative": 916909.063295
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 995431.807616,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251114002465",
+     "locator": "분기보고서 (2025.09) [20251114002465] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-11-14",
+     "prior_year_comparative": 788748.82228
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 1163178.967009,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316000940",
+     "locator": "사업보고서 (2025.12) [20260316000940] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출액', 당기(연간)열 4,079,497.659 − 분기보고서 (2025.09) [20251114002465] 당기 누적 누계 2,916,318.692 (단위 원 → 백만원 환산)",
+     "published_date": "2026-03-16",
+     "prior_year_comparative": 815713.136786,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(3,322,349.008 − 2,506,635.871)"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 1036500.341405,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002315",
+     "locator": "분기보고서 (2026.03) [20260515002315] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-05-15",
+     "prior_year_comparative": 1014667.829225
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 1141812.823338,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003228",
+     "locator": "반기보고서 (2026.06) [20260814003228] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '매출', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-08-14",
+     "prior_year_comparative": 906219.054679
+    }
+   ]
+  },
+  "revenue_segment": {
+   "label_ko": "IR '전력기기' 부문 매출(본사 사업부; 종속법인 별도)",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "전력기기(전력변압기·고압차단기 등, HD현대일렉트릭 본사 사업부 기준 — 알라바마·양중 등 종속법인 매출은 '종속법인+연결조정' 구간으로 별도). 출처: 분기 실적발표 자료(IR) 누적막대. FY2024Q1부터 배전변압기 제외(배전기기로 이관)",
+   "points": [
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 221600.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2018_12_17_154044_1.pdf",
+     "locator": "HD현대일렉트릭 '2018년 3분기 실적발표 자료(2018.10.30)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 비교 막대('2017Q3'; 해당 분기 덱은 이미지형이거나 부재) (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2018_12_17_154044_1.pdf). 막대 합계 4,691억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 1개",
+     "published_date": "2018-10-30"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 263000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2019_02_08_111839_1.pdf",
+     "locator": "HD현대일렉트릭 '2018년 4분기 실적발표 자료(2019.01.30)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 비교 막대('2017Q4'; 해당 분기 덱은 이미지형이거나 부재) (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2019_02_08_111839_1.pdf). 막대 합계 4,893억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 1개",
+     "published_date": "2019-01-30"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 151000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2019_04_30_160820_1.pdf",
+     "locator": "HD현대일렉트릭 '2019년 1분기 실적발표 자료(2019.04.30)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 비교 막대('2018Q1'; 해당 분기 덱은 이미지형이거나 부재) (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2019_04_30_160820_1.pdf). 막대 합계 4,301억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 1개",
+     "published_date": "2019-04-30"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 206000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2018_12_17_154044_1.pdf",
+     "locator": "HD현대일렉트릭 '2018년 3분기 실적발표 자료(2018.10.30)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 비교 막대('2018Q2'; 해당 분기 덱은 이미지형이거나 부재) (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2018_12_17_154044_1.pdf). 막대 합계 5,075억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2018-10-30"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 181100.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2018_12_17_154044_1.pdf",
+     "locator": "HD현대일렉트릭 '2018년 3분기 실적발표 자료(2018.10.30)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2018_12_17_154044_1.pdf). 막대 합계 4,402억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2018-10-30",
+     "prior_year_comparative": 221600.0
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 180300.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2019_02_08_111839_1.pdf",
+     "locator": "HD현대일렉트릭 '2018년 4분기 실적발표 자료(2019.01.30)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2019_02_08_111839_1.pdf). 막대 합계 5,626억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2019-01-30",
+     "prior_year_comparative": 263000.0
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 156700.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2019_04_30_160820_1.pdf",
+     "locator": "HD현대일렉트릭 '2019년 1분기 실적발표 자료(2019.04.30)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2019_04_30_160820_1.pdf). 막대 합계 4,179억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2019-04-30",
+     "prior_year_comparative": 151000.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 160300.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2019_08_14_172033_1.pdf",
+     "locator": "HD현대일렉트릭 '2019년 2분기 실적발표 자료(2019.08.08)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2019_08_14_172033_1.pdf). 막대 합계 4,052억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2019-08-08",
+     "prior_year_comparative": 206000.0
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 141700.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2019_10_24_143255_1.pdf",
+     "locator": "HD현대일렉트릭 '2019년 3분기 실적발표 자료(2019.10.24)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2019_10_24_143255_1.pdf). 막대 합계 3,857억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2019-10-24",
+     "prior_year_comparative": 181100.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 207000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2020_02_05_140858_1.pdf",
+     "locator": "HD현대일렉트릭 '2019년 4분기 실적발표 자료(2020.02.05)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2020_02_05_140858_1.pdf). 막대 합계 5,623억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2020-02-05",
+     "prior_year_comparative": 180300.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 144000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2020_04_27_133644_1.pdf",
+     "locator": "HD현대일렉트릭 '2020년 1분기 실적발표 자료(2020.04.27)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2020_04_27_133644_1.pdf). 막대 합계 3,864억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2020-04-27",
+     "prior_year_comparative": 156700.0
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 194000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2020_08_13_143414_1.pdf",
+     "locator": "HD현대일렉트릭 '2020년 2분기 실적발표 자료(2020.08.12)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2020_08_13_143414_1.pdf). 막대 합계 5,355억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2020-08-13",
+     "prior_year_comparative": 160300.0
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 170100.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2020_10_29_142547_1.pdf",
+     "locator": "HD현대일렉트릭 '2020년 3분기 실적발표 자료(2020.10.29)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2020_10_29_142547_1.pdf). 막대 합계 3,980억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2020-10-29",
+     "prior_year_comparative": 141700.0
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 224000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2021_02_03_133419_1.pdf",
+     "locator": "HD현대일렉트릭 '2020년 4분기 실적발표 자료(2021.02.03)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2021_02_03_133419_1.pdf). 막대 합계 4,914억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2021-02-03",
+     "prior_year_comparative": 207000.0
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 137200.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2021_04_28_151634_1.pdf",
+     "locator": "HD현대일렉트릭 '2021년 1분기 실적발표 자료(2021.04.28)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2021_04_28_151634_1.pdf). 막대 합계 3,807억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2021-04-28",
+     "prior_year_comparative": 144000.0
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 151900.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2021_07_22_150229_1.pdf",
+     "locator": "HD현대일렉트릭 '2021년 2분기 실적발표 자료(2021.07.22)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2021_07_22_150229_1.pdf). 막대 합계 4,236억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2021-07-22",
+     "prior_year_comparative": 194000.0
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 137100.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2021_10_27_152044_1.pdf",
+     "locator": "HD현대일렉트릭 '2021년 3분기 실적발표 자료(2021.10.27)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2021_10_27_152044_1.pdf). 막대 합계 3,941억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2021-10-27",
+     "prior_year_comparative": 170100.0
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 260600.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2022_02_04_132131_1.pdf",
+     "locator": "HD현대일렉트릭 '2021년 4분기 실적발표 자료(2022.02.04)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2022_02_04_132131_1.pdf). 막대 합계 6,076억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2022-02-04",
+     "prior_year_comparative": 224000.0
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 135900.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2022_04_27_134249_1.pdf",
+     "locator": "HD현대일렉트릭 '2022년 1분기 실적발표 자료(2022.04.27)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2022_04_27_134249_1.pdf). 막대 합계 3,518억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2022-04-27",
+     "prior_year_comparative": 137200.0
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 199000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2022_10_26_140446_1.pdf",
+     "locator": "HD현대일렉트릭 '2022년 3분기 실적발표 자료(2022.10.26)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 비교 막대('2022Q2'; 해당 분기 덱은 이미지형이거나 부재) (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2022_10_26_140446_1.pdf). 막대 합계 5,401억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2022-10-26"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 202500.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2022_10_26_140446_1.pdf",
+     "locator": "HD현대일렉트릭 '2022년 3분기 실적발표 자료(2022.10.26)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2022_10_26_140446_1.pdf). 막대 합계 5,351억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2022-10-26",
+     "prior_year_comparative": 137100.0
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 311100.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2023_02_02_133809_1.pdf",
+     "locator": "HD현대일렉트릭 '2022년 4분기 실적발표 자료(2023.02.02)' p.6 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2023_02_02_133809_1.pdf). 막대 합계 6,775억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 3개",
+     "published_date": "2023-02-02",
+     "prior_year_comparative": 260600.0
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 232900.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2023_04_24_092243_1.pdf",
+     "locator": "HD현대일렉트릭 '2023년 1분기 실적발표 자료(2023.04.24)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2023_04_24_092243_1.pdf). 막대 합계 5,686억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2023-04-24",
+     "prior_year_comparative": 135900.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 271900.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2023_10_18_161935_1.pdf",
+     "locator": "HD현대일렉트릭 '2023년 2분기 실적발표 자료(2023.07.26)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2023_10_18_161935_1.pdf). 막대 합계 6,425억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2023-07-26",
+     "prior_year_comparative": 199000.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 326400.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2023_10_25_090848_1.pdf",
+     "locator": "HD현대일렉트릭 '2023년 3분기 실적발표 자료(2023.10.25)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2023_10_25_090848_1.pdf). 막대 합계 6,944억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 2개",
+     "published_date": "2023-10-25",
+     "prior_year_comparative": 202500.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 385700.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_02_02_132753_1.pdf",
+     "locator": "HD현대일렉트릭 '2023년 4분기 실적발표 자료(2024.02.02)' p.6 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (단위 억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_02_02_132753_1.pdf). 막대 합계 7,973억원 = DART 연결 매출 일치. 같은 값 인쇄 덱 1개",
+     "published_date": "2024-02-02",
+     "prior_year_comparative": 311100.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 317400.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_04_23_143515_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 1분기 실적발표 자료(2024.04.23)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_04_23_143515_1.pdf). 이미지형 슬라이드를 렌더링해 판독 — 후속 덱의 같은 분기 막대 값과 일치 확인",
+     "published_date": "2024-04-23",
+     "prior_year_comparative": 186300.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 377600.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_07_23_141642_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 2분기 실적발표 자료(2024.07.23)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_07_23_141642_1.pdf). 이미지형 슬라이드를 렌더링해 판독 — 후속 덱의 같은 분기 막대 값과 일치 확인",
+     "published_date": "2024-07-23",
+     "prior_year_comparative": 252100.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 313100.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_10_25_095317_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 3분기 실적발표 자료(2024.10.25)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_10_25_095317_1.pdf). 이미지형 슬라이드를 렌더링해 판독 — 후속 덱의 같은 분기 막대 값과 일치 확인",
+     "published_date": "2024-10-25",
+     "prior_year_comparative": 326400.0,
+     "prior_year_comparative_note": "덱이 인쇄한 전년 동기 값이 배전변압기 재분류(2024Q1) 이전 기준값과 동일 — 2024Q1 덱은 4Q23을 3,499억(재분류 후)으로 인쇄. 회사 자체 YoY 계산 기준을 그대로 보존"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 580800.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_01_20_103952_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 4분기 실적발표 자료(2025.01.20)' p.6 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_01_20_103952_1.pdf). 이미지형 슬라이드를 렌더링해 판독 — 후속 덱의 같은 분기 막대 값과 일치 확인",
+     "published_date": "2025-01-20",
+     "prior_year_comparative": 385700.0,
+     "prior_year_comparative_note": "덱이 인쇄한 전년 동기 값이 배전변압기 재분류(2024Q1) 이전 기준값과 동일 — 2024Q1 덱은 4Q23을 3,499억(재분류 후)으로 인쇄. 회사 자체 YoY 계산 기준을 그대로 보존"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 463700.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_04_22_133830_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 1분기 실적발표 자료(2025.04.22)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_04_22_133830_1.pdf). 이미지형 슬라이드를 렌더링해 판독 — 후속 덱의 같은 분기 막대 값과 일치 확인",
+     "published_date": "2025-04-22",
+     "prior_year_comparative": 317400.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 484000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_07_22_133600_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 2분기 실적발표 자료(2025.07.22)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_07_22_133600_1.pdf)",
+     "published_date": "2025-07-22",
+     "prior_year_comparative": 377600.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 587800.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_10_23_180217_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 3분기 실적발표 자료(2025.10.23)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_10_23_180217_1.pdf)",
+     "published_date": "2025-10-23",
+     "prior_year_comparative": 313100.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 525000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2026_02_20_154216_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 4분기 실적발표 자료(2026.02.06)' p.6 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2026_02_20_154216_1.pdf)",
+     "published_date": "2026-02-06",
+     "prior_year_comparative_note": "4Q24 막대 라벨(5,808억)은 텍스트 레이어가 겹쳐 추출되지 않아 같은 페이지 렌더링 이미지에서 판독(2025년 1분기 덱과 동일값)",
+     "prior_year_comparative": 580800.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 564000.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2026_04_28_133039_1.pdf",
+     "locator": "HD현대일렉트릭 '2026년 1분기 실적발표 자료(2026.04.28)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2026_04_28_133039_1.pdf)",
+     "published_date": "2026-04-28",
+     "prior_year_comparative": 463700.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 535900.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2026_07_28_142852_1.pdf",
+     "locator": "HD현대일렉트릭 '2026년 2분기 실적발표 자료(2026.07.28)' p.5 '사업부문별 매출' 누적막대, 범례 '전력기기' 구간 라벨, 당분기 막대 (억원→백만원 ×100). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2026_07_28_142852_1.pdf)",
+     "published_date": "2026-07-28",
+     "prior_year_comparative": 484000.0
+    }
+   ]
+  },
+  "orders_segment": {
+   "label_ko": "수주(전사, 백만 달러)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": false,
+   "currency": "USD",
+   "unit": "million",
+   "metric": "orders_received",
+   "segment_name": "전사 신규 수주(USD 백만, IR 실적 요약 표 수주(백만불) 행) — 매출(KRW)과 통화 다름",
+   "points": [
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 796.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_04_23_143515_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 1분기 실적발표 자료(2024.04.23)' p.4 '실적 요약' 표, 행 '수주(백만불)', 비교열('2023Q1' 열; 해당 분기 덱에는 수주 행 없음). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_04_23_143515_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 없음",
+     "published_date": "2024-04-23",
+     "currency": "USD"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 1232.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_07_23_141642_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 2분기 실적발표 자료(2024.07.23)' p.4 '실적 요약' 표, 행 '수주(백만불)', 비교열('2023Q2' 열; 해당 분기 덱에는 수주 행 없음). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_07_23_141642_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 없음",
+     "published_date": "2024-07-23",
+     "currency": "USD"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 677.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_10_25_095317_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 3분기 실적발표 자료(2024.10.25)' p.4 '실적 요약' 표, 행 '수주(백만불)', 비교열('2023Q3' 열; 해당 분기 덱에는 수주 행 없음). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_10_25_095317_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 없음",
+     "published_date": "2024-10-25",
+     "currency": "USD"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 859.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_04_23_143515_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 1분기 실적발표 자료(2024.04.23)' p.4 '실적 요약' 표, 행 '수주(백만불)', 비교열('2023Q4' 열; 해당 분기 덱에는 수주 행 없음). (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_04_23_143515_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 2024년 4분기 실적발",
+     "published_date": "2024-04-23",
+     "currency": "USD"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 1438.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_04_23_143515_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 1분기 실적발표 자료(2024.04.23)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_04_23_143515_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 2024년 2분기 실적발, 2025년 1분기 실적발",
+     "published_date": "2024-04-23",
+     "currency": "USD",
+     "prior_year_comparative": 796.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 880.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_07_23_141642_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 2분기 실적발표 자료(2024.07.23)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_07_23_141642_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 2024년 3분기 실적발, 2025년 2분기 실적발",
+     "published_date": "2024-07-23",
+     "currency": "USD",
+     "prior_year_comparative": 1232.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 707.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_10_25_095317_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 3분기 실적발표 자료(2024.10.25)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2024_10_25_095317_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 2024년 4분기 실적발, 2025년 3분기 실적발",
+     "published_date": "2024-10-25",
+     "currency": "USD",
+     "prior_year_comparative": 677.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 791.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_01_20_103952_1.pdf",
+     "locator": "HD현대일렉트릭 '2024년 4분기 실적발표 자료(2025.01.20)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_01_20_103952_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 2025년 1분기 실적발, 2025년 4분기 실적발",
+     "published_date": "2025-01-20",
+     "currency": "USD",
+     "prior_year_comparative": 859.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 1335.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_04_22_133830_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 1분기 실적발표 자료(2025.04.22)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_04_22_133830_1.pdf) — 이미지형 슬라이드(텍스트 레이어 없음)를 렌더링해 판독. 같은 값이 인쇄된 다른 덱: 2025년 2분기 실적발, 2026년 1분기 실적발",
+     "published_date": "2025-04-22",
+     "currency": "USD",
+     "prior_year_comparative": 1438.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 996.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_07_22_133600_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 2분기 실적발표 자료(2025.07.22)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_07_22_133600_1.pdf). 같은 값이 인쇄된 다른 덱: 2025년 3분기 실적발, 2026년 2분기 실적발",
+     "published_date": "2025-07-22",
+     "currency": "USD",
+     "prior_year_comparative": 880.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 1212.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2025_10_23_180217_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 3분기 실적발표 자료(2025.10.23)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2025_10_23_180217_1.pdf). 같은 값이 인쇄된 다른 덱: 2025년 4분기 실적발",
+     "published_date": "2025-10-23",
+     "currency": "USD",
+     "prior_year_comparative": 707.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 730.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2026_02_20_154216_1.pdf",
+     "locator": "HD현대일렉트릭 '2025년 4분기 실적발표 자료(2026.02.06)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2026_02_20_154216_1.pdf). 같은 값이 인쇄된 다른 덱: 2026년 1분기 실적발",
+     "published_date": "2026-02-06",
+     "currency": "USD",
+     "prior_year_comparative": 791.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 1797.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2026_04_28_133039_1.pdf",
+     "locator": "HD현대일렉트릭 '2026년 1분기 실적발표 자료(2026.04.28)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2026_04_28_133039_1.pdf). 같은 값이 인쇄된 다른 덱: 2026년 2분기 실적발",
+     "published_date": "2026-04-28",
+     "currency": "USD",
+     "prior_year_comparative": 1335.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 1440.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2026_07_28_142852_1.pdf",
+     "locator": "HD현대일렉트릭 '2026년 2분기 실적발표 자료(2026.07.28)' p.4 '실적 요약' 표, 행 '수주(백만불)', 당분기 열. (IR 자료실 목록 → POST /elec/common/fileDown.jsp, fileName=2026_07_28_142852_1.pdf). 같은 값이 인쇄된 다른 덱: 없음",
+     "published_date": "2026-07-28",
+     "currency": "USD",
+     "prior_year_comparative": 996.0
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2017-04-01",
+   "type": "listing",
+   "note": "현대중공업(현 HD한국조선해양)에서 인적분할 설립(분할기일 2017-04-01) — 제1기 반기(2017.04.01~06.30)가 첫 분기. FY2017Q1 없음.",
+   "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170829000276"
+  },
+  {
+   "date": "2022-04-01",
+   "type": "acquisition",
+   "note": "플라스포(현 HD현대플라스포) 인수(전력변환기기) — 연결 매출 소폭 확대.",
+   "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003228&dcmNo=11536334&eleId=10&offset=163569&length=2382&dtd=dart4.xsd"
+  },
+  {
+   "date": "2024-01-01",
+   "type": "segment_reorg",
+   "note": "IR 덱 '전력기기' 구간: 2024년 1분기 덱부터 기존 전력기기에 포함되던 배전변압기 매출을 배전기기로 변경(1Q23 2,329→1,863억, 4Q23 3,857→3,499억 재작성 인쇄). 단 2024년 3·4분기 덱은 3Q23·4Q23을 변경 전 값(3,264·3,857억)으로 인쇄 — revenue_segment 레벨은 FY2023Q4까지 변경 전, FY2024Q1부터 변경 후 기준.",
+   "source_url": "https://www.hd-hyundaielectric.com/elect/ko/IR/IRdata1.jsp#2024_04_23_143515_1.pdf"
+  }
+ ],
+ "profile": {
+  "products": "전력기기(발전·송전: 전력변압기 최대 800kV급 초고압, 고압차단기/GIS), 배전기기(배전반·중저압차단기·배전변압기), 회전기기(회전기·저압전동기), 전력변환(HD현대플라스포, 2022 인수)·ESS. 2026 상반기 연결 매출 2조 1,783억: 전력기기 68%·회전기기 16%·배전기기 등 16%, 수출 78%, 주요 매출처 NextEra Energy·사우디전력청.",
+  "plants": [
+   {
+    "country": "KR",
+    "city": "울산",
+    "products": "변압기(공장 증설 2025.02~2027.12)·회전기 등 주력 생산",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003228&dcmNo=11536334&eleId=12&offset=168913&length=37434&dtd=dart4.xsd"
+   },
+   {
+    "country": "KR",
+    "city": "청주(배전캠퍼스)",
+    "products": "배전기기(2023.05~2026.12 신축)",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003228&dcmNo=11536334&eleId=12&offset=168913&length=37434&dtd=dart4.xsd"
+   },
+   {
+    "country": "US",
+    "city": "Alabama (HD Hyundai Power Transformers USA, Inc.)",
+    "products": "전력변압기; 제2공장 신축 2025.01~2027.12",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003228&dcmNo=11536334&eleId=12&offset=168913&length=37434&dtd=dart4.xsd"
+   },
+   {
+    "country": "CN",
+    "city": "Yangzhong, Jiangsu (HD Hyundai Electric China Co.,Ltd.)",
+    "products": "고압차단기·배전반·변압기",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003228&dcmNo=11536334&eleId=12&offset=168913&length=37434&dtd=dart4.xsd"
+   },
+   {
+    "country": "SA",
+    "city": "사우디아라비아(중동법인)",
+    "products": "해외 사업장(제조·영업) — 원문은 국가만 기재",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260814003228&dcmNo=11536334&eleId=12&offset=168913&length=37434&dtd=dart4.xsd"
+   }
+  ],
+  "end_markets": "북미 유틸리티(NextEra 등)·데이터센터, 중동 전력청(사우디), 유럽 TSO, 국내 한전·조선·산업체; 선박용 회전기",
+  "export_routes": [
+   "KR->US",
+   "US domestic (Alabama)",
+   "KR->SA",
+   "KR->EU",
+   "CN domestic"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "853521",
+   "853529",
+   "853720",
+   "853710"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_850423_p410",
+    "why": "미국의 한국산 >10MVA 대형 전력변압기 수입 — 울산 → 북미 초고압 변압기 선적",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "kr_exp_850423_p842",
+    "why": "한국 측 HS850423 대미 수출(미러)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "kr_exp_850423_p0",
+    "why": "한국 HS850423 총수출 — 중동·유럽 포함 대형 변압기 전체 선적",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p0",
+    "why": "미국 대형 전력변압기 총수입 — 미국 수요 규모(알라바마 현지 생산 대체 포함)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_853521_p410",
+    "why": "미국의 한국산 ≥72.5kV 자동차단기 수입 — 고압차단기/GIS",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_IPG22112S",
+    "why": "미국 송전·제어·배전 산업생산 — 계통 투자 동행",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "kr_exp_850423_p682",
+    "why": "WISHLIST: 한국 HS850423 대사우디 수출(Comtrade reporter 410, partner 682) — 사우디전력청 매출 경로",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "fred_PCU335311335311",
+    "why": "미국 전력·특수 변압기 PPI — 달러 판가 상승이 원화 매출에 전가(가격 효과)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_A35CNO",
+    "why": "미국 전기장비(NAICS 3353) 신규수주 — 미국 배전·전력기기 수요 선행",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_TLPWRCONS",
+    "why": "미국 전력 건설투자 — 송배전·발전 설비 투자 사이클",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total FY2016Q1–FY2017Q1: 2017-04-01 인적분할 설립 전 — 해당 없음.",
+  "revenue_segment FY2017Q2: 2017 2분기·2018 2분기 실적발표 자료가 이미지형이고 텍스트 덱 비교열에도 2Q17 없음 — 비움.",
+  "revenue_segment: DART 사업보고서는 '전기전자부문' 단일 보고부문(매출·자산 90% 초과)으로만 공시 — 부문 매출은 IR 실적발표 자료의 '전력기기' 막대로 대체(본사 사업부 기준, 종속법인 별도).",
+  "orders_segment FY2017Q2–FY2022Q4: 2023년 이전 실적발표 자료는 지역별(북미·중동 등) 수주 차트만 있고 전사 분기 수주 합계 표가 없음; DART 수주상황 표는 수주총액(이월 포함)·잔고만 — 비움."
+ ],
+ "collection_notes": [
+  "revenue_total: DART 분기·반기·사업보고서 연결 포괄손익계산서 매출(3개월 열 / 4분기=연간−3분기 누계). 모든 연도에서 3개월 합=누계 검산 통과.",
+  "revenue_segment: HD현대일렉트릭 IR 실적발표 자료(hd-hyundaielectric.com IR 자료실 PDF) '사업부문별 매출' 누적막대의 '전력기기' 라벨(억원). 막대 합계가 DART 연결 매출(억원 반올림)과 전 분기 일치, 같은 분기가 인쇄된 2~3개 덱 값이 모두 일치함을 확인. 2024년 1분기~2025년 1분기 덱 5개는 텍스트 레이어가 없어 렌더링 이미지에서 판독(렌더 PNG·원본 PDF를 data/raw/actuals/HDHE 에 보관), 해당 값은 후속 텍스트 덱 비교열과 일치.",
+  "orders_segment: IR '실적 요약' 표 수주(백만불) — 통화 USD(타깃 레벨 currency=USD). 2023·2024 분기합이 연간 수주(3,564·3,816백만불, 2024년 4분기 덱)와 일치.",
+  "primary_target=revenue_total: IR 전력기기 구간은 본사 사업부 기준이라 알라바마 변압기 공장(종속법인) 매출이 빠지고 2024Q1 배전변압기 재분류 단절이 있어 연결 매출을 모델 타깃으로 유지."
+ ]
+}

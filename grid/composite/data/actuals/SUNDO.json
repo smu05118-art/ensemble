@@ -1,0 +1,565 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "SUNDO",
+ "grid_node": "KGRID_007610",
+ "name": "선도전기",
+ "ticker": "007610 KS",
+ "listed": true,
+ "currency": "KRW",
+ "unit": "million",
+ "accounting_basis": "K-IFRS",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters (Dec FYE); 분기 말일 03-31/06-30/09-30/12-31",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 매출(매출액)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 14242.708279,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20160516002080",
+     "locator": "분기보고서 (2016.03) [20160516002080] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2016-05-16",
+     "prior_year_comparative": 15058.943944
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 27187.206528,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20160816000916",
+     "locator": "반기보고서 (2016.06) [20160816000916] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2016-08-16",
+     "prior_year_comparative": 29987.453267
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 24593.605547,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20161114001854",
+     "locator": "분기보고서 (2016.09) [20161114001854] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2016-11-14",
+     "prior_year_comparative": 22807.320771
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 27926.285366,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170331001890",
+     "locator": "사업보고서 (2016.12) [20170331001890] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기(연간)열 93,949.806 − 분기보고서 (2016.09) [20161114001854] 당기 누적 누계 66,023.52 (단위 원 → 백만원 환산)",
+     "published_date": "2017-03-31",
+     "prior_year_comparative": 26141.953744,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(93,995.672 − 67,853.718)"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 26017.175848,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170515003194",
+     "locator": "분기보고서 (2017.03) [20170515003194] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-05-15",
+     "prior_year_comparative": 14242.708279
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 29081.093513,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170814001222",
+     "locator": "반기보고서 (2017.06) [20170814001222] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-08-14",
+     "prior_year_comparative": 27187.206528
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 28580.445084,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20171114000677",
+     "locator": "분기보고서 (2017.09) [20171114000677] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-11-14",
+     "prior_year_comparative": 24593.605547
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 24715.40344,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180330000936",
+     "locator": "사업보고서 (2017.12) [20180330000936] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기(연간)열 108,394.118 − 분기보고서 (2017.09) [20171114000677] 당기 누적 누계 83,678.714 (단위 원 → 백만원 환산)",
+     "published_date": "2018-03-30",
+     "prior_year_comparative": 27926.285366,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(93,949.806 − 66,023.52)"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 13000.061107,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180515001908",
+     "locator": "분기보고서 (2018.03) [20180515001908] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-05-15",
+     "prior_year_comparative": 26017.175848
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 22661.783737,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180814001652",
+     "locator": "반기보고서 (2018.06) [20180814001652] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-08-14",
+     "prior_year_comparative": 29081.093513
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 24407.952163,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20181114000690",
+     "locator": "분기보고서 (2018.09) [20181114000690] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-11-14",
+     "prior_year_comparative": 28580.445084
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 23701.053174,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190401000901",
+     "locator": "사업보고서 (2018.12) [20190401000901] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기(연간)열 83,770.85 − 분기보고서 (2018.09) [20181114000690] 당기 누적 누계 60,069.797 (단위 원 → 백만원 환산)",
+     "published_date": "2019-04-01",
+     "prior_year_comparative": 24715.40344,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(108,394.118 − 83,678.714)"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 24043.407865,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190515000748",
+     "locator": "분기보고서 (2019.03) [20190515000748] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-05-15",
+     "prior_year_comparative": 13000.061107
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 23999.692896,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190814001354",
+     "locator": "반기보고서 (2019.06) [20190814001354] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-08-14",
+     "prior_year_comparative": 22661.783737
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 14314.772046,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20191114001449",
+     "locator": "분기보고서 (2019.09) [20191114001449] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-11-14",
+     "prior_year_comparative": 24407.952163
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 26991.117652,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200330002025",
+     "locator": "사업보고서 (2019.12) [20200330002025] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기(연간)열 89,348.99 − 분기보고서 (2019.09) [20191114001449] 당기 누적 누계 62,357.873 (단위 원 → 백만원 환산)",
+     "published_date": "2020-03-30",
+     "prior_year_comparative": 23701.053174,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(83,770.85 − 60,069.797)"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 20938.425926,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200515000265",
+     "locator": "분기보고서 (2020.03) [20200515000265] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-05-15",
+     "prior_year_comparative": 24043.407865
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 28342.309043,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200814000531",
+     "locator": "반기보고서 (2020.06) [20200814000531] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-08-14",
+     "prior_year_comparative": 23999.692896
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 19989.594517,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20201116001901",
+     "locator": "[기재정정] 분기보고서 (2020.09) [20201116001901] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-11-16",
+     "prior_year_comparative": 14314.772046
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 16904.170391,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210326000766",
+     "locator": "[기재정정] 사업보고서 (2020.12) [20210326000766] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기(연간)열 86,174.5 − [기재정정] 분기보고서 (2020.09) [20201116001901] 당기 누적 누계 69,270.329 (단위 원 → 백만원 환산)",
+     "published_date": "2021-03-26",
+     "prior_year_comparative": 26991.117652,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(89,348.99 − 62,357.873)"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 17391.722407,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210514000854",
+     "locator": "분기보고서 (2021.03) [20210514000854] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-05-14",
+     "prior_year_comparative": 20938.425926
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 26226.516533,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210817001740",
+     "locator": "반기보고서 (2021.06) [20210817001740] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-08-17",
+     "prior_year_comparative": 28342.309043
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 17739.046885,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20211115001669",
+     "locator": "분기보고서 (2021.09) [20211115001669] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-11-15",
+     "prior_year_comparative": 19989.594517
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 21986.345813,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220323000389",
+     "locator": "사업보고서 (2021.12) [20220323000389] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기(연간)열 83,343.632 − 분기보고서 (2021.09) [20211115001669] 당기 누적 누계 61,357.286 (단위 원 → 백만원 환산)",
+     "published_date": "2022-03-23",
+     "prior_year_comparative": 16904.170391,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(86,174.5 − 69,270.329)"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 14087.396519,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220516000847",
+     "locator": "분기보고서 (2022.03) [20220516000847] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-05-16",
+     "prior_year_comparative": 17391.722407
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 17002.738655,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220816001816",
+     "locator": "반기보고서 (2022.06) [20220816001816] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-08-16",
+     "prior_year_comparative": 26226.516533
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 15490.740472,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20221114002173",
+     "locator": "분기보고서 (2022.09) [20221114002173] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 누적열 46,580.876 − 반기보고서 (2022.06) [20220816001816] 당기 누적 누계 31,090.135 (단위 원 → 백만원 환산)",
+     "published_date": "2022-11-14",
+     "prior_year_comparative": 17739.046885,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(61,357.286 − 43,618.239)"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 15312.807571,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230327000475",
+     "locator": "[기재정정] 사업보고서 (2022.12) [20230327000475] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기(연간)열 61,893.683 − 분기보고서 (2022.09) [20221114002173] 당기 누적 누계 46,580.876 (단위 원 → 백만원 환산)",
+     "published_date": "2023-03-27",
+     "prior_year_comparative": 21986.345813,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(83,343.632 − 61,357.286)"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 7931.032007,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230515000810",
+     "locator": "분기보고서 (2023.03) [20230515000810] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-05-15",
+     "prior_year_comparative": 14087.396519
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 13418.661835,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230814001189",
+     "locator": "반기보고서 (2023.06) [20230814001189] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-08-14",
+     "prior_year_comparative": 17002.738655
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 11415.317763,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20231114000087",
+     "locator": "분기보고서 (2023.09) [20231114000087] III. 재무에 관한 사항 > 2. 연결재무제표 — 행 '수익(매출액)', 당기 누적열 32,765.012 − 반기보고서 (2023.06) [20230814001189] 당기 누적 누계 21,349.694 (단위 원 → 백만원 환산)",
+     "published_date": "2023-11-14",
+     "prior_year_comparative": 15490.740472,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(46,580.876 − 31,090.135)"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 8876.866781,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240502000551",
+     "locator": "[기재정정] 사업보고서 (2023.12) [20240502000551] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기(연간)열 41,641.878 − 분기보고서 (2023.09) [20231114000087] 당기 누적 누계 32,765.012 (단위 원 → 백만원 환산)",
+     "published_date": "2024-05-02"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 4896.359847,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240516002038",
+     "locator": "분기보고서 (2024.03) [20240516002038] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-05-16",
+     "prior_year_comparative": 7931.032007
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 7980.126276,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003010",
+     "locator": "반기보고서 (2024.06) [20240814003010] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-08-14",
+     "prior_year_comparative": 13418.661835
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 3724.354558,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002218",
+     "locator": "분기보고서 (2024.09) [20241114002218] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-11-14",
+     "prior_year_comparative": 11415.317763
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 7383.189841,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250926000794",
+     "locator": "[기재정정] 사업보고서 (2024.12) [20250926000794] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기(연간)열 23,984.031 − 분기보고서 (2024.09) [20241114002218] 당기 누적 누계 16,600.841 (단위 원 → 백만원 환산)",
+     "published_date": "2025-09-26",
+     "prior_year_comparative": 8876.866781,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(41,641.878 − 32,765.012)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 7335.97662,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250515002133",
+     "locator": "분기보고서 (2025.03) [20250515002133] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-05-15",
+     "prior_year_comparative": 4896.359847
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 7835.856706,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250813000924",
+     "locator": "반기보고서 (2025.06) [20250813000924] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-08-13",
+     "prior_year_comparative": 7980.126276
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 4148.473959,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251113000840",
+     "locator": "분기보고서 (2025.09) [20251113000840] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-11-13",
+     "prior_year_comparative": 3724.354558
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 18850.411198,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000984",
+     "locator": "사업보고서 (2025.12) [20260319000984] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기(연간)열 38,170.718 − 분기보고서 (2025.09) [20251113000840] 당기 누적 누계 19,320.307 (단위 원 → 백만원 환산)",
+     "published_date": "2026-03-19",
+     "prior_year_comparative": 7383.189841,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(23,984.031 − 16,600.841)"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 5056.155115,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000768",
+     "locator": "분기보고서 (2026.03) [20260513000768] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-05-13",
+     "prior_year_comparative": 7335.97662
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 3013.066933,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813001640",
+     "locator": "반기보고서 (2026.06) [20260813001640] III. 재무에 관한 사항 > 2-2. 연결 포괄손익계산서 — 행 '수익', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-08-13",
+     "prior_year_comparative": 7835.856706
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2023-12-29",
+   "type": "restatement",
+   "note": "전기오류수정: 2021 사업보고서 [기재정정](2023-12-29)이 2021 매출 83,344→69,200백만원, 2020 86,174→78,562 재작성; 2022 사업보고서 [기재정정](2024-05-02) 61,894→64,020. 분기 재작성치는 미공시 → 분기 시계열은 최초 공시 기준(2021·2022 연간은 최초/첫 유효 사업보고서 사용), FY2023Q4 전년 비교열 생략.",
+   "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20231229000030"
+  },
+  {
+   "date": "2022-09-30",
+   "type": "restatement",
+   "note": "2022·2023 3분기보고서의 3개월 열이 4~9월(6개월) 금액으로 인쇄된 오류(2024 3분기보고서가 3Q23을 11,415백만원으로 정정 인쇄) → FY2022Q3·FY2023Q3는 누계 차분 사용.",
+   "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002218"
+  }
+ ],
+ "profile": {
+  "products": "전기변환기기류: 수배전반, 진공차단기, 가스절연개폐기(GIS), 보호계전기(Relay Panel), 전기공사; 비핵심 금융투자·농업(블루베리) 자회사. 주요고객 SK하이닉스·한국전력.",
+  "plants": [
+   {
+    "country": "KR",
+    "city": "안산(본사·공장)",
+    "products": "수배전반·차단기·GIS·계전기",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260813001640&dcmNo=11525819&eleId=12&offset=69864&length=48211&dtd=dart4.xsd"
+   }
+  ],
+  "end_markets": "국내 반도체 팹(SK하이닉스)·한국전력 변전·배전, 산업 플랜트(내수 거의 100%)",
+  "export_routes": [
+   "KR domestic"
+  ],
+  "hs_candidates": [
+   "853720",
+   "853710",
+   "853529"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_853720_p410",
+    "why": "미국의 한국산 >1kV 배전반 수입 — 한국 배전반 업황의 대외 지표(선도 직접 수출은 미미, 약한 진단)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "kosis_ip_C282",
+    "why": "WISHLIST: 통계청 광업제조업동향 전기공급·제어장치 제조업(C282) 생산지수(KOSIS, 월) — 국내 배전반 업황",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "kepco_capex_distribution",
+    "why": "WISHLIST: 한국전력 배전·송변전 설비투자 집행액(분기, 한전 IR/ALIO) — 공공 수배전반·GIS 발주",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "kr_semis_capex",
+    "why": "WISHLIST: 국내 반도체 설비투자(통계청 설비투자지수 반도체제조용기계, 월) — SK하이닉스 팹 수배전반 수요",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total FY2023Q4: 2023 사업보고서 전기(2022) 열은 재작성, 3분기 전년 누계는 미재작성 → prior_year_comparative 생략."
+ ],
+ "collection_notes": [
+  "revenue_total: DART 연결 손익계산서 수익(매출액) 3개월 열. 2021·2022 연간은 최초 유효 사업보고서(20220323000389, 20230327000475 [기재정정]; 2023-03-23 최초 2022 보고서는 2021 수치를 잘못 수록) — 이후 오류수정 재작성치는 분기 분해 불가로 미사용.",
+  "매출 규모 급감(2017 1,084억 → 2024 240억) — 반도체·한전 발주 의존, 대외 무역 프록시와 연관 약함(ext tier).",
+  "revenue_total FY2023Q4: 전년 비교열 재작성 여부가 두 문서 간 불일치(연간/누계 한쪽만 재작성) — prior_year_comparative 생략"
+ ]
+}

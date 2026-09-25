@@ -1,0 +1,1415 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "KODT",
+ "grid_node": "GRID_KONCAR_DST",
+ "name": "KONČAR - Distributivni i specijalni transformatori d.d. (Grupa KONČAR – D&ST)",
+ "ticker": "KODT / KODT2 (ZSE)",
+ "listed": true,
+ "currency": "EUR",
+ "unit": "million",
+ "accounting_basis": "IFRS (EU); ZSE TFI-POD quarterly forms",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar",
+ "collected_at": "2026-09-25",
+ "currency_note": "HRK until FY2022Q4 (points carry \"currency\":\"HRK\"), EUR from FY2023Q1 (euro adoption 2023-01-01, fixed 7.53450). prior_year_comparative always comes from the same report, so YoY is same-currency; FY2022Q3 (consolidated) exists only as the EUR comparative printed in the 9M-2023 report and is stored in EUR.",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 매출(Grupa KONČAR – D&ST, 변압기 전업)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 268.947,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/Grupa-KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2018.pdf",
+     "currency": "HRK",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2018. Grupa' (consolidated) p.7, row '1. Prihodi od prodaje' (AOP 112), column 'Isto razdoblje prethodne godine – Tromjesečje' (Q2 2017 as printed one year later). The H1-2017 consolidated TFI on ZSE (KODT-fin2017-2Q-NotREV-K-HR.xls) prints only the H1 cumulative (451,648,162 HRK) with an empty quarter column; the H1-2017 'Grupa' PDF on koncar.hr is byte-identical to the parent report."
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 241.186,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-III-kvartal-2017-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2017 Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 214.519,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-IV-kvartal-2017-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2017 Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 185.725,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-I-kvartal-2018-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2018. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 182.701,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 262.211,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/Grupa-KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2018.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2018. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 268.947,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 246.188,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-III-kvartal-2018-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2018. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 241.186,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 247.458,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-IV-kvartal-2018-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2018. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 214.047,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 263.329,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-I-kvartal-2019-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2019. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 185.725,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 294.248,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/Grupa-KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2019.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2019. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 262.211,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 234.481,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-III-kvartal-2019-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2019. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 246.188,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 277.202,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-IV-kvartal-2019-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2019. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 247.458,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 242.251,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-I-kvartal-2020-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2020. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 263.329,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 361.135,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/Grupa-KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2020.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2020. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 294.248,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 265.36,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-III-kvartal-2020-Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2020. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 234.481,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 295.856,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/20-GRUPA-Koncar-DST-4kv-1.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2020. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 277.202,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 316.936,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Grupa-Koncar-DST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2021. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 242.251,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 419.764,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Grupa-Koncar-DST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2021. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 361.135,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 320.153,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/21-Grupa-Koncar-DST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2021. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 265.36,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 367.498,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Grupa-Koncar-DST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2021. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 295.856,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 399.885,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Grupa-Koncar-DST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2022. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 316.936,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 504.558,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Grupa-Koncar-DST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2022. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 419.764,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 61.315,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-3kv.pdf",
+     "currency": "EUR",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2023. Grupa' (consolidated) p.8, row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Isto razdoblje prethodne godine – Tromjesečje' = Q3 2022 as re-printed in EUR (company conversion at the fixed 7.53450 HRK/EUR). The koncar.hr file labelled 'III kvartal 2022. Grupa' is byte-identical to the parent (unconsolidated) report, so the original HRK consolidated Q3-2022 figure is not available on the company site."
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 527.72,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2022-Grupa-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2022. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 367.498,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 71.304,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2023. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 53.074
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 85.213,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2023. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 66.966
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 86.585,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2023. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 61.315
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 105.989,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/23-GRUPA-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2023. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 72.695
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 96.942,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024.%20Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2024. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 71.304
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 133.058,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-09/24-Grupa-Koncar-DST-2kv_1.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2024. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 85.213
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 117.567,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-10/24%20Grupa%20Koncar%20DST%203%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2024. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 86.585
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 119.908,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-02/24%20Grupa%20Koncar%20DST%204kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2024. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 98.931
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 129.427,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-04/Grupa%20DIST%20Kvartalni%20izvje%C5%A1taj%20Q1%202025.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2025. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 96.942
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 134.414,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-07/25%20Grupa%20Kon%C4%8Dar%20DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2025. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 133.058
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 107.583,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-10/25%20Grupa%20Koncar%20DST%203kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2025. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 117.567
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 141.039,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-02/25%20Grupa%20DIST%204kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2025. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.10, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 119.913
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 142.489,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-04/26%20Grupa%20Koncar%20DST%201%20kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2026. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.10, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 129.427
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 166.809,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-07/26%20Grupa%20KONCAR-DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2026. Grupa' (TFI-POD, consolidated Grupa KONČAR – D&ST) p.10, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 134.414
+    }
+   ]
+  },
+  "revenue_standalone": {
+   "label_ko": "모회사 단독 매출(KONČAR – D&ST d.d.) — 2017년 연결 개시 이전 이력 포함",
+   "scope": "parent_unconsolidated",
+   "freq": "Q",
+   "primary": false,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 154.071,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-I-kvartal-2016.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2016' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 182.742,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 214.644,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2016.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2016' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 265.4,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 271.258,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-III-kvartal-2016.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2016' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 165.58,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 213.393,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-IV-kvartal-2016.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2016' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 177.512,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 182.701,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-I-kvartal-2017.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2017' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 154.071,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 266.78,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2017%20%281%29.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2017' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 214.644,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 235.78,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-III-kvartal-2017.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2017' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 271.258,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 206.756,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-IV-kvartal-2017.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2017' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 213.393,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 184.163,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-I-kvartal-2018.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2018.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 182.701,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 259.721,
+     "prior_year_comparative": 266.78,
+     "method": "direct_reported_quarter",
+     "currency": "HRK",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KODT-fin2018-2Q-NotREV-N-HR.xls",
+     "locator": "ZSE EHO TFI-POD KODT H1 2018 unconsolidated (xls), sheet RDG row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (the koncar.hr link labelled 'II kvartal 2018.' points to the 2017 annual report). HRK → millions."
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 244.449,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-III-kvartal-2018.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2018.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 235.78,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 229.651,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-IV-kvartal-2018.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2018.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row '1. Prihodi od prodaje' (AOP 112), column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 206.756,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 260.418,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-I-kvartal-2019.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2019.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 184.163,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 284.037,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2019.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2019.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 259.721,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 223.375,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-III-kvartal-2019.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2019.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 244.449,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 263.045,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-IV-kvartal-2019.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2019.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 229.651,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 223.66,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-I-kvartal-2020.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2020.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 260.418,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 338.458,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-POLUGODISNJA-FINANCIJSKA-IZVJESCA-2020.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2020.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 284.037,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 247.099,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/KONCAR-DST-III-kvartal-2020.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2020.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 223.375,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 281.543,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/20-Koncar-DST-4kv-2.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2020.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 126 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 127 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 263.045,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 309.702,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-1kv-1.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2021.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.7, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 223.66,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 407.765,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2021.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 338.458,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 306.914,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/21-Koncar-DST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2021.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 247.099,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 352.695,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2021.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 281.543,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 383.44,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2022.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 309.702,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 485.755,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2022.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 407.765,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 451.32,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-DIST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2022.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 306.914,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 480.336,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2022-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2022.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK → millions.",
+     "prior_year_comparative": 352.695,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 67.334,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2023.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 50.891
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 79.706,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2023.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 64.471
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 81.301,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2023.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 59.9
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 94.777,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/23-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2023.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 66.405
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 85.321,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024..pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2024.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 67.334
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 117.288,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-09/24-Koncar-DST-2kv_0.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2024.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 79.706
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 102.081,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-10/24%20Koncar%20DST%203%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2024.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.8, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 81.301
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 98.313,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-02/24%20Koncar%20DST%204%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2024.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 94.777
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 114.202,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-04/DIST%20Kvartalni%20izvje%C5%A1taj%20Q1%202025.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2025.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 85.321
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 116.133,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-07/25%20Kon%C4%8Dar%20DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2025.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 117.288
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 90.41,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-10/25%20Koncar%20DST%203kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2025.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.9, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 102.081
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 119.056,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-02/25%20Kon%C4%8Dar%20DST%204kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2025.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.10, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 98.313
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 116.25,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-04/26%20Koncar%20DIST%201%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2026.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.10, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 114.202
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 141.573,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-07/26%20KONCAR-DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2026.' (TFI-POD, unconsolidated KONČAR – D&ST d.d.) p.10, Račun dobiti i gubitka row AOP 002 'Prihodi od prodaje s poduzetnicima unutar grupe' + AOP 003 'Prihodi od prodaje (izvan grupe)', column 'Tekuće razdoblje – Tromjesečje'; comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR → millions.",
+     "prior_year_comparative": 116.133
+    }
+   ]
+  },
+  "orders_segment": {
+   "label_ko": "연결 신규수주(Ugovoreni poslovi, 분기화) — 변압기 전업이므로 사실상 변압기 수주",
+   "scope": "consolidated",
+   "segment_name": "Group new contracts signed (pure-play transformers)",
+   "metric": "orders_received",
+   "freq": "Q",
+   "primary": false,
+   "points": [
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 83.987,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2023. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), prior-year comparative column (as re-printed one year later); minus the 2-quarter YTD from 'II kvartal 2023. Grupa' (comparative column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-2kv.pdf). → millions."
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 67.221,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/23-GRUPA-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2023. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), prior-year comparative column (as re-printed one year later); minus the 3-quarter YTD from 'III kvartal 2023. Grupa' (comparative column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-3kv.pdf). → millions."
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 222.853,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024.%20Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2024. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), prior-year comparative column (as re-printed one year later). → millions."
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 210.268,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2023. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2024. Grupa' (comparative column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024.%20Grupa.pdf). → millions."
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 162.72,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2023. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 2-quarter YTD from 'II kvartal 2023. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-2kv.pdf). → millions.",
+     "prior_year_comparative": 83.987
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 81.727,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/23-GRUPA-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2023. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 3-quarter YTD from 'III kvartal 2023. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-3kv.pdf). → millions.",
+     "prior_year_comparative": 67.221
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 217.578,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024.%20Grupa.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2024. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column. → millions.",
+     "prior_year_comparative": 222.853
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 181.227,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-09/24-Grupa-Koncar-DST-2kv_1.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2024. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2024. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024.%20Grupa.pdf). → millions.",
+     "prior_year_comparative": 210.268
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 166.826,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-10/24%20Grupa%20Koncar%20DST%203%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2024. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 2-quarter YTD from 'II kvartal 2024. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-09/24-Grupa-Koncar-DST-2kv_1.pdf). → millions.",
+     "prior_year_comparative": 162.72
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 82.025,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-02/24%20Grupa%20Koncar%20DST%204kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2024. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 3-quarter YTD from 'III kvartal 2024. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-10/24%20Grupa%20Koncar%20DST%203%20kvartal.pdf). → millions.",
+     "prior_year_comparative": 81.727
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 239.614,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-04/Grupa%20DIST%20Kvartalni%20izvje%C5%A1taj%20Q1%202025.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2025. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column. → millions.",
+     "prior_year_comparative": 217.578
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 155.67,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-07/25%20Grupa%20Kon%C4%8Dar%20DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2025. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2025. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-04/Grupa%20DIST%20Kvartalni%20izvje%C5%A1taj%20Q1%202025.pdf). → millions.",
+     "prior_year_comparative": 181.227
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 131.128,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-10/25%20Grupa%20Koncar%20DST%203kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2025. Grupa' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 2-quarter YTD from 'II kvartal 2025. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-07/25%20Grupa%20Kon%C4%8Dar%20DST%202kv.pdf). → millions.",
+     "prior_year_comparative": 166.826
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 153.385,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-02/25%20Grupa%20DIST%204kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2025. Grupa' p.3, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 3-quarter YTD from 'III kvartal 2025. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-10/25%20Grupa%20Koncar%20DST%203kv.pdf). → millions.",
+     "prior_year_comparative": 82.025
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 294.612,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-04/26%20Grupa%20Koncar%20DST%201%20kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2026. Grupa' p.3, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column. → millions.",
+     "prior_year_comparative": 239.614
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 107.283,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-07/26%20Grupa%20KONCAR-DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2026. Grupa' p.3, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2026. Grupa' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-04/26%20Grupa%20Koncar%20DST%201%20kv.pdf). → millions.",
+     "prior_year_comparative": 155.67
+    }
+   ]
+  },
+  "orders_parent": {
+   "label_ko": "모회사 단독 신규수주(분기화)",
+   "scope": "parent_unconsolidated",
+   "segment_name": "KONČAR – D&ST d.d. new contracts signed",
+   "metric": "orders_received",
+   "freq": "Q",
+   "primary": false,
+   "points": [
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 315.503,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/21-Koncar-DST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2021.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), prior-year comparative column (as re-printed one year later); minus the 2-quarter YTD from 'II kvartal 2021.' (comparative column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-2kv.pdf). → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 195.5,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2021.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), prior-year comparative column (as re-printed one year later); minus the 3-quarter YTD from 'III kvartal 2021.' (comparative column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/21-Koncar-DST-3kv.pdf). → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 554.777,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2022.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), prior-year comparative column (as re-printed one year later). → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 447.459,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2021.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), current-period column; minus the 1-quarter YTD from 'I kvartal 2022.' (comparative column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-1kv.pdf). → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 466.415,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/21-Koncar-DST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2021.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), current-period column; minus the 2-quarter YTD from 'II kvartal 2021.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-2kv.pdf). → millions.",
+     "prior_year_comparative": 315.503,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 367.599,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2021-Koncar-DST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2021.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), current-period column; minus the 3-quarter YTD from 'III kvartal 2021.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/21-Koncar-DST-3kv.pdf). → millions.",
+     "prior_year_comparative": 195.5,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 901.469,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2022.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), current-period column. → millions.",
+     "prior_year_comparative": 554.777,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 485.882,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2022.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), current-period column; minus the 1-quarter YTD from 'I kvartal 2022.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-1kv.pdf). → millions.",
+     "prior_year_comparative": 447.459,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 677.186,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-DIST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2022.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), current-period column; minus the 2-quarter YTD from 'II kvartal 2022.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-Koncar-DST-2kv.pdf). → millions.",
+     "prior_year_comparative": 466.415,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 485.855,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2022-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2022.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK), current-period column; minus the 3-quarter YTD from 'III kvartal 2022.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/22-DIST-3kv.pdf). → millions.",
+     "prior_year_comparative": 367.599,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 214.006,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-1kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2023.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column. → millions.",
+     "prior_year_comparative": 119.646
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 195.115,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-2kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2023.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2023.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-1kv.pdf). → millions.",
+     "prior_year_comparative": 64.487
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 150.812,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-3kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2023.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 2-quarter YTD from 'II kvartal 2023.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-2kv.pdf). → millions.",
+     "prior_year_comparative": 89.878
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 69.73,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/23-DIST-4kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2023.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 3-quarter YTD from 'III kvartal 2023.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-DIST-3kv.pdf). → millions.",
+     "prior_year_comparative": 64.484
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 203.162,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024..pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2024.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column. → millions.",
+     "prior_year_comparative": 214.006
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 164.641,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-09/24-Koncar-DST-2kv_0.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2024.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2024.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-06/I%20kvartal%202024..pdf). → millions.",
+     "prior_year_comparative": 195.115
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 141.616,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-10/24%20Koncar%20DST%203%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2024.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 2-quarter YTD from 'II kvartal 2024.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-09/24-Koncar-DST-2kv_0.pdf). → millions.",
+     "prior_year_comparative": 150.812
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 70.081,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-02/24%20Koncar%20DST%204%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2024.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 3-quarter YTD from 'III kvartal 2024.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-10/24%20Koncar%20DST%203%20kvartal.pdf). → millions.",
+     "prior_year_comparative": 69.73
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 208.569,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-04/DIST%20Kvartalni%20izvje%C5%A1taj%20Q1%202025.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2025.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column. → millions.",
+     "prior_year_comparative": 203.162
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 143.616,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-07/25%20Kon%C4%8Dar%20DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2025.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2025.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-04/DIST%20Kvartalni%20izvje%C5%A1taj%20Q1%202025.pdf). → millions.",
+     "prior_year_comparative": 164.641
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 111.526,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-10/25%20Koncar%20DST%203kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'III kvartal 2025.' p.2, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 2-quarter YTD from 'II kvartal 2025.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-07/25%20Kon%C4%8Dar%20DST%202kv.pdf). → millions.",
+     "prior_year_comparative": 141.616
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 140.551,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-02/25%20Kon%C4%8Dar%20DST%204kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'IV kvartal 2025.' p.3, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 3-quarter YTD from 'III kvartal 2025.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2025-10/25%20Koncar%20DST%203kv.pdf). → millions.",
+     "prior_year_comparative": 70.081
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 254.229,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-04/26%20Koncar%20DIST%201%20kvartal.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'I kvartal 2026.' p.3, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column. → millions.",
+     "prior_year_comparative": 208.569
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 82.047,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-07/26%20KONCAR-DST%202kv.pdf",
+     "locator": "KONČAR – D&ST quarterly report 'II kvartal 2026.' p.3, management report table 'Pokazatelji poslovanja', row 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 EUR), current-period column; minus the 1-quarter YTD from 'I kvartal 2026.' (current column, https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-04/26%20Koncar%20DIST%201%20kvartal.pdf). → millions.",
+     "prior_year_comparative": 143.616
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2017-04-01",
+   "type": "acquisition",
+   "note": "Acquisition of Power Engineering Transformatory Sp. z o.o. (PET, Czerwonak/Poznań, Poland) in 2017 → consolidated group reporting starts with H1-2017 (quarter columns from Q3-2017; Q2-2017 only as the comparative printed in the H1-2018 group report). FY2018Q1 comparative printed by the company is the parent-only Q1-2017.",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-07/KONCAR-DST-III-kvartal-2017-Grupa.pdf"
+  },
+  {
+   "date": "2023-01-01",
+   "type": "restatement",
+   "note": "Reporting currency HRK → EUR (fixed 7.53450).",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2024-04/2023-Grupa-DIST-1kv.pdf"
+  },
+  {
+   "date": "2025-12-31",
+   "type": "acquisition",
+   "note": "Control of Novi Feromont d.o.o. (Donji Kraljevec) acquired end-2025; P&L consolidated from 1-Jan-2026. Ferokotao stake raised from 51% to 82.5% (Feb/Apr 2026).",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-07/26%20Grupa%20KONCAR-DST%202kv.pdf"
+  }
+ ],
+ "profile": {
+  "products": "Pure-play transformer maker: medium-power transformers and autotransformers up to 160 MVA / 170 kV (outdoor/indoor); oil-immersed distribution transformers 50 kVA–8 MVA up to 36 kV; dry-type distribution transformers 50–5,000 kVA; special transformers & MV reactors (offshore wind, grounding, rectifier, auxiliary, generator step-up, traction, mobile-substation, test-station). >10,000 units per year to >110 countries. Subsidiaries: PET (Poland, transformers), Ferokotao & Novi Feromont (transformer tanks/metal structures).",
+  "plants": [
+   {
+    "country": "HR",
+    "city": "Zagreb (Josipa Mokrovića 8)",
+    "products": "distribution, medium-power and special transformers; new factory planned in Zaprešić (largest capacity expansion in group history)",
+    "source_url": "https://www.koncar.hr/en/koncar-distribution-and-special-transformers"
+   },
+   {
+    "country": "PL",
+    "city": "Czerwonak (Poznań)",
+    "products": "Power Engineering Transformatory — transformers; new hall + test lab under construction (2026)",
+    "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-07/26%20Grupa%20KONCAR-DST%202kv.pdf"
+   },
+   {
+    "country": "HR",
+    "city": "Donji Kraljevec",
+    "products": "Ferokotao d.o.o. and Novi Feromont d.o.o. — transformer tanks / metal structures",
+    "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-izvjestaji/2026-07/26%20Grupa%20KONCAR-DST%202kv.pdf"
+   }
+  ],
+  "end_markets": "EU distribution utilities, wind/solar and BESS grid connections, industry, e-mobility; export share ≈93% of H1-2026 consolidated sales (288.7 of 309.3 EUR m). Backlog EUR 1,090.5m at 30-Jun-2026 (book-to-bill 1.30 in H1-2026).",
+  "export_routes": [
+   "HR->EU (DE, AT, SE, NO, NL…)",
+   "PL->EU (PET)",
+   "HR->UK/Nordics (hypothesis)"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850423",
+   "850433",
+   "850434",
+   "850450",
+   "850490"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "hr_exp_850422_p0",
+    "why": "Croatian exports of 650 kVA–10 MVA liquid transformers — D&ST's core distribution/medium units; D&ST is the dominant Croatian exporter in this band",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "hr_exp_850421_p0",
+    "why": "Croatian exports ≤650 kVA distribution transformers (D&ST)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "hr_exp_850423_p0",
+    "why": "Croatian exports >10 MVA — D&ST medium-power (up to 160 MVA) plus the Siemens Energy JV's large units (noise)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "hr_exp_850434_p0",
+    "why": "Croatian exports of dry-type transformers >500 kVA (D&ST dry-type)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_HR",
+    "why": "Croatian C27.1 production index (transformers & distribution apparatus)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_DE",
+    "why": "German C27.1 production — proxy for the German/Central-European distribution-grid investment cycle that D&ST exports into",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_AT",
+    "why": "Austrian C27.1 production — Austria is a key D&ST export market (company award as best exporter to Austria)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "wishlist:comext_eu_imp_850421_850423_from_HR",
+    "why": "Eurostat Comext monthly EU imports of HS 850421-850423 from Croatia — closest external mirror of D&ST shipments",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total FY2016Q1–FY2017Q1: no consolidated group before PET acquisition (only parent statements — see revenue_standalone).",
+  "revenue_total FY2017Q2–FY2017Q4: no prior-year comparatives (first consolidated year).",
+  "orders_segment FY2016–FY2022Q2: consolidated 'Ugovoreni poslovi' not printed in group reports before H1-2023 (2022Q3–Q4 recovered from EUR comparatives in 2023 reports; 2022Q1–Q2 not derivable). Parent orders from FY2020Q3 in orders_parent.",
+  "orders_parent FY2020Q1–Q2: Q1-2020 YTD not printed (2021 Q1 report has no orders table).",
+  "parent 2018Q2: sales row not parsed (2018__KONCAR-DST-Godisnje-izvjesce-2017.pdf)"
+ ],
+ "collection_notes": [
+  "Sources: KONČAR – D&ST quarterly reports (PDF with management report + TFI-POD forms) from koncar.hr/hr/dist/dst-tromjesecna-izvjesca (year filter field_datum_dokumenta_value); FY2018Q2 parent from ZSE EHO KODT-fin2018-2Q-NotREV-N-HR.xls because the website link for 'II kvartal 2018.' points to the 2017 annual report.",
+  "Website data-quality issues handled: 'II kvartal 2017 Grupa' and 'III kvartal 2022. Grupa' PDFs are byte-identical to the parent reports (md5) and were NOT used as consolidated sources.",
+  "revenue = 'Prihodi od prodaje' = AOP112 (pre-2019 form) or AOP126/002 'Prihodi od prodaje s poduzetnicima unutar grupe' (sales to wider KONČAR group affiliates — non-zero, e.g. 8.2m EUR in H1-2026) + AOP127/003 'Prihodi od prodaje (izvan grupe)'. Matches the management-report line 'Prihodi od prodaje – ukupno'.",
+  "Orders = 'Ugovoreni poslovi' (value of new contracts signed, YTD, 000 HRK/EUR) from the management-report KPI table; quarterly by YTD difference; currency mixing across the 2022/2023 boundary avoided (2022 values come either all from 2022 HRK reports or all from 2023 EUR comparatives).",
+  "verify 2026-09-25: checked revenue_total FY2017Q2 (from the H1-2018 group report), FY2018Q2, FY2019Q1, FY2021Q1, FY2022Q2, FY2022Q3 (EUR comparative in the 9M-2023 report), FY2022Q4, FY2023Q1, FY2023Q4, FY2024Q2, FY2024Q4, FY2025Q3, FY2026Q2 against note 4 (domestic + foreign sales, quarter columns) of each group report. All values and printed comparatives matched. Two printed comparatives reflect later restatements and are kept as printed: FY2023Q4 comparative 72.695m EUR = 547.72m HRK vs the originally reported Q4-2022 527.72m HRK (FY2022 cumulative restated from 1,894.1m HRK to 254.05m EUR); FY2024Q4 comparative 98.931m vs the originally reported Q4-2023 105.989m (FY2023 cumulative restated from 349.09m to 342.03m EUR). The 26 Grupa KONCAR-DST 2kv PDF is served gzip-compressed (decompress before parsing). Fixed 0."
+ ]
+}

@@ -1337,6 +1337,7 @@
   "Units: statements in INR crore; converted to INR million (x10). reported_value/reported_unit keep the printed figure.",
   "CY2020 statements (Q1..Q4 2020) and 8DBR001744 (Q1 FY25) statement pages are scanned images; values were read visually and cross-checked against later statements' comparative columns and YTD totals.",
   "revenue_predecessor_segment = ABB India Ltd standalone Reg.33 segment revenue for Power Grids (CY quarters mapped to Apr-Mar keys by actual dates). Overlap check: ABB India Apr-Jun 2019 1,086.32 = APPSIL comparative 1,086.32; Jul-Sep 2019 1,029.21 vs APPSIL 1,028.84.",
-  "Single reportable segment (Power Grids) per note 3 of each statement, so no revenue_segment target; orders_segment = company orders (single segment)."
+  "Single reportable segment (Power Grids) per note 3 of each statement, so no revenue_segment target; orders_segment = company orders (single segment).",
+  "verify 2026-09-25: checked revenue_total FY2020Q1,FY2020Q2,FY2020Q3,FY2020Q4,FY2021Q1,FY2021Q2,FY2021Q3,FY2022Q4,FY2023Q1,FY2025Q3,FY2026Q4,FY2027Q1, orders_segment FY2020Q1,FY2020Q4(ytd_difference 1,501.50-567.3),FY2021Q1,FY2023Q1,FY2024Q1,FY2024Q4,FY2025Q1,FY2025Q3,FY2026Q1,FY2027Q1, and revenue_predecessor_segment FY2016Q4(ytd_difference 1,730.55-962.95),FY2017Q1,FY2017Q4,FY2018Q1. Values were re-read from the publisher.hitachienergy.com PDFs (fetched via its document API) and the BSE ABB India filings. The remap of CY2020 and the 15-month period to Apr-Mar keys matches the statement dates. Observation, no data impact: the 2025-03-31 'restatement' break (QIP) is not a scope change; fixed 0"
  ]
 }

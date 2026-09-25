@@ -1403,6 +1403,7 @@
   "Units: INR lakh through FY2024Q4 statements, INR crore from FY2025Q1; converted to INR million (lakh x0.1, crore x10). reported_value keeps printed figure.",
   "Every quarter cross-checked: Power Systems + Industrial Systems = total segment revenue = P&L revenue; value vs later statements' comparative columns. Sep-2022 segment page text layer prints 32365 but the P&L line and segment sum give 32355 (used).",
   "FY2016Q4-FY2017Q4 and FY2018Q1-Q3 statements are scanned images; values read visually and cross-checked (e.g. 9M/annual totals).",
-  "FY2021Q1 (Apr-Jun 2020) collapse (Power Systems 3,788 lakh) reflects the national COVID-19 lockdown; the validator 3x-change warning for FY2021Q1 is expected, not a unit error."
+  "FY2021Q1 (Apr-Jun 2020) collapse (Power Systems 3,788 lakh) reflects the national COVID-19 lockdown; the validator 3x-change warning for FY2021Q1 is expected, not a unit error.",
+  "verify 2026-09-25: checked revenue_segment FY2016Q4,FY2017Q3,FY2017Q4,FY2019Q1,FY2020Q4,FY2021Q1,FY2021Q2,FY2021Q3,FY2022Q1,FY2022Q2,FY2022Q3,FY2023Q1,FY2023Q2,FY2023Q3,FY2024Q1,FY2024Q2,FY2024Q4,FY2025Q1,FY2025Q4,FY2026Q4,FY2027Q1 and revenue_total for the same quarters (except FY2022Q3). Each value and prior_year_comparative was re-read from the cited Reg.33 PDF (scanned FY2016Q4 and FY2017Q4 pages read from rendered images). Also checked period dates, the lakh->crore scale and duplicate keys. Note: bbl_uafr_31122023.pdf (cited for FY2023Q3) holds the Dec-2022 quarter despite its file name, so the citation is correct; fixed 0"
  ]
 }

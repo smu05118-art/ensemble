@@ -784,6 +784,7 @@
   "Company IR site (se.com/in, download.schneider-electric.com) blocks this environment (HTTP 403); all statements taken from BSE Reg.33 filings (scrip 534139) listed via api.bseindia.com AnnSubCategoryGetData and downloaded from bseindia.com xml-data/corpfiling.",
   "Units: INR lakh (FY2016Q4-FY2017Q3, FY2024Q1+) and INR million (FY2017Q4-FY2023Q4); all converted to INR million. reported_value keeps printed number.",
   "FY2016Q4-FY2018Q3, FY2020Q2, FY2022Q4, FY2024Q4 statements are scanned images; values read visually and cross-checked with later comparatives and YTD/annual arithmetic.",
-  "A revised Q1 FY2018 (Jun-2017) statement was filed 2017-11-29; revenue unchanged (3,084.49)."
+  "A revised Q1 FY2018 (Jun-2017) statement was filed 2017-11-29; revenue unchanged (3,084.49).",
+  "verify 2026-09-25: checked revenue_total FY2016Q4,FY2017Q3,FY2017Q4,FY2020Q1,FY2020Q2,FY2020Q4,FY2021Q1,FY2021Q2,FY2022Q3,FY2023Q3,FY2023Q4,FY2024Q1,FY2024Q4,FY2025Q1,FY2025Q3,FY2025Q4,FY2026Q1,FY2026Q2,FY2026Q3,FY2026Q4,FY2027Q1 against the BSE Reg.33 PDFs (scanned Mar-2016 and Mar-2017 pages read from images). Also checked the lakh/million scale switches. The large Oct-Dec quarters (e.g. FY2026Q3 1,02,917 lakh) are as printed, and the quarters sum to the reported FY totals (FY2025 2,63,671; FY2026 2,89,063 lakh). BSE publication dates were spot-checked; fixed 0"
  ]
 }
