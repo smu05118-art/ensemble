@@ -1,0 +1,275 @@
+{
+ "accounting_basis": "US GAAP",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "seed: phalanx composite_preview.html DATA.companies[].official_financials (asof 2026-09-23); 원문 URL 보존, 값 무변경",
+  "2026-09-25 G1_NA: 시드 8개 값을 SEC XBRL로 검증 — FY2025Q1 154.013 = 6M(329.351)−Q2(175.338), FY2025Q4 237.613 = FY2025 연간(753.188)−9M(515.575), FY2026Q1 283.274 = 6M(579.678)−Q2(296.404), FY2026Q4 461.672 = FY2026 연간(1,420.059, 10-K 2026-09-15)−9M(958.387). 전부 일치, 무변경.",
+  "profile 은 FY2026 10-K(2026-09-15) Item 1·Item 2 원문.",
+  "(moved from structural_breaks 2026-09-25) 2026-09-15 capacity ramp / revenue mix: Data-center revenue mix increases from 42% FY2025 to 59% FY2026. Incremental USD35M PTS expansion announced for expected FY2027Q4 availability; capacity is not sales guidance. — not a consolidation-scope change under CONTRACT §1 (would falsely flag a scope change in the nowcast window). Source: https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+  "verify 2026-09-25: checked revenue_total all 8 points (424B4 'Three Months Ended September 30' columns for FY2025Q1/FY2026Q1 — printed directly, so direct_reported_quarter is correct; 10-Q XBRL 3M facts for Q2/Q3; IR Q4 release statement of operations for Q4) — all values match; fixed 11: 8 non-specific seed locators replaced, break types 'IPO_Up_C_reorganization'→'listing', 'common_control_combination'→'restatement', capacity_ramp entry moved to collection_notes.",
+  "annotate 2026-09-25: structural_break 2025-05-08 affects_target=False (근거: 기존 note — combined presentation from formation/acquisition dates; not a revenue addition)"
+ ],
+ "currency": "USD",
+ "fiscal_year_end_month": 6,
+ "gaps": [
+  "revenue_total 8개 분기(FY2025Q1–FY2026Q4)만 공시 — IPO(2026-02) 전 predecessor/successor 기간(2023-07~2024-06)은 불규칙 기간이라 분기화 불가(IPO 설명서·10-K). YoY 가능 4개 분기 → 선후행 검정 통계력 매우 낮음(빌더 게이트에서 제외 예상).",
+  "수주(orders) 금액 미공시(백로그만: 2026-06-30 약 $3.0B) — orders_segment 없음.",
+  "단일 보고 세그먼트 — revenue_segment 없음."
+ ],
+ "grid_node": null,
+ "id": "FPS",
+ "listed": true,
+ "name": "Forgent Power Solutions, Inc.",
+ "primary_target": "revenue_total",
+ "profile": {
+  "end_markets": "FY2026 revenue: Data Center ~59%, Grid ~21%, Industrial ~10%, other ~10%; substantially all revenue from customers in North America (FY2026 10-K). One customer >10% of FY2026 revenue.",
+  "export_routes": [
+   "MX->US",
+   "US domestic"
+  ],
+  "hs_candidates": [
+   "850434",
+   "850433",
+   "850421",
+   "850422",
+   "853710",
+   "853720",
+   "853650"
+  ],
+  "plants": [
+   {
+    "city": "Minnesota (2 campuses, 596k sq ft, leased)",
+    "country": "US",
+    "products": "office, manufacturing, warehousing",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm"
+   },
+   {
+    "city": "Texas (2 campuses, 516k sq ft)",
+    "country": "US",
+    "products": "office, manufacturing, warehousing",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm"
+   },
+   {
+    "city": "California (2 campuses, 225k sq ft)",
+    "country": "US",
+    "products": "office, manufacturing, warehousing",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm"
+   },
+   {
+    "city": "Maryland (2 campuses, 188k sq ft)",
+    "country": "US",
+    "products": "office, manufacturing, warehousing",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm"
+   },
+   {
+    "city": "Mexico (4 campuses, 773k sq ft)",
+    "country": "MX",
+    "products": "office, manufacturing, warehousing; unionized workforce",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm"
+   }
+  ],
+  "products": "Engineered-to-order electrical distribution equipment: automatic transfer switches, dry-type transformers, liquid-filled transformers, eHouses, generator connection cabinets, panelboards, PDUs, power skids, remote power panels, switchboards, switchgear, tap boxes; FY2026 revenue ~70% Custom Products, 25% Powertrain Solutions (integrated/skidded systems), 3% Standard Products, 2% services (FY2026 10-K Item 1). Brands/predecessors combined via MGM Transformer (acq. 2023-10-31), PwrQ (2024-03-13), States Manufacturing (2024-05-31), VanTran (TriMagna Industries, 2024-06-14). Vertically integrated transformer manufacturing is a stated strategy.",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850434_p484",
+    "role": "primary",
+    "why": "멕시코산 건식 >500kVA 변압기 대미 수입 — FPS 멕시코 4개 캠퍼스 → 미국 데이터센터 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853710_p484",
+    "role": "primary",
+    "why": "멕시코산 저압 배전반·분전반(스위치보드·패널보드·PDU) 대미 수입"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "mx_exp_853710_p842",
+    "role": "diagnostic",
+    "why": "멕시코 측 저압 배전반 대미 수출(미러)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853720_p0",
+    "role": "diagnostic",
+    "why": "미국 1kV 초과 배전반(스위치기어) 수입 — 데이터센터·그리드 수요, 국내 공급부족 신호"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850421_p0",
+    "role": "diagnostic",
+    "why": "미국 유입식 ≤650kVA 변압기 수입 — FPS 유입식(VanTran) 시장 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SNO",
+    "role": "primary",
+    "why": "미국 전기장비 신규수주 — 매출 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SUO",
+    "role": "diagnostic",
+    "why": "미국 전기장비 수주잔고 — 백로그 소진 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_PCU335311335311",
+    "role": "diagnostic",
+    "why": "변압기 PPI — 가격 전가"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLPWRCONS",
+    "role": "diagnostic",
+    "why": "미국 전력 건설투자 — Grid 매출(21%)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "census_c30_datacenter_construction",
+    "role": "wishlist",
+    "why": "WISHLIST: 미국 Census C30 data center 건설투자(월) — Data Center 매출(59%) 선행"
+   }
+  ]
+ },
+ "quarter_calendar": "fiscal year Jul 1–Jun 30; calendar-quarter ends (Q1 = Jul–Sep)",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2023-10-31",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-03-13",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-05-31",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-06-14",
+   "note": "Historical group begins including acquired operation on its acquisition date; before the retained eight-quarter ledger.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+   "type": "acquisition"
+  },
+  {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: combined presentation from formation/acquisition dates; not a revenue addition",
+   "date": "2025-05-08",
+   "note": "PwrQ and States contributed to Opco. Historical combined presentation includes transferred entities from formation/acquisition dates, not a sudden FY2025Q4 revenue addition.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+   "type": "restatement"
+  },
+  {
+   "date": "2026-02-06",
+   "note": "Consolidated group continues; noncontrolling ownership, attribution and EPS scope change. Use consolidated GAAP OP before attribution.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+   "type": "listing"
+  },
+  {
+   "date": null,
+   "note": "Predecessor July 1-October 31, 2023 and successor inception-June 30, 2024 are irregular. Textual inception September 8, 2023; do not invent FY2024 regular quarters or use pro forma annual amounts.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000035/fps-20260630.htm",
+   "type": "excluded_predecessor_successor_history"
+  }
+ ],
+ "targets": {
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "424B4 prospectus (2026-02, accession 0001193125-26-040029): 'Prospectus Summary' — summary of combined consolidated financial data table (≈p.31–32), row 'Revenues', column 'Three Months Ended September 30, 2024' = 154,013 (USD thousands→millions)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2026-02-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000119312526040029/d890989d424b4.htm",
+     "value": 154.013
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "Form 10-Q for the quarter ended December 31, 2025 (accession 0002080126-26-000011, filed 2026-03-16): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2024-12-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3M = 175,338 thousand",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2026-03-16",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000011/fps-20251231.htm",
+     "value": 175.338
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "Form 10-Q for the quarter ended March 31, 2026 (accession 0002080126-26-000018, filed 2026-05-14): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2025-03-31 (prior-year comparative column); XBRL 3M = 186,224 thousand",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "published_date": "2026-05-14",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000018/fps-20260331.htm",
+     "value": 186.224
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Q4/FY2026 results press release (2026-09-15): 'Consolidated Statements of Operations', row 'Revenues', column 'Three Months Ended June 30, 2025' = 237,613 (USD thousands→millions); also = FY2025 753,188 − 9M 515,575",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2026-09-15",
+     "source_url": "https://ir.forgentpower.com/news-events/press-releases/detail/107/forgent-reports-record-fourth-quarter-and-full-year-2026-results-exceeds-high-end-of-guidance-and-enters-fiscal-2027-with-all-time-high-backlog",
+     "value": 237.613
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "424B4 prospectus (accession 0001193125-26-040029): 'Prospectus Summary' — summary of combined consolidated financial data table (≈p.31–32), row 'Revenues', column 'Three Months Ended September 30, 2025' = 283,274 (USD thousands→millions)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2026-02-06",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000119312526040029/d890989d424b4.htm",
+     "value": 283.274
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "Form 10-Q for the quarter ended December 31, 2025 (accession 0002080126-26-000011, filed 2026-03-16): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2025-12-31 (current-period column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3M = 296,404 thousand",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-03-16",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000011/fps-20251231.htm",
+     "value": 296.404
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "locator": "Form 10-Q for the quarter ended March 31, 2026 (accession 0002080126-26-000018, filed 2026-05-14): Condensed Consolidated Statements of Operations, row 'Revenues', three months ended 2026-03-31 (current-period column); XBRL 3M = 378,709 thousand",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-14",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000018/fps-20260331.htm",
+     "value": 378.709
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "locator": "Q4/FY2026 results press release (2026-09-15): 'Consolidated Statements of Operations', row 'Revenues', column 'Three Months Ended June 30, 2026' = 461,672 (USD thousands→millions); also = FY2026 1,420,059 − 9M 958,387",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-09-15",
+     "source_url": "https://ir.forgentpower.com/news-events/press-releases/detail/107/forgent-reports-record-fourth-quarter-and-full-year-2026-results-exceeds-high-end-of-guidance-and-enters-fiscal-2027-with-all-time-high-backlog",
+     "value": 461.672
+    }
+   ],
+   "primary": true,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "FPS US",
+ "unit": "million"
+}

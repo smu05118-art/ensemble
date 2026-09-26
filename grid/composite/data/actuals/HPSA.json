@@ -1,0 +1,1017 @@
+{
+ "accounting_basis": "IFRS",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "seed: phalanx composite_preview.html DATA.companies[].official_financials (asof 2026-09-23); 원문 URL 보존, 값 무변경",
+  "2026-09-25 G1_NA: 기존 revenue_total 30개(FY2019Q1–FY2026Q2) value/method/source 무변경. FY2019Q1–Q4 4개 포인트에만 prior_year_comparative(+출처 필드 prior_year_comparative_source_url/_locator)를 추가 — 2019 연차보고서 분기표가 2019 값(시드와 동일)과 이탈리아 제외 재작성 2018 값을 함께 인쇄.",
+  "revenue_total FY2016Q1–FY2018Q4 12개 추가(HPS IR 분기·연차 보고서 원문, CAD 천→백만).",
+  "revenue_segment = 지역(미국·멕시코) 매출 — 계약상 scope=\"geographic\". 제품 세그먼트가 아니므로 primary 는 revenue_total 유지(HPS 전체가 변압기 단일 세그먼트, 이력도 더 김: 42 vs 34분기).",
+  "원문 PDF(각 1–37MB)는 용량 문제로 raw/에 저장하지 않음 — source_url 은 americas.hammondpowersolutions.com 의 원 PDF.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2017Q1-Q4,FY2018Q1,FY2018Q4,FY2019Q1-FY2026Q2 (all 30 seed points re-extracted from their own cited PDF, incl. FY2019Q1-Q4 PYC from 2019 AR) and revenue_segment FY2018Q1,FY2018Q4,FY2019Q4,FY2022Q1,FY2022Q2(adjusted),FY2023Q1,FY2023Q2,FY2023Q4,FY2024Q4,FY2025Q4,FY2026Q2 (annual Note 'Sales' − 9M recomputed); period_end Saturday/Dec-31 convention, CAD thousand→million scale, no duplicates — all values match; fixed 38: 30 non-specific seed locators ('phalanx composite_preview …') replaced with page/table/row of the cited PDF, 7 revenue_total Q4 points FY2019Q4–FY2025Q4 relabelled annual_minus_9m→direct_reported_quarter (cited AR prints 'Quarter ended December 31' directly), break type 'Italy_closure_and_discontinued_operations'→'divestiture'.",
+  "annotate 2026-09-25: structural_break 2022-12-31 target=revenue_segment (근거: 기존 note — note: revenue_total unaffected — 지리 구분(세그먼트)만 재분류)"
+ ],
+ "currency": "CAD",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "revenue_segment(US & Mexico): FY2016Q1–FY2017Q4 없음 — 분기 지역 매출 주석은 Q1 2018 보고서부터 인쇄(2016·2017 분기 보고서엔 %만).",
+  "revenue_segment FY2018Q4: PYC 생략 — 2018 연차보고서 안에서 2017 연간 US&Mexico가 두 값(Note 21: 174,588 / 세그먼트 주석: 174,479)으로 불일치.",
+  "revenue_segment FY2022Q2–Q4: 회사가 인정한 지역 오분류를 반영한 수정치(2023 문서 비교열) 사용, PYC 없음(2021 값 = 원공시와 동일하므로 빌더는 FY2021 포인트로 YoY 가능).",
+  "수주: HPS는 bookings/backlog를 증감률(%)로만 공시 — orders_segment 없음.",
+  "AEG(2026-06-29 인수) 편입 후 FY2026Q3부터 연결 범위 확대 — 변압기 외 제품 비중 상승."
+ ],
+ "grid_node": "GRID_HAMMOND_POWER",
+ "id": "HPSA",
+ "listed": true,
+ "name": "Hammond Power Solutions Inc.",
+ "primary_target": "revenue_total",
+ "profile": {
+  "end_markets": "US & Mexico 70–84% of sales (2025: 70.3% FY, Q2 2026: 84.0%), Canada, India; electrical distributors & private label, OEMs, data centers (large custom orders 2025–26), industrial, utility/renewables",
+  "export_routes": [
+   "CA->US",
+   "MX->US",
+   "US domestic",
+   "IN domestic"
+  ],
+  "hs_candidates": [
+   "850432",
+   "850433",
+   "850434",
+   "850421",
+   "850440"
+  ],
+  "plants": [
+   {
+    "city": "Guelph, ON",
+    "country": "CA",
+    "products": "HQ; dry-type transformers",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   },
+   {
+    "city": "Granby, QC (Delta Transformers)",
+    "country": "CA",
+    "products": "dry-type transformers",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   },
+   {
+    "city": "Baraboo, WI",
+    "country": "US",
+    "products": "dry-type transformers",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   },
+   {
+    "city": "North Huntingdon, PA (Mesta Electronics)",
+    "country": "US",
+    "products": "active harmonic filters, induction heating power supplies",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   },
+   {
+    "city": "Sterling, IL (Micron Group)",
+    "country": "US",
+    "products": "control & low-voltage transformers, DC power supplies",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   },
+   {
+    "city": "Guadalupe (Monterrey), NL — two sites (HPS S.A. de C.V.; HPS Latin America)",
+    "country": "MX",
+    "products": "dry-type transformers incl. custom power transformers (largest production capacity per 2025 AR)",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   },
+   {
+    "city": "Patancheru, Sangareddy District, Telangana",
+    "country": "IN",
+    "products": "liquid-filled transformers for Indian domestic & SE Asian markets (2–4% of sales)",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   },
+   {
+    "city": "AEG Power Solutions (acq. 2026-06-29)",
+    "country": "DE/FR/others",
+    "products": "UPS, rectifiers, battery chargers, power conversion",
+    "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf"
+   }
+  ],
+  "products": "Standard and custom-designed dry-type transformers, power-quality products (harmonic-mitigating technology, active harmonic filters via Mesta 2021) and related magnetics incl. control & low-voltage transformers (Micron, Q4 2024) and induction heating; custom power transformer capacity in Mexico (most production capacity now in Mexico, then Canada and the U.S.). India plant mainly liquid-filled transformers for Indian domestic & Southeast Asian markets. From 2026-06-29 AEG Power Solutions adds AC/DC UPS, battery chargers, rectifiers & power conversion (not transformers). Single operating segment: \"a manufacturer of transformers\" (2025 AR Note 26; MD&A \"Who We Are\").",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850434_p124",
+    "role": "primary",
+    "why": "캐나다산 건식 >500kVA 변압기 대미 수입 — HPS 겔프·그랜비 공장 → 미국 대형 건식(데이터센터·산업) 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850433_p124",
+    "role": "primary",
+    "why": "캐나다산 건식 16–500kVA 대미 수입 — HPS 표준 배전용 건식 변압기 수출 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850434_p484",
+    "role": "primary",
+    "why": "멕시코산 건식 >500kVA 대미 수입 — HPS 몬테레이 증설(커스텀 파워) 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850433_p484",
+    "role": "diagnostic",
+    "why": "멕시코산 건식 16–500kVA 대미 수입 — HPS 멕시코 공장"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850432_p124",
+    "role": "diagnostic",
+    "why": "캐나다산 1–16kVA 제어·소형 변압기 대미 수입"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850434_p0",
+    "role": "diagnostic",
+    "why": "미국 건식 >500kVA 총수입 — 미국 건식 대형 변압기 수요(시장 규모)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "ca_exp_850434_p842",
+    "role": "diagnostic",
+    "why": "캐나다 측 건식 >500kVA 대미 수출(미러)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "ca_exp_850433_p842",
+    "role": "diagnostic",
+    "why": "캐나다 측 건식 16–500kVA 대미 수출(미러)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "mx_exp_850434_p842",
+    "role": "diagnostic",
+    "why": "멕시코 측 건식 >500kVA 대미 수출(미러)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SNO",
+    "role": "primary",
+    "why": "미국 전기장비 신규수주 — 배전 장비 수요 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_PCU335311335311",
+    "role": "diagnostic",
+    "why": "변압기 PPI — 가격 전가(명목 매출)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_IPG3353S",
+    "role": "diagnostic",
+    "why": "미국 전기장비 산업생산 — 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "statcan_mfg_sales_3353",
+    "role": "diagnostic",
+    "why": "캐나다 전기장비 제조 판매 — 캐나다 매출(14–26%) 및 캐나다 생산 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_EXCAUS",
+    "role": "wishlist",
+    "why": "WISHLIST(통제변수): USD/CAD 월평균 — CAD 보고 매출의 미국분 환산 효과"
+   }
+  ]
+ },
+ "quarter_calendar": "13-week quarters ending on a Saturday (e.g. 2019-03-30, 2026-06-27); Q4 ends December 31",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2018-12",
+   "note": "2019 comparative statements separate discontinued Italian operations; ledger uses continuing sales and OP. 2020 investment property remains in continuing operations.",
+   "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2019-Annual-Report.pdf",
+   "type": "divestiture"
+  },
+  {
+   "date": "2018-12-31",
+   "note": "revenue_total FY2016Q1–FY2018Q4 (added 2026-09-25) are as-originally reported INCLUDING Italy (PYC also incl. Italy, same documents). FY2019 seed points are continuing ops; their PYC (added) is the 2019 AR restated 2018 continuing-ops quarters → YoY same-scope on both sides of the break.",
+   "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2019-Annual-Report.pdf",
+   "type": "restatement"
+  },
+  {
+   "date": "2021-07-23",
+   "note": "100% equity acquired; active filters and induction heating broaden product scope from FY2021Q3 onward. No invented constant-scope history.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: note: revenue_total unaffected — 지리 구분(세그먼트)만 재분류",
+   "date": "2022-12-31",
+   "note": "Geographic sales 2022: company disclosed misclassification (Canada vs US&Mexico, ~C$33.4M for FY2022); 2022 comparatives adjusted from Q2 2023 report onward (Q1 2022 unaffected: 6M adjusted 177,035 − Q2 adjusted 93,924 = 83,111 = original). revenue_segment uses adjusted FY2022Q2–Q4. revenue_total unaffected.",
+   "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-ANNUAL-REPORT-2023---FINAL.pdf",
+   "target": "revenue_segment",
+   "type": "restatement"
+  },
+  {
+   "date": "2024-03-28",
+   "note": "Title transfer after March14 settlement; property disposal is not a resumed transformer business or comparable sales growth driver.",
+   "source_url": null,
+   "type": "Italy_investment_property_disposal"
+  },
+  {
+   "date": "2024-10-07",
+   "note": "Control and low-voltage transformers/DC supplies; reported contributions begin FY2024Q4. No pro forma pre-acquisition quarters inserted.",
+   "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-Annual-Report-and-Q4-2024-PR/2025-HPS-Annual-Report-031926-FP.pdf",
+   "type": "acquisition"
+  },
+  {
+   "date": "2026-06-29",
+   "note": "After Q2 actual end June27. Q2 statements exclude acquired assets/liabilities and operating results; target Q3 has expanded consolidated scope, Transformers/IES business units and wider geography/products.",
+   "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf",
+   "type": "acquisition"
+  }
+ ],
+ "targets": {
+  "revenue_segment": {
+   "freq": "Q",
+   "label_ko": "미국·멕시코 지역 매출(판매지 기준, 보조)",
+   "points": [
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "FY2018Q1 interim report, Note 10 \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 42.671,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-1-2018-INTERIM-REPORT.pdf",
+     "value": 44.712
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "FY2018Q2 interim report, Note 10 \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 45.08,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-2-2018-INTERIM-REPORT.pdf",
+     "value": 48.143
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "FY2018Q3 interim report, Note 10 \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-29",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 41.691,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/2018-HPS-Q3-Report-FINAL.pdf",
+     "value": 51.592
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "FY2018Q4 = annual \"United States and Mexico\" sales 197,860 (HPS-Annual-Report-2018, Sales note) minus nine-months 144,447 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/2018-HPS-Q3-Report-FINAL.pdf, Note \"Sales\" nine-months column); CAD thousands→millions",
+     "method": "annual_minus_9m",
+     "period_end": "2018-12-31",
+     "period_start": "2018-09-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2018.pdf",
+     "value": 53.413
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "FY2019Q1 interim report, Note 11 \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-30",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 44.712,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/2019-HPS-Q1-Report.pdf",
+     "value": 54.194
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "FY2019Q2 interim report, Note 11 \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-29",
+     "period_start": "2019-03-31",
+     "prior_year_comparative": 48.142,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/2019-HPS-Q2-Report.pdf",
+     "value": 59.246
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "FY2019Q3 interim report, Note 11 \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-28",
+     "period_start": "2019-06-30",
+     "prior_year_comparative": 51.592,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/Quarter-3-2019-Interim-Report.pdf",
+     "value": 54.269
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "FY2019Q4 = annual \"United States and Mexico\" sales 225,709 (2019-Annual-Report, Sales note) minus nine-months 167,709 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/Quarter-3-2019-Interim-Report.pdf, Note \"Sales\" nine-months column); CAD thousands→millions; PYC = prior-year annual 197,860 (same annual report) minus prior-year nine-months 144,446 (same Q3 report)",
+     "method": "annual_minus_9m",
+     "period_end": "2019-12-31",
+     "period_start": "2019-09-29",
+     "prior_year_comparative": 53.414,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2019-Annual-Report.pdf",
+     "value": 58.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "FY2020Q1 interim report, Note \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-28",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 54.194,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q1-Interim-Report.pdf",
+     "value": 56.341
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "FY2020Q2 interim report, Note \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-27",
+     "period_start": "2020-03-29",
+     "prior_year_comparative": 59.246,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q2-Interim-Report.pdf",
+     "value": 51.892
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "FY2020Q3 interim report, Note \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-26",
+     "period_start": "2020-06-28",
+     "prior_year_comparative": 54.269,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPS-Q3-2020.pdf",
+     "value": 45.608
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "FY2020Q4 = annual \"United States and Mexico\" sales 198,324 (2020-ANNUAL-REPORT, Sales note) minus nine-months 153,841 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPS-Q3-2020.pdf, Note \"Sales\" nine-months column); CAD thousands→millions; PYC = prior-year annual 225,709 (same annual report) minus prior-year nine-months 167,709 (same Q3 report)",
+     "method": "annual_minus_9m",
+     "period_end": "2020-12-31",
+     "period_start": "2020-09-27",
+     "prior_year_comparative": 58.0,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2020-ANNUAL-REPORT.pdf",
+     "value": 44.483
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "FY2021Q1 interim report, Note \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-27",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 56.341,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-2021-Q1-Report-FINAL-P.pdf",
+     "value": 46.505
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "FY2021Q2 interim report, Note \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-26",
+     "period_start": "2021-03-28",
+     "prior_year_comparative": 51.892,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-2021-Q2-Report-FINAL.pdf",
+     "value": 53.053
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "FY2021Q3 interim report, Note \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-25",
+     "period_start": "2021-06-27",
+     "prior_year_comparative": 45.608,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-2021-Q3-Report_FINAL.pdf",
+     "value": 61.338
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "FY2021Q4 = annual \"United States and Mexico\" sales 231,738 (HPS-Annual-Report-FINAL-2021, Sales note) minus nine-months 160,896 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-2021-Q3-Report_FINAL.pdf, Note \"Sales\" nine-months column); CAD thousands→millions; PYC = prior-year annual 198,324 (same annual report) minus prior-year nine-months 153,841 (same Q3 report)",
+     "method": "annual_minus_9m",
+     "period_end": "2021-12-31",
+     "period_start": "2021-09-26",
+     "prior_year_comparative": 44.483,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-FINAL-2021.pdf",
+     "value": 70.842
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "FY2022Q1 interim report, Note 9 \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-04-02",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 46.505,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2022-Report-FINAL.pdf",
+     "value": 83.111
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "FY2022Q2: prior-year comparative column of the HPS-Q2-2023-Report report Note \"Sales\" row \"United States and Mexico\" — 2022 geographic values ADJUSTED by the company (originally reported 83,859 were misclassified; see 2023 Annual Report Note 22 footnote)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-07-02",
+     "period_start": "2022-04-03",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2023-Report.pdf",
+     "value": 93.924
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "FY2022Q3: prior-year comparative column of the HPS-Q3-Report-2023_FINAL report Note \"Sales\" row \"United States and Mexico\" — 2022 geographic values ADJUSTED by the company (originally reported 93,591 were misclassified; see 2023 Annual Report Note 22 footnote)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-10-01",
+     "period_start": "2022-07-03",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-Report-2023_FINAL.pdf",
+     "value": 103.98
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "FY2022Q4 = annual \"United States and Mexico\" sales 383,137 (HPS-ANNUAL-REPORT-2023---FINAL, Sales note — 2022 ADJUSTED comparative) minus nine-months 281,015 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-Report-2023_FINAL.pdf, Note \"Sales\" nine-months column — 2022 ADJUSTED comparative); CAD thousands→millions",
+     "method": "annual_minus_9m",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-02",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-ANNUAL-REPORT-2023---FINAL.pdf",
+     "value": 102.122
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "FY2023Q1 interim report, Note \"Sales\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-04-01",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 83.111,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2023-Report.pdf",
+     "value": 118.804
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "FY2023Q2 interim report, Note \"Sales\" (2022 comparative adjusted for geographic misclassification), row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-07-01",
+     "period_start": "2023-04-02",
+     "prior_year_comparative": 93.924,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2023-Report.pdf",
+     "value": 117.31
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "FY2023Q3 interim report, Note \"Sales\" (2022 comparative adjusted), row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-02",
+     "prior_year_comparative": 103.98,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-Report-2023_FINAL.pdf",
+     "value": 129.762
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "FY2023Q4 = annual \"United States and Mexico\" sales 489,579 (HPS-ANNUAL-REPORT-2023---FINAL, Sales note) minus nine-months 365,876 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-Report-2023_FINAL.pdf, Note \"Sales\" nine-months column); CAD thousands→millions; PYC = prior-year annual 383,137 (same annual report) minus prior-year nine-months 281,015 (same Q3 report)",
+     "method": "annual_minus_9m",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 102.122,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-ANNUAL-REPORT-2023---FINAL.pdf",
+     "value": 123.703
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "FY2024Q1 interim report, Note 10 \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-30",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 118.804,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2024-REPORT.pdf",
+     "value": 130.732
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "FY2024Q2 interim report, Note \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-29",
+     "period_start": "2024-03-31",
+     "prior_year_comparative": 117.31,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2024-REPORT.pdf",
+     "value": 133.176
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "FY2024Q3 interim report, Note \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-28",
+     "period_start": "2024-06-30",
+     "prior_year_comparative": 129.762,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2024-REPORT.pdf",
+     "value": 130.086
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "FY2024Q4 = annual \"United States and Mexico\" sales 534,888 (2024-Annual-Report---Hammond-Power-Solutions-Inc---March-20-2025, Sales note) minus nine-months 393,994 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2024-REPORT.pdf, Note \"Sales\" nine-months column); CAD thousands→millions; PYC = prior-year annual 489,579 (same annual report) minus prior-year nine-months 365,876 (same Q3 report)",
+     "method": "annual_minus_9m",
+     "period_end": "2024-12-31",
+     "period_start": "2024-09-29",
+     "prior_year_comparative": 123.703,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2024-Annual-Report---Hammond-Power-Solutions-Inc---March-20-2025.pdf",
+     "value": 140.894
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "FY2025Q1 interim report, Note \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-29",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 130.732,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-HPS-Q1-Report_FINAL.pdf",
+     "value": 140.906
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "FY2025Q2 interim report, Note \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-28",
+     "period_start": "2025-03-30",
+     "prior_year_comparative": 133.176,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-HPS-Q2-Report.pdf",
+     "value": 157.581
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "FY2025Q3 interim report, Note 10 \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-27",
+     "period_start": "2025-06-29",
+     "prior_year_comparative": 130.086,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2025-Report---102325-FP.pdf",
+     "value": 158.015
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "FY2025Q4 = annual \"United States and Mexico\" sales 631,921 (2025-HPS-Annual-Report-031926-FP, Sales note) minus nine-months 456,502 (https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2025-Report---102325-FP.pdf, Note \"Sales\" nine-months column); CAD thousands→millions; PYC = prior-year annual 534,888 (same annual report) minus prior-year nine-months 393,994 (same Q3 report)",
+     "method": "annual_minus_9m",
+     "period_end": "2025-12-31",
+     "period_start": "2025-09-28",
+     "prior_year_comparative": 140.894,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-Annual-Report-and-Q4-2024-PR/2025-HPS-Annual-Report-031926-FP.pdf",
+     "value": 175.419
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "FY2026Q1 interim report, Note \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-28",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 140.906,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q1-2026/2026-HPS-Q1-Report_FINAL.pdf",
+     "value": 199.736
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "FY2026Q2 interim report, Note 12 \"Sales\" / MD&A \"Sales by Geography\", row \"United States and Mexico\" (sales by geography of where product was sold), three months ending (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-27",
+     "period_start": "2026-03-29",
+     "prior_year_comparative": 157.581,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf",
+     "value": 272.691
+    }
+   ],
+   "primary": false,
+   "scope": "geographic",
+   "segment_name": "United States and Mexico (geographic sales by location where product was sold; HPS has a single operating segment = transformers)"
+  },
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "Q1 2016 interim report, Consolidated Statement of Earnings \"Sales\", three months ended April 2, 2016 / April 4, 2015; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-04-02",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 63.137,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-1-2016-INTERIM-REPORT.pdf",
+     "value": 68.722
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "Q2 2016 interim report, Consolidated Statement of Earnings \"Sales\", three months ended July 2, 2016 (col1) / prior year (col2); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-07-02",
+     "period_start": "2016-04-03",
+     "prior_year_comparative": 65.384,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-2-2016-INTERIM-REPORT.pdf",
+     "value": 69.138
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "Q3 2016 interim report, Consolidated Statement of Earnings \"Sales\", three months ended October 1, 2016 (col1) / prior year (col2); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-10-01",
+     "period_start": "2016-07-03",
+     "prior_year_comparative": 65.378,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/Quarter-3-2016-Interim-Report.pdf",
+     "value": 62.86
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "2016 Annual Report MD&A \"Summary of quarterly financial information (unaudited)\": Fiscal 2016 Q4 sales (PYC = Fiscal 2015 Q4 row of same table); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-02",
+     "prior_year_comparative": 80.74,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2016.pdf",
+     "value": 74.073
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "Q1 2017 interim report, Consolidated Statement of Earnings \"Sales\", three months ended April 1, 2017 / April 2, 2016; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-04-01",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 68.722,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-1-2017-INTERIM-REPORT.pdf",
+     "value": 72.362
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "Q2 2017 interim report, Consolidated Statement of Earnings \"Sales\", three months ended July 1, 2017 / July 2, 2016; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-07-01",
+     "period_start": "2017-04-02",
+     "prior_year_comparative": 69.138,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-2-2017-INTERIM-REPORT.pdf",
+     "value": 78.874
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "Q3 2017 interim report, Consolidated Statement of Earnings \"Sales\", three months ended September 30, 2017 / October 1, 2016; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-02",
+     "prior_year_comparative": 62.86,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-3-2017-INTERIM-REPORT.pdf",
+     "value": 74.685
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "2017 Annual Report MD&A \"Summary of quarterly financial information (unaudited)\": Fiscal 2017 Q4 sales (PYC = Fiscal 2016 Q4 row); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 74.073,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2017.pdf",
+     "value": 75.829
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Q1 2018 interim report, Consolidated Statement of Earnings \"Sales (note 10)\", three months ended March 31, 2018 / April 1, 2017 (incl. Italy); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 72.362,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-1-2018-INTERIM-REPORT.pdf",
+     "value": 73.073
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "Q2 2018 interim report, Consolidated Statement of Earnings \"Sales (note 10)\", three months ended June 30, 2018 / July 1, 2017 (incl. Italy); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 78.874,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/QUARTER-2-2018-INTERIM-REPORT.pdf",
+     "value": 77.393
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "Q3 2018 interim report, Consolidated Statement of Earnings \"Sales (note 10)\", three months ended September 29, 2018 / September 30, 2017 (incl. Italy); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-29",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 74.685,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPSMediaLibrary/Annual-Reports/2018-HPS-Q3-Report-FINAL.pdf",
+     "value": 83.153
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "2018 Annual Report MD&A \"Summary of quarterly financial information (unaudited)\": Fiscal 2018 Q4 sales incl. Italy (quarterly sum = 321,802 total incl. discontinued Italy) (PYC = Fiscal 2017 Q4 row); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-09-30",
+     "prior_year_comparative": 75.829,
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2018.pdf",
+     "value": 88.183
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "2020-Q1-Interim-Report.pdf p.19: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2019-03-30 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-30",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 70.397,
+     "prior_year_comparative_locator": "2019 Annual Report MD&A \"Summary of quarterly financial information (unaudited)\": Fiscal 2018 row restated to continuing operations (Italy discontinued); the same table prints Fiscal 2019 Q1 = 84.69 (identical to this seed value)",
+     "prior_year_comparative_source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2019-Annual-Report.pdf",
+     "published_date": "2020-04-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q1-Interim-Report.pdf",
+     "value": 84.69
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "2020-Q2-Interim-Report.pdf p.19: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2019-06-29 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-29",
+     "period_start": "2019-03-31",
+     "prior_year_comparative": 75.418,
+     "prior_year_comparative_locator": "2019 Annual Report MD&A \"Summary of quarterly financial information (unaudited)\": Fiscal 2018 row restated to continuing operations (Italy discontinued); the same table prints Fiscal 2019 Q2 = 91.937 (identical to this seed value)",
+     "prior_year_comparative_source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2019-Annual-Report.pdf",
+     "published_date": "2020-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q2-Interim-Report.pdf",
+     "value": 91.937
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "HPS-Q3-2020.pdf p.20: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2019-09-28 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-28",
+     "period_start": "2019-06-30",
+     "prior_year_comparative": 81.553,
+     "prior_year_comparative_locator": "2019 Annual Report MD&A \"Summary of quarterly financial information (unaudited)\": Fiscal 2018 row restated to continuing operations (Italy discontinued); the same table prints Fiscal 2019 Q3 = 91.502 (identical to this seed value)",
+     "prior_year_comparative_source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2019-Annual-Report.pdf",
+     "published_date": "2020-11-04",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPS-Q3-2020.pdf",
+     "value": 91.502
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "2020-ANNUAL-REPORT.pdf p.39: MD&A 'Quarter 4 financial results' table, row 'Sales', column 'Quarter ended December 31, 2019'; also MD&A 'Summary of quarterly financial information (unaudited)' Fiscal 2019 Q4; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-09-29",
+     "prior_year_comparative": 86.714,
+     "prior_year_comparative_locator": "2019 Annual Report MD&A \"Summary of quarterly financial information (unaudited)\": Fiscal 2018 row restated to continuing operations (Italy discontinued); the same table prints Fiscal 2019 Q4 = 90.653 (identical to this seed value)",
+     "prior_year_comparative_source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2019-Annual-Report.pdf",
+     "published_date": "2021-03-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2020-ANNUAL-REPORT.pdf",
+     "value": 90.653
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "2020-Q1-Interim-Report.pdf p.19: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2020-03-28 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-28",
+     "period_start": "2020-01-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q1-Interim-Report.pdf",
+     "value": 88.42
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "2020-Q2-Interim-Report.pdf p.19: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2020-06-27 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-27",
+     "period_start": "2020-03-29",
+     "published_date": "2020-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/2020-Q2-Interim-Report.pdf",
+     "value": 75.393
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "HPS-Q3-2020.pdf p.20: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2020-09-26 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-26",
+     "period_start": "2020-06-28",
+     "published_date": "2020-11-04",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Legacy/HPS-Q3-2020.pdf",
+     "value": 78.115
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "2020-ANNUAL-REPORT.pdf p.39: MD&A 'Quarter 4 financial results' table, row 'Sales', column 'Quarter ended December 31, 2020'; also MD&A 'Summary of quarterly financial information (unaudited)' Fiscal 2020 Q4; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-09-27",
+     "published_date": "2021-03-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2020-ANNUAL-REPORT.pdf",
+     "value": 80.169
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "HPS-Q1-2022-Report-FINAL.pdf p.10: MD&A 'Summary of quarterly financial information (unaudited)', 'Fiscal 2021 Quarters' row 'Sales', Q1 column; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-27",
+     "period_start": "2021-01-01",
+     "published_date": "2022-05-02",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2022-Report-FINAL.pdf",
+     "value": 80.121
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "HPS-QUARTER-2-2022-REPORT---FINAL.pdf p.23: interim consolidated statement of earnings (unaudited), row 'Sales (note 9)', three months ended 2021-06-26 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-26",
+     "period_start": "2021-03-28",
+     "published_date": "2022-08-02",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-QUARTER-2-2022-REPORT---FINAL.pdf",
+     "value": 88.277
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "HPS-QUARTER-3-2022-REPORT---FINAL-P.pdf p.23: interim consolidated statement of earnings (unaudited), row 'Sales (note 9)', three months ended 2021-09-25 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-25",
+     "period_start": "2021-06-27",
+     "published_date": "2022-10-27",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-QUARTER-3-2022-REPORT---FINAL-P.pdf",
+     "value": 95.526
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "HPS-Annual-Report-2022_FINAL.pdf p.31: MD&A 'Quarter 4 financial results' table, row 'Sales', column 'Quarter ended December 31, 2021'; also MD&A 'Summary of quarterly financial information (unaudited)' Fiscal 2021 Q4; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-09-26",
+     "published_date": "2023-03-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2022_FINAL.pdf",
+     "value": 116.278
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "HPS-Q1-2023-Report.pdf p.13: MD&A 'Summary of quarterly financial information (unaudited)', 'Fiscal 2022 Quarters' row 'Sales', Q1 column; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-04-02",
+     "period_start": "2022-01-01",
+     "published_date": "2023-05-02",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2023-Report.pdf",
+     "value": 127.782
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "HPS-Q2-2023-Report.pdf p.24: interim consolidated statement of earnings (unaudited), row 'Sales (note 8)', three months ended 2022-07-02 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-07-02",
+     "period_start": "2022-04-03",
+     "published_date": "2023-08-01",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2023-Report.pdf",
+     "value": 137.476
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "HPS-Q3-Report-2023_FINAL.pdf p.23: interim consolidated statement of earnings (unaudited), row 'Sales (note 8)', three months ended 2022-10-01 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-10-01",
+     "period_start": "2022-07-03",
+     "published_date": "2023-10-26",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-Report-2023_FINAL.pdf",
+     "value": 148.953
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "HPS-Annual-Report-2022_FINAL.pdf p.31: MD&A 'Quarter 4 financial results' table, row 'Sales', column 'Quarter ended December 31, 2022'; also MD&A 'Summary of quarterly financial information (unaudited)' Fiscal 2022 Q4; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-02",
+     "published_date": "2023-03-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Annual-Report-2022_FINAL.pdf",
+     "value": 144.253
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "HPS-Q1-2024-REPORT.pdf p.22: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2023-04-01 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-04-01",
+     "period_start": "2023-01-01",
+     "published_date": "2024-04-29",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2024-REPORT.pdf",
+     "value": 171.134
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "HPS-Q2-2024-REPORT.pdf p.26: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2023-07-01 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-07-01",
+     "period_start": "2023-04-02",
+     "published_date": "2024-07-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2024-REPORT.pdf",
+     "value": 172.451
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "HPS-Q3-2024-REPORT.pdf p.26: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2023-09-30 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-02",
+     "published_date": "2024-10-29",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2024-REPORT.pdf",
+     "value": 179.521
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "2024-Annual-Report---Hammond-Power-Solutions-Inc---March-20-2025.pdf p.27: MD&A 'Quarter 4 financial results' table, row 'Sales', column 'Quarter ended December 31, 2023'; also MD&A 'Summary of quarterly financial information (unaudited)' Fiscal 2023 Q4; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2025-03-20",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2024-Annual-Report---Hammond-Power-Solutions-Inc---March-20-2025.pdf",
+     "value": 186.958
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "HPS-Q1-2024-REPORT.pdf p.22: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2024-03-30 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-30",
+     "period_start": "2024-01-01",
+     "published_date": "2024-04-29",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q1-2024-REPORT.pdf",
+     "value": 190.68
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "HPS-Q2-2024-REPORT.pdf p.26: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2024-06-29 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-29",
+     "period_start": "2024-03-31",
+     "published_date": "2024-07-25",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q2-2024-REPORT.pdf",
+     "value": 197.212
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "HPS-Q3-2025-Report---102325-FP.pdf p.25: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2024-09-28 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-28",
+     "period_start": "2024-06-30",
+     "published_date": "2025-10-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2025-Report---102325-FP.pdf",
+     "value": 191.972
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "2025-HPS-Annual-Report-031926-FP.pdf p.26: MD&A 'Quarter 4 financial results' table, row 'Sales', column 'Quarter ended December 31, 2024'; also MD&A 'Summary of quarterly financial information (unaudited)' Fiscal 2024 Q4; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-09-29",
+     "published_date": "2026-03-19",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-Annual-Report-and-Q4-2024-PR/2025-HPS-Annual-Report-031926-FP.pdf",
+     "value": 208.476
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "2026-HPS-Q1-Report_FINAL.pdf p.25: interim consolidated statement of earnings (unaudited), row 'Sales (note 11)', three months ended 2025-03-29 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-29",
+     "period_start": "2025-01-01",
+     "published_date": "2026-05-05",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q1-2026/2026-HPS-Q1-Report_FINAL.pdf",
+     "value": 201.403
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "2026-HPS-Q2-Report_FINAL.pdf p.27: interim consolidated statement of earnings (unaudited), row 'Sales (note 12)', three months ended 2025-06-28 (prior-year comparative column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-28",
+     "period_start": "2025-03-30",
+     "published_date": "2026-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf",
+     "value": 224.419
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "HPS-Q3-2025-Report---102325-FP.pdf p.25: interim consolidated statement of earnings (unaudited), row 'Sales (note 10)', three months ended 2025-09-27 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-27",
+     "period_start": "2025-06-29",
+     "published_date": "2025-10-23",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/HPS-Q3-2025-Report---102325-FP.pdf",
+     "value": 218.341
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "2025-HPS-Annual-Report-031926-FP.pdf p.26: MD&A 'Quarter 4 financial results' table, row 'Sales', column 'Quarter ended December 31, 2025'; also MD&A 'Summary of quarterly financial information (unaudited)' Fiscal 2025 Q4; CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-09-28",
+     "published_date": "2026-03-19",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2025-Annual-Report-and-Q4-2024-PR/2025-HPS-Annual-Report-031926-FP.pdf",
+     "value": 254.092
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "2026-HPS-Q1-Report_FINAL.pdf p.25: interim consolidated statement of earnings (unaudited), row 'Sales (note 11)', three months ended 2026-03-28 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-28",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-05",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q1-2026/2026-HPS-Q1-Report_FINAL.pdf",
+     "value": 264.84
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "2026-HPS-Q2-Report_FINAL.pdf p.27: interim consolidated statement of earnings (unaudited), row 'Sales (note 12)', three months ended 2026-06-27 (current-period column); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-27",
+     "period_start": "2026-03-29",
+     "published_date": "2026-07-30",
+     "source_url": "https://americas.hammondpowersolutions.com/-/media/Project/HPS/shared/Investor-Relations/2026-YEAR-ITEMS/Q2-2026/2026-HPS-Q2-Report_FINAL.pdf",
+     "value": 324.802
+    }
+   ],
+   "primary": true,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "HPS.A CN",
+ "unit": "million"
+}

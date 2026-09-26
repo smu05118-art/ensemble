@@ -1,0 +1,1318 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "WEG",
+ "grid_node": "GRID_WEG",
+ "name": "WEG S.A.",
+ "ticker": "WEGE3 BZ",
+ "listed": true,
+ "currency": "BRL",
+ "unit": "million",
+ "accounting_basis": "IFRS (CPC, CVM ITR/DFP)",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 순영업매출(ROL)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": false,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 2416.344,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=55186",
+     "locator": "CVM ITR 1T16 v1 (protocol 55186), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2016-01-01..2016-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2016.zip (itr_cia_aberta_DRE_con_2016.csv)",
+     "published_date": "2016-04-20",
+     "prior_year_comparative": 2130.291
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 2335.255,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=58280",
+     "locator": "CVM ITR 2T16 v1 (protocol 58280), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2016-04-01..2016-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2016.zip (itr_cia_aberta_DRE_con_2016.csv)",
+     "published_date": "2016-07-27",
+     "prior_year_comparative": 2349.432
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 2238.078,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=60179",
+     "locator": "CVM ITR 3T16 v1 (protocol 60179), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2016-07-01..2016-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2016.zip (itr_cia_aberta_DRE_con_2016.csv)",
+     "published_date": "2016-10-26",
+     "prior_year_comparative": 2546.349
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 2377.331,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/86b6368f-bc86-4029-9f3f-e8e8f65a4363?origin=2",
+     "locator": "WEG Release de Resultados 4T16 p.1 headline table, row \"Receita Líquida de Vendas\" 4T16 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2016 (protocol 62688) conta 3.01 annual 9,367,008 minus ITR 3T16 9M 6,989,677 = 2,377,331 (identical)",
+     "published_date": "2017-02-22",
+     "prior_year_comparative": 2734.251
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 2134.229,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=64436",
+     "locator": "CVM ITR 1T17 v2 (protocol 64436), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2017-01-01..2017-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2017.zip (itr_cia_aberta_DRE_con_2017.csv)",
+     "published_date": "2017-04-26",
+     "prior_year_comparative": 2416.344
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 2280.769,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=67211",
+     "locator": "CVM ITR 2T17 v1 (protocol 67211), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2017-04-01..2017-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2017.zip (itr_cia_aberta_DRE_con_2017.csv)",
+     "published_date": "2017-07-19",
+     "prior_year_comparative": 2335.255
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 2435.085,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=69250",
+     "locator": "CVM ITR 3T17 v1 (protocol 69250), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2017-07-01..2017-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2017.zip (itr_cia_aberta_DRE_con_2017.csv)",
+     "published_date": "2017-10-25",
+     "prior_year_comparative": 2238.078
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 2673.747,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/74b335cf-69c2-4d45-b867-7bd9b65f82f0?origin=2",
+     "locator": "WEG Release de Resultados 4T17 p.1 headline table, row \"Receita Líquida de Vendas\" 4T17 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2017 (protocol 71853) conta 3.01 annual 9,523,830 minus ITR 3T17 9M 6,850,083 = 2,673,747 (identical)",
+     "published_date": "2018-02-28",
+     "prior_year_comparative": 2377.331
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 2551.476,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=78619",
+     "locator": "CVM ITR 1T18 v2 (protocol 78619), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2018-01-01..2018-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2018.zip (itr_cia_aberta_DRE_con_2018.csv)",
+     "published_date": "2018-11-05",
+     "prior_year_comparative": 2134.229
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 3056.648,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=77198",
+     "locator": "CVM ITR 2T18 v2 (protocol 77198), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2018-04-01..2018-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2018.zip (itr_cia_aberta_DRE_con_2018.csv)",
+     "published_date": "2018-08-14",
+     "prior_year_comparative": 2280.769
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 3237.309,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=78246",
+     "locator": "CVM ITR 3T18 v1 (protocol 78246), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2018-07-01..2018-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2018.zip (itr_cia_aberta_DRE_con_2018.csv)",
+     "published_date": "2018-10-24",
+     "prior_year_comparative": 2435.085
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 3124.657,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/923e08d0-e883-485f-8863-466572794434?origin=2",
+     "locator": "WEG Release de Resultados 4T18 p.1 headline table, row \"Receita Líquida de Vendas\" 4T18 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2018 (protocol 82128) conta 3.01 annual 11,970,090 minus ITR 3T18 9M 8,845,433 = 3,124,657 (identical)",
+     "published_date": "2019-02-20",
+     "prior_year_comparative": 2673.747
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 2932.379,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=82335",
+     "locator": "CVM ITR 1T19 v1 (protocol 82335), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2019-01-01..2019-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2019.zip (itr_cia_aberta_DRE_con_2019.csv)",
+     "published_date": "2019-04-24",
+     "prior_year_comparative": 2551.476
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 3286.605,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=85540",
+     "locator": "CVM ITR 2T19 v1 (protocol 85540), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2019-04-01..2019-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2019.zip (itr_cia_aberta_DRE_con_2019.csv)",
+     "published_date": "2019-07-24",
+     "prior_year_comparative": 3056.648
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 3349.604,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=88758",
+     "locator": "CVM ITR 3T19 v1 (protocol 88758), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2019-07-01..2019-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2019.zip (itr_cia_aberta_DRE_con_2019.csv)",
+     "published_date": "2019-10-23",
+     "prior_year_comparative": 3237.309
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 3778.846,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/4eb50e55-84f2-4e5a-a2eb-8d5d93097b5d?origin=2",
+     "locator": "WEG Release de Resultados 4T19 p.1 headline table, row \"Receita Líquida de Vendas\" 4T19 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2019 (protocol 91065) conta 3.01 annual 13,347,434 minus ITR 3T19 9M 9,568,588 = 3,778,846 (identical)",
+     "published_date": "2020-02-19",
+     "prior_year_comparative": 3124.657
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 3714.436,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=92574",
+     "locator": "CVM ITR 1T20 v1 (protocol 92574), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2020-01-01..2020-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2020.zip (itr_cia_aberta_DRE_con_2020.csv)",
+     "published_date": "2020-04-29",
+     "prior_year_comparative": 2932.379
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 4063.943,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=94882",
+     "locator": "CVM ITR 2T20 v1 (protocol 94882), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2020-04-01..2020-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2020.zip (itr_cia_aberta_DRE_con_2020.csv)",
+     "published_date": "2020-07-22",
+     "prior_year_comparative": 3286.605
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 4801.26,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=97758",
+     "locator": "CVM ITR 3T20 v1 (protocol 97758), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2020-07-01..2020-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2020.zip (itr_cia_aberta_DRE_con_2020.csv)",
+     "published_date": "2020-10-21",
+     "prior_year_comparative": 3349.604
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 4889.918,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/bd7ecf24-3999-42b0-8cec-1b56e18b44c2?origin=2",
+     "locator": "WEG Release de Resultados 4T20 p.1 headline table, row \"Receita Operacional Líquida\" 4T20 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2020 (protocol 100392) conta 3.01 annual 17,469,557 minus ITR 3T20 9M 12,579,639 = 4,889,918 (identical)",
+     "published_date": "2021-02-24",
+     "prior_year_comparative": 3778.846
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 5076.879,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=103112",
+     "locator": "CVM ITR 1T21 v1 (protocol 103112), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2021-01-01..2021-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2021.zip (itr_cia_aberta_DRE_con_2021.csv)",
+     "published_date": "2021-04-28",
+     "prior_year_comparative": 3714.436
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 5748.206,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=106729",
+     "locator": "CVM ITR 2T21 v1 (protocol 106729), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2021-04-01..2021-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2021.zip (itr_cia_aberta_DRE_con_2021.csv)",
+     "published_date": "2021-07-28",
+     "prior_year_comparative": 4063.943
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 6198.243,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=109232",
+     "locator": "CVM ITR 3T21 v1 (protocol 109232), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2021-07-01..2021-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2021.zip (itr_cia_aberta_DRE_con_2021.csv)",
+     "published_date": "2021-10-27",
+     "prior_year_comparative": 4801.26
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 6540.01,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/97548ca7-19d9-3858-8152-afcddf2784c3?origin=2",
+     "locator": "WEG Release de Resultados 4T21 p.1 headline table, row \"Receita Operacional Líquida\" 4T21 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2021 (protocol 111794) conta 3.01 annual 23,563,338 minus ITR 3T21 9M 17,023,328 = 6,540,010 (identical)",
+     "published_date": "2022-02-16",
+     "prior_year_comparative": 4889.918
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 6828.106,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=113968",
+     "locator": "CVM ITR 1T22 v1 (protocol 113968), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2022-01-01..2022-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2022.zip (itr_cia_aberta_DRE_con_2022.csv)",
+     "published_date": "2022-04-27",
+     "prior_year_comparative": 5076.879
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 7185.787,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=118560",
+     "locator": "CVM ITR 2T22 v1 (protocol 118560), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2022-04-01..2022-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2022.zip (itr_cia_aberta_DRE_con_2022.csv)",
+     "published_date": "2022-07-20",
+     "prior_year_comparative": 5748.206
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 7911.192,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=121152",
+     "locator": "CVM ITR 3T22 v1 (protocol 121152), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2022-07-01..2022-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2022.zip (itr_cia_aberta_DRE_con_2022.csv)",
+     "published_date": "2022-10-26",
+     "prior_year_comparative": 6198.243
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 7979.637,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/08adf685-7295-ed31-8651-a521764e8883?origin=2",
+     "locator": "WEG Release de Resultados 4T22 p.1 headline table, row \"Receita Operacional Líquida\" 4T22 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2022 (protocol 123532) conta 3.01 annual 29,904,722 minus ITR 3T22 9M 21,925,085 = 7,979,637 (identical)",
+     "published_date": "2023-02-15",
+     "prior_year_comparative": 6540.01
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 7696.157,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=125438",
+     "locator": "CVM ITR 1T23 v1 (protocol 125438), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2023-01-01..2023-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2023.zip (itr_cia_aberta_DRE_con_2023.csv)",
+     "published_date": "2023-04-26",
+     "prior_year_comparative": 6828.106
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 8171.322,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=129067",
+     "locator": "CVM ITR 2T23 v1 (protocol 129067), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2023-04-01..2023-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2023.zip (itr_cia_aberta_DRE_con_2023.csv)",
+     "published_date": "2023-07-19",
+     "prior_year_comparative": 7185.787
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 8074.837,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=131575",
+     "locator": "CVM ITR 3T23 v1 (protocol 131575), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2023-07-01..2023-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2023.zip (itr_cia_aberta_DRE_con_2023.csv)",
+     "published_date": "2023-10-25",
+     "prior_year_comparative": 7911.192
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 8561.285,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/2547b2a9-8c06-0f62-371b-8bcc2755522a?origin=2",
+     "locator": "WEG Release de Resultados 4T23 p.1 headline table, row \"Receita Operacional Líquida\" 4T23 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2023 (protocol 134151) conta 3.01 annual 32,503,601 minus ITR 3T23 9M 23,942,316 = 8,561,285 (identical)",
+     "published_date": "2024-02-21",
+     "prior_year_comparative": 7979.637
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 8033.304,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=136105",
+     "locator": "CVM ITR 1T24 v1 (protocol 136105), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2024-01-01..2024-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip (itr_cia_aberta_DRE_con_2024.csv)",
+     "published_date": "2024-05-02",
+     "prior_year_comparative": 7696.157
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 9274.426,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=140081",
+     "locator": "CVM ITR 2T24 v1 (protocol 140081), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2024-04-01..2024-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip (itr_cia_aberta_DRE_con_2024.csv)",
+     "published_date": "2024-07-31",
+     "prior_year_comparative": 8171.322
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 9856.935,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=142418",
+     "locator": "CVM ITR 3T24 v1 (protocol 142418), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2024-07-01..2024-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2024.zip (itr_cia_aberta_DRE_con_2024.csv)",
+     "published_date": "2024-10-30",
+     "prior_year_comparative": 8074.837
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 10822.276,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9b9f9cb8-4e9e-aee5-c8cf-3b04b1a9a211?origin=2",
+     "locator": "WEG Release de Resultados 4T24 p.1 headline table, row \"Receita Operacional Líquida\" 4T24 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2024 (protocol 145023) conta 3.01 annual 37,986,941 minus ITR 3T24 9M 27,164,665 = 10,822,276 (identical)",
+     "published_date": "2025-02-26",
+     "prior_year_comparative": 8561.285
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 10078.571,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=146659",
+     "locator": "CVM ITR 1T25 v1 (protocol 146659), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2025-01-01..2025-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip (itr_cia_aberta_DRE_con_2025.csv)",
+     "published_date": "2025-04-30",
+     "prior_year_comparative": 8033.304
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 10207.227,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=150076",
+     "locator": "CVM ITR 2T25 v1 (protocol 150076), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2025-04-01..2025-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip (itr_cia_aberta_DRE_con_2025.csv)",
+     "published_date": "2025-07-23",
+     "prior_year_comparative": 9274.426
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 10271.522,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=152433",
+     "locator": "CVM ITR 3T25 v1 (protocol 152433), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2025-07-01..2025-09-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2025.zip (itr_cia_aberta_DRE_con_2025.csv)",
+     "published_date": "2025-10-22",
+     "prior_year_comparative": 9856.935
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 10246.79,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/e93d71d4-7174-addd-7179-527d63dc51ce?origin=2",
+     "locator": "WEG Release de Resultados 4T25 p.1 headline table, row \"Receita Operacional Líquida\" 4T25 column (R$ mil → R$ milhões). Cross-check: CVM DFP 2025 (protocol 154872) conta 3.01 annual 40,804,110 minus ITR 3T25 9M 30,557,320 = 10,246,790 (identical)",
+     "published_date": "2026-02-25",
+     "prior_year_comparative": 10822.276
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 9468.313,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=156459",
+     "locator": "CVM ITR 1T26 v1 (protocol 156459), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2026-01-01..2026-03-31 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip (itr_cia_aberta_DRE_con_2026.csv)",
+     "published_date": "2026-04-29",
+     "prior_year_comparative": 10078.571
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 10143.555,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.rad.cvm.gov.br/ENETCONSULTA/frmDownloadDocumento.aspx?CodigoInstituicao=1&NumeroSequencialDocumento=159608",
+     "locator": "CVM ITR 2T26 v1 (protocol 159608), DFs Consolidadas / Demonstração do Resultado, conta 3.01 \"Receita de Venda de Bens e/ou Serviços\", 3-month column 2026-04-01..2026-06-30 (R$ mil → R$ milhões); machine-readable copy: https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip (itr_cia_aberta_DRE_con_2026.csv)",
+     "published_date": "2026-07-22",
+     "prior_year_comparative": 10207.227
+    }
+   ]
+  },
+  "revenue_segment": {
+   "label_ko": "GTD(발전·송배전) 사업부 순매출 — 내수+수출",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": true,
+   "segment_name": "Geração, Transmissão e Distribuição de Energia (GTD) business area — ROL Mercado Interno + Mercado Externo (transformers, substations, generators, wind/solar/T&D)",
+   "points": [
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 998.895,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/49d1babd-a141-f5d1-dfb2-2e4a68531dba?origin=2",
+     "locator": "WEG Release de Resultados 2T20 p.3 GTD table, prior-year comparative row 2T19: Mercado Interno 528,080 + Mercado Externo 470,815 (R$ mil; sum of the two printed market columns → R$ milhões). The business-area ROL table first appears in the 2T20 release; this quarter is only printed as a comparative.",
+     "published_date": "2020-07-22"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 1033.038,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/6db2ff3a-87b7-1780-b1a6-e8b323fc4fcd?origin=2",
+     "locator": "WEG Release de Resultados 3T20 p.3 GTD table, prior-year comparative row 3T19: Mercado Interno 526,221 + Mercado Externo 506,817 (R$ mil; sum of the two printed market columns → R$ milhões). The business-area ROL table first appears in the 2T20 release; this quarter is only printed as a comparative.",
+     "published_date": "2020-10-21"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 1335.785,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/bd7ecf24-3999-42b0-8cec-1b56e18b44c2?origin=2",
+     "locator": "WEG Release de Resultados 4T20 p.3 GTD table, prior-year comparative row 4T19: Mercado Interno 741,815 + Mercado Externo 593,970 (R$ mil; sum of the two printed market columns → R$ milhões). The business-area ROL table first appears in the 2T20 release; this quarter is only printed as a comparative.",
+     "published_date": "2021-02-24"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 1314.429,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/49d1babd-a141-f5d1-dfb2-2e4a68531dba?origin=2",
+     "locator": "WEG Release de Resultados 2T20 p.3 GTD table, previous-quarter row 1T20: Mercado Interno 784,278 + Mercado Externo 530,151 (R$ mil; sum of the two printed market columns → R$ milhões). The business-area ROL table first appears in the 2T20 release; this quarter is only printed as a comparative.",
+     "published_date": "2020-07-22"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 1456.31,
+     "prior_year_comparative": 998.895,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/49d1babd-a141-f5d1-dfb2-2e4a68531dba?origin=2",
+     "locator": "WEG Release de Resultados 2T20 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 2T20: Mercado Interno 755,710 + Mercado Externo 700,600 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2020-07-22"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 1645.105,
+     "prior_year_comparative": 1033.038,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/6db2ff3a-87b7-1780-b1a6-e8b323fc4fcd?origin=2",
+     "locator": "WEG Release de Resultados 3T20 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 3T20: Mercado Interno 867,383 + Mercado Externo 777,722 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2020-10-21"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 1604.399,
+     "prior_year_comparative": 1335.785,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/bd7ecf24-3999-42b0-8cec-1b56e18b44c2?origin=2",
+     "locator": "WEG Release de Resultados 4T20 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 4T20: Mercado Interno 872,027 + Mercado Externo 732,372 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2021-02-24"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 1731.666,
+     "prior_year_comparative": 1314.429,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/2ae8aa94-c0e8-0d31-1067-08babb2562d2?origin=2",
+     "locator": "WEG Release de Resultados 1T21 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 1T21: Mercado Interno 974,275 + Mercado Externo 757,391 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2021-04-28"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 2136.006,
+     "prior_year_comparative": 1456.31,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/5b29fd6f-e954-e23b-78cc-b0abb9e108e5?origin=2",
+     "locator": "WEG Release de Resultados 2T21 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 2T21: Mercado Interno 1,204,262 + Mercado Externo 931,744 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2021-07-28"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 2299.528,
+     "prior_year_comparative": 1645.105,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/55217fbd-0864-a6c0-fe44-ea719143833a?origin=2",
+     "locator": "WEG Release de Resultados 3T21 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 3T21: Mercado Interno 1,381,004 + Mercado Externo 918,524 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2021-10-27"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 2374.021,
+     "prior_year_comparative": 1604.399,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/97548ca7-19d9-3858-8152-afcddf2784c3?origin=2",
+     "locator": "WEG Release de Resultados 4T21 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 4T21: Mercado Interno 1,399,039 + Mercado Externo 974,982 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2022-02-16"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 2765.693,
+     "prior_year_comparative": 1731.666,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/bd516f26-61fa-a9a1-15b3-ec849fe8aed6?origin=2",
+     "locator": "WEG Release de Resultados 1T22 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 1T22: Mercado Interno 2,014,992 + Mercado Externo 750,701 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2022-04-27"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 2838.732,
+     "prior_year_comparative": 2136.006,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/b4f85fda-2050-0444-61fe-8bb20be9fdae?origin=2",
+     "locator": "WEG Release de Resultados 2T22 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 2T22: Mercado Interno 2,015,057 + Mercado Externo 823,675 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2022-07-20"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 2918.193,
+     "prior_year_comparative": 2299.528,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/723945dc-5f59-5ad4-a082-c25f6248855a?origin=2",
+     "locator": "WEG Release de Resultados 3T22 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 3T22: Mercado Interno 2,032,151 + Mercado Externo 886,042 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2022-10-26"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 3167.596,
+     "prior_year_comparative": 2374.021,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/08adf685-7295-ed31-8651-a521764e8883?origin=2",
+     "locator": "WEG Release de Resultados 4T22 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 4T22: Mercado Interno 2,031,117 + Mercado Externo 1,136,479 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2023-02-15"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 2963.05,
+     "prior_year_comparative": 2765.693,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/d2d13938-2ff4-a8ab-5398-3c3ae25a99f9?origin=2",
+     "locator": "WEG Release de Resultados 1T23 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 1T23: Mercado Interno 1,948,118 + Mercado Externo 1,014,932 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2023-04-26"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 3426.283,
+     "prior_year_comparative": 2838.732,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/d614cc5e-18bb-56e1-b259-aa237aa260d0?origin=2",
+     "locator": "WEG Release de Resultados 2T23 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 2T23: Mercado Interno 1,926,788 + Mercado Externo 1,499,495 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2023-07-19"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 3225.211,
+     "prior_year_comparative": 2918.193,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/89bc6a02-42c0-59e5-c49b-43068acd4bac?origin=2",
+     "locator": "WEG Release de Resultados 3T23 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 3T23: Mercado Interno 1,907,630 + Mercado Externo 1,317,581 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2023-10-25"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 3563.08,
+     "prior_year_comparative": 3167.596,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/2547b2a9-8c06-0f62-371b-8bcc2755522a?origin=2",
+     "locator": "WEG Release de Resultados 4T23 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 4T23: Mercado Interno 2,093,998 + Mercado Externo 1,469,082 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2024-02-21"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 3457.066,
+     "prior_year_comparative": 2963.05,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/f807a434-aaa8-f533-de30-04171875d542?origin=2",
+     "locator": "WEG Release de Resultados 1T24 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 1T24: Mercado Interno 2,022,146 + Mercado Externo 1,434,920 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2024-05-02"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 3843.164,
+     "prior_year_comparative": 3426.283,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/d5cb4688-771a-2046-446b-0b01ea4ccf8d?origin=2",
+     "locator": "WEG Release de Resultados 2T24 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 2T24: Mercado Interno 2,107,869 + Mercado Externo 1,735,295 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2024-07-31"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 3835.654,
+     "prior_year_comparative": 3225.211,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/7db45d38-2f02-a607-d1b5-04276e0cfb2b?origin=2",
+     "locator": "WEG Release de Resultados 3T24 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 3T24: Mercado Interno 1,794,110 + Mercado Externo 2,041,544 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2024-10-30"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 4616.503,
+     "prior_year_comparative": 3563.08,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9b9f9cb8-4e9e-aee5-c8cf-3b04b1a9a211?origin=2",
+     "locator": "WEG Release de Resultados 4T24 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 4T24: Mercado Interno 2,182,048 + Mercado Externo 2,434,455 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2025-02-26"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 4436.185,
+     "prior_year_comparative": 3457.066,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/161a9930-5b12-3b03-758b-3b6d2b725211?origin=2",
+     "locator": "WEG Release de Resultados 1T25 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 1T25: Mercado Interno 2,388,548 + Mercado Externo 2,047,637 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2025-04-30"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 4089.779,
+     "prior_year_comparative": 3843.164,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/8a3640f7-490e-5cfd-4cd5-bd9de3f4ac5a?origin=2",
+     "locator": "WEG Release de Resultados 2T25 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 2T25: Mercado Interno 2,074,985 + Mercado Externo 2,014,794 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2025-07-23"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 3682.902,
+     "prior_year_comparative": 3835.654,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9c7e8791-7ac9-052c-3e6d-408eb345df77?origin=2",
+     "locator": "WEG Release de Resultados 3T25 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 3T25: Mercado Interno 1,671,958 + Mercado Externo 2,010,944 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2025-10-22"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 3962.124,
+     "prior_year_comparative": 4616.503,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/e93d71d4-7174-addd-7179-527d63dc51ce?origin=2",
+     "locator": "WEG Release de Resultados 4T25 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 4T25: Mercado Interno 1,544,802 + Mercado Externo 2,417,322 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2026-02-25"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 3630.295,
+     "prior_year_comparative": 4436.185,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/e63c061a-638d-99dc-19c1-22a71328872a?origin=2",
+     "locator": "WEG Release de Resultados 1T26 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 1T26: Mercado Interno 1,517,989 + Mercado Externo 2,112,306 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2026-04-29"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 3730.709,
+     "prior_year_comparative": 4089.779,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9a78cad5-4da1-b36f-38ec-45060792f84c?origin=2",
+     "locator": "WEG Release de Resultados 2T26 p.3 \"Desempenho por Área de Negócio – Geração, Transmissão e Distribuição de Energia (GTD)\" table, ROL row 2T26: Mercado Interno 1,599,007 + Mercado Externo 2,131,702 (R$ mil; segment total = sum of the two printed market columns; → R$ milhões)",
+     "published_date": "2026-07-22"
+    }
+   ]
+  },
+  "revenue_segment_gtd_external": {
+   "label_ko": "GTD 사업부 해외(Mercado Externo) 순매출 — 북미 변압기·발전기 비중 큼",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "GTD business area — Mercado Externo only (WEG Transformers USA/Mexico/Colombia/S.Africa T&D + generators incl. Marathon from May-2024)",
+   "points": [
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 470.815,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/49d1babd-a141-f5d1-dfb2-2e4a68531dba?origin=2",
+     "locator": "WEG Release de Resultados 2T20 p.3 GTD table, prior-year comparative row 2T19, column \"Mercado Externo\" 470,815 (R$ mil → R$ milhões); only printed as a comparative",
+     "published_date": "2020-07-22"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 506.817,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/6db2ff3a-87b7-1780-b1a6-e8b323fc4fcd?origin=2",
+     "locator": "WEG Release de Resultados 3T20 p.3 GTD table, prior-year comparative row 3T19, column \"Mercado Externo\" 506,817 (R$ mil → R$ milhões); only printed as a comparative",
+     "published_date": "2020-10-21"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 593.97,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/bd7ecf24-3999-42b0-8cec-1b56e18b44c2?origin=2",
+     "locator": "WEG Release de Resultados 4T20 p.3 GTD table, prior-year comparative row 4T19, column \"Mercado Externo\" 593,970 (R$ mil → R$ milhões); only printed as a comparative",
+     "published_date": "2021-02-24"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 530.151,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/49d1babd-a141-f5d1-dfb2-2e4a68531dba?origin=2",
+     "locator": "WEG Release de Resultados 2T20 p.3 GTD table, previous-quarter row 1T20, column \"Mercado Externo\" 530,151 (R$ mil → R$ milhões); only printed as a comparative",
+     "published_date": "2020-07-22"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 700.6,
+     "prior_year_comparative": 470.815,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/49d1babd-a141-f5d1-dfb2-2e4a68531dba?origin=2",
+     "locator": "WEG Release de Resultados 2T20 p.3 GTD table, ROL row 2T20, column \"Mercado Externo\" 700,600 (R$ mil → R$ milhões); prior-year row 470,815",
+     "published_date": "2020-07-22"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 777.722,
+     "prior_year_comparative": 506.817,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/6db2ff3a-87b7-1780-b1a6-e8b323fc4fcd?origin=2",
+     "locator": "WEG Release de Resultados 3T20 p.3 GTD table, ROL row 3T20, column \"Mercado Externo\" 777,722 (R$ mil → R$ milhões); prior-year row 506,817",
+     "published_date": "2020-10-21"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 732.372,
+     "prior_year_comparative": 593.97,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/bd7ecf24-3999-42b0-8cec-1b56e18b44c2?origin=2",
+     "locator": "WEG Release de Resultados 4T20 p.3 GTD table, ROL row 4T20, column \"Mercado Externo\" 732,372 (R$ mil → R$ milhões); prior-year row 593,970",
+     "published_date": "2021-02-24"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 757.391,
+     "prior_year_comparative": 530.151,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/2ae8aa94-c0e8-0d31-1067-08babb2562d2?origin=2",
+     "locator": "WEG Release de Resultados 1T21 p.3 GTD table, ROL row 1T21, column \"Mercado Externo\" 757,391 (R$ mil → R$ milhões); prior-year row 530,151",
+     "published_date": "2021-04-28"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 931.744,
+     "prior_year_comparative": 700.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/5b29fd6f-e954-e23b-78cc-b0abb9e108e5?origin=2",
+     "locator": "WEG Release de Resultados 2T21 p.3 GTD table, ROL row 2T21, column \"Mercado Externo\" 931,744 (R$ mil → R$ milhões); prior-year row 700,600",
+     "published_date": "2021-07-28"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 918.524,
+     "prior_year_comparative": 777.722,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/55217fbd-0864-a6c0-fe44-ea719143833a?origin=2",
+     "locator": "WEG Release de Resultados 3T21 p.3 GTD table, ROL row 3T21, column \"Mercado Externo\" 918,524 (R$ mil → R$ milhões); prior-year row 777,722",
+     "published_date": "2021-10-27"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 974.982,
+     "prior_year_comparative": 732.372,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/97548ca7-19d9-3858-8152-afcddf2784c3?origin=2",
+     "locator": "WEG Release de Resultados 4T21 p.3 GTD table, ROL row 4T21, column \"Mercado Externo\" 974,982 (R$ mil → R$ milhões); prior-year row 732,372",
+     "published_date": "2022-02-16"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 750.701,
+     "prior_year_comparative": 757.391,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/bd516f26-61fa-a9a1-15b3-ec849fe8aed6?origin=2",
+     "locator": "WEG Release de Resultados 1T22 p.3 GTD table, ROL row 1T22, column \"Mercado Externo\" 750,701 (R$ mil → R$ milhões); prior-year row 757,391",
+     "published_date": "2022-04-27"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 823.675,
+     "prior_year_comparative": 931.744,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/b4f85fda-2050-0444-61fe-8bb20be9fdae?origin=2",
+     "locator": "WEG Release de Resultados 2T22 p.3 GTD table, ROL row 2T22, column \"Mercado Externo\" 823,675 (R$ mil → R$ milhões); prior-year row 931,744",
+     "published_date": "2022-07-20"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 886.042,
+     "prior_year_comparative": 918.524,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/723945dc-5f59-5ad4-a082-c25f6248855a?origin=2",
+     "locator": "WEG Release de Resultados 3T22 p.3 GTD table, ROL row 3T22, column \"Mercado Externo\" 886,042 (R$ mil → R$ milhões); prior-year row 918,524",
+     "published_date": "2022-10-26"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 1136.479,
+     "prior_year_comparative": 974.982,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/08adf685-7295-ed31-8651-a521764e8883?origin=2",
+     "locator": "WEG Release de Resultados 4T22 p.3 GTD table, ROL row 4T22, column \"Mercado Externo\" 1,136,479 (R$ mil → R$ milhões); prior-year row 974,982",
+     "published_date": "2023-02-15"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 1014.932,
+     "prior_year_comparative": 750.701,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/d2d13938-2ff4-a8ab-5398-3c3ae25a99f9?origin=2",
+     "locator": "WEG Release de Resultados 1T23 p.3 GTD table, ROL row 1T23, column \"Mercado Externo\" 1,014,932 (R$ mil → R$ milhões); prior-year row 750,701",
+     "published_date": "2023-04-26"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 1499.495,
+     "prior_year_comparative": 823.675,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/d614cc5e-18bb-56e1-b259-aa237aa260d0?origin=2",
+     "locator": "WEG Release de Resultados 2T23 p.3 GTD table, ROL row 2T23, column \"Mercado Externo\" 1,499,495 (R$ mil → R$ milhões); prior-year row 823,675",
+     "published_date": "2023-07-19"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 1317.581,
+     "prior_year_comparative": 886.042,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/89bc6a02-42c0-59e5-c49b-43068acd4bac?origin=2",
+     "locator": "WEG Release de Resultados 3T23 p.3 GTD table, ROL row 3T23, column \"Mercado Externo\" 1,317,581 (R$ mil → R$ milhões); prior-year row 886,042",
+     "published_date": "2023-10-25"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 1469.082,
+     "prior_year_comparative": 1136.479,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/2547b2a9-8c06-0f62-371b-8bcc2755522a?origin=2",
+     "locator": "WEG Release de Resultados 4T23 p.3 GTD table, ROL row 4T23, column \"Mercado Externo\" 1,469,082 (R$ mil → R$ milhões); prior-year row 1,136,479",
+     "published_date": "2024-02-21"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 1434.92,
+     "prior_year_comparative": 1014.932,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/f807a434-aaa8-f533-de30-04171875d542?origin=2",
+     "locator": "WEG Release de Resultados 1T24 p.3 GTD table, ROL row 1T24, column \"Mercado Externo\" 1,434,920 (R$ mil → R$ milhões); prior-year row 1,014,932",
+     "published_date": "2024-05-02"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 1735.295,
+     "prior_year_comparative": 1499.495,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/d5cb4688-771a-2046-446b-0b01ea4ccf8d?origin=2",
+     "locator": "WEG Release de Resultados 2T24 p.3 GTD table, ROL row 2T24, column \"Mercado Externo\" 1,735,295 (R$ mil → R$ milhões); prior-year row 1,499,495",
+     "published_date": "2024-07-31"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 2041.544,
+     "prior_year_comparative": 1317.581,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/7db45d38-2f02-a607-d1b5-04276e0cfb2b?origin=2",
+     "locator": "WEG Release de Resultados 3T24 p.3 GTD table, ROL row 3T24, column \"Mercado Externo\" 2,041,544 (R$ mil → R$ milhões); prior-year row 1,317,581",
+     "published_date": "2024-10-30"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 2434.455,
+     "prior_year_comparative": 1469.082,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9b9f9cb8-4e9e-aee5-c8cf-3b04b1a9a211?origin=2",
+     "locator": "WEG Release de Resultados 4T24 p.3 GTD table, ROL row 4T24, column \"Mercado Externo\" 2,434,455 (R$ mil → R$ milhões); prior-year row 1,469,082",
+     "published_date": "2025-02-26"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 2047.637,
+     "prior_year_comparative": 1434.92,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/161a9930-5b12-3b03-758b-3b6d2b725211?origin=2",
+     "locator": "WEG Release de Resultados 1T25 p.3 GTD table, ROL row 1T25, column \"Mercado Externo\" 2,047,637 (R$ mil → R$ milhões); prior-year row 1,434,920",
+     "published_date": "2025-04-30"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 2014.794,
+     "prior_year_comparative": 1735.295,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/8a3640f7-490e-5cfd-4cd5-bd9de3f4ac5a?origin=2",
+     "locator": "WEG Release de Resultados 2T25 p.3 GTD table, ROL row 2T25, column \"Mercado Externo\" 2,014,794 (R$ mil → R$ milhões); prior-year row 1,735,295",
+     "published_date": "2025-07-23"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 2010.944,
+     "prior_year_comparative": 2041.544,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9c7e8791-7ac9-052c-3e6d-408eb345df77?origin=2",
+     "locator": "WEG Release de Resultados 3T25 p.3 GTD table, ROL row 3T25, column \"Mercado Externo\" 2,010,944 (R$ mil → R$ milhões); prior-year row 2,041,544",
+     "published_date": "2025-10-22"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 2417.322,
+     "prior_year_comparative": 2434.455,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/e93d71d4-7174-addd-7179-527d63dc51ce?origin=2",
+     "locator": "WEG Release de Resultados 4T25 p.3 GTD table, ROL row 4T25, column \"Mercado Externo\" 2,417,322 (R$ mil → R$ milhões); prior-year row 2,434,455",
+     "published_date": "2026-02-25"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 2112.306,
+     "prior_year_comparative": 2047.637,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/e63c061a-638d-99dc-19c1-22a71328872a?origin=2",
+     "locator": "WEG Release de Resultados 1T26 p.3 GTD table, ROL row 1T26, column \"Mercado Externo\" 2,112,306 (R$ mil → R$ milhões); prior-year row 2,047,637",
+     "published_date": "2026-04-29"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 2131.702,
+     "prior_year_comparative": 2014.794,
+     "method": "direct_reported_quarter",
+     "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9a78cad5-4da1-b36f-38ec-45060792f84c?origin=2",
+     "locator": "WEG Release de Resultados 2T26 p.3 GTD table, ROL row 2T26, column \"Mercado Externo\" 2,131,702 (R$ mil → R$ milhões); prior-year row 2,014,794",
+     "published_date": "2026-07-22"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_segment",
+ "structural_breaks": [
+  {
+   "date": "2017-08-01",
+   "type": "acquisition",
+   "note": "CG Power USA Inc. (Washington, Missouri transformer plant; renamed WEG Transformers USA) acquired — announced 21-Jun-2017, consolidated from Aug-2017 (3T17 release: 'eliminados os efeitos da consolidação da aquisição da CG Power USA'). Adds US-made transformers to GTD external.",
+   "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/63c88dfe-faf2-4a99-8225-ed402648c9eb?origin=2"
+  },
+  {
+   "date": "2018-02-28",
+   "type": "acquisition",
+   "note": "TGM (Brazilian steam-turbine maker) control acquisition approved by CADE 28-Feb-2018 and consolidated into GTD (Brazil) from 1T18.",
+   "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/355b637b-6365-4bd1-beea-e7a26791e3a1?origin=2"
+  },
+  {
+   "date": "2020-01-16",
+   "type": "acquisition",
+   "note": "Agreement with TSEA to buy its Betim/MG power-transformer plant (32,500 m², power transformers, shunt reactors, autotransformers) — GTD Brazil capacity.",
+   "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/4eb50e55-84f2-4e5a-a2eb-8d5d93097b5d?origin=2"
+  },
+  {
+   "date": "2020-04-01",
+   "type": "segment_reorg",
+   "note": "Data-availability break: absolute GTD revenue (Mercado Interno/Externo) is printed in releases only from 2T20 (with 2T19-4T19 and 1T20 as comparatives/prior quarter). Earlier releases give only qualitative/percent business-area commentary; no GTD values before FY2019Q2.",
+   "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/49d1babd-a141-f5d1-dfb2-2e4a68531dba?origin=2"
+  },
+  {
+   "date": "2024-05-01",
+   "type": "acquisition",
+   "note": "Regal Rexnord industrial motors & generators businesses (Marathon, Rotor, Cemp) consolidated from May-2024; generators (Marathon) enter GTD external (29.7% of the acquired revenue in 2T24 = GTD).",
+   "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/d5cb4688-771a-2046-446b-0b01ea4ccf8d?origin=2"
+  },
+  {
+   "date": "2025-01-01",
+   "type": "acquisition",
+   "note": "Reivax (excitation/control systems) and Volt Electric Motors consolidation effects cited in 1T25 release when adjusting growth.",
+   "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/161a9930-5b12-3b03-758b-3b6d2b725211?origin=2"
+  }
+ ],
+ "profile": {
+  "products": "GTD business area: oil-immersed power transformers, shunt reactors and autotransformers (Betim/MG plant bought from TSEA in 2020), distribution and power transformers (Blumenau/SC, Gravataí/RS — voltage classes up to 230 kV per WEG news 2024), substations/E-houses, specialty transformers 1–10 MVA up to 46.5 kV in Washington, Missouri (WEG Transformers USA, ex-CG Power USA), hydro/thermal generators, steam turbines (TGM), wind turbines, distributed & centralized solar; since May-2024 Marathon generators (US data-center backup power). Consolidated revenue also includes industrial motors/drives (EEI), commercial motors (MCA) and paints (T&V).",
+  "plants": [
+   {
+    "country": "BR",
+    "city": "Betim (MG)",
+    "products": "power transformers, shunt reactors, autotransformers (ex-TSEA plant; expansion to ~75,000 m² due 2H26)",
+    "source_url": "https://api.mziq.com/mzfilemanager/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/4eb50e55-84f2-4e5a-a2eb-8d5d93097b5d?origin=2"
+   },
+   {
+    "country": "BR",
+    "city": "Blumenau (SC)",
+    "products": "transformers (capacity modernization/expansion 2024-25)",
+    "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9b9f9cb8-4e9e-aee5-c8cf-3b04b1a9a211?origin=2"
+   },
+   {
+    "country": "BR",
+    "city": "Gravataí (RS)",
+    "products": "transformers up to 230 kV (R$128m expansion, completion 4Q26 per WEG news; page returns 403 to automated fetch — URL kept for audit)",
+    "source_url": "https://www.weg.net/institutional/US/en/news/result-and-investiments/weg-announces-investments-to-expand-transformer-production-capacity-in-brazil"
+   },
+   {
+    "country": "US",
+    "city": "Washington, Missouri",
+    "products": "WEG Transformers USA — specialty/substation transformers 1–10 MVA up to 46.5 kV; US$77m expansion (+50% capacity, due 2028) announced 23-Sep-2025",
+    "source_url": "https://ded.mo.gov/press-room/weg-expand-washington-investing-77-million-and-creating-50-new-jobs"
+   },
+   {
+    "country": "MX",
+    "city": "Mexico (new power-transformer factory under construction; existing transformer plants being expanded)",
+    "products": "power & distribution transformers for Mexico and North America",
+    "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/9b9f9cb8-4e9e-aee5-c8cf-3b04b1a9a211?origin=2"
+   },
+   {
+    "country": "CO",
+    "city": "Colombia (new transformer factory under construction 2025-26)",
+    "products": "transformers",
+    "source_url": "https://api.mziq.com/mzfilemanager/v2/d/50c1bd3e-8ac6-42d9-884f-b9d69f690602/161a9930-5b12-3b03-758b-3b6d2b725211?origin=2"
+   }
+  ],
+  "end_markets": "Brazil: transmission-auction projects (large transformers/substations), distribution utilities, distributed & centralized solar, wind, biomass/sugar-ethanol; North America: transformers for renewable parks and grid reinforcement, generators for data-center backup power (Marathon); Mexico, Colombia, South Africa T&D. 2T26: GTD = 36.8% of ROL; GTD external R$2.13bn vs domestic R$1.60bn in 2T26.",
+  "export_routes": [
+   "MX->US",
+   "US-domestic (Washington MO)",
+   "BR->US (hypothesis: large power transformers from Betim/Gravataí)",
+   "CO->US (hypothesis, new plant)",
+   "BR->LatAm"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "850433",
+   "850434",
+   "850450",
+   "850161",
+   "850164"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_850423_p484",
+    "why": "Mexico→US liquid-dielectric power transformers >10 MVA — WEG Mexico transformer plants serve the US grid/renewables build-out (GTD external)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850422_p484",
+    "why": "Mexico→US 650 kVA–10 MVA transformers — WEG Mexico medium-power/substation units",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "mx_exp_850423_p842",
+    "why": "Mexican export statistics for the same route (mirror of the US import series)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p76",
+    "why": "Brazil→US large power transformers (Betim/Gravataí exports)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "br_exp_850423_p0",
+    "why": "Brazil total exports of >10 MVA transformers — WEG is Brazil's largest transformer exporter",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "br_exp_850422_p0",
+    "why": "Brazil exports of 650 kVA–10 MVA transformers",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "ibge_pim_c27",
+    "why": "IBGE industrial production, electrical machinery (CNAE 27) — GTD domestic market (≈43% of GTD in 2T26)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "fred_TLPWRCONS",
+    "why": "US power construction put in place — US grid/renewable projects buying WEG transformers & generators",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_A35SNO",
+    "why": "US electrical equipment new orders — North American demand for WEG T&D/generators",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_PCU335311335311",
+    "why": "US transformer PPI — pricing tailwind in WEG North American T&D",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "wishlist:aneel_transmission_auction_capex",
+    "why": "ANEEL transmission-auction RAP/capex awarded (Brazil) — drives large transformer/substation deliveries 18–36 months later; source ANEEL leilões de transmissão results (not yet collected)",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "wishlist:absolar_dg_installed_mw",
+    "why": "Brazil distributed-solar installations (ANEEL SIGA/ABSOLAR monthly MW) — the volatile solar DG/GC part of GTD domestic",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_segment/revenue_segment_gtd_external FY2016Q1–FY2019Q1: WEG releases before 2T20 do not print absolute GTD revenue (only commentary); IFRS 8 segment note is Brazil-Industry / Brazil-Energy / Abroad (not GTD) — not used. Percent-of-revenue charts not converted (ratio back-calculation forbidden).",
+  "revenue_segment FY2019Q2–FY2020Q1: values taken from comparative / previous-quarter rows of the 2T20–1T21 releases, so no same-report prior-year comparative exists for them."
+ ],
+ "collection_notes": [
+  "revenue_total Q1–Q3: CVM ITR 'DF Consolidado – Demonstração do Resultado' conta 3.01 3-month column via CVM open data (dados.cvm.gov.br itr_cia_aberta_DRE_con_YYYY.csv, latest filing version); prior_year_comparative = PENÚLTIMO 3-month column of the same filing. Q4: 4T release headline table (direct 3-month figure), cross-checked = DFP annual minus ITR 9M for every year 2016–2025 (all identical to the thousand).",
+  "GTD: sum of the two printed market columns (Mercado Interno + Mercado Externo) of the 'Desempenho por Área de Negócio – GTD' table; every quarter printed in more than one release (as current, previous quarter and prior-year row) was checked for consistency — no restatements found.",
+  "Values converted from R$ mil to R$ milhões (÷1000). No FX conversion. GTD external is in BRL and therefore contains USD/MXN/COP translation effects.",
+  "weg.net pages return HTTP 403 (Akamai) to automated fetches; plant facts sourced from WEG releases on ri.weg.net (MZ file manager) and the Missouri DED press release.",
+  "published_date: CVM filing receipt date for ITR/DFP-sourced points; release date (ri.weg.net document date) for release-sourced points.",
+  "verify 2026-09-25: checked revenue_segment (GTD) FY2019Q2-Q4, FY2020Q1-Q4, FY2021Q1, FY2021Q4, FY2022Q1, FY2022Q2, FY2023Q1-Q4, FY2024Q1-Q4, FY2025Q1-Q4, FY2026Q1, FY2026Q2 (and the matching Mercado Externo values) against the 2T20, 3T20, 4T20, 1T22, 2T23, 3T24, 4T24, 1T25, 4T25, 1T26 and 2T26 releases (current, previous-quarter and prior-year rows all consistent, no recasts); revenue_total FY2016Q1-Q3 and FY2018Q1-Q3 against CVM open data (conta 3.01), FY2018Q4, FY2024Q4, FY2025Q1, FY2025Q4, FY2026Q1, FY2026Q2 against releases. All values matched. Fixed 1: FY2018Q4 published_date 2019-04-10 → 2019-02-20 (dateline of the cited 4T18 release). FY2017Q1/FY2018Q1/FY2018Q2 published_date are the receipt dates of the cited ITR re-filings (v2); the original v1 filings were received 2018-04-18 (1T18) and 2018-07-18 (2T18)."
+ ]
+}

@@ -1,0 +1,1531 @@
+{
+ "accounting_basis": "US GAAP",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "seed: phalanx composite_preview.html DATA.companies[].official_financials (asof 2026-09-23); 원문 URL 보존, 값 무변경",
+  "2026-09-25 G1_NA 수집: revenue_total 기존 30개 포인트(FY2019Q1–FY2026Q2)를 SEC XBRL(10-Q/10-K, us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 무차원)과 대조 — 전부 일치, 무변경.",
+  "revenue_total FY2016Q1–FY2018Q4 12개 추가: Q1–Q3 = 해당 분기 10-Q 3개월 열(+같은 10-Q의 전년 동기 PYC), Q4 = Q4 실적 보도자료(8-K Ex.99) 3개월 열(10-K 연간−9M 차분과 일치 확인).",
+  "revenue_segment(Electrical Americas)/revenue_segment_global(Electrical Global): 각 분기 자체 10-Q의 3개월 세그먼트 매출(XBRL StatementBusinessSegmentsAxis) + 같은 문서의 전년 동기(PYC). Q4는 Q4 보도자료 \"Business segment information\" 표 3개월 열(FY2024Q4 2,905 vs 연간−9M 2,906 등 반올림 차이는 보도자료 값 채택). FY2018Q1–FY2019Q4는 Q1 2020 10-Q가 인쇄한 재편 기준 재작성치.",
+  "2026-01-01 세그먼트 재편(Vehicle+eMobility→Mobility)은 Electrical Americas/Global 과거치에 영향 없음(2025 분기값이 2026 10-Q 비교열과 동일 확인).",
+  "Eaton.com 보도자료 페이지는 이 환경에서 503/빈 응답(봇 차단) — 공장 정보는 동일 URL의 검색 색인 요약으로 확인; 숫자 타깃에는 사용하지 않음.",
+  "보조 타깃 키 revenue_segment_global 은 계약 예시에 없는 추가 키(scope=segment). 빌더가 revenue_segment* 접두어로 인식하도록 명명.",
+  "verify 2026-09-25: checked revenue_segment (Electrical Americas) and revenue_segment_global FY2018Q1–FY2019Q4 (Q1 2020 10-Q recast tables), FY2020Q1, FY2020Q2, FY2020Q4, FY2024Q4, FY2025Q4, FY2026Q1, FY2026Q2 incl. PYC (cited 10-Q 'Business Segment Information' / Q4 release tables); revenue_total all 42 points vs SEC XBRL (3M facts, Q4 = 10-K annual − 10-Q 9M); 2026 re-segmentation confirmed to affect only Vehicle/eMobility→Mobility — all values match; fixed 58: 30 non-specific seed locators replaced with filing/statement/row + XBRL context, 23 seed methods 'reported'→'direct_reported_quarter', break types 'disposal'→'divestiture' (2) and 'segment_reorganization'→'segment_reorg' (2)."
+ ],
+ "currency": "USD",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "revenue_segment/revenue_segment_global: FY2016Q1–FY2017Q4 없음 — 2020Q1 Americas/Global 재편 전 구 세그먼트(Electrical Products / Electrical Systems & Services)는 지역 기준이 아니어서 비교 불가. Eaton이 인쇄한 재작성(recast) 분기 이력은 Q1 2020 10-Q의 2018Q1–2019Q4 8개 분기가 최초.",
+  "revenue_segment FY2018Q1–FY2018Q4: prior_year_comparative 없음(2017 재작성치 미공시) — YoY는 FY2019Q1부터(같은 Q1 2020 10-Q가 2018·2019를 함께 인쇄).",
+  "orders_segment: Eaton은 세그먼트 수주를 금액이 아니라 rolling-12M 증감률(%)과 백로그 금액만 공시 — 금액 수주 타깃 없음.",
+  "Electrical Americas 내 변압기 매출은 별도 공시 없음(제품군 혼재)."
+ ],
+ "grid_node": "GRID_EATON",
+ "id": "ETN",
+ "listed": true,
+ "name": "Eaton Corporation plc",
+ "primary_target": "revenue_segment",
+ "profile": {
+  "end_markets": "commercial & institutional, data centers & distributed IT, utilities, industrial, residential, machinery OEMs (2025 10-K segment description)",
+  "export_routes": [
+   "MX->US",
+   "US domestic"
+  ],
+  "hs_candidates": [
+   "853710",
+   "853720",
+   "850440",
+   "850421",
+   "850422",
+   "850433",
+   "850434",
+   "853521"
+  ],
+  "plants": [
+   {
+    "city": "Waukesha, WI",
+    "country": "US",
+    "products": "three-phase transformers (capacity investment announced Oct-2023)",
+    "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2023/eaton-investing-85-million-to-increase-north-american-manufactur.html"
+   },
+   {
+    "city": "Nacogdoches, TX",
+    "country": "US",
+    "products": "voltage regulators (capacity doubled, Oct-2023 announcement)",
+    "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2023/eaton-investing-85-million-to-increase-north-american-manufactur.html"
+   },
+   {
+    "city": "Querétaro",
+    "country": "MX",
+    "products": "line installation & protective equipment for undergrounding (utility)",
+    "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2023/eaton-investing-85-million-to-increase-north-american-manufactur.html"
+   },
+   {
+    "city": "Jonesville, SC",
+    "country": "US",
+    "products": "three-phase transformers (conversion announced 2025-02-12, production expected 2027)",
+    "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-invests-in-new-south-carolina-transformer-manufacturing.html"
+   },
+   {
+    "city": "Minden, LA (Fibrebond)",
+    "country": "US",
+    "products": "modular power enclosures / e-houses for data centers (acq. 2025-04-01, EA)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm"
+   },
+   {
+    "city": "(unspecified Mexican facility)",
+    "country": "MX",
+    "products": "products manufactured in Mexico and sold to U.S. affiliates (IRS transfer-pricing dispute, 10-K Note 12)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm"
+   }
+  ],
+  "products": "Electrical Americas: electrical & industrial components, power distribution & assemblies, residential, single/three-phase power quality, wiring devices, circuit protection, utility power distribution (incl. Cooper Power series transformers, voltage regulators), power reliability equipment & services, produced/sold mainly in North & South America (2025 10-K). Transformers: three-phase transformers made at two Wisconsin facilities incl. Waukesha WI (Cooper Power series product line); new Jonesville SC three-phase transformer plant ($340M, production from 2027); voltage regulators at Nacogdoches TX. Solid-state transformer technology via Resilient Power Systems (acq. 2025-08-06, EA). Electrical Global: same product families outside the Americas + hazardous-duty/emergency lighting; 49% equity stake in Jiangsu Ryan Electrical (power distribution & sub-transmission transformers, China). Eaton is a diversified power-management company; transformers are a minority of Electrical Americas sales (no separate disclosure).",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SNO",
+    "role": "primary",
+    "why": "미국 전기장비(A35S) 신규수주 — Electrical Americas 수요 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SVS",
+    "role": "primary",
+    "why": "미국 전기장비 출하 — EA 매출과 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SUO",
+    "role": "diagnostic",
+    "why": "미국 전기장비 수주잔고 — 백로그 소진 매출 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_IPG3353S",
+    "role": "primary",
+    "why": "미국 전기장비 산업생산(NAICS 3353: 변압기·스위치기어 포함) — 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_PCU335311335311",
+    "role": "diagnostic",
+    "why": "변압기 PPI — EA 가격 전가(명목 매출) 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLPWRCONS",
+    "role": "primary",
+    "why": "미국 전력 건설투자 — 유틸리티 배전(변압기·레귤레이터) 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853710_p0",
+    "role": "primary",
+    "why": "미국 1kV 이하 배전반·분전반 수입 — EA 핵심 제품 시장수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853710_p484",
+    "role": "primary",
+    "why": "멕시코산 저압 배전반 대미 수입 — Eaton 멕시코 공장→미국 계열사 공급 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "mx_exp_853710_p842",
+    "role": "diagnostic",
+    "why": "멕시코 측 저압 배전반 대미 수출(미러 통계)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853720_p0",
+    "role": "diagnostic",
+    "why": "미국 1kV 초과 배전반(중압 스위치기어) 수입 — 데이터센터·유틸리티 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850440_p484",
+    "role": "diagnostic",
+    "why": "멕시코산 정지형 변환기(UPS·전원품질) 대미 수입 — 3상 전원품질 제품"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850422_p0",
+    "role": "diagnostic",
+    "why": "미국 유입식 650~10,000kVA 변압기 수입 — 미국 3상 변압기 수급 타이트(수입 증가=공급부족·수요 강세)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eurostat_ip_C271_EU27_2020",
+    "role": "diagnostic",
+    "why": "EU 전기모터·발전기·변압기·배전장치(C271) 생산 — Electrical Global(보조 타깃) 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "de_exp_853710_p0",
+    "role": "diagnostic",
+    "why": "독일 저압 배전반 수출 — 유럽 배전장치 경기(Electrical Global 보조 타깃)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "census_c30_datacenter_construction",
+    "role": "wishlist",
+    "why": "WISHLIST: 미국 Census C30 민간 비주거 건설 중 data center 항목(월별, 2025년 공개 시작) — EA 데이터센터 수요"
+   }
+  ]
+ },
+ "quarter_calendar": "calendar",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2019-04-15",
+   "note": "82.275% controlling switchgear business; consolidated acquisition.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2019-07-19",
+   "note": "Electrical Americas acquired switchgear business.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2019-12-20",
+   "note": "Aerospace interconnect business consolidated from close.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2019-12-31",
+   "note": "Vehicle business disposal; preserve reported historical sales.",
+   "source_url": null,
+   "type": "divestiture"
+  },
+  {
+   "date": "2020-01-01",
+   "note": "Electrical Products/Systems reorganized to Americas/Global; legacy Hydraulics filtration moved to Electrical Global. Comparative segment recast does not remove past consolidated scope.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2020-02-25",
+   "note": "Electrical Americas power distribution and monitoring business.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2020-03-02",
+   "note": "Electrical Americas historical Lighting sales remain in reported past revenue.",
+   "source_url": null,
+   "type": "divestiture"
+  },
+  {
+   "date": "2021-03-17",
+   "note": "Electrical Americas power-quality/connectivity business.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2021-03-22",
+   "note": "Electrical Global EV charging hardware/software.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2021-03-29",
+   "note": "Equity-method investment; investee gross sales must not be added to Eaton consolidated revenue.",
+   "source_url": null,
+   "type": "equity_method_investment"
+  },
+  {
+   "date": "2021-06-01",
+   "note": "Aerospace acquired refueling/environmental/actuation business.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2021-06-25",
+   "note": "Equity-method investment; investee gross sales must not be added to Eaton consolidated revenue.",
+   "source_url": null,
+   "type": "equity_method_investment"
+  },
+  {
+   "date": "2021-08-02",
+   "note": "Explicitly failed discontinued-operation criteria; FY2021 includes sales through close. Do not retrospectively remove Hydraulics.",
+   "source_url": null,
+   "type": "divestiture"
+  },
+  {
+   "date": "2022-01-05",
+   "note": "eMobility connectivity components; acquired historical scope.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2022-07-01",
+   "note": "Equity-method investment; investee gross sales must not be added to Eaton consolidated revenue.",
+   "source_url": null,
+   "type": "equity_method_investment"
+  },
+  {
+   "date": "2023-04-23",
+   "note": "Equity-method investment; investee gross sales must not be added to Eaton consolidated revenue.",
+   "source_url": null,
+   "type": "equity_method_investment"
+  },
+  {
+   "date": "2023-04-23",
+   "note": "Electrical Global: 49% stake in Jiangsu Ryan Electrical (China power distribution & sub-transmission transformers) — equity method, NOT in segment revenue.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+   "type": "equity_method_investment"
+  },
+  {
+   "date": "2024-05-20",
+   "note": "Electrical Americas thermal monitoring.",
+   "source_url": null,
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-05-31",
+   "note": "Equity-method investment; investee gross sales must not be added to Eaton consolidated revenue.",
+   "source_url": null,
+   "type": "equity_method_investment"
+  },
+  {
+   "date": "2025-04-01",
+   "note": "Electrical Americas modular power enclosures.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2025-08-06",
+   "note": "Electrical Americas solid-state transformer technology.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2026-01-01",
+   "note": "Historical segment data recast; consolidated total revenue remains reported.",
+   "source_url": null,
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2026-01-23",
+   "note": "Aerospace controls/sensing systems.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2026-03-12",
+   "note": "Electrical Global thermal systems. FY2026 Q2 first full quarter; contribution to segment growth not an absolute sales attribution.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2026-06-10",
+   "note": "Pending RMT transaction, expected Q1 2027. Mobility remains in continuing operations through closing.",
+   "source_url": null,
+   "type": "pending_disposal"
+  }
+ ],
+ "targets": {
+  "revenue_segment": {
+   "freq": "Q",
+   "label_ko": "Electrical Americas 세그먼트 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2018-03-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1838.0
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2018-06-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1974.0
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2018-09-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 2008.0
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2018-12-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 2094.0
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2019-03-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 1838.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1961.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2019-06-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 1974.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 2085.0
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2019-09-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 2008.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 2040.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Americas\", row \"Net sales\", quarter ended 2019-12-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 2094.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 2089.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "10-Q for period ended 2020-03-31 (filed 2020-04-30), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 1961.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1788.0
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "10-Q for period ended 2020-06-30 (filed 2020-07-29), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "prior_year_comparative": 2085.0,
+     "published_date": "2020-07-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000167/etn0630202010-q.htm",
+     "value": 1490.0
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "10-Q for period ended 2020-09-30 (filed 2020-11-03), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "prior_year_comparative": 2040.0,
+     "published_date": "2020-11-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000190/etn-20200930.htm",
+     "value": 1699.0
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "Eaton Q4 2020 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Americas\", three months ended December 31 2020 (col 1) and 2019 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "prior_year_comparative": 2089.0,
+     "published_date": "2021-02-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752321000119/a52371791ex99.htm",
+     "value": 1703.0
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "10-Q for period ended 2021-03-31 (filed 2021-05-04), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 1788.0,
+     "published_date": "2021-05-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000120/etn-20210331.htm",
+     "value": 1622.0
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "10-Q for period ended 2021-06-30 (filed 2021-08-03), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "prior_year_comparative": 1490.0,
+     "published_date": "2021-08-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000161/etn-20210630.htm",
+     "value": 1849.0
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "10-Q for period ended 2021-09-30 (filed 2021-11-02), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "prior_year_comparative": 1699.0,
+     "published_date": "2021-11-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000184/etn-20210930.htm",
+     "value": 1854.0
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "Eaton Q4 2021 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Americas\", three months ended December 31 2021 (col 1) and 2020 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 1703.0,
+     "published_date": "2022-02-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752322000149/a52574065ex99.htm",
+     "value": 1917.0
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "10-Q for period ended 2022-03-31 (filed 2022-05-03), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 1622.0,
+     "published_date": "2022-05-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000008/etn-20220331.htm",
+     "value": 1891.0
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "10-Q for period ended 2022-06-30 (filed 2022-08-02), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "prior_year_comparative": 1849.0,
+     "published_date": "2022-08-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000020/etn-20220630.htm",
+     "value": 2131.0
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "10-Q for period ended 2022-09-30 (filed 2022-11-01), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "prior_year_comparative": 1854.0,
+     "published_date": "2022-11-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000024/etn-20220930.htm",
+     "value": 2179.0
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "Eaton Q4 2022 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Americas\", three months ended December 31 2022 (col 1) and 2021 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "prior_year_comparative": 1917.0,
+     "published_date": "2023-02-08",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752323000204/a53306075ex99.htm",
+     "value": 2296.0
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "10-Q for period ended 2023-03-31 (filed 2023-05-02), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 1891.0,
+     "published_date": "2023-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000008/etn-20230331.htm",
+     "value": 2294.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "10-Q for period ended 2023-06-30 (filed 2023-08-01), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 2131.0,
+     "published_date": "2023-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000024/etn-20230630.htm",
+     "value": 2538.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "10-Q for period ended 2023-09-30 (filed 2023-10-31), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 2179.0,
+     "published_date": "2023-10-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000029/etn-20230930.htm",
+     "value": 2594.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "Eaton Q4 2023 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Americas\", three months ended December 31 2023 (col 1) and 2022 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 2296.0,
+     "published_date": "2024-02-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752324000149/a53890459ex99.htm",
+     "value": 2672.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-04-30), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 2294.0,
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000013/etn-20240331.htm",
+     "value": 2690.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-08-01), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 2538.0,
+     "published_date": "2024-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000035/etn-20240630.htm",
+     "value": 2877.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-31), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 2594.0,
+     "published_date": "2024-10-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000041/etn-20240930.htm",
+     "value": 2963.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "Eaton Q4 2024 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Americas\", three months ended December 31 2024 (col 1) and 2023 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 2672.0,
+     "published_date": "2025-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000003/etn12312024exhibit99.htm",
+     "value": 2905.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "10-Q for period ended 2025-03-31 (filed 2025-05-02), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 2690.0,
+     "published_date": "2025-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000014/etn-20250331.htm",
+     "value": 3010.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "10-Q for period ended 2025-06-30 (filed 2025-08-05), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 2877.0,
+     "published_date": "2025-08-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000028/etn-20250630.htm",
+     "value": 3350.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "10-Q for period ended 2025-09-30 (filed 2025-11-04), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 2963.0,
+     "published_date": "2025-11-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000036/etn-20250930.htm",
+     "value": 3410.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Eaton Q4 2025 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Americas\", three months ended December 31 2025 (col 1) and 2024 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 2905.0,
+     "published_date": "2026-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000002/etn12312025exhibit99.htm",
+     "value": 3506.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "10-Q for period ended 2026-03-31 (filed 2026-05-05), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 3010.0,
+     "published_date": "2026-05-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000013/etn-20260331.htm",
+     "value": 3600.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "10-Q for period ended 2026-06-30 (filed 2026-07-31), Business Segment Information note, net sales — Electrical Americas; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalAmericasSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 3350.0,
+     "published_date": "2026-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm",
+     "value": 3951.0
+    }
+   ],
+   "primary": true,
+   "scope": "segment",
+   "segment_name": "Electrical Americas"
+  },
+  "revenue_segment_global": {
+   "freq": "Q",
+   "label_ko": "Electrical Global 세그먼트 매출(보조)",
+   "points": [
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2018-03-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1258.0
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2018-06-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1327.0
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2018-09-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1282.0
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2018-12-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1292.0
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2019-03-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 1258.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1242.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2019-06-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 1327.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1324.0
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2019-09-30. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 1282.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1295.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "Q1 2020 Form 10-Q, Business Segment Information note — recast quarterly table under the new segment structure (\"Year ended December 31, 2019 / Quarter ended in 2019 / Year ended December 31, 2018 / Quarter ended in 2018\"), segment \"Electrical Global\", row \"Net sales\", quarter ended 2019-12-31. PYC (if any) = same table, prior-year quarter.",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 1292.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1311.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "10-Q for period ended 2020-03-31 (filed 2020-04-30), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 1242.0,
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/etn0331202010-q.htm",
+     "value": 1144.0
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "10-Q for period ended 2020-06-30 (filed 2020-07-29), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "prior_year_comparative": 1324.0,
+     "published_date": "2020-07-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000167/etn0630202010-q.htm",
+     "value": 1111.0
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "10-Q for period ended 2020-09-30 (filed 2020-11-03), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "prior_year_comparative": 1295.0,
+     "published_date": "2020-11-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000190/etn-20200930.htm",
+     "value": 1196.0
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "Eaton Q4 2020 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Global\", three months ended December 31 2020 (col 1) and 2019 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "prior_year_comparative": 1311.0,
+     "published_date": "2021-02-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752321000119/a52371791ex99.htm",
+     "value": 1252.0
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "10-Q for period ended 2021-03-31 (filed 2021-05-04), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 1144.0,
+     "published_date": "2021-05-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000120/etn-20210331.htm",
+     "value": 1253.0
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "10-Q for period ended 2021-06-30 (filed 2021-08-03), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "prior_year_comparative": 1111.0,
+     "published_date": "2021-08-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000161/etn-20210630.htm",
+     "value": 1418.0
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "10-Q for period ended 2021-09-30 (filed 2021-11-02), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "prior_year_comparative": 1196.0,
+     "published_date": "2021-11-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000184/etn-20210930.htm",
+     "value": 1421.0
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "Eaton Q4 2021 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Global\", three months ended December 31 2021 (col 1) and 2020 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 1252.0,
+     "published_date": "2022-02-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752322000149/a52574065ex99.htm",
+     "value": 1424.0
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "10-Q for period ended 2022-03-31 (filed 2022-05-03), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 1253.0,
+     "published_date": "2022-05-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000008/etn-20220331.htm",
+     "value": 1437.0
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "10-Q for period ended 2022-06-30 (filed 2022-08-02), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "prior_year_comparative": 1418.0,
+     "published_date": "2022-08-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000020/etn-20220630.htm",
+     "value": 1495.0
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "10-Q for period ended 2022-09-30 (filed 2022-11-01), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "prior_year_comparative": 1421.0,
+     "published_date": "2022-11-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000024/etn-20220930.htm",
+     "value": 1486.0
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "Eaton Q4 2022 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Global\", three months ended December 31 2022 (col 1) and 2021 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "prior_year_comparative": 1424.0,
+     "published_date": "2023-02-08",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752323000204/a53306075ex99.htm",
+     "value": 1430.0
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "10-Q for period ended 2023-03-31 (filed 2023-05-02), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 1437.0,
+     "published_date": "2023-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000008/etn-20230331.htm",
+     "value": 1500.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "10-Q for period ended 2023-06-30 (filed 2023-08-01), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 1495.0,
+     "published_date": "2023-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000024/etn-20230630.htm",
+     "value": 1569.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "10-Q for period ended 2023-09-30 (filed 2023-10-31), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 1486.0,
+     "published_date": "2023-10-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000029/etn-20230930.htm",
+     "value": 1503.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "Eaton Q4 2023 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Global\", three months ended December 31 2023 (col 1) and 2022 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 1430.0,
+     "published_date": "2024-02-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752324000149/a53890459ex99.htm",
+     "value": 1512.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-04-30), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 1500.0,
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000013/etn-20240331.htm",
+     "value": 1500.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-08-01), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 1569.0,
+     "published_date": "2024-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000035/etn-20240630.htm",
+     "value": 1606.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-31), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 1503.0,
+     "published_date": "2024-10-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000041/etn-20240930.htm",
+     "value": 1573.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "Eaton Q4 2024 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Global\", three months ended December 31 2024 (col 1) and 2023 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 1512.0,
+     "published_date": "2025-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000003/etn12312024exhibit99.htm",
+     "value": 1569.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "10-Q for period ended 2025-03-31 (filed 2025-05-02), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 1500.0,
+     "published_date": "2025-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000014/etn-20250331.htm",
+     "value": 1610.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "10-Q for period ended 2025-06-30 (filed 2025-08-05), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 1606.0,
+     "published_date": "2025-08-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000028/etn-20250630.htm",
+     "value": 1753.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "10-Q for period ended 2025-09-30 (filed 2025-11-04), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 1573.0,
+     "published_date": "2025-11-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000036/etn-20250930.htm",
+     "value": 1724.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Eaton Q4 2025 earnings release (Form 8-K Ex.99), table \"Business segment information\", row \"Electrical Global\", three months ended December 31 2025 (col 1) and 2024 (col 2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 1569.0,
+     "published_date": "2026-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000002/etn12312025exhibit99.htm",
+     "value": 1728.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "10-Q for period ended 2026-03-31 (filed 2026-05-05), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 1610.0,
+     "published_date": "2026-05-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000013/etn-20260331.htm",
+     "value": 1945.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "10-Q for period ended 2026-06-30 (filed 2026-07-31), Business Segment Information note, net sales — Electrical Global; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"etn:ElectricalGlobalSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 1753.0,
+     "published_date": "2026-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm",
+     "value": 2517.0
+    }
+   ],
+   "primary": false,
+   "scope": "segment",
+   "segment_name": "Electrical Global"
+  },
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "10-Q for period ended 2016-03-31 (filed 2016-04-29), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 5223.0,
+     "published_date": "2016-04-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118216000051/etn0331201610-q.htm",
+     "value": 4813.0
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "10-Q for period ended 2016-06-30 (filed 2016-08-02), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 5372.0,
+     "published_date": "2016-08-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118216000092/etn0630201610-q.htm",
+     "value": 5080.0
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "10-Q for period ended 2016-09-30 (filed 2016-11-01), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 5203.0,
+     "published_date": "2016-11-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118216000106/etn0930201610-q.htm",
+     "value": 4987.0
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "Eaton Q4 2016 earnings release (Form 8-K Ex.99), Statement of Income, row \"Net sales\", three months ended December 31 2016 (col1) / 2015 (col2); cross-check: 10-K annual minus 9M YTD = 4867.0",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 5057.0,
+     "published_date": "2017-02-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752317000308/a51503888ex99.htm",
+     "value": 4867.0
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "10-Q for period ended 2017-03-31 (filed 2017-05-02), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 4813.0,
+     "published_date": "2017-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118217000131/etn0331201710-qdoc.htm",
+     "value": 4848.0
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "10-Q for period ended 2017-06-30 (filed 2017-08-01), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "prior_year_comparative": 5080.0,
+     "published_date": "2017-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118217000169/etn0630201710-qdoc.htm",
+     "value": 5132.0
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "10-Q for period ended 2017-09-30 (filed 2017-10-31), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 4987.0,
+     "published_date": "2017-10-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118217000181/etn0930201710-qdoc.htm",
+     "value": 5211.0
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "Eaton Q4 2017 earnings release (Form 8-K Ex.99), Statement of Income, row \"Net sales\", three months ended December 31 2017 (col1) / 2016 (col2); cross-check: 10-K annual minus 9M YTD = 5213.0",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 4867.0,
+     "published_date": "2018-02-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752318000183/a51751988ex99.htm",
+     "value": 5213.0
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "10-Q for period ended 2018-03-31 (filed 2018-05-01), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 4848.0,
+     "published_date": "2018-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118218000169/etn0331201810-qdoc.htm",
+     "value": 5251.0
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "10-Q for period ended 2018-06-30 (filed 2018-07-31), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 5132.0,
+     "published_date": "2018-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118218000208/etn0630201810-qdoc.htm",
+     "value": 5487.0
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "10-Q for period ended 2018-09-30 (filed 2018-10-30), Consolidated Statements of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 5211.0,
+     "published_date": "2018-10-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118218000225/etn0930201810-qdoc.htm",
+     "value": 5412.0
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Eaton Q4 2018 earnings release (Form 8-K Ex.99), Statement of Income, row \"Net sales\", three months ended December 31 2018 (col1) / 2017 (col2); cross-check: 10-K annual minus 9M YTD = 5459.0",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "prior_year_comparative": 5213.0,
+     "published_date": "2019-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000115752319000192/a51933211ex99.htm",
+     "value": 5459.0
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "Form 10-Q (accession 0001551182-20-000127, filed 2020-04-30): Consolidated Statements of Income, row 'Net sales', three months ended 2019-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2019-01-01–2019-03-31 = 5,305.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "published_date": "2020-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000127/0001551182-20-000127-index.html",
+     "value": 5305.0
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "Form 10-Q (accession 0001551182-20-000167, filed 2020-07-29): Consolidated Statements of Income, row 'Net sales', three months ended 2019-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2019-04-01–2019-06-30 = 5,533.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "published_date": "2020-07-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000167/0001551182-20-000167-index.html",
+     "value": 5533.0
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "Form 10-Q (accession 0001551182-20-000190, filed 2020-11-03): Consolidated Statements of Income, row 'Net sales', three months ended 2019-09-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2019-07-01–2019-09-30 = 5,314.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "published_date": "2020-11-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118220000190/0001551182-20-000190-index.html",
+     "value": 5314.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "Form 10-K (accession 0001551182-22-000004, filed 2022-02-23): Consolidated Statements of Income, row 'Net sales', year ended 2019-12-31 = 21,390 minus nine months ended 2019-09-30 = 16,152 (Form 10-Q accession 0001551182-19-000183) = 5,238; XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; cross-check: Q4 2020 earnings release (8-K Ex.99, a52371791ex99.htm) 'Business segment information' Total net sales, three months ended Dec 31, 2019 = 5,238",
+     "method": "annual_minus_9m",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "published_date": "2022-02-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000004/0001551182-22-000004-index.html",
+     "value": 5238.0
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "Form 10-Q (accession 0001551182-21-000120, filed 2021-05-04): Consolidated Statements of Income, row 'Net sales', three months ended 2020-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2020-01-01–2020-03-31 = 4,789.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "published_date": "2021-05-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000120/0001551182-21-000120-index.html",
+     "value": 4789.0
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "Form 10-Q (accession 0001551182-21-000161, filed 2021-08-03): Consolidated Statements of Income, row 'Net sales', three months ended 2020-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2020-04-01–2020-06-30 = 3,856.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "published_date": "2021-08-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000161/0001551182-21-000161-index.html",
+     "value": 3856.0
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "Form 10-Q (accession 0001551182-21-000184, filed 2021-11-02): Consolidated Statements of Income, row 'Net sales', three months ended 2020-09-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2020-07-01–2020-09-30 = 4,526.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "published_date": "2021-11-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118221000184/0001551182-21-000184-index.html",
+     "value": 4526.0
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "Form 10-K (accession 0001551182-23-000004, filed 2023-02-23): Consolidated Statements of Income, row 'Net sales', year ended 2020-12-31 = 17,858 minus nine months ended 2020-09-30 = 13,171 (Form 10-Q accession 0001551182-20-000190) = 4,687; XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; cross-check: Q4 2020 earnings release (a52371791ex99.htm) Total net sales three months ended Dec 31, 2020 = 4,687",
+     "method": "annual_minus_9m",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "published_date": "2023-02-23",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000004/0001551182-23-000004-index.html",
+     "value": 4687.0
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "Form 10-Q (accession 0001551182-22-000008, filed 2022-05-03): Consolidated Statements of Income, row 'Net sales', three months ended 2021-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2021-01-01–2021-03-31 = 4,692.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "published_date": "2022-05-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000008/0001551182-22-000008-index.html",
+     "value": 4692.0
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "Form 10-Q (accession 0001551182-22-000020, filed 2022-08-02): Consolidated Statements of Income, row 'Net sales', three months ended 2021-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2021-04-01–2021-06-30 = 5,215.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "published_date": "2022-08-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000020/0001551182-22-000020-index.html",
+     "value": 5215.0
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "Form 10-Q (accession 0001551182-22-000024, filed 2022-11-01): Consolidated Statements of Income, row 'Net sales', three months ended 2021-09-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2021-07-01–2021-09-30 = 4,923.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "published_date": "2022-11-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118222000024/0001551182-22-000024-index.html",
+     "value": 4923.0
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "Form 10-K (accession 0001551182-24-000006, filed 2024-02-29): Consolidated Statements of Income, row 'Net sales', year ended 2021-12-31 = 19,628 minus nine months ended 2021-09-30 = 14,830 (Form 10-Q accession 0001551182-21-000184) = 4,798; XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+     "method": "annual_minus_9m",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "published_date": "2024-02-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000006/0001551182-24-000006-index.html",
+     "value": 4798.0
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "Form 10-Q (accession 0001551182-23-000008, filed 2023-05-02): Consolidated Statements of Income, row 'Net sales', three months ended 2022-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2022-01-01–2022-03-31 = 4,843.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "published_date": "2023-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000008/0001551182-23-000008-index.html",
+     "value": 4843.0
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "Form 10-Q (accession 0001551182-23-000024, filed 2023-08-01): Consolidated Statements of Income, row 'Net sales', three months ended 2022-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2022-04-01–2022-06-30 = 5,212.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "published_date": "2023-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000024/0001551182-23-000024-index.html",
+     "value": 5212.0
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "Form 10-Q (accession 0001551182-23-000029, filed 2023-10-31): Consolidated Statements of Income, row 'Net sales', three months ended 2022-09-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2022-07-01–2022-09-30 = 5,313.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "published_date": "2023-10-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118223000029/0001551182-23-000029-index.html",
+     "value": 5313.0
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "Form 10-K (accession 0001551182-25-000006, filed 2025-02-27): Consolidated Statements of Income, row 'Net sales', year ended 2022-12-31 = 20,752 minus nine months ended 2022-09-30 = 15,368 (Form 10-Q accession 0001551182-22-000024) = 5,384; XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+     "method": "annual_minus_9m",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2025-02-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000006/0001551182-25-000006-index.html",
+     "value": 5384.0
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "Form 10-Q (accession 0001551182-24-000013, filed 2024-04-30): Consolidated Statements of Income, row 'Net sales', three months ended 2023-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2023-01-01–2023-03-31 = 5,483.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2024-04-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000013/0001551182-24-000013-index.html",
+     "value": 5483.0
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "Form 10-Q (accession 0001551182-24-000035, filed 2024-08-01): Consolidated Statements of Income, row 'Net sales', three months ended 2023-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2023-04-01–2023-06-30 = 5,866.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2024-08-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000035/0001551182-24-000035-index.html",
+     "value": 5866.0
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "Form 10-Q (accession 0001551182-24-000041, filed 2024-10-31): Consolidated Statements of Income, row 'Net sales', three months ended 2023-09-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2023-07-01–2023-09-30 = 5,880.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2024-10-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118224000041/0001551182-24-000041-index.html",
+     "value": 5880.0
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "Form 10-K (accession 0001551182-26-000007, filed 2026-02-26): Consolidated Statements of Income, row 'Net sales', year ended 2023-12-31 = 23,196 minus nine months ended 2023-09-30 = 17,229 (Form 10-Q accession 0001551182-23-000029) = 5,967; XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; cross-check: Q4 2024 earnings release (etn12312024exhibit99.htm) Total net sales three months ended Dec 31, 2023 = 5,967",
+     "method": "annual_minus_9m",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2026-02-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/0001551182-26-000007-index.html",
+     "value": 5967.0
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "Form 10-Q (accession 0001551182-25-000014, filed 2025-05-02): Consolidated Statements of Income, row 'Net sales', three months ended 2024-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2024-01-01–2024-03-31 = 5,943.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "published_date": "2025-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000014/0001551182-25-000014-index.html",
+     "value": 5943.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "Form 10-Q (accession 0001551182-25-000028, filed 2025-08-05): Consolidated Statements of Income, row 'Net sales', three months ended 2024-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2024-04-01–2024-06-30 = 6,350.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "published_date": "2025-08-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000028/0001551182-25-000028-index.html",
+     "value": 6350.0
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "Form 10-Q (accession 0001551182-25-000036, filed 2025-11-04): Consolidated Statements of Income, row 'Net sales', three months ended 2024-09-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2024-07-01–2024-09-30 = 6,345.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2025-11-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000036/0001551182-25-000036-index.html",
+     "value": 6345.0
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "Form 10-K (accession 0001551182-26-000007, filed 2026-02-26): Consolidated Statements of Income, row 'Net sales', year ended 2024-12-31 = 24,878 minus nine months ended 2024-09-30 = 18,638 (Form 10-Q accession 0001551182-24-000041) = 6,240; XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; cross-check: Q4 2024/Q4 2025 earnings releases Total net sales three months ended Dec 31, 2024 = 6,240",
+     "method": "annual_minus_9m",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2026-02-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/0001551182-26-000007-index.html",
+     "value": 6240.0
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "Form 10-Q (accession 0001551182-26-000013, filed 2026-05-05): Consolidated Statements of Income, row 'Net sales', three months ended 2025-03-31 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2025-01-01–2025-03-31 = 6,377.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "published_date": "2026-05-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000013/0001551182-26-000013-index.html",
+     "value": 6377.0
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "Form 10-Q (accession 0001551182-26-000030, filed 2026-07-31): Consolidated Statements of Income, row 'Net sales', three months ended 2025-06-30 (prior-year comparative column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2025-04-01–2025-06-30 = 7,028.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2026-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/0001551182-26-000030-index.html",
+     "value": 7028.0
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "Form 10-Q (accession 0001551182-25-000036, filed 2025-11-04): Consolidated Statements of Income, row 'Net sales', three months ended 2025-09-30 (current-period column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2025-07-01–2025-09-30 = 6,988.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2025-11-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000036/0001551182-25-000036-index.html",
+     "value": 6988.0
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Form 10-K (accession 0001551182-26-000007, filed 2026-02-26): Consolidated Statements of Income, row 'Net sales', year ended 2025-12-31 = 27,448 minus nine months ended 2025-09-30 = 20,393 (Form 10-Q accession 0001551182-25-000036) = 7,055; XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; cross-check: Q4 2025 earnings release (etn12312025exhibit99.htm) Total net sales three months ended Dec 31, 2025 = 7,055",
+     "method": "annual_minus_9m",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-02-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/0001551182-26-000007-index.html",
+     "value": 7055.0
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "Form 10-Q (accession 0001551182-26-000013, filed 2026-05-05): Consolidated Statements of Income, row 'Net sales', three months ended 2026-03-31 (current-period column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2026-01-01–2026-03-31 = 7,451.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000013/0001551182-26-000013-index.html",
+     "value": 7451.0
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "Form 10-Q (accession 0001551182-26-000030, filed 2026-07-31): Consolidated Statements of Income, row 'Net sales', three months ended 2026-06-30 (current-period column); XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 3-month context 2026-04-01–2026-06-30 = 8,531.000",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/0001551182-26-000030-index.html",
+     "value": 8531.0
+    }
+   ],
+   "primary": false,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "ETN US",
+ "unit": "million"
+}

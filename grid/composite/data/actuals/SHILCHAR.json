@@ -1,0 +1,869 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "SHILCHAR",
+ "grid_node": "GRID_SHILCHAR",
+ "name": "Shilchar Technologies Ltd",
+ "ticker": "SHILCTECH IN",
+ "listed": true,
+ "currency": "INR",
+ "unit": "million",
+ "accounting_basis": "Ind AS from FY2018 (Apr-2017); Indian GAAP before",
+ "fiscal_year_end_month": 3,
+ "quarter_calendar": "calendar quarters; Indian fiscal year Apr-Mar labelled by the year in which it ends (FY2026Q1 = Apr-Jun 2025)",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "별도 매출(단일 부문: 변압기·부품)",
+   "scope": "standalone",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2015-04-01",
+     "period_end": "2015-06-30",
+     "value": 286.15,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2015/8/E30D9D88_53E4_4A8B_B178_EA22D82C6C05_150404.pdf",
+     "locator": "BSE filing 2015-08-14 (2015-08-14_E30D9D88_53E4_4A8B_B178_EA22D82C6C05_150404.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-06-30'; printed 2861.50 (INR lakh)",
+     "published_date": "2015-08-14",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 286.15,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=86.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2015-07-01",
+     "period_end": "2015-09-30",
+     "value": 241.78,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=87.00&RType=",
+     "locator": "BSE results record of the Reg-33 filing, 'Net Sales/Revenue From Operations' (Rs. million); original PDF filing 2015-10-28 (2015-10-28_256BA30D_DEA1_435B_9025_09FDF5CBE102_151424.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2015-10-28",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "bse_results_db_inr_mn": 241.78,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=87.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2015-10-01",
+     "period_end": "2015-12-31",
+     "value": 203.77,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=88.00&RType=",
+     "locator": "BSE results record of the Reg-33 filing, 'Net Sales/Revenue From Operations' (Rs. million); original PDF filing 2016-01-30 (2016-01-30_C4A40F23_9B21_4933_9FEF_5605EF17476B_190513.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2016-01-30",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "bse_results_db_inr_mn": 203.77,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=88.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 284.736,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/5CB6F5BC_3210_40D4_AA2A_41EE7B611D67_151001.pdf",
+     "locator": "BSE filing 2016-08-13 (2016-08-13_5CB6F5BC_3210_40D4_AA2A_41EE7B611D67_151001.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2016-03-31; printed 2847.36 (INR lakh). Original filing 2016-04-25 (2016-04-25_BE6AC025_AAA4_47B6_9D88_BE6B5EF8337E_180819.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2016-04-25",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 284.74,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=89.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 256.995,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/5CB6F5BC_3210_40D4_AA2A_41EE7B611D67_151001.pdf",
+     "locator": "BSE filing 2016-08-13 (2016-08-13_5CB6F5BC_3210_40D4_AA2A_41EE7B611D67_151001.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-06-30'; printed 2569.95 (INR lakh)",
+     "published_date": "2016-08-13",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 286.15,
+     "cross_check": {
+      "bse_results_db_inr_mn": 257.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=90.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 273.018,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/2/3832CE62_8C57_4314_ADBA_67BD61E1AE6B_173151.pdf",
+     "locator": "BSE filing 2017-02-04 (2017-02-04_3832CE62_8C57_4314_ADBA_67BD61E1AE6B_173151.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-09-30'; printed 2,730.18 (INR lakh)",
+     "published_date": "2017-02-04",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 273.02,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=91.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 233.151,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/6/46401d15-6398-4562-9f2a-38a60c727a74.pdf",
+     "locator": "BSE filing 2017-06-01 (2017-06-01_46401d15-6398-4562-9f2a-38a60c727a74.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2016-12-31; printed 2,331.51 (INR lakh). Original filing 2017-02-04 (2017-02-04_3832CE62_8C57_4314_ADBA_67BD61E1AE6B_173151.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2017-02-04",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 233.15,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=92.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 328.713,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/6/46401d15-6398-4562-9f2a-38a60c727a74.pdf",
+     "locator": "BSE filing 2017-06-01 (2017-06-01_46401d15-6398-4562-9f2a-38a60c727a74.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-03-31'; printed 3,287.13 (INR lakh)",
+     "published_date": "2017-06-01",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 284.736,
+     "cross_check": {
+      "bse_results_db_inr_mn": 328.71,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=93.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 134.519,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/11/50f30407-106b-4850-8229-e267e78c2c26.pdf",
+     "locator": "BSE filing 2017-11-14 (2017-11-14_50f30407-106b-4850-8229-e267e78c2c26.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-09-30'; printed 1,345.19 (INR lakh)",
+     "published_date": "2017-11-14",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 134.52,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=95.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 204.704,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/5/c18fedbe-1baa-46d2-857d-f70b00e4c6e3.pdf",
+     "locator": "BSE filing 2018-05-28 (2018-05-28_c18fedbe-1baa-46d2-857d-f70b00e4c6e3.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-12-31'; printed 2,047.04 (INR lakh; read visually; FY2018 check 2,856.89+1,345.19+2,047.04+2,551.38 = 8,800.50)",
+     "published_date": "2018-05-28",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 204.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=96.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 255.138,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/698b1e4a-da03-4413-a7c1-3e2e5109fda6.pdf",
+     "locator": "BSE filing 2018-08-13 (2018-08-13_698b1e4a-da03-4413-a7c1-3e2e5109fda6.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2018-03-31; printed 2,551.38 (INR lakh). Original filing 2018-05-28 (2018-05-28_c18fedbe-1baa-46d2-857d-f70b00e4c6e3.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2018-05-28",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 255.14,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=97.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 200.329,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/11/f8eb5454-ac4d-4508-8c70-c2bd8045b231.pdf",
+     "locator": "BSE filing 2018-11-01 (2018-11-01_f8eb5454-ac4d-4508-8c70-c2bd8045b231.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2018-06-30; printed 2,003.29 (INR lakh). Original filing 2018-08-13 (2018-08-13_698b1e4a-da03-4413-a7c1-3e2e5109fda6.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2018-08-13",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 200.33,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=98.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 345.895,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/11/f8eb5454-ac4d-4508-8c70-c2bd8045b231.pdf",
+     "locator": "BSE filing 2018-11-01 (2018-11-01_f8eb5454-ac4d-4508-8c70-c2bd8045b231.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-09-30'; printed 3,458.95 (INR lakh)",
+     "published_date": "2018-11-01",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 134.519,
+     "cross_check": {
+      "bse_results_db_inr_mn": 345.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=99.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 341.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0ae44855-20fc-4d95-bfec-924bfcac912f.pdf",
+     "locator": "BSE filing 2019-05-25 (2019-05-25_0ae44855-20fc-4d95-bfec-924bfcac912f.pdf) p.5: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2018-12-31; printed 3,412.00) (INR lakh). Original filing 2019-02-13 (2019-02-13_573f204f-4441-4837-a0f4-d351783b87ef.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2019-02-13",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 341.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=100.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 296.427,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0ae44855-20fc-4d95-bfec-924bfcac912f.pdf",
+     "locator": "BSE filing 2019-05-25 (2019-05-25_0ae44855-20fc-4d95-bfec-924bfcac912f.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-03-31'; printed 2,964.27) (INR lakh)",
+     "published_date": "2019-05-25",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 255.138,
+     "cross_check": {
+      "bse_results_db_inr_mn": 296.43,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=101.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 181.67,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4eb12eff-4785-46e1-b114-22cc9985ac51.pdf",
+     "locator": "BSE filing 2019-08-10 (2019-08-10_4eb12eff-4785-46e1-b114-22cc9985ac51.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-06-30'; printed 1,816.70 (INR lakh)",
+     "published_date": "2019-08-10",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 181.67,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=102.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 171.282,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/62f4f043-e13a-48a0-a71b-8d3031298749.pdf",
+     "locator": "BSE filing 2019-11-09 (2019-11-09_62f4f043-e13a-48a0-a71b-8d3031298749.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-09-30'; printed 1,712,82 (INR lakh)",
+     "published_date": "2019-11-09",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 345.895,
+     "cross_check": {
+      "bse_results_db_inr_mn": 171.28,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=103.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 187.737,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f5ff2fc9-1c1f-4454-879c-410422c2636c.pdf",
+     "locator": "BSE filing 2020-02-08 (2020-02-08_f5ff2fc9-1c1f-4454-879c-410422c2636c.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-12-31'; printed 1,877.37 (INR lakh)",
+     "published_date": "2020-02-08",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 341.2,
+     "cross_check": {
+      "bse_results_db_inr_mn": 187.74,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=104.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 172.068,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1e894ab7-e2af-4179-9b64-f321cacc11b3.pdf",
+     "locator": "BSE filing 2020-06-27 (2020-06-27_1e894ab7-e2af-4179-9b64-f321cacc11b3.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-03-31'; printed 1,720.68 (INR lakh)",
+     "published_date": "2020-06-27",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 296.427,
+     "cross_check": {
+      "bse_results_db_inr_mn": 172.07,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=105.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 142.154,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/66f29a94-1369-4c7a-869e-48fef6c8a2fc.pdf",
+     "locator": "BSE filing 2021-08-14 (2021-08-14_66f29a94-1369-4c7a-869e-48fef6c8a2fc.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2020-06-30; printed 1,421.54 (INR lakh). Original filing 2020-08-14 (2020-08-14_251453fc-4efb-4304-b046-493b87f1247f.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2020-08-14",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 142.15,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=106.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 363.03,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4009096a-8a02-4e4d-8ddb-bb6451ed46cb.pdf",
+     "locator": "BSE filing 2021-02-01 (2021-02-01_4009096a-8a02-4e4d-8ddb-bb6451ed46cb.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2020-09-30; printed 3,630.30 (INR lakh). Original filing 2020-10-27 (2020-10-27_126af800-7d71-43a8-b7b1-416268892490.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2020-10-27",
+     "verification": "pdf_txt_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 363.03,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=107.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 340.071,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4009096a-8a02-4e4d-8ddb-bb6451ed46cb.pdf",
+     "locator": "BSE filing 2021-02-01 (2021-02-01_4009096a-8a02-4e4d-8ddb-bb6451ed46cb.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-12-31'; printed 3,400.71) (INR lakh)",
+     "published_date": "2021-02-01",
+     "verification": "pdf_txt+exchange_structured",
+     "prior_year_comparative": 187.737,
+     "cross_check": {
+      "bse_results_db_inr_mn": 340.07,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=108.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 332.893,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a4112ecf-7ff5-423d-9844-1c29dd5c6f47.pdf",
+     "locator": "BSE filing 2021-06-04 (2021-06-04_a4112ecf-7ff5-423d-9844-1c29dd5c6f47.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-03-31'; printed 3,328.93 (INR lakh)",
+     "published_date": "2021-06-04",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 172.068,
+     "cross_check": {
+      "bse_results_db_inr_mn": 332.89,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=109.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 364.408,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/66f29a94-1369-4c7a-869e-48fef6c8a2fc.pdf",
+     "locator": "BSE filing 2021-08-14 (2021-08-14_66f29a94-1369-4c7a-869e-48fef6c8a2fc.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-06-30'; printed 3,644.08) (INR lakh)",
+     "published_date": "2021-08-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 142.154,
+     "cross_check": {
+      "bse_results_db_inr_mn": 364.41,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=110.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 322.444,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/859fa50e-2ab7-4f55-8a19-0b72748bfc78.pdf",
+     "locator": "BSE filing 2021-11-01 (2021-11-01_859fa50e-2ab7-4f55-8a19-0b72748bfc78.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 3,224.44 (INR lakh; text layer truncated; confirmed by FY2023Q2 filing 3rd column 3,224.44 and H1 FY2022 6,868.52-3,644.08)",
+     "published_date": "2021-11-01",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 322.44,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=111.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 456.664,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fd0aea0f-8dec-4d3e-927a-7b8a08bc489e.pdf",
+     "locator": "BSE filing 2022-04-30 (2022-04-30_fd0aea0f-8dec-4d3e-927a-7b8a08bc489e.pdf) p.7: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2021-12-31; printed 4,566.64) (INR lakh). Original filing 2022-01-29 (2022-01-29_5c32863a-ffa6-4c1e-8d58-b923e6eddf0d.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2022-01-29",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 456.66,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=112.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 658.305,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fd0aea0f-8dec-4d3e-927a-7b8a08bc489e.pdf",
+     "locator": "BSE filing 2022-04-30 (2022-04-30_fd0aea0f-8dec-4d3e-927a-7b8a08bc489e.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-03-31'; printed 6,583.05) (INR lakh)",
+     "published_date": "2022-04-30",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 332.893,
+     "cross_check": {
+      "bse_results_db_inr_mn": 658.31,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=113.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 572.467,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b5017a22-077d-4661-8035-f4e766179e55.pdf",
+     "locator": "BSE filing 2022-08-08 (2022-08-08_b5017a22-077d-4661-8035-f4e766179e55.pdf) p.4: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2022-06-30); printed 5,724.67 (INR lakh); 3rd column (same quarter previous year) printed 3,644.08",
+     "published_date": "2022-08-08",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 572.47,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=114.00&RType="
+     },
+     "prior_year_comparative": 364.408
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 597.298,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/002977ff-5460-43f4-a607-b451a3118889.pdf",
+     "locator": "BSE filing 2022-10-20 (2022-10-20_002977ff-5460-43f4-a607-b451a3118889.pdf) p.4: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2022-09-30); printed 5,972.98 (INR lakh); 3rd column (same quarter previous year) printed 3,224.44",
+     "published_date": "2022-10-20",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 597.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=115.00&RType="
+     },
+     "prior_year_comparative": 322.444
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 682.746,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d638c644-655d-401e-8e9e-524cf1270190.pdf",
+     "locator": "BSE filing 2023-01-30 (2023-01-30_d638c644-655d-401e-8e9e-524cf1270190.pdf) p.4: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2022-12-31); printed 6,827.46 (INR lakh); 3rd column (same quarter previous year) printed 4,566.64",
+     "published_date": "2023-01-30",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 682.75,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=116.00&RType="
+     },
+     "prior_year_comparative": 456.664
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 949.902,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d83b02ce-7ff0-4ce9-810a-0e6b77331b39.pdf",
+     "locator": "BSE filing 2023-07-29 (2023-07-29_d83b02ce-7ff0-4ce9-810a-0e6b77331b39.pdf) p.4: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2023-03-31; printed 9,499.02 (INR lakh). Original filing 2023-04-29 (2023-04-29_42f60dd4-db62-4d74-a833-48a5a4f68817.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2023-04-29",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 949.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=117.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 672.151,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d83b02ce-7ff0-4ce9-810a-0e6b77331b39.pdf",
+     "locator": "BSE filing 2023-07-29 (2023-07-29_d83b02ce-7ff0-4ce9-810a-0e6b77331b39.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-06-30'; printed 6,721.51 (INR lakh)",
+     "published_date": "2023-07-29",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 672.15,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=118.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 1062.748,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/def0050b-fcae-4590-91f9-927bdf6268dd.pdf",
+     "locator": "BSE filing 2023-10-21 (2023-10-21_def0050b-fcae-4590-91f9-927bdf6268dd.pdf) p.4: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2023-09-30); printed 10,627.48 (INR lakh); 3rd column (same quarter previous year) printed 5,972.98",
+     "published_date": "2023-10-21",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1062.75,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=119.00&RType="
+     },
+     "prior_year_comparative": 597.298
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 1179.613,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/573b8394-11cc-4864-b134-3abbea434366.pdf",
+     "locator": "BSE filing 2025-01-30 (2025-01-30_573b8394-11cc-4864-b134-3abbea434366.pdf) p.4: standalone Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2023-12-31; printed 11,796.13 (INR lakh). Original filing 2024-02-05 (2024-02-05_749f5b87-a31b-42be-a815-37e10237348b.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2024-02-05",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1179.61,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=120.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 1054.27,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3242d121-4ff5-4aac-9daf-554ff6a13b3d.pdf",
+     "locator": "BSE filing 2024-08-12 (2024-08-12_3242d121-4ff5-4aac-9daf-554ff6a13b3d.pdf) p.4: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2024-03-31; printed 10,542.70 (INR lakh). Original filing 2024-04-30 (2024-04-30_51fddf53-dd3a-43a8-905f-9c35273cf238.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2024-04-30",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1054.27,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=121.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 1069.884,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3242d121-4ff5-4aac-9daf-554ff6a13b3d.pdf",
+     "locator": "BSE filing 2024-08-12 (2024-08-12_3242d121-4ff5-4aac-9daf-554ff6a13b3d.pdf) p.4: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2024-06-30); printed 10,698.84 (INR lakh); 3rd column (same quarter previous year) printed 6,721.51",
+     "published_date": "2024-08-12",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1069.88,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=122.00&RType="
+     },
+     "prior_year_comparative": 672.151
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 1305.605,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/573b8394-11cc-4864-b134-3abbea434366.pdf",
+     "locator": "BSE filing 2025-01-30 (2025-01-30_573b8394-11cc-4864-b134-3abbea434366.pdf) p.4: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2024-09-30; printed 13,056.05 (INR lakh). Original filing 2024-10-24 (2024-10-24_da0c6107-539e-463a-a8ca-81120f3509ef.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2024-10-24",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1305.61,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=123.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 1537.361,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cf162130-3236-4b5c-99fe-bd83e3c9424e.pdf",
+     "locator": "BSE filing 2026-01-31 (2026-01-31_cf162130-3236-4b5c-99fe-bd83e3c9424e.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2024-12-31; printed 15,373.61 (INR lakh). Original filing 2025-01-30 (2025-01-30_573b8394-11cc-4864-b134-3abbea434366.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2025-01-30",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1537.36,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=124.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 2318.626,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9e31c720-c56f-4d44-92df-6ac7c01f3611.pdf",
+     "locator": "BSE filing 2025-04-21 (2025-04-21_9e31c720-c56f-4d44-92df-6ac7c01f3611.pdf) p.8: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2025-03-31); printed 23,186.26 (INR lakh); 3rd column (same quarter previous year) printed 10,542.70",
+     "published_date": "2025-04-21",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 2318.63,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=125.00&RType="
+     },
+     "prior_year_comparative": 1054.27
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 1587.488,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/72a3367b-0937-451f-8c08-917327316bd4.pdf",
+     "locator": "BSE filing 2025-08-12 (2025-08-12_72a3367b-0937-451f-8c08-917327316bd4.pdf) p.4: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2025-06-30); printed 15,874.88 (INR lakh); 3rd column (same quarter previous year) printed 10,698.84",
+     "published_date": "2025-08-12",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1587.49,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=126.00&RType="
+     },
+     "prior_year_comparative": 1069.884
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 1712.82,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e4c69ebe-fa65-45ae-9e16-07a3041b55e5.pdf",
+     "locator": "BSE filing 2025-10-17 (2025-10-17_e4c69ebe-fa65-45ae-9e16-07a3041b55e5.pdf) p.3: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2025-09-30); printed 17,128.20 (INR lakh); 3rd column (same quarter previous year) printed 13,056.05",
+     "published_date": "2025-10-17",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1712.82,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=127.00&RType="
+     },
+     "prior_year_comparative": 1305.605
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 1702.594,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cf162130-3236-4b5c-99fe-bd83e3c9424e.pdf",
+     "locator": "BSE filing 2026-01-31 (2026-01-31_cf162130-3236-4b5c-99fe-bd83e3c9424e.pdf) p.3: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2025-12-31); printed 17,025.94 (INR lakh); 3rd column (same quarter previous year) printed 15,373.61",
+     "published_date": "2026-01-31",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1702.59,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=128.00&RType="
+     },
+     "prior_year_comparative": 1537.361
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 1516.497,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9b43cc47-26c0-41cd-afe7-9afa17952f78.pdf",
+     "locator": "BSE filing 2026-05-05 (2026-05-05_9b43cc47-26c0-41cd-afe7-9afa17952f78.pdf) p.8: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2026-03-31); printed 15,164.97 (INR lakh); 3rd column (same quarter previous year) printed 23,186.26",
+     "published_date": "2026-05-05",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1516.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=129.00&RType="
+     },
+     "prior_year_comparative": 2318.626
+    },
+    {
+     "fiscal_key": "FY2027Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 1346.071,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9ce02c4e-40e6-4ec2-9afe-77fa7c7d3a4b.pdf",
+     "locator": "BSE filing 2026-08-11 (2026-08-11_9ce02c4e-40e6-4ec2-9afe-77fa7c7d3a4b.pdf) p.4: standalone Reg-33 results statement (scanned image, read visually), row 'Revenue from operations', 1st column (quarter ended 2026-06-30); printed 13,460.71 (INR lakh); 3rd column (same quarter previous year) printed 15,874.88",
+     "published_date": "2026-08-11",
+     "verification": "pdf_visual+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1346.07,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=531201&Company=Shilchar-Technologies-Ltd&qtr=130.00&RType="
+     },
+     "prior_year_comparative": 1587.488
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2017-04-01",
+   "type": "restatement",
+   "note": "Ind AS adoption from FY2018; FY2016-FY2017 quarters are IGAAP net-of-excise as originally filed",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/698b1e4a-da03-4413-a7c1-3e2e5109fda6.pdf"
+  },
+  {
+   "date": "2017-07-01",
+   "type": "restatement",
+   "note": "GST; FY2018Q1 omitted (excise-inclusive only)",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/698b1e4a-da03-4413-a7c1-3e2e5109fda6.pdf"
+  },
+  {
+   "date": "2024-08-01",
+   "type": "capacity",
+   "note": "Gavasad expansion (+3,500 MVA) to 7,500 MVA p.a. (investor presentations); Gavasad Expansion #3 (+6,500 MVA, 220 kV class) due Apr-2027",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1898a3e0-dddd-4c77-8f54-08d9cab92a13.pdf"
+  }
+ ],
+ "profile": {
+  "products": "Power transformers up to 50 MVA / 132 kV class (220 kV class from Gavasad Expansion #3, Apr-2027), distribution transformers up to 33 kV, inverter-duty transformers for solar (up to 33 kV), wind generator transformers, hydro transformers (up to 132 kV), furnace, converter-duty, pad-mounted, earthing and isolation transformers. Single segment 'Transformers & Parts'. Capacity 7,500 MVA (FY27), expanding to 14,000 MVA. Source: Investor Presentation Aug-2026 slides 13-19; AR FY2025-26.",
+  "plants": [
+   {
+    "country": "IN",
+    "city": "Gavasad (Padra-Jambusar Hwy), Vadodara, Gujarat",
+    "products": "Power, distribution, inverter-duty and special transformers; 7,500 MVA p.a., +6,500 MVA under construction",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1898a3e0-dddd-4c77-8f54-08d9cab92a13.pdf"
+   },
+   {
+    "country": "IN",
+    "city": "Bil, Vadodara, Gujarat",
+    "products": "Registered office and older 'Bil plant' (named on 2022 results letterhead); current presentations describe Gavasad as the manufacturing base",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b5017a22-077d-4661-8035-f4e766179e55.pdf"
+   }
+  ],
+  "end_markets": "Solar/wind/hydro developers and EPCs, utilities, steel/cement/sugar/oil & gas industry. Large export share, USA the key export market (also Canada, Chile, Middle East, Africa, SE Asia). Export share of revenue (Investor Presentation Aug-2026 slide 19): FY22 26%, FY23 56%, FY24 52%, FY25 43%, FY26 48%. AR FY2025-26 note 39: sale of products within India INR 33,701.62 lakh vs outside India INR 31,492.37 lakh (FY25: 35,220.17 / 27,094.59).",
+  "export_share_annual": [
+   {
+    "fy": "FY2022",
+    "export_pct": 26,
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1898a3e0-dddd-4c77-8f54-08d9cab92a13.pdf",
+    "locator": "Investor Presentation 2026-08-12, slide 19 chart \"Meaningful Export-Mix\""
+   },
+   {
+    "fy": "FY2023",
+    "export_pct": 56,
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1898a3e0-dddd-4c77-8f54-08d9cab92a13.pdf",
+    "locator": "same chart"
+   },
+   {
+    "fy": "FY2024",
+    "export_pct": 52,
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1898a3e0-dddd-4c77-8f54-08d9cab92a13.pdf",
+    "locator": "same chart"
+   },
+   {
+    "fy": "FY2025",
+    "export_pct": 43,
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1898a3e0-dddd-4c77-8f54-08d9cab92a13.pdf",
+    "locator": "same chart; AR FY26 note 39: outside India 27,094.59 lakh"
+   },
+   {
+    "fy": "FY2026",
+    "export_pct": 48,
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1898a3e0-dddd-4c77-8f54-08d9cab92a13.pdf",
+    "locator": "same chart; AR FY26 note 39: outside India 31,492.37 lakh of 65,194 lakh product sales"
+   }
+  ],
+  "export_routes": [
+   "IN->US",
+   "IN->CA",
+   "IN->Middle East",
+   "IN->Africa",
+   "IN->SE Asia"
+  ],
+  "hs_candidates": [
+   "850422",
+   "850421",
+   "850423",
+   "850431"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_850422_p699",
+    "why": "US imports from India of 650-10,000 kVA liquid-dielectric transformers — the band of Shilchar inverter-duty/pad-mounted units shipped to US solar & BESS projects",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_8504dist_p699",
+    "why": "US imports from India of liquid-filled distribution transformers <=10 MVA (850421+850422) — Shilchar US export channel",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "in_exp_850422_p842",
+    "why": "India-reported exports of 650-10,000 kVA transformers to the US (mirror of the above)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "in_exp_850422_p0",
+    "why": "India exports of 650-10,000 kVA transformers to all markets (US + Middle East + Africa)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p699",
+    "why": "US imports of >10 MVA transformers from India — Shilchar ships power transformers up to 50 MVA",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "in_exp_850421_p842",
+    "why": "India exports of <=650 kVA transformers to the US",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "india_iip_27",
+    "why": "Domestic half of revenue follows Indian electrical-equipment/renewable build-out",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_PCU335311335311",
+    "why": "US power/distribution transformer PPI — price of Shilchar US exports",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eia_860m_solar_battery_additions_us",
+    "why": "WISHLIST: EIA-860M monthly US utility-scale solar+battery capacity additions (MW) — end-demand for inverter-duty transformers",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "FY2018Q1 (2017-06-30): Q1 FY2018 was published (2017-08-11) as Ind AS revenue including excise duty (printed 2,856.89 lakh with excise duty on sale of goods 47.07 lakh as an expense line, per the Q1 FY2019 filing 2018-08-13 comparative); no company-printed excise-exclusive revenue for this quarter -> omitted to avoid mixing excise-inclusive and GST-net bases"
+ ],
+ "collection_notes": [
+  "fiscal_key 규칙: 인도 회계연도(4월~3월)를 '끝나는 해'로 표기 — FY2026Q1 = 2025-04-01~2025-06-30, FY2026Q4 = 2026-01-01~2026-03-31. period_end 는 원문 결산일(달력 분기말).",
+  "단위: INR million. 원문은 INR lakh(=0.1 million) 또는 crore(=10 million) 로 인쇄 — 배율 환산만 했고 (lakh×0.1, crore×10, XBRL INR÷1e6) 통화 환산·추정 없음. printed 값은 locator 에 원문 그대로 남김.",
+  "인도 Reg-33 결산의 1~3월(4분기) 3개월 칸은 '연간 감사치 − 12월 누계 공시치' 로 회사가 산출·인쇄한 balancing figure 이다. 인쇄된 3개월 칸을 그대로 쓰므로 method=direct_reported_quarter.",
+  "검증: 모든 분기 값은 (1) BSE 결과 DB(Corp_detailedResult / 연결 API, Rs. million) (2) NSE XBRL·NSE 결과 레코드 중 가용한 거래소 구조화 공시와 대조했고, (3) BSE 원문 PDF(텍스트층·pdfplumber·tesseract OCR)에서 같은 숫자를 찾으면 그 PDF를 source_url 로 둔다(verification 필드). PDF 셀을 읽지 못한 분기는 거래소 구조화 공시(XBRL/NSE 레코드/BSE DB)를 source_url 로 둔다(CONTRACT §0-1 예외).",
+  "2017-07-01 GST 도입: 그 이전 매출(IGAAP 'Net sales (net of excise duty)' 또는 Ind AS 총액)은 물품세 포함 여부가 다르다. 2017-06 분기는 회사가 '물품세 제외 매출'을 인쇄한 경우에만 그 값을 쓰고, 아니면 비운다. FY2018Q1~FY2019Q1 공시의 전년동기 비교칸(Ind AS 재작성·물품세 포함)은 prior_year_comparative 로 싣지 않는다.",
+  "FY2016Q1: PY column 2654.77 != prior point None (kind=ocr, excise_window=False) -> not stored",
+  "FY2016Q2: value from exchange structured filing only (bse_db); PDF cell not machine-verified",
+  "FY2016Q3: value from exchange structured filing only (bse_db); PDF cell not machine-verified",
+  "FY2018Q2: PY column 7828.88 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2018Q3: PY column 880050.0 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2020Q1: PY column 41838.51 != prior point 200.33 (kind=ocr, excise_window=False) -> not stored",
+  "FY2022Q2: PY column 3644083630.3 deviates >2% from prior point 363.03 -> not stored",
+  "FY2024Q1: PY column 3724.67 != prior point 572.47 (kind=ocr, excise_window=False) -> not stored",
+  "범위: 연결 결산 공시 없음(BSE 결과 목록 standalone 만; NSE 미상장) — 별도(standalone)=회사 전체. AR FY26 note 39: \"only one segment i.e. Transformers & Parts\" → primary_target=revenue_total.",
+  "수출 비중: 분기 결산서에는 인쇄되지 않음. 연간 수출 비중(IR 2026-08 slide 19: FY22 26%·FY23 56%·FY24 52%·FY25 43%·FY26 48%)과 AR FY26 지역별 매출(국내 33,701.62 / 해외 31,492.37 lakh)을 profile.export_share_annual 에 기록.",
+  "orders: 분기 수주액 수치 공시 없음(IR 에 정성적 코멘트·수주잔고 약 INR 300 cr 수준만) — orders_segment 미작성.",
+  "원문: 2022-2026 결산 PDF 의 재무표 페이지가 이미지 — tesseract OCR 로 읽고 BSE DB 값과 일치 확인.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2017Q2-Q3,FY2018Q2-Q4,FY2019Q1-Q3,FY2020Q1-Q4,FY2021Q2-Q4,FY2022Q1-Q4,FY2023Q1-Q4,FY2024Q1-Q3,FY2025Q1-Q4,FY2026Q3-Q4,FY2027Q1 against BSE PDFs (text layer, tesseract, visual incl. rotated pages) and annual totals; fixed 2: FY2018Q3 204.7 -> 204.704, FY2022Q2 322.44 -> 322.444 (truncated reads). The large YoY swings (FY2018Q2 134.5, FY2025Q4 2,318.6, FY2026Q4 1,516.5) are as printed."
+ ]
+}

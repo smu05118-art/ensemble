@@ -1,0 +1,341 @@
+{
+ "accounting_basis": null,
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "원문 사본: data/raw/actuals/SGB_SMIT/ (그룹 브로슈어 2023-01 PDF, SGB-USA 개요 2022-10 PDF, 소재지·연혁 페이지 텍스트, 2025~2026 보도자료, OEP 2017 보도자료).",
+  "2025년 OEP 매각 절차 불발 후 컨티뉴에이션 펀드 추진 보도(Mergermarket/ION Analytics 등 2차 자료) — 1차 원문 미확인이라 소유 변경으로 기록하지 않음.",
+  "프록시 경로는 공장·제품 근거로만 사전등록(상관 미확인). NL·RO·MY 수출과 Destatis 분기 생산통계는 수집기에 없어 wishlist.",
+  "verify 2026-09-25: checked profile claims (no targets — private): Oct-2022 SGB-USA deck p.2 ($1.1B 2021 sales, $200M dry, >3,600 staff, 12 plants/7 dry — OK), p.7 OTC (5–100 MVA, new ≤30 MVA/138 kV — OK), p.8 Q2-2023 plan, Dec-2022 brochure (30 kVA–1,200 MVA, 765 kV, 14 sites incl. Power Matla — OK), locations pages Regensburg/Neumark/Nijmegen/Sibiu/Botoșani/Louisville (ratings — OK), Botoșani 2026-07-01 (EUR ~20M, production since Jul-2025, >1,300 units — OK), COMEL 2026-07-13 (closing H2 2026 — OK), Southwest Electric 2025-01-27 (OK), OEP 2017-07-18 (live), proxy_hint existence (14 collected, 5 wishlist — OK). fixed 3: 'seller BC Partners' was unsupported by the cited OEP release (BC Partners 2017-04-24 release added as source); gap claimed $1.1B (2021) was the only revenue figure — BC Partners release also prints €729M (2016); SGB-USA plant said 'since Q2 2023' but source only states a plan."
+ ],
+ "currency": null,
+ "fiscal_year_end_month": null,
+ "gaps": [
+  "전 기간: OEP 포트폴리오 비상장 — 분기 매출 미공시. 공개된 연간 매출은 단발 2건뿐: BC Partners 매각 발표(2017-04-24) \"€729 million in sales in 2016\", SGB-USA 2022-10 발표자료 \"2021 figures ... $1.1B in Sales: $200M from Dry Type\" — 통화·출처가 달라 시계열 불가 → 분기 타깃 없음, targets={}.",
+  "독일 법정 연차 재무제표(Unternehmensregister, SGB-SMIT GmbH 등)는 연 1회·지연 공시라 분기 타깃이 될 수 없어 수집하지 않음.",
+  "남아공 Power Matla 는 2022-12 브로슈어에만 있고 2026 소재지 목록에 없음 — 매각·폐쇄 여부 미확인.",
+  "2025년 OEP 컨티뉴에이션 비히클 추진은 2차 자료(Mergermarket/ION)에만 있음 — 소유 변경으로 기록하지 않음."
+ ],
+ "grid_node": "GRID_SGB_SMIT",
+ "id": "SGB_SMIT",
+ "listed": false,
+ "listing_status": "private — portfolio company of One Equity Partners (OEP) since 2017-07-18 (OEP portfolio page \"Status Current\"). No listed equity; no public quarterly reporting. Group entities file German/Dutch statutory annual accounts only.",
+ "name": "SGB-SMIT Group (SGB-SMIT GmbH, Regensburg)",
+ "primary_target": null,
+ "profile": {
+  "capacity_indicators": [
+   "\"1913 · 3.300 [employees] · 14 [sites]\" (brochure, Status Dec-2022); \">3,600 Employees ... 12 production facilities ... 7 SGB Dry type factories\" (SGB-USA deck Oct-2022)",
+   "Cast resin: \"3000+ units/year, average capacity 2.8 MVA\" (SGB-USA deck Oct-2022)",
+   "OEP 2017: \"six production sites in Germany, the Netherlands, Romania, Malaysia and the U.S.\"",
+   "\"€729 million in sales in 2016\"; \"total workforce of over 2,200 employees\" (BC Partners sale release, 2017-04-24)"
+  ],
+  "end_markets": "Utilities, TSOs/grid operators (e.g., Enexis, E.ON digital stations), power generation incl. offshore/onshore wind and solar, industry, railways, data centers, oil & gas, H2, battery storage, e-charging (brochure). Core markets Europe; US via Louisville OH/Southwest Electric and LPT exports.",
+  "export_routes": [
+   "DE->EU",
+   "DE->US",
+   "NL->world (LPT)",
+   "NL->US",
+   "RO->EU",
+   "CZ->EU",
+   "FR->EU",
+   "MY->ASEAN",
+   "MY->US (HV cast coils to SGB-USA)",
+   "US domestic",
+   "CN domestic",
+   "IN domestic",
+   "RS->EU (from H2 2026, pending)"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850423",
+   "850433",
+   "850434",
+   "850450"
+  ],
+  "owners": "One Equity Partners (private equity) since 2017-07-18 (previous owner: funds advised by BC Partners, per BC Partners release 2017-04-24). JV partner in SGB-ALFA: Electro-Alfa International (BVB: EAI).",
+  "plants": [
+   {
+    "city": "Regensburg (Starkstrom-Gerätebau GmbH, HQ)",
+    "country": "DE",
+    "products": "medium power transformers 5–150 MVA; cast resin 50 kVA–25 MVA; special transformers",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/germany-regensburg-sgb"
+   },
+   {
+    "city": "Neumark, Saxony (SBG)",
+    "country": "DE",
+    "products": "oil distribution transformers from 50 kVA; medium power 2.5–16 MVA; compact substations 160–2,500 kVA",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/germany-neumark-sbg"
+   },
+   {
+    "city": "Nijmegen (Royal SMIT Transformers B.V.)",
+    "country": "NL",
+    "products": "large power transformers >100 MVA up to 1,200 MVA; special (phase shifters, reactors); + SMIT Transformer Service",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/netherlands-nijmegen-royal-smit"
+   },
+   {
+    "city": "Sibiu (RETRASIB SRL)",
+    "country": "RO",
+    "products": "medium power 20–300 MVA; autotransformers 120–400 MVA",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/romania-sibiu-retrasib-srl"
+   },
+   {
+    "city": "Botoșani (SGB-ELECTROALFA / SGB-ALFA, JV)",
+    "country": "RO",
+    "products": "oil distribution transformers 50–1,000 kVA / 30 kV; production since Jul-2025",
+    "source_url": "https://www.sgb-smit.com/news/news-detail/inauguration-of-the-sgb-alfa-factory-in-botosani-romania"
+   },
+   {
+    "city": "Olomouc (SGB Czech Trafo s.r.o.)",
+    "country": "CZ",
+    "products": "cast-resin (cast coil) dry-type — standard industry & data center (SGB-USA deck 2022)",
+    "source_url": "https://sgbusa.com/wp-content/uploads/2022/10/SGB-USA-General-Overview-October-2022-Public.pdf"
+   },
+   {
+    "city": "Fontenay-le-Comte (BCV Technologies)",
+    "country": "FR",
+    "products": "dry-type VPI LV/MV 10 kVA–5 MVA ≤12 kV; cast resin LV ≤500 kVA & MV ≤3 MVA ≤24 kV; autotransformers; reactors",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/france-fontenay-le-comte-bcv-technologies"
+   },
+   {
+    "city": "Nilai, Negeri Sembilan (SGB MY Sdn. Bhd.; ex-AM SGB JV 1994)",
+    "country": "MY",
+    "products": "oil distribution 50–2,500 kVA; medium power 2.5–40 MVA; cast resin 50–5,000 kVA; supplies HV cast coils to SGB-USA",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/malaysia-nilai-sgb-my"
+   },
+   {
+    "city": "Sriperumbudur/Chennai (SGB Transformers India Pvt. Ltd.)",
+    "country": "IN",
+    "products": "cast resin 250–5,000 kVA (assembly with partly localized coils)",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/india-chennai-sgb-transformers-india-pvt-ltd"
+   },
+   {
+    "city": "Changzhou, Jiangsu (SGB Transformer (Changzhou) Co.)",
+    "country": "CN",
+    "products": "cast-resin dry-type (special industry, data center, offshore wind per 2022 deck); ISO certificates also name a Yancheng production site",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/china-changzhou-sgb-transformer-changzhou-co-ltd"
+   },
+   {
+    "city": "Louisville, OH (SGB-USA Inc.)",
+    "country": "US",
+    "products": "cast resin 50 kVA–25 MVA (locations page). US cast-resin assembly was planned \"Beginning in Q2 2023\" per the Oct-2022 deck (HV coils imported from Malaysia; up to 5 MVA/34.5 kV without imported LV coils; can meet Buy America) — actual start date not confirmed in sources",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/usa-louisville-sgb-usa"
+   },
+   {
+    "city": "Louisville, OH (OTC Services Inc.)",
+    "country": "US",
+    "products": "new & remanufactured oil-filled transformers 5–100 MVA (new up to 30 MVA/138 kV), repair, field service",
+    "source_url": "https://sgbusa.com/wp-content/uploads/2022/10/SGB-USA-General-Overview-October-2022-Public.pdf"
+   },
+   {
+    "city": "Oklahoma City, OK (+ Tulsa OK, Nashville TN) — Southwest Electric Co.",
+    "country": "US",
+    "products": "new oil-filled transformers, repair/remanufacturing, switchgear services, motors (acq. 2025)",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/usa-oklahoma-city-southwest-electric-co"
+   },
+   {
+    "city": "Summerville, SC (SGB-SMIT Sales Inc.)",
+    "country": "US",
+    "products": "sales office (since 1997)",
+    "source_url": "https://www.sgb-smit.com/sgb-smit-group/locations/usa-summerville-sgb-smit-sales"
+   },
+   {
+    "city": "Ripanj near Belgrade (COMEL Transformatori, majority stake signed 2026-07-13, closing H2 2026)",
+    "country": "RS",
+    "products": "power transformers",
+    "source_url": "https://www.sgb-smit.com/news/news-detail/sgb-smit-acquires-majority-stake-in-comel-transformatori"
+   },
+   {
+    "city": "Pretoria West / Cape Town (SGB-SMIT Power Matla)",
+    "country": "ZA",
+    "products": "listed as production/service site in Dec-2022 brochure; absent from 2026 locations page — current status unverified",
+    "source_url": "https://www.sgb-smit.com/fileadmin/user_upload/Downloads/Broschueren/SGB-SMIT_Group/2023_01_Image-4-Seiter_SGB-SMIT_GB.pdf"
+   }
+  ],
+  "products": "Pure-play transformer maker, 30 kVA–1,200 MVA up to 765 kV (2023 brochure; \"Status: December 2022\"): large power transformers >100–1,200 MVA incl. GSU, autotransformers, grid transformers, phase shifters, shunt/series reactors (Royal SMIT Nijmegen; RETRASIB Sibiu 20–300 MVA MPT, 120–400 MVA autos); medium power 5–150 MVA (SGB Regensburg), 2.5–16 MVA (SBG Neumark), 2.5–40 MVA (SGB MY); oil distribution 50–2,500 kVA and compact substations 160–2,500 kVA (Neumark, Nilai, Botoșani 50–1,000 kVA); cast-resin dry-type 50 kVA–25 MVA (Regensburg), 50–5,000 kVA (Nilai), 250–5,000 kVA (Chennai), Olomouc, Changzhou, Louisville OH (US assembly, to 25 MVA); VPI/LV dry-type & reactors (BCV France); US oil-filled new/reman 5–100 MVA (OTC, new up to 30 MVA/138 kV), Southwest Electric (oil-filled, repair). Group scale: \"€729 million in sales in 2016\" (BC Partners 2017-04-24); SGB-USA Oct-2022 deck: \"2021 figures ... $1.1B in Sales: $200M from Dry Type\"; >3,600 employees; 12 production facilities incl. 7 dry-type.",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "de_exp_850423_p0",
+    "role": "primary",
+    "why": "독일 >10MVA 유입식 변압기 세계 수출 — SGB 레겐스부르크 중형 전력변압기(5~150MVA) 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850423_p528",
+    "role": "primary",
+    "why": "미국의 네덜란드발 >10MVA 수입 — Royal SMIT(네이메헌, ≤1,200MVA LPT) 대미 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eurostat_ip_C271_DE",
+    "role": "primary",
+    "why": "독일 NACE C27.1(전동기·발전기·변압기·배전기기) 산업생산 — 독일 2개 공장(레겐스부르크·노이마르크) 생산 활동"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "de_exp_850423_p842",
+    "role": "diagnostic",
+    "why": "독일 >10MVA 대미 수출 — SGB 중형 전력변압기 미국 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850423_p276",
+    "role": "diagnostic",
+    "why": "미국의 독일발 >10MVA 수입(미러)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "de_exp_850421_p0",
+    "role": "diagnostic",
+    "why": "독일 ≤650kVA 유입식 수출 — SBG 노이마르크 배전변압기(50~2,500kVA·콤팩트 변전소)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "de_exp_850422_p0",
+    "role": "diagnostic",
+    "why": "독일 650~10,000kVA 유입식 수출 — 노이마르크 2.5~16MVA·배전 대형"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "de_exp_850434_p0",
+    "role": "diagnostic",
+    "why": "독일 건식 >500kVA 수출 — 레겐스부르크 캐스트레진(≤25MVA)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_8504dry_p276",
+    "role": "diagnostic",
+    "why": "미국의 독일발 건식(850433+850434) 수입 — 레겐스부르크 캐스트레진 대미"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eurostat_ip_C27_CZ",
+    "role": "diagnostic",
+    "why": "체코 C27 전기장비 산업생산 — 올로모우츠 캐스트레진 공장"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eurostat_ip_C27_NL",
+    "role": "diagnostic",
+    "why": "네덜란드 C27 산업생산 — 네이메헌 LPT 공장"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eurostat_turnover_C27_DE",
+    "role": "diagnostic",
+    "why": "독일 C27 매출액 지수 — 명목 매출 대응"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "eurostat_ppi_C2711_DE",
+    "role": "diagnostic",
+    "why": "독일 C27.11(전동기·발전기·변압기) 생산자물가 — 가격 성분"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850423_p0",
+    "role": "diagnostic",
+    "why": "미국 >10MVA 총수입 — SMIT·SGB·OTC 가 공급하는 미국 대형 변압기 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "nl_exp_850423_p0",
+    "role": "wishlist",
+    "why": "(미수집) 네덜란드(Comtrade reporter 528) >10MVA 세계 수출 — Royal SMIT 직접 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "ro_exp_850423_p0",
+    "role": "wishlist",
+    "why": "(미수집) 루마니아 >10MVA 수출 — RETRASIB 시비우(20~400MVA)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "ro_exp_850421_p0",
+    "role": "wishlist",
+    "why": "(미수집) 루마니아 ≤650kVA 수출 — SGB-ALFA 보토샤니(2025-07 가동)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "my_exp_850421_p0",
+    "role": "wishlist",
+    "why": "(미수집) 말레이시아 ≤650kVA 수출 — SGB MY 닐라이 배전·캐스트레진"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "destatis_gp_271141_q",
+    "role": "wishlist",
+    "why": "(미수집) Destatis 분기 생산통계 GP 27.11.41~43(액체 유전체 변압기 용량 구간별 생산액) — 독일 공장 직접 대응"
+   }
+  ],
+  "sources": [
+   "https://www.sgb-smit.com/sgb-smit-group/locations/overview",
+   "https://www.sgb-smit.com/sgb-smit-group",
+   "https://www.sgb-smit.com/sgb-smit-group/history",
+   "https://www.sgb-smit.com/sgb-smit-group/interesting-facts",
+   "https://www.oneequity.com/portfolio/sgb-smit/",
+   "https://www.oneequity.com/news/one-equity-partners-completes-acquisition-of-sgb-smit-the-largest-independent-pure-play-power-transformer-manufacturer/",
+   "https://www.sgb-smit.com/news/news-detail/sgb-smit-expands-its-footprint-in-the-united-states-and-acquires-electrical-component-manufacturer-service-provider-southwest-electric-co",
+   "https://www.sgb-smit.com/news/news-detail/inauguration-of-the-sgb-alfa-factory-in-botosani-romania",
+   "https://www.sgb-smit.com/news/news-detail/sgb-smit-acquires-majority-stake-in-comel-transformatori",
+   "https://www.sgb-smit.com/fileadmin/user_upload/Downloads/Broschueren/SGB-SMIT_Group/2023_01_Image-4-Seiter_SGB-SMIT_GB.pdf",
+   "https://sgbusa.com/wp-content/uploads/2022/10/SGB-USA-General-Overview-October-2022-Public.pdf",
+   "https://www.bcpartners.com/news/bc-partners-to-sell-sgb-smit-the-largest-independent-pure-play-manufacturer-of-transformers-to-one-equity-partners/"
+  ]
+ },
+ "quarter_calendar": null,
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2014",
+   "note": "Majority of RETRASIB S.A. (Sibiu, RO) and Trafo Project (Bucharest) acquired.",
+   "source_url": "https://www.sgb-smit.com/sgb-smit-group/history",
+   "type": "acquisition"
+  },
+  {
+   "date": "2017-07-18",
+   "note": "One Equity Partners completes acquisition of SGB-SMIT (terms undisclosed); then \"six production sites in Germany, the Netherlands, Romania, Malaysia and the U.S.\". Seller (funds advised by BC Partners) and signing date 2017-04-24 are from the BC Partners release https://www.bcpartners.com/news/bc-partners-to-sell-sgb-smit-the-largest-independent-pure-play-manufacturer-of-transformers-to-one-equity-partners/ — the OEP completion release does not name the seller.",
+   "source_url": "https://www.oneequity.com/news/one-equity-partners-completes-acquisition-of-sgb-smit-the-largest-independent-pure-play-power-transformer-manufacturer/",
+   "type": "ownership_change"
+  },
+  {
+   "date": "2017",
+   "note": "Start-up of SGB China, SGB Transformers India, SGB Czech Trafo (cast resin).",
+   "source_url": "https://www.sgb-smit.com/sgb-smit-group/history",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2018",
+   "note": "BCV Technologies (Fontenay-le-Comte, FR; dry-type VPI/cast resin/reactors) acquired.",
+   "source_url": "https://www.sgb-smit.com/sgb-smit-group/history",
+   "type": "acquisition"
+  },
+  {
+   "date": "2023-04",
+   "note": "SGB-USA cast-resin production in Louisville, OH \"Beginning in Q2 2023\" (planned, per Oct-2022 deck; HV coils imported from Malaysia, up to 5 MVA/34.5 kV).",
+   "source_url": "https://sgbusa.com/wp-content/uploads/2022/10/SGB-USA-General-Overview-October-2022-Public.pdf",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2025-01-27",
+   "note": "Agreement to acquire Southwest Electric Co. (Oklahoma City; oil-filled transformers, repair, switchgear; facilities Tulsa, Nashville, Louisville OH); closing expected Q1 2025.",
+   "source_url": "https://www.sgb-smit.com/news/news-detail/sgb-smit-expands-its-footprint-in-the-united-states-and-acquires-electrical-component-manufacturer-service-provider-southwest-electric-co",
+   "type": "acquisition"
+  },
+  {
+   "date": "2025-07-01",
+   "note": "SGB-ALFA (JV with Electro-Alfa International, BVB: EAI) Botoșani, RO: production began July 2025 (oil distribution 50–1,000 kVA/30 kV); ~EUR 20M; inaugurated 2026-07-01 with >1,300 units built.",
+   "source_url": "https://www.sgb-smit.com/news/news-detail/inauguration-of-the-sgb-alfa-factory-in-botosani-romania",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2026-07-13",
+   "note": "Signed majority stake in COMEL Transformatori (Ripanj/Belgrade, RS; power transformers); closing expected H2 2026.",
+   "source_url": "https://www.sgb-smit.com/news/news-detail/sgb-smit-acquires-majority-stake-in-comel-transformatori",
+   "type": "acquisition"
+  }
+ ],
+ "targets": {},
+ "ticker": null,
+ "unit": null
+}

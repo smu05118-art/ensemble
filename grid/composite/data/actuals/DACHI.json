@@ -1,0 +1,99 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "DACHI",
+ "grid_node": "GRID_DACHI",
+ "name": "山东达驰电气有限公司 (Shandong Dachi Electric Co., Ltd.)",
+ "ticker": null,
+ "listed": false,
+ "currency": "CNY",
+ "unit": "million",
+ "accounting_basis": null,
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "n/a (no public financial reporting)",
+ "collected_at": "2026-09-25",
+ "targets": {},
+ "primary_target": null,
+ "structural_breaks": [
+  {
+   "date": "2026-04-22",
+   "type": "acquisition",
+   "target": "profile",
+   "note": "Ownership change: 青岛海信网络能源股份有限公司 (Hisense Network Energy, a Hisense Group company) acquiring 65% of 山东达驰电气有限公司 and two sister companies (水发驰翔, 达驰高压开关) from 水发集团/山东水发电力集团 (Shandong provincial SOE). Merger-control simple-case publicity “青岛海信网络能源股份有限公司收购山东达驰电气有限公司等三家公司股权案” on the Shanghai AMR site (SAMR-delegated; 索取号 AC61701002026268, 产生日期 2026-04-03), publicity period 2026-04-03 to 2026-04-12. Completion (2026-04-22, via 山东产权交易中心) and the deal amount appear only in press coverage — NOT verified from a primary document, so no amount is stored here. Before this, the company website describes Dachi as a wholly-owned subsidiary of Shandong Shuifa Electric Power Group.",
+   "source_url": "https://scjgj.sh.gov.cn/1571/20260403/2c984ad69d47cc69019d514ef4d02136.html",
+   "date_note": "Date = press-reported completion (unverified); the primary document only establishes the 2026-04-03..04-12 publicity window."
+  }
+ ],
+ "profile": {
+  "listing_check": "Not listed: no stock code or exchange appears on the official company site; Unified Social Credit Code 91371700720758629B (limited-liability company, 有限公司). No cninfo/SSE/SZSE/HKEX filer found under this name. Revenue is not published (company site gives total assets CNY 730m and R&D ≈4% of sales only).",
+  "products": "Per company site (EN about page): 750kV-and-below intelligent oil-immersed power transformers up to 1,500 MVA (1.5 million kVA); S11–S22 energy-saving distribution transformers; SH15 amorphous-core transformers; ≤35kV dry-type power transformers; high-overload distribution transformers; box-type energy-saving substations; inverter storage/booster units and box inverter-booster units (PV/storage); HV gas-insulated combined apparatus (GIS). Annual capacity 80 million kVA. Test/manufacturing equipment from Germany (GEORG core cutting), Finland, US; epoxy vacuum casting.",
+  "plants": [
+   {
+    "country": "CN",
+    "city": "Chengwu County, Heze, Shandong (Dongjiao Industrial Park, 菏泽市成武县东郊工业园)",
+    "products": "oil-immersed power transformers ≤750kV/1,500MVA, distribution & amorphous transformers, dry-type ≤35kV, box substations, PV/storage booster units; sister company 达驰高压开关 (GIS/HV switchgear)",
+    "source_url": "https://www.chinadachi.com/en/about_us.html"
+   }
+  ],
+  "end_markets": "State Grid, China Southern Grid, the large generation groups (五大六小), satellite launch bases, petroleum & petrochemical, West-East gas pipeline, high-speed rail; sales network in 30+ Chinese provinces; exports to 20+ countries/regions in Asia, Africa and South America (company site).",
+  "export_routes": [
+   "CN->Asia",
+   "CN->Africa",
+   "CN->South America"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "850433",
+   "850434",
+   "853720"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "nbs_transformer_output",
+    "why": "중국 변압기 생산량 — 국내 전망·발전사향 유입 전력변압기 제조사 업황 동행",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "nea_grid_investment",
+    "why": "전력망 투자 완성액 — 국가전망·남방전망 조달 수요",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "cn_exp_850423_p0",
+    "why": "중국 10MVA 초과 대형 유입변압기 수출 — 아시아·아프리카·남미 수출 경로",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cn_exp_850422_p0",
+    "why": "중국 650kVA~10MVA 유입변압기 수출 — 중형 변압기 수출 경로",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cn_exp_850421_p0",
+    "why": "중국 650kVA 이하 유입 배전변압기 수출 — S11~S22 배전변압기 수출",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "hisense_network_energy_segment",
+    "why": "인수 후(2026-04~) 모회사(海信网络能源) 공시가 생기면 달치 포함 전력설비 매출로 대체 가능. 현재 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "No official revenue history: unlisted limited company; no periodic financial disclosure found (targets left empty per contract)."
+ ],
+ "collection_notes": [
+  "Identity: the peer list entry \"Shandong Dachi\" = 山东达驰电气有限公司 (Shandong Dachi Electric Co., Ltd.), Chengwu County, Heze, Shandong; distinct from any listed company.",
+  "Company-site snapshot saved at grid/composite/data/raw/actuals/DACHI/chinadachi_en_about_us_2026-09-25.html (e-mail domain on the page is hisense.com, consistent with the 2026 Hisense acquisition).",
+  "Press reports (not used as data): Tencent/Sina/21jingji 2026-04-27/28 say Hisense Network Energy completed the purchase of 65% of 达驰电气, 水发驰翔, 达驰高压开关 for ≈CNY 857m on 2026-04-22 and mention exports to 60+ countries incl. North America — this conflicts with the company site (20+ countries, Asia/Africa/South America); the site wording is kept.",
+  "verify 2026-09-25: checked profile claims against https://www.chinadachi.com/en/about_us.html (live page and cached snapshot): plant address Dongjiao Industrial Park, Chengwu County, Heze, Shandong — confirmed; product range 750kV / 1.5 million kVA-and-below oil-immersed power transformers, S11–S22, SH15 amorphous, ≤35kV dry-type, GIS, annual capacity 80 million kVA, exports to 20+ countries in Asia/Africa/South America — confirmed. fixed 1: the 2026-04-22 structural_break cited a press mirror (finance.sina.com.cn); replaced with the primary Shanghai AMR publicity page (scjgj.sh.gov.cn, 2026-04-03) and removed the press-only deal amount from the break note."
+ ]
+}

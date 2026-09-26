@@ -1,0 +1,611 @@
+{
+ "accounting_basis": "IFRS",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "hammfg.com/press 목록의 분기 보도자료 PDF 43개(2016-03 Q4 2015 ~ 2026-07 Q2 2026)를 data/raw/actuals/HMM/ 에 보관(각 <1MB).",
+  "2024-Q2, 2024-Q3, 2025-Q2 PDF는 표가 회전 레이어라 pdfplumber 추출 불가 → pypdf로 추출, 전 분기 YTD 차분(YTD_n − YTD_{n−1} = 3M_n)과 전년 동기 PYC = 전년 자체 값 일치 여부를 자동 검증(불일치 0건).",
+  "Q4는 보도자료 \"Three months ending 12/31\" 열 직접값(연간−9M 아님).",
+  "(moved from structural_breaks 2026-09-25) 2025-01-01 tariff regime: US tariffs on Canadian-made products (2025–) raised costs; >60% of sales into the US (AIF 2025). Revenue scope unchanged. — cost/demand shock, not a scope change under CONTRACT §1. Source: https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf",
+  "verify 2026-09-25: checked revenue_total FY2016Q1, FY2020Q2, FY2021Q2, FY2021Q4, FY2024Q2 (pypdf, rotated-table PDF), FY2025Q4, FY2026Q2 incl. PYC against the hammfg.com press-release PDFs; period_end Friday/Dec-31 convention confirmed (e.g. 2016-04-01, 2020-06-26, 2024-06-28, 2026-06-26), CAD dollars→millions — all values match; fixed 1: tariff_regime entry moved out of structural_breaks."
+ ],
+ "currency": "CAD",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "분기 보도자료(회사 IR PDF)만 사용 — 분기 MD&A·재무제표는 SEDAR+에만 있고 보도자료에 지역·제품 분할 없음 → revenue_segment 없음.",
+  "수주(orders) 공시 없음.",
+  "보도자료 비고: \"interim financial results have not been reviewed by an auditor\"(Q1–Q3)."
+ ],
+ "grid_node": "GRID_HAMMOND_MFG",
+ "id": "HMM",
+ "listed": true,
+ "name": "Hammond Manufacturing Company Limited",
+ "primary_target": "revenue_total",
+ "profile": {
+  "end_markets": "electrical & electronic distributors and OEMs (industrial controls, data center/IT racks, AV, test & measurement); 2025 sales ~63% US, 32% Canada, 5% international (AIF 2025)",
+  "export_routes": [
+   "CA->US"
+  ],
+  "hs_candidates": [
+   "850431",
+   "850432",
+   "853810",
+   "940320",
+   "392690",
+   "854399"
+  ],
+  "plants": [
+   {
+    "city": "Guelph, ON",
+    "country": "CA",
+    "products": "electrical enclosures, racks; electronic products incl. transformers (HQ)",
+    "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf"
+   },
+   {
+    "city": "Palmerston, ON",
+    "country": "CA",
+    "products": "electrical enclosures & racks",
+    "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf"
+   },
+   {
+    "city": "Waterloo, ON",
+    "country": "CA",
+    "products": "electronic products (small cases, racks, surge suppressors, transformers)",
+    "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf"
+   },
+   {
+    "city": "Cheektowaga, NY",
+    "country": "US",
+    "products": "plastic small cases",
+    "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf"
+   },
+   {
+    "city": "(Hammond Electronics Ltd, UK facility)",
+    "country": "GB",
+    "products": "electronic products",
+    "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf"
+   },
+   {
+    "city": "Taipei (RITEC Enclosures, 40% equity investment)",
+    "country": "TW",
+    "products": "enclosures/electronic products",
+    "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf"
+   },
+   {
+    "city": "Calgary, AB",
+    "country": "CA",
+    "products": "distribution centre (2026)",
+    "source_url": "https://www.hammfg.com/files/news/2026/2026-04-13-hammond-manufacturing-expands-western-canada-presence-with-new-calgary-distribution-centre.pdf"
+   }
+  ],
+  "products": "Metallic & non-metallic electrical enclosures, racks/rack cabinets (data-center, voice/data, AV), plastic & die-cast small cases, outlet strips, surge suppressors and electronic (small, low-voltage) transformers; also resale of complementary purchased products. NOT a power/distribution transformer maker — the dry-type transformer business was spun off as Hammond Power Solutions (HPS) in 2001. Link to Sanil is weak (hypothesis peer).",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850431_p124",
+    "role": "primary",
+    "why": "캐나다산 소형(≤1kVA) 변압기 대미 수입 — HMM 전자용 변압기 수출 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850432_p124",
+    "role": "diagnostic",
+    "why": "캐나다산 1–16kVA 건식 변압기 대미 수입 — 제어용 변압기(HMM·HPS 공통 경로, HPS 비중 큼 → 진단용)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850431_p0",
+    "role": "diagnostic",
+    "why": "미국 소형 변압기 총수입 — 전자·제어 OEM 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_IPG3353S",
+    "role": "diagnostic",
+    "why": "미국 전기장비 산업생산 — 산업용 외함·제어 수요 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "statcan_mfg_sales_3353",
+    "role": "diagnostic",
+    "why": "캐나다 전기장비 제조 판매(NAICS 3353) — 캐나다 매출 32% 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853810_p124",
+    "role": "wishlist",
+    "why": "WISHLIST: 캐나다산 배전반용 외함·패널(HS853810, 미장착) 대미 수입 — HMM 주력 외함 제품 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_EXCAUS",
+    "role": "wishlist",
+    "why": "WISHLIST(통제변수): USD/CAD 월평균 — 미국 매출 63%의 CAD 환산 효과"
+   }
+  ]
+ },
+ "quarter_calendar": "13-week quarters ending on a Friday (e.g. 2026-03-27, 2026-06-26); Q4 ends December 31",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2023-06-01",
+   "note": "June 2023: new 96,000 sq ft facility opened (AIF 2025 \"General development of the business\"); 2025: +65,837 sq ft (UK unit, Calgary AB). Not a scope change.",
+   "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-annual-information-form-2025.pdf",
+   "type": "capacity_expansion"
+  }
+ ],
+ "targets": {
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출(Net product sales)",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2016-05-02-first-quarter-2016.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-04-01",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 30.516,
+     "published_date": "2016-05-02",
+     "source_url": "https://www.hammfg.com/files/news/2016/2016-05-02-first-quarter-2016.pdf",
+     "value": 31.774
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2016-08-05-second-quarter-2016.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-07-01",
+     "period_start": "2016-04-02",
+     "prior_year_comparative": 28.993,
+     "published_date": "2016-08-05",
+     "source_url": "https://www.hammfg.com/files/news/2016/2016-08-05-second-quarter-2016.pdf",
+     "value": 28.011
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2016-10-28-third-quarter-2016.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-02",
+     "prior_year_comparative": 29.941,
+     "published_date": "2016-10-28",
+     "source_url": "https://www.hammfg.com/files/news/2016/2016-10-28-third-quarter-2016.pdf",
+     "value": 27.944
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2017-03-03-fourth-quarter-2016.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 27.714,
+     "published_date": "2017-03-03",
+     "source_url": "https://www.hammfg.com/files/news/2017/2017-03-03-fourth-quarter-2016.pdf",
+     "value": 27.995
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2017-05-01-first-quarter-2017.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 31.774,
+     "published_date": "2017-05-01",
+     "source_url": "https://www.hammfg.com/files/news/2017/2017-05-01-first-quarter-2017.pdf",
+     "value": 31.727
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2017-07-31-second-quarter-2017.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "prior_year_comparative": 28.011,
+     "published_date": "2017-07-31",
+     "source_url": "https://www.hammfg.com/files/news/2017/2017-07-31-second-quarter-2017.pdf",
+     "value": 33.486
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2017-10-25-third-quarter-2017.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-29",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 27.944,
+     "published_date": "2017-10-25",
+     "source_url": "https://www.hammfg.com/files/news/2017/2017-10-25-third-quarter-2017.pdf",
+     "value": 31.421
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2018-03-05-fourth-quarter-2017.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-09-30",
+     "prior_year_comparative": 27.995,
+     "published_date": "2018-03-05",
+     "source_url": "https://www.hammfg.com/files/news/2018/2018-03-05-fourth-quarter-2017.pdf",
+     "value": 30.772
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2018-04-30-first-quarter-2018.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-30",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 31.727,
+     "published_date": "2018-04-30",
+     "source_url": "https://www.hammfg.com/files/news/2018/2018-04-30-first-quarter-2018.pdf",
+     "value": 36.15
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2018-08-14-second-quarter-2018.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-29",
+     "period_start": "2018-03-31",
+     "prior_year_comparative": 33.486,
+     "published_date": "2018-08-14",
+     "source_url": "https://www.hammfg.com/files/news/2018/2018-08-14-second-quarter-2018.pdf",
+     "value": 37.75
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2018-11-05-third-quarter-2018.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-28",
+     "period_start": "2018-06-30",
+     "prior_year_comparative": 31.421,
+     "published_date": "2018-11-05",
+     "source_url": "https://www.hammfg.com/files/news/2018/2018-11-05-third-quarter-2018.pdf",
+     "value": 37.333
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2019-03-04-fourth-quarter-2018.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-09-29",
+     "prior_year_comparative": 30.772,
+     "published_date": "2019-03-04",
+     "source_url": "https://www.hammfg.com/files/news/2019/2019-03-04-fourth-quarter-2018.pdf",
+     "value": 34.369
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2019-04-29-first-quarter-2019.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-29",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 36.15,
+     "published_date": "2019-04-29",
+     "source_url": "https://www.hammfg.com/files/news/2019/2019-04-29-first-quarter-2019.pdf",
+     "value": 38.056
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2019-07-29-second-quarter-2019.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-28",
+     "period_start": "2019-03-30",
+     "prior_year_comparative": 37.75,
+     "published_date": "2019-07-29",
+     "source_url": "https://www.hammfg.com/files/news/2019/2019-07-29-second-quarter-2019.pdf",
+     "value": 38.262
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2019-10-24-third-quarter-2019.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-27",
+     "period_start": "2019-06-29",
+     "prior_year_comparative": 37.333,
+     "published_date": "2019-10-24",
+     "source_url": "https://www.hammfg.com/files/news/2019/2019-10-24-third-quarter-2019.pdf",
+     "value": 37.229
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2020-03-03-fourth-quarter-2019.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-09-28",
+     "prior_year_comparative": 34.369,
+     "published_date": "2020-03-03",
+     "source_url": "https://www.hammfg.com/files/news/2020/2020-03-03-fourth-quarter-2019.pdf",
+     "value": 35.045
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2020-04-27-first-quarter-2020.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-27",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 38.056,
+     "published_date": "2020-04-27",
+     "source_url": "https://www.hammfg.com/files/news/2020/2020-04-27-first-quarter-2020.pdf",
+     "value": 39.641
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2020-07-28-second-quarter-2020.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-26",
+     "period_start": "2020-03-28",
+     "prior_year_comparative": 38.262,
+     "published_date": "2020-07-28",
+     "source_url": "https://www.hammfg.com/files/news/2020/2020-07-28-second-quarter-2020.pdf",
+     "value": 34.137
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2020-10-26-third-quarter-2020.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-25",
+     "period_start": "2020-06-27",
+     "prior_year_comparative": 37.229,
+     "published_date": "2020-10-26",
+     "source_url": "https://www.hammfg.com/files/news/2020/2020-10-26-third-quarter-2020.pdf",
+     "value": 35.581
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2021-03-08-fourth-quarter-2020.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-09-26",
+     "prior_year_comparative": 35.045,
+     "published_date": "2021-03-08",
+     "source_url": "https://www.hammfg.com/files/news/2021/2021-03-08-fourth-quarter-2020.pdf",
+     "value": 38.864
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2021-04-26-first-quarter-2021.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-26",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 39.641,
+     "published_date": "2021-04-26",
+     "source_url": "https://www.hammfg.com/files/news/2021/2021-04-26-first-quarter-2021.pdf",
+     "value": 42.14
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2021-07-26-second-quarter-2021.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-25",
+     "period_start": "2021-03-27",
+     "prior_year_comparative": 34.137,
+     "published_date": "2021-07-26",
+     "source_url": "https://www.hammfg.com/files/news/2021/2021-07-26-second-quarter-2021.pdf",
+     "value": 46.502
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2021-10-25-third-quarter-2021.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-24",
+     "period_start": "2021-06-26",
+     "prior_year_comparative": 35.581,
+     "published_date": "2021-10-25",
+     "source_url": "https://www.hammfg.com/files/news/2021/2021-10-25-third-quarter-2021.pdf",
+     "value": 46.146
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2022-03-07-fourth-quarter-2021.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-09-25",
+     "prior_year_comparative": 38.864,
+     "published_date": "2022-03-07",
+     "source_url": "https://www.hammfg.com/files/news/2022/2022-03-07-fourth-quarter-2021.pdf",
+     "value": 55.34
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2022-05-02-first-quarter-2022.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-04-01",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 42.14,
+     "published_date": "2022-05-02",
+     "source_url": "https://www.hammfg.com/files/news/2022/2022-05-02-first-quarter-2022.pdf",
+     "value": 54.976
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2022-08-03-second-quarter-2022.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-07-01",
+     "period_start": "2022-04-02",
+     "prior_year_comparative": 46.502,
+     "published_date": "2022-08-03",
+     "source_url": "https://www.hammfg.com/files/news/2022/2022-08-03-second-quarter-2022.pdf",
+     "value": 57.251
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2022-11-01-third-quarter-2022.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-02",
+     "prior_year_comparative": 46.146,
+     "published_date": "2022-11-01",
+     "source_url": "https://www.hammfg.com/files/news/2022/2022-11-01-third-quarter-2022.pdf",
+     "value": 56.848
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2023-03-07-fourth-quarter-2022.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "prior_year_comparative": 55.34,
+     "published_date": "2023-03-07",
+     "source_url": "https://www.hammfg.com/files/news/2023/2023-03-07-fourth-quarter-2022.pdf",
+     "value": 56.847
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2023-05-02-first-quarter-2023.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 54.976,
+     "published_date": "2023-05-02",
+     "source_url": "https://www.hammfg.com/files/news/2023/2023-05-02-first-quarter-2023.pdf",
+     "value": 62.492
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2023-08-01-second-quarter-2023.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 57.251,
+     "published_date": "2023-08-01",
+     "source_url": "https://www.hammfg.com/files/news/2023/2023-08-01-second-quarter-2023.pdf",
+     "value": 61.417
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2023-10-31-third-quarter-2023.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-29",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 56.848,
+     "published_date": "2023-10-31",
+     "source_url": "https://www.hammfg.com/files/news/2023/2023-10-31-third-quarter-2023.pdf",
+     "value": 57.101
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2024-03-05-fourth-quarter-2023.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-09-30",
+     "prior_year_comparative": 56.847,
+     "published_date": "2024-03-05",
+     "source_url": "https://www.hammfg.com/files/news/2024/2024-03-05-fourth-quarter-2023.pdf",
+     "value": 57.275
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2024-04-30-first-quarter-2024.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-29",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 62.492,
+     "published_date": "2024-04-30",
+     "source_url": "https://www.hammfg.com/files/news/2024/2024-04-30-first-quarter-2024.pdf",
+     "value": 59.086
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2024-07-30-second-quarter-2024.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-28",
+     "period_start": "2024-03-30",
+     "prior_year_comparative": 61.417,
+     "published_date": "2024-07-30",
+     "source_url": "https://www.hammfg.com/files/news/2024/2024-07-30-second-quarter-2024.pdf",
+     "value": 61.944
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2024-10-29-third-quarter-2024.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-27",
+     "period_start": "2024-06-29",
+     "prior_year_comparative": 57.101,
+     "published_date": "2024-10-29",
+     "source_url": "https://www.hammfg.com/files/news/2024/2024-10-29-third-quarter-2024.pdf",
+     "value": 62.166
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2025-03-04-fourth-quarter-2024.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-09-28",
+     "prior_year_comparative": 57.275,
+     "published_date": "2025-03-04",
+     "source_url": "https://www.hammfg.com/files/news/2025/2025-03-04-fourth-quarter-2024.pdf",
+     "value": 61.702
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2025-04-29-first-quarter-2025.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-28",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 59.086,
+     "published_date": "2025-04-29",
+     "source_url": "https://www.hammfg.com/files/news/2025/2025-04-29-first-quarter-2025.pdf",
+     "value": 67.159
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2025-07-29-second-quarter-2025.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-27",
+     "period_start": "2025-03-29",
+     "prior_year_comparative": 61.944,
+     "published_date": "2025-07-29",
+     "source_url": "https://www.hammfg.com/files/news/2025/2025-07-29-second-quarter-2025.pdf",
+     "value": 71.333
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "Hammond Manufacturing quarterly results press release (2025-11-03-third-quarter-2025.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are nine-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-26",
+     "period_start": "2025-06-28",
+     "prior_year_comparative": 62.166,
+     "published_date": "2025-11-03",
+     "source_url": "https://www.hammfg.com/files/news/2025/2025-11-03-third-quarter-2025.pdf",
+     "value": 70.787
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Hammond Manufacturing quarterly results press release (2026-03-10-fourth-quarter-2025.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are twelve-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-09-27",
+     "prior_year_comparative": 61.702,
+     "published_date": "2026-03-10",
+     "source_url": "https://www.hammfg.com/files/news/2026/2026-03-10-fourth-quarter-2025.pdf",
+     "value": 72.128
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "Hammond Manufacturing quarterly results press release (2026-04-28-first-quarter-2026.pdf), table row \"Net product sales\"/\"Net sales\", three months ending column (col1 current / col2 prior year); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-27",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 67.159,
+     "published_date": "2026-04-28",
+     "source_url": "https://www.hammfg.com/files/news/2026/2026-04-28-first-quarter-2026.pdf",
+     "value": 75.228
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "Hammond Manufacturing quarterly results press release (2026-07-28-second-quarter-2026.pdf), table row \"Net product sales\"/\"Net sales\", three months ending columns (cols 3–4; cols 1–2 are six-month YTD); CAD thousands→millions",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-26",
+     "period_start": "2026-03-28",
+     "prior_year_comparative": 71.333,
+     "published_date": "2026-07-28",
+     "source_url": "https://www.hammfg.com/files/news/2026/2026-07-28-second-quarter-2026.pdf",
+     "value": 84.995
+    }
+   ],
+   "primary": true,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "HMM.A CN",
+ "unit": "million",
+ "unit_note": "press releases print whole CAD dollars (e.g. $84,995,000); stored as CAD million with 3 decimals"
+}

@@ -1,0 +1,937 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "VOLTAMP",
+ "grid_node": "GRID_VOLTAMP",
+ "name": "Voltamp Transformers Ltd",
+ "ticker": "VOLTAMP IN",
+ "listed": true,
+ "currency": "INR",
+ "unit": "million",
+ "accounting_basis": "Ind AS from FY2018 (Apr-2017); Indian GAAP before",
+ "fiscal_year_end_month": 3,
+ "quarter_calendar": "calendar quarters; Indian fiscal year Apr-Mar labelled by the year in which it ends (FY2026Q1 = Apr-Jun 2025)",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "별도 매출(단일 부문: 변압기)",
+   "scope": "standalone",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2015-04-01",
+     "period_end": "2015-06-30",
+     "value": 871.071,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/4C3341BB_105D_4924_BD2A_10B6612799F4_165029.pdf",
+     "locator": "BSE filing 2016-08-12 (2016-08-12_4C3341BB_105D_4924_BD2A_10B6612799F4_165029.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 3rd column (same quarter of previous year) = 3 months ended 2015-06-30; printed 8,710.71 (INR lakh). Original filing 2015-08-14 (2015-08-14_62EA2F22_B18E_4A13_9AF1_A9FD449CAD87_165114.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2015-08-14",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 871.071,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1001638.html",
+      "bse_results_db_inr_mn": 871.07,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=86.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2015-07-01",
+     "period_end": "2015-09-30",
+     "value": 1327.683,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/2/8999E822_EFB8_43B9_9232_E2DA039728FF_153604.pdf",
+     "locator": "BSE filing 2016-02-09 (2016-02-09_8999E822_EFB8_43B9_9232_E2DA039728FF_153604.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2015-09-30; printed 13276.83 (INR lakh). Original filing 2015-11-04 (2015-11-04_B6D497E5_C1F2_4EFA_9F2D_68E373231778_145541.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2015-11-04",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 1327.683,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1002796.html",
+      "bse_results_db_inr_mn": 1327.68,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=87.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2015-10-01",
+     "period_end": "2015-12-31",
+     "value": 1395.285,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/2/8999E822_EFB8_43B9_9232_E2DA039728FF_153604.pdf",
+     "locator": "BSE filing 2016-02-09 (2016-02-09_8999E822_EFB8_43B9_9232_E2DA039728FF_153604.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-12-31'; printed 13952.85 (INR lakh)",
+     "published_date": "2016-02-09",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1291.266,
+     "cross_check": {
+      "nse_html_net_inr_mn": 1395.285,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1005113.html",
+      "bse_results_db_inr_mn": 1395.29,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=88.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 2038.994,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/4C3341BB_105D_4924_BD2A_10B6612799F4_165029.pdf",
+     "locator": "BSE filing 2016-08-12 (2016-08-12_4C3341BB_105D_4924_BD2A_10B6612799F4_165029.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2016-03-31; printed 20,389.94 (INR lakh). Original filing 2016-05-30 (2016-05-30_F36C4690_827C_4904_8E43_550C7884FC69_175749.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2016-05-30",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 2038.994,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1009702.html",
+      "bse_results_db_inr_mn": 2038.99,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=89.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 1150.996,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/4C3341BB_105D_4924_BD2A_10B6612799F4_165029.pdf",
+     "locator": "BSE filing 2016-08-12 (2016-08-12_4C3341BB_105D_4924_BD2A_10B6612799F4_165029.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-06-30'; printed 11,509.96 (INR lakh)",
+     "published_date": "2016-08-12",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 871.071,
+     "cross_check": {
+      "nse_html_net_inr_mn": 1150.996,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1012094.html",
+      "nse_html_gross_inr_mn": 1273.232,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1029670.html",
+      "bse_results_db_inr_mn": 1151.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=90.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 1608.379,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/11/93615B18_0493_40B2_84BB_3C4A17740FC1_162735.pdf",
+     "locator": "BSE filing 2016-11-09 (2016-11-09_93615B18_0493_40B2_84BB_3C4A17740FC1_162735.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-09-30'; printed 16,083.79 (INR lakh)",
+     "published_date": "2016-11-09",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1327.683,
+     "cross_check": {
+      "nse_html_net_inr_mn": 1608.379,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1015708.html",
+      "nse_html_gross_inr_mn": 1744.181,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1033364.html",
+      "bse_results_db_inr_mn": 1608.38,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=91.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 1052.705,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/2/0C07CDA2_F187_474B_ADF6_C41EA4AACA3F_154710.pdf",
+     "locator": "BSE filing 2017-02-13 (2017-02-13_0C07CDA2_F187_474B_ADF6_C41EA4AACA3F_154710.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-12-31'; printed 10,527.05 (INR lakh)",
+     "published_date": "2017-02-13",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1395.285,
+     "cross_check": {
+      "nse_html_net_inr_mn": 1052.705,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1019737.html",
+      "nse_html_gross_inr_mn": 1105.392,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1037362.html",
+      "bse_results_db_inr_mn": 1052.71,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=92.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 2281.69,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=93.00&RType=",
+     "locator": "BSE results record of the Reg-33 filing, 'Net Sales/Revenue From Operations' (Rs. million); original PDF filing 2017-05-15 (2017-05-15_9a015475-af00-448c-95b4-ad152bb76195.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2017-05-15",
+     "verification": "exchange_structured_only",
+     "cross_check": {
+      "nse_html_net_inr_mn": 2281.69,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1022111.html",
+      "bse_results_db_inr_mn": 2281.69,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=93.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 1304.466,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/538acead-49ea-4cf4-b14f-1430c3a15aee.pdf",
+     "locator": "BSE filing 2018-08-14 (Q1 FY2019 results, 2018-08-14_538acead-49ea-4cf4-b14f-1430c3a15aee.pdf) p.3 note 3 table 'Revenue from Operations excluding Excise Duty on Sale (A-B)', column quarter ended 30.06.2017; printed 13,044.66 (Rs. in lakhs). Original Q1 FY2018 filing 2017-08-12 printed Ind AS revenue incl. excise 14,307.59 lakh (NSE record) — not used",
+     "published_date": "2017-08-12",
+     "verification": "pdf_txt+pdf_ocr",
+     "cross_check": {
+      "nse_html_gross_inr_mn": 1430.759,
+      "bse_results_db_inr_mn": 1430.76,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=94.00&RType="
+     },
+     "value_basis": "Ind AS revenue excluding excise duty (company-printed, GST-comparable)"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 1289.046,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/11/13d5140b-285c-4560-9005-4bb445c22dbe.pdf",
+     "locator": "BSE filing 2017-11-14 (2017-11-14_13d5140b-285c-4560-9005-4bb445c22dbe.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-09-30'; printed 12,890.46 (INR lakh)",
+     "published_date": "2017-11-14",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_html_gross_inr_mn": 1289.046,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1033363.html",
+      "bse_results_db_inr_mn": 1289.05,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=95.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 1601.027,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/2/50395b91-d2fc-4345-85c7-2ddc694658a5.pdf",
+     "locator": "BSE filing 2018-02-13 (2018-02-13_50395b91-d2fc-4345-85c7-2ddc694658a5.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-12-31'; printed 16,010.27 (INR lakh)",
+     "published_date": "2018-02-13",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_html_gross_inr_mn": 1601.027,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_VOLTAMP_1037361.html",
+      "bse_results_db_inr_mn": 1601.03,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=96.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 2195.655,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/5/840f5568-e067-4732-8929-f9137895e50e.pdf",
+     "locator": "BSE filing 2018-05-10 (2018-05-10_840f5568-e067-4732-8929-f9137895e50e.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-03-31'; printed 21956.55 (INR lakh)",
+     "published_date": "2018-05-10",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2195.655,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_35003_8955_10052018054739_WEB.xml",
+      "bse_results_db_inr_mn": 2195.66,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=97.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 1658.658,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/538acead-49ea-4cf4-b14f-1430c3a15aee.pdf",
+     "locator": "BSE filing 2018-08-14 (2018-08-14_538acead-49ea-4cf4-b14f-1430c3a15aee.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-06-30'; printed 16,586.58 (INR lakh)",
+     "published_date": "2018-08-14",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1658.658,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_38897_35073_14082018043730_WEB.xml",
+      "bse_results_db_inr_mn": 1658.66,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=98.00&RType="
+     },
+     "prior_year_comparative": 1304.466,
+     "comparative_note": "comparative from the same filing's note 3: 'Revenue from Operations excluding Excise Duty' for quarter ended 30.06.2017 = 13,044.66 lakh"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 1890.064,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/11/714c2f19-df40-4a16-a6a9-76076afe4a7e.pdf",
+     "locator": "BSE filing 2018-11-01 (2018-11-01_714c2f19-df40-4a16-a6a9-76076afe4a7e.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-09-30'; printed 18,900.64 (INR lakh)",
+     "published_date": "2018-11-01",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1289.046,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1890.064,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_39935_56903_01112018041939_WEB.xml",
+      "bse_results_db_inr_mn": 1890.06,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=99.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 2151.731,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9d7aafdf-1843-4c34-b7b1-ce835e5e57cb.pdf",
+     "locator": "BSE filing 2019-02-01 (2019-02-01_9d7aafdf-1843-4c34-b7b1-ce835e5e57cb.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-12-31'; printed 21,517.31 (INR lakh)",
+     "published_date": "2019-02-01",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1601.027,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2151.731,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_42054_79178_01022019041531_WEB.xml",
+      "bse_results_db_inr_mn": 2151.73,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=100.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 2587.827,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1ac60d3c-f666-4e01-982d-11144ea8dab9.pdf",
+     "locator": "BSE filing 2019-05-29 (2019-05-29_1ac60d3c-f666-4e01-982d-11144ea8dab9.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-03-31'; printed 25,878.27 (INR lakh)",
+     "published_date": "2019-05-29",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2193.354,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2587.827,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_45249_106191_29052019060630_WEB.xml",
+      "bse_results_db_inr_mn": 2587.83,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=101.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 2195.655, printed 21933.54)"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 1873.177,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8de656ad-0e3a-4aea-9846-c7cec50a8868.pdf",
+     "locator": "BSE filing 2019-08-14 (2019-08-14_8de656ad-0e3a-4aea-9846-c7cec50a8868.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-06-30'; printed 18,731.77 (INR lakh)",
+     "published_date": "2019-08-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1658.658,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1873.177,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_48046_132661_14082019064458_WEB.xml",
+      "bse_results_db_inr_mn": 1873.18,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=102.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 1949.001,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6c68cf02-e99e-4443-8ed8-e649fde92653.pdf",
+     "locator": "BSE filing 2019-11-11 (2019-11-11_6c68cf02-e99e-4443-8ed8-e649fde92653.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-09-30'; printed 19.490.01 (INR lakh)",
+     "published_date": "2019-11-11",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1890.059,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1949.001,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_49827_163914_11112019042319_WEB.xml",
+      "bse_results_db_inr_mn": 1949.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=103.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 2513.272,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f4e42537-6f79-408f-ad53-5d1b31a4c39b.pdf",
+     "locator": "BSE filing 2020-02-10 (2020-02-10_f4e42537-6f79-408f-ad53-5d1b31a4c39b.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-12-31'; printed 25,132.72 (INR lakh)",
+     "published_date": "2020-02-10",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 2151.726,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2513.272,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_53073_217377_10022020040709_WEB.xml",
+      "bse_results_db_inr_mn": 2513.27,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=104.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 2250.307,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/592dca13-24b4-4aae-a295-a2ca031c6f28.pdf",
+     "locator": "BSE filing 2020-06-10 (2020-06-10_592dca13-24b4-4aae-a295-a2ca031c6f28.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-03-31'; printed 22,503.07 (INR lakh)",
+     "published_date": "2020-06-10",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2587.837,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2250.307,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_55744_264544_10062020045007_WEB.xml",
+      "bse_results_db_inr_mn": 2250.31,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=105.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 2587.827, printed 25878.37)"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 723.374,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/51ec9e51-0e44-4531-86e1-9e979e5defb6.pdf",
+     "locator": "BSE filing 2020-08-14 (2020-08-14_51ec9e51-0e44-4531-86e1-9e979e5defb6.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-06-30'; printed 7,233.74 (INR lakh)",
+     "published_date": "2020-08-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1873.177,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 723.374,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_60338_307411_14082020063254_WEB.xml",
+      "bse_results_db_inr_mn": 723.37,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=106.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 1602.458,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/29588651-2ab7-4571-9f60-78e3480c3b29.pdf",
+     "locator": "BSE filing 2020-11-09 (2020-11-09_29588651-2ab7-4571-9f60-78e3480c3b29.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-09-30'; printed 16,024.58 (INR lakh)",
+     "published_date": "2020-11-09",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1949.0,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1602.458,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_63704_357043_09112020055443_WEB.xml",
+      "bse_results_db_inr_mn": 1602.46,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=107.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 1757.498,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4c88e449-e0ed-456c-9be3-263c8ee1b974.pdf",
+     "locator": "BSE filing 2021-02-11 (2021-02-11_4c88e449-e0ed-456c-9be3-263c8ee1b974.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-12-31'; printed 17,574.98 (INR lakh)",
+     "published_date": "2021-02-11",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2513.272,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1757.498,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_67999_406173_11022021050129_WEB.xml",
+      "bse_results_db_inr_mn": 1757.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=108.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 2839.769,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/16e44f6f-1d20-4260-b4b0-1a6ce4ebad94.pdf",
+     "locator": "BSE filing 2021-06-25 (2021-06-25_16e44f6f-1d20-4260-b4b0-1a6ce4ebad94.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-03-31'; printed 28,397.69 (INR lakh)",
+     "published_date": "2021-06-25",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2250.32,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2839.769,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_71832_464216_25062021060759_WEB.xml",
+      "bse_results_db_inr_mn": 2839.77,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=109.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 2250.307, printed 22503.2)"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 1618.599,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/2704c97f-58d0-46bf-9236-a2dd1cc5f88c.pdf",
+     "locator": "BSE filing 2021-08-14 (2021-08-14_2704c97f-58d0-46bf-9236-a2dd1cc5f88c.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-06-30'; printed 16,185.99 (INR lakh)",
+     "published_date": "2021-08-14",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 723.386,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1618.599,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_75987_507770_14082021044850_WEB.xml",
+      "bse_results_db_inr_mn": 1618.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=110.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 723.374, printed 7233.86)"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 2631.998,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b826b1a9-015f-4731-a891-75699cda1d83.pdf",
+     "locator": "BSE filing 2021-10-29 (2021-10-29_b826b1a9-015f-4731-a891-75699cda1d83.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 26,319.98 (INR lakh)",
+     "published_date": "2021-10-29",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2631.998,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_77184_548519_29102021044638_WEB.xml",
+      "bse_results_db_inr_mn": 2632.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=111.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 3149.514,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/185bcf02-aa02-46ee-992f-943869cfaa0c.pdf",
+     "locator": "BSE filing 2022-01-31 (2022-01-31_185bcf02-aa02-46ee-992f-943869cfaa0c.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-12-31'; printed 31,495.14 (INR lakh)",
+     "published_date": "2022-01-31",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1757.498,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3149.514,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_80847_601295_31012022055459_WEB.xml",
+      "bse_results_db_inr_mn": 3149.51,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=112.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 3871.979,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/03f488c0-c1c1-44ea-910b-cd7f607de36f.pdf",
+     "locator": "BSE filing 2022-05-25 (2022-05-25_03f488c0-c1c1-44ea-910b-cd7f607de36f.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-03-31'; printed 38,719.79 (INR lakh)",
+     "published_date": "2022-05-25",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2839.748,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3871.979,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_85342_660326_25052022040154_WEB.xml",
+      "bse_results_db_inr_mn": 3871.98,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=113.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 2839.769, printed 28397.48)"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 2701.449,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e71f5a30-34d8-4d45-b4a0-9dd3966e2122.pdf",
+     "locator": "BSE filing 2022-08-12 (2022-08-12_e71f5a30-34d8-4d45-b4a0-9dd3966e2122.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-06-30'; printed 27,014.49 (INR lakh)",
+     "published_date": "2022-08-12",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1618.599,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 2701.449,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_656995_3039_12082022162357_WEB.xml",
+      "bse_results_db_inr_mn": 2701.45,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=114.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 3176.314,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4a99349d-ec54-4e4d-be2b-6d80a1c32740.pdf",
+     "locator": "BSE filing 2022-11-10 (2022-11-10_4a99349d-ec54-4e4d-be2b-6d80a1c32740.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-09-30'; printed 31.763.14 (INR lakh)",
+     "published_date": "2022-11-10",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3176.314,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_854311_5378_10112022164722_WEB.xml",
+      "bse_results_db_inr_mn": 3176.31,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=115.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 3574.666,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e5366115-f8fd-4f40-9fb2-eb03cb0acc66.pdf",
+     "locator": "BSE filing 2023-02-04 (2023-02-04_e5366115-f8fd-4f40-9fb2-eb03cb0acc66.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-12-31'; printed 35.746.66 (INR lakh)",
+     "published_date": "2023-02-04",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3149.514,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3574.666,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_88623_785702_04022023015245_WEB.xml",
+      "bse_results_db_inr_mn": 3574.67,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=116.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 4398.612,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e4457a7d-320f-4fd5-bcf2-9dafd5948cd6.pdf",
+     "locator": "BSE filing 2023-05-25 (2023-05-25_e4457a7d-320f-4fd5-bcf2-9dafd5948cd6.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-03-31'; printed 43,986.12 (INR lakh)",
+     "published_date": "2023-05-25",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3871.979,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4398.612,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_92689_852326_25052023070154.xml",
+      "bse_results_db_inr_mn": 4398.61,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=117.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 3221.913,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1ae293a2-9695-4c23-b439-612278fd5c48.pdf",
+     "locator": "BSE filing 2023-08-07 (2023-08-07_1ae293a2-9695-4c23-b439-612278fd5c48.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-06-30'; printed 32,219.13 (INR lakh)",
+     "published_date": "2023-08-07",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 2701.449,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3221.913,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_95523_909852_07082023025303.xml",
+      "bse_results_db_inr_mn": 3221.91,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=118.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 3813.891,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e8ceb047-ba3c-481c-8c35-5d89e44fdf0f.pdf",
+     "locator": "BSE filing 2023-10-26 (2023-10-26_e8ceb047-ba3c-481c-8c35-5d89e44fdf0f.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-09-30'; printed 38,138.91 (INR lakh)",
+     "published_date": "2023-10-26",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3176.314,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3813.891,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_97953_968073_26102023053716.xml",
+      "bse_results_db_inr_mn": 3813.89,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=119.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 4084.825,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dec6a4f4-a24f-4518-977b-177547cdffbe.pdf",
+     "locator": "BSE filing 2024-01-29 (2024-01-29_dec6a4f4-a24f-4518-977b-177547cdffbe.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-12-31'; printed 40,848.25 (INR lakh)",
+     "published_date": "2024-01-29",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3574.666,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4084.825,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_101632_1037510_29012024023911.xml",
+      "bse_results_db_inr_mn": 4084.83,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=120.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 5041.598,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7493ce82-68b7-4b8e-a2b0-94907c919453.pdf",
+     "locator": "BSE filing 2024-07-29 (2024-07-29_7493ce82-68b7-4b8e-a2b0-94907c919453.pdf) p.4: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2024-03-31; printed 50,415.98 (INR lakh). Original filing 2024-05-02 (2024-05-02_eb4e6052-a54d-4f6d-8157-885cd15e5a6a.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2024-05-02",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 5041.598,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_105170_1114054_02052024073612.xml",
+      "bse_results_db_inr_mn": 5041.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=121.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 4281.514,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7493ce82-68b7-4b8e-a2b0-94907c919453.pdf",
+     "locator": "BSE filing 2024-07-29 (2024-07-29_7493ce82-68b7-4b8e-a2b0-94907c919453.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-06-30'; printed 42,815.14 (INR lakh)",
+     "published_date": "2024-07-29",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 3221.913,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4281.514,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_109686_1204968_29072024021954.xml",
+      "bse_results_db_inr_mn": 4281.51,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=122.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 3977.418,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e4405e27-53fc-4239-9ec5-199c92105cf3.pdf",
+     "locator": "BSE filing 2024-10-26 (2024-10-26_e4405e27-53fc-4239-9ec5-199c92105cf3.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-09-30'; printed 39,774.18 (INR lakh)",
+     "published_date": "2024-10-26",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3813.891,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 3977.418,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_113510_1289698_26102024023452.xml",
+      "bse_results_db_inr_mn": 3977.42,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=123.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 4835.228,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9beec05b-977a-4a65-997a-9357b49df0a5.pdf",
+     "locator": "BSE filing 2025-01-30 (2025-01-30_9beec05b-977a-4a65-997a-9357b49df0a5.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-12-31'; printed 48,352.28) (INR lakh)",
+     "published_date": "2025-01-30",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 4084.825,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 4835.228,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_118134_1365830_30012025035511.xml",
+      "bse_results_db_inr_mn": 4835.23,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=124.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 6248.143,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/d1f998cf-564e-494b-b356-649b4989d4bd.pdf",
+     "locator": "BSE filing 2025-05-03 (2025-05-03_d1f998cf-564e-494b-b356-649b4989d4bd.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-03-31'; printed 62,481.43 (INR lakh)",
+     "published_date": "2025-05-03",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 5041.598,
+     "cross_check": {
+      "bse_results_db_inr_mn": 6248.14,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=125.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 4235.767,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/af049409-2664-47e9-a62d-505219d08026.pdf",
+     "locator": "BSE filing 2025-07-29 (2025-07-29_af049409-2664-47e9-a62d-505219d08026.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-06-30'; printed 42,357.67 (INR lakh)",
+     "published_date": "2025-07-29",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 4281.514,
+     "cross_check": {
+      "bse_results_db_inr_mn": 4235.77,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=126.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 4825.625,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/104839b7-78bd-4c7e-ba2d-0f7584278a47.pdf",
+     "locator": "BSE filing 2025-11-08 (2025-11-08_104839b7-78bd-4c7e-ba2d-0f7584278a47.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-09-30'; printed 48.256.25 (INR lakh)",
+     "published_date": "2025-11-08",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 3977.418,
+     "cross_check": {
+      "bse_results_db_inr_mn": 4825.63,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=127.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 6303.232,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/88064cfa-d6c8-464e-83d9-e3bfe3897aa7.pdf",
+     "locator": "BSE filing 2026-02-05 (2026-02-05_88064cfa-d6c8-464e-83d9-e3bfe3897aa7.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-12-31'; printed 63,032.32 (INR lakh)",
+     "published_date": "2026-02-05",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 4835.228,
+     "cross_check": {
+      "bse_results_db_inr_mn": 6303.23,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=128.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 6172.259,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4ed9dae8-ff94-4a44-b5e7-d86b3aa8937c.pdf",
+     "locator": "BSE filing 2026-05-05 (2026-05-05_4ed9dae8-ff94-4a44-b5e7-d86b3aa8937c.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-03-31'; printed 61,722.59 (INR lakh)",
+     "published_date": "2026-05-05",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 6248.143,
+     "cross_check": {
+      "bse_results_db_inr_mn": 6172.26,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=129.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2027Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 5437.849,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/fcf7fa52-75eb-4c2c-bc58-54222b916821.pdf",
+     "locator": "BSE filing 2026-07-31 (2026-07-31_fcf7fa52-75eb-4c2c-bc58-54222b916821.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-06-30'; printed 54,378.49 (INR lakh)",
+     "published_date": "2026-07-31",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 4235.767,
+     "cross_check": {
+      "bse_results_db_inr_mn": 5437.85,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532757&Company=Voltamp-Transformers-Ltd&qtr=130.00&RType="
+     }
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2017-04-01",
+   "type": "restatement",
+   "note": "Ind AS adoption from FY2018 (Q1 FY2018 filing onward); FY2016-FY2017 quarters are IGAAP net-of-excise as originally filed",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/8/1612ea3a-7d00-453d-9329-a708dd04c199.pdf"
+  },
+  {
+   "date": "2017-07-01",
+   "type": "restatement",
+   "note": "GST introduced; revenue thereafter excludes indirect taxes. FY2018Q1 uses company-printed revenue excluding excise duty",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/538acead-49ea-4cf4-b14f-1430c3a15aee.pdf"
+  },
+  {
+   "date": "2018-04-01",
+   "type": "restatement",
+   "note": "Ind AS 115 adopted (cumulative catch-up); small regroupings visible in later comparatives (e.g. FY2018Q4 comparative 21,933.54 vs 21,956.55 lakh originally)",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1ac60d3c-f666-4e01-982d-11144ea8dab9.pdf"
+  }
+ ],
+ "profile": {
+  "products": "Oil-filled power transformers up to 160 MVA / 220 kV (Makarpura; new Jarod plant for up to 250 MVA 220 kV, 6,000 MVA p.a. first phase), oil-filled distribution transformers, resin-impregnated and cast-resin dry-type transformers, unitised sub-stations, induction-furnace and lighting transformers, ring main units. Single segment 'Electrical Transformers' (NIC 27102, 100% of turnover). FY2025-26 sales volume 16,514 MVA; order book INR 1,510 cr (12,377 MVA). Existing capacity 14,000 MVA + 6,000 MVA under commissioning (Jul-2026 board outcome).",
+  "plants": [
+   {
+    "country": "IN",
+    "city": "Makarpura, Vadodara, Gujarat (Unit I)",
+    "products": "Oil-filled power transformers up to 220 kV",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4d6b1053-a606-46d0-b6f2-ec0051687d00.pdf"
+   },
+   {
+    "country": "IN",
+    "city": "Vadadala, Savli, Vadodara, Gujarat (Unit II)",
+    "products": "Distribution transformers, dry-type (cast resin) transformers, USS/RMU",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4d6b1053-a606-46d0-b6f2-ec0051687d00.pdf"
+   },
+   {
+    "country": "IN",
+    "city": "Jarod, Vadodara, Gujarat (new)",
+    "products": "Power transformers up to 250 MVA 220 kV (capex INR 200 cr, 6,000 MVA p.a.)",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4d6b1053-a606-46d0-b6f2-ec0051687d00.pdf"
+   }
+  ],
+  "end_markets": "Indian private industrial users, EPC contractors, infrastructure, data centres and green energy; exports ~3.24% of FY2025-26 turnover (AR BRSR 'contribution of exports'). Principally a domestic capex play.",
+  "export_routes": [
+   "IN->Middle East",
+   "IN->Africa"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "850433",
+   "850434",
+   "853720"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "india_iip_capgoods",
+    "why": "Indian capital-goods production — Voltamp sells mostly to private industrial/EPC capex projects",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "india_iip_27",
+    "why": "Indian electrical-equipment production cycle",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "in_exp_850422_p0",
+    "why": "India 650-10,000 kVA liquid transformer exports — distribution/industrial transformer industry cycle",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "in_exp_850423_p0",
+    "why": "India >10 MVA transformer exports — power-transformer industry tightness",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "india_iip_27_b2223",
+    "why": "Same as india_iip_27 on the new 2022-23 base (short history; for recent quarters)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "india_wpi_transformers",
+    "why": "WISHLIST: Office of the Economic Adviser WPI item index for transformers (monthly) — price component of Voltamp revenue",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [],
+ "collection_notes": [
+  "fiscal_key 규칙: 인도 회계연도(4월~3월)를 '끝나는 해'로 표기 — FY2026Q1 = 2025-04-01~2025-06-30, FY2026Q4 = 2026-01-01~2026-03-31. period_end 는 원문 결산일(달력 분기말).",
+  "단위: INR million. 원문은 INR lakh(=0.1 million) 또는 crore(=10 million) 로 인쇄 — 배율 환산만 했고 (lakh×0.1, crore×10, XBRL INR÷1e6) 통화 환산·추정 없음. printed 값은 locator 에 원문 그대로 남김.",
+  "인도 Reg-33 결산의 1~3월(4분기) 3개월 칸은 '연간 감사치 − 12월 누계 공시치' 로 회사가 산출·인쇄한 balancing figure 이다. 인쇄된 3개월 칸을 그대로 쓰므로 method=direct_reported_quarter.",
+  "검증: 모든 분기 값은 (1) BSE 결과 DB(Corp_detailedResult / 연결 API, Rs. million) (2) NSE XBRL·NSE 결과 레코드 중 가용한 거래소 구조화 공시와 대조했고, (3) BSE 원문 PDF(텍스트층·pdfplumber·tesseract OCR)에서 같은 숫자를 찾으면 그 PDF를 source_url 로 둔다(verification 필드). PDF 셀을 읽지 못한 분기는 거래소 구조화 공시(XBRL/NSE 레코드/BSE DB)를 source_url 로 둔다(CONTRACT §0-1 예외).",
+  "2017-07-01 GST 도입: 그 이전 매출(IGAAP 'Net sales (net of excise duty)' 또는 Ind AS 총액)은 물품세 포함 여부가 다르다. 2017-06 분기는 회사가 '물품세 제외 매출'을 인쇄한 경우에만 그 값을 쓰고, 아니면 비운다. FY2018Q1~FY2019Q1 공시의 전년동기 비교칸(Ind AS 재작성·물품세 포함)은 prior_year_comparative 로 싣지 않는다.",
+  "FY2017Q4: value from exchange structured filing only (bse_db); PDF cell not machine-verified",
+  "FY2018Q2: PY column 17447.81 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2018Q3: PY column 17053.92 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2018Q4: PY column 10.27 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2019Q1: PY column 14307.59 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2022Q2: PY column 16024.66 != prior point 1602.458 (kind=ocr, excise_window=False) -> not stored",
+  "FY2023Q2: PY column 26.31998 deviates >2% from prior point 2631.998 -> not stored",
+  "범위: 연결 결산 공시 없음(NSE·BSE 결과 목록이 standalone 만) — 별도(standalone)=회사 전체. 결산서 note: \"The activities of the Company relate to only one segment i.e. Electrical Transformers\" → revenue_segment 불필요, primary_target=revenue_total.",
+  "orders: 분기 수주(order intake) 공시 없음 — 보도자료에 수주잔고(order backlog, 예: FY26 말 INR 1,200 cr / 10,270 MVA)만 간헐적으로 있어 orders_segment 미작성.",
+  "원문: BSE 공시 PDF 대부분이 스캔본(회사 OCR 텍스트층) — pdfplumber/tesseract 로 읽고 거래소 구조화 값과 일치할 때만 PDF 검증으로 표기.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2016Q4,FY2018Q1-Q4,FY2019Q1,FY2020Q4,FY2021Q1-Q4,FY2022Q1-Q4,FY2023Q1,FY2026Q3-Q4,FY2027Q1 (incl. prior_year_comparative) against BSE PDFs (text layer, tesseract) and 9M/H1 arithmetic; fixed 0."
+ ]
+}

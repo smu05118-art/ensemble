@@ -1,0 +1,1022 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "JERYONG",
+ "grid_node": "KGRID_033100",
+ "name": "제룡전기",
+ "ticker": "033100 KS",
+ "listed": true,
+ "currency": "KRW",
+ "unit": "million",
+ "accounting_basis": "K-IFRS",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar quarters (Dec FYE); 분기 말일 03-31/06-30/09-30/12-31",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "매출액(별도 — 종속기업 없음, 연결재무제표 미작성)",
+   "scope": "standalone",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 11255.06934,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20160513003661",
+     "locator": "분기보고서 (2016.03) [20160513003661] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2016-05-13",
+     "prior_year_comparative": 17256.019829
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 8264.850557,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20160812000901",
+     "locator": "반기보고서 (2016.06) [20160812000901] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2016-08-12",
+     "prior_year_comparative": 16779.158687
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 7997.280801,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20161111000704",
+     "locator": "분기보고서 (2016.09) [20161111000704] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2016-11-11",
+     "prior_year_comparative": 13865.042203
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 12361.248659,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170331002891",
+     "locator": "사업보고서 (2016.12) [20170331002891] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기(연간)열 39,878.449 − 분기보고서 (2016.09) [20161111000704] 당기 누적 누계 27,517.201 (단위 원 → 백만원 환산)",
+     "published_date": "2017-03-31",
+     "prior_year_comparative": 15488.047377,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(63,388.268 − 47,900.221)"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 11351.525082,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170515000908",
+     "locator": "분기보고서 (2017.03) [20170515000908] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-05-15",
+     "prior_year_comparative": 11255.06934
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 13027.208938,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170811000503",
+     "locator": "반기보고서 (2017.06) [20170811000503] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-08-11",
+     "prior_year_comparative": 8264.850557
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 12505.925573,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20171113000255",
+     "locator": "분기보고서 (2017.09) [20171113000255] III. 재무에 관한 사항 > 4. 재무제표 — 행 '수익(매출액)', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2017-11-13",
+     "prior_year_comparative": 7997.280801
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 10773.703655,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180402002125",
+     "locator": "사업보고서 (2017.12) [20180402002125] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기(연간)열 47,658.363 − 분기보고서 (2017.09) [20171113000255] 당기 누적 누계 36,884.66 (단위 원 → 백만원 환산)",
+     "published_date": "2018-04-02",
+     "prior_year_comparative": 12361.248659,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(39,878.449 − 27,517.201)"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 7703.728313,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180514004514",
+     "locator": "분기보고서 (2018.03) [20180514004514] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-05-14",
+     "prior_year_comparative": 11351.525082
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 8021.083559,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180814001151",
+     "locator": "반기보고서 (2018.06) [20180814001151] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-08-14",
+     "prior_year_comparative": 13027.208938
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 12900.185489,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20181114000022",
+     "locator": "분기보고서 (2018.09) [20181114000022] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2018-11-14",
+     "prior_year_comparative": 12505.925573
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 13868.549468,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190401001891",
+     "locator": "사업보고서 (2018.12) [20190401001891] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기(연간)열 42,493.547 − 분기보고서 (2018.09) [20181114000022] 당기 누적 누계 28,624.997 (단위 원 → 백만원 환산)",
+     "published_date": "2019-04-01",
+     "prior_year_comparative": 10773.703655,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(47,658.363 − 36,884.66)"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 7506.688035,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190513000395",
+     "locator": "분기보고서 (2019.03) [20190513000395] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-05-13",
+     "prior_year_comparative": 7703.728313
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 8678.289597,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190814000379",
+     "locator": "[기재정정] 반기보고서 (2019.06) [20190814000379] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-08-14",
+     "prior_year_comparative": 8021.083559
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 11197.875585,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20191113000112",
+     "locator": "분기보고서 (2019.09) [20191113000112] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2019-11-13",
+     "prior_year_comparative": 12900.185489
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 17831.942497,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200330001200",
+     "locator": "사업보고서 (2019.12) [20200330001200] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기(연간)열 45,214.796 − 분기보고서 (2019.09) [20191113000112] 당기 누적 누계 27,382.853 (단위 원 → 백만원 환산)",
+     "published_date": "2020-03-30",
+     "prior_year_comparative": 13868.549468,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(42,493.547 − 28,624.997)"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 7835.115964,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200514000692",
+     "locator": "분기보고서 (2020.03) [20200514000692] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-05-14",
+     "prior_year_comparative": 7506.688035
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 12218.112618,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200814000182",
+     "locator": "[기재정정] 반기보고서 (2020.06) [20200814000182] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-08-14",
+     "prior_year_comparative": 8678.289597
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 10810.984448,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20201113000215",
+     "locator": "분기보고서 (2020.09) [20201113000215] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2020-11-13",
+     "prior_year_comparative": 11197.875585
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 13331.561505,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210315000260",
+     "locator": "사업보고서 (2020.12) [20210315000260] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기(연간)열 44,195.775 − 분기보고서 (2020.09) [20201113000215] 당기 누적 누계 30,864.213 (단위 원 → 백만원 환산)",
+     "published_date": "2021-03-15",
+     "prior_year_comparative": 17831.942497,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(45,214.796 − 27,382.853)"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 9885.702158,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210514000560",
+     "locator": "분기보고서 (2021.03) [20210514000560] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-05-14",
+     "prior_year_comparative": 7835.115964
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 12950.70836,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210813000320",
+     "locator": "반기보고서 (2021.06) [20210813000320] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-08-13",
+     "prior_year_comparative": 12218.112618
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 11893.492805,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20211112000125",
+     "locator": "분기보고서 (2021.09) [20211112000125] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2021-11-12",
+     "prior_year_comparative": 10810.984448
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 14053.221352,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220316001029",
+     "locator": "사업보고서 (2021.12) [20220316001029] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기(연간)열 48,783.125 − 분기보고서 (2021.09) [20211112000125] 당기 누적 누계 34,729.903 (단위 원 → 백만원 환산)",
+     "published_date": "2022-03-16",
+     "prior_year_comparative": 13331.561505,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(44,195.775 − 30,864.213)"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 9569.391845,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220513000167",
+     "locator": "분기보고서 (2022.03) [20220513000167] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-05-13",
+     "prior_year_comparative": 9885.702158
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 13084.199629,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220816000120",
+     "locator": "반기보고서 (2022.06) [20220816000120] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-08-16",
+     "prior_year_comparative": 12950.70836
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 25033.417189,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20221111000024",
+     "locator": "분기보고서 (2022.09) [20221111000024] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2022-11-11",
+     "prior_year_comparative": 11893.492805
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 38374.147248,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230331000177",
+     "locator": "[기재정정] 사업보고서 (2022.12) [20230331000177] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기(연간)열 86,061.156 − 분기보고서 (2022.09) [20221111000024] 당기 누적 누계 47,687.009 (단위 원 → 백만원 환산)",
+     "published_date": "2023-03-31",
+     "prior_year_comparative": 14053.221352,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(48,783.125 − 34,729.903)"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 30382.653356,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230512000118",
+     "locator": "분기보고서 (2023.03) [20230512000118] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-05-12",
+     "prior_year_comparative": 9569.391845
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 45977.680501,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230811000079",
+     "locator": "반기보고서 (2023.06) [20230811000079] III. 재무에 관한 사항 > 4. 재무제표 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-08-11",
+     "prior_year_comparative": 13084.199629
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 41808.437803,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20231117000204",
+     "locator": "[기재정정] 분기보고서 (2023.09) [20231117000204] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2023-11-17",
+     "prior_year_comparative": 25033.417189
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 65772.373179,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240318000327",
+     "locator": "사업보고서 (2023.12) [20240318000327] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기(연간)열 183,941.145 − [기재정정] 분기보고서 (2023.09) [20231117000204] 당기 누적 누계 118,168.772 (단위 원 → 백만원 환산)",
+     "published_date": "2024-03-18",
+     "prior_year_comparative": 38374.147248,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(86,061.156 − 47,687.009)"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 64960.591516,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240513000195",
+     "locator": "분기보고서 (2024.03) [20240513000195] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-05-13",
+     "prior_year_comparative": 30382.653356
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 77572.569346,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240809000501",
+     "locator": "반기보고서 (2024.06) [20240809000501] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-08-09",
+     "prior_year_comparative": 45977.680501
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 69436.149824,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241111000144",
+     "locator": "분기보고서 (2024.09) [20241111000144] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2024-11-11",
+     "prior_year_comparative": 41808.437803
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 50766.740806,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250317000538",
+     "locator": "사업보고서 (2024.12) [20250317000538] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기(연간)열 262,736.051 − 분기보고서 (2024.09) [20241111000144] 당기 누적 누계 211,969.311 (단위 원 → 백만원 환산)",
+     "published_date": "2025-03-17",
+     "prior_year_comparative": 65772.373179,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(183,941.145 − 118,168.772)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 50202.511817,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250513000541",
+     "locator": "분기보고서 (2025.03) [20250513000541] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-05-13",
+     "prior_year_comparative": 64960.591516
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 60357.879475,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250813000398",
+     "locator": "반기보고서 (2025.06) [20250813000398] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-08-13",
+     "prior_year_comparative": 77572.569346
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 69750.099557,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251112000086",
+     "locator": "분기보고서 (2025.09) [20251112000086] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2025-11-12",
+     "prior_year_comparative": 69436.149824
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 43706.522074,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260602000220",
+     "locator": "[기재정정] 사업보고서 (2025.12) [20260602000220] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기(연간)열 224,017.013 − 분기보고서 (2025.09) [20251112000086] 당기 누적 누계 180,310.491 (단위 원 → 백만원 환산)",
+     "published_date": "2026-06-02",
+     "prior_year_comparative": 50766.740806,
+     "prior_year_comparative_note": "같은 두 문서의 전년 비교열 차분(262,736.051 − 211,969.311)"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 34673.49509,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000274",
+     "locator": "분기보고서 (2026.03) [20260513000274] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-05-13",
+     "prior_year_comparative": 50202.511817
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 35649.312266,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813001320",
+     "locator": "반기보고서 (2026.06) [20260813001320] III. 재무에 관한 사항 > 4-2. 포괄손익계산서 — 행 '매출액', 당기 3개월열 (단위 원 → 백만원 환산)",
+     "published_date": "2026-08-13",
+     "prior_year_comparative": 60357.879475
+    }
+   ]
+  },
+  "revenue_export": {
+   "label_ko": "수출 매출(매출실적 표 합계·수출 행, 누계 차분)",
+   "scope": "geographic",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "수출(Export) — II. 사업의 내용 매출실적 표 합계-수출 행(연결 매출과 같은 범위, 표 합계=손익계산서 누계 일치 확인)",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 948.078,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20160513003661",
+     "locator": "분기보고서 (2016.03) [20160513003661] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제31기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2016-05-13"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 382.863,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20160812000901",
+     "locator": "반기보고서 (2016.06) [20160812000901] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제31기 반기 금액'열 1,330.941 − 분기보고서 (2016.03) [20160513003661] '제31기 1분기 금액' 누계 948.078 (단위 천원 → 백만원)",
+     "published_date": "2016-08-12"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 209.917,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20161111000704",
+     "locator": "분기보고서 (2016.09) [20161111000704] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제31기 3분기 금액'열 1,540.858 − 반기보고서 (2016.06) [20160812000901] '제31기 반기 금액' 누계 1,330.941 (단위 천원 → 백만원)",
+     "published_date": "2016-11-11"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 544.556,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170331002891",
+     "locator": "사업보고서 (2016.12) [20170331002891] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제31기 금액'열 2,085.414 − 분기보고서 (2016.09) [20161111000704] '제31기 3분기 금액' 누계 1,540.858 (단위 천원 → 백만원)",
+     "published_date": "2017-03-31"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 431.855,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170515000908",
+     "locator": "분기보고서 (2017.03) [20170515000908] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제32기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2017-05-15"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 1572.939,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20170811000503",
+     "locator": "반기보고서 (2017.06) [20170811000503] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제32기 반기 금액'열 2,004.794 − 분기보고서 (2017.03) [20170515000908] '제32기 1분기 금액' 누계 431.855 (단위 천원 → 백만원)",
+     "published_date": "2017-08-11"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 218.587,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20171113000255",
+     "locator": "분기보고서 (2017.09) [20171113000255] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제32기 3분기 금액'열 2,223.381 − 반기보고서 (2017.06) [20170811000503] '제32기 반기 금액' 누계 2,004.794 (단위 천원 → 백만원)",
+     "published_date": "2017-11-13"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 622.317,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180402002125",
+     "locator": "사업보고서 (2017.12) [20180402002125] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제32기 금액'열 2,845.698 − 분기보고서 (2017.09) [20171113000255] '제32기 3분기 금액' 누계 2,223.381 (단위 천원 → 백만원)",
+     "published_date": "2018-04-02"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 75.226,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180514004514",
+     "locator": "분기보고서 (2018.03) [20180514004514] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제33기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2018-05-14"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 681.718,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20180814001151",
+     "locator": "반기보고서 (2018.06) [20180814001151] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제33기 반기 금액'열 756.944 − 분기보고서 (2018.03) [20180514004514] '제33기 1분기 금액' 누계 75.226 (단위 천원 → 백만원)",
+     "published_date": "2018-08-14"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 853.973,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20181114000022",
+     "locator": "분기보고서 (2018.09) [20181114000022] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제33기 3분기 금액'열 1,610.917 − 반기보고서 (2018.06) [20180814001151] '제33기 반기 금액' 누계 756.944 (단위 천원 → 백만원)",
+     "published_date": "2018-11-14"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 142.483,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190401001891",
+     "locator": "사업보고서 (2018.12) [20190401001891] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제33기 금액'열 1,753.4 − 분기보고서 (2018.09) [20181114000022] '제33기 3분기 금액' 누계 1,610.917 (단위 천원 → 백만원)",
+     "published_date": "2019-04-01"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 83.546,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190513000395",
+     "locator": "분기보고서 (2019.03) [20190513000395] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제34기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2019-05-13"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 177.898,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20190814000379",
+     "locator": "[기재정정] 반기보고서 (2019.06) [20190814000379] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제34기 반기 금액'열 261.444 − 분기보고서 (2019.03) [20190513000395] '제34기 1분기 금액' 누계 83.546 (단위 천원 → 백만원)",
+     "published_date": "2019-08-14"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 1680.351,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20191113000112",
+     "locator": "분기보고서 (2019.09) [20191113000112] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제34기 3분기 금액'열 1,941.795 − [기재정정] 반기보고서 (2019.06) [20190814000379] '제34기 반기 금액' 누계 261.444 (단위 천원 → 백만원)",
+     "published_date": "2019-11-13"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 370.462,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200330001200",
+     "locator": "사업보고서 (2019.12) [20200330001200] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제34기 금액'열 2,312.257 − 분기보고서 (2019.09) [20191113000112] '제34기 3분기 금액' 누계 1,941.795 (단위 천원 → 백만원)",
+     "published_date": "2020-03-30"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 674.889,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200514000692",
+     "locator": "분기보고서 (2020.03) [20200514000692] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제35기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2020-05-14"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 1464.394,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20200814000182",
+     "locator": "[기재정정] 반기보고서 (2020.06) [20200814000182] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제35기 반기 금액'열 2,139.283 − 분기보고서 (2020.03) [20200514000692] '제35기 1분기 금액' 누계 674.889 (단위 천원 → 백만원)",
+     "published_date": "2020-08-14"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 2408.662,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20201113000215",
+     "locator": "분기보고서 (2020.09) [20201113000215] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제35기 3분기 금액'열 4,547.945 − [기재정정] 반기보고서 (2020.06) [20200814000182] '제35기 반기 금액' 누계 2,139.283 (단위 천원 → 백만원)",
+     "published_date": "2020-11-13"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 4802.538,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210315000260",
+     "locator": "사업보고서 (2020.12) [20210315000260] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제35기 금액'열 9,350.483 − 분기보고서 (2020.09) [20201113000215] '제35기 3분기 금액' 누계 4,547.945 (단위 천원 → 백만원)",
+     "published_date": "2021-03-15"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 3621.938,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210514000560",
+     "locator": "분기보고서 (2021.03) [20210514000560] II. 사업의 내용 > II. 사업의 내용 > 매출실적 표 — 행 '합계·수출', '제36기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2021-05-14"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 2553.185,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20210813000320",
+     "locator": "반기보고서 (2021.06) [20210813000320] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제36기 반기 금액'열 6,175.123 − 분기보고서 (2021.03) [20210514000560] '제36기 1분기 금액' 누계 3,621.938 (단위 천원 → 백만원)",
+     "published_date": "2021-08-13"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 3812.893,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20211112000125",
+     "locator": "분기보고서 (2021.09) [20211112000125] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제36기 3분기 금액'열 9,988.016 − 반기보고서 (2021.06) [20210813000320] '제36기 반기 금액' 누계 6,175.123 (단위 천원 → 백만원)",
+     "published_date": "2021-11-12"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 2299.532,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220316001029",
+     "locator": "사업보고서 (2021.12) [20220316001029] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제36기 금액'열 12,287.548 − 분기보고서 (2021.09) [20211112000125] '제36기 3분기 금액' 누계 9,988.016 (단위 천원 → 백만원)",
+     "published_date": "2022-03-16"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 1412.739,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220513000167",
+     "locator": "분기보고서 (2022.03) [20220513000167] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제37기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2022-05-13"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 4236.226,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20220816000120",
+     "locator": "반기보고서 (2022.06) [20220816000120] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제37기 반기 금액'열 5,648.965 − 분기보고서 (2022.03) [20220513000167] '제37기 1분기 금액' 누계 1,412.739 (단위 천원 → 백만원)",
+     "published_date": "2022-08-16"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 18060.955,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20221111000024",
+     "locator": "분기보고서 (2022.09) [20221111000024] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제37기 3분기 금액'열 23,709.92 − 반기보고서 (2022.06) [20220816000120] '제37기 반기 금액' 누계 5,648.965 (단위 천원 → 백만원)",
+     "published_date": "2022-11-11"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 24249.398,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230331000177",
+     "locator": "[기재정정] 사업보고서 (2022.12) [20230331000177] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제37기 금액'열 47,959.318 − 분기보고서 (2022.09) [20221111000024] '제37기 3분기 금액' 누계 23,709.92 (단위 천원 → 백만원)",
+     "published_date": "2023-03-31"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 26248.507,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230512000118",
+     "locator": "분기보고서 (2023.03) [20230512000118] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제38기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2023-05-12"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 38857.725,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230811000079",
+     "locator": "반기보고서 (2023.06) [20230811000079] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제38기 반기 금액'열 65,106.232 − 분기보고서 (2023.03) [20230512000118] '제38기 1분기 금액' 누계 26,248.507 (단위 천원 → 백만원)",
+     "published_date": "2023-08-11"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 35477.456,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20231117000204",
+     "locator": "[기재정정] 분기보고서 (2023.09) [20231117000204] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제38기 3분기 금액'열 100,583.688 − 반기보고서 (2023.06) [20230811000079] '제38기 반기 금액' 누계 65,106.232 (단위 천원 → 백만원)",
+     "published_date": "2023-11-17"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 49613.156,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240318000327",
+     "locator": "사업보고서 (2023.12) [20240318000327] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제38기 금액'열 150,196.844 − [기재정정] 분기보고서 (2023.09) [20231117000204] '제38기 3분기 금액' 누계 100,583.688 (단위 천원 → 백만원)",
+     "published_date": "2024-03-18"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 60982.362,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240513000195",
+     "locator": "분기보고서 (2024.03) [20240513000195] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제39기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2024-05-13"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 69656.958,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240809000501",
+     "locator": "반기보고서 (2024.06) [20240809000501] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제39기 반기 금액'열 130,639.32 − 분기보고서 (2024.03) [20240513000195] '제39기 1분기 금액' 누계 60,982.362 (단위 천원 → 백만원)",
+     "published_date": "2024-08-09"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 63694.886,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241111000144",
+     "locator": "분기보고서 (2024.09) [20241111000144] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제39기 3분기 금액'열 194,334.206 − 반기보고서 (2024.06) [20240809000501] '제39기 반기 금액' 누계 130,639.32 (단위 천원 → 백만원)",
+     "published_date": "2024-11-11"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 40155.475,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250317000538",
+     "locator": "사업보고서 (2024.12) [20250317000538] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제39기 금액'열 234,489.681 − 분기보고서 (2024.09) [20241111000144] '제39기 3분기 금액' 누계 194,334.206 (단위 천원 → 백만원)",
+     "published_date": "2025-03-17"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 46722.587,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250513000541",
+     "locator": "분기보고서 (2025.03) [20250513000541] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제40기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2025-05-13"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 53404.579,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250813000398",
+     "locator": "반기보고서 (2025.06) [20250813000398] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제40기 반기 금액'열 100,127.166 − 분기보고서 (2025.03) [20250513000541] '제40기 1분기 금액' 누계 46,722.587 (단위 천원 → 백만원)",
+     "published_date": "2025-08-13"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 63361.375,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251112000086",
+     "locator": "분기보고서 (2025.09) [20251112000086] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제40기 3분기 금액'열 163,488.541 − 반기보고서 (2025.06) [20250813000398] '제40기 반기 금액' 누계 100,127.166 (단위 천원 → 백만원)",
+     "published_date": "2025-11-12"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 35431.65,
+     "method": "annual_minus_9m",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260602000220",
+     "locator": "[기재정정] 사업보고서 (2025.12) [20260602000220] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제40기 금액'열 198,920.191 − 분기보고서 (2025.09) [20251112000086] '제40기 3분기 금액' 누계 163,488.541 (단위 천원 → 백만원)",
+     "published_date": "2026-06-02"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 28689.564,
+     "method": "direct_reported_quarter",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000274",
+     "locator": "분기보고서 (2026.03) [20260513000274] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제41기 1분기 금액'열 (단위 천원 → 백만원)",
+     "published_date": "2026-05-13"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 30164.805,
+     "method": "ytd_difference",
+     "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813001320",
+     "locator": "반기보고서 (2026.06) [20260813001320] II. 사업의 내용 > 4. 매출 및 수주상황 > 매출실적 표 — 행 '합계·수출', '제41기 반기 금액'열 58,854.369 − 분기보고서 (2026.03) [20260513000274] '제41기 1분기 금액' 누계 28,689.564 (단위 천원 → 백만원)",
+     "published_date": "2026-08-13"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [],
+ "profile": {
+  "products": "중전기 단일 부문 — 변압기 100%(주상변압기, 단상·3상 PAD 변압기 등 배전용; 과거 170kV GIS·철도 변압기 공사). 2025년 매출 2,240억 중 수출 1,989억(89%). 미국 유틸리티(PSE&G, AEP 등 수주 공시) 향 배전변압기가 주력, 154kV 전력용 변압기 개발 추진.",
+  "plants": [
+   {
+    "country": "KR",
+    "city": "대전 대덕구 신일서로(대전공장)",
+    "products": "변압기(생산실적 전량)",
+    "source_url": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260813001320&dcmNo=11524916&eleId=12&offset=90977&length=39749&dtd=dart4.xsd"
+   }
+  ],
+  "end_markets": "미국 전력 유틸리티(배전망 교체), 국내 한국전력(직·간접)·공공 인프라",
+  "export_routes": [
+   "KR->US",
+   "KR domestic"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_850421_p410",
+    "why": "미국의 한국산 유입식 ≤650kVA 수입 — 주상·PAD 변압기(제룡 주력)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "kr_exp_850421_p842",
+    "why": "한국 측 HS850421 대미 수출(미러)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "trass_jeryong_gwangjin",
+    "why": "서울 광진구(본사 소재지) 신고 수출 — 제룡 기업 근접 경로(2024-12까지)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "trass_jeryong_gwangjin_8504219020",
+    "why": "광진구 신고 HSK 8504219020(100–650kVA) 수출(2024-12까지)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "kre_8504219010",
+    "why": "관세청 잠정 HSK 8504219010(≤100kVA) 수출 — 주상변압기 속보",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "kre_8504219020",
+    "why": "관세청 잠정 HSK 8504219020(100–650kVA) 수출 — PAD 속보",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850422_p410",
+    "why": "미국의 한국산 650–10,000kVA 수입 — 3상 대형 PAD 일부",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850421_p0",
+    "why": "미국 HS850421 총수입 — 미국 배전변압기 수요",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_PCU335311335311",
+    "why": "미국 전력·특수 변압기 PPI — 달러 판가 상승이 원화 매출에 전가(가격 효과)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_A35CNO",
+    "why": "미국 전기장비(NAICS 3353) 신규수주 — 미국 배전·전력기기 수요 선행",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_TLPWRCONS",
+    "why": "미국 전력 건설투자 — 송배전·발전 설비 투자 사이클",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   }
+  ]
+ },
+ "gaps": [],
+ "collection_notes": [
+  "revenue_total: 연결 대상 종속기업 없음 — 별도 손익계산서 매출(3개월 열/연간−3분기 누계).",
+  "revenue_export: 매출실적 표 합계-수출 행(천원→백만원) 누계 차분; 표 합계=손익계산서 누계 일치 확인. 2022년 3분기부터 미국 배전변압기 수출 급증(수출 비중 2021 25% → 2025 89%).",
+  "수주상황은 2024년부터 품목 합계 잔고만(신규수주 없음), 2023년 이전은 프로젝트별 목록 — orders_segment 없음.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2016Q3,FY2016Q4,FY2018Q2,FY2022Q3,FY2022Q4,FY2023Q2,FY2025Q3,FY2025Q4,FY2026Q2 (별도 손익계산서 3개월·누계·연간열 재추출, 파생 Q4 재계산) + revenue_export FY2026Q2(천원 단위 확인); fixed 0."
+ ]
+}

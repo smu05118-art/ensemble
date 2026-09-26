@@ -1,0 +1,256 @@
+{
+ "accounting_basis": null,
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "원문 텍스트 사본: data/raw/actuals/ERMCO/ (회사 보도자료·연혁·제품 페이지, TNECD 2019, TECA 2024, Mill Point 2024, Lincoln 2022, AECI 매거진 2023).",
+  "2024-11 확장(400명, $54.1M NMTC)은 테네시 전력협동조합협회(TECA) 기사 — 회사 원문 보도자료 미발견.",
+  "프록시 경로는 공장·제품 근거로만 사전등록(상관 미확인). Jefferson Electric(건식)은 2024-10-29 매각되어 건식 관련 프록시는 등록하지 않음.",
+  "verify 2026-09-25: checked profile claims (no targets — private): 9-millionth release (live, datePublished 2025-06-23; ceremony 2025-06-20; >$70M; 160,000 sq ft Bristol WI; >3,500 staff — OK), Maricopa 2026-01-21 (566,121 sq ft, Waddell, >500 jobs, 2027 — OK), Lincoln Spire note (live datePublished 2022-12-19 → 2022-12 OK; >1,000 staff, 5 facilities GA/TN/TX/CA/MX — OK), Pioneer substation & 3-ph pad pages (live body: up to 10 MVA at 69 kV/350 kV BIL — OK; NB page meta-description says 25 MVA, body says 10 MVA — body kept), APS Supplier Excellence Award 2025 & partnership since 2021 (live — OK), Mill Point/Voltaris 2024-10-29, TNECD 2019, TECA 2024, proxy_hint existence (10 collected, 2 wishlist — OK). fixed 1: 8-millionth/258-vs-27-month claim had no listed source (Arkansas Living Aug-2023 added); gaps added for Antioch/Bristol and Mississauga."
+ ],
+ "currency": null,
+ "fiscal_year_end_month": null,
+ "gaps": [
+  "전 기간: AECI(협동조합) 100% 자회사 — ERMCO 매출·수주 공시 없음. AECI 재무제표 공개본 미발견. 타깃 없음 → targets={}.",
+  "Spire 인수 정확 일자 미기재(2022-12 로 기록; Lincoln 2022 거래 노트·AECI 매거진 2023-02).",
+  "Spire 가 밝힌 텍사스 시설은 현재 ERMCO Power 소재지 목록에 없음 — 현황 미확인.",
+  "ERMCO Components 소재지: ermcopower.com 소재지·솔루션 페이지의 두 판본이 Antioch, IL(905 Anita Ave) 과 Bristol, WI 를 각각 표기 — 이전 여부 원문 미확인.",
+  "ermcopower.com 소재지 목록의 Mississauga, ON 주소(2600 Skymark Ave / 5255 Orbitor Dr)는 기능 미기재 — 생산 공장으로 넣지 않음."
+ ],
+ "grid_node": "GRID_ERMCO",
+ "id": "ERMCO",
+ "listed": false,
+ "listing_status": "private — \"wholly owned subsidiary of Arkansas Electric Cooperatives, Inc. (AECI)\" (every ERMCO release; TNECD 2019). No exchange listing, no public financial statements found.",
+ "name": "ERMCO, Inc. (Electric Research and Manufacturing Cooperative, Inc.)",
+ "primary_target": null,
+ "profile": {
+  "capacity_indicators": [
+   "1972: 30 units/week → 1988: 70K/yr → 2024: >650,000 transformers/yr; >9,500 shipped weekly (company pages)",
+   "8 millionth unit (Aug-2023 AECI magazine) → 9 millionth (2025-06-20 ceremony); 1st million took 258 months, 8th took 27 months — source: https://arkansaslivingmagazine.com/story/ermco-inc-celebrates-8-million-milestone/",
+   "Employees: 30 (1972) → 1,450+ Dyersburg (2021) → ~2,000 (Nov-2024) → ~3,500 incl. affiliates (2025–26) → 3,700+ (2026 history page)"
+  ],
+  "end_markets": "North American utilities — co-ops, public power, investor-owned utilities (e.g., Exelon received the 9 millionth unit; Arizona Public Service pad-mount supplier since 2021, APS Supplier Excellence Award 2025), renewable energy, commercial & industrial, data centers (via Pioneer/V&F). \"shipping thousands of transformers across the US and Canada\".",
+  "export_routes": [
+   "US domestic (TN/GA plants)",
+   "CA->US (Pioneer Transformers, Granby QC)",
+   "MX->US (components, Reynosa)",
+   "US->CA"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850433",
+   "850434",
+   "853510"
+  ],
+  "owners": "Arkansas Electric Cooperatives, Inc. (AECI), a cooperative owned by Arkansas distribution co-ops — ERMCO is a wholly owned subsidiary.",
+  "plants": [
+   {
+    "city": "Dyersburg, TN (2225 Industrial Rd; 1625 Sylvan Rd; 2000 Hoff Rd)",
+    "country": "US",
+    "products": "flagship: single-phase pad (since 1972) and three-phase pad-mount (since 1999) liquid-filled distribution transformers, pole-mount; tank plant; ~1.5M sq ft campus; three-phase + amorphous-core expansion 2024–26",
+    "source_url": "https://www.ermco-eci.com/ermco-nine-millionth-transformer/"
+   },
+   {
+    "city": "Athens, GA (200 Newton Bridge Rd) — Power Partners",
+    "country": "US",
+    "products": "single/three-phase pole-mounted and single-phase pad-mounted distribution transformers (acq. with Spire 2022-12)",
+    "source_url": "https://powerpartners-usa.com/"
+   },
+   {
+    "city": "Granby, QC (612 Rue Bernard) — Pioneer Transformers",
+    "country": "CA",
+    "products": "three-phase pad-mount & substation transformers up to 10 MVA/69 kV, submersible, network, grounding; customers across the US and Canada; expansion 2025",
+    "source_url": "https://pioneertransformers.com/"
+   },
+   {
+    "city": "Celina, TN (1125 Walnut Ave) — ERMCO Dry Type (V&F Transformer)",
+    "country": "US",
+    "products": "custom dry-type transformers and magnetic components for OEM power equipment, data centers, EV, wind/solar",
+    "source_url": "https://vf-transformer.com/about/"
+   },
+   {
+    "city": "Greeneville, TN (1607 Industrial Rd) — ERMCO Components (ECI)",
+    "country": "US",
+    "products": "transformer components: fuses, arrester disconnects, bushings, breakers (ex-GE Transformer Components)",
+    "source_url": "https://ermcopower.com/solutions/"
+   },
+   {
+    "city": "Reynosa, Tamaulipas (Parque Industrial Reynosa)",
+    "country": "MX",
+    "products": "ERMCO Components / ECI Reynosa (ISO 9001) — transformer components",
+    "source_url": "https://ermcopower.com/about/locations/"
+   },
+   {
+    "city": "Bristol, WI — ECI-Bristol",
+    "country": "US",
+    "products": "158,000–160,000 sq ft facility acquired/launched 2025 (release: \"new ... facility in Bristol, Wisconsin\"); site lists ERMCO Components there",
+    "source_url": "https://www.ermco-eci.com/ermco-nine-millionth-transformer/"
+   },
+   {
+    "city": "Antioch, IL (905 Anita Ave)",
+    "country": "US",
+    "products": "ERMCO Components site in one of two versions of the ERMCO Power locations/solutions pages; the other version names Bristol, WI instead — likely relocated, status unclear",
+    "source_url": "https://ermcopower.com/about/locations/"
+   },
+   {
+    "city": "Raleigh, NC — GridBridge",
+    "country": "US",
+    "products": "power-electronics grid products / advanced learning center (acq. 2017)",
+    "source_url": "https://www.ermco-eci.com/about-us/our-history/"
+   },
+   {
+    "city": "Waddell, Maricopa County, AZ (15784 W Hatcher Rd)",
+    "country": "US",
+    "products": "planned 566,121 sq ft three-phase distribution-transformer plant, operational 2027, >500 jobs",
+    "source_url": "https://www.ermco-eci.com/ermco-to-open-new-manufacturing-facility-in-maricopa-county/"
+   }
+  ],
+  "products": "Liquid-filled (oil) distribution transformers: single-phase pole-mount 1/2–250 kVA (2.4–34.5 kV, 150 kV BIL); three-phase pole/platform-mount; single-phase pad-mount 5–250 kVA (Type 1/2, TrimLine, MicroTrim); three-phase pad-mount 30–3,000 kVA (2.4–35 kV, 150 kV BIL); Eco-Pad junction cabinets (ERMCO Distribution Transformers, Dyersburg TN). Via Spire (2022): Power Partners — single/three-phase pole-mount and single-phase pad-mount (Athens GA, >9M units produced); Pioneer Transformers — three-phase pad-mount and substation transformers up to 10 MVA / 69 kV (350 kV BIL), submersible, network, grounding (Granby QC); ERMCO Dry Type / V&F — custom dry-type transformers & magnetics for OEMs, data centers, EV, renewables (Celina TN). ERMCO Components (ECI) — expulsion fuses, arrester disconnects, HV/LV bushings, circuit breakers, dry-well fuseholders (Greeneville TN; Reynosa MX; Antioch IL/Bristol WI per site). Scale: >650,000 transformers made in 2024; >9,500 shipped weekly; 3,700+ employees (2026).",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35CVS",
+    "role": "primary",
+    "why": "M3 전기장비(NAICS 3353) 출하액 — ERMCO 는 거의 전량 미국 생산(TN·GA) 유입식 배전변압기 → 국내 출하의 대표 표본"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_IPG3353S",
+    "role": "primary",
+    "why": "미국 전기장비(NAICS 3353) 산업생산 — 국내 생산 물량"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35CNO",
+    "role": "diagnostic",
+    "why": "M3 전기장비 신규수주 — 유틸리티 발주 → 출하 선행 기대"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_WPU117409",
+    "role": "diagnostic",
+    "why": "전력·배전 변압기 PPI — 매출 가격 성분"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLPWRCONS",
+    "role": "diagnostic",
+    "why": "미국 전력 건설투자 — 협동조합·공공전력·IOU 배전망 투자 최종수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850421_p0",
+    "role": "diagnostic",
+    "why": "미국 ≤650kVA 유입식 변압기 총수입 — ERMCO 주력(단상 주상·패드, 소형 3상 패드) 시장의 수요 신호로 사전 기대 +(대체가 지배하면 음수 가능 — 기록)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850422_p124",
+    "role": "diagnostic",
+    "why": "캐나다발 650~10,000kVA 대미 수입 — Pioneer Transformers(그랜비 QC, 3상 패드·서브스테이션 ≤10MVA) 경로(그룹 내 비중 작음)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850421_p124",
+    "role": "diagnostic",
+    "why": "캐나다발 ≤650kVA 대미 수입 — Pioneer 소형 3상 패드 경로"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "ca_exp_850422_p842",
+    "role": "diagnostic",
+    "why": "캐나다 측 650~10,000kVA 대미 수출(미러)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "statcan_mfg_salesnsa_335311_QC",
+    "role": "diagnostic",
+    "why": "퀘벡 변압기 제조(NAICS 335311) 판매 — Pioneer 그랜비 공장 지역 통계(원계열)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_HOUST",
+    "role": "wishlist",
+    "why": "(미수집) FRED HOUST 주택착공 — 단상 패드마운트(ERMCO 창업 제품) 지중배전 신규 수요 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "bls_qcew_335311_47045",
+    "role": "wishlist",
+    "why": "(미수집) BLS QCEW NAICS 335311 고용·임금, Dyer County TN(FIPS 47045) 분기 — ERMCO 가 군 최대 고용주라 회사 활동 대용"
+   }
+  ],
+  "sources": [
+   "https://www.ermco-eci.com/ermco-nine-millionth-transformer/",
+   "https://www.ermco-eci.com/ermco-to-open-new-manufacturing-facility-in-maricopa-county/",
+   "https://www.ermco-eci.com/about-us/our-history/",
+   "https://www.ermco-eci.com/about-us/our-company/",
+   "https://www.ermco-eci.com/ermco/three-phase-padmount/",
+   "https://www.ermco-eci.com/ermco/single-phase-polemount/",
+   "https://www.ermco-eci.com/ermco/single-phase-padmount/",
+   "https://www.tn.gov/ecd/news/2019/9/17/governor-lee--commissioner-rolfe-announce-ermco--inc--to-expand-manufacturing-operations-in-dyersburg.html",
+   "https://tnelectric.org/2024/11/04/ermco-to-expand-in-dyersburg/",
+   "https://ermcopower.com/about/locations/",
+   "https://ermcopower.com/solutions/",
+   "https://pioneertransformers.com/",
+   "https://pioneertransformers.com/products/substation-transformers/",
+   "https://pioneertransformers.com/products/three-phase-pad-mounted-transformers/",
+   "https://powerpartners-usa.com/",
+   "https://vf-transformer.com/about/",
+   "https://millpoint.com/mill-point-capital-forms-voltaris-power-llc-through-two-power-solutions-corporate-carve-outs/",
+   "https://www.lincolninternational.com/transactions/mill-point-capital-has-sold-spire-power-solutions-to-ermco/",
+   "https://arkansaslivingmagazine.com/story/ermco-inc-acquires-spire-power-solutions-l-p/",
+   "https://www.ermco-eci.com/aps-supplier-of-the-year/",
+   "https://arkansaslivingmagazine.com/story/ermco-inc-celebrates-8-million-milestone/"
+  ]
+ },
+ "quarter_calendar": null,
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2017",
+   "note": "GridBridge (Raleigh, NC; power-electronics grid solutions) acquired (year only in source).",
+   "source_url": "https://www.ermco-eci.com/about-us/our-history/",
+   "type": "acquisition"
+  },
+  {
+   "date": "2019-09-17",
+   "note": "~$12M expansion into a third Dyersburg building (ex-Caterpillar), 150 jobs; CEO: business up >10%/yr for five years.",
+   "source_url": "https://www.tn.gov/ecd/news/2019/9/17/governor-lee--commissioner-rolfe-announce-ermco--inc--to-expand-manufacturing-operations-in-dyersburg.html",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2022-12",
+   "note": "Spire Power Solutions L.P. (Athens, GA) bought from Mill Point Capital — brands Power Partners (Athens GA pole/pad), Pioneer Transformers (Granby QC), Jefferson Electric (dry-type), V&F Transformer (dry-type OEM); Spire had >1,000 staff and 5 facilities in GA, TN, TX, Canada, Mexico. Month from Lincoln International 2022 deal note + AECI magazine Feb-2023 (\"recently acquired\"); day not stated.",
+   "source_url": "https://www.lincolninternational.com/transactions/mill-point-capital-has-sold-spire-power-solutions-to-ermco/",
+   "type": "acquisition"
+  },
+  {
+   "date": "2024-10-29",
+   "note": "Jefferson Electric (dry-type LV/MV transformers) sold to Mill Point Capital to form Voltaris Power; ERMCO keeps liquid-filled + V&F dry-type.",
+   "source_url": "https://millpoint.com/mill-point-capital-forms-voltaris-power-llc-through-two-power-solutions-corporate-carve-outs/",
+   "type": "divestiture"
+  },
+  {
+   "date": "2024-11-04",
+   "note": "Three-phase Dyersburg capacity expansion in three phases, 400 jobs, backed by $54.1M tax-credit (NMTC) financing; ERMCO ~2,000 staff, >9,500 transformers/week (TECA report).",
+   "source_url": "https://tnelectric.org/2024/11/04/ermco-to-expand-in-dyersburg/",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2025-06-23",
+   "note": "9 millionth transformer; >$70M planned in next 12 months to expand Dyersburg three-phase capacity and add amorphous-steel core lines (DOE 2029 standard); new 160,000 sq ft Bristol, WI facility launched; Granby, QC expansion.",
+   "source_url": "https://www.ermco-eci.com/ermco-nine-millionth-transformer/",
+   "type": "capacity_expansion"
+  },
+  {
+   "date": "2026-01-21",
+   "note": "New 566,121 sq ft three-phase plant in Waddell, Maricopa County, AZ (first west of the Mississippi), >500 jobs, operational 2027.",
+   "source_url": "https://www.ermco-eci.com/ermco-to-open-new-manufacturing-facility-in-maricopa-county/",
+   "type": "capacity_expansion"
+  }
+ ],
+ "targets": {},
+ "ticker": null,
+ "unit": null
+}
