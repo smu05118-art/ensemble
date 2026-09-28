@@ -310,7 +310,7 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
 <a class="sr-only" href="#main">본문으로 바로가기</a>
 <div class="topbar"><div class="topbar-inner"><div class="brand">ENSEMBLE <span>INDUSTRIAL INTELLIGENCE / C08</span></div><div class="top-right"><span class="asof-small note" id="asof-top"></span><button id="theme-toggle" aria-label="화면 테마 전환">◐ 테마</button></div></div></div>
 <main class="wrap" id="main">
-<header class="hero"><div><div class="eyebrow">FROM SILICON TO COMPUTE</div><h1>파운드리·웨이퍼</h1><p class="subtitle">실리콘 웨이퍼에서 파운드리 매출까지. 생산능력·가동률·공정 수율의 연결을 살피고, 실제 매출로 모델을 보정합니다.</p></div><div class="hero-meta"><div id="hero-asof"></div><div>2019 → 2028 Q4</div><div>실장수 기준 · 분기 / 월</div></div></header>
+<header class="hero"><div><div class="eyebrow">FROM SILICON TO COMPUTE</div><h1>FOUNDRY</h1><p class="subtitle">실리콘 웨이퍼에서 파운드리 매출까지. 생산능력·가동률·공정 수율의 연결을 살피고, 실제 매출로 모델을 보정합니다.</p></div><div class="hero-meta"><div id="hero-asof"></div><div>2019 → 2028 Q4</div><div>실장수 기준 · 분기 / 월</div></div></header>
 <nav class="nav" aria-label="페이지 섹션"><a href="#flow-section">01 웨이퍼 흐름</a><a href="#company-section">02 기업·노드</a><a href="#forecast-section">03 매출 포캐스트</a><a href="#wafer-section">04 수요·공급·가격</a><a href="#method-section">05 방법·출처</a></nav>
 <div class="stats" id="summary"><div class="stat"><div class="key">INLINE DATA</div><div class="note">통합 시계열을 읽고 있습니다…</div></div></div>
 <section id="flow-section"><div class="section-head"><div><h2><span class="kicker">01</span>웨이퍼 흐름 지도</h2><p>산지의 공급사 → 소비지의 IDM·파운드리 · 기업을 선택하면 상세로 이동</p></div><div class="tools"><div class="seg" role="group" aria-label="지도 웨이퍼 직경"><button data-map-inch="all" aria-pressed="true">전체</button><button data-map-inch="12" aria-pressed="false">12″ · 300mm</button><button data-map-inch="8" aria-pressed="false">8″ · 200mm</button></div></div></div><div class="panel"><div class="map-grid"><div><div class="map-wrap" id="map-wrap"><svg id="flow-map" viewBox="0 0 1000 620" role="img" aria-label="지역별 실리콘 웨이퍼 공급사와 IDM·파운드리 연결 지도"></svg><div id="map-tooltip" class="tooltip" hidden></div></div><div class="map-bottom"><button id="play-map" aria-label="분기 재생">▶</button><span id="map-quarter" class="period"></span><label class="sr-only" for="quarter-slider">지도 기준 분기</label><input id="quarter-slider" type="range" min="0" max="39" value="29" step="1"><span class="note mono">2028-Q4</span></div><div class="legend"><span><i style="background:var(--blue)"></i>12″ 실장수</span><span><i style="background:var(--amber)"></i>8″ 실장수</span><span><i class="dash"></i>연결·물량 추정</span><span>선 굵기 ∝ kwpm · 전기간 동일 척도</span><span>지역은 본사·주요 거점 분류</span></div></div><aside class="map-aside" id="map-gauges"></aside></div><div class="map-hint" id="flow-note">개별 거래처·계약 물량은 대부분 미공시입니다. 연결은 가능한 부분 배분 시나리오이며, 실제 거래 관계 또는 세계 총물량을 뜻하지 않습니다.</div></div></section>
@@ -322,7 +322,7 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
 </main>
 <noscript><p style="padding:30px">이 페이지의 인라인 데이터와 차트를 보려면 JavaScript를 활성화하세요. 같은 폴더의 foundry_data.json에 데이터가 있습니다.</p></noscript>
 <script id="foundry-data" type="application/json">{
- "asof": "2026-09-28",
+ "asof": "2026-09-29",
  "balance": {
   "by_inch": {
    "12": {
@@ -9084,10 +9084,10 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    },
    "WIN": {
     "n": 22,
-    "rho": 0.608944,
-    "mape": 23.841664,
-    "bias": 7.499122,
-    "mae": 1039740706.236095,
+    "rho": 0.608945,
+    "mape": 23.841416,
+    "bias": 7.498874,
+    "mae": 1039728524.4179131,
     "units": {
      "mape": "%",
      "bias": "%",
@@ -9111,14 +9111,14 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
       "recalibration_factor"
      ],
      "codec": "gzip-base64-json",
-     "values_gzip": "H4sIAAAAAAAC/22WW27kOgxE9zLfuoL4lpYx34PZ/zbu0dhtNRAnQOCw5S6SVSzqz59fOlT++y2/2n4a//32X222mKkiOct7DHebLTNDp2ZUr/CcFi3HWOPfD48l96N0seKTEON1k+Evob/tA6wX8JXCalERVjlmdM2hU1qaTOdl9Z5mGtlSVjy4Ph/csWpqzDVXJCnXS+jg2oNLBjKomJPisWavFJdq6cKLJTJ7+JBlLfnkAxyZX8CyFqksoMw9XkIH2B9gUpBdX0rlHGG9dHh4q+EVdClGX55l1kqlPsAzvzo9qpb7cDWnQ/kSuoH1ofhKQZRqJjWbq3bT2q2uoOc1SaZHWYa0iPUAH7Y3ytzFSZbGyJKX0AG+Kb5SEKoZu9yBinqt1My2xbNcfK6eOh1cPbiHbdo6PMNoCgXayvkSOrj24G6K6auONeckuz553Eqi3FyuSzttCMtm62j6sA0Rkl6ZSj8WB9ZL6AD7A7wpjhZrROwakbCjhtlImfqgVeh9hluzzfiF9sX26JAUUBKDmAL5ErqB7aH4SoGzrszstJHOBI5QbfytgKOcPRcseNN5C3l8sw0K6tc5BDZlGkL9GTrAN8VXCswOaXnp7mmnLElyUfB30ogLmXsAbVuoN7R+Q8MkDiC4BlbA4P0MHWh7oDfLs6mnTbqi2fGsHDsbGwP3Qln0Lo0vdMmPqL4Yh1Oz8tpcqE9bPyMH1x/cTfJqCixgNpT6hkU1k4R3F119qGN8ELKH68Y9hDM8cFHLagoyQXcvoRvZH5avHJRvwmwERdjqThN1UJ+VybY+BxobQHHuesN9MS6dqSsDx2BnVKyX0EG+ab5yUGmcotssi2AaHOdhc9ik+7TCOiZgWc3XM0dfhAOjQ4zJEaH/Jj8jB9ceXDJAxR6ic7ESvNvkLy7Kq4PlMLML8zw4Y89q+GKbecMokqHPiV3YqpfQAfYHmBSUvibQVJO7SxOLZmGpkcNc1gf7KYKmjM9q+KJbupoyhIXeKgrXfwndwPFwfKWg3nZrMDcQ+vYs1MWm4N+g133OPY8oqh7gwzYOOffASuB8HlU/Iwf2JvhKQGMPx5xiasIqEtIlsmjRZFN2yZQdqfmR0xfVgPBWeaBOhn5VvIQOsD3Am2F8mOHBBnFnRpaZZ5qMave2IGIeW+Q+H4bt+x6AAip5N1hmOP5L6AD7A7wZBgZnIjuWQY89voPQMmbfiXIn4TKS0RzhfzR96P53z2HDoAyuMfBUL6EbOh+OryT2iMp2RcZpdQTh2zRJhCsEMUK5bwfQvsbjIHWQVfjF1zmm1PgzcnBvkq8MdKFSbnpMbdWWMH1vXJYYQSaLyx6psKFDo56C57EPzInG2t75GE3kS+jv3/8BKuLHS2YKAAA="
+     "values_gzip": "H4sIAAAAAAAC/22WXU7lMAxG98JzJor/k2XM84j9b2NOaG9biYKELqbl2P4+O/n370uHyp+/8tX2p/Hnr3+12WKmiuQs7zHcbbbMDJ2aUb3Cc1q0HGONny8+lpwfpYsVfwkxXjcZ/hL6bh+wHuAjhdWiIqxyzOiaQ6e0NJnOy+o9zTSypay4uD4v7lg1NeaaK5KU6yV0c+3ikoEMKuZJ8VizV4pLtXThxRKZPXzIspb85QOOzAdY1iKVBcrc4yV0g/0Ck4Ls+lIq5wjrpcPDWw2voEsx+vIss1Yq9QHPfHR6VC334WpOh/IldIL1kvhIQZRqJjWbq3bT2q2uoOc1SaZHWYa0iHWBb7U3Ze7iJEtjZMlL6AafEh8pCNWMXe7ARb1Wambb5lkuPldPnQ5Xb+6tNm0dnmE0hQJt5XwJ3Vy7uFti+qpjzTnJrk8+bidRbi7XpZ02hGWzdXv6VhshJL0ylX4sHlgvoRvsF3hLHC3WiNg1YmHHDbORMvUhq9D7DLdmW/GD9lB7dEQKJIlBTEG+hE6wXRIfKfCsKzM7baQzgSNUGz8r0Chnz4UK3nSeRh5PtaHgfp1DUFOmYdTfoRt8SnykwOyQlpfunnbKkiQXhb+TxlzY3AO0baOeaH2iUZINIGwNVgGD9zt0o+1Cb5VnU0+bdEWzs7Ny7GxsDLYXzqJ3afxDl/yY6qE4mpqV19ZCfdr6Hbm5fnG3yKspWGA2lPqGRTWTRHcXXX2os/gQZA/Xyb0FZ3jQopbVFGyC715CJ9kvlY8clP/EshEcYas7TdRBfVYme/U5aNYAjnPXE/dQXDpTVwbHUGdUrJfQTT5lPnJQaTxFtzksgmlwNg8nh026TyusswQsq/m65ughOBgdYkyOCP03+R25uXZxyQAXe4jOxZHg3SY/2aK8OjgcZnZhngfP2HU0PNRm3lgUydDnZF3YqpfQDfYLTApKXxM01eTu0mRFc2CpkcNc1gfnUwRNGZ+j4SG3dDVlCAu/VRRb/yV0guPS+EhBve3WsNwg9L2zcBcnBb8Gve5z7nnEUXWBb7XZkHMPrASbz6Pqd+TGngIfCWjs4ZhTTE04ioR0iSxaNDkpu2TKjtT82OkhNRDeKg/cydCvipfQDbYLvBVmDzM8rEG2MyPLzDNNRrX7tCBiHtvkPi+F7XkPwAGVvBscZmz8l9AN9gu8FQbDZiI7DoMee3wHoWXMvhPlTsJlJKM5xv94+pb7557DCYMzuMagU72ETnReGh9J7BGVvRUZp9UxhO+lSSJcIYgRyn07QPY1rg1SN1mFb/Y6jyk1/o7c3FPkIwNduJSbHlNbtS1M3xuXJUaQyeKyRyqc0KEY/cfMT72proTG2j7zWTSRL6Hv7//RsID8ZgoAAA=="
     },
     "raw_rolling": {
      "n": 22,
-     "rho": 0.427344,
-     "mape": 26.289185,
-     "bias": 1.453382,
-     "mae": 1140293847.9065976,
+     "rho": 0.427343,
+     "mape": 26.289398,
+     "bias": 1.45317,
+     "mae": 1140306029.7247794,
      "units": {
       "mape": "%",
       "bias": "%",
@@ -9127,10 +9127,10 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
     },
     "raw_same_period": {
      "n": 30,
-     "rho": 0.93405,
-     "mape": 10.285067,
-     "bias": -7.641687,
-     "mae": 454428717.4077549,
+     "rho": 0.934054,
+     "mape": 10.284887,
+     "bias": -7.641867,
+     "mae": 454419784.0744216,
      "units": {
       "mape": "%",
       "bias": "%",
@@ -9146,14 +9146,14 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
       "actual"
      ],
      "codec": "gzip-base64-json",
-     "values_gzip": "H4sIAAAAAAAC/2WUS27cQAxE7zLrDsH/5xhZG77/NVzdEwNRjzYChAL5WCzq6+ulLPPnr7yWMVu0JDeJaMssSxk+z/f6Fepr+Yx0qCXTqJnWcg+5hfZaKcJuYxlUI1a90tlvoUPoaWZRqsQSVrNynkLlwxjDZhWdSaFTAyGX3EIwJkq7aFrR8KgkvnjfQjAGR4AjPCimG4iReeuAGIUybYXOwg2fVnY+O8sb0QE4aCnEcHMT8ty6TajBau5ZxPB80FkmbuF2scwzjjminNvF+uwMxFKge6gbRapH4IvUQ6hvRMOgOsmYJbM4VsR8CMGIrZogCTqk2GPn2q7fQjCaC9xtGEw7QOPL5ppaD6OiE3yWZkJ79YIy7DmNHUjU0YoIaWqsZ8yW9r/N/KcEpYlJIKmgBOswMG3cb+XGhM0mgukpYAKWvlwybiU4YaMiiCWIRaFWL+985scPpiOvjYMwDIQLasMxuN7C46Wgu+ecjLMr7uhao78hoYIszAmmBra/3Pyj9zazjQcDI2pWvLO58H6mNw6l4mIdF6BFMFQUN4tz+1BuMyMnTa2EwIe1oWTzLQQmglu7YDu147wxd/et204iCG6ZKQRDW2F5zXM5+U7lvmTM3kKY2vFXieFbt40MDBLhMvirpIojlPEbyu8fYmnoxdIEAAA="
+     "values_gzip": "H4sIAAAAAAAC/2WUSa7cMAxE79JrheA8HCPrj77/NVJSJ0Cs9saAUSAfi0X//LyUZX79ltcyZouW5CYRbZllKcPnea9/Qn0tn5EOtWQaNdNa7iG30F4rRdhtLINqxKpXOvstdAg9zSxKlVjCalbOU6h8GGPYrKIzKXRqIOSSWwjGRGkXTSsaHpXEF+9bCMbgCHCEB8V0AzEybx0Qo1CmrdBZuOHTys5nZ/kgOgAHLYUYbm5Cnlu3CTVYzT2LGJ4POsvELdwulnnGMUeUc7tY352BWAp0D3WjSPUIfJF6CPWDaBhUJxmzZBbHipgvIRixVRMkQYcUe+xc2/VbCEZzgbsNg2kHaHzZXFPrYVR0gs/STGivXlCGPaexA4k6WhEhTY31jNnS/ruZ/5SgNDEJJBWUYB0Gpo37rdyYsNlEMD0FTMDSl0vGrQQnbFQEsQSxKNTq5Z3P/PjBdOS1cRCGgXBBbTgG11t4vBR095yTcXbFHV1r9A8kVJCFOcHUwPaXm3/13ma28WBgRM2KdzYX3s/0xqFUXKzjArQIhoriZnFuX8ptZuSkqZUQ+LA2lGy+hcBEcGsXbKd2nDfm7r5120kEwS0zhWBoKyyveS4nP6ncl4zZWwhTO/4qMXzrtpGBQSJcBn+VVHGEEtdxtvN+/wFI2U4I0gQAAA=="
     },
     "holdout": {
      "n": 8,
-     "rho": 0.069597,
-     "mape": 23.734869,
-     "bias": 12.978618,
-     "mae": 983528453.2511293,
+     "rho": 0.069644,
+     "mape": 23.734185,
+     "bias": 12.977934,
+     "mae": 983494953.2511293,
      "units": {
       "mape": "%",
       "bias": "%",
@@ -9162,17 +9162,17 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
     },
     "seasonal_naive": {
      "n": 22,
-     "rho": 0.279997,
-     "mape": 27.256431,
-     "bias": 10.881289,
-     "mae": 1090954545.4545455,
+     "rho": 0.279985,
+     "mape": 27.256597,
+     "bias": 10.881122,
+     "mae": 1090966727.2727273,
      "units": {
       "mape": "%",
       "bias": "%",
       "mae": "target unit"
      }
     },
-    "recalibration_factor": 1.1323499949243974,
+    "recalibration_factor": 1.1323694680740686,
     "ewma_alpha": 0.35,
     "ewma_window": 8,
     "actual_observations": 30,
@@ -10285,6 +10285,21 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
     "/companies/WAFERWORKS/quarterly/41/guidance"
    ],
    "sha256": "b999c504d6f3dab3eebd0e5d83567767bfb42908b1d58d59040bb8dc17d73dd0"
+  },
+  {
+   "asof": "2026-09-28",
+   "company": "WIN",
+   "id": "WIN_quarterly_ir_2026-Q2",
+   "kind": "source_patch",
+   "paths": [
+    "/companies/WIN/quarterly/29/rev",
+    "/companies/WIN/quarterly/29/rev_reported_comparator",
+    "/companies/WIN/quarterly/29/rev_monthly_difference",
+    "/companies/WIN/quarterly/29/rev_basis",
+    "/companies/WIN/quarterly/29/capex",
+    "/companies/WIN/quarterly/29/comment"
+   ],
+   "sha256": "097118c53ad6c2fdc8ab952a235aeb448cf039623b82c71798caae9816df7933"
   }
  ],
  "defects": [],
@@ -13143,7 +13158,7 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
     "delta_hi_pct"
    ],
    "codec": "gzip-base64-json",
-   "values_gzip": "H4sIAAAAAAAC/7WZz04cRxDGX2WFlFvT6q7u6j/HNV5ghVkQCwZkWbyKozhSDkSJFEXKH0fiEsnHJOYQRTn5cbzLO+QbDPHMdPeMJZrLHj5E/6arvqrumnnxYuN4ub+1ITbWV6/Xf11PVl//vfrhzWT9z/c3l5eT93+S+mJDeBcpShvIe+tj8FZsajaBZYiO2UaO3kaRkTZJSSWan5fiE+nN1c0vbyfrX9+uf7u++fbfyXR5CJIukBpJxraUKpu64egu58Mfr1bf/bz6/Wqy/urL1eWrx2DMTvenk9W76/XVjx/evV5/81NVyHK6vzxZ7FxsH5wsnh6dj2WJ2EnyWnmjsaBmrGZZS2JL2jrDNhiRKt0cLffnY26whlgqjQxTJOs0njo4KMroaDnYSBRFqvQ46daGbJFuDZJ0HSlVxqJZdMjj4MpmqcE7GS1jgtVkQC60pqgiM5LPIUrvkCQiDhp/EanSzdzO9nKMw9rCY0oH01C0bTiKZGA4wjmsqSh4kZHyXhwwRsaLkCS3JSsyUi9XH0klP9SlFG1QCXMy2mVzRoAmQ1tzIiPlSKWo1aUUo1YLc+frobBlfA1N2q6WkXKkYtiqUsphq4TZPZnuHix2RlpCdBENLmgkQEWDwwGrRIPyZ2ectTp4b0hkpG5HeD4f6z3oWFI5j9PNNjeRAI7DotpYVEv00WgnUqVLWczOtnbnh6MkknhEbCoyxah0g0JpsvXYQVQcg7IiI/UuRQens6MRlFNWKmud8gxesAiLxv8HFSJphupdACqVuqjD8Zsee2xKEe5uyIPFpQQk+IStwp0u4vAJuNmJjNQltUwxUE8ZU0QnY1tyIlVK/isVVGVMsaKqcO4cPhC11OFBy9hREiHHKIWr1vrFOD0c0CrQwUAlBYp1qS2RSJUSqhyvqpiBsFXgPH2yOz+e7Y10AWOboyFqT2j6FG5d6nDIMk4BtCEdGAyRKoXONpCjTGdzStqulCq9WewOVMpQVUgxP1Uoh+MjcqZFs0fW2xKLjJQllWJWl1IMWiXM6XwxNpN4lnAyhiecV8oFamYS3LZxTqLLaBSMQcNOld5Esnd+PAbCga+0NgEl6FA9KB0mJJ1Ql7gDEEqFRKp0OWfb0ydjHPLNGEB4TPIGpY4NWYakMEyS4+aFgnIiI/W3tDc7/7wXDDi0MNNrj5bA6M0U8NjGYSfK8J2CW3WqdIGtFjTg8lwLMra5in7SvEiVUrsr+bw2p+j0OqDl3u75Yn52sTxfHs/2L0bf1WjH8tbMGK+1w6EBRxsjsbZhp3ApNQHGSZVuyu7Ka2g0ypRXY9COZkVGyhVycTSqSimPRpUw991iKG5ptyAnqSulSpZTjFpFRjlmNSD3bW8oYJm2RzhDelpGyqKKMauLKYetEqffxQcimOviOiAxbU2kyiCwFMdHgRWjWYuW6bFDAc30WO0wILc1LzLSOLcY10dklsNbCzp/djw7OpqOfc/QmHc8+kTzirj5ab5nSMPMuDIptN3mR2Sk7uE1PV1ufQZJe08K1cW3LxCbVa3BXVM5Zq2V0yIj9V6vHDybjr3J4SjN7YXPsgmEO1ITQi2Ds8YrG5V3jLNfZKTera0VwqHvJmkIvdRdiUVGKias+MmkOqn8taQO6t4XI+Hr+qJZta2oj6CelAUNRa4aZDBoD6f8b/Gh+TRjcZaxozmRKnlScT6tSinPpw/HvPwPWrAcQWQfAAA="
+   "values_gzip": "H4sIAAAAAAAC/7WZy04cRxSGX2WElF1RqjpVpy7LMR5ghBkQAwZkWbyKozhSFkSJFEXKxZHYRPIyiVlEUVZ+HM/wDvkbQ9zdVdVtiWIzix9R3/R/LnVOz4sXG8fL/a0NsbG+er3+63qy+vrv1Q9vJut/vr+5vJy8/5PUFxvCu0hR2kDeWx+Dt2JTswksQ3TMNnL0NoqMtElKKtF8vBSfSG+ubn55O1n/+nb92/XNt/9OpstDkHSB1EgytqVU2dQNR3c5H/54tfru59XvV5P1V1+uLl89BmN2uj+drN5dr69+/PDu9fqbn6pCltP95cli52L74GTx9Oh8LErETpLXyhuNAzXjNMtaElvS1hm2wYhU6cZouT8fywZriKXSiDBFsk7jWwcHRRkdLQcbiaJIlR4nfbShtEgfDZJ0HSlVxtwsZsjj4MrJUoN3MlrGhFSTAbHQmqKKzAg+hyi9Q5CIOGj8RaRKN3I728sxDmuLHFM6mIaibcNRJAMjI5zDmYqCFxkpn4sDiZHJRUiS25IVGakXq4+kUj7UpRTToBLmZLTL5hIBmgxtzYmMlCOVXKtLKbpWC3OX10O2ZfIamrRdLSPlSEXbqlLKtlXC7J5Mdw8WOyMtIbqIBhc0AqCiweWAU6JB+bMzzlodvDckMlK3Izyfj/UedCypnMftZptJJIDjcKg2FtUSfTTaiVTpUhazs63d+eEoiSS+Ih4qMsWodINCabL1eIKoOAZlRUbqDUUHp7OjEZRTViprnfIMXrCwReP/gwqRNEP1LgCVSl3U4fikxx4PpQizG+JgMZSAhDxhqzDTRVw+AZOdyEhdUispBuopkxTRydiWnEiVUv6VCqoyplhRVTh3GT7gWprhQcvYURIhxyjZVev8ok8PB7QKdNCopEBxLrUlEqlSQpX9qooZsK0C5+mT3fnxbG+kCxjbXA1Re0LTp3CbpQ6XLOMWQBvSgcEQqVLobAMxynQ2p6TtSqnS28XuQKUIVYUU41OFcji+ImdaNHtEvS2xyEhZUsmzupSiaZUwp/PF2E7iWeK+D8qTDSFEtBTGsM2Bmwk6eu+jE6nSW0j2zo/HOLjvldYmoAIdigdHMCHmhLLECECoFBKp0uWcbU+fjHHIN1sAYY4hb1DpqD7LkBR2SXLcvE9QTmSk/iPtzc4/7/0C7iys9NrDRUZrpoCvbRyeRBm+UzBUp0oX2OpAA0me60DGNpPoJ82LVCl1u1Ka1+YUE70OaLm3e76Yn10sz5fHs/2L0Vc12rFEd/YB27V2uDNQOMZInG3YKcykJiBxUqUbsrvqGtqM0upq8rMrpUquiItrUT1EeSeqwbhvEkN2pU2CnKSulCpZTtGvioyyYTUg991uyLBMtyPcHD0tI2VRRc/qYsq2VeL0m/eAg7nmrQMC09ZEqgwCSz4+CqzoZi1aprUOGZpprdphLW5rXmSkcW7R10dklu2tBZ0/O54dHU3HfsXQ2HI8+kTzYrj5aH7FkIaZMSkp5U3zITJS986ani63PoOkvSeF6uLb14bNqdZgwlSOWWvltMhIvZcqB8+mY+9vOEpzO+dZNoEwGjUWahmcNV7ZqLxjXPkiI/WGtZaFQ7+WpBZ6qbsSi4xUDFjxh5LqpPJvJHVQ93kxYl83L5pT24r6COpJWdCQc9Ugg6Y9nPJ/ig9tpZkUZxk7GhasRMmTiltpVUp5K3045uV//JdMZVofAAA="
   },
   "wafer_balance": [
    {
@@ -18885,7 +18900,7 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
       "financials_file": "financials_memory_observations.json",
       "financials_selector": "/companies/KIOXIA/q/19",
       "financials_sha256": "c3397f0017f0d333c9ad459bdc1ab865f59e23aa7e8281594a1d23edb9fb54dc",
-      "manifest_sha256": "a42619312da7fcdafa8fd291dcfe2d7afc1b547507940d1566ee9d6567fc21af",
+      "manifest_sha256": "8569fd3ee8861c4801efd794d2c32d6604161a5a7ad06eb7ce0ad863832b5854",
       "official_selector": "/companies/KIOXIA/q_official/2026-06",
       "original_bytes_available": true,
       "published_at": null,
@@ -18902,7 +18917,7 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
        ],
        "financials_memory_observations.json": [
         {
-         "sha256": "4a587215ba631c67508c10f7a9be46f1b34230f820fd95adaa6115f8f693bccf"
+         "sha256": "a2680af20744a71ed69281f10b92afc4c36a49b932e7a9a1b9329e6aa1708822"
         }
        ]
       }
@@ -18946,7 +18961,7 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
        "scope"
       ],
       "codec": "gzip-base64-json",
-      "values_gzip": "H4sIAAAAAAAC/+2ZX2/cxhHAvwpxTwlwuuP+37WfjKYO7CCJG7dpDcMgluRSontHXkieLCMwoKZuKshJGxRxIsNSa6N2jAAqoKq24wBFH/JZIhvQ0d+hs3dH3p0kx26q1CgiPUjc5ezs7uz8dmao8+cpR5y7w58mFki5bNwQkioyfm6cPIddTOd+hhpNwluMUiqUVIhQhDBvIsaZwmNZhJlkqtKoWkRgeKXgN2EMNRsjRbjRpBhmEGNBItR4FdA4/34jSDv9btI41uhlcZo1mo04hMZP0iRPO3GoCxN6J+NEJ0GsO947Ju93ityL0swrFoz384XMGO/NNCkWcu+nSQjCp/uJ8Yjb9GB65r3yC+jMvFMn3zn7KujuhZHX0/OmcQyRZqPQfsfsmczJC/jTNUnhpJHTy9IohqfM6aR53rhyoQkL1j2z5AU6X4ChoDxeNCGoDtL5HDp0UPR1B9qhnm7Np4smS6xabz7TSTEjOt/rer2gmFE3n8GE3mj+adk4KXQyH8PC8+EavLRfRJ300rTMxUUvM52h6TKzaJK+mX6b9mZbZmlm4vSAxaRg68wzSz2T5GZm6aM3cRKkXbO//4DZez3zzHUfID7ugrm9i4vTL/L5GfvmXZ0VXmgW42B2gXkeenmRZsNDr7qvNJN+pzP5daF5niKsKq8Ed6WVjzaFQrXH13RYp3Zb1qs5hh+EmKJNpDhlqIIDWCPVOEJbDANJjGLMpSC8goOAHukqVI2ixKWHBsfZeGkWjbOmB67tw8G8AB/sf8HHlL8fAMjU28MhZDL4/wyRyTwvkxEGkaKOIEowSStGBKpduGYEfJuQluTUpYoRwhB2kY0gmAhaRxAIRKyOSS0sMKOMEsEERYJUlFCghCrFZIWTUvLQKHkrTvZEkNdMMKYEPZcSfkTJESWzlEiXuKiOJMQVsqaE7acEfBvJFqWQYEkhGYdcSzaBGcTrfAnROuNyW5BGSSq4C8GKuYwOEWGjdI0KV9Eaz5qQISL/CREn4zyA7nNGZ2Mi3tRZsPAiOLArzZeKI30BtiYdhw3X5MVh0TVN0/fBa++rmq+9L74/YPv6nkXYRPC/D0SECTEpZTieJGtKihnERmxgAAeg4pDjMc4BRNKEkCWq4oVSqapnRFpQw0BeJ7FUlFNUIYYtYljUglAykQOjUNDPMnCio1LmqJR5KQFIISqqep5ggKMOQFIyvJcOcGubeVGkXA6FDnKRlNxmZohU46DKx3Vdo1qIQwJGpIBKn0skKj5sLUMlqTNE6rLD5OOomjnK0w4VE8iWSI0J50qhSZ5WJU8TTGw1g1tUYRsYBBLMpl9NJDivCvYm5GlQ4VdhibcwU4RxV0DIUQqzihPI+KDE4aSu+RXGh8jJUT1zxMmhcsIFr9EgTE19NwbX35dsgXdz2kIIQaiBkh0zwTD0YEUrUaa4UKxutJhNtyRCwBXGo5qfD5M2mBRPApbNxX6gioa/cEXzMpA8qml+HDUNpm79vRiKmPpLMhT7cjZrG+EhpC1UXMJdpLjkpDlM2Op/8SAMwKEKOoFakitKqFDIfomuOYP0D4KYLYaqccKd/XTww9Y138UePqprfsR1TcN6RANOE3pgk15UuRgMLrK+aTZ0qKEEyDw4tzxOrYuilttyQaWv89jOMVIx9tzgMvScPnPOnrwBO4X2qKPYdEIQPQ9CsIguqIL33TQ0HS/vd2HNl+v2SOveHVu/yov262faea8TF7njm8tpEjogFZtL4K6FJcDpmiKLg7xxYXp2cBWT9TIDDj3awGgQnMp7/TgbHix0gGgApnl/tC1Y8hCJiT1GC/PSKIptu3UxB11jI3i56ZgArAsj2uACPZ3EJm+/certX5060X6vD2cCW267E/kFjRm3+qlyNYEiL3L9CDGfuCFcLihQLqUBlVroUIQ8wr4yOjScgHwY6MAXAQzwfTW1dnCnXtHPjPfrOLFXR5rF87D6jmdh9y8Xxlp1aj/7d9g13TS77KV+brLFobHyaptTUt+91zZSe8SrrQYE9hnZ6zJyQ0JIoHRImfLDAGlfchYxZTDRWhiJpf1fn0YhJib0VeQzGgbWQ2CuyOTFRKmmmCNFEA61iIJQR1pGIVYoDCKDQ6GjAMFgKCSEom6IGOfGqJAzDtIY6cgiOj7R52ysPvn28E53uR1amXhoXk8v6rgzuktH7PT6fifOF+D+0XCRDAPRVN/QF0fKxBxBQ5+fj/MCjqDeX0h5SCITKZ9CtmdCiX0o+A0cf6gC7HIZBrDdKEIBmEgaEnEtIEIFSvgsAuNY8tN+Bt5Ru8nE94QMDKNKaz+MXEqwi3zBFIZjAnP5WBHKAh9BpJKR1D6ifsQYM9LAqbmRIRPdnTTQI8Odee2kYwOLg447sDWx8/V98nh95fH6X55sbqKdmzd3Pl6FxnFn56/b3z5a3fnjH57cXHU0kLzz2cPHd/+2s/Kl7XglSQvnrTSZe/3EiTPTb1497jy58a9vH/1+58MPJ/P3sw7MvVAUvfxYu53nHdoycTbXA+7yVmKKdpgGbUhzT7SL0Dbh0abYbddtARygp98Dsxvdtfw/B/ljEK0PD1+IpC9E4MysVDMpMEynocANOHi3DJAbCa18Q3mEfEIxcSNIaMBLGFzgmiPEIhlxRfwgiGDWK3D1L8ClPLmaYSE2VFq4Et3LF9LC60HgS8PaSa3H7xWp7t/K47smz0chprx66+lvNwafrDu7/3hQXlt3Bg+v7j7aKjfWnMG9O+XD9W++Ktd+U37+u3LjfrnxYLY1uHtrcO8jZ3d7ufxi4+lnK+Xqg8G1lcG1Oy3H6rh93yk/2ATpwcNlZ7C1Baph/Mba7vbmN1/tbi2DksHHa+XqHei9vbX79/tWDtYw+GBt8MVmuXZnsPpprejzrd0Hm87g65Wn17bKe8OxX2459s/2ilP+eXOwORLa3hrcXrcdo1UNPlkDaae8vlpeX5usz4b2/WarzDTNvJrD1LpwAKmHvR6nki/bDdGqb6MrxN0YDikcX0/wMI4nIHTJpd44Ydwf5ezxjmXAtYdO1BjtY3wA5cayc/pdp7y1Xt54VPfB8Xy0XG7f3936E9gA9nd1cO3GHuP/0qXOMwx795/WROXDT8tb159eP9hE4HtvxOlSrJ3pTR93LPSwoCItdMfmmmZp7vS7jQsX/g3IvGfHVyUAAA=="
+      "values_gzip": "H4sIAAAAAAAC/+2Z/28UxxXA/5XV/ZRI57v5/gV+Qk2JIEpCQ5sWIbSa3Z21l97tXnb3DChCoilNkUnaqAqJEXYLKgRFciXXBUKkqj/kb4lB8h3/Q9/c3e7d2RBo6hRVsX+wd2bfvJl58z7z3lufPs0EFgKNfppEYo34pCEV03Ty3Dh6iiDCFn6GG00qWpwxJrXSmDKMiWhiLrgmE1lMuOK60qhbVBJ4peE35Rw3G2NFpNFkBGaQE0Eq9WQV0Dj9fiPMOv1u2jjU6OVJljeajSSCxk+ytMg6SWRKG/lHk9SkYWI6/ju26HfKwo+z3C+XrP/zpdxa/80sLZcK/6dpBMLH+6n1KWr6MD33X/kFdOb+saPvnHwVdPei2O+ZRds4hGmzUZqgY3dN5hUl/OnatPSy2OvlWZzAU+51sqJoXDzThAWbnj3vh6ZYgqGgPFm2EagOs8UCOkxY9k0H2pGZbS1myzZPnVp/MTdpOSe62Ov6vbCcU7eYw4T+eP5Z2SQtTbqYwMKL0Rr8rF/GnezcrMzZZT+3nZHpcrts076dfZv15lv2/NzE2VMWk4Gtc9+e79m0sHNLH79J0jDr2r39T5m917PPXPdTxCddMLd/dnn2RbE4Z9+ia/LSj+xyEs4vsCgivyizfHToVffFZtrvdKa/zjRPM0x05ZXgrqzy0abUuPb4mg7n1KjlvFoQ+MGYa9bEWjCOKziANVqNo6zFCZDEGSFCSSoqOCjoUUjjahSjiO0bHCeT8/NonLQ9cO0ADuYF+OD/Cz5m/P0pgMy83R9CpoP/zxCZzvMyGeEQKeoIoiVXrGJE4tqFa0bAtyltKcEQ05xSjgnCLoIQKlkdQSAQ8TomtYgknHFGJZcMS1pRwoASpjVXFU5aq32j5K0k3RVBXrPhhBL8XErEASUHlMxTohBFuI4kFElVU8L3UgK+jVWLMUiwlFRcQK6lmsAMFnW+hFmdcaEWpFGKSYEgWHHE2QgRPk7XmESa1XjWhIwQ+U+IOJoUIXSfsiafEPGmycOlF8GBX2y+VBzZC7A17dhvuKYv9ouuWZq+D167X9V87X7x/QHb0/cswqaC/30golzKaSkjyDRZ00rOITZmgwA4AJWAHI8LASDSJoQsWRUvjCldPWPaghoG8jpFlGaC4Qox4hAjshaEkok+NQqF/TwHJzooZQ5KmZcSgDRmsqrnKQE46gCkFCe76QC3dpkXwxoJKHQwwkoJl5lhWo2DKp/UdY1uYQEJGFUSKn2hsKz4cLUMU7TOEBni+8nHQTVzkKftKyaQLdEaEyG0xtM8rUqeppi4aoa0mCYuMEgsuUu/mlgKURXsTcjToMKvwpJoEa4pF0hCyNGa8IoTyPigxBG0rvk1IfvIyUE9c8DJvnIipKjRoFzPfDcG19+TbIF3C9bCGEOogZKdcMkJ9BDNKlGuhdS8brS4S7cUxsAVIeOaX4ySNpiUTAOWy8V+oIpGvHBF8zKQPKhpfhw1DWGo/l4MRUz9JRmKfTWftY3xkMoVKogKhLVQgjZHCVv9Lx5MADhcQSdxSwnNKJMauy/RNWeQ/kEQc8VQNU6i+U8HP2xd813skYO65kdc1zScRzTgNKEHNunHlYvB4DLv22bDRAZKgNyHcyuSzLkobqEWApWBKRI3x1jFxHPDC9Bz/MQpd/IW7BS5o44T24lA9DQIwSK6oAred7PIdvyi34U1X6jbY627d+z8qijbr59oF71OUhZeYC9kaeSBVGLPgbuWjgCva8s8CYvGmdnZwVVs3sstOPR4A+NBcCrv9ZN8dLDQAaIhmOb98bZgySMkpvYYL8zP4jhx7dbZAnRNjOAXtmNDsC6MaIML9Eya2KL9xrG3f3XsSPu9PpwJbLmNpvJLhnDh9DONDIUiL0ZBjHlAUQSXCw41YixkykgTyUjEJNDWRFZQkI9CEwYyhAFBoGfWDu7UK/u59X+dpO7qyPJkEVbf8R3swYXSOqvO7GfvDru2m+UX/CwobL48MlZRbXNG6rv32sZ6l3i11ZDCPmN3XcYoopSG2kSM6yAKsQmU4DHXllBjpFVEuf/1GRwRaqNAxwFnUeg8BOaKbVFOlSpI++OIWgv1NAaDIWzjSGoWkZASZ0qGBTbc2REJC2azyERwjytKAq44c4hOTvQ5G6tPvj2605FwQysTj8zrm2WTdMZ36ZidXj/oJMUS3D8GLpJRIJrpG/niWJlcoHjk84tJUcIR1PuLmIhobGMdMMj2bKRg2RRZOP5IhwQJFYUR0XGMQzCRsjQWRkKECrUMeGwYceRn/Ry8o3aTqe9JFVrOtDFBFCNGCcKB5JrAMSGpA6Ip42GAIVKpWJkAsyDmnFtl4dRQbOlUdycLzdhwJ1476rnA4uHDHmxNbn99jz5au/Jo7S+PNzbw9o0b2x+vQOOwt/3XrW8frmz/8Q+Pb6x4Bkje/uzBozt/277ypet4Jc1K760sXXj9yJETs29ePew9vv6vbx/+fvvDD6fz9/MOzL1Ulr3iULtdFB3Wskm+0APuilZqy3aUhW1Ic4+0y8g14dGl2G2EWgAH6On3wOzWdB3/z0H+EETr/cMXIukLETg3qyFCIRMTJBkzEttIaCAmxijQxMQhC6kwTAeaEiuNNtg9aSuMcWkHFAAw60W4+pfgUp5ezbAQFyodXKnpFUtZ6fcg8GVR7aTO43eLVPdv5fFdWxTjEDO8fPPJb9cHn6x5O/+4P7y65g0eXN55uDlcX/UGd28PH6x989Vw9TfDz383XL83XL8/3xrcuTm4+5G3s3Vp+MX6k8+uDFfuD65eGVy93fKcjlv3vOEHGyA9eHDJG2xugmoYv766s7XxzVc7m5dAyeDj1eHKbei9tbnz93tODtYw+GB18MXGcPX2YOXTWtHnmzv3N7zB11eeXN0c3h2N/XLTc3+2rnjDP28MNsZCW5uDW2uuY7yqwSerIO0Nr60Mr61O1+dC+16zVWaaZV4vEHf9FCGkHu56nEm+XDdEq76LrhB3EzikaHI9wcMknoDQOcT8ScK4N8q5453IgGuPnKgx3sfkAIbrl7zj73rDm2vD6w/rPjiejy4Nt+7tbP4JbAD7uzy4en2X8X+JmPcMw975pzPR8MGnw5vXnlx7uonA995IsvOJ8WY3fdhz0MOCyqw0HZdr2vMLx99tnDnzb658dytXJQAA"
      },
      "SNDK": {
       "__series__": 1,
@@ -31186,10 +31201,11 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
      "rev_monthly_sum",
      "rev_reported_comparator",
      "status",
-     "utilization"
+     "utilization",
+     "src"
     ],
     "codec": "gzip-base64-json",
-    "values_gzip": "H4sIAAAAAAAC/+WZ224jRRCGXwX5emx1HfrENeJyV0hwFa0s48wGi8QxdrIgEO9O9XRXtQe4RmgmkaJUuXPwp6q//6p5eEjo6seAfueGtKNhgw7y9jvYDBQgt1e3Kbko38gZycoBskCP/LH58Xk8P46P+8Ptsn+/Pe4Bx182X28+fPz+q28//vDhm82wOR4u42+SOxzf3g/PkngcL9fxeDq8nV7P9/mnl/vo9TILr+OX+/D97fR8+v0fv+LXw+fxur/9dLq8jOe32/7nf/l//n7mLL/lyzg79Ofg5Z1+Gh4gBH2vxPLe0e2C0sLNwOyhvQw5cuUjSbwPYPGwUoMFENp7ZdzBQLBjhUWbIbBjLS10IfpKKFAiQg36meXiyr7iik5Lg3mHA9EuKi4WXLnjAmy9J0lKMVqwfFjgWnERotKiokKwy4UWukm3gotgtBwZIiefBq+fWXBxNVyZUi+uVIorKC4suFhf3nJw3nBJ9bHhsjOLx4WYoVcXD4S1FwuuIl0+qLJtY/JWXZwiW3X1M8vFFat0YfZaGlQ8BHI1EQVXka4UrBmZYgE0EUoQMVoQVnAxNqVPpEItfejFKzTtgqZdzjxXjIl6LyL0xsxrsRFSItiLKw6ovQhVuiB7pSVGywgBozN2/czylR6TWdQkSo9BvjRcRbpi70XwnEIjFNl7YA1W0IvNdSF6M6lOehFjxyXSFWvLNdcVwsRWEEXpPwJoQT+0CuOl8yKV6QdCdfWIk3h5nw0YcT0siLwPmELSIC+fV2zqldMdLhyAZRJquES9ymhoWu+D4UIEMly4AlxBfapTJyGFVSS94xL1omz3XvERrRkpc7gL/pOr8en6ervtL9fXz6e3OcXxKj96ftqfzsfXl/H/Q5gL32wjuVyjOLT1RaErYkeeoE/k2bVipLKyyEkDWv7dQLUYPSksKKsLYdLuBpqkDlNwZmu5wcLks/dJAzuxXFjYYLGtEZ307FZHAJp0Tlq0by9csL6llNmC5W8vuKlcsksBy2YMmqOlSeQYgrpVaNPRlJoFK1m4olfvj1laEKhdBzQJFldLMV0Hraam1CxYyc1JjnpJ8aA2gyep4qpP5dXEWkaSmwXLr6lq+YmNVCyOzHVUZYefbfhh1DrKZZy8C5ZfVBUVo2oyglgFbHsKrjpFfWkIsdkvScaEYEFazaOhrlSumAVo9x9XaxWdeonQnm1MqVmweFtVi8pWq+Lw47ANrf18feDoo61WIevzRh/FUpEFq0GFtreCtPMyUXdWxVTFPluaP5fcLFi+p2pVRabqQWQqtcnGV6niZFIVdVKUZKx7/hqsxypEW6iCTDRiqrKyKqYqZhV99vrYWnKzYC2oUuJeVTTktusK1VX5rO0V1EeV1CxYy+IGdeuC6X7NFdqay0fjaGstH2eBoTpcLs+n4/Qvy18/XMf99XB+Gm/7y3G2a1m0+fr0F8K3uMKaIwAA"
+    "values_gzip": "H4sIAAAAAAAC/+WZWW/bRhDHv0qhZ1rYOfbqa9sAeUmQHuiDYRCMRDtCZUml5PRCv3tnyb2Y9qkogoK0AcMzXMniz3P8Z3h/71BNXw3qrWrclpoNKvB372DTkAEfr945p6z8ImfEKwcoG+nIH5v3x/607/dtd720L9d9C9j/vPly8+bt91+8evvDm683zWbXXfpfxdftbi/dURz7/jL0u0N3O5xPtf/pubbOl5k59B9r8+V2OB5+/9tb/NI99kN7/XC4PPen27X96R8+z6dnTvIuH/vZoT8bHe709HI8PjT3YEy6YWJxo9qahAw3DbOGeBm85QmSOLE2YPHEXE0MwMQbZtxCQ7DlRIw2jWHFKchQGasnTIYcESajnFkuM68rZlalIGHeYkO0tYkZCzNfmAHGVBQnOWuzsXxioOowI8SEjEJlgq0PyFCNtcwoCxmZosxJyXcmWM4sOMxqZp5cCTMXwswkZhiYcbp8x0bpzEzikDOzfGYdzBA9lDjjhnBKzcAslDNtUrW7s07nOGNnOcdZObNcZrYqZ+h1ChIKbuRJZwRmoZw5k3OTyQZKIyYHFm02zAraZt0CHKUKLmmpRU7Eegaxnqmszax1VFIToeSpX5XSkGDBEma2wZSaMJUz8DohE0GWMQGjygDLmZW0AHRZzzppAWjkR2QWypktqQmanYmYLGsNnIwVpGatzhB1VrRKUhNtYSblzE4ZGNWZMSNgebWVdCSAaJRD6xFoadakMDSBmeYAxLGgae0zNeLpsLxYa4POuGT45UOzdUXzrmKGDbAMUJGZVLQwVuYmoE1mhgiUmeEKmJmZqFVJbEiIhVpfmElFI5+7YpAaMTfJs6mMz9I4n4bz9dpehvPj4TZH2Q/y0tNTezjtzs/9/wczZ8g+z/TSZLGJS5CAWAogaYIy0nsVw5LC4sO7ZNDymwZVYakpEYOwABEwsWnQWP7QGZU1MEdi6LTX2iUjn1guMayJcd5NKknhuzQ00Fj7JGPLDkSZnMbkPGdj+TsQriufy90Cw6YNovylsfAxmCRtIQ5Vo2tmrGmVizpNC+glI4Fin6CxiPGkOsY+EaNrdM2MNfVVUlSCi5ukRHgsXzzVrHDVcQoo8c2M5UdXNSQQZ1w2KDdVeIXnBD7PTIwponwYRStj+eFV8WJMxRpB1ATGbQdPtYvKJhJslGnitA4hG25dD6JK9VJBT0DsjjxJMKuS3DDxIcromhmLl19VeOWlrcwEtrkzMRv19KBT27y0BZ+ec2or0ouysS5emPdg4LZaRvICLIgvW+bSrOjFNzOWr73q+KJc7o2ULhcHIj2VL3a5fNk0ZYrTTs8SJmNlasLmVS3IICTiyydgQXxZn7oB6/TgXHwzY1W8nOMSX9T4uDszk/rSPmWbSXoruGbGqnZAmBY46Oq1mYlrM21xVO+NqoxtbQio7nI5HnbjB5a/3Q19O3Snp/7aXnazfc2/Abo7P4db+a8Zi9m+766H66fO5/Pp9uH4W7s/PArK/rQL9Pb9IBj38cjQX87DTe5DPtulG7rbefjsWvB+8+PrN234R73D9qtX37XfTJZyoOSNqouvv50uWOTNw8PDX9R0Oe7KJAAA"
    },
    "sources": [
     "F02_LEGACY:LOCAL_TW",
@@ -31222,10 +31238,10 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
      "fit_n": 30,
      "holdout_n": 8,
      "rho_predictor_target": "NOT FOUND",
-     "rho_prediction_actual": 0.0695971601403607,
-     "mae": 983528453.2511293,
+     "rho_prediction_actual": 0.06964402566007685,
+     "mae": 983494953.2511293,
      "naive_mae": "NOT FOUND",
-     "bias_pct": 12.978618367093311,
+     "bias_pct": 12.977934498384585,
      "route_coverage_min": "NOT FOUND",
      "direction_hit": "NOT FOUND"
     },
@@ -36670,6 +36686,30 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "title": "合晶科技(6182) 以客為本的半導體材料供應商 — Aug 6, 2026",
    "url": "https://mopsov.twse.com.tw/nas/STR/618220260806M001.pdf",
    "date": "2026-08-06"
+  },
+  {
+   "id": "WIN_2026Q2_CFS_EN_20260810",
+   "title": "WIN Semiconductors Corp. and Subsidiaries — Consolidated Financial Statements for the Six Months Ended June 30, 2026 and 2025",
+   "url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=3105&filename=202602_3105_AIA.pdf",
+   "date": "2026-08-10"
+  },
+  {
+   "id": "WIN_2026Q2_IR_20260724",
+   "title": "WIN Semiconductors — 2Q2026 Investor Conference",
+   "url": "https://www.winfoundry.com/en-US/Base/DownLoadFile/537?filename=2Q%202026%20Presentation.pdf&TargetTable=QuarterlyAttachment",
+   "date": "2026-07-24"
+  },
+  {
+   "id": "WIN_2026Q2_RELEASE_20260724",
+   "title": "WIN SEMI. REPORTS 2Q26 CONSOLIDATED RESULTS (UNAUDITED)",
+   "url": "https://www.winfoundry.com/en-US/Base/DownLoadFile/534?TargetTable=QuarterlyAttachment&filename=2Q+2026+Press+Release.pdf",
+   "date": "2026-07-24"
+  },
+  {
+   "id": "WIN_2026Q1_CFS_EN_20260513",
+   "title": "WIN Semiconductors Corp. and Subsidiaries — Consolidated Financial Statements for the Three Months Ended March 31, 2026 and 2025",
+   "url": "https://www.winfoundry.com/en-US/Base/DownLoadFile/1477?TargetTable=Articleattachment&filename=115Q1_%E5%90%88%E4%BD%B5%E8%8B%B1%E6%96%87%E8%B2%A1%E5%A0%B1-3105%E9%9B%BB%E5%AD%90%E6%9B%B8.pdf",
+   "date": "2026-05-13"
   }
  ],
  "geography": {
@@ -39774,309 +39814,309 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
  },
  "_field_meta": {
   "/companies/ADI/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ADI/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ADI/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AST/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AST/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AST/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/AWSC/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/BOSCH/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/BOSCH/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/BOSCH/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CANSEMI/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CANSEMI/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CANSEMI/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/CXMT/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/DBHITEK/quarterly": {
    "asof": "2026-08-14",
@@ -40086,14 +40126,14 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: DBHITEK_quarterly_ir_2026-Q2"
   },
   "/companies/DBHITEK/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/DBHITEK/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/DBHITEK/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -40348,34 +40388,34 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: DBHITEK_quarterly_ir_2026-Q2"
   },
   "/companies/EPISIL/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/EPISIL/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/EPISIL/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ESWIN/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ESWIN/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ESWIN/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/FST/quarterly": {
    "asof": "2026-08-14",
@@ -40395,204 +40435,204 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/FST/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GFS/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GLOBALWAFERS/quarterly": {
    "asof": "2026-08-14",
@@ -40612,574 +40652,574 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/GLOBALWAFERS/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GRITEK/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GRITEK/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/GRITEK/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HLMC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HLMC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HLMC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/4/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/5/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/HUAHONG/nodes/6/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/INFINEON/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/INFINEON/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/INFINEON/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/INTEL/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/INTEL/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/INTEL/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/KIOXIA_SNDK/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MACRONIX/quarterly": {
    "asof": "2026-08-14",
@@ -41199,9 +41239,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/MACRONIX/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MACRONIX/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -41316,394 +41356,394 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: MACRONIX_quarterly_ir_2026-Q2"
   },
   "/companies/MICROCHIP/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICROCHIP/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICROCHIP/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/4/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/5/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/6/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/7/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/MICRON/nodes/8/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NANYA/quarterly": {
    "asof": "2026-08-14",
@@ -41723,9 +41763,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/NANYA/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NANYA/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -41840,454 +41880,454 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: NANYA_quarterly_ir_2026-Q2"
   },
   "/companies/NEXCHIP/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NEXCHIP/nodes/4/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NSIG/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NSIG/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NSIG/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NXP/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NXP/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/NXP/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OKMETIC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OKMETIC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OKMETIC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ONSEMI/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ONSEMI/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/ONSEMI/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_FOUNDRIES/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_FOUNDRIES/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_FOUNDRIES/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_SI/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_SI/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_SI/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_SMALL_SILICON/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_SMALL_SILICON/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/OTHER_SMALL_SILICON/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/POLAR/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC/quarterly": {
    "asof": "2026-08-14",
@@ -42307,9 +42347,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/PSMC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -42816,154 +42856,154 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: PSMC_quarterly_ir_2026-Q2"
   },
   "/companies/PSMC_MEMORY/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/PSMC_MEMORY/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/RENESAS/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/RENESAS/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/RENESAS/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_FOUNDRY/quarterly": {
    "asof": "2026-08-14",
@@ -42973,14 +43013,14 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: SAMSUNG_FOUNDRY_quarterly_ir_2026-Q2"
   },
   "/companies/SAMSUNG_FOUNDRY/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F01_ADV",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_FOUNDRY/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F01_ADV",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_FOUNDRY/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -43424,379 +43464,379 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: SAMSUNG_FOUNDRY_quarterly_ir_2026-Q2"
   },
   "/companies/SAMSUNG_MEM/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/4/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/5/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/6/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/7/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAMSUNG_MEM/nodes/8/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SAS/quarterly": {
    "asof": "2026-08-14",
@@ -43816,219 +43856,219 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/SAS/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SHANGHAI_AST/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SHANGHAI_AST/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SHANGHAI_AST/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SHINETSU/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SHINETSU/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SHINETSU/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SIEN/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SIEN/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SIEN/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTERRA/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTRONIC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTRONIC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SILTRONIC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX/quarterly": {
    "asof": "2026-08-14",
@@ -44038,14 +44078,14 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: SKHYNIX_quarterly_ir_2026-Q2"
   },
   "/companies/SKHYNIX/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -44552,1039 +44592,1039 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: SKHYNIX_quarterly_ir_2026-Q2"
   },
   "/companies/SKHYNIX_SYSTEM_IC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKHYNIX_SYSTEM_IC/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKKEYFOUNDRY/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKSILTRON/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKSILTRON/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKSILTRON/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SKYT/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/4/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SMIC/nodes/5/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SOITEC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SOITEC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SOITEC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SONY/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SONY/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SONY/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/STM/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/STM/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/STM/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SUMCO/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SUMCO/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/SUMCO/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TCL_ZHONGHUAN/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TCL_ZHONGHUAN/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TCL_ZHONGHUAN/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TI/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TI/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TI/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TOWER/nodes/4/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TSMC/quarterly": {
    "asof": "2026-08-14",
@@ -45604,9 +45644,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/TSMC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F01_ADV",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/TSMC/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -46760,9 +46800,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/UMC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/UMC/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -47412,9 +47452,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/VIS/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/VIS/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -47749,9 +47789,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/WAFERWORKS/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/WIN/quarterly": {
    "asof": "2026-08-14",
@@ -47771,9 +47811,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/WIN/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/WIN/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -47982,9 +48022,9 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_after": "2026-10-15"
   },
   "/companies/WINBOND/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/WINBOND/nodes/0/wafer_inch": {
    "asof": "2026-08-14",
@@ -48099,453 +48139,453 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
    "stale_reason": "IR_EVENT_DUE: WINBOND_quarterly_ir_2026-Q2"
   },
   "/companies/XFAB/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/rev_share": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/XFAB/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F02_LEGACY",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/quarterly": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/monthly_rev": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/forecast": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/0/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/1/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/2/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/wafer_inch": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/capacity_kwpm": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/utilization": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/yield": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/wafer_asp_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/rev_model_usd": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/customers": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/companies/YMTC/nodes/3/ramp": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F03_WAFER",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/wafer_demand": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "foundry_model.py:foundry-model-1.0",
    "stale_after": "2026-10-20",
    "stale": true,
    "stale_reason": "상위 입력 갱신 필요. 모델 재계산만으로 IR 근거 최신화되지 않음."
   },
   "/wafer_supply": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "foundry_model.py:foundry-model-1.0",
    "stale_after": "2026-10-20",
    "stale": true,
    "stale_reason": "상위 입력 갱신 필요. 모델 재계산만으로 IR 근거 최신화되지 않음."
   },
   "/balance": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "foundry_model.py:foundry-model-1.0",
    "stale_after": "2026-10-20",
    "stale": true,
    "stale_reason": "상위 입력 갱신 필요. 모델 재계산만으로 IR 근거 최신화되지 않음."
   },
   "/wafer_price": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "foundry_model.py:foundry-model-1.0",
    "stale_after": "2026-09-19",
    "stale": true,
    "stale_reason": "상위 입력 갱신 필요. 모델 재계산만으로 IR 근거 최신화되지 않음."
   },
   "/flows": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "foundry_model.py:foundry-model-1.0",
    "stale_after": "2026-10-20",
    "stale": true,
    "stale_reason": "상위 입력 갱신 필요. 모델 재계산만으로 IR 근거 최신화되지 않음."
   },
   "/calibration": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "foundry_model.py:foundry-model-1.0",
    "stale_after": "2026-10-20",
    "stale": true,
    "stale_reason": "상위 입력 갱신 필요. 모델 재계산만으로 IR 근거 최신화되지 않음."
   },
   "/sensitivity": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "foundry_model.py:foundry-model-1.0",
    "stale_after": "2026-10-20",
    "stale": true,
    "stale_reason": "상위 입력 갱신 필요. 모델 재계산만으로 IR 근거 최신화되지 않음."
   },
   "/model_diagnostics": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F04_MODEL",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/geography": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F04_MODEL",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/supply_by_producer": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F04_MODEL",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/fx": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F04_MODEL",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/ir_calendar": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "회사 IR 원문 + PHALANX_ECAL",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   },
   "/unit_conversion": {
-   "asof": "2026-09-28",
+   "asof": "2026-09-29",
    "source": "F04_MODEL",
-   "stale_after": "2026-11-12"
+   "stale_after": "2026-11-13"
   }
  },
  "projection_contract": {
@@ -48558,7 +48598,7 @@ root.EnsembleViz={chart:chart,mount:mount,role:role,point:point,value:value};
   "forecast_ref": "top-level forecast ref는 companies[id].forecast를 가리킴"
  },
  "staleness": {
-  "asof": "2026-09-28",
+  "asof": "2026-09-29",
   "stale_fields": 637,
   "meta_fields": 1488
  }
