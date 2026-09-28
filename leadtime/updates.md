@@ -2,6 +2,102 @@
 
 TrendForce Weekly Radar는 2026-09-14 첫 발간되었습니다. 6개 부품의 주간표는 첫 호부터 누적합니다. 그 이전 이력과 다른 부품은 원문이 확인된 별도 출처·제품 범위로 표시하며, 누락된 주차나 미공표 수치는 채우지 않습니다.
 
+## TrendForce · Weekly Radar 003
+
+발간: 2026-09-28 · 자료 기준/보고대상: 2026-09-28
+
+서버 CPU가 신규 추가되어 7개 부품을 추적합니다. CPU는 25–30주(균형 16–20주)로 공급 제약입니다. GPU 30–40주·DRAM 20주·NAND(eSSD) 16주·HDD 50주·ABF 48–56주·MLCC 32주는 전호와 같습니다. 에이전트 AI의 CPU 수요, 저용량 DRAM 제약, 기업용 SSD 생산능력 재배분과 HDD·ABF 공급 부족을 설명합니다. MLCC는 고급 표준품과 맞춤형의 수요 차이를 구분합니다. 원문의 2027년 수급 전망을 현재 관측값으로 변환하지 않습니다.
+
+### CPU
+
+- 범위: AI 인프라 서버 CPU 집계 / 제조사·세부 사양·지역 미공개
+- 상태: 공급 제약
+- 보고 리드타임: 25–30주 (균형 기준: 16–20주)
+- 기준: 2026-09-28
+- 내용: 현재 25–30주, 균형 기준 16–20주. 서버 CPU가 새로 추가됐습니다. 에이전트 AI 수요가 늘고 주요 CSP도 자체 CPU 개발·배치를 가속한다고 설명합니다.
+
+### GPU
+
+- 범위: GPU / B300·GB300을 포함한 AI 인프라 집계
+- 상태: 수급 균형
+- 보고 리드타임: 30–40주 (균형 기준: 30–40주)
+- 기준: 2026-09-28
+- 내용: 현재 30–40주, 균형 기준 30–40주. Blackwell 출하는 일정대로 진행됩니다. Rubin의 HBM 등 공급 준비와 2027년 서버 확대는 전망으로 구분합니다.
+
+### DRAM
+
+- 범위: 서버 DRAM
+- 상태: 심각한 부족
+- 보고 리드타임: 20주 (균형 기준: 8주)
+- 기준: 2026-09-28
+- 내용: 현재 20주, 균형 기준 8주. 저용량 모듈을 중심으로 2026년 4분기–2027년 1분기 공급 제약과 가격 인상 논의가 확대됩니다.
+
+### NAND (eSSD)
+
+- 범위: 기업용 SSD용 NAND
+- 상태: 공급 제약
+- 보고 리드타임: 16주 (균형 기준: 8주)
+- 기준: 2026-09-28
+- 내용: 현재 16주, 균형 기준 8주. 미국 CSP의 기업용 SSD 수요에 맞춰 생산능력을 재배분하지만 공급 제약이 계속된다고 설명합니다.
+
+### HDD
+
+- 범위: AI 인프라 HDD 집계
+- 상태: 심각한 부족
+- 보고 리드타임: 50주 (균형 기준: 16주)
+- 기준: 2026-09-28
+- 내용: 현재 50주, 균형 기준 16주. HAMR로 저장용량을 확대해 고객 수요에 대응하며, 공급 부족이 적어도 2027년까지 이어질 전망입니다.
+
+### ABF 기판
+
+- 범위: AI 인프라 ABF 기판 집계
+- 상태: 심각한 부족
+- 보고 리드타임: 48–56주 (균형 기준: 12주)
+- 기준: 2026-09-28
+- 내용: 현재 48–56주, 균형 기준 12주. 칩 면적·기판 적층수가 증가합니다. 유리섬유 제약 완화 전망에도 고다층 수율과 증설 속도가 수요를 따라가지 못합니다.
+
+### MLCC
+
+- 범위: AI 인프라 MLCC 집계
+- 상태: 공급 제약
+- 보고 리드타임: 32주 (균형 기준: 12주)
+- 기준: 2026-09-28
+- 내용: 현재 32주, 균형 기준 12주. Vera Rubin용 고급 표준품 수요가 증가합니다. Google TPU8 수요는 제한적이어서 고급 맞춤형 MLCC 출하가 느리다고 설명합니다.
+
+[원문: Weekly Radar 003: Meta's Muse Puts Server CPUs Back in Focus](https://insights.trendforce.com/p/weekly-radar-003)
+
+## Fusion Worldwide · The Greensheet 2026-09 · 범위별 실제 납기
+
+발간: 2026-09-24 · 자료 기준/보고대상: 2026-09
+
+ADI 연산증폭기·D/A 변환기·전압 기준 IC 계열 납기는 60–70주입니다. AD5545BRUZ 등은 예시 부품이며 기존 단일 MPN의 476일 계열과 합치지 않습니다. Mellanox·NVIDIA 광트랜시버 일부 SKU 납기는 50주를 초과합니다. 속도는 지정되지 않았으며 특정 계정의 2027년 3월 지연 사례를 기간으로 변환하지 않습니다. Foxconn이 확인한 NVIDIA Rubin 서버용 광트랜시버 납기는 441일입니다. 속도 표기는 원문 1.6TB를 보존하며 1.6Tb로 임의 수정하지 않습니다. 기존 800G·1.6T 집계와 다른 범위·단위입니다. SSD·HDD 공급능력 예약과 GPU의 2027Q2 납품 예정은 기간 납기로 변환하지 않았습니다.
+
+### 정밀 아날로그 IC
+
+- 범위: Analog Devices op-amp, D/A converter and reference IC families; AD5545BRUZ, AD8672ARMZ, ADR435ARMZ examples; not single-MPN quote
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 60–70주
+- 기준: 2026-09-24
+- 내용: ADI 연산증폭기·D/A 변환기·전압 기준 IC 계열 납기는 60–70주입니다. AD5545BRUZ 등은 예시 부품이며 기존 단일 MPN의 476일 계열과 합치지 않습니다.
+
+### Mellanox·NVIDIA 광모듈 일부 SKU
+
+- 범위: Mellanox/NVIDIA optical transceivers; some SKUs; optical-lens/substrate/driver constraint; speeds unspecified
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 50 초과주
+- 기준: 2026-09-24
+- 내용: Mellanox·NVIDIA 광트랜시버 일부 SKU 납기는 50주를 초과합니다. 속도는 지정되지 않았으며 특정 계정의 2027년 3월 지연 사례를 기간으로 변환하지 않습니다.
+
+### Rubin용 광모듈 1.6TB 원문
+
+- 범위: Foxconn confirmed optical transceiver lead time for NVIDIA Rubin server builds; source says 1.6TB; original unit retained without correcting to Tb
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 441일
+- 기준: 2026-09-24
+- 내용: Foxconn이 확인한 NVIDIA Rubin 서버용 광트랜시버 납기는 441일입니다. 속도 표기는 원문 1.6TB를 보존하며 1.6Tb로 임의 수정하지 않습니다. 기존 800G·1.6T 집계와 다른 범위·단위입니다.
+
+[원문: The Greensheet 2026-09](https://info.fusionww.com/blog/the-greensheet-september-2026)
+
 ## TrendForce · Weekly Radar 002
 
 발간: 2026-09-21 · 자료 기준/보고대상: 2026-09-21
@@ -490,6 +586,38 @@ PDU 관련 전원 부품의 Q2 2026 보고값입니다. PMIC 20–40주, SiC MOS
 
 [원문: Lead-Time Guide · 2026-08](https://my.avnet.com/wcm/connect/2222f00c-e4dc-4143-899c-4a892756fcc7/AVA-Lead-Time-Guide-August-2026-EN-Document.pdf?MOD=AJPERES)
 
+## Fusion Worldwide · The Greensheet 2026-07
+
+발간: 2026-07-29 · 자료 기준/보고대상: 2026-07
+
+RTX 6000 Blackwell 서버 에디션의 본문 납기는 24–48주입니다. 요약은 48주라고 표현하므로 본문 범위를 채택하고 원문 불일치를 기록합니다. ConnectX-7·8 복합 범위 납기는 원문 20–24+주입니다. 열린 상한을 보존합니다. 요약의 20–52주는 Broadcom HBA·RAID까지 포함한 묶음이므로 같은 범위로 취급하지 않습니다. Seagate·WD 20TB·24TB 고용량 HDD 납기는 원문 52+주입니다. 공급능력 매진 기간을 납기로 바꾸지 않고 명시된 납기만 채택합니다.
+
+### GPU RTX PRO 6000 Blackwell 서버
+
+- 범위: NVIDIA RTX PRO 6000 Blackwell Server Edition; distributor channel; excludes workstation variant
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 24–48주
+- 기준: 2026-07-29
+- 내용: RTX 6000 Blackwell 서버 에디션의 본문 납기는 24–48주입니다. 요약은 48주라고 표현하므로 본문 범위를 채택하고 원문 불일치를 기록합니다.
+
+### NIC ConnectX-7·8
+
+- 범위: Mellanox/NVIDIA ConnectX-7 and ConnectX-8 NICs; combined generation scope; speed unspecified
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–24+주
+- 기준: 2026-07-29
+- 내용: ConnectX-7·8 복합 범위 납기는 원문 20–24+주입니다. 열린 상한을 보존합니다. 요약의 20–52주는 Broadcom HBA·RAID까지 포함한 묶음이므로 같은 범위로 취급하지 않습니다.
+
+### HDD 20TB·24TB
+
+- 범위: Seagate and Western Digital high-capacity HDD 20TB and 24TB; distributor market
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 52 이상주
+- 기준: 2026-07-29
+- 내용: Seagate·WD 20TB·24TB 고용량 HDD 납기는 원문 52+주입니다. 공급능력 매진 기간을 납기로 바꾸지 않고 명시된 납기만 채택합니다.
+
+[원문: The Greensheet 2026-07](https://info.fusionww.com/blog/the-greensheet-july-2026)
+
 ## Sourceability · Lead Time Report · Q2 2026
 
 발간: 2026-07-14 · 자료 기준/보고대상: 2026-Q2
@@ -538,6 +666,102 @@ NIC와 네트워크 부품 납기 확대를 보고했습니다. ConnectX-7은 52
 
 [원문: NIC·스위치·광모듈 · 2026-07-13](https://info.fusionww.com/blog/nic-lead-times-just-hit-52-weeks.-what-chinas-h200-move-means-for-whats-next)
 
+## Rebound Electronics · Market Insights Buyers Guide 2026-Q3
+
+발간: 미확인 · 발간호 2026-Q3 · 자료 기준/보고대상: 2026-Q3
+
+Rebound 2026-Q3호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 11개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–54주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Alliance Memory PC (Commodity) DRAM: 10 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 26–28주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Kingston PC (Commodity) DRAM: 26 - 28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 26–28주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Kingston Solid State Drives (SSD): 26 - 28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 26–28주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Kingston eMMC: 26 - 28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54 이상주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 SkyHigh Memory SLC NAND Flash: 54+주. 표지 발간호 기준이며 분기말 확정값은 아닙니다. 원문 +는 하한 경계로 보존합니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54 이상주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 SkyHigh Memory eMMC: 54+주. 표지 발간호 기준이며 분기말 확정값은 아닙니다. 원문 +는 하한 경계로 보존합니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Macronix eMMC: 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 ADATA Solid State Drives (SSD): 28 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–54주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Greenliant Solid State Drives (SSD): 22 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Micron eMMC: 28 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2026-Q3
+- 내용: Rebound 2026-Q3호 Micron Solid State Drives (SSD): 28 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights Buyers Guide 2026-Q3](https://reboundeu.com/wp-content/uploads/2026/09/Q3-2026-Quarterly-Market-Insights-Buyers-Guide44.pdf)
+
 ## Fusion Worldwide · The Greensheet 2026-06
 
 발간: 2026-06-24 · 자료 기준/보고대상: 2026-06
@@ -551,6 +775,30 @@ Mellanox CX6·CX7의 100G·200G·400G NIC 납기는 30–52주입니다.
 - 보고 리드타임: 30–52주
 - 기준: 2026-06-24
 - 내용: Mellanox CX6·CX7의 100G·200G·400G NIC 납기는 30–52주입니다.
+
+[원문: The Greensheet 2026-06](https://info.fusionww.com/blog/the-greensheet-june-2026)
+
+## Fusion Worldwide · The Greensheet 2026-06 · GPU 추가 발췌
+
+발간: 2026-06-24 · 자료 기준/보고대상: 2026-06
+
+RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다. RTX PRO 6000 Blackwell 서버 에디션 평균 납기는 원문 12+주입니다. 상한은 미공표이며 워크스테이션 변형의 납기 불확실성과 구분합니다.
+
+### GPU RTX 4000·5000 Ada
+
+- 범위: NVIDIA RTX 4000 and RTX 5000 Ada workstation GPUs; paired series; distributor channel
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 48–52주
+- 기준: 2026-06-24
+- 내용: RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다.
+
+### GPU RTX PRO 6000 Blackwell 서버
+
+- 범위: NVIDIA RTX PRO 6000 Blackwell Server Edition; distributor channel; excludes workstation variant
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12 이상주
+- 기준: 2026-06-24
+- 내용: RTX PRO 6000 Blackwell 서버 에디션 평균 납기는 원문 12+주입니다. 상한은 미공표이며 워크스테이션 변형의 납기 불확실성과 구분합니다.
 
 [원문: The Greensheet 2026-06](https://info.fusionww.com/blog/the-greensheet-june-2026)
 
@@ -698,6 +946,62 @@ Mellanox CX6·CX7의 100G·200G·400G NIC 납기는 30–52주입니다.
 
 [원문: Americas Construction Market Insights · June 2026 · Supply chain](https://insights.linesight.com/cmi-2026-june/industry-trends-and-supply-chain-dynamics-2026-americas/supply-chain)
 
+## Fusion Worldwide · The Greensheet 2026-05
+
+발간: 2026-05-27 · 자료 기준/보고대상: 2026-05
+
+RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다. RTX PRO 6000 Blackwell 서버 에디션 평균 납기는 원문 12+주입니다. 상한은 미공표이며 워크스테이션 변형의 납기 불확실성과 구분합니다.
+
+### GPU RTX 4000·5000 Ada
+
+- 범위: NVIDIA RTX 4000 and RTX 5000 Ada workstation GPUs; paired series; distributor channel
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 48–52주
+- 기준: 2026-05-27
+- 내용: RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다.
+
+### GPU RTX PRO 6000 Blackwell 서버
+
+- 범위: NVIDIA RTX PRO 6000 Blackwell Server Edition; distributor channel; excludes workstation variant
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12 이상주
+- 기준: 2026-05-27
+- 내용: RTX PRO 6000 Blackwell 서버 에디션 평균 납기는 원문 12+주입니다. 상한은 미공표이며 워크스테이션 변형의 납기 불확실성과 구분합니다.
+
+[원문: The Greensheet 2026-05](https://info.fusionww.com/blog/the-greensheet-may-2026)
+
+## Fusion Worldwide · The Greensheet 2026-04
+
+발간: 2026-04-30 · 자료 기준/보고대상: 2026-04
+
+RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다. RTX PRO 6000 Blackwell 서버 에디션 평균 납기는 원문 12+주입니다. 상한은 미공표이며 워크스테이션 변형의 납기 불확실성과 구분합니다. ConnectX-7·8 복합 범위 납기는 20–24주입니다. CX8 동봉 판매 조건을 보존하며 CX7 단독 계열과 합치지 않습니다.
+
+### GPU RTX 4000·5000 Ada
+
+- 범위: NVIDIA RTX 4000 and RTX 5000 Ada workstation GPUs; paired series; distributor channel
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 48–52주
+- 기준: 2026-04-30
+- 내용: RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다.
+
+### GPU RTX PRO 6000 Blackwell 서버
+
+- 범위: NVIDIA RTX PRO 6000 Blackwell Server Edition; distributor channel; excludes workstation variant
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 12 이상주
+- 기준: 2026-04-30
+- 내용: RTX PRO 6000 Blackwell 서버 에디션 평균 납기는 원문 12+주입니다. 상한은 미공표이며 워크스테이션 변형의 납기 불확실성과 구분합니다.
+
+### NIC ConnectX-7·8
+
+- 범위: Mellanox/NVIDIA ConnectX-7 and ConnectX-8 NICs; combined generation scope; speed unspecified
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–24주
+- 기준: 2026-04-30
+- 내용: ConnectX-7·8 복합 범위 납기는 20–24주입니다. CX8 동봉 판매 조건을 보존하며 CX7 단독 계열과 합치지 않습니다.
+
+[원문: The Greensheet 2026-04](https://info.fusionww.com/blog/the-greensheet-april-2026)
+
 ## TrendForce · 일반 서버 BMC · 2026-04-15
 
 발간: 2026-04-15 · 자료 기준/보고대상: 2026-04-15
@@ -786,6 +1090,126 @@ Mellanox CX6·CX7의 100G·200G·400G NIC 납기는 30–52주입니다.
 
 [원문: State of the Industry · Q1 2026](https://info.fusionww.com/blog/state-of-the-industry-q1-2026)
 
+## Rebound Electronics · Market Insights Buyers Guide 2026-Q2
+
+발간: 미확인 · 발간호 2026-Q2 · 자료 기준/보고대상: 2026-Q2
+
+Rebound 2026-Q2호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 11개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Alliance Memory PC (Commodity) DRAM: 4 - 22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Kingston PC (Commodity) DRAM: 6 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Kingston Solid State Drives (SSD): 6 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Kingston eMMC: 6 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 SkyHigh Memory SLC NAND Flash: 8 - 12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54 이상주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 SkyHigh Memory eMMC: 54+주. 표지 발간호 기준이며 분기말 확정값은 아닙니다. 원문 +는 하한 경계로 보존합니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 32–34주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Macronix eMMC: 32 - 34주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 ADATA Solid State Drives (SSD): 28 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–28주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Greenliant Solid State Drives (SSD): 22 - 28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Micron / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Micron eMMC: 28 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Micron / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2026-Q2
+- 내용: Rebound 2026-Q2호 Micron Solid State Drives (SSD): 28 - 54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights Buyers Guide 2026-Q2](https://reboundeu.com/wp-content/uploads/2026/06/Q2-2026-Market-Insights-Buyers-Guide.pdf)
+
+## Fusion Worldwide · The Greensheet 2026-03
+
+발간: 2026-03-26 · 자료 기준/보고대상: 2026-03
+
+RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다. Mellanox ConnectX-7 납기는 20–24주입니다. 속도가 지정되지 않은 기존 ConnectX-7 범위와 연결합니다. 종전 2–4주는 기준일이 없어 별도 관측으로 만들지 않습니다.
+
+### GPU RTX 4000·5000 Ada
+
+- 범위: NVIDIA RTX 4000 and RTX 5000 Ada workstation GPUs; paired series; distributor channel
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 48–52주
+- 기준: 2026-03-26
+- 내용: RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다.
+
+### Mellanox ConnectX-7 NIC
+
+- 범위: Mellanox ConnectX7; specific speeds unspecified
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–24주
+- 기준: 2026-03-26
+- 내용: Mellanox ConnectX-7 납기는 20–24주입니다. 속도가 지정되지 않은 기존 ConnectX-7 범위와 연결합니다. 종전 2–4주는 기준일이 없어 별도 관측으로 만들지 않습니다.
+
+[원문: The Greensheet 2026-03](https://info.fusionww.com/blog/the-greensheet-march-2026)
+
 ## Fusion Worldwide · The Greensheet 2026-02
 
 발간: 2026-02-25 · 자료 기준/보고대상: 2026-02
@@ -801,6 +1225,134 @@ Mellanox CX6·CX7의 100G·200G·400G NIC 납기는 30–52주입니다.
 - 내용: 본문 ConnectX-7 납기는 20–50주입니다. 요약의 50주 이상이라는 표현과 범위가 달라 불일치를 남깁니다. 종전 2–4주는 날짜가 없어 추가하지 않습니다.
 
 [원문: The Greensheet 2026-02](https://info.fusionww.com/blog/the-greensheet-february-2026)
+
+## Fusion Worldwide · The Greensheet 2026-02 · GPU 추가 발췌
+
+발간: 2026-02-25 · 자료 기준/보고대상: 2026-02
+
+RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다.
+
+### GPU RTX 4000·5000 Ada
+
+- 범위: NVIDIA RTX 4000 and RTX 5000 Ada workstation GPUs; paired series; distributor channel
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 48–52주
+- 기준: 2026-02-25
+- 내용: RTX 4000·5000 Ada 워크스테이션 GPU 납기는 48–52주입니다. 두 모델 묶음 범위를 보존하며 Blackwell 전환으로 생산이 축소되고 있다고 설명합니다.
+
+[원문: The Greensheet 2026-02](https://info.fusionww.com/blog/the-greensheet-february-2026)
+
+## Rebound Electronics · Market Insights Buyers Guide 2026-Q1
+
+발간: 미확인 · 발간호 2026-Q1 · 자료 기준/보고대상: 2026-Q1
+
+Rebound 2026-Q1호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 Alliance Memory PC (Commodity) DRAM: 4 - 22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 Kingston PC (Commodity) DRAM: 6 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 Kingston Solid State Drives (SSD): 6 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 Kingston eMMC: 6 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 SkyHigh Memory SLC NAND Flash: 8 - 12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 SkyHigh Memory eMMC: 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–24주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 Macronix eMMC: 22 - 24주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 ADATA Solid State Drives (SSD): 28 -54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–28주
+- 기준: 2026-Q1
+- 내용: Rebound 2026-Q1호 Greenliant Solid State Drives (SSD): 22 - 28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights Buyers Guide 2026-Q1](https://reboundeu.com/wp-content/uploads/2026/04/Q1-2026-Quarterly-Market-Insights-Buyers-Guide.pdf)
+
+## Fusion Worldwide · The Greensheet 2025-12
+
+발간: 2025-12-17 · 자료 기준/보고대상: 2025-12
+
+고용량 HDD 문단은 Seagate·WD·Toshiba 전 제조사의 납기가 52주를 초과한다고 보고합니다. 20TB·24TB는 수요가 가장 높은 용량이며 그 용량만의 인용값으로 좁히지 않습니다.
+
+### 고용량 HDD 전 제조사
+
+- 범위: High-capacity HDD across Seagate, Western Digital and Toshiba; 20TB/24TB highest demand context; no capacity-exclusive quote
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 52 초과주
+- 기준: 2025-12-17
+- 내용: 고용량 HDD 문단은 Seagate·WD·Toshiba 전 제조사의 납기가 52주를 초과한다고 보고합니다. 20TB·24TB는 수요가 가장 높은 용량이며 그 용량만의 인용값으로 좁히지 않습니다.
+
+[원문: The Greensheet 2025-12](https://info.fusionww.com/blog/the-greensheet-december-2025)
+
+## Fusion Worldwide · The Greensheet 2025-10
+
+발간: 2025-10-29 · 자료 기준/보고대상: 2025-10
+
+Solidigm 기업용 SSD 평균 납기는 6–8주입니다. 별도로 언급된 고수요 SKU의 10주 초과는 평균에 합치지 않습니다. 고용량 eSSD 전 제조사 계열과도 구분합니다.
+
+### Solidigm eSSD 평균
+
+- 범위: Solidigm enterprise SSD average lead time; capacity/interface unspecified; excludes separate high-demand tail
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2025-10-29
+- 내용: Solidigm 기업용 SSD 평균 납기는 6–8주입니다. 별도로 언급된 고수요 SKU의 10주 초과는 평균에 합치지 않습니다. 고용량 eSSD 전 제조사 계열과도 구분합니다.
+
+[원문: The Greensheet 2025-10](https://info.fusionww.com/blog/the-greensheet-october-2025)
 
 ## Nautilus Data Technologies · EcoCore FCD CDU · 2025-10-08
 
@@ -833,6 +1385,86 @@ EcoCore FCD CDU의 제품별 납기를 확인했습니다. 시장 평균이나 �
 - 내용: 고용량 기업용 SSD 납기는 16–20주 또는 그 이상입니다. 종전 8–12주의 날짜는 없어 과거 관측으로 추가하지 않습니다.
 
 [원문: Enterprise SSD Supply: What Buyers Need to Know](https://info.fusionww.com/blog/enterprise-ssd-supply-what-buyers-need-to-know)
+
+## Rebound Electronics · Market Insights 2025-Q4
+
+발간: 미확인 · 발간호 2025-Q4 · 자료 기준/보고대상: 2025-Q4
+
+Rebound 2025-Q4호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 Alliance Memory PC (Commodity) DRAM: 04 - 22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 Kingston PC (Commodity) DRAM: 06 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 Kingston Solid State Drives (SSD): 06 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–18주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 Kingston eMMC: 06 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 SkyHigh Memory SLC NAND Flash: 08 - 12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 SkyHigh Memory eMMC: 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–24주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 Macronix eMMC: 22 - 24주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 28–54주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 ADATA Solid State Drives (SSD): 28 -54주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 22–28주
+- 기준: 2025-Q4
+- 내용: Rebound 2025-Q4호 Greenliant Solid State Drives (SSD): 22 - 28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2025-Q4](https://reboundeu.com/wp-content/uploads/2026/01/Q4-2025-Quarterly-Market-Insights.pdf)
 
 ## TrendForce · Nearline HDD·QLC SSD · 2025-09-15
 
@@ -1098,6 +1730,86 @@ AI 저장 수요 속 HDD와 QLC SSD의 납기 차이를 보여준 원문 표입�
 
 [원문: Lead-Time Guide · 2025-07](https://my.avnet.com/wcm/connect/a3326d60-174d-4224-8e1d-f2f5595919a1/AVA-Lead-Time-Guide-July-2025-EN-Document.pdf?MOD=AJPERES)
 
+## Rebound Electronics · Market Insights 2025-Q3
+
+발간: 미확인 · 발간호 2025-Q3 · 자료 기준/보고대상: 2025-Q3
+
+Rebound 2025-Q3호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 Alliance Memory PC (Commodity) DRAM: 4 - 22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 Kingston PC (Commodity) DRAM: 4 - 6주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 Kingston Solid State Drives (SSD): 6 - 10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 Kingston eMMC: 6 - 8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 SkyHigh Memory SLC NAND Flash: 08 - 12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 SkyHigh Memory eMMC: 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 Macronix eMMC: 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 ADATA Solid State Drives (SSD): 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2025-Q3
+- 내용: Rebound 2025-Q3호 Greenliant Solid State Drives (SSD): 10 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2025-Q3](https://reboundeu.com/wp-content/uploads/2025/10/Q3-2025-Quarterly-Market-Insights-.pdf)
+
 ## Alpha and Omega Semiconductor · AOTL66935 MOSFET · 2025-05-01
 
 발간: 2025-05-01 · 자료 기준/보고대상: 2025-05-01
@@ -1113,6 +1825,150 @@ AI 서버 전원 보호용 AOTL66935의 제조사 공개 납기는 14–16주였
 - 내용: 제조사가 해당 MOSFET의 생산물량 납기를 14–16주로 공개했습니다. 특정 제품의 출시 당시 조건이며 시장 평균이 아닙니다.
 
 [원문: AOTL66935 MOSFET · 2025-05-01](https://www.aosmd.com/sites/default/files/2025-05/AOS_66935_HotSwap_MOSFET_PR.pdf)
+
+## Rebound Electronics · Market Insights 2025-Q2
+
+발간: 미확인 · 발간호 2025-Q2 · 자료 기준/보고대상: 2025-Q2
+
+Rebound 2025-Q2호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 Alliance Memory PC (Commodity) DRAM: 04 - 22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 Kingston PC (Commodity) DRAM: 04 - 06주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 Kingston Solid State Drives (SSD): 06 - 10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 Kingston eMMC: 06 - 08주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 SkyHigh Memory SLC NAND Flash: 08 - 12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 SkyHigh Memory eMMC: 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 Macronix eMMC: 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 ADATA Solid State Drives (SSD): 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2025-Q2
+- 내용: Rebound 2025-Q2호 Greenliant Solid State Drives (SSD): 10 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2025-Q2](https://reboundeu.com/wp-content/uploads/2025/07/Q2-2025-Quarterly-Market-Insights.pdf)
+
+## Rebound Electronics · Market Insights 2025-Q1
+
+발간: 미확인 · 발간호 2025-Q1 · 자료 기준/보고대상: 2025-Q1
+
+Rebound 2025-Q1호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 7개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2025-Q1
+- 내용: Rebound 2025-Q1호 Alliance Memory PC (Commodity) DRAM: 4 - 22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다. 원문 표기 PC Commodity DRAM(괄호 없음)을 보존하며 같은 PC 상품 범위로 연결합니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2025-Q1
+- 내용: Rebound 2025-Q1호 Kingston PC (Commodity) DRAM: 4 - 6주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2025-Q1
+- 내용: Rebound 2025-Q1호 SkyHigh Memory SLC NAND Flash: 8 - 12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2025-Q1
+- 내용: Rebound 2025-Q1호 SkyHigh Memory eMMC: 10 - 14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2025-Q1
+- 내용: Rebound 2025-Q1호 Macronix eMMC: 20 - 28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–12주
+- 기준: 2025-Q1
+- 내용: Rebound 2025-Q1호 ADATA Solid State Drives (SSD): 10 - 12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2025-Q1
+- 내용: Rebound 2025-Q1호 Greenliant Solid State Drives (SSD): 10 - 18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2025-Q1](https://reboundeu.com/wp-content/uploads/2025/04/RE149-Q1-2025-Market-Insights-V6.pdf)
 
 ## Fusion Worldwide · The Greensheet 2024-12
 
@@ -1153,6 +2009,86 @@ Seagate 고용량 HDD의 납기 지연은 30–33주입니다. 같은 기사의 
 - 내용: SK hynix 신규 HBM 주문 납기는 1년 초과입니다. 원문 over a year를 보존하고 달력 단위 1년=12개월로만 표시했습니다. 세대·밀도는 미공개이며 공급능력 예약이나 재고 주수와 구분합니다.
 
 [원문: The Greensheet 2024-10](https://info.fusionww.com/blog/the-greensheet-october-2024)
+
+## Rebound Electronics · Market Insights 2024-Q4
+
+발간: 미확인 · 발간호 2024-Q4 · 자료 기준/보고대상: 2024-Q4
+
+Rebound 2024-Q4호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 Alliance Memory PC (Commodity) DRAM: 4-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 Kingston PC (Commodity) DRAM: 4-6주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 Kingston Solid State Drives (SSD): 6-10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 Kingston eMMC: 6-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 SkyHigh Memory SLC NAND Flash: 8-12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 SkyHigh Memory eMMC: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 Macronix eMMC: 20-28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 ADATA Solid State Drives (SSD): 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2024-Q4
+- 내용: Rebound 2024-Q4호 Greenliant Solid State Drives (SSD): 10-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2024-Q4](https://reboundeu.com/wp-content/uploads/2025/04/Market-Insights-Q4-2024-Release.pdf)
 
 ## Avnet Abacus · Lead-Time Guide · 2024-09
 
@@ -1386,6 +2322,86 @@ CoWoS·HBM 공급 확대 이후 H100 납기 단축을 보고한 별도 기사입
 
 [원문: H100 납기 · 2024-07-17](https://www.trendforce.com/presscenter/news/20240717-12227.html)
 
+## Rebound Electronics · Market Insights 2024-Q3
+
+발간: 미확인 · 발간호 2024-Q3 · 자료 기준/보고대상: 2024-Q3
+
+Rebound 2024-Q3호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 Alliance Memory PC (Commodity) DRAM: 4-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 Kingston PC (Commodity) DRAM: 4-6주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 Kingston Solid State Drives (SSD): 6-10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 Kingston eMMC: 6-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 SkyHigh Memory SLC NAND Flash: 8-12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 SkyHigh Memory eMMC: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 Macronix eMMC: 20-28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 ADATA Solid State Drives (SSD): 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2024-Q3
+- 내용: Rebound 2024-Q3호 Greenliant Solid State Drives (SSD): 10-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2024-Q3](https://reboundeu.com/wp-content/uploads/2024/10/Market-Insights-Q3-2024-FINAL-V.pdf)
+
 ## TrendForce News (Economic Daily News·Dell Taiwan 발언 인용) · GPU H100 서버 납기 보도
 
 발간: 2024-04-10 · 자료 기준/보고대상: 2024-04-10
@@ -1401,6 +2417,86 @@ CoWoS·HBM 공급 확대 이후 H100 납기 단축을 보고한 별도 기사입
 - 내용: 2024년 4월 9일 Dell 대만 경영진 발언을 인용한 보도에서 H100 공급 개선에 따른 서버 납기를 8–12주로 전했습니다. 일부는 이보다 짧다는 단서도 있습니다. Dell 대만 범위이므로 전체 H100 시장과 구분합니다.
 
 [원문: GPU H100 서버 납기 보도](https://www.trendforce.com/news/2024/04/10/news-dell-taiwan-highlights-significant-improvement-in-gpu-supply-times/)
+
+## Rebound Electronics · Market Insights 2024-Q2
+
+발간: 미확인 · 발간호 2024-Q2 · 자료 기준/보고대상: 2024-Q2
+
+Rebound 2024-Q2호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 Alliance Memory PC (Commodity) DRAM: 4-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 Kingston PC (Commodity) DRAM: 4-6주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 Kingston Solid State Drives (SSD): 6-10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 Kingston eMMC: 6-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 SkyHigh Memory SLC NAND Flash: 8-12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 SkyHigh Memory eMMC: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 Macronix eMMC: 20-28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 ADATA Solid State Drives (SSD): 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2024-Q2
+- 내용: Rebound 2024-Q2호 Greenliant Solid State Drives (SSD): 10-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2024-Q2](https://reboundeu.com/wp-content/uploads/2024/07/Q2-2024-Market-Insights.pdf)
 
 ## Tom's Hardware (UBS·SeekingAlpha 재인용) · GPU H100 80GB 납기 보도
 
@@ -1850,6 +2946,86 @@ UBS 보고서를 재인용한 기사에서 H100 80GB 납기를 3–4개월로 �
 
 [원문: Lead-Time Guide · 2024-01](https://my.avnet.com/wcm/connect/553f6350-6af3-44b5-884f-ea89ebe4907e/AVA-Lead-Time-Guide-January-2024-EN-Document.pdf?MOD=AJPERES)
 
+## Rebound Electronics · Market Insights 2024-Q1
+
+발간: 미확인 · 발간호 2024-Q1 · 자료 기준/보고대상: 2024-Q1
+
+Rebound 2024-Q1호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 Alliance Memory PC (Commodity) DRAM: 4-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–6주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 Kingston PC (Commodity) DRAM: 4-6주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 Kingston Solid State Drives (SSD): 6-10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–8주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 Kingston eMMC: 4-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 8–12주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 SkyHigh Memory SLC NAND Flash: 8-12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 SkyHigh Memory eMMC: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 Macronix eMMC: 20-28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 ADATA Solid State Drives (SSD): 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2024-Q1
+- 내용: Rebound 2024-Q1호 Greenliant Solid State Drives (SSD): 10-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2024-Q1](https://reboundeu.com/wp-content/uploads/2024/08/Market-Insights-Q1-20244.pdf)
+
 ## Fusion Worldwide · The Greensheet 2023-12
 
 발간: 2023-12-12 · 자료 기준/보고대상: 2023-12
@@ -2106,6 +3282,166 @@ Omdia 조사에 대한 2023년 11월 28일 보도에서 H100 탑재 완성 서�
 
 [원문: Lead-Time Guide · 2023-11](https://my.avnet.com/wcm/connect/affeb8c0-65e8-46cb-84bc-15fca9dae0bd/AVA-Lead-Time-Guide-November-2022-EN-Document.pdf?MOD=AJPERES)
 
+## Rebound Electronics · Market Insights 2023-Q4
+
+발간: 미확인 · 발간호 2023-Q4 · 자료 기준/보고대상: 2023-Q4
+
+Rebound 2023-Q4호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 Alliance Memory PC (Commodity) DRAM: 4-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–8주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 Kingston PC (Commodity) DRAM: 4-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 Kingston Solid State Drives (SSD): 6-10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–8주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 Kingston eMMC: 4-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 SkyHigh Memory SLC NAND Flash: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 SkyHigh Memory eMMC: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 Macronix eMMC: 20-28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 ADATA Solid State Drives (SSD): 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2023-Q4
+- 내용: Rebound 2023-Q4호 Greenliant Solid State Drives (SSD): 10-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2023-Q4](https://reboundeu.com/wp-content/uploads/2024/01/Market-Insights-Q4-2023.pdf)
+
+## Rebound Electronics · Market Insights 2023-Q3
+
+발간: 미확인 · 발간호 2023-Q3 · 자료 기준/보고대상: 2023-Q3
+
+Rebound 2023-Q3호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 9개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 Alliance Memory PC (Commodity) DRAM: 4-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–8주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 Kingston PC (Commodity) DRAM: 4-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–10주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 Kingston Solid State Drives (SSD): 6-10주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–8주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 Kingston eMMC: 4-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 SkyHigh Memory SLC NAND Flash: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 SkyHigh Memory eMMC: 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–28주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 Macronix eMMC: 20-28주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 ADATA Solid State Drives (SSD): 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2023-Q3
+- 내용: Rebound 2023-Q3호 Greenliant Solid State Drives (SSD): 10-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2023-Q3](https://reboundeu.com/wp-content/uploads/2023/10/Market-Insights-Q3-2023.pdf)
+
 ## Fusion Worldwide · The Greensheet 2023-07
 
 발간: 2023-06-30 · 자료 기준/보고대상: 2023-07
@@ -2241,6 +3577,110 @@ Mellanox 스위치 납기는 8–12개월이며 7800·7890 계열이 가장 큰 
 - 내용: Mellanox 스위치 납기는 8–12개월이며 7800·7890 계열이 가장 큰 영향을 받습니다. 원문 개월 단위를 보존합니다.
 
 [원문: The Greensheet 2023-01](https://info.fusionww.com/blog/the-greensheet-january-2023)
+
+## Rebound Electronics · Market Insights 2023-Q1
+
+발간: 미확인 · 발간호 2023-Q1 · 자료 기준/보고대상: 2023-Q1
+
+Rebound 2023-Q1호 공식 납기 표에서 기존 제조사·제품 범위와 일치하는 12개 주 단위 수치를 추가 확인했습니다. 분기는 표지 발간호이며 조사일·분기말 확정값이 아닙니다. NAND 일반 표기는 SLC NAND와 연결하지 않았고 Samsung LED 표기도 기존 Samsung으로 바꾸지 않았습니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Alliance Memory / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–22주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Alliance Memory PC (Commodity) DRAM: 4-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Kingston / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–8주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Kingston PC (Commodity) DRAM: 6-8주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Kingston / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 4–18주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Kingston Solid State Drives (SSD): 4-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Kingston / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 6–12주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Kingston eMMC: 6-12주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### NAND Flash
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / SLC NAND Flash. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 20–22주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 SkyHigh Memory SLC NAND Flash: 20-22주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / SkyHigh Memory / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 18–20주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 SkyHigh Memory eMMC: 18-20주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Macronix / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Macronix eMMC: 54-56주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / ADATA / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–14주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 ADATA Solid State Drives (SSD): 10-14주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Greenliant / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 10–18주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Greenliant Solid State Drives (SSD): 10-18주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### DRAM
+
+- 범위: Rebound 일반 유통시장 / Samsung / PC (Commodity) DRAM. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Samsung PC (Commodity) DRAM: 54-56주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### SSD
+
+- 범위: Rebound 일반 유통시장 / Samsung / Solid State Drives (SSD). 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Samsung Solid State Drives (SSD): 54-56주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+### eMMC
+
+- 범위: Rebound 일반 유통시장 / Samsung / eMMC. 원문은 상세 규격·지역 미공개. SSD를 enterprise SSD로 간주하지 않음.
+- 상태: 원문 별도 분류 없음
+- 보고 리드타임: 54–56주
+- 기준: 2023-Q1
+- 내용: Rebound 2023-Q1호 Samsung eMMC: 54-56주. 표지 발간호 기준이며 분기말 확정값은 아닙니다.
+
+[원문: Market Insights 2023-Q1](https://reboundeu.com/wp-content/uploads/2023/04/Market-Insights-Q1-2023.pdf)
 
 ## Avnet Abacus · Lead-Time Guide · 2022-12
 

@@ -37,7 +37,7 @@
     const initial = releases.find(r => isTF(r.publisher));
     const latest = ordered(data.sources.filter(s => s.published_at)).at(-1);
     root.replaceChildren();
-    const header = add(el('header', 'lt-header'), el('p', 'lt-eyebrow', 'ENSEMBLE / SUPPLY RESEARCH'), el('h1', '', '공급망 리드타임·재고'), el('p', 'lt-intro', data.intro_ko || '공개된 발행 자료에서 확인한 부품별 리드타임과 수급 상태입니다.'));
+    const header = add(el('header', 'lt-header'), el('p', 'lt-eyebrow', 'ENSEMBLE / SUPPLY RESEARCH'), el('h1', '', '공급망 리드타임·재고'), el('p', 'lt-intro', 'TrendForce Weekly Radar는 2026-09-14 첫 발간되었습니다. 매 발간호의 부품별 원문 수치와 한국어 해설을 누적합니다. 이전 이력은 확인된 출처·제품 범위별로 구분합니다.'));
     add(header, add(el('div', 'lt-stats'), el('span', '', `리드타임 최근 발행일 ${latest ? date(latest.published_at) : '미확인'}`), el('span', '', `리드타임 관측 ${data.observations.length}건`), el('span', '', `리드타임 갱신 ${date(data.updated_at)}`)), el('p', 'lt-notice', '분기별 납기·재고와 변화율을 비교합니다. 분기 내 마지막 확인값을 사용하며 원문 날짜와 출처를 함께 제공합니다.'));
     root.append(header);
     const views = el('div','lt-view-tabs');
@@ -72,7 +72,7 @@
       const cardRows = isTF(release.publisher) ? tfRows : observations;
       const primaryRows = []; const seenComponents = new Set();
       [...cardRows].sort((a,b)=>clean(b.as_of).localeCompare(clean(a.as_of))).forEach(o => { const key = seriesOf(o).component || o.series_id; if (!seenComponents.has(key)) { seenComponents.add(key); primaryRows.push(o); } });
-      primaryRows.slice(0, 6).forEach(o => {
+      primaryRows.forEach(o => {
         const s = seriesOf(o); const src = sourceOf(o);
         const card = el('article', 'lt-card');
         add(card, el('p', 'lt-eyebrow', s.component || '부품 미확인'), el('h3', '', s.name || o.series_id), el('p', 'lt-meta', `${s.publisher || release.publisher} · ${s.scope || '범위 미확인'}`), el('p', 'lt-value', bounds(o, s.unit)), el('span', `lt-status ${({unknown:'lt-unknown','Very Tight':'lt-severe',Tight:'lt-tight',Tightening:'lt-tight',Balanced:'lt-balanced',Easing:'lt-balanced'})[o.status] || 'lt-unknown'}`, statusLabel[o.status] || '상태 미확인'), el('p', 'lt-meta', `균형 ${balanced(o, s.unit)}`));
@@ -80,7 +80,7 @@
         add(card, el('p', 'lt-narrative', o.narrative_ko || '상세 설명 미제공'), el('p', 'lt-meta', `발행 ${date(src.published_at)} · 기준 ${date(o.as_of)}`), link(src.title || '출처 미확인', src.url)); cards.append(card);
       });
       edition.append(cards);
-      if (primaryRows.length < 6) edition.append(el('p', 'lt-muted', `이 발행 호에서 확인된 핵심 부품 ${Math.min(primaryRows.length, 6)}건 · 제공되지 않은 부품의 값은 표시하지 않습니다.`));
+      edition.append(el('p', 'lt-muted', `이 발행 호에서 확인된 부품 ${primaryRows.length}건 · 제공되지 않은 부품의 값은 표시하지 않습니다.`));
       const update = add(el('div', 'lt-update'), el('h3', '', '선택 호 해설'), el('p', '', release.summary_ko || '발행 호 해설 미제공'));
       (release.source_ids || []).forEach(id => { const s = sourceMap.get(id); if (s) add(update, add(el('p'), link(`${s.publisher} · ${s.title}`, s.url))); }); edition.append(update);
     }

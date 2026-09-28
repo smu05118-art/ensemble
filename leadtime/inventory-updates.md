@@ -1,10 +1,24 @@
 # 앙상블 분기 재고 업데이트
 
-자료 갱신: 2026-09-23
+자료 갱신: 2026-09-29
 
 분기별 제조사·고객사 재고 주수입니다. 직접 보고된 제품 재고와 기업 전체 재고회전일수의 주수 환산을 구분합니다. 원문이 없는 제품·역할·분기는 공백으로 남깁니다.
 
 제품 물량 재고 주수, 보고 재고일수 환산, 전사 재무 참고값을 구분합니다. 회계분기는 FY로 표시합니다.
+
+## 2026-08-26 · NVIDIA · NVIDIA FY 2027Q2 Financial Results
+
+[원문](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027)
+
+### NVIDIA 전사 재고 · 재무 대리지표 · 제조사 · FY 2027Q2 · 연결 전사
+
+- 재고 수준: **약 15.49주**
+- 범위: NVIDIA 연결 전사. Compute & Networking·Graphics 등 전체 사업 혼합; GPU 제품 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-07-26
+
+NVIDIA FY 2027Q2 연결 전사 재무 대리지표는 약 15.49주입니다. 실제 분기 기초 재고 25,797와 기말 재고 31,575의 평균을 같은 단독분기 GAAP 매출원가 24,079로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
 
 ## 2026-08-14 · 삼성전기 · 삼성전기 2026년 반기 연결 재무제표
 
@@ -47,6 +61,20 @@ SK hynix 2026-Q2 연결 전사 재고의 재무 대리지표 16.56주입니다. 
 - 분기 종료일: 2026-06-30
 
 삼화콘덴서공업 2026-Q2 연결 전사 재고의 재무 대리지표 8.72주입니다. 연결 전사; MLCC 외 콘덴서 포함. MLCC 전용 재고주수 아님. 매출원가는 원문의 당기 3개월 열 직접 값입니다.
+
+## 2026-08-06 · Winbond · WINBOND 2Q26 Investor Conference
+
+[원문](https://mopsov.twse.com.tw/nas/STR/234420260806E001.pdf)
+
+### Winbond 전사 재고 · 재무 대리지표 · 제조사 · 2026-Q2 · 연결 전사
+
+- 재고 수준: **약 16.42주**
+- 범위: Winbond 연결 전사; 메모리와 Nuvoton 등 로직 사업 혼합. DRAM·NAND 제품별 공급가능 재고주수 아님.
+- 방법: 동일 연결 범위의 실제 분기 기초·기말 평균 재고 ÷ 단독분기 매출원가 × 실제 분기 일수 ÷ 7. 매출원가는 공개된 해당 분기 연결 Net Sales − Gross Profit의 회계 항등식으로 계산하며 두 입력을 보존합니다.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-06-30
+
+Winbond 2026-Q2 연결 전사 재무 대리지표는 약 16.42주입니다. 반올림된 NT$ million 공시 입력으로 산출했습니다. 기초 재고 25,232, 기말 재고 25,787; 단독분기 매출원가는 매출 59,843 − 매출총이익 39,645 = 20,198입니다. 메모리·로직 혼합 전사 값이며 제품 재고 주수나 직접 보고 DIO가 아닙니다.
 
 ## 2026-07-31 · LITEON / TWSE · LITEON 2Q26 Earnings Conference
 
@@ -126,6 +154,20 @@ Unimicron 2026-Q1의 전사 순재고회전일수는 55일입니다. 직접 보�
 
 Unimicron 2026-Q2의 전사 순재고회전일수는 56일입니다. 직접 보고한 일수를 7로 나누면 8.00주입니다. ABF 전용 물량 재고 또는 고객사 재고 주수로 해석하지 않습니다.
 
+## 2026-07-28 · Seagate · Seagate FY 2026Q4 Financial Results
+
+[원문](https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/)
+
+### Seagate 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q4 · 연결 전사
+
+- 재고 수준: **약 11.64주**
+- 범위: Seagate 연결 전사. 저장장치·시스템 등 전체 사업 혼합; HDD 제품만의 공급가능 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-07-03
+
+Seagate FY 2026Q4 연결 전사 재무 대리지표는 약 11.64주입니다. 실제 분기 기초 재고 1,530와 기말 재고 1,571의 평균을 같은 단독분기 GAAP 매출원가 1,731로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
+
 ## 2026-06-24 · Micron · Micron FY 2026Q3 Prepared Remarks
 
 [원문](https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf)
@@ -148,6 +190,20 @@ Micron의 FY 2026Q3 보고 재고일수는 120일 미만입니다. 원문 일수
 - 분기 종료일: 2026-05-28
 
 Micron의 FY 2026Q3 보고 재고일수는 120일입니다. 원문 일수를 7로 나눠 주 단위로 표시합니다. 회계분기 말 기준이며 FY 표기를 보존합니다. 기업 전체 참고값이며 해당 제품만의 재고 주수가 아닙니다.
+
+## 2026-05-20 · NVIDIA · NVIDIA FY 2027Q1 Financial Results
+
+[원문](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027)
+
+### NVIDIA 전사 재고 · 재무 대리지표 · 제조사 · FY 2027Q1 · 연결 전사
+
+- 재고 수준: **약 15주**
+- 범위: NVIDIA 연결 전사. Compute & Networking·Graphics 등 전체 사업 혼합; GPU 제품 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-04-26
+
+NVIDIA FY 2027Q1 연결 전사 재무 대리지표는 약 15.00주입니다. 실제 분기 기초 재고 21,403와 기말 재고 25,797의 평균을 같은 단독분기 GAAP 매출원가 20,458로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
 
 ## 2026-05-15 · 삼성전기 · 삼성전기 2026년 1분기 연결 재무제표
 
@@ -190,6 +246,34 @@ SK hynix 2026-Q1 연결 전사 재고의 재무 대리지표 17.85주입니다. 
 - 분기 종료일: 2026-03-31
 
 삼화콘덴서공업 2026-Q1 연결 전사 재고의 재무 대리지표 9.36주입니다. 연결 전사; MLCC 외 콘덴서 포함. MLCC 전용 재고주수 아님. 매출원가는 원문의 당기 3개월 열 직접 값입니다.
+
+## 2026-05-05 · Winbond · WINBOND 1Q26 Investor Conference
+
+[원문](https://www.winbond.com/export/sites/winbond/about-winbond/investor/investor-conference/1Q26-investor-conference_EN_Final.pdf)
+
+### Winbond 전사 재고 · 재무 대리지표 · 제조사 · 2026-Q1 · 연결 전사
+
+- 재고 수준: **약 18.38주**
+- 범위: Winbond 연결 전사; 메모리와 Nuvoton 등 로직 사업 혼합. DRAM·NAND 제품별 공급가능 재고주수 아님.
+- 방법: 동일 연결 범위의 실제 분기 기초·기말 평균 재고 ÷ 단독분기 매출원가 × 실제 분기 일수 ÷ 7. 매출원가는 공개된 해당 분기 연결 Net Sales − Gross Profit의 회계 항등식으로 계산하며 두 입력을 보존합니다.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-03-31
+
+Winbond 2026-Q1 연결 전사 재무 대리지표는 약 18.38주입니다. 반올림된 NT$ million 공시 입력으로 산출했습니다. 기초 재고 25,758, 기말 재고 25,232; 단독분기 매출원가는 매출 38,253 − 매출총이익 20,415 = 17,838입니다. 메모리·로직 혼합 전사 값이며 제품 재고 주수나 직접 보고 DIO가 아닙니다.
+
+## 2026-04-28 · Seagate · Seagate FY 2026Q3 Financial Results
+
+[원문](https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Third-Quarter-2026-Financial-Results/)
+
+### Seagate 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q3 · 연결 전사
+
+- 재고 수준: **약 11.82주**
+- 범위: Seagate 연결 전사. 저장장치·시스템 등 전체 사업 혼합; HDD 제품만의 공급가능 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-04-03
+
+Seagate FY 2026Q3 연결 전사 재무 대리지표는 약 11.82주입니다. 실제 분기 기초 재고 1,498와 기말 재고 1,530의 평균을 같은 단독분기 GAAP 매출원가 1,665로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
 
 ## 2026-03-18 · Micron · Micron FY 2026Q2 Prepared Remarks
 
@@ -252,6 +336,20 @@ Unimicron 2025-Q3의 전사 순재고회전일수는 49일입니다. 직접 보�
 
 Unimicron 2025-Q4의 전사 순재고회전일수는 53일입니다. 직접 보고한 일수를 7로 나누면 7.57주입니다. ABF 전용 물량 재고 또는 고객사 재고 주수로 해석하지 않습니다.
 
+## 2026-02-25 · NVIDIA · NVIDIA FY 2026Q4 Financial Results
+
+[원문](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026)
+
+### NVIDIA 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q4 · 연결 전사
+
+- 재고 수준: **약 15.72주**
+- 범위: NVIDIA 연결 전사. Compute & Networking·Graphics 등 전체 사업 혼합; GPU 제품 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-01-25
+
+NVIDIA FY 2026Q4 연결 전사 재무 대리지표는 약 15.72주입니다. 실제 분기 기초 재고 19,784와 기말 재고 21,403의 평균을 같은 단독분기 GAAP 매출원가 17,034로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
+
 ## 2026-02-25 · LITEON / TWSE · LITEON 4Q25 Earnings Conference
 
 [원문](https://mopsov.twse.com.tw/nas/STR/230120260225E001.pdf)
@@ -309,6 +407,20 @@ LITEON 2025-Q4 회사 전체 보고 재고일수는 69일, 주 환산은 약 9.8
 
 MPS 2025-Q4 회사전체 보고 재고일수는 153일입니다. 원문 일수를 7로 나눠 21.86주로 표시합니다. 전력반도체 제조사의 회사전체 참고값으로 개별 AI PMIC 또는 고객 제품 재고와 구분합니다. 현재 분기 기준 원문 행을 사용하며 미래 분기 기준 행을 섞지 않습니다.
 
+## 2026-01-27 · Seagate · Seagate FY 2026Q2 Financial Results
+
+[원문](https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Second-Quarter-2026-Financial-Results/)
+
+### Seagate 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q2 · 연결 전사
+
+- 재고 수준: **약 11.8주**
+- 범위: Seagate 연결 전사. 저장장치·시스템 등 전체 사업 혼합; HDD 제품만의 공급가능 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2026-01-02
+
+Seagate FY 2026Q2 연결 전사 재무 대리지표는 약 11.80주입니다. 실제 분기 기초 재고 1,496와 기말 재고 1,498의 평균을 같은 단독분기 GAAP 매출원가 1,649로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
+
 ## 2026-01-08 · TrendForce · 스마트폰 브랜드 · DRAM·NAND 합산 · 2026Q1
 
 [원문](https://www.trendforce.com/research/download/RP260108LO)
@@ -343,6 +455,20 @@ Micron의 FY 2026Q1 보고 재고일수는 120일 미만입니다. 원문 일수
 - 분기 종료일: 2025-11-27
 
 Micron의 FY 2026Q1 보고 재고일수는 126일입니다. 원문 일수를 7로 나눠 주 단위로 표시합니다. 회계분기 말 기준이며 FY 표기를 보존합니다. 기업 전체 참고값이며 해당 제품만의 재고 주수가 아닙니다.
+
+## 2025-11-19 · NVIDIA · NVIDIA FY 2026Q3 Financial Results
+
+[원문](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026)
+
+### NVIDIA 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q3 · 연결 전사
+
+- 재고 수준: **약 14.9주**
+- 범위: NVIDIA 연결 전사. Compute & Networking·Graphics 등 전체 사업 혼합; GPU 제품 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2025-10-26
+
+NVIDIA FY 2026Q3 연결 전사 재무 대리지표는 약 14.90주입니다. 실제 분기 기초 재고 14,962와 기말 재고 19,784의 평균을 같은 단독분기 GAAP 매출원가 15,157로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
 
 ## 2025-11-14 · SK hynix · SK hynix 2025년 3분기 연결 재무제표
 
@@ -380,6 +506,20 @@ MPS 2024-Q3 회사전체 보고 재고일수는 140일입니다. 원문 일수�
 
 MPS 2025-Q3 회사전체 보고 재고일수는 139일입니다. 원문 일수를 7로 나눠 19.86주로 표시합니다. 전력반도체 제조사의 회사전체 참고값으로 개별 AI PMIC 또는 고객 제품 재고와 구분합니다. 현재 분기 기준 원문 행을 사용하며 미래 분기 기준 행을 섞지 않습니다.
 
+## 2025-10-28 · Seagate · Seagate FY 2026Q1 Financial Results
+
+[원문](https://investors.seagate.com/news/news-details/2025/Seagate-Technology-Reports-Fiscal-First-Quarter-2026-Financial-Results/)
+
+### Seagate 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q1 · 연결 전사
+
+- 재고 수준: **약 12.91주**
+- 범위: Seagate 연결 전사. 저장장치·시스템 등 전체 사업 혼합; HDD 제품만의 공급가능 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2025-10-03
+
+Seagate FY 2026Q1 연결 전사 재무 대리지표는 약 12.91주입니다. 실제 분기 기초 재고 1,440와 기말 재고 1,496의 평균을 같은 단독분기 GAAP 매출원가 1,592로 나누고 실제 98일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
+
 ## 2025-09-23 · Micron · Micron FY 2025Q4 Prepared Remarks
 
 [원문](https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf)
@@ -393,6 +533,20 @@ MPS 2025-Q3 회사전체 보고 재고일수는 139일입니다. 원문 일수�
 - 분기 종료일: 2025-08-28
 
 Micron의 FY 2025Q4 보고 재고일수는 124일입니다. 원문 일수를 7로 나눠 주 단위로 표시합니다. 회계분기 말 기준이며 FY 표기를 보존합니다. 기업 전체 참고값이며 해당 제품만의 재고 주수가 아닙니다.
+
+## 2025-08-27 · NVIDIA · NVIDIA FY 2026Q2 Financial Results
+
+[원문](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026)
+
+### NVIDIA 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q2 · 연결 전사
+
+- 재고 수준: **약 13.26주**
+- 범위: NVIDIA 연결 전사. Compute & Networking·Graphics 등 전체 사업 혼합; GPU 제품 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2025-07-27
+
+NVIDIA FY 2026Q2 연결 전사 재무 대리지표는 약 13.26주입니다. 실제 분기 기초 재고 11,333와 기말 재고 14,962의 평균을 같은 단독분기 GAAP 매출원가 12,890로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
 
 ## 2025-08-14 · SK hynix · SK hynix 2025년 반기 연결 재무제표
 
@@ -521,6 +675,20 @@ Seagate의 FY 2025Q4 보고 재고일수는 86일입니다. 원문 일수를 7�
 - 분기 종료일: 2025-05-29
 
 Micron의 FY 2025Q3 보고 재고일수는 139일입니다. 원문 일수를 7로 나눠 주 단위로 표시합니다. 회계분기 말 기준이며 FY 표기를 보존합니다. 기업 전체 참고값이며 해당 제품만의 재고 주수가 아닙니다.
+
+## 2025-05-28 · NVIDIA · NVIDIA FY 2026Q1 Financial Results
+
+[원문](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026)
+
+### NVIDIA 전사 재고 · 재무 대리지표 · 제조사 · FY 2026Q1 · 연결 전사
+
+- 재고 수준: **약 8주**
+- 범위: NVIDIA 연결 전사. Compute & Networking·Graphics 등 전체 사업 혼합; GPU 제품 재고주수 아님.
+- 방법: 연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.
+- 기업 전체 참고값: 해당 제품만의 재고 주수가 아닙니다.
+- 분기 종료일: 2025-04-27
+
+NVIDIA FY 2026Q1 연결 전사 재무 대리지표는 약 8.00주입니다. 실제 분기 기초 재고 10,080와 기말 재고 11,333의 평균을 같은 단독분기 GAAP 매출원가 17,394로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.
 
 ## 2025-05-28 · NVIDIA · NVIDIA FY 2026Q1 CFO Commentary
 
@@ -1497,6 +1665,18 @@ MLCC 유통사 합계 재고는 90–100일로 보고되어 12.86–14.29주로 
 
 서버 DRAM 고객은 2022년 3분기 초 약 7–8주 재고를 보유했습니다. CSP·기업 고객을 구분하지 않은 합계 범위입니다. 분기 중 조사치로, 정확한 조사일·분기말값은 공개되지 않았습니다.
 
+## 2022-06-20 · TrendForce · 서버 DRAM 고객 재고 · 2022년 6월
+
+[원문](https://www.trendforce.com/presscenter/news/20220620-11264.html)
+
+### 서버 DRAM 고객 전체 · 고객사 · 2022Q2 · 분기 중
+
+- 재고 수준: **약 7–8주**
+- 범위: Server DRAM client aggregate; CSP/enterprise split not provided
+- 방법: 원문 제품 재고 주수 그대로; 근사값. 분기는 현재라는 표현과 발간일로 식별한 분기 중 관측
+
+2022년 6월 발간 자료에서 서버 DRAM 고객 전체의 현재 재고는 7–8주로 보고됐습니다. 가격 전망 대상인 3분기와 구분해 현재 관측을 2분기로 표시합니다. CSP·기업 고객 분리값과 정확한 조사일은 미공개입니다.
+
 ## 2021-12-13 · TrendForce · 서버 DRAM 고객 재고 · 2021Q4
 
 [원문](https://www.trendforce.com/presscenter/news/20211213-11050.html)
@@ -1536,6 +1716,50 @@ CSP의 서버 DRAM 재고는 약 6–9주였습니다. 3분기 말보다 소폭 
 - 방법: TrendForce가 보고한 제품 재고일수는 7로 나눕니다. 원문이 주수이면 그대로 사용합니다. 분기 중 조사치를 분기말 수치로 바꾸지 않습니다.
 
 한국·대만·중국 MLCC 제조사 합계 재고는 90일로 보고되었습니다. 12.86주로 환산되며 세 지역 합계를 그대로 보존합니다. 분기 중 조사치이며 정확한 재고 측정일과 분기말 수치는 명시되지 않았습니다.
+
+## 2021-08-23 · TrendForce · MLCC Market Bulletin_20210823 · 공개 개요
+
+[원문](https://www.trendforce.com/research/download/RP210823OM)
+
+### ODM 고객 · 저가·중급 MLCC · 고객사 · 2021Q3 · 7월 조사
+
+- 재고 수준: **8–10주**
+- 범위: ODM customer aggregate, low-mid range MLCC; geographic aggregate not specified
+- 방법: 원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.
+
+2021년 7월 ODM 고객의 저가·중급 MLCC 재고는 8–10주였습니다. 공개 보고서 소개 문구로 확인했으며 유료 보고서 본문은 사용하지 않았습니다.
+
+## 2021-08-10 · TrendForce · PC OEM DRAM 재고 · 2021년 6월 말 회고
+
+[원문](https://www.trendforce.com.tw/presscenter/news/20210810-10888.html)
+
+### PC OEM 고객 · DRAM · 고객사 · 2021Q2 · 6월 말 회고
+
+- 재고 수준: **약 8–10주**
+- 범위: PC OEM customer aggregate, DRAM for PC; no company split
+- 방법: 원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.
+
+2021년 8월 기사에서 6월 말 PC OEM의 DRAM 재고를 약 8–10주로 명시적으로 회고합니다. 8월에 큰 개선이 없었다는 문구만으로 3분기 값을 이월하지 않습니다. 개별 브랜드의 10주 초과·12주 초과는 일부 업체 사례라 합계 범위에 혼합하지 않습니다.
+
+## 2021-07-01 · TrendForce · MLCC 공급사 제품 등급별 재고 · 2021년 6월
+
+[원문](https://www.trendforce.com/presscenter/news/20210701-10852.html)
+
+### 일본 MLCC 제조사 · 고급 제품 · 제조사 · 2021Q2 · 6월 조사
+
+- 재고 수준: **4.29주 미만**
+- 범위: Japanese MLCC suppliers; high-end MLCC only
+- 방법: 원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.
+
+2021년 6월 일본 공급사의 고급 MLCC 재고는 30일 미만(4.29주 미만)이었습니다. 상한을 점 추정치로 바꾸지 않습니다. 정확한 조사일은 미공개입니다.
+
+### MLCC 제조사 · 저가·중급 제품 · 제조사 · 2021Q2 · 6월 조사
+
+- 재고 수준: **약 8.57주**
+- 범위: Most MLCC suppliers, low-end and mid-range MLCC; geographic aggregate not specified
+- 방법: 원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.
+
+2021년 6월 대부분 MLCC 공급사의 저가·중급 제품 재고는 약 60일(약 8.57주)이었습니다. 전체 등급·개별 회사 재고로 확장하지 않습니다. 정확한 조사일은 미공개입니다.
 
 ## 2019-03-05 · TrendForce · DRAM 공급사 재고 · 2019Q1
 

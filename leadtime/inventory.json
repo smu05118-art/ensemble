@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-23",
+  "updated_at": "2026-09-29",
   "intro_ko": "분기별 제조사·고객사 재고 주수입니다. 직접 보고된 제품 재고와 기업 전체 재고회전일수의 주수 환산을 구분합니다. 원문이 없는 제품·역할·분기는 공백으로 남깁니다.",
   "products": [
     {
@@ -565,6 +565,158 @@
       "published_at": "2022-07-04",
       "locator": "Paragraph beginning At present, server DRAM inventory clients",
       "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-inventory-20210701",
+      "publisher": "TrendForce",
+      "title": "MLCC 공급사 제품 등급별 재고 · 2021년 6월",
+      "url": "https://www.trendforce.com/presscenter/news/20210701-10852.html",
+      "published_at": "2021-07-01",
+      "locator": "Paragraph beginning According to TrendForce latest findings; inventory as of June",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-inventory-20210823",
+      "publisher": "TrendForce",
+      "title": "MLCC Market Bulletin_20210823 · 공개 개요",
+      "url": "https://www.trendforce.com/research/download/RP210823OM",
+      "published_at": "2021-08-23",
+      "locator": "Public synopsis; low-mid range MLCC inventory levels in July",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-inventory-20220620",
+      "publisher": "TrendForce",
+      "title": "서버 DRAM 고객 재고 · 2022년 6월",
+      "url": "https://www.trendforce.com/presscenter/news/20220620-11264.html",
+      "published_at": "2022-06-20",
+      "locator": "Server DRAM paragraph; current client inventory levels",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-inventory-20210810",
+      "publisher": "TrendForce",
+      "title": "PC OEM DRAM 재고 · 2021년 6월 말 회고",
+      "url": "https://www.trendforce.com.tw/presscenter/news/20210810-10888.html",
+      "published_at": "2021-08-10",
+      "locator": "PC OEMs DRAM section; paragraph beginning 時序進入第三季; explicitly refers to 6月底",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "inv-winbond-1q26",
+      "publisher": "Winbond",
+      "title": "WINBOND 1Q26 Investor Conference",
+      "url": "https://www.winbond.com/export/sites/winbond/about-winbond/investor/investor-conference/1Q26-investor-conference_EN_Final.pdf",
+      "published_at": "2026-05-05",
+      "locator": "PDF page 5 consolidated comprehensive income; page 9 consolidated balance sheet",
+      "evidence_tier": "primary",
+      "sha256": "5f3ebd6be1aaacc43fa5822070c1b628953af814ce5d24edd47ea84c5c41fc8e"
+    },
+    {
+      "id": "inv-winbond-2q26",
+      "publisher": "Winbond",
+      "title": "WINBOND 2Q26 Investor Conference",
+      "url": "https://mopsov.twse.com.tw/nas/STR/234420260806E001.pdf",
+      "published_at": "2026-08-06",
+      "locator": "PDF page 5 consolidated comprehensive income; page 9 consolidated balance sheet",
+      "evidence_tier": "primary",
+      "sha256": "80ced7faf0310ef72f183ee3a87afcce1394450ae0b73b964e8c9cf22857893c"
+    },
+    {
+      "id": "inv-nvidia-2026-q1-release",
+      "publisher": "NVIDIA",
+      "title": "NVIDIA FY 2026Q1 Financial Results",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+      "published_at": "2025-05-28",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary",
+      "sha256": "53c5d1d3731023868cbdc583b7bbbff245533330a7f1ebdb3a82076b40b00639"
+    },
+    {
+      "id": "inv-nvidia-2026-q2-release",
+      "publisher": "NVIDIA",
+      "title": "NVIDIA FY 2026Q2 Financial Results",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+      "published_at": "2025-08-27",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary",
+      "sha256": "d17da6aef7e06b2ec5eafbec30ab15f768ca56e74cfffd314540ea095f074fe9"
+    },
+    {
+      "id": "inv-nvidia-2026-q3-release",
+      "publisher": "NVIDIA",
+      "title": "NVIDIA FY 2026Q3 Financial Results",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+      "published_at": "2025-11-19",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary",
+      "sha256": "09d1c4fe6a4fedac1d93f8346b3d33dcc5a7b8ad22dcd9e9c4b4996de99a2dde"
+    },
+    {
+      "id": "inv-nvidia-2026-q4-release",
+      "publisher": "NVIDIA",
+      "title": "NVIDIA FY 2026Q4 Financial Results",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+      "published_at": "2026-02-25",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary",
+      "sha256": "52ed4b4fd472ff0be1684e545ffac282a61946bd6e667f0f8e01730d80f7421f"
+    },
+    {
+      "id": "inv-nvidia-2027-q1-release",
+      "publisher": "NVIDIA",
+      "title": "NVIDIA FY 2027Q1 Financial Results",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
+      "published_at": "2026-05-20",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary",
+      "sha256": "6b83574c5c8fc56c93879dfdb61b19d852994630da14c6c9e6f0d7d273e4723c"
+    },
+    {
+      "id": "inv-nvidia-2027-q2-release",
+      "publisher": "NVIDIA",
+      "title": "NVIDIA FY 2027Q2 Financial Results",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+      "published_at": "2026-08-26",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary",
+      "sha256": "6f6883e61011b971a6592a8c19db3456d8d67aeb579c2e6096b8128108241630"
+    },
+    {
+      "id": "inv-seagate-2026-q1-release",
+      "publisher": "Seagate",
+      "title": "Seagate FY 2026Q1 Financial Results",
+      "url": "https://investors.seagate.com/news/news-details/2025/Seagate-Technology-Reports-Fiscal-First-Quarter-2026-Financial-Results/",
+      "published_at": "2025-10-28",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "inv-seagate-2026-q2-release",
+      "publisher": "Seagate",
+      "title": "Seagate FY 2026Q2 Financial Results",
+      "url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Second-Quarter-2026-Financial-Results/",
+      "published_at": "2026-01-27",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "inv-seagate-2026-q3-release",
+      "publisher": "Seagate",
+      "title": "Seagate FY 2026Q3 Financial Results",
+      "url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Third-Quarter-2026-Financial-Results/",
+      "published_at": "2026-04-28",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary"
+    },
+    {
+      "id": "inv-seagate-2026-q4-release",
+      "publisher": "Seagate",
+      "title": "Seagate FY 2026Q4 Financial Results",
+      "url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/",
+      "published_at": "2026-07-28",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "evidence_tier": "primary"
     }
   ],
   "series": [
@@ -999,6 +1151,100 @@
       "method_ko": "원문 제품 재고 주수 그대로; 근사값. 분기는 현재라는 표현과 발간일로 식별한 분기 중 관측",
       "note": "정확한 조사일과 분기말 잔고는 미공개입니다. 주체·제품 범위가 다른 계열에 연결하지 않습니다.",
       "evidence_tier": "primary"
+    },
+    {
+      "id": "tf-mlcc-low-mid-manufacturers",
+      "product_id": "mlcc",
+      "role": "manufacturer",
+      "entity": "MLCC suppliers (low/mid range aggregate)",
+      "name": "MLCC 제조사 · 저가·중급 제품",
+      "scope": "Most MLCC suppliers, low-end and mid-range MLCC; geographic aggregate not specified",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.",
+      "note": "집계 제품 등급·지역·고객 범위가 다른 기존 계열에 합치지 않습니다. 정확한 조사일은 미공개입니다."
+    },
+    {
+      "id": "tf-mlcc-japan-high-end-manufacturers",
+      "product_id": "mlcc",
+      "role": "manufacturer",
+      "entity": "Japanese MLCC suppliers (high-end)",
+      "name": "일본 MLCC 제조사 · 고급 제품",
+      "scope": "Japanese MLCC suppliers; high-end MLCC only",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.",
+      "note": "집계 제품 등급·지역·고객 범위가 다른 기존 계열에 합치지 않습니다. 정확한 조사일은 미공개입니다."
+    },
+    {
+      "id": "tf-mlcc-low-mid-odm-customers",
+      "product_id": "mlcc",
+      "role": "customer",
+      "entity": "ODMs (low/mid range MLCC)",
+      "name": "ODM 고객 · 저가·중급 MLCC",
+      "scope": "ODM customer aggregate, low-mid range MLCC; geographic aggregate not specified",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.",
+      "note": "집계 제품 등급·지역·고객 범위가 다른 기존 계열에 합치지 않습니다. 정확한 조사일은 미공개입니다."
+    },
+    {
+      "id": "tf-pc-dram-oem-customers",
+      "product_id": "dram",
+      "role": "customer",
+      "entity": "PC OEMs (aggregate)",
+      "name": "PC OEM 고객 · DRAM",
+      "scope": "PC OEM customer aggregate, DRAM for PC; no company split",
+      "scope_level": "product",
+      "metric": "reported_wos",
+      "calendar": "calendar",
+      "method_ko": "원문 제품 재고량의 기간 단위를 보존합니다. 주수는 그대로, 일수는 7로 나눕니다. 조사 월·발간 시점으로 분기를 식별하며 분기말 잔고로 간주하지 않습니다.",
+      "note": "집계 제품 등급·지역·고객 범위가 다른 기존 계열에 합치지 않습니다. 정확한 조사일은 미공개입니다."
+    },
+    {
+      "id": "winbond-cfs-inventory-proxy",
+      "product_id": "memory-total",
+      "role": "manufacturer",
+      "entity": "Winbond",
+      "name": "Winbond 전사 재고 · 재무 대리지표",
+      "scope": "Winbond 연결 전사; 메모리와 Nuvoton 등 로직 사업 혼합. DRAM·NAND 제품별 공급가능 재고주수 아님.",
+      "scope_level": "company",
+      "metric": "financial_dio_proxy",
+      "calendar": "calendar",
+      "method_ko": "동일 연결 범위의 실제 분기 기초·기말 평균 재고 ÷ 단독분기 매출원가 × 실제 분기 일수 ÷ 7. 매출원가는 공개된 해당 분기 연결 Net Sales − Gross Profit의 회계 항등식으로 계산하며 두 입력을 보존합니다.",
+      "note": "공시 단위는 NT$ millions로 반올림된 값입니다. 회사가 직접 보고한 재고일수·제품 WOS와 구분하며, 제품별 회전율로 해석하지 않습니다.",
+      "financial_unit": "TWD million"
+    },
+    {
+      "id": "nvidia-cfs-inventory-proxy",
+      "product_id": "gpu",
+      "role": "manufacturer",
+      "entity": "NVIDIA",
+      "name": "NVIDIA 전사 재고 · 재무 대리지표",
+      "scope": "NVIDIA 연결 전사. Compute & Networking·Graphics 등 전체 사업 혼합; GPU 제품 재고주수 아님.",
+      "scope_level": "company",
+      "metric": "financial_dio_proxy",
+      "calendar": "fiscal",
+      "method_ko": "연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.",
+      "note": "회사 직접 보고 DSI/DIO와 별도 계열입니다. FY·실제 날짜를 보존하며, 공시의 백만 달러 단위 반올림을 반영해 약값으로 표시합니다. FY2026Q1은 H20 관련 재고·구매의무 비용이 GAAP 매출원가에 포함됩니다.",
+      "financial_unit": "USD million"
+    },
+    {
+      "id": "seagate-cfs-inventory-proxy",
+      "product_id": "hdd",
+      "role": "manufacturer",
+      "entity": "Seagate",
+      "name": "Seagate 전사 재고 · 재무 대리지표",
+      "scope": "Seagate 연결 전사. 저장장치·시스템 등 전체 사업 혼합; HDD 제품만의 공급가능 재고주수 아님.",
+      "scope_level": "company",
+      "metric": "financial_dio_proxy",
+      "calendar": "fiscal",
+      "method_ko": "연결 전사의 실제 회계분기 기초·기말 평균 재고 ÷ 같은 연결 범위의 직접 보고된 단독분기 GAAP Cost of revenue × 실제 분기 일수 ÷ 7.",
+      "note": "회사 직접 보고 DSI/DIO와 별도 계열입니다. FY·실제 날짜를 보존하며, 공시의 백만 달러 단위 반올림을 반영해 약값으로 표시합니다. FY2026Q1은 2025-06-28~2025-10-03의 98일 분기이며 다른 분기는 91일입니다.",
+      "financial_unit": "USD million"
     }
   ],
   "observations": [
@@ -4510,26 +4756,813 @@
       "locator": "Paragraph beginning At present, server DRAM inventory clients",
       "period_end_source_url": null,
       "period_end_locator": null
+    },
+    {
+      "id": "tf-mlcc-low-mid-manufacturers-2021-Q2",
+      "series_id": "tf-mlcc-low-mid-manufacturers",
+      "source_id": "tf-inventory-20210701",
+      "quarter": "2021-Q2",
+      "period_label": "2021Q2 · 6월 조사",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 8.571428571428571,
+      "value_max": 8.571428571428571,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 60,
+      "raw_value_max": 60,
+      "raw_unit": "days",
+      "conversion": "days_div_7",
+      "measure_type": "reported",
+      "narrative_ko": "2021년 6월 대부분 MLCC 공급사의 저가·중급 제품 재고는 약 60일(약 8.57주)이었습니다. 전체 등급·개별 회사 재고로 확장하지 않습니다. 정확한 조사일은 미공개입니다.",
+      "locator": "Inventory paragraph; as of June; low-end and mid-range",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "tf-mlcc-japan-high-end-manufacturers-2021-Q2",
+      "series_id": "tf-mlcc-japan-high-end-manufacturers",
+      "source_id": "tf-inventory-20210701",
+      "quarter": "2021-Q2",
+      "period_label": "2021Q2 · 6월 조사",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 4.285714285714286,
+      "value_max": 4.285714285714286,
+      "qualifier": "less_than",
+      "approximate": false,
+      "raw_value_min": 30,
+      "raw_value_max": 30,
+      "raw_unit": "days",
+      "conversion": "days_div_7",
+      "measure_type": "reported",
+      "narrative_ko": "2021년 6월 일본 공급사의 고급 MLCC 재고는 30일 미만(4.29주 미만)이었습니다. 상한을 점 추정치로 바꾸지 않습니다. 정확한 조사일은 미공개입니다.",
+      "locator": "Inventory paragraph; as of June; Japanese suppliers high-end",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "tf-mlcc-low-mid-odm-customers-2021-Q3",
+      "series_id": "tf-mlcc-low-mid-odm-customers",
+      "source_id": "tf-inventory-20210823",
+      "quarter": "2021-Q3",
+      "period_label": "2021Q3 · 7월 조사",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 8.0,
+      "value_max": 10.0,
+      "qualifier": "range",
+      "approximate": false,
+      "raw_value_min": 8,
+      "raw_value_max": 10,
+      "raw_unit": "weeks",
+      "conversion": "identity",
+      "measure_type": "reported",
+      "narrative_ko": "2021년 7월 ODM 고객의 저가·중급 MLCC 재고는 8–10주였습니다. 공개 보고서 소개 문구로 확인했으며 유료 보고서 본문은 사용하지 않았습니다.",
+      "locator": "Public synopsis; inventory levels in July",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "tf-server-dram-client-aggregate-2022-Q2",
+      "series_id": "tf-server-dram-client-aggregate",
+      "source_id": "tf-inventory-20220620",
+      "quarter": "2022-Q2",
+      "period_label": "2022Q2 · 분기 중",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 7.0,
+      "value_max": 8.0,
+      "qualifier": "range",
+      "approximate": true,
+      "raw_value_min": 7,
+      "raw_value_max": 8,
+      "raw_unit": "weeks",
+      "conversion": "identity",
+      "measure_type": "reported",
+      "narrative_ko": "2022년 6월 발간 자료에서 서버 DRAM 고객 전체의 현재 재고는 7–8주로 보고됐습니다. 가격 전망 대상인 3분기와 구분해 현재 관측을 2분기로 표시합니다. CSP·기업 고객 분리값과 정확한 조사일은 미공개입니다.",
+      "locator": "Server DRAM paragraph; current client inventory levels",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "tf-pc-dram-oem-customers-2021-Q2",
+      "series_id": "tf-pc-dram-oem-customers",
+      "source_id": "tf-inventory-20210810",
+      "quarter": "2021-Q2",
+      "period_label": "2021Q2 · 6월 말 회고",
+      "period_start": null,
+      "period_end": null,
+      "as_of": null,
+      "value_min": 8.0,
+      "value_max": 10.0,
+      "qualifier": "range",
+      "approximate": true,
+      "raw_value_min": 8,
+      "raw_value_max": 10,
+      "raw_unit": "weeks",
+      "conversion": "identity",
+      "measure_type": "reported",
+      "narrative_ko": "2021년 8월 기사에서 6월 말 PC OEM의 DRAM 재고를 약 8–10주로 명시적으로 회고합니다. 8월에 큰 개선이 없었다는 문구만으로 3분기 값을 이월하지 않습니다. 개별 브랜드의 10주 초과·12주 초과는 일부 업체 사례라 합계 범위에 혼합하지 않습니다.",
+      "locator": "PC OEMs DRAM section; 6月底 and 8~10周",
+      "period_end_source_url": null,
+      "period_end_locator": null
+    },
+    {
+      "id": "winbond-cfs-inventory-proxy-2026-Q1",
+      "series_id": "winbond-cfs-inventory-proxy",
+      "source_id": "inv-winbond-1q26",
+      "quarter": "2026-Q1",
+      "period_label": "2026-Q1 · 연결 전사",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "as_of": "2026-03-31",
+      "value_min": 18.37609917831916,
+      "value_max": 18.37609917831916,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 128.63269424823412,
+      "raw_value_max": 128.63269424823412,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "narrative_ko": "Winbond 2026-Q1 연결 전사 재무 대리지표는 약 18.38주입니다. 반올림된 NT$ million 공시 입력으로 산출했습니다. 기초 재고 25,758, 기말 재고 25,232; 단독분기 매출원가는 매출 38,253 − 매출총이익 20,415 = 17,838입니다. 메모리·로직 혼합 전사 값이며 제품 재고 주수나 직접 보고 DIO가 아닙니다.",
+      "locator": "PDF p5 consolidated quarter Net Sales/Gross Profit; p9 consolidated Inventories",
+      "period_end_source_url": "https://www.winbond.com/export/sites/winbond/about-winbond/investor/investor-conference/1Q26-investor-conference_EN_Final.pdf",
+      "period_end_locator": "PDF p9 balance-sheet date header; p5 quarter column",
+      "source_ids": [
+        "inv-winbond-1q26"
+      ],
+      "inputs": {
+        "inventory_begin": 25758,
+        "inventory_end": 25232,
+        "cogs": 17838,
+        "inventory_begin_date": "2025-12-31",
+        "inventory_end_date": "2026-03-31",
+        "period_days": 90,
+        "unit": "TWD million",
+        "inventory_unit": "TWD million",
+        "cogs_unit": "TWD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-winbond-1q26",
+        "inventory_end_source_id": "inv-winbond-1q26",
+        "cogs_source_ids": [
+          "inv-winbond-1q26"
+        ],
+        "source_ids": [
+          "inv-winbond-1q26"
+        ],
+        "inventory_begin_locator": "PDF p9 consolidated Inventories; 2025-12-31",
+        "inventory_end_locator": "PDF p9 consolidated Inventories; 2026-03-31",
+        "cogs_locator": "PDF p5 consolidated comprehensive income; current standalone quarter Net Sales minus Gross Profit",
+        "cogs_method": "quarter_revenue_minus_gross_profit",
+        "quarter_revenue": 38253,
+        "quarter_gross_profit": 20415,
+        "cogs_formula": "quarter_revenue - quarter_gross_profit",
+        "cogs_components": [
+          {
+            "kind": "quarter_revenue",
+            "value": 38253,
+            "source_id": "inv-winbond-1q26",
+            "locator": "PDF p5 Net Sales current quarter",
+            "unit": "TWD million",
+            "period_start": "2026-01-01",
+            "period_end": "2026-03-31"
+          },
+          {
+            "kind": "quarter_gross_profit",
+            "value": 20415,
+            "source_id": "inv-winbond-1q26",
+            "locator": "PDF p5 Gross Profit current quarter",
+            "unit": "TWD million",
+            "period_start": "2026-01-01",
+            "period_end": "2026-03-31"
+          }
+        ]
+      }
+    },
+    {
+      "id": "winbond-cfs-inventory-proxy-2026-Q2",
+      "series_id": "winbond-cfs-inventory-proxy",
+      "source_id": "inv-winbond-2q26",
+      "quarter": "2026-Q2",
+      "period_label": "2026-Q2 · 연결 전사",
+      "period_start": "2026-04-01",
+      "period_end": "2026-06-30",
+      "as_of": "2026-06-30",
+      "value_min": 16.418630557480938,
+      "value_max": 16.418630557480938,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 114.93041390236657,
+      "raw_value_max": 114.93041390236657,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "narrative_ko": "Winbond 2026-Q2 연결 전사 재무 대리지표는 약 16.42주입니다. 반올림된 NT$ million 공시 입력으로 산출했습니다. 기초 재고 25,232, 기말 재고 25,787; 단독분기 매출원가는 매출 59,843 − 매출총이익 39,645 = 20,198입니다. 메모리·로직 혼합 전사 값이며 제품 재고 주수나 직접 보고 DIO가 아닙니다.",
+      "locator": "PDF p5 consolidated quarter Net Sales/Gross Profit; p9 consolidated Inventories",
+      "period_end_source_url": "https://mopsov.twse.com.tw/nas/STR/234420260806E001.pdf",
+      "period_end_locator": "PDF p9 balance-sheet date header; p5 quarter column",
+      "source_ids": [
+        "inv-winbond-2q26"
+      ],
+      "inputs": {
+        "inventory_begin": 25232,
+        "inventory_end": 25787,
+        "cogs": 20198,
+        "inventory_begin_date": "2026-03-31",
+        "inventory_end_date": "2026-06-30",
+        "period_days": 91,
+        "unit": "TWD million",
+        "inventory_unit": "TWD million",
+        "cogs_unit": "TWD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-winbond-2q26",
+        "inventory_end_source_id": "inv-winbond-2q26",
+        "cogs_source_ids": [
+          "inv-winbond-2q26"
+        ],
+        "source_ids": [
+          "inv-winbond-2q26"
+        ],
+        "inventory_begin_locator": "PDF p9 consolidated Inventories; 2026-03-31",
+        "inventory_end_locator": "PDF p9 consolidated Inventories; 2026-06-30",
+        "cogs_locator": "PDF p5 consolidated comprehensive income; current standalone quarter Net Sales minus Gross Profit",
+        "cogs_method": "quarter_revenue_minus_gross_profit",
+        "quarter_revenue": 59843,
+        "quarter_gross_profit": 39645,
+        "cogs_formula": "quarter_revenue - quarter_gross_profit",
+        "cogs_components": [
+          {
+            "kind": "quarter_revenue",
+            "value": 59843,
+            "source_id": "inv-winbond-2q26",
+            "locator": "PDF p5 Net Sales current quarter",
+            "unit": "TWD million",
+            "period_start": "2026-04-01",
+            "period_end": "2026-06-30"
+          },
+          {
+            "kind": "quarter_gross_profit",
+            "value": 39645,
+            "source_id": "inv-winbond-2q26",
+            "locator": "PDF p5 Gross Profit current quarter",
+            "unit": "TWD million",
+            "period_start": "2026-04-01",
+            "period_end": "2026-06-30"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nvidia-cfs-inventory-proxy-2026-Q1",
+      "series_id": "nvidia-cfs-inventory-proxy",
+      "source_id": "inv-nvidia-2026-q1-release",
+      "source_ids": [
+        "inv-nvidia-2026-q1-release"
+      ],
+      "quarter": "2026-Q1",
+      "period_label": "FY 2026Q1 · 연결 전사",
+      "period_start": "2025-01-27",
+      "period_end": "2025-04-27",
+      "as_of": "2025-04-27",
+      "value_min": 8.00186846038864,
+      "value_max": 8.00186846038864,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 56.01307922272048,
+      "raw_value_max": 56.01307922272048,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 10080,
+        "inventory_end": 11333,
+        "cogs": 17394,
+        "inventory_begin_date": "2025-01-26",
+        "inventory_end_date": "2025-04-27",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-nvidia-2026-q1-release",
+        "inventory_end_source_id": "inv-nvidia-2026-q1-release",
+        "cogs_source_ids": [
+          "inv-nvidia-2026-q1-release"
+        ],
+        "source_ids": [
+          "inv-nvidia-2026-q1-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories row; 2025-01-26 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories row; 2025-04-27 actual balance",
+        "cogs_locator": "Condensed consolidated statements of income; Three Months Ended 2025-04-27; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "NVIDIA FY 2026Q1 연결 전사 재무 대리지표는 약 8.00주입니다. 실제 분기 기초 재고 10,080와 기말 재고 11,333의 평균을 같은 단독분기 GAAP 매출원가 17,394로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "nvidia-cfs-inventory-proxy-2026-Q2",
+      "series_id": "nvidia-cfs-inventory-proxy",
+      "source_id": "inv-nvidia-2026-q2-release",
+      "source_ids": [
+        "inv-nvidia-2026-q1-release",
+        "inv-nvidia-2026-q2-release"
+      ],
+      "quarter": "2026-Q2",
+      "period_label": "FY 2026Q2 · 연결 전사",
+      "period_start": "2025-04-28",
+      "period_end": "2025-07-27",
+      "as_of": "2025-07-27",
+      "value_min": 13.25969743987587,
+      "value_max": 13.25969743987587,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 92.8178820791311,
+      "raw_value_max": 92.8178820791311,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 11333,
+        "inventory_end": 14962,
+        "cogs": 12890,
+        "inventory_begin_date": "2025-04-27",
+        "inventory_end_date": "2025-07-27",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-nvidia-2026-q1-release",
+        "inventory_end_source_id": "inv-nvidia-2026-q2-release",
+        "cogs_source_ids": [
+          "inv-nvidia-2026-q2-release"
+        ],
+        "source_ids": [
+          "inv-nvidia-2026-q1-release",
+          "inv-nvidia-2026-q2-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories row; 2025-04-27 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories row; 2025-07-27 actual balance",
+        "cogs_locator": "Condensed consolidated statements of income; Three Months Ended 2025-07-27; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "NVIDIA FY 2026Q2 연결 전사 재무 대리지표는 약 13.26주입니다. 실제 분기 기초 재고 11,333와 기말 재고 14,962의 평균을 같은 단독분기 GAAP 매출원가 12,890로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "nvidia-cfs-inventory-proxy-2026-Q3",
+      "series_id": "nvidia-cfs-inventory-proxy",
+      "source_id": "inv-nvidia-2026-q3-release",
+      "source_ids": [
+        "inv-nvidia-2026-q2-release",
+        "inv-nvidia-2026-q3-release"
+      ],
+      "quarter": "2026-Q3",
+      "period_label": "FY 2026Q3 · 연결 전사",
+      "period_start": "2025-07-28",
+      "period_end": "2025-10-26",
+      "as_of": "2025-10-26",
+      "value_min": 14.900639968331465,
+      "value_max": 14.900639968331465,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 104.30447977832026,
+      "raw_value_max": 104.30447977832026,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 14962,
+        "inventory_end": 19784,
+        "cogs": 15157,
+        "inventory_begin_date": "2025-07-27",
+        "inventory_end_date": "2025-10-26",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-nvidia-2026-q2-release",
+        "inventory_end_source_id": "inv-nvidia-2026-q3-release",
+        "cogs_source_ids": [
+          "inv-nvidia-2026-q3-release"
+        ],
+        "source_ids": [
+          "inv-nvidia-2026-q2-release",
+          "inv-nvidia-2026-q3-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories row; 2025-07-27 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories row; 2025-10-26 actual balance",
+        "cogs_locator": "Condensed consolidated statements of income; Three Months Ended 2025-10-26; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "NVIDIA FY 2026Q3 연결 전사 재무 대리지표는 약 14.90주입니다. 실제 분기 기초 재고 14,962와 기말 재고 19,784의 평균을 같은 단독분기 GAAP 매출원가 15,157로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "nvidia-cfs-inventory-proxy-2026-Q4",
+      "series_id": "nvidia-cfs-inventory-proxy",
+      "source_id": "inv-nvidia-2026-q4-release",
+      "source_ids": [
+        "inv-nvidia-2026-q3-release",
+        "inv-nvidia-2026-q4-release"
+      ],
+      "quarter": "2026-Q4",
+      "period_label": "FY 2026Q4 · 연결 전사",
+      "period_start": "2025-10-27",
+      "period_end": "2026-01-25",
+      "as_of": "2026-01-25",
+      "value_min": 15.716537513208875,
+      "value_max": 15.716537513208875,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 110.01576259246212,
+      "raw_value_max": 110.01576259246212,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 19784,
+        "inventory_end": 21403,
+        "cogs": 17034,
+        "inventory_begin_date": "2025-10-26",
+        "inventory_end_date": "2026-01-25",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-nvidia-2026-q3-release",
+        "inventory_end_source_id": "inv-nvidia-2026-q4-release",
+        "cogs_source_ids": [
+          "inv-nvidia-2026-q4-release"
+        ],
+        "source_ids": [
+          "inv-nvidia-2026-q3-release",
+          "inv-nvidia-2026-q4-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories row; 2025-10-26 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories row; 2026-01-25 actual balance",
+        "cogs_locator": "Condensed consolidated statements of income; Three Months Ended 2026-01-25; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "NVIDIA FY 2026Q4 연결 전사 재무 대리지표는 약 15.72주입니다. 실제 분기 기초 재고 19,784와 기말 재고 21,403의 평균을 같은 단독분기 GAAP 매출원가 17,034로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "nvidia-cfs-inventory-proxy-2027-Q1",
+      "series_id": "nvidia-cfs-inventory-proxy",
+      "source_id": "inv-nvidia-2027-q1-release",
+      "source_ids": [
+        "inv-nvidia-2026-q4-release",
+        "inv-nvidia-2027-q1-release"
+      ],
+      "quarter": "2027-Q1",
+      "period_label": "FY 2027Q1 · 연결 전사",
+      "period_start": "2026-01-26",
+      "period_end": "2026-04-26",
+      "as_of": "2026-04-26",
+      "value_min": 14.996578355655489,
+      "value_max": 14.996578355655489,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 104.97604848958842,
+      "raw_value_max": 104.97604848958842,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 21403,
+        "inventory_end": 25797,
+        "cogs": 20458,
+        "inventory_begin_date": "2026-01-25",
+        "inventory_end_date": "2026-04-26",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-nvidia-2026-q4-release",
+        "inventory_end_source_id": "inv-nvidia-2027-q1-release",
+        "cogs_source_ids": [
+          "inv-nvidia-2027-q1-release"
+        ],
+        "source_ids": [
+          "inv-nvidia-2026-q4-release",
+          "inv-nvidia-2027-q1-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories row; 2026-01-25 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories row; 2026-04-26 actual balance",
+        "cogs_locator": "Condensed consolidated statements of income; Three Months Ended 2026-04-26; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "NVIDIA FY 2027Q1 연결 전사 재무 대리지표는 약 15.00주입니다. 실제 분기 기초 재고 21,403와 기말 재고 25,797의 평균을 같은 단독분기 GAAP 매출원가 20,458로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "nvidia-cfs-inventory-proxy-2027-Q2",
+      "series_id": "nvidia-cfs-inventory-proxy",
+      "source_id": "inv-nvidia-2027-q2-release",
+      "source_ids": [
+        "inv-nvidia-2027-q1-release",
+        "inv-nvidia-2027-q2-release"
+      ],
+      "quarter": "2027-Q2",
+      "period_label": "FY 2027Q2 · 연결 전사",
+      "period_start": "2026-04-27",
+      "period_end": "2026-07-26",
+      "as_of": "2026-07-26",
+      "value_min": 15.487271066074173,
+      "value_max": 15.487271066074173,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 108.41089746251922,
+      "raw_value_max": 108.41089746251922,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 25797,
+        "inventory_end": 31575,
+        "cogs": 24079,
+        "inventory_begin_date": "2026-04-26",
+        "inventory_end_date": "2026-07-26",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-nvidia-2027-q1-release",
+        "inventory_end_source_id": "inv-nvidia-2027-q2-release",
+        "cogs_source_ids": [
+          "inv-nvidia-2027-q2-release"
+        ],
+        "source_ids": [
+          "inv-nvidia-2027-q1-release",
+          "inv-nvidia-2027-q2-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories row; 2026-04-26 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories row; 2026-07-26 actual balance",
+        "cogs_locator": "Condensed consolidated statements of income; Three Months Ended 2026-07-26; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "NVIDIA FY 2027Q2 연결 전사 재무 대리지표는 약 15.49주입니다. 실제 분기 기초 재고 25,797와 기말 재고 31,575의 평균을 같은 단독분기 GAAP 매출원가 24,079로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories row; consolidated statements of income, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "seagate-cfs-inventory-proxy-2026-Q1",
+      "series_id": "seagate-cfs-inventory-proxy",
+      "source_id": "inv-seagate-2026-q1-release",
+      "source_ids": [
+        "inv-seagate-2026-q1-release"
+      ],
+      "quarter": "2026-Q1",
+      "period_label": "FY 2026Q1 · 연결 전사",
+      "period_start": "2025-06-28",
+      "period_end": "2025-10-03",
+      "as_of": "2025-10-03",
+      "value_min": 12.909547738693467,
+      "value_max": 12.909547738693467,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 90.36683417085428,
+      "raw_value_max": 90.36683417085428,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 1440,
+        "inventory_end": 1496,
+        "cogs": 1592,
+        "inventory_begin_date": "2025-06-27",
+        "inventory_end_date": "2025-10-03",
+        "period_days": 98,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-seagate-2026-q1-release",
+        "inventory_end_source_id": "inv-seagate-2026-q1-release",
+        "cogs_source_ids": [
+          "inv-seagate-2026-q1-release"
+        ],
+        "source_ids": [
+          "inv-seagate-2026-q1-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories, net row; 2025-06-27 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories, net row; 2025-10-03 actual balance",
+        "cogs_locator": "Condensed consolidated statements of operations; Three Months Ended 2025-10-03; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "Seagate FY 2026Q1 연결 전사 재무 대리지표는 약 12.91주입니다. 실제 분기 기초 재고 1,440와 기말 재고 1,496의 평균을 같은 단독분기 GAAP 매출원가 1,592로 나누고 실제 98일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://investors.seagate.com/news/news-details/2025/Seagate-Technology-Reports-Fiscal-First-Quarter-2026-Financial-Results/",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "seagate-cfs-inventory-proxy-2026-Q2",
+      "series_id": "seagate-cfs-inventory-proxy",
+      "source_id": "inv-seagate-2026-q2-release",
+      "source_ids": [
+        "inv-seagate-2026-q1-release",
+        "inv-seagate-2026-q2-release"
+      ],
+      "quarter": "2026-Q2",
+      "period_label": "FY 2026Q2 · 연결 전사",
+      "period_start": "2025-10-04",
+      "period_end": "2026-01-02",
+      "as_of": "2026-01-02",
+      "value_min": 11.801697998787144,
+      "value_max": 11.801697998787144,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 82.61188599151001,
+      "raw_value_max": 82.61188599151001,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 1496,
+        "inventory_end": 1498,
+        "cogs": 1649,
+        "inventory_begin_date": "2025-10-03",
+        "inventory_end_date": "2026-01-02",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-seagate-2026-q1-release",
+        "inventory_end_source_id": "inv-seagate-2026-q2-release",
+        "cogs_source_ids": [
+          "inv-seagate-2026-q2-release"
+        ],
+        "source_ids": [
+          "inv-seagate-2026-q1-release",
+          "inv-seagate-2026-q2-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories, net row; 2025-10-03 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories, net row; 2026-01-02 actual balance",
+        "cogs_locator": "Condensed consolidated statements of operations; Three Months Ended 2026-01-02; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "Seagate FY 2026Q2 연결 전사 재무 대리지표는 약 11.80주입니다. 실제 분기 기초 재고 1,496와 기말 재고 1,498의 평균을 같은 단독분기 GAAP 매출원가 1,649로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Second-Quarter-2026-Financial-Results/",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "seagate-cfs-inventory-proxy-2026-Q3",
+      "series_id": "seagate-cfs-inventory-proxy",
+      "source_id": "inv-seagate-2026-q3-release",
+      "source_ids": [
+        "inv-seagate-2026-q2-release",
+        "inv-seagate-2026-q3-release"
+      ],
+      "quarter": "2026-Q3",
+      "period_label": "FY 2026Q3 · 연결 전사",
+      "period_start": "2026-01-03",
+      "period_end": "2026-04-03",
+      "as_of": "2026-04-03",
+      "value_min": 11.821021021021021,
+      "value_max": 11.821021021021021,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 82.74714714714715,
+      "raw_value_max": 82.74714714714715,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 1498,
+        "inventory_end": 1530,
+        "cogs": 1665,
+        "inventory_begin_date": "2026-01-02",
+        "inventory_end_date": "2026-04-03",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-seagate-2026-q2-release",
+        "inventory_end_source_id": "inv-seagate-2026-q3-release",
+        "cogs_source_ids": [
+          "inv-seagate-2026-q3-release"
+        ],
+        "source_ids": [
+          "inv-seagate-2026-q2-release",
+          "inv-seagate-2026-q3-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories, net row; 2026-01-02 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories, net row; 2026-04-03 actual balance",
+        "cogs_locator": "Condensed consolidated statements of operations; Three Months Ended 2026-04-03; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "Seagate FY 2026Q3 연결 전사 재무 대리지표는 약 11.82주입니다. 실제 분기 기초 재고 1,498와 기말 재고 1,530의 평균을 같은 단독분기 GAAP 매출원가 1,665로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Third-Quarter-2026-Financial-Results/",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "seagate-cfs-inventory-proxy-2026-Q4",
+      "series_id": "seagate-cfs-inventory-proxy",
+      "source_id": "inv-seagate-2026-q4-release",
+      "source_ids": [
+        "inv-seagate-2026-q3-release",
+        "inv-seagate-2026-q4-release"
+      ],
+      "quarter": "2026-Q4",
+      "period_label": "FY 2026Q4 · 연결 전사",
+      "period_start": "2026-04-04",
+      "period_end": "2026-07-03",
+      "as_of": "2026-07-03",
+      "value_min": 11.644425187752743,
+      "value_max": 11.644425187752743,
+      "qualifier": "about",
+      "approximate": true,
+      "raw_value_min": 81.5109763142692,
+      "raw_value_max": 81.5109763142692,
+      "raw_unit": "days",
+      "conversion": "average_inventory_cogs_period_days_div_7",
+      "measure_type": "reported",
+      "inputs": {
+        "inventory_begin": 1530,
+        "inventory_end": 1571,
+        "cogs": 1731,
+        "inventory_begin_date": "2026-04-03",
+        "inventory_end_date": "2026-07-03",
+        "period_days": 91,
+        "unit": "USD million",
+        "inventory_unit": "USD million",
+        "cogs_unit": "USD million",
+        "financial_scope": "CFS",
+        "inventory_begin_source_id": "inv-seagate-2026-q3-release",
+        "inventory_end_source_id": "inv-seagate-2026-q4-release",
+        "cogs_source_ids": [
+          "inv-seagate-2026-q4-release"
+        ],
+        "source_ids": [
+          "inv-seagate-2026-q3-release",
+          "inv-seagate-2026-q4-release"
+        ],
+        "inventory_begin_locator": "Condensed consolidated balance sheets, Inventories, net row; 2026-04-03 actual balance",
+        "inventory_end_locator": "Condensed consolidated balance sheets, Inventories, net row; 2026-07-03 actual balance",
+        "cogs_locator": "Condensed consolidated statements of operations; Three Months Ended 2026-07-03; Cost of revenue; current-quarter column",
+        "cogs_method": "reported_standalone_quarter"
+      },
+      "narrative_ko": "Seagate FY 2026Q4 연결 전사 재무 대리지표는 약 11.64주입니다. 실제 분기 기초 재고 1,530와 기말 재고 1,571의 평균을 같은 단독분기 GAAP 매출원가 1,731로 나누고 실제 91일을 적용했습니다(모두 USD million). 제품 공급가능 재고주수나 회사 직접 보고 DSI/DIO가 아닙니다.",
+      "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
+      "period_end_source_url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/",
+      "period_end_locator": "Release opening paragraph and financial statement date headings"
     }
   ],
   "coverage": [
     {
       "product_id": "gpu",
-      "manufacturer_status": "보고 재고일수 환산 1계열",
+      "manufacturer_status": "보고 재고일수 환산 1계열 · 기업 전체 재무 참고 1계열",
       "customer_status": "수치 원문 미확인",
-      "note": "GPU 제품별 재고와 고객 재고는 미확인입니다. NVIDIA 전사 DSI는 회사 전체 참고입니다. FY26 Q2–Q4의 원문에 재고일수 공시가 없어 이어 채우지 않습니다.",
+      "note": "GPU 제품별 재고와 고객 재고는 미확인입니다. NVIDIA 전사 보고 DSI와 분기 기초·기말 재고 및 GAAP 매출원가로 계산한 전사 재무 프록시는 별도 계열입니다. 새 재무 프록시 6개 분기(FY2026 Q1–FY2027 Q2)를 추가했으며, 직접 보고 DSI가 없는 분기를 같은 지표로 이어 채우지 않습니다.",
       "source_urls": [
         "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000113/q1fy25cfocommentary.htm",
         "https://s201.q4cdn.com/141608511/files/doc_financials/2025/Q225/Q2FY25-CFO-Commentary.pdf",
         "https://investor.nvidia.com/files/doc_financials/2025/Q325/Q3FY25-CFO-Commentary.pdf",
         "https://investor.nvidia.com/files/doc_financials/2025/Q425/Q4FY25-CFO-Commentary.pdf",
-        "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000115/q1fy26cfocommentary.htm"
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000115/q1fy26cfocommentary.htm",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026"
+      ],
+      "previous_versions": [
+        {
+          "recorded_at": "2026-09-29",
+          "note": "GPU 제품별 재고와 고객 재고는 미확인입니다. NVIDIA 전사 DSI는 회사 전체 참고입니다. FY26 Q2–Q4의 원문에 재고일수 공시가 없어 이어 채우지 않습니다.",
+          "reason": "동일 원문에서 새로 확보한 전사 재무 프록시와 기존 보고 DIO의 구분 명시"
+        }
       ]
     },
     {
       "product_id": "dram",
       "manufacturer_status": "제품 재고 주수 4계열 · 보고 재고일수 환산 1계열",
-      "customer_status": "제품 재고 주수 11계열",
+      "customer_status": "제품 재고 주수 12계열",
       "note": "공개 원문에서 제품·보유주체·분기·단위가 확인된 재고 주수만 추가합니다. 재고금액이나 납기로 역산하지 않습니다. LS증권 재인용 · TrendForce 원자료 별도 미확인",
       "source_urls": [
         "https://www.trendforce.com.tw/research/download/RP240531KA",
@@ -4551,11 +5584,22 @@
     },
     {
       "product_id": "hdd",
-      "manufacturer_status": "보고 재고일수 환산 1계열",
+      "manufacturer_status": "보고 재고일수 환산 1계열 · 기업 전체 재무 참고 1계열",
       "customer_status": "수치 원문 미확인",
-      "note": "HDD 제품별·고객별 재고 주수는 미확인입니다. Seagate 전사 DIO를 참고로 구분합니다. FY26 Q2/Q3의 빠진 DIO를 보간하지 않습니다.",
+      "note": "HDD 제품별·고객별 재고 주수는 미확인입니다. Seagate 전사 보고 DIO와 분기 기초·기말 재고 및 GAAP 매출원가로 계산한 전사 재무 프록시는 별도 계열입니다. 새 재무 프록시 4개 분기(FY2026 Q1–Q4)를 추가했으며, 직접 보고 DIO의 공백을 보간하거나 계산값으로 대체하지 않습니다.",
       "source_urls": [
-        "https://s24.q4cdn.com/101481333/files/doc_financials/2025/q4/STX-FQ4-25-Supplemental.pdf"
+        "https://s24.q4cdn.com/101481333/files/doc_financials/2025/q4/STX-FQ4-25-Supplemental.pdf",
+        "https://investors.seagate.com/news/news-details/2025/Seagate-Technology-Reports-Fiscal-First-Quarter-2026-Financial-Results/",
+        "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Second-Quarter-2026-Financial-Results/",
+        "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Third-Quarter-2026-Financial-Results/",
+        "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/"
+      ],
+      "previous_versions": [
+        {
+          "recorded_at": "2026-09-29",
+          "note": "HDD 제품별·고객별 재고 주수는 미확인입니다. Seagate 전사 DIO를 참고로 구분합니다. FY26 Q2/Q3의 빠진 DIO를 보간하지 않습니다.",
+          "reason": "동일 원문에서 새로 확보한 전사 재무 프록시와 기존 보고 DIO의 구분 명시"
+        }
       ]
     },
     {
@@ -4576,8 +5620,8 @@
     },
     {
       "product_id": "mlcc",
-      "manufacturer_status": "제품 재고 주수 4계열 · 기업 전체 재무 참고 2계열",
-      "customer_status": "제품 재고 주수 2계열 (고객 1 · 유통 1계열)",
+      "manufacturer_status": "제품 재고 주수 6계열 · 기업 전체 재무 참고 2계열",
+      "customer_status": "제품 재고 주수 3계열 (고객 2 · 유통 1계열)",
       "note": "공개 원문에서 제품·보유주체·분기·단위가 확인된 재고 주수만 추가합니다. 재고금액이나 납기로 역산하지 않습니다. 주류 소비자용 MLCC 1–22µF 문맥에서 재고 30일 미만을 보고했으나 보유주체가 명시되지 않아 제조사·고객·유통 관측으로 적재하지 않습니다. 30일 정값이나 0–30일 범위가 아닙니다. 기사 앞부분 6월 출하량과 혼동해 Q2로 옮기지 않습니다. ODM 고객의 동일 원문에 약 30일과 3–4주가 함께 제시됩니다. 직접 명시된 주수 3–4주를 적재하며 약 30일로 역환산·대체하지 않습니다. TrendForce 월간 Excel과 분기 PDF 목차에 Top10 제조사 재고 상태가 명시되어 있으나 숫자는 유료 로그인 본문에 있습니다. 공개 목차를 재고 관측치로 바꾸지 않습니다. 월간 고정 URL은 발간일·제목·본문 해시로 에디션을 구별해야 합니다.",
       "source_urls": [
         "https://www.trendforce.com.tw/research/download/RP211210BG",
@@ -4586,12 +5630,13 @@
         "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002842",
         "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003805",
         "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515001390",
-        "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814002905"
+        "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814002905",
+        "https://www.trendforce.com/presscenter/news/20210701-10852.html"
       ]
     },
     {
       "product_id": "memory-total",
-      "manufacturer_status": "보고 재고일수 환산 1계열 · 기업 전체 재무 참고 1계열",
+      "manufacturer_status": "보고 재고일수 환산 1계열 · 기업 전체 재무 참고 2계열",
       "customer_status": "수치 원문 미확인",
       "note": "공개 원문에서 제품·보유주체·분기·단위가 확인된 재고 주수만 추가합니다. 재고금액이나 납기로 역산하지 않습니다.",
       "source_urls": [
