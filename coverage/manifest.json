@@ -1,0 +1,40 @@
+{
+  "schema_version": "ensemble-coverage-build/1",
+  "as_of": "2026-09-29",
+  "input_hash": "fcfd229d8822d03979b00214d5a84ec31afe8ec60e2f89c12fda88f9bbf91527",
+  "inputs": [
+    {
+      "name": "entertainment_forecast.json",
+      "sha256": "5349451cfb3039771264f03e5b13b03716429dc38f6f93cdd379cd0a2faa552f"
+    },
+    {
+      "name": "leisure_forecast.json",
+      "sha256": "c8d34daefb32653175c79545bf5afb726279322ec2252946057741a5ab338194"
+    },
+    {
+      "name": "media_forecast.json",
+      "sha256": "fb7686652c070b2afa2e78764ab5f51e905009170c6850d4d0df06ce135a5841"
+    }
+  ],
+  "core_registry": {
+    "name": "registry.json",
+    "sha256": "e8a43f36c6a11ecc5feff6fb6975099786131d54779f816b749a588e805199f3"
+  },
+  "outputs": {
+    "data.json": "f542bb7fb94e1a47039e3553554ecffdf23710d14e19a27e12b8a855a37d19b5",
+    "ensemble-tab.js": "a287693957cf0b06d5938f6a8399cc6bc3add1033cad08976276a1df4ee86cd7",
+    "index.html": "ed0e81943953e12b6bc8e512e0103df11c7f0136141cb334d7618c9971e98e77"
+  },
+  "summary": {
+    "coverage_companies": 12,
+    "core_companies": 39,
+    "directory_companies": 51,
+    "observations": 5763,
+    "reported_actuals": 1473,
+    "agent_estimates": 1430,
+    "scenarios": 2860,
+    "partial_periods": 0,
+    "sources": 43,
+    "model_gaps": 0
+  }
+}
