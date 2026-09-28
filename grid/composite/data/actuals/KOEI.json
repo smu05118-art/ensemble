@@ -1,0 +1,899 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "KOEI",
+ "grid_node": "GRID_KONCAR",
+ "name": "KONČAR - Elektroindustrija d.d. (Grupa KONČAR)",
+ "ticker": "KOEI-R-A (ZSE)",
+ "listed": true,
+ "currency": "EUR",
+ "unit": "million",
+ "accounting_basis": "IFRS (EU); ZSE/HANFA TFI-POD quarterly forms",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar",
+ "collected_at": "2026-09-25",
+ "currency_note": "Croatia adopted the euro on 2023-01-01 (fixed 7.53450 HRK/EUR). Points up to FY2022Q4 are in HRK million as originally reported (each carries \"currency\":\"HRK\"); from FY2023Q1 in EUR million. prior_year_comparative is always taken from the same report, so every YoY is same-currency (2023 reports print 2022 comparatives converted by the company). No conversion was done by the collector.",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 매출(Prihodi od prodaje)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": false,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 618.908,
+     "prior_year_comparative": 666.188,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2016-1Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) Q1 (1.-3.) 2016, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 627.284,
+     "prior_year_comparative": 846.907,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2016-2Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) H1 (1.-6.) 2016, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 683.751,
+     "prior_year_comparative": 708.749,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2016-3Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) 9M (1.-9.) 2016, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 923.161,
+     "prior_year_comparative": 827.23,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2016-4Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) FY (1.-12.) unaudited 2016, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 561.709,
+     "prior_year_comparative": 618.908,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2017-1Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) Q1 (1.-3.) 2017, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 680.976,
+     "prior_year_comparative": 627.284,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2017-2Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) H1 (1.-6.) 2017, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 682.516,
+     "prior_year_comparative": 683.751,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2017-3Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) 9M (1.-9.) 2017, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 898.718,
+     "prior_year_comparative": 923.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2017-4Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) FY (1.-12.) unaudited 2017, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 536.041,
+     "prior_year_comparative": 561.709,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2018-1Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) Q1 (1.-3.) 2018, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 667.869,
+     "prior_year_comparative": 680.976,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2018-2Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) H1 (1.-6.) 2018, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 640.696,
+     "prior_year_comparative": 682.516,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2018-3Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) 9M (1.-9.) 2018, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 836.926,
+     "prior_year_comparative": 898.245,
+     "method": "direct_reported_quarter",
+     "source_url": "https://eho.zse.hr/fileadmin/issuers/migrated/financials/KOEI-fin2018-4Q-NotREV-K-EN.xls",
+     "locator": "ZSE EHO TFI-POD (EN, xls) FY (1.-12.) unaudited 2018, consolidated (Grupa KONČAR), sheet 'PL' row 1. Rendering of services (AOP 112), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 606.629,
+     "prior_year_comparative": 536.041,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2019..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2019, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2019-04-30",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 649.243,
+     "prior_year_comparative": 667.869,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2019..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2019, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2019-07-26",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 612.761,
+     "prior_year_comparative": 640.696,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2019..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2019, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2019-10-30",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 991.78,
+     "prior_year_comparative": 789.019,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2019_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2019, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2020-02-28",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 604.521,
+     "prior_year_comparative": 606.629,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2020..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2020, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2020-04-29",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 736.705,
+     "prior_year_comparative": 649.243,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2020..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2020, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2020-07-29",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 709.8,
+     "prior_year_comparative": 612.286,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2020..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2020, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2020-10-30",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 921.787,
+     "prior_year_comparative": 991.361,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2020_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2020, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 126) + 2. Prihodi od prodaje (izvan grupe) (AOP 127), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2021-02-24",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 691.521,
+     "prior_year_comparative": 604.521,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2021..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2021, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2021-04-29",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 901.583,
+     "prior_year_comparative": 736.705,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2021..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2021, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2021-07-29",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 819.792,
+     "prior_year_comparative": 709.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2021..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2021, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2021-10-28",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 1065.108,
+     "prior_year_comparative": 921.533,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2021_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2021, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2022-02-24",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 884.147,
+     "prior_year_comparative": 691.521,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2022, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2022-04-28",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 1292.841,
+     "prior_year_comparative": 901.583,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2022, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2022-07-28",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 1385.756,
+     "prior_year_comparative": 819.792,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-08/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2022, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2022-10-27",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 1709.4,
+     "prior_year_comparative": 1064.558,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2022_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2022, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. HRK units → millions.",
+     "published_date": "2023-02-28",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 171.526,
+     "prior_year_comparative": 117.285,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2023..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2023, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2023-04-27"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 211.396,
+     "prior_year_comparative": 171.651,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2023..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2023, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2023-07-27"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 218.162,
+     "prior_year_comparative": 183.921,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2023..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2023, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2023-10-31"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 299.967,
+     "prior_year_comparative": 231.015,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2023_nerevidirani.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2023, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2024-02-26",
+     "prior_year_comparative_method": "ytd_difference of printed PY cumulative comparatives (FY2023 TFI minus 9M 2023 TFI)"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 210.035,
+     "prior_year_comparative": 171.526,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_KON%C4%8CAR_Group_1.-3.2024.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2024, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1 Income from sales with undertakings within the group (AOP 2) + 2 Income from sales (outside group) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2024-04-29"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 268.658,
+     "prior_year_comparative": 211.396,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2024..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2024, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2024-07-26"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 255.88,
+     "prior_year_comparative": 218.162,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2024..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2024, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2024-10-31"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 321.048,
+     "prior_year_comparative": 292.995,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2024_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2024, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2025-02-26"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 306.15,
+     "prior_year_comparative": 210.035,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2025..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2025, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2025-04-29"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 330.6,
+     "prior_year_comparative": 268.658,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2025..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2025, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2025-07-30"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 277.442,
+     "prior_year_comparative": 255.88,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2025..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2025, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2025-10-29"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 405.451,
+     "prior_year_comparative": 319.804,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2025_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2025, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (izvan grupe) (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2026-02-26"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 330.518,
+     "prior_year_comparative": 306.15,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2026.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2026, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2026-04-29"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 394.41,
+     "prior_year_comparative": 330.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2026..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2026, consolidated (Grupa KONČAR), sheet 'RDG/P&L' row 1. Prihodi od prodaje s poduzetnicima unutar grupe (AOP 2) + 2. Prihodi od prodaje (AOP 3), column 'Tekuće razdoblje – Tromjesečje' (current period, quarter); comparative = 'Isto razdoblje prethodne godine – Tromjesečje'. EUR units → millions.",
+     "published_date": "2026-07-30"
+    }
+   ]
+  },
+  "revenue_segment": {
+   "label_ko": "송배전(T&D) 세그먼트 매출 — 변압기·계기용변압기·개폐장치·송전선로(Dalekovod) 포함, 내부거래 제거 전",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": true,
+   "segment_name": "Prijenos i distribucija električne energije (Power transmission & distribution; IFRS 8, gross of intersegment eliminations): power/distribution/special/instrument transformers, transformer tanks, MV/LV switchgear, substations, transmission lines (Dalekovod from Apr-2022)",
+   "points": [
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 505.504,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (sum of printed sub-lines '- prijenos' + '- distribucija' (no total line printed)), prior-year (restated) comparative column, YTD 505,504,442 HRK. Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 654.002,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), prior-year (restated) comparative column, YTD 1,159,506,688 HRK; minus Q1 (1.-3.) 2022 prior-year (restated) comparative column YTD 505,504,442 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2022..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 562.05,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-08/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), prior-year (restated) comparative column, YTD 1,721,556,750 HRK; minus H1 (1.-6.) 2022 prior-year (restated) comparative column YTD 1,159,506,688 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2022..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 723.277,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2022_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), prior-year (restated) comparative column, YTD 2,444,833,388 HRK; minus 9M (1.-9.) 2022 prior-year (restated) comparative column YTD 1,721,556,750 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-08/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2022..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 634.004,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (sum of printed sub-lines '- prijenos' + '- distribucija' (no total line printed)), current-period column, YTD 634,004,247 HRK. Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2022-04-28",
+     "prior_year_comparative": 505.504,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 900.015,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 1,534,019,469 HRK; minus Q1 (1.-3.) 2022 current-period column YTD 634,004,247 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2022..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2022-07-28",
+     "prior_year_comparative": 654.002,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 973.151,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-08/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2022..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 2,507,170,752 HRK; minus H1 (1.-6.) 2022 current-period column YTD 1,534,019,469 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2022..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2022-10-27",
+     "prior_year_comparative": 562.05,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 1185.141,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2022_nerevidirano.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2022, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 3,692,311,855 HRK; minus 9M (1.-9.) 2022 current-period column YTD 2,507,170,752 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-08/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2022..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2023-02-28",
+     "prior_year_comparative": 723.277,
+     "currency": "HRK"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 121.609,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2023..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2023, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 121,609,273 EUR. Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2023-04-27",
+     "prior_year_comparative": 84.103
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 162.488,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2023..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2023, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 284,097,675 EUR; minus Q1 (1.-3.) 2023 current-period column YTD 121,609,273 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2023..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2023-07-27",
+     "prior_year_comparative": 119.497
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 147.178,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2023..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2023, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 431,275,736 EUR; minus H1 (1.-6.) 2023 current-period column YTD 284,097,675 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2023..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2023-10-31",
+     "prior_year_comparative": 129.159
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 199.314,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2023_nerevidirani.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr FY (1.-12.) unaudited 2023, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 630,589,912 EUR; minus 9M (1.-9.) 2023 current-period column YTD 431,275,736 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2023..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2024-02-26",
+     "prior_year_comparative": 157.295
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 167.853,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_KON%C4%8CAR_Group_1.-3.2024.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2024, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 167,853,000 EUR. Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2024-04-29",
+     "prior_year_comparative": 121.609
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 226.683,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2024..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2024, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 394,535,657 EUR; minus Q1 (1.-3.) 2024 current-period column YTD 167,853,000 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_KON%C4%8CAR_Group_1.-3.2024.xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2024-07-26",
+     "prior_year_comparative": 162.489
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 208.268,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2024..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2024, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 602,803,711 EUR; minus H1 (1.-6.) 2024 current-period column YTD 394,535,657 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2024..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2024-10-31",
+     "prior_year_comparative": 147.178
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 255.347,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2025..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2025, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 255,347,097 EUR. Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2025-04-29",
+     "prior_year_comparative": 167.854
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 273.343,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2025..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2025, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 528,690,584 EUR; minus Q1 (1.-3.) 2025 current-period column YTD 255,347,097 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2025..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2025-07-30",
+     "prior_year_comparative": 226.682
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 195.588,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2025..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr 9M (1.-9.) 2025, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 724,278,715 EUR; minus H1 (1.-6.) 2025 current-period column YTD 528,690,584 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2025..xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2025-10-29",
+     "prior_year_comparative": 208.268
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 276.649,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2026.xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr Q1 (1.-3.) 2026, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 276,649,000 EUR. Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2026-04-29",
+     "prior_year_comparative": 255.347
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 310.495,
+     "method": "ytd_difference",
+     "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2026..xlsx",
+     "locator": "KONČAR TFI-POD (xlsx) from koncar.hr H1 (1.-6.) 2026, sheet 'Bilješke/Notes' note 4 'Prihodi od prodaje po segmentima' (IFRS 8), row 'Prijenos i distribucija električne energije' (segment total line), current-period column, YTD 587,144,000 EUR; minus Q1 (1.-3.) 2026 current-period column YTD 276,649,000 (https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2026.xlsx). Segment revenue is GROSS of intersegment eliminations (eliminations shown on a separate line). Note header says EUR'000/HRK'000 but figures are in units — scale checked against consolidated sales.",
+     "published_date": "2026-07-30",
+     "prior_year_comparative": 273.344
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_segment",
+ "structural_breaks": [
+  {
+   "date": "2019-12-31",
+   "type": "restatement",
+   "note": "FY2019: the four printed quarter columns sum to HRK 2,860.4m vs FY cumulative 2,811.8m; H1-2019 cumulative later restated (−48.6m) in the H1-2020 report without changing the Q2 quarter column; 2018 FY comparative in the FY2019 report (2,492.6m) differs from the originally reported unaudited 2,681.5m. Quarter columns kept as printed.",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2019_nerevidirano.xlsx"
+  },
+  {
+   "date": "2021-01-01",
+   "type": "segment_reorg",
+   "note": "IFRS 8 segments changed with the 2022 reports: from Transformatori / Rotacioni strojevi / Tračnička vozila / Inženjering / Industrijska elektronika (2020–2021) to Proizvodnja el. energije / Prijenos i distribucija / Tračnička vozila i infrastruktura (later Urbana mobilnost i infrastruktura) / Digitalna rješenja. 2021 was re-presented on the new basis in the 2022 reports; revenue_segment starts at FY2021Q1 from those restated comparatives.",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2022..xlsx"
+  },
+  {
+   "date": "2022-04-01",
+   "type": "acquisition",
+   "note": "Dalekovod d.d. group (transmission-line & substation EPC, 75.16%) integrated into Grupa KONČAR from 1 April 2022 (recapitalisation in Q1 2022); Dalekovod = 10.9% of H1-2022 and 14.8% of FY2022 sales, mostly inside the T&D segment. 2022 YoY growth of T&D is partly inorganic.",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2022..xlsx"
+  },
+  {
+   "date": "2023-01-01",
+   "type": "restatement",
+   "note": "Reporting currency HRK → EUR (euro adoption, fixed 7.53450). Level series has a unit break; use prior_year_comparative (company-converted) for YoY.",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-3.2023..xlsx"
+  },
+  {
+   "date": "2024-12-31",
+   "type": "segment_reorg",
+   "note": "Annual TFI notes for FY2024 and FY2025 present segment revenue NET of intersegment eliminations (segments sum to consolidated sales), while all interim reports present GROSS segment revenue with a separate eliminations line; Q4 segment values for 2024 and 2025 therefore cannot be derived consistently and are left out.",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_2024_nerevidirano.xlsx"
+  },
+  {
+   "date": "2025-08-01",
+   "type": "acquisition",
+   "note": "HELB d.o.o. (power-infrastructure engineering, Božjakovina) 75% control from 1 Aug 2025, 100% from 8 Apr 2026 (renamed KONČAR – Helb). Also ADNET/Kreanca (digital, 2025) and NEOS (Jan-2026).",
+   "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-9.2025..xlsx"
+  }
+ ],
+ "profile": {
+  "products": "Grupa KONČAR T&D segment: KONČAR – D&ST (medium-power transformers & autotransformers up to 160 MVA / 170 kV; oil distribution 50 kVA–8 MVA ≤36 kV; dry-type 50–5,000 kVA; special transformers), KONČAR – Instrument Transformers (HV 72.5–800 kV, MV 3.6–52 kV), KONČAR – Transformer Tanks (tanks >100 t for large power transformers, exported to DE/AT/FR/NL/BE/US/KR), Ferokotao (tanks), Aparati i postrojenja (MV/LV switchgear), substation EPC up to 420 kV, Dalekovod (transmission lines). Large power transformers are made by KONČAR – Energetski transformatori, a JV with Siemens Energy that is equity-accounted (NOT in consolidated revenue). Other segments: generators/hydro turbines, rail vehicles (trams/trains), digital.",
+  "plants": [
+   {
+    "country": "HR",
+    "city": "Zagreb (Josipa Mokrovića 8)",
+    "products": "KONČAR – D&ST distribution, medium-power and special transformers (up to 160 MVA/170 kV)",
+    "source_url": "https://www.koncar.hr/en/koncar-distribution-and-special-transformers"
+   },
+   {
+    "country": "HR",
+    "city": "Zagreb",
+    "products": "KONČAR – Instrument Transformers (HV/MV instrument transformers)",
+    "source_url": "https://www.koncar.hr/en/koncar-instrument-transformers"
+   },
+   {
+    "country": "HR",
+    "city": "Sesvetski Kraljevec",
+    "products": "KONČAR – Transformer Tanks (LPT tanks, new facility 2025-26)",
+    "source_url": "https://www.koncar.hr/en/koncar-transformer-tanks"
+   },
+   {
+    "country": "HR",
+    "city": "Donji Kraljevec",
+    "products": "Ferokotao / Novi Feromont — transformer tanks & metal structures (via KONČAR – D&ST)",
+    "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2026..xlsx"
+   },
+   {
+    "country": "PL",
+    "city": "Czerwonak / Poznań",
+    "products": "Power Engineering Transformatory (PET) — transformers (via KONČAR – D&ST)",
+    "source_url": "https://www.koncar.hr/sites/default/files/dokumenti/financijski-rezultati/2026-07/TFI-POD_Grupa_KON%C4%8CAR_1.-6.2025..xlsx"
+   }
+  ],
+  "end_markets": "Transmission & distribution utilities and renewables (wind/solar) in the EU (Germany, Nordics, Austria etc.), Croatia (HEP/HOPS), railway (HŽ), hydro. Export share of group sales ≈71% in H1-2026 (516.5 of 724.9 EUR m). T&D = ~75% of gross segment revenue in H1-2026.",
+  "export_routes": [
+   "HR->EU (DE, AT, SE, NO …)",
+   "PL->EU (PET)",
+   "HR->US (tanks for LPT makers; JV power transformers are equity-accounted)"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850423",
+   "850431",
+   "850432",
+   "850433",
+   "850434",
+   "850490",
+   "853529",
+   "853710",
+   "853720"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "hr_exp_850423_p0",
+    "why": "Croatian exports of liquid transformers >10 MVA — D&ST medium-power units (note: also contains the equity-accounted Siemens Energy JV's large transformers)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "hr_exp_850422_p0",
+    "why": "Croatian exports 650 kVA–10 MVA — D&ST distribution/medium transformers, the core of KONČAR's consolidated transformer revenue",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "hr_exp_850421_p0",
+    "why": "Croatian exports ≤650 kVA distribution transformers (D&ST)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_HR",
+    "why": "Croatian production index of electric motors/generators/transformers/distribution apparatus (C27.1) — dominated by KONČAR companies",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "eurostat_turnover_C271_HR",
+    "why": "Croatian C27.1 turnover (nominal) — direct industry mirror of KONČAR T&D output",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_DE",
+    "why": "German C27.1 production — Germany is a major destination for D&ST/KONČAR exports; EU grid capex cycle",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p191",
+    "why": "US imports of >10 MVA transformers from Croatia — mostly the equity-accounted Siemens Energy JV, so only indirect (tanks, instrument transformers)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "wishlist:comext_eu_imp_8504_from_HR",
+    "why": "Eurostat Comext monthly EU27 imports of HS8504 from Croatia (partner HR) — cleaner view of KONČAR's EU sales than world exports; not yet collected",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "wishlist:koncar_group_orders",
+    "why": "KONČAR group 'Ugovoreni poslovi' (new contracts, YTD) and backlog printed in every quarterly management report since 2020 — a company-own leading indicator (not extracted in this pass)",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_segment FY2024Q4: not derivable — the FY2024 report presents segment revenue net of intersegment eliminations (no eliminations line; segments sum to consolidated sales) while interim reports present gross segment revenue; YTD differencing across bases would be wrong.",
+  "revenue_segment FY2025Q4: not derivable — the FY2025 report presents segment revenue net of intersegment eliminations (no eliminations line; segments sum to consolidated sales) while interim reports present gross segment revenue; YTD differencing across bases would be wrong.",
+  "revenue_segment FY2016Q1–FY2020Q4: no T&D segment on the current basis; the 2020–2021 'Transformatori' segment (different definition, net of eliminations) and pre-2020 reports without quarterly segment notes were not mixed in.",
+  "revenue_total: published_date omitted for FY2016–FY2018 (ZSE EHO English XLS versions carry later upload timestamps)."
+ ],
+ "collection_notes": [
+  "FY2023Q4 prior_year_comparative: the FY2023 TFI prints PY quarter = 226,458,209 EUR for sales, identical to the PY operating-income quarter (form error); replaced by PY cumulative 703,872,357 (FY2023 TFI) minus PY 9M cumulative 472,857,416.68 (9M 2023 TFI) = 231,014,940 EUR — both company-converted HRK→EUR comparatives.",
+  "FY2019: sum of the four reported quarter columns = 2,860,413,683 vs FY cumulative 2,811,844,978 (diff 48,568,705); quarter columns kept as printed (cumulative figures were restated within/after the year).",
+  "FY2019Q4: printed PY-quarter comparative 789.019 differs from the originally reported FY2018Q4 value 836.926 by -5.7% (restatement/reclassification in the later report).",
+  "FY2024Q4: printed PY-quarter comparative 292.995 differs from the originally reported FY2023Q4 value 299.967 by -2.3% (restatement/reclassification in the later report).",
+  "Source files: FY2016Q1–FY2018Q4 — ZSE EHO TFI-POD English XLS (KOEI-fin{YYYY}-{n}Q-NotREV-K-EN.xls); FY2019Q1–FY2026Q2 — KONČAR TFI-POD XLSX from koncar.hr (Croatian; FY2024Q1 English file because the Croatian link returns an HTML error page). published_date = report date listed on koncar.hr/hr/financijski-rezultati.",
+  "revenue_total = 'Prihodi od prodaje' (sales revenue): AOP112 'Rendering of services' in the pre-2019 form; AOP126/002 (sales to group undertakings, zero in consolidation) + AOP127/003 (sales outside group) from 2019. Other operating income excluded. Values ÷1e6 → millions.",
+  "revenue_segment = 'Prijenos i distribucija električne energije' from note 4 'Prihodi od prodaje po segmentima' of each TFI-POD (IFRS 8). Q1 direct, Q2–Q4 by YTD difference within the same year's reports; prior_year_comparative = difference of the printed prior-year YTD columns of the same year's reports. In Q1-2022 only the sub-lines '- prijenos' and '- distribucija' are printed → summed. Note headers say EUR'000/HRK'000 but figures are in units (checked against consolidated sales).",
+  "KONČAR group also discloses group-level new contracts ('Ugovoreni poslovi') and backlog quarterly in its management reports; not stored as orders_segment because they are group-wide (not segment) and several 2025–2026 report PDFs failed to parse — flagged as wishlist proxy.",
+  "verify 2026-09-25: checked revenue_segment FY2021Q1-Q4 (restated comparatives in the 2022 TFI-PODs), FY2022Q1-Q4, FY2023Q1-Q4, FY2024Q1-Q3, FY2025Q1-Q3, FY2026Q1, FY2026Q2 (all ytd_difference points recomputed from note 4 of each TFI-POD; unit = EUR/HRK units despite the EUR'000 header), and revenue_total FY2016Q1, FY2017Q4, FY2018Q4, FY2019Q4, FY2021Q1, FY2021Q4, FY2022Q1-Q4, FY2023Q1-Q4, FY2024Q2-Q4, FY2025Q1-Q4, FY2026Q1, FY2026Q2 against the TFI-POD xls/xlsx. All matched. Confirmed that the FY2024 and FY2025 annual TFI-PODs present segments net of eliminations (segments + 'Ostalo' = consolidated sales, no eliminations line), so the Q4 segment gaps are justified; the FY2023Q4 prior-year quarter printed for sales (226,458,209) equals the prior-year quarter of total operating income (AOP 001) and the derived 231.015 replacement is kept. Q3-2025 T&D (195.6m, −6% YoY) is as printed: both H1-2025 and 9M-2025 notes are gross with an eliminations line. Fixed 0."
+ ]
+}

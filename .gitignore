@@ -3,3 +3,5 @@ chains/artifact/
 
 __pycache__/
 *.pyc
+grid/composite/data/raw/
+*.tmp

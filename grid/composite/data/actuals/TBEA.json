@@ -1,0 +1,1068 @@
+{
+ "accounting_basis": "CAS (China Accounting Standards for Business Enterprises)",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "Sources: TBEA periodic reports from cninfo static PDFs (2015 AR 修订版). Values FY2015–FY2025 = AR 分季度主要财务数据 3-month figures (FY2018 table read with pdfplumber: vertical label layout). FY2026Q1 = Q1 report; FY2026Q2 = H1 56,554.75 − Q1 24,946.05.",
+  "Checks: Σ quarters = FY 营业收入 every year; Q1/H1/9M/Q3 = quarterly reports except documented restatement years (2022, 2023).",
+  "TBEA consolidates a finance company (特变电工集团财务有限公司): 营业总收入 > 营业收入; 营业收入 is used throughout.",
+  "Because polysilicon/coal dominate consolidated revenue, revenue_segment (transformer/electrical-equipment products, H) and orders_segment are the relevant series for transformer-peer analysis; they are semi-annual only (no quarterly product disclosure).",
+  "verify 2026-09-25: checked revenue_total FY2015Q1 (+ printed comparative 7,801.86), FY2015Q2-Q4, FY2016Q1-Q4 (Q4 1,377,720.00万元 as printed), FY2018Q1-Q4, FY2021Q1-Q4 (Q4 |logYoY|>0.4), FY2022Q1-Q4 (Q1-Q3 |logYoY|>0.4, restated for 新疆众和), FY2023Q1-Q4, FY2023Q3 comparative 27,642.83 (Q3 2023 report 调整后), FY2025Q1-Q4, FY2025Q3 comparative 24,490.46 (调整后), FY2026Q1, FY2026Q2 (ytd_difference: H1 56,554.75 − Q1 24,946.05); revenue_segment FY2024H1 (+ comparative 8,058.63), FY2025H1, FY2026H1; orders_segment FY2024H1, FY2026H1 — all match the cninfo PDFs (营业收入 not 营业总收入; 万元/元 → million). fixed 4: FY2023Q1-Q4 locators pointed to p.9 but the 营业收入 row is on p.10 of the FY2023 AR.",
+  "fix 2026-09-25 (audit): FY2023H2 revenue_segment = FY2023 annual − restated 2023H1 (both post-自控 basis); previously used original 2023H1 7,783.7105 (mixed basis, +2.6%).",
+  "annotate 2026-09-25: structural_break 2024-12-31 affects_target=false (근거: 기존 note — 동일 기준 품목명 변경)"
+ ],
+ "currency": "CNY",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "revenue_total: none FY2015Q1–FY2026Q2 (46 quarters).",
+  "revenue_total prior_year_comparative: only same-scope printed 3-month comparatives (Q1 report; Q3 via old-format 7-9月 利润表 2015-2020 or restated 3-month columns in FY2023/FY2025 Q3 reports). Omitted where the annual quarterly table was restated in-year (FY2022Q1/Q3, FY2023Q1).",
+  "revenue_segment: FY2014 and earlier not collected; H1 comparatives stored where the H1 note table prints the prior-year product revenue (2016-2024 except 2018); 2025H1/2026H1 print only YoY %.",
+  "orders_segment: approximate narrative figures not stored — 2016 FY 约223亿; 2017 FY 210亿 (no H1); 2018 FY 近200亿; 2019 H1 近111.6亿 / FY 近210亿; 2020 H1 超过100亿 / FY 近200亿; 2021 FY 近266亿 (H1 not found); 2023 H1 近200亿 / FY 404.50亿 (H2 not derivable). International signings (USD) not stored."
+ ],
+ "grid_node": "GRID_TBEA",
+ "id": "TBEA",
+ "listed": true,
+ "name": "特变电工股份有限公司 (TBEA Co., Ltd.)",
+ "primary_target": "revenue_total",
+ "profile": {
+  "end_markets": "State Grid / China Southern Grid incl. UHV AC/DC, renewables (wind/PV/storage), power generation, industrial; international EPC and product exports (2025 international product signings ≈ USD 2.0bn, 2026H1 USD 1.618bn). Consolidated revenue is dominated by polysilicon, coal, power and aluminium swings; the transformer/electrical-equipment product line was 27.5% of FY2025 revenue.",
+  "export_routes": [
+   "CN->World (Central/South/Southeast Asia, Middle East, Africa)",
+   "IN->IN (local subsidiary)"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "850450",
+   "854460",
+   "853529",
+   "280461"
+  ],
+  "plants": [
+   {
+    "city": "Changji, Xinjiang (特变电工新疆变压器厂; 特变电工超高压电气; 新疆电缆; 新疆特变电工自控设备)",
+    "country": "CN",
+    "products": "power & UHV transformers, reactors, cables, secondary equipment",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF"
+   },
+   {
+    "city": "Shenyang, Liaoning (特变电工沈阳变压器集团 — 沈变公司)",
+    "country": "CN",
+    "products": "UHV/EHV power and converter transformers",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF"
+   },
+   {
+    "city": "Hengyang, Hunan (特变电工衡阳变压器 — 衡变公司; 合容电气; 赛杰爱迪(江苏)高压电气)",
+    "country": "CN",
+    "products": "power transformers, reactors, capacitors, HV electrical apparatus",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF"
+   },
+   {
+    "city": "Tianjin (特变电工电气装备集团 — holding for transformer/electrical-equipment units)",
+    "country": "CN",
+    "products": "electrical equipment holding",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF"
+   },
+   {
+    "city": "Shandong / Deyang, Sichuan (鲁缆公司, 德缆公司)",
+    "country": "CN",
+    "products": "wires & cables",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF"
+   },
+   {
+    "city": "Urumqi / Changji (Ganquanbao) Xinjiang and Baotou, Inner Mongolia (新特能源)",
+    "country": "CN",
+    "products": "polysilicon (drives consolidated swings)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF"
+   },
+   {
+    "city": "India (特变电工能源（印度）有限公司 — guarantee resolutions in FY2024 AR p.64/p.73; plant location not stated in AR)",
+    "country": "IN",
+    "products": "T&D equipment (India subsidiary)",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF"
+   }
+  ],
+  "products": "Per FY2025 AR p.12-16: (1) 输变电 — UHV DC converter transformers & smoothing reactors, AC power transformers & reactors, special (chemical/smelting/traction) transformers, dry-type transformers, box substations, distribution transformers, bushings, CT/VT, secondary systems, HV switchgear/GIS/GIL, MV/LV switchgear, capacitors, wires & cables ≤750kV, international T&D EPC; (2) 新能源 — high-purity polysilicon (新特能源), PV inverters, storage, SVG, VSC-HVDC valves, wind/PV EPC & IPP; (3) 能源 — coal mining (天池能源), power & heat; (4) 新材料 — high-purity aluminium, electronic foil, electrode foil, alloys (XJZH). FY2025 main-business revenue by product (万元): 电气设备 2,675,964.82; 煤炭 1,696,566.08; 电线电缆 1,556,891.04; 新能源产品及工程 1,355,535.61; 发电 718,333.35; 铝电子新材料 630,253.40; 输变电成套工程 492,490.96.",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "nbs_transformer_output",
+    "role": "primary",
+    "why": "변압기 생산량 — 전기설비(변압기) 제품 매출(revenue_segment)과 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "nea_grid_investment",
+    "role": "primary",
+    "why": "전력망 투자 — 특고압 변압기·케이블 국내 수요; 계약(orders_segment)과 매출의 선행 동인"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "cn_exp_850423_p0",
+    "role": "diagnostic",
+    "why": "중국 대형 변압기 수출 — 해외 제품 계약 급증(2025 약 20억달러)과 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "cn_exp_850422_p0",
+    "role": "diagnostic",
+    "why": "중국 중형 유입변압기 수출 — 해외 배전·신재생 연계 변압기"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "in_exp_850423_p0",
+    "role": "diagnostic",
+    "why": "인도 대형 변압기 수출 — 인도 현지법인 경로(진단용)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "cn_polysilicon_price",
+    "role": "wishlist",
+    "why": "폴리실리콘 가격 — 연결 매출(revenue_total) 변동의 최대 요인(新特能源). 현재 패널에 없음"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "cn_thermal_coal_price",
+    "role": "wishlist",
+    "why": "동력탄 가격(秦皇岛5500) — 석탄 매출(연결 17%) 요인. 현재 패널에 없음"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "sgcc_centralized_tender_awards",
+    "role": "wishlist",
+    "why": "국가전망 변압기 집중입찰 낙찰 — 송변전 국내 계약의 선행/동행. 현재 패널에 없음"
+   }
+  ]
+ },
+ "quarter_calendar": "calendar quarters; fiscal_key = calendar year",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "affected_fiscal_keys": [
+    "FY2021Q2",
+    "FY2021Q4"
+   ],
+   "date": "2021-12-31",
+   "note": "FY2021 AR restates FY2020 营业收入 44,095.32 → 44,598.31 (+502.99m, +1.1%; 调整后/调整前 columns, reason not stated on the summary page). FY2021 in-year quarters unaffected (table = quarterly reports).",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-12/1219211557.PDF",
+   "target": "revenue_total",
+   "type": "restatement"
+  },
+  {
+   "affected_fiscal_keys": [
+    "FY2022Q1",
+    "FY2022Q2",
+    "FY2022Q3",
+    "FY2022Q4"
+   ],
+   "date": "2022-12-23",
+   "note": "新疆众和 (XJZH; high-purity aluminium, electronic foil, alloys) consolidated as a same-control merger (合并日 2022-12-23). FY2021 restated 61,278.37 → 68,967.68 (+7,689.31m, +12.5%); the FY2022 quarterly table is restated (Q1 17,100.16 → 19,149.13; H1 38,720.20 → 42,585.82; 9M 64,542.46 → 69,902.45). FY2022 quarters have no same-scope printed comparative → YoY vs FY2021 points is inflated ≈12%.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF",
+   "target": "revenue_total",
+   "type": "acquisition"
+  },
+  {
+   "affected_fiscal_keys": [
+    "FY2023Q1",
+    "FY2023Q2",
+    "FY2023Q4",
+    "FY2023H1",
+    "FY2023H2"
+   ],
+   "date": "2023-12-31",
+   "note": "新疆特变电工自控设备有限公司 (自控公司) consolidated as same-control merger; FY2022 restated 95,886.75 → 96,393.96 (+507.21m); FY2023 quarterly table restated in-year (Q1 26,273.71 → 26,487.18; H1 49,778.08 → 50,074.71; 9M 73,594.73 → 73,891.36). Transformer-product FY2022 restated in the FY2023 AR note (13,528.06 → 13,962.34) and 2023H1 restated in the 2024 H1 report (7,783.71 → 8,058.63).",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
+   "target": "revenue_total,revenue_segment",
+   "type": "acquisition"
+  },
+  {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: product row renamed 变压器产品→电气设备产品 on the same base (growth printed against the old figures)",
+   "date": "2024-12-31",
+   "note": "Product row renamed 变压器产品 → 电气设备产品 from the FY2024 AR; growth rates printed against the old 变压器产品 figures (FY2023 18,484.73; 2024H1 10,308.61) show the same base.",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",
+   "target": "revenue_segment",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2025-12-31",
+   "note": "Same-control mergers: 防城港公司 67% (Jan 2025, via XJZH), 修试公司 100% (Apr 2025, via 衡变公司), 广西宏创再生资源 100% (Dec 2025); FY2024 restated 97,778.22 → 97,821.95 (+43.73m, immaterial).",
+   "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF",
+   "target": "revenue_total",
+   "type": "acquisition"
+  }
+ ],
+ "targets": {
+  "orders_segment": {
+   "freq": "H",
+   "label_ko": "송변전(输变电) 산업 국내시장 계약(签约)액 — 반기",
+   "metric": "orders (contract signings), not revenue",
+   "points": [
+    {
+     "fiscal_key": "FY2018H1",
+     "locator": "特变电工 2018年半年度报告 (published 2018-08-28) PDF p.12: MD&A narrative — “2018年上半年输变电国内市场签约103亿元”; 亿元 ×100 → CNY million",
+     "method": "direct_reported_half",
+     "period_end": "2018-06-30",
+     "period_start": "2018-01-01",
+     "published_date": "2018-08-28",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-08-28/1221977561.PDF",
+     "value": 10300
+    },
+    {
+     "fiscal_key": "FY2022H1",
+     "locator": "特变电工 特变电工股份有限公司2022年半年度报告 (published 2022-08-27) PDF p.14: MD&A narrative — “输变电产业国内市场签约169.85亿元，同比增长18.38%”; 亿元 ×100 → CNY million",
+     "method": "direct_reported_half",
+     "period_end": "2022-06-30",
+     "period_start": "2022-01-01",
+     "published_date": "2022-08-27",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-08-27/1221967802.PDF",
+     "value": 16985
+    },
+    {
+     "fiscal_key": "FY2022H2",
+     "locator": "特变电工 特变电工股份有限公司2022年年度报告 (published 2023-04-25) PDF p.12: MD&A narrative — “输变电产业国内市场实现签约311亿元”; minus H1 169.85亿元 (2022 H1 report p.14); 亿元 ×100 → CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2022-12-31",
+     "period_start": "2022-07-01",
+     "published_date": "2023-04-25",
+     "published_date_note": "H1 source published earlier; FY source date shown",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2022-08-27/1221967802.PDF",
+     "value": 14115
+    },
+    {
+     "fiscal_key": "FY2024H1",
+     "locator": "特变电工 特变电工股份有限公司2024年半年度报告 (published 2024-08-30) PDF p.22: MD&A narrative — “国内市场方面…输变电产业…2024年上半年实现签约239.61亿元”; 亿元 ×100 → CNY million",
+     "method": "direct_reported_half",
+     "period_end": "2024-06-30",
+     "period_start": "2024-01-01",
+     "published_date": "2024-08-30",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-08-30/1221967804.PDF",
+     "value": 23961
+    },
+    {
+     "fiscal_key": "FY2024H2",
+     "locator": "特变电工 特变电工股份有限公司2024年年度报告 (published 2025-04-22) PDF p.12: MD&A narrative — “2024年度公司输变电产业国内市场签约491亿元”; minus H1 239.61亿元 (2024 H1 report p.22); 亿元 ×100 → CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2024-12-31",
+     "period_start": "2024-07-01",
+     "published_date": "2025-04-22",
+     "published_date_note": "H1 source published earlier; FY source date shown",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2024-08-30/1221967804.PDF",
+     "value": 25139
+    },
+    {
+     "fiscal_key": "FY2025H1",
+     "locator": "特变电工 特变电工股份有限公司2025年半年度报告 (published 2025-08-30) PDF p.17: MD&A narrative — “2025年上半年，公司输变电产业国内市场签约273.34亿元”; 亿元 ×100 → CNY million",
+     "method": "direct_reported_half",
+     "period_end": "2025-06-30",
+     "period_start": "2025-01-01",
+     "published_date": "2025-08-30",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-08-30/1224627755.PDF",
+     "value": 27334
+    },
+    {
+     "fiscal_key": "FY2025H2",
+     "locator": "特变电工 特变电工股份有限公司2025年年度报告 (published 2026-04-16) PDF p.22: MD&A narrative — “2025年度，公司输变电产业国内市场实现签约562亿元，较上年增长14.47%”; minus H1 273.34亿元 (2025 H1 report p.17); 亿元 ×100 → CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2025-12-31",
+     "period_start": "2025-07-01",
+     "published_date": "2026-04-16",
+     "published_date_note": "H1 source published earlier; FY source date shown",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2025-08-30/1224627755.PDF",
+     "value": 28866
+    },
+    {
+     "fiscal_key": "FY2026H1",
+     "locator": "特变电工 特变电工股份有限公司2026年半年度报告 (published 2026-08-22) PDF p.19: MD&A narrative — “2026年上半年，公司输变电产业国内市场签约372.85亿元”; 亿元 ×100 → CNY million",
+     "method": "direct_reported_half",
+     "period_end": "2026-06-30",
+     "period_start": "2026-01-01",
+     "published_date": "2026-08-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225493638.PDF",
+     "value": 37285
+    }
+   ],
+   "primary": false,
+   "scope": "segment",
+   "segment_name": "输变电产业 国内市场签约 (domestic contract signings of the transmission & transformation business: transformers, cables, switchgear, etc.; excludes international signings reported in USD)",
+   "unit_note": "CNY million from 亿元 (×100). Only periods where the printed figure is exact (no 近/约/超过 qualifier) are stored; FY totals are printed rounded to 1亿, so H2 = FY − H1 carries up to ±50m rounding."
+  },
+  "revenue_segment": {
+   "freq": "H",
+   "label_ko": "변압기 제품(变压器产品 → 2024FY부터 电气设备产品) 주영업매출 — 반기",
+   "points": [
+    {
+     "fiscal_key": "FY2015H1",
+     "locator": "特变电工 2015年半年度报告 (published 2015-08-26) PDF p.10: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 万元 (488,538.23); stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2015-06-30",
+     "period_start": "2015-01-01",
+     "published_date": "2015-08-26",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2015-08-26/1201491839.PDF",
+     "value": 4885.3823
+    },
+    {
+     "fiscal_key": "FY2015H2",
+     "locator": "特变电工 2015年年度报告(修订版) (published 2016-05-31) PDF p.14: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 9623.8917 minus H1 4885.3823 (特变电工 2015年半年度报告 p.10); FY printed in 元; stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2015-12-31",
+     "period_start": "2015-07-01",
+     "published_date": "2016-05-31",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-05-31/1202346500.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2015-08-26/1201491839.PDF",
+     "value": 4738.5094
+    },
+    {
+     "fiscal_key": "FY2016H1",
+     "locator": "特变电工 2016年半年度报告 (published 2016-08-30) PDF p.12: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 元; stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2016-06-30",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 4885.3823,
+     "prior_year_comparative_source": "特变电工 2016年半年度报告 PDF p.126: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入; https://static.cninfo.com.cn/finalpage/2016-08-30/1202642204.PDF",
+     "published_date": "2016-08-30",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-08-30/1202642204.PDF",
+     "value": 4197.0858
+    },
+    {
+     "fiscal_key": "FY2016H2",
+     "locator": "特变电工 特变电工股份有限公司（600089）2016年年度报告 (published 2017-04-18) PDF p.15: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 9670.1755 minus H1 4197.0858 (特变电工 2016年半年度报告 p.12); FY printed in 元; stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2016-12-31",
+     "period_start": "2016-07-01",
+     "published_date": "2017-04-18",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-18/1219211539.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2016-08-30/1202642204.PDF",
+     "value": 5473.0897
+    },
+    {
+     "fiscal_key": "FY2017H1",
+     "locator": "特变电工 2017年半年度报告 (published 2017-08-29) PDF p.14: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 万元 (490,142.40); stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2017-06-30",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 4197.0858,
+     "prior_year_comparative_source": "特变电工 2017年半年度报告 PDF p.143: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入; https://static.cninfo.com.cn/finalpage/2017-08-29/1221977560.PDF",
+     "published_date": "2017-08-29",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-08-29/1221977560.PDF",
+     "value": 4901.424
+    },
+    {
+     "fiscal_key": "FY2017H2",
+     "locator": "特变电工 特变电工股份有限公司（600089）2017年年度报告 (published 2018-04-17) PDF p.16: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 10204.8342 minus H1 4901.424 (特变电工 2017年半年度报告 p.14); FY printed in 元; stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2017-12-31",
+     "period_start": "2017-07-01",
+     "published_date": "2018-04-17",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-17/1219211541.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2017-08-29/1221977560.PDF",
+     "value": 5303.4102
+    },
+    {
+     "fiscal_key": "FY2018H1",
+     "locator": "特变电工 2018年半年度报告 (published 2018-08-28) PDF p.14: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 元; stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2018-06-30",
+     "period_start": "2018-01-01",
+     "published_date": "2018-08-28",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-08-28/1221977561.PDF",
+     "value": 4724.9671
+    },
+    {
+     "fiscal_key": "FY2018H2",
+     "locator": "特变电工 特变电工股份有限公司2018年年度报告 (published 2019-04-16) PDF p.19: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 9831.9899 minus H1 4724.9671 (特变电工 2018年半年度报告 p.14); FY printed in 元; stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2018-12-31",
+     "period_start": "2018-07-01",
+     "published_date": "2019-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-16/1219211545.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2018-08-28/1221977561.PDF",
+     "value": 5107.0228
+    },
+    {
+     "fiscal_key": "FY2019H1",
+     "locator": "特变电工 2019年半年度报告 (published 2019-08-30) PDF p.17: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 元; stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2019-06-30",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 4724.9671,
+     "prior_year_comparative_source": "特变电工 2019年半年度报告 PDF p.173: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入; https://static.cninfo.com.cn/finalpage/2019-08-30/1221977565.PDF",
+     "published_date": "2019-08-30",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-08-30/1221977565.PDF",
+     "value": 4458.3469
+    },
+    {
+     "fiscal_key": "FY2019H2",
+     "locator": "特变电工 特变电工股份有限公司2019年年度报告 (published 2020-04-14) PDF p.17: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 9095.6535 minus H1 4458.3469 (特变电工 2019年半年度报告 p.17); FY printed in 元; stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2019-12-31",
+     "period_start": "2019-07-01",
+     "published_date": "2020-04-14",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-14/1219211551.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2019-08-30/1221977565.PDF",
+     "value": 4637.3066
+    },
+    {
+     "fiscal_key": "FY2020H1",
+     "locator": "特变电工 2020年半年度报告 (published 2020-08-29) PDF p.16: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 元; stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2020-06-30",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 4458.3469,
+     "prior_year_comparative_source": "特变电工 2020年半年度报告 PDF p.181: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入; https://static.cninfo.com.cn/finalpage/2020-08-29/1221977566.PDF",
+     "published_date": "2020-08-29",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-08-29/1221977566.PDF",
+     "value": 4870.519
+    },
+    {
+     "fiscal_key": "FY2020H2",
+     "locator": "特变电工 特变电工股份有限公司2020年年度报告 (published 2021-04-15) PDF p.18: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 10927.8001 minus H1 4870.519 (特变电工 2020年半年度报告 p.16); FY printed in 万元 (1,092,780.01); stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2020-12-31",
+     "period_start": "2020-07-01",
+     "published_date": "2021-04-15",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-15/1219211554.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2020-08-29/1221977566.PDF",
+     "value": 6057.2811
+    },
+    {
+     "fiscal_key": "FY2021H1",
+     "locator": "特变电工 特变电工股份有限公司2021年半年度报告 (published 2021-08-28) PDF p.17: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 元; stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2021-06-30",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 4870.519,
+     "prior_year_comparative_source": "特变电工 特变电工股份有限公司2021年半年度报告 PDF p.183: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入; https://static.cninfo.com.cn/finalpage/2021-08-28/1221967801.PDF",
+     "published_date": "2021-08-28",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-08-28/1221967801.PDF",
+     "value": 5391.8622
+    },
+    {
+     "fiscal_key": "FY2021H2",
+     "locator": "特变电工 特变电工股份有限公司2021年年度报告 (published 2022-04-12) PDF p.23: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 10926.1764 minus H1 5391.8622 (特变电工 特变电工股份有限公司2021年半年度报告 p.17); FY printed in 万元 (1,092,617.64); stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2021-12-31",
+     "period_start": "2021-07-01",
+     "published_date": "2022-04-12",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-12/1219211557.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2021-08-28/1221967801.PDF",
+     "value": 5534.3142
+    },
+    {
+     "fiscal_key": "FY2022H1",
+     "locator": "特变电工 特变电工股份有限公司2022年半年度报告 (published 2022-08-27) PDF p.20: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 万元 (619,901.57); stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2022-06-30",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 5391.8622,
+     "prior_year_comparative_source": "特变电工 特变电工股份有限公司2022年半年度报告 PDF p.201: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入; https://static.cninfo.com.cn/finalpage/2022-08-27/1221967802.PDF",
+     "published_date": "2022-08-27",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-08-27/1221967802.PDF",
+     "value": 6199.0157
+    },
+    {
+     "fiscal_key": "FY2022H2",
+     "locator": "特变电工 特变电工股份有限公司2022年年度报告 (published 2023-04-25) PDF p.25: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column FY 13528.0589 minus H1 6199.0157 (特变电工 特变电工股份有限公司2022年半年度报告 p.20); FY printed in 万元 (1,352,805.89); stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2022-12-31",
+     "period_start": "2022-07-01",
+     "published_date": "2023-04-25",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2022-08-27/1221967802.PDF",
+     "value": 7329.0432
+    },
+    {
+     "fiscal_key": "FY2023H1",
+     "locator": "特变电工 特变电工股份有限公司2023年半年度报告 (published 2023-08-16) PDF p.21: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 万元 (778,371.05); stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2023-06-30",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 6199.0157,
+     "prior_year_comparative_source": "特变电工 特变电工股份有限公司2023年半年度报告 PDF p.203: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入; https://static.cninfo.com.cn/finalpage/2023-08-16/1221967803.PDF",
+     "published_date": "2023-08-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-08-16/1221967803.PDF",
+     "value": 7783.7105
+    },
+    {
+     "fiscal_key": "FY2023H2",
+     "locator": "FY2023 AR p.25 变压器产品 18,484.7256 − 2023H1 restated 8,058.6279 (2024 H1 report p.230 prior-year column; post-自控 same-control basis)",
+     "method": "annual_minus_h1",
+     "period_end": "2023-12-31",
+     "period_start": "2023-07-01",
+     "published_date": "2024-04-09",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2024-08-30/1221967804.PDF",
+     "value": 10426.0977
+    },
+    {
+     "fiscal_key": "FY2024H1",
+     "locator": "特变电工 特变电工股份有限公司2024年半年度报告 (published 2024-08-30) PDF p.27: MD&A '主营业务分产品情况' table, '变压器产品' row, 营业收入 column; printed in 万元 (1,030,860.56); stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2024-06-30",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 8058.6279,
+     "prior_year_comparative_source": "特变电工 特变电工股份有限公司2024年半年度报告 PDF p.230: notes '营业收入/营业成本 (主营业务, 分产品)' table, '变压器产品' 上期 收入 (restated: FY2023 H1 as originally reported 7,783.71); https://static.cninfo.com.cn/finalpage/2024-08-30/1221967804.PDF",
+     "published_date": "2024-08-30",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-08-30/1221967804.PDF",
+     "value": 10308.6056
+    },
+    {
+     "fiscal_key": "FY2024H2",
+     "locator": "特变电工 特变电工股份有限公司2024年年度报告 (published 2025-04-22) PDF p.30: MD&A '主营业务分产品情况' table, '电气设备产品' row, 营业收入 column FY 22363.6279 minus H1 10308.6056 (特变电工 特变电工股份有限公司2024年半年度报告 p.27); FY printed in 万元 (2,236,362.79); stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2024-12-31",
+     "period_start": "2024-07-01",
+     "published_date": "2025-04-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2024-08-30/1221967804.PDF",
+     "value": 12055.0223
+    },
+    {
+     "fiscal_key": "FY2025H1",
+     "locator": "特变电工 特变电工股份有限公司2025年半年度报告 (published 2025-08-30) PDF p.25: MD&A '主营业务分产品情况' table, '电气设备产品' row, 营业收入 column; printed in 万元 (1,336,632.01); stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2025-06-30",
+     "period_start": "2025-01-01",
+     "published_date": "2025-08-30",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-08-30/1224627755.PDF",
+     "value": 13366.3201
+    },
+    {
+     "fiscal_key": "FY2025H2",
+     "locator": "特变电工 特变电工股份有限公司2025年年度报告 (published 2026-04-16) PDF p.32: MD&A '主营业务分产品情况' table, '电气设备产品' row, 营业收入 column FY 26759.6482 minus H1 13366.3201 (特变电工 特变电工股份有限公司2025年半年度报告 p.25); FY printed in 万元 (2,675,964.82); stored as CNY million",
+     "method": "annual_minus_h1",
+     "period_end": "2025-12-31",
+     "period_start": "2025-07-01",
+     "published_date": "2026-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2025-08-30/1224627755.PDF",
+     "value": 13393.3281
+    },
+    {
+     "fiscal_key": "FY2026H1",
+     "locator": "特变电工 特变电工股份有限公司2026年半年度报告 (published 2026-08-22) PDF p.28: MD&A '主营业务分产品情况' table, '电气设备产品' row, 营业收入 column; printed in 万元 (1,496,820.51); stored as CNY million (scale conversion only)",
+     "method": "direct_reported_half",
+     "period_end": "2026-06-30",
+     "period_start": "2026-01-01",
+     "published_date": "2026-08-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225493638.PDF",
+     "value": 14968.2051
+    }
+   ],
+   "primary": false,
+   "scope": "segment",
+   "segment_name": "变压器产品 (transformer products; renamed 电气设备产品 'electrical-equipment products' from the FY2024 annual report — same base: FY2024 +20.98% vs FY2023 变压器产品 18,484.73, 2025H1 +29.66% vs 2024H1 变压器产品 10,308.61). Main-business revenue by product.",
+   "unit_note": "CNY million; H2 = FY − H1 (annual_minus_h1) from the same product row."
+  },
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 영업수익(营业收入, 영업총수익 아님) — 폴리실리콘·석탄·알루미늄 포함",
+   "points": [
+    {
+     "fiscal_key": "FY2015Q1",
+     "locator": "特变电工 2015年年度报告(修订版) (published 2016-05-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-03-31",
+     "period_start": "2015-01-01",
+     "prior_year_comparative": 7801.86,
+     "prior_year_comparative_source": "特变电工 2015年第一季度报告 (published 2015-04-15) PDF p.17: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2015-04-15/1200834641.PDF",
+     "published_date": "2016-05-31",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-05-31/1202346500.PDF",
+     "value": 8534.8489
+    },
+    {
+     "fiscal_key": "FY2015Q2",
+     "locator": "特变电工 2015年年度报告(修订版) (published 2016-05-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-06-30",
+     "period_start": "2015-04-01",
+     "published_date": "2016-05-31",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-05-31/1202346500.PDF",
+     "value": 10059.0568
+    },
+    {
+     "fiscal_key": "FY2015Q3",
+     "locator": "特变电工 2015年年度报告(修订版) (published 2016-05-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-09-30",
+     "period_start": "2015-07-01",
+     "prior_year_comparative": 9402.0957,
+     "prior_year_comparative_source": "特变电工 2015年第三季度报告 (published 2015-10-28) PDF p.18: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2015-10-28/1201732424.PDF",
+     "published_date": "2016-05-31",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-05-31/1202346500.PDF",
+     "value": 8826.2668
+    },
+    {
+     "fiscal_key": "FY2015Q4",
+     "locator": "特变电工 2015年年度报告(修订版) (published 2016-05-31) PDF p.7: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-12-31",
+     "period_start": "2015-10-01",
+     "published_date": "2016-05-31",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2016-05-31/1202346500.PDF",
+     "value": 10031.7897
+    },
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "特变电工股份有限公司（600089）2016年年度报告 (published 2017-04-18) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 8534.8489,
+     "prior_year_comparative_source": "特变电工 2016年第一季度报告 (published 2016-04-29) PDF p.16: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2016-04-29/1202269616.PDF",
+     "published_date": "2017-04-18",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-18/1219211539.PDF",
+     "value": 8709.8458
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "特变电工股份有限公司（600089）2016年年度报告 (published 2017-04-18) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "published_date": "2017-04-18",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-18/1219211539.PDF",
+     "value": 9219.5148
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "特变电工股份有限公司（600089）2016年年度报告 (published 2017-04-18) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 8826.2668,
+     "prior_year_comparative_source": "特变电工 2016年第三季度报告 (published 2016-10-28) PDF p.20: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2016-10-28/1202797689.PDF",
+     "published_date": "2017-04-18",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-18/1219211539.PDF",
+     "value": 8410.9316
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "特变电工股份有限公司（600089）2016年年度报告 (published 2017-04-18) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "published_date": "2017-04-18",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2017-04-18/1219211539.PDF",
+     "value": 13777.2
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "特变电工股份有限公司（600089）2017年年度报告 (published 2018-04-17) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 8709.8458,
+     "prior_year_comparative_source": "特变电工 2017年第一季度报告 (published 2017-04-27) PDF p.17: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2017-04-27/1203406521.PDF",
+     "published_date": "2018-04-17",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-17/1219211541.PDF",
+     "value": 8167.5568
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "特变电工股份有限公司（600089）2017年年度报告 (published 2018-04-17) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "published_date": "2018-04-17",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-17/1219211541.PDF",
+     "value": 9859.0743
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "特变电工股份有限公司（600089）2017年年度报告 (published 2018-04-17) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 8410.9316,
+     "prior_year_comparative_source": "特变电工 2017年第三季度报告 (published 2017-10-28) PDF p.17: 合并利润表 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2017-10-28/1204088930.PDF",
+     "published_date": "2018-04-17",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-17/1219211541.PDF",
+     "value": 10099.5006
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "特变电工股份有限公司（600089）2017年年度报告 (published 2018-04-17) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "published_date": "2018-04-17",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2018-04-17/1219211541.PDF",
+     "value": 10155.0701
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "特变电工股份有限公司2018年年度报告 (published 2019-04-16) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 8167.5568,
+     "prior_year_comparative_source": "特变电工 2018年第一季度报告 (published 2018-04-27) PDF p.15: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2018-04-27/1204807068.PDF",
+     "published_date": "2019-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-16/1219211545.PDF",
+     "value": 8006.6543
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "特变电工股份有限公司2018年年度报告 (published 2019-04-16) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2019-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-16/1219211545.PDF",
+     "value": 10598.9092
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "特变电工股份有限公司2018年年度报告 (published 2019-04-16) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 10099.5006,
+     "prior_year_comparative_source": "特变电工 2018年第三季度报告 (published 2018-10-30) PDF p.17: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2018-10-30/1205554591.PDF",
+     "published_date": "2019-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-16/1219211545.PDF",
+     "value": 9617.5844
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "特变电工股份有限公司2018年年度报告 (published 2019-04-16) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "published_date": "2019-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2019-04-16/1219211545.PDF",
+     "value": 11432.3799
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "特变电工股份有限公司2019年年度报告 (published 2020-04-14) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 8006.6543,
+     "prior_year_comparative_source": "特变电工 2019年第一季度报告 (published 2019-04-25) PDF p.17: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2019-04-25/1206087378.PDF",
+     "published_date": "2020-04-14",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-14/1219211551.PDF",
+     "value": 8013.863
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "特变电工股份有限公司2019年年度报告 (published 2020-04-14) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "published_date": "2020-04-14",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-14/1219211551.PDF",
+     "value": 9037.978
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "特变电工股份有限公司2019年年度报告 (published 2020-04-14) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 9617.5844,
+     "prior_year_comparative_source": "特变电工 2019年第三季度报告 (published 2019-10-30) PDF p.18: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2019-10-30/1207036161.PDF",
+     "published_date": "2020-04-14",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-14/1219211551.PDF",
+     "value": 8396.114
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "特变电工股份有限公司2019年年度报告 (published 2020-04-14) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "published_date": "2020-04-14",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2020-04-14/1219211551.PDF",
+     "value": 11532.0936
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "特变电工股份有限公司2020年年度报告 (published 2021-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 8013.863,
+     "prior_year_comparative_source": "特变电工 2020年第一季度报告 (published 2020-04-29) PDF p.17: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2020-04-29/1207655058.PDF",
+     "published_date": "2021-04-15",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-15/1219211554.PDF",
+     "value": 7879.3318
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "特变电工股份有限公司2020年年度报告 (published 2021-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "published_date": "2021-04-15",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-15/1219211554.PDF",
+     "value": 10087.0809
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "特变电工股份有限公司2020年年度报告 (published 2021-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "prior_year_comparative": 8396.114,
+     "prior_year_comparative_source": "特变电工 2020年第三季度报告 (published 2020-10-31) PDF p.17: 合并利润表 (7-9月 columns) 营业收入 line — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2020-10-31/1208662795.PDF",
+     "published_date": "2021-04-15",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-15/1219211554.PDF",
+     "value": 11511.1515
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "特变电工股份有限公司2020年年度报告 (published 2021-04-15) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "published_date": "2021-04-15",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2021-04-15/1219211554.PDF",
+     "value": 14617.7557
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "特变电工股份有限公司2021年年度报告 (published 2022-04-12) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 7879.3318,
+     "prior_year_comparative_source": "特变电工股份有限公司2021年第一季度报告 (published 2021-04-30) PDF p.17: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2021-04-30/1209873102.PDF",
+     "published_date": "2022-04-12",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-12/1219211557.PDF",
+     "value": 9437.8396
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "特变电工股份有限公司2021年年度报告 (published 2022-04-12) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "published_date": "2022-04-12",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-12/1219211557.PDF",
+     "value": 13054.2069
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "特变电工股份有限公司2021年年度报告 (published 2022-04-12) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "published_date": "2022-04-12",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-12/1219211557.PDF",
+     "value": 16613.8913
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "特变电工股份有限公司2021年年度报告 (published 2022-04-12) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "published_date": "2022-04-12",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2022-04-12/1219211557.PDF",
+     "value": 22172.43
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "特变电工股份有限公司2022年年度报告 (published 2023-04-25) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "published_date": "2023-04-25",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF",
+     "value": 19149.1274
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "特变电工股份有限公司2022年年度报告 (published 2023-04-25) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "published_date": "2023-04-25",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF",
+     "value": 23436.6928
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "特变电工股份有限公司2022年年度报告 (published 2023-04-25) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "published_date": "2023-04-25",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF",
+     "value": 27316.6269
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "特变电工股份有限公司2022年年度报告 (published 2023-04-25) PDF p.8: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2023-04-25",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2023-04-25/1219211560.PDF",
+     "value": 25984.2996
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2024-04-09",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
+     "value": 26487.1845
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2024-04-09",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
+     "value": 23587.5243
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 27642.8275,
+     "prior_year_comparative_source": "特变电工股份有限公司2023年第三季度报告 (published 2023-10-28) PDF p.2: manual read (see note) — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2023-10-28/1218188142.PDF",
+     "published_date": "2024-04-09",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
+     "value": 23816.6467
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "特变电工股份有限公司2023年年度报告 (published 2024-04-09) PDF p.9–10 (table header p.9, 营业收入 row p.10): '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "published_date": "2024-04-09",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219538541.PDF",
+     "value": 24232.1282
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "特变电工股份有限公司2024年年度报告 (published 2025-04-22) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 26487.1845,
+     "prior_year_comparative_source": "特变电工股份有限公司2024年第一季度报告 (published 2024-04-30) PDF p.9: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2024-04-30/1219910223.PDF",
+     "published_date": "2025-04-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",
+     "value": 23542.6976
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "特变电工股份有限公司2024年年度报告 (published 2025-04-22) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "published_date": "2025-04-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",
+     "value": 24254.8946
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "特变电工股份有限公司2024年年度报告 (published 2025-04-22) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "published_date": "2025-04-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",
+     "value": 24482.8906
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "特变电工股份有限公司2024年年度报告 (published 2025-04-22) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2025-04-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223189910.PDF",
+     "value": 25501.7082
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "特变电工股份有限公司2025年年度报告 (published 2026-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第一季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 23542.6976,
+     "prior_year_comparative_source": "特变电工股份有限公司2025年第一季度报告 (published 2025-04-22) PDF p.8: 合并利润表 营业收入 line — 上年同期 column; https://static.cninfo.com.cn/finalpage/2025-04-22/1223189893.PDF",
+     "published_date": "2026-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF",
+     "value": 23357.3109
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "特变电工股份有限公司2025年年度报告 (published 2026-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第二季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2026-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF",
+     "value": 24993.9593
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "特变电工股份有限公司2025年年度报告 (published 2026-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第三季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 24490.4644,
+     "prior_year_comparative_source": "特变电工股份有限公司2025年第三季度报告 (published 2025-10-31) PDF p.1: manual read (see note) — 上年同期(3个月) value; https://static.cninfo.com.cn/finalpage/2025-10-31/1224777106.PDF",
+     "published_date": "2026-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF",
+     "value": 24566.3668
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "特变电工股份有限公司2025年年度报告 (published 2026-04-16) PDF p.9: '分季度主要财务指标/数据' table, 营业收入 row, 第四季度 column; printed in 万元, stored as CNY million (scale conversion only)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-04-16",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105816.PDF",
+     "value": 24308.9013
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "特变电工股份有限公司2026年第一季度报告 (published 2026-04-30) PDF p.8: 合并利润表 营业收入 line (本期 = 2026年1-3月; 上年同期 = prior_year_comparative); 元 → CNY million",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 23357.3109,
+     "published_date": "2026-04-30",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225255161.PDF",
+     "value": 24946.0545
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "特变电工股份有限公司2026年半年度报告 (published 2026-08-22) PDF p.78: 合并利润表 营业收入 line 本期(1-6月) 56554.7549 minus Q1 24946.0545 from 特变电工股份有限公司2026年第一季度报告 p.8; 元 → CNY million",
+     "method": "ytd_difference",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-08-22",
+     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225493638.PDF",
+     "source_url_prev_cumulative": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225255161.PDF",
+     "value": 31608.7003
+    }
+   ],
+   "primary": true,
+   "scope": "consolidated",
+   "unit_note": "CNY million; quarterly tables printed in 万元 (FY2015-17, FY2021-25) or 元 (FY2018-20); scaled to million. Uses 营业收入 (excludes finance-company interest in 营业总收入)."
+  }
+ },
+ "ticker": "600089 CH (SSE)",
+ "unit": "million"
+}

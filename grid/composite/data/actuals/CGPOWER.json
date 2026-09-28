@@ -1,0 +1,2430 @@
+{
+ "accounting_basis": "Ind AS from FY2017 (Apr-2016); Indian GAAP before",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "fiscal_key 규칙: 인도 회계연도(4월~3월)를 '끝나는 해'로 표기 — FY2026Q1 = 2025-04-01~2025-06-30, FY2026Q4 = 2026-01-01~2026-03-31. period_end 는 원문 결산일(달력 분기말).",
+  "단위: INR million. 원문은 INR lakh(=0.1 million) 또는 crore(=10 million) 로 인쇄 — 배율 환산만 했고 (lakh×0.1, crore×10, XBRL INR÷1e6) 통화 환산·추정 없음. printed 값은 locator 에 원문 그대로 남김.",
+  "인도 Reg-33 결산의 1~3월(4분기) 3개월 칸은 '연간 감사치 − 12월 누계 공시치' 로 회사가 산출·인쇄한 balancing figure 이다. 인쇄된 3개월 칸을 그대로 쓰므로 method=direct_reported_quarter.",
+  "검증: 모든 분기 값은 (1) BSE 결과 DB(Corp_detailedResult / 연결 API, Rs. million) (2) NSE XBRL·NSE 결과 레코드 중 가용한 거래소 구조화 공시와 대조했고, (3) BSE 원문 PDF(텍스트층·pdfplumber·tesseract OCR)에서 같은 숫자를 찾으면 그 PDF를 source_url 로 둔다(verification 필드). PDF 셀을 읽지 못한 분기는 거래소 구조화 공시(XBRL/NSE 레코드/BSE DB)를 source_url 로 둔다(CONTRACT §0-1 예외).",
+  "2017-07-01 GST 도입: 그 이전 매출(IGAAP 'Net sales (net of excise duty)' 또는 Ind AS 총액)은 물품세 포함 여부가 다르다. 2017-06 분기는 회사가 '물품세 제외 매출'을 인쇄한 경우에만 그 값을 쓰고, 아니면 비운다. FY2018Q1~FY2019Q1 공시의 전년동기 비교칸(Ind AS 재작성·물품세 포함)은 prior_year_comparative 로 싣지 않는다.",
+  "primary_target = revenue_segment: 연결 Power Systems(변압기·리액터·스위치기어·T&D 프로젝트) — 산일전기 노출과 가장 가까움. FY2021 이후 연결 Power Systems ≈ 별도 Power Systems(해외 전력 자회사 정리 후).",
+  "revenue_segment 값: PDF 연결 부문표 1열(각 열 합계=매출 검증) 우선, 없으면 NSE XBRL SegmentRevenue. prior_year_comparative 는 같은 공시 3열(열 합계 검증 통과분만) — 재작성(QEI 제외·FY2019 재작성) 반영.",
+  "orders_segment: 분기 보도자료(별도 기준) Power Systems order intake(INR crore 정수) — 매출과 다른 지표.",
+  "revenue_total=연결 매출, revenue_standalone=별도 매출(참고; 범위가 달라 섞지 않음).",
+  "consolidated: FY2016Q3: PY column 2409.34 != prior point 33332.1 (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2016Q4: PY column 1574.94 != prior point 38080.700000000004 (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2017Q4: PY column 1850.67 != prior point 16699.1 (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2018Q1: PY column 1623.35 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "consolidated: FY2018Q2: value from exchange structured filing only (bse_db); PDF cell not machine-verified",
+  "consolidated: FY2018Q3: PY column 6188.63 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "consolidated: FY2018Q4: PY column 1627.88 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "consolidated: FY2019Q1: PY column 1437.92 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "consolidated: FY2019Q2: PY column 1577.96 != prior point 15576.1 (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2019Q3: PY column 1536.54 != prior point 15160.8 (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2019Q4: PY column 2274.82 deviates >2% from prior point 17923.5 -> not stored",
+  "consolidated: FY2020Q1: PY column 1827.96 deviates >2% from prior point 14901.4 -> not stored",
+  "consolidated: FY2020Q2: PY column 2109.63 deviates >2% from prior point 16500.1 -> not stored",
+  "consolidated: FY2020Q3: PY column 2071.47 deviates >2% from prior point 17195.2 -> not stored",
+  "consolidated: FY2024Q2: PY column 6972.54 != prior point 16962.7 (kind=ocr, excise_window=False) -> not stored",
+  "consolidated: FY2026Q4: PY column 2752.77 != prior point None (kind=plumb, excise_window=False) -> not stored",
+  "standalone: FY2016Q3: PY column 1038.09 != prior point 18582.100000000002 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2016Q4: PY column 1161.41 != prior point 21476.2 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2017Q4: PY column 1205.29 != prior point 11296.8 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2018Q1: PY column 1128.58 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "standalone: FY2018Q2: PY column 2469.18 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "standalone: FY2018Q3: PY column 1160.12 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "standalone: FY2018Q4: PY column 1284.49 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "standalone: FY2019Q1: PY column 1276.91 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "standalone: FY2019Q2: PY column 1228.85 != prior point 12085.0 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2019Q3: PY column 1199.86 != prior point 11793.8 (kind=ocr, excise_window=False) -> not stored",
+  "standalone: FY2026Q4: PY column 2563.4 != prior point None (kind=plumb, excise_window=False) -> not stored",
+  "segment: FY2020Q1: PDF reading 4610.2 cr not used (column check failed); XBRL 9405.9",
+  "verify 2026-09-25: checked revenue_segment FY2018Q4,FY2019Q1-Q4,FY2020Q1-Q4,FY2021Q1-Q4,FY2022Q1-Q4,FY2023Q1-Q3,FY2024Q1-Q2,FY2025Q4,FY2026Q1,FY2026Q3-Q4,FY2027Q1; revenue_total FY2016Q3,FY2018Q2-Q4,FY2019Q1-Q4,FY2020Q1-Q4,FY2021Q1-Q3,FY2022Q1,FY2022Q4,FY2023Q1,FY2024Q1-Q2,FY2026Q4,FY2027Q1; revenue_standalone FY2019Q4,FY2020Q1-Q3,FY2021Q2-Q4,FY2026Q4,FY2027Q1; orders_segment FY2021Q4,FY2026Q1,FY2027Q1 (BSE PDFs re-read: text layer, tesseract, visual; NSE XBRL parsed); fixed 15: segment FY2019Q1 and FY2023Q2 added (gap claims wrong), segment FY2019Q4/FY2020Q1/FY2020Q2/FY2019Q2/FY2024Q2 and total FY2019Q2-Q4/FY2020Q1-Q3/FY2024Q2 prior_year_comparative added from the same filing (the collector's '>2% vs prior point -> not stored' rule had rejected exactly the restated comparatives, so the builder was computing YoY across the 2019 restatement and the QEI re-presentation), segment FY2020Q1 published_date 2019-08-20 -> 2019-11-12 and source moved to the BSE PDF, total FY2018Q3 re-cited to the 2018-02-12 filing that prints its PY. All sampled values matched the filings; no unit, sign, period or duplicate errors found.",
+  "annotate 2026-09-25: structural_break 2025-04-01 affects_target=False (근거: 기존 note — new Semiconductors segment; Power Systems definition unchanged)"
+ ],
+ "currency": "INR",
+ "fiscal_year_end_month": 3,
+ "gaps": [
+  "revenue_total/standalone FY2016Q1-Q2: 소비재(Consumer Products) 사업 분할(2015-10 기준) 이전 원공시 값은 소비재 포함이라 이후와 범위가 달라 비움(FY2016Q3 공시부터 분할 반영 비교칸 사용).",
+  "orders_segment: Power Systems 분기 수주액은 FY2021Q4·FY2022Q1·FY2023Q3~FY2024Q2·FY2025Q3~FY2027Q1 보도자료에만 인쇄. FY2022Q2~FY2023Q2, FY2024Q3~FY2025Q2 보도자료는 Power Systems 수주잔고(unexecuted order book)만 인쇄 — 비움. YoY 증가율(예: 111% growth YoY)로 전년 값을 역산하지 않음(비율 역산 금지)."
+ ],
+ "grid_node": "GRID_CG_POWER",
+ "id": "CGPOWER",
+ "listed": true,
+ "name": "CG Power and Industrial Solutions Ltd",
+ "primary_target": "revenue_segment",
+ "profile": {
+  "end_markets": "Indian central/state transmission utilities and TBCB developers, renewable evacuation, railways, industrial users, data centres; exports small: FY2025-26 consolidated revenue by customer location Domestic INR 10,838.10 cr vs Overseas INR 492.52 cr (AR FY26 consolidated note 'Geographical information', p.145).",
+  "export_routes": [
+   "IN->US",
+   "IN->Middle East",
+   "IN->Africa",
+   "SE->EU (Industrial Systems only)"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "850450",
+   "853521",
+   "853529",
+   "853720",
+   "850431"
+  ],
+  "plants": [
+   {
+    "city": "Mandideep (Bhopal), Madhya Pradesh",
+    "country": "IN",
+    "products": "Power Transformer Division T3 (power transformers, reactors)",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4cdafd20-7174-41ed-b761-3178f60a1fec.pdf"
+   },
+   {
+    "city": "Malanpur (Bhind), Madhya Pradesh",
+    "country": "IN",
+    "products": "Distribution Transformer Division T2",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4cdafd20-7174-41ed-b761-3178f60a1fec.pdf"
+   },
+   {
+    "city": "Nashik (Ambad MIDC and Pimpalgaon), Maharashtra",
+    "country": "IN",
+    "products": "Switchgear divisions S1-S4, GIS (Unit I/II)",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4cdafd20-7174-41ed-b761-3178f60a1fec.pdf"
+   },
+   {
+    "city": "Chhatrapati Sambhajinagar (Waluj), Maharashtra",
+    "country": "IN",
+    "products": "Switchgear S6: vacuum interrupters & instrument transformers",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4cdafd20-7174-41ed-b761-3178f60a1fec.pdf"
+   },
+   {
+    "city": "Gurgaon, Haryana",
+    "country": "IN",
+    "products": "Engineering Projects Division (T&D EPC)",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4cdafd20-7174-41ed-b761-3178f60a1fec.pdf"
+   },
+   {
+    "city": "Helsingborg",
+    "country": "SE",
+    "products": "CG Drives & Automation Sweden AB (Industrial Systems subsidiary, not Power Systems)",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4cdafd20-7174-41ed-b761-3178f60a1fec.pdf"
+   }
+  ],
+  "products": "Power Systems segment (target): power transformers and auto-transformers up to 765 kV (e.g. 500 MVA 765 kV single-phase auto-transformer), 400/765 kV shunt reactors, distribution transformers (engineering up to 220 kV class), switchgear (EHV/MV circuit breakers, 145 kV GIS, 33 kV VCB panels, instrument transformers, vacuum interrupters, bushings) and T&D projects (Gurgaon engineering-projects division). Industrial Systems (motors, drives, railway traction/signalling) and, from FY2026, Semiconductors (CG Semi OSAT) are separate segments. Source: FY2025-26 Annual Report product pages & 'Establishments' list (pp.8-9, 384-385).",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "india_iip_27",
+    "role": "primary",
+    "why": "Indian electrical-equipment (NIC 27) production volume — Power Systems sells ~95% domestically to utilities/industry"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "india_iip_capgoods",
+    "role": "primary",
+    "why": "Indian capital-goods output cycle = demand for transformers/switchgear from industrial & utility capex"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "in_exp_850423_p0",
+    "role": "diagnostic",
+    "why": "India large (>10 MVA) liquid-dielectric transformer exports — industry capacity/price cycle for power transformers"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850423_p699",
+    "role": "diagnostic",
+    "why": "US imports of >10 MVA transformers from India — CG executed export power-transformer orders from FY2024"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853529_p699",
+    "role": "diagnostic",
+    "why": "US imports of >=72.5 kV switchgear/breakers from India — CG EHV switchgear export channel"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "in_exp_850422_p0",
+    "role": "diagnostic",
+    "why": "India 650-10,000 kVA transformer exports — distribution-transformer (Malanpur) cycle"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "cea_transformation_capacity_added_mva",
+    "role": "wishlist",
+    "why": "WISHLIST: Central Electricity Authority monthly executive summary — transformation capacity (MVA) added in 220 kV+ substations; direct physical demand for CG power transformers/reactors (cea.nic.in monthly reports)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "pgcil_capex_quarterly",
+    "role": "wishlist",
+    "why": "WISHLIST: POWERGRID quarterly capex (INR cr) from its quarterly results — largest buyer of 400/765 kV transformers & reactors"
+   }
+  ]
+ },
+ "quarter_calendar": "calendar quarters; Indian fiscal year Apr-Mar labelled by the year in which it ends (FY2026Q1 = Apr-Jun 2025)",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2015-10-01",
+   "note": "Consumer Products business demerged into Crompton Greaves Consumer Electricals (scheme approved by Bombay HC Nov-2015; record date fixed Feb-2016). Comparatives in FY2016Q3+ filings exclude it.",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/2/FFE1A60A_065B_483D_A131_B99E567B3394_115635.pdf",
+   "type": "divestiture"
+  },
+  {
+   "date": "2016-04-01",
+   "note": "Ind AS adopted from FY2017 (Q1 FY2017 filing restates FY2016 comparatives); overseas power subsidiaries progressively classified as held for sale/discontinued under Ind AS 105 (Canada power business sold during FY2016)",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/41608B40_CAA0_4E87_ACF8_C197245F8680_145012.pdf",
+   "type": "restatement"
+  },
+  {
+   "date": "2020-01-01",
+   "note": "'Belgium Group' (CG Power Systems Belgium NV and three downstream subsidiaries, Power Systems segment) deconsolidated from 1-Jan-2020 after loss of access/insolvency — consolidated Power Systems revenue falls from INR 7,875 mn (Q3 FY20) to 1,819 mn (Q4 FY20)",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/24170c90-ca7b-4e06-9c12-847c6ef92d8b.pdf",
+   "type": "divestiture"
+  },
+  {
+   "date": "2019-08-31",
+   "note": "FY2019 accounts restated after the 2019 forensic findings; FY2020 filings print restated FY2019 comparatives (e.g. Q3 FY2019 consolidated Power Systems 1,179.63 cr in the Dec-2019 filing vs 827.68 cr originally); the 2019-08-31 audited FY2019 filing already re-presents FY2018 comparatives on the restated basis (Q4 FY2018 Power Systems 1,522.80 cr vs 1,054.33 cr originally; consolidated revenue 2,274.82 vs 1,792.35 cr). Points FY2018Q4-FY2019Q3 are on the original basis; FY2019Q4-FY2020Q3 carry prior_year_comparative from their own filings so YoY stays same-basis [verify 2026-09-25]",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ef097b53-8a1c-4632-946e-0e95b808f755.pdf",
+   "type": "restatement"
+  },
+  {
+   "date": "2020-11-26",
+   "note": "Tube Investments of India (Murugappa group) acquires control via preferential allotment; no change of segment definitions",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6472bd0c-e805-4f35-9512-e7f9099d9ab0.pdf",
+   "type": "acquisition"
+  },
+  {
+   "date": "2023-07-15",
+   "note": "Sale of QEI (USA) business; FY2023Q4+ filings restate consolidated Power Systems comparatives ex-QEI (e.g. Q4 FY2022 469.93 -> 447.91 cr); FY2024Q2 filing re-presents Q2 FY2023 ex-QEI (Power Systems 494.16 cr, revenue 1,674.56 cr) -> stored as FY2024Q2 prior_year_comparative [verify 2026-09-25]",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c375681b-11cd-4919-85b7-db739a08d52f.pdf",
+   "type": "divestiture"
+  },
+  {
+   "affects_target": false,
+   "affects_target_note": "builder annotation 2026-09-25 from the break note: new Semiconductors segment; Power Systems definition unchanged",
+   "date": "2025-04-01",
+   "note": "New reportable segment 'Semiconductors' (CG Semi OSAT, G.G. Tronics, Axiro) from FY2026; Power Systems definition unchanged",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e1bb5589-19d4-4a49-84ed-604527f1d5c8.pdf",
+   "type": "segment_reorg"
+  }
+ ],
+ "targets": {
+  "orders_segment": {
+   "freq": "Q",
+   "label_ko": "Power Systems 수주(order intake, 별도·보도자료)",
+   "metric": "order_intake",
+   "note": "standalone Power Systems order intake from quarterly press releases (INR crore rounded to integer) — separate metric, not revenue",
+   "points": [
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "CG press release (BSE filing 2021-06-11) p.4, section 'Power systems': \"Order Intake for the quarter were higher at Rs 354 crores\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "published_date": "2021-06-11",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c28cb549-f5ed-4736-abd1-6ef5246fae17.pdf",
+     "value": 3540.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "CG press release (BSE filing 2021-08-02) p.3, section 'Power systems': \"Order Intake for the quarter were higher at Rs 433 crores\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "published_date": "2021-08-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f5032d9d-9e08-4e9a-85ec-2de3d65eca36.pdf",
+     "value": 4330.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "CG press release (BSE filing 2023-01-24) p.3, section 'Power systems': \"Order intake for Q3 FY23 was Rs. 862 crores\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2023-01-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ea5684b1-0e44-4e56-af6e-d9228dfdca85.pdf",
+     "value": 8620.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "CG press release (BSE filing 2023-05-08) p.4, section 'Power systems': \"Order intake for Q4FY23 was Rs. 637 crores\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "published_date": "2023-05-08",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/85f05c98-852c-40a6-a7aa-de97d392fac6.pdf",
+     "value": 6370.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "CG press release (BSE filing 2023-07-27) p.3, section 'Power systems': \"Order intake for Q1FY24 was Rs. 1,119 crores\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "published_date": "2023-07-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/94064b78-4c65-45e7-9e21-64a26ef5c165.pdf",
+     "value": 11190.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "CG press release (BSE filing 2023-10-20) p.3, section 'Power systems': \"Order intake for Q2FY24 was Rs. 1,118 crores\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "published_date": "2023-10-20",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3636b0d2-a39a-4740-ab17-edc7a485a724.pdf",
+     "value": 11180.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "CG press release (BSE filing 2025-01-28) p.3, section 'Power systems': \"Order intake for Q3FY25 nearly doubled at Rs. 1,759 crores (revised release; same figure in original 95cb9e27)\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "published_date": "2025-01-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c6912f54-b897-424f-bc18-7496a4d2ff68.pdf",
+     "value": 17590.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "CG press release (BSE filing 2025-05-06) p.4, section 'Power systems': \"Order intake for Q4FY25 was at INR 1,757 Cr\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "published_date": "2025-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f67391ee-00b6-4e35-bfb2-5e48ccfa234b.pdf",
+     "value": 17570.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "CG press release (BSE filing 2025-07-24) p.3, section 'Power systems': \"Order intake for the quarter was at INR 3,495 Cr\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "published_date": "2025-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/68922982-5b98-476f-93f7-a9519fbae8eb.pdf",
+     "value": 34950.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "CG press release (BSE filing 2025-10-29) p.3, section 'Power systems': \"Order intake for the quarter was at INR 2,643 Cr\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "published_date": "2025-10-29",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e9b2a839-9f50-44c5-bd39-15f6603b6e98.pdf",
+     "value": 26430.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "locator": "CG press release (BSE filing 2026-01-27) p.3, section 'Power systems': \"Order intake for the quarter was at INR 2,046 Cr\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "published_date": "2026-01-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a9c8bafc-f506-4e49-b3b3-79da8fa75907.pdf",
+     "value": 20460.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "locator": "CG press release (BSE filing 2026-05-06) p.4, section 'Power systems': \"Order intake for the quarter was at INR 3,027 Cr (revised release; same in original 621927d6)\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/da82c957-26ce-46dc-9ae0-7dec4484c6a7.pdf",
+     "value": 30270.0,
+     "verification": "pdf_txt"
+    },
+    {
+     "fiscal_key": "FY2027Q1",
+     "locator": "CG press release (BSE filing 2026-07-24) p.3, section 'Power systems': \"Order intake for the quarter was at INR 3,106 Cr (revised release; same in original 7ba2cdfc)\" (INR crore, rounded; standalone)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "published_date": "2026-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8e22d81d-4215-47d0-abcf-cfa068f08641.pdf",
+     "value": 31060.0,
+     "verification": "pdf_txt"
+    }
+   ],
+   "primary": false,
+   "scope": "segment",
+   "segment_name": "Power Systems"
+  },
+  "revenue_segment": {
+   "freq": "Q",
+   "label_ko": "Power Systems 부문 매출(연결)",
+   "points": [
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 10543.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_36467_13643_31052018122951_WEB.xml"
+     },
+     "fiscal_key": "FY2018Q4",
+     "locator": "NSE XBRL of the consolidated Reg-33 filing: SegmentRevenue for DescriptionOfReportableSegment='Power Systems', context OneReportableSegmentRevenue (current quarter), INR",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "published_date": "2018-05-30",
+     "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_36467_13643_31052018122951_WEB.xml",
+     "value": 10543.3,
+     "verification": "exchange_xbrl"
+    },
+    {
+     "cross_check": {
+      "later_filing_2nd_column_inr_mn": 7684.8,
+      "later_filing_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/11/5dd4303c-3ee9-4845-9d06-359977da3527.pdf"
+     },
+     "fiscal_key": "FY2019Q1",
+     "locator": "BSE filing 2018-08-10 (2018-08-10_ddc75a1a-e45d-48c0-b5f9-59998539b374.pdf) p.11 (scanned image, read visually + tesseract): 'CONSOLIDATED SEGMENT-WISE REVENUE, RESULTS, ASSETS AND LIABILITIES FOR THE QUARTER ENDED 30TH JUNE, 2018', row '(a) Power Systems', 1st column (quarter ended 30.06.2018); printed 768.48 (INR crore); column check 768.48+718.18+4.31=1490.97 less inter-segment 0.83 = 1490.14 = 'Total income from operations'. Re-printed unchanged as 2nd column of the Q2 FY2019 filing (5dd4303c p.12; 6M 1575.90 = 807.42+768.48). 3rd column (30.06.2017 = 804.68) is a pre-GST excise-inclusive comparative -> not stored as prior_year_comparative (file rule). [verify 2026-09-25: added; collector gap 'not machine-readable' was wrong]",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2018-08-10",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/ddc75a1a-e45d-48c0-b5f9-59998539b374.pdf",
+     "value": 7684.8,
+     "verification": "pdf_visual+pdf_ocr+column_sum_check+later_filing_match"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 8074.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_40876_59692_14112018040142_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q2",
+     "locator": "BSE filing 2018-11-13 (2018-11-13_5dd4303c-3ee9-4845-9d06-359977da3527.pdf) p.12: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2018-09-30); printed 807.42 (INR crore); segment rows sum to 'Revenue from operations' in that column; [verify 2026-09-25] same filing p.12, 3rd column (30.09.2017) printed 969.85 cr (read visually) -> prior_year_comparative 9698.5",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 9698.5,
+     "published_date": "2018-11-13",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/11/5dd4303c-3ee9-4845-9d06-359977da3527.pdf",
+     "value": 8074.2,
+     "verification": "pdf_ocr+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 8276.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_43030_82102_13022019035433_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q3",
+     "locator": "BSE filing 2019-02-13 (2019-02-13_ade38c1c-93b7-4489-8e02-43261d911b7a.pdf) p.12: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2018-12-31); printed 827.68 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "prior_year_comparative": 8699.9,
+     "published_date": "2019-02-13",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ade38c1c-93b7-4489-8e02-43261d911b7a.pdf",
+     "value": 8276.8,
+     "verification": "pdf_ocr+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 10573.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_48300_134872_31082019054822_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q4",
+     "locator": "BSE filing 2019-08-31 (2019-08-31_ef097b53-8a1c-4632-946e-0e95b808f755.pdf) p.56 (text layer): consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 31.03.2019) printed 1057.37 (INR crore); 3rd column (31.03.2018, re-presented on the restated basis with the overseas Power Systems businesses back in continuing operations; originally 1054.33) printed 1522.80. Same filing's NSE XBRL SegmentRevenue = 10573.7 mn (cross_check)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 15228.0,
+     "published_date": "2019-08-31",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ef097b53-8a1c-4632-946e-0e95b808f755.pdf",
+     "value": 10573.7,
+     "verification": "pdf_plumb+exchange_xbrl"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 9405.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_51882_212339_29012020052251_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q1",
+     "locator": "BSE filing 2019-11-12 (2019-11-12_79b06322-0656-4a30-9d10-e32e029e049c.pdf) p.52 (text layer): annexed consolidated segment table for the quarter ended 30.06.2019 (Q1 FY2020 results were delayed and first published with the Q2 filing, see p.30 note), row '(a) Power Systems', 1st column printed 940.59 (INR crore); 3rd column (30.06.2018, restated) printed 1106.30; 6M check 940.59+825.88 = 1766.47 (p.27). NSE XBRL filed 2020-01-29 = 9405.9 mn (cross_check)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 11063.0,
+     "published_date": "2019-11-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/79b06322-0656-4a30-9d10-e32e029e049c.pdf",
+     "value": 9405.9,
+     "verification": "pdf_plumb+6m_sum_check+exchange_xbrl"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "BSE filing 2019-11-12 (2019-11-12_79b06322-0656-4a30-9d10-e32e029e049c.pdf) p.27: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2019-09-30); printed 825.88 (INR crore); segment rows sum to 'Revenue from operations' in that column; [verify 2026-09-25] same filing p.27, 3rd column (30.09.2018, restated) printed 1267.04 cr -> prior_year_comparative 12670.4",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 12670.4,
+     "published_date": "2019-11-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/79b06322-0656-4a30-9d10-e32e029e049c.pdf",
+     "value": 8258.8,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "comparative_note": "restated comparative (originally reported 8276.8); see structural_breaks",
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 7875.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_54485_222648_14022020091844_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q3",
+     "locator": "BSE filing 2020-02-14 (2020-02-14_dcd51d89-1d1d-462e-913d-3b0f9c474447.pdf) p.30: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2019-12-31); printed 787.50 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 11796.3,
+     "published_date": "2020-02-14",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcd51d89-1d1d-462e-913d-3b0f9c474447.pdf",
+     "value": 7875.0,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 1818.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_56961_270710_28062020092849_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q4",
+     "locator": "BSE filing 2020-06-28 (2020-06-28_9f8b2564-fa44-4974-9b94-4caaf08e9327.pdf) p.39: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2020-03-31); printed 181.87 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "published_date": "2020-06-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9f8b2564-fa44-4974-9b94-4caaf08e9327.pdf",
+     "value": 1818.7,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 1525.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_61133_314675_08092020072218_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q1",
+     "locator": "BSE filing 2020-09-08 (2020-09-08_a48315ae-627c-40b5-ab9b-07030c091b58.pdf) p.26: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2020-06-30); printed 152.55 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "published_date": "2020-09-08",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a48315ae-627c-40b5-ab9b-07030c091b58.pdf",
+     "value": 1525.5,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 1808.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_62589_352281_30102020121736_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q2",
+     "locator": "BSE filing 2020-10-28 (2020-10-28_970ad3bf-9a87-4f9f-bda5-a0945d7db173.pdf) p.30: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2020-09-30); printed 180.81 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "published_date": "2020-10-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/970ad3bf-9a87-4f9f-bda5-a0945d7db173.pdf",
+     "value": 1808.1,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 2289.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_67299_403215_06022021021152_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q3",
+     "locator": "BSE filing 2021-02-05 (2021-02-05_3f306403-f1d9-47ba-8cd5-08b110f0ab68.pdf) p.24: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2020-12-31); printed 228.93 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "published_date": "2021-02-05",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3f306403-f1d9-47ba-8cd5-08b110f0ab68.pdf",
+     "value": 2289.3,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 2996.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_71234_458546_12062021055408_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q4",
+     "locator": "BSE filing 2021-06-11 (2021-06-11_81097e3e-4881-446c-9ff6-727b3990f74d.pdf) p.27: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2021-03-31); printed 299.66 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "published_date": "2021-06-11",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81097e3e-4881-446c-9ff6-727b3990f74d.pdf",
+     "value": 2996.6,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 2821.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_73948_498981_02082021092008_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q1",
+     "locator": "BSE filing 2021-08-02 (2021-08-02_6f97e669-1024-4d15-b1e9-30f40c06f96e.pdf) p.15: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2021-06-30); printed 282.15 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "published_date": "2021-08-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6f97e669-1024-4d15-b1e9-30f40c06f96e.pdf",
+     "value": 2821.5,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 3904.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_76582_544619_22102021012136_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q2",
+     "locator": "BSE filing 2021-10-21 (2021-10-21_faaf77b7-2aaf-44cc-8719-e383ac2e5863.pdf) p.16: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2021-09-30); printed 390.49 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "prior_year_comparative": 1808.1,
+     "published_date": "2021-10-21",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/faaf77b7-2aaf-44cc-8719-e383ac2e5863.pdf",
+     "value": 3904.9,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 4509.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_80581_599555_27012022073735_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q3",
+     "locator": "BSE filing 2022-01-27 (2022-01-27_99d5ffa5-6954-4548-a55e-c42bbbac122e.pdf) p.12: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2021-12-31); printed 450.95 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 2289.3,
+     "published_date": "2022-01-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/99d5ffa5-6954-4548-a55e-c42bbbac122e.pdf",
+     "value": 4509.5,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 4699.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_83853_650502_02052022080256_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q4",
+     "locator": "BSE filing 2022-05-02 (2022-05-02_34cd8ca6-954c-4efa-b929-55ddf71c71d3.pdf) p.18: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2022-03-31); printed 469.93 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 2996.6,
+     "published_date": "2022-05-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/34cd8ca6-954c-4efa-b929-55ddf71c71d3.pdf",
+     "value": 4699.3,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "BSE filing 2022-07-27 (2022-07-27_7c2b7aed-e98c-4558-a0ee-c4439ab3e088.pdf) p.11: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2022-06-30); printed 475.09 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "prior_year_comparative": 2821.5,
+     "published_date": "2022-07-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7c2b7aed-e98c-4558-a0ee-c4439ab3e088.pdf",
+     "value": 4750.9,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "BSE filing 2023-01-24 (2023-01-24_cf9e63b3-439e-4963-ae29-3c4cc092a374.pdf) p.12 (text layer): consolidated segment-wise revenue table, row '(a) Power Systems', 2nd column (preceding quarter = quarter ended 30.09.2022); printed 515.87 (INR crore); 9M check 475.09+515.87+506.56 = 1497.52 (4th column). Pre-QEI-sale basis, same as FY2023Q1/FY2023Q3 points; the ex-QEI restated figure (494.16) is only used as FY2024Q2's prior_year_comparative. Original Q2 filing dated 2022-10-19. [verify 2026-09-25: added; collector gap 'not machine-readable' was wrong]",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "published_date": "2022-10-19",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cf9e63b3-439e-4963-ae29-3c4cc092a374.pdf",
+     "value": 5158.7,
+     "verification": "pdf_plumb_later_filing+9m_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 5065.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_87776_778283_25012023112142_WEB.xml"
+     },
+     "fiscal_key": "FY2023Q3",
+     "locator": "NSE XBRL of the consolidated Reg-33 filing: SegmentRevenue for DescriptionOfReportableSegment='Power Systems', context OneReportableSegmentRevenue (current quarter), INR",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "published_date": "2023-01-24",
+     "source_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_87776_778283_25012023112142_WEB.xml",
+     "value": 5065.6,
+     "verification": "exchange_xbrl"
+    },
+    {
+     "comparative_note": "restated comparative (originally reported 4699.3); see structural_breaks",
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 5926.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_91371_839253_09052023113003.xml"
+     },
+     "fiscal_key": "FY2023Q4",
+     "locator": "BSE filing 2023-05-08 (2023-05-08_cd4a79d8-96ae-45f9-aba0-5f41e789df74.pdf) p.18: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2023-03-31); printed 592.60 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 4479.1,
+     "published_date": "2023-05-08",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cd4a79d8-96ae-45f9-aba0-5f41e789df74.pdf",
+     "value": 5926.0,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "comparative_note": "restated comparative (originally reported 4750.9); see structural_breaks",
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 5117.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_94689_901691_27072023053011.xml"
+     },
+     "fiscal_key": "FY2024Q1",
+     "locator": "BSE filing 2023-07-27 (2023-07-27_c850c90a-38f9-4025-9667-f7c1b6cf8491.pdf) p.10: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2023-06-30); printed 511.78 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 4525.4,
+     "published_date": "2023-07-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c850c90a-38f9-4025-9667-f7c1b6cf8491.pdf",
+     "value": 5117.8,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 6193.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_97757_963140_20102023043456.xml"
+     },
+     "fiscal_key": "FY2024Q2",
+     "locator": "BSE filing 2023-10-20 (2023-10-20_7c699c99-86b4-44c1-ac17-a0d7ff796b67.pdf) p.14: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2023-09-30); printed 619.39 (INR crore); segment rows sum to 'Revenue from operations' in that column; [verify 2026-09-25] same filing p.14, 3rd column (30.09.2022, re-presented ex-QEI) printed 494.16 cr (read visually; 6M check 452.54+494.16 = 946.70) -> prior_year_comparative 4941.6",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 4941.6,
+     "published_date": "2023-10-20",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7c699c99-86b4-44c1-ac17-a0d7ff796b67.pdf",
+     "value": 6193.9,
+     "verification": "pdf_ocr+column_sum_check"
+    },
+    {
+     "comparative_note": "restated comparative (originally reported 5065.6); see structural_breaks",
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 6463.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_101318_1033827_23012024042640.xml"
+     },
+     "fiscal_key": "FY2024Q3",
+     "locator": "BSE filing 2024-01-23 (2024-01-23_b2a13125-442a-47ca-8a15-1c5a7289b1f2.pdf) p.12: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2023-12-31); printed 646.33 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 4836.2,
+     "published_date": "2024-01-23",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b2a13125-442a-47ca-8a15-1c5a7289b1f2.pdf",
+     "value": 6463.3,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 8209.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_105320_1116047_06052024045313.xml"
+     },
+     "fiscal_key": "FY2024Q4",
+     "locator": "BSE filing 2024-05-06 (2024-05-06_8e720187-c48b-4875-9c02-919c35d964a5.pdf) p.17: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2024-03-31); printed 820.98 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 5926.0,
+     "published_date": "2024-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8e720187-c48b-4875-9c02-919c35d964a5.pdf",
+     "value": 8209.8,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 7503.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_109383_1201456_24072024061720.xml"
+     },
+     "fiscal_key": "FY2025Q1",
+     "locator": "BSE filing 2024-07-24 (2024-07-24_efb361ed-9b98-4a52-938f-9d3d1d34c5c8.pdf) p.10: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2024-06-30); printed 750.30 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 5117.8,
+     "published_date": "2024-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/efb361ed-9b98-4a52-938f-9d3d1d34c5c8.pdf",
+     "value": 7503.0,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 8457.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_112955_1283005_21102024052034.xml"
+     },
+     "fiscal_key": "FY2025Q2",
+     "locator": "BSE filing 2024-10-21 (2024-10-21_9c47b7f7-3261-469a-86bf-8c6cd69af941.pdf) p.14: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2024-09-30); printed 845.73 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 6193.9,
+     "published_date": "2024-10-21",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9c47b7f7-3261-469a-86bf-8c6cd69af941.pdf",
+     "value": 8457.3,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "cross_check": {
+      "nse_xbrl_segment_inr_mn": 9202.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_117955_1364192_29012025010421.xml"
+     },
+     "fiscal_key": "FY2025Q3",
+     "locator": "BSE filing 2025-01-28 (2025-01-28_af476a81-837f-412c-8cca-5f2e583b49a4.pdf) p.12: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2024-12-31); printed 920.20 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 6463.3,
+     "published_date": "2025-01-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/af476a81-837f-412c-8cca-5f2e583b49a4.pdf",
+     "value": 9202.0,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "BSE filing 2025-05-06 (2025-05-06_0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf) p.20: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2025-03-31); printed 993.48 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 8209.8,
+     "published_date": "2025-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf",
+     "value": 9934.8,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "BSE filing 2025-07-24 (2025-07-24_305011b2-fc96-4ee7-a170-3c7b5fe1e5f0.pdf) p.10: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2025-06-30); printed 1070.14 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 7503.0,
+     "published_date": "2025-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/305011b2-fc96-4ee7-a170-3c7b5fe1e5f0.pdf",
+     "value": 10701.4,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "BSE filing 2025-10-29 (2025-10-29_f4e20a1a-734b-49f0-8935-4969dd840ce3.pdf) p.15: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2025-09-30); printed 1254.49 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 8457.3,
+     "published_date": "2025-10-29",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f4e20a1a-734b-49f0-8935-4969dd840ce3.pdf",
+     "value": 12544.9,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "locator": "BSE filing 2026-01-27 (2026-01-27_e1bb5589-19d4-4a49-84ed-604527f1d5c8.pdf) p.14: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2025-12-31); printed 1326.29 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 9202.0,
+     "published_date": "2026-01-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e1bb5589-19d4-4a49-84ed-604527f1d5c8.pdf",
+     "value": 13262.9,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "locator": "BSE filing 2026-05-06 (2026-05-06_da4f80fe-bb34-4705-96c7-5387efcd7f96.pdf) p.18: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2026-03-31); printed 1487.26 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "published_date": "2026-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/da4f80fe-bb34-4705-96c7-5387efcd7f96.pdf",
+     "value": 14872.6,
+     "verification": "pdf_plumb+column_sum_check"
+    },
+    {
+     "fiscal_key": "FY2027Q1",
+     "locator": "BSE filing 2026-07-24 (2026-07-24_e3da703c-2552-4ce0-a37d-44e1f8e602cd.pdf) p.12: consolidated segment-wise revenue table, row '(a) Power Systems', 1st column (quarter ended 2026-06-30); printed 1398.24 (INR crore); segment rows sum to 'Revenue from operations' in that column",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 10701.4,
+     "published_date": "2026-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e3da703c-2552-4ce0-a37d-44e1f8e602cd.pdf",
+     "value": 13982.4,
+     "verification": "pdf_plumb+column_sum_check"
+    }
+   ],
+   "primary": true,
+   "scope": "segment",
+   "segment_name": "Power Systems"
+  },
+  "revenue_standalone": {
+   "freq": "Q",
+   "label_ko": "별도 매출(참고)",
+   "points": [
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 9909.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=88.00&RType=",
+      "nse_html_net_inr_mn": 10530.2,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1019694.html"
+     },
+     "fiscal_key": "FY2016Q3",
+     "locator": "BSE filing 2016-02-02 (2016-02-02_04DE2AE7_B143_4C13_AA90_1521B4F83475_181342.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-12-31'; printed 990.90 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-12-31",
+     "period_start": "2015-10-01",
+     "published_date": "2016-02-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/2/04DE2AE7_B143_4C13_AA90_1521B4F83475_181342.pdf",
+     "value": 9909.0,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 11296.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=89.00&RType=",
+      "nse_html_net_inr_mn": 11296.8,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1014136.html"
+     },
+     "fiscal_key": "FY2016Q4",
+     "locator": "BSE filing 2016-05-27 (2016-05-27_C739AA37_F821_4C06_B5A5_297F7820F89C_184827.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-03-31'; printed 1129.68 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "published_date": "2016-05-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/5/C739AA37_F821_4C06_B5A5_297F7820F89C_184827.pdf",
+     "value": 11296.8,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative; equals exchange record nse_html_net=7699.8 for that quarter (prior point 18404.7)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 10429.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=90.00&RType=",
+      "nse_html_net_inr_mn": 10429.3,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1014135.html"
+     },
+     "fiscal_key": "FY2017Q1",
+     "locator": "BSE filing 2016-08-30 (2016-08-30_41608B40_CAA0_4E87_ACF8_C197245F8680_145012.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-06-30'; printed 1042.93 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 7699.8,
+     "published_date": "2016-08-30",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/41608B40_CAA0_4E87_ACF8_C197245F8680_145012.pdf",
+     "value": 10429.3,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative; equals exchange record nse_html_net=11503.3 for that quarter (prior point 19238.2)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 12081.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=91.00&RType=",
+      "nse_html_net_inr_mn": 12081.3,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1017323.html"
+     },
+     "fiscal_key": "FY2017Q2",
+     "locator": "BSE filing 2016-12-07 (2016-12-07_7FE1FFB2_D375_41DB_B786_A6E1838EEED4_183452.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-09-30'; printed 1208.13) (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 11503.3,
+     "published_date": "2016-12-07",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/12/7FE1FFB2_D375_41DB_B786_A6E1838EEED4_183452.pdf",
+     "value": 12081.3,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative; equals exchange record nse_html_net=10530.2 for that quarter (prior point 9909.0)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 11601.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=92.00&RType=",
+      "nse_html_net_inr_mn": 11601.2,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1019693.html"
+     },
+     "fiscal_key": "FY2017Q3",
+     "locator": "BSE filing 2017-02-10 (2017-02-10_5F8B0FFC_DCAC_49DC_BB0A_CFE2CAC12BEE_171752.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-12-31'; printed 1160.12 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 10530.2,
+     "published_date": "2017-02-10",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/2/5F8B0FFC_DCAC_49DC_BB0A_CFE2CAC12BEE_171752.pdf",
+     "value": 11601.2,
+     "value_basis": "Ind AS gross revenue incl. excise duty, as originally filed (statement row 'Gross sales' / 'Revenue from operations' with excise duty as an expense); YoY must use prior_year_comparative from the same filing",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 12844.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=93.00&RType=",
+      "nse_html_gross_inr_mn": 12844.9,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1024216.html"
+     },
+     "fiscal_key": "FY2017Q4",
+     "locator": "BSE filing 2017-05-26 (2017-05-26_6ad2fdff-3b03-4fca-b1c9-0390282b05d7.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-03-31'; printed 1284.49 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "published_date": "2017-05-26",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/5/6ad2fdff-3b03-4fca-b1c9-0390282b05d7.pdf",
+     "value": 12844.9,
+     "value_basis": "Ind AS gross revenue incl. excise duty, as originally filed (statement row 'Gross sales' / 'Revenue from operations' with excise duty as an expense); YoY must use prior_year_comparative from the same filing",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 12606.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=94.00&RType=",
+      "nse_html_gross_inr_mn": 12606.8,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1029459.html"
+     },
+     "fiscal_key": "FY2018Q1",
+     "locator": "BSE filing 2017-08-11 (2017-08-11_f02ecf39-8dfa-4edc-ae25-73032e4256ce.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-06-30'; printed 1260.68 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "published_date": "2017-08-11",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/8/f02ecf39-8dfa-4edc-ae25-73032e4256ce.pdf",
+     "value": 12606.8,
+     "value_basis": "Ind AS gross revenue incl. excise duty, as originally filed (statement row 'Gross sales' / 'Revenue from operations' with excise duty as an expense); YoY must use prior_year_comparative from the same filing",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "net-of-excise comparable printed by the company in the GST note of the same filing (standalone note 5, p.7): quarter ended 30.09.2016 = 1,084.76 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 12085.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=95.00&RType=",
+      "nse_html_gross_inr_mn": 12085.0,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1032796.html"
+     },
+     "fiscal_key": "FY2018Q2",
+     "locator": "BSE filing 2017-11-09 (2017-11-09_c9a6d6d7-d026-44f7-9cdc-939011c05fd3.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-09-30'; printed 1208.50 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 10847.6,
+     "published_date": "2017-11-09",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/11/c9a6d6d7-d026-44f7-9cdc-939011c05fd3.pdf",
+     "value": 12085.0,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "net-of-excise comparable printed by the company in the GST note of the same filing (standalone note 5, p.6): quarter ended 31.12.2016 = 1,064.87 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 11793.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=96.00&RType=",
+      "nse_html_gross_inr_mn": 11793.8,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1037467.html"
+     },
+     "fiscal_key": "FY2018Q3",
+     "locator": "BSE filing 2018-02-12 (2018-02-12_8f519385-dc1f-4ef8-acf7-fa044ca72cdf.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-12-31'; printed 1179.38) (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 10648.7,
+     "published_date": "2018-02-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/2/8f519385-dc1f-4ef8-acf7-fa044ca72cdf.pdf",
+     "value": 11793.8,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "net-of-excise comparable printed by the company in the GST note of the same filing (standalone note 5, p.8): quarter ended 31.03.2017 = 1,176.72 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 14308.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=97.00&RType=",
+      "nse_xbrl_inr_mn": 14308.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_36460_13632_31052018122455_WEB.xml"
+     },
+     "fiscal_key": "FY2018Q4",
+     "locator": "BSE filing 2018-05-30 (2018-05-30_452bc062-1338-4d8b-8d3f-4a8f775905a8.PDF) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-03-31'; printed 1430.85 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 11767.2,
+     "published_date": "2018-05-30",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/5/452bc062-1338-4d8b-8d3f-4a8f775905a8.PDF",
+     "value": 14308.5,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 11798.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=98.00&RType="
+     },
+     "fiscal_key": "FY2019Q1",
+     "locator": "BSE filing 2018-08-10 (2018-08-10_ddc75a1a-e45d-48c0-b5f9-59998539b374.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-06-30'; printed 1179.84 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "published_date": "2018-08-10",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/ddc75a1a-e45d-48c0-b5f9-59998539b374.pdf",
+     "value": 11798.4,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 13881.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=99.00&RType=",
+      "nse_xbrl_inr_mn": 13881.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_40832_59502_14112018022536_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q2",
+     "locator": "BSE filing 2018-11-13 (2018-11-13_5dd4303c-3ee9-4845-9d06-359977da3527.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-09-30'; printed 1388.12 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "published_date": "2018-11-13",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/11/5dd4303c-3ee9-4845-9d06-359977da3527.pdf",
+     "value": 13881.2,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 13703.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=100.00&RType=",
+      "nse_xbrl_inr_mn": 13703.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_43023_82088_13022019033747_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q3",
+     "locator": "BSE filing 2019-02-13 (2019-02-13_ade38c1c-93b7-4489-8e02-43261d911b7a.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-12-31'; printed 1370.30 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "published_date": "2019-02-13",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ade38c1c-93b7-4489-8e02-43261d911b7a.pdf",
+     "value": 13703.0,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative (prior point 14308.5, printed 1452.66)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 14173.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=101.00&RType="
+     },
+     "fiscal_key": "FY2019Q4",
+     "locator": "BSE filing 2019-08-31 (2019-08-31_ef097b53-8a1c-4632-946e-0e95b808f755.pdf) p.20: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-03-31'; printed 1417.34 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 14526.6,
+     "published_date": "2019-08-31",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ef097b53-8a1c-4632-946e-0e95b808f755.pdf",
+     "value": 14173.4,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 11885.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=102.00&RType=",
+      "nse_xbrl_inr_mn": 11885.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_51881_212326_29012020051421_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q1",
+     "locator": "BSE filing 2019-11-12 (2019-11-12_79b06322-0656-4a30-9d10-e32e029e049c.pdf) p.23: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-06-30'; printed 1188.59 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 11798.4,
+     "published_date": "2019-11-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/79b06322-0656-4a30-9d10-e32e029e049c.pdf",
+     "value": 11885.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 9573.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=103.00&RType=",
+      "nse_xbrl_inr_mn": 9573.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_51886_212367_29012020053224_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q2",
+     "locator": "BSE filing 2019-11-12 (2019-11-12_79b06322-0656-4a30-9d10-e32e029e049c.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-09-30'; printed 957.36 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 13881.2,
+     "published_date": "2019-11-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/79b06322-0656-4a30-9d10-e32e029e049c.pdf",
+     "value": 9573.6,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 5581.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=104.00&RType=",
+      "nse_xbrl_inr_mn": 5581.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_54484_222645_14022020091551_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q3",
+     "locator": "BSE filing 2020-02-14 (2020-02-14_dcd51d89-1d1d-462e-913d-3b0f9c474447.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-12-31'; printed 558.12 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 13703.0,
+     "published_date": "2020-02-14",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcd51d89-1d1d-462e-913d-3b0f9c474447.pdf",
+     "value": 5581.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 4654.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=105.00&RType=",
+      "nse_xbrl_inr_mn": 4654.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_56960_270707_28062020092359_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q4",
+     "locator": "BSE filing 2020-06-28 (2020-06-28_9f8b2564-fa44-4974-9b94-4caaf08e9327.pdf) p.10: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-03-31'; printed 465.41 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 14173.4,
+     "published_date": "2020-06-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9f8b2564-fa44-4974-9b94-4caaf08e9327.pdf",
+     "value": 4654.1,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 2356.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=106.00&RType=",
+      "nse_xbrl_inr_mn": 2356.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_61132_314670_08092020072038_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q1",
+     "locator": "BSE filing 2020-09-08 (2020-09-08_a48315ae-627c-40b5-ab9b-07030c091b58.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-06-30'; printed 235.69 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "prior_year_comparative": 11885.9,
+     "published_date": "2020-09-08",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a48315ae-627c-40b5-ab9b-07030c091b58.pdf",
+     "value": 2356.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 5648.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=107.00&RType=",
+      "nse_xbrl_inr_mn": 5648.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_62588_352278_30102020121355_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q2",
+     "locator": "BSE filing 2020-10-28 (2020-10-28_970ad3bf-9a87-4f9f-bda5-a0945d7db173.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-09-30'; printed 564.80 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "prior_year_comparative": 9573.6,
+     "published_date": "2020-10-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/970ad3bf-9a87-4f9f-bda5-a0945d7db173.pdf",
+     "value": 5648.0,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 7033.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=108.00&RType=",
+      "nse_xbrl_inr_mn": 7033.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_67297_403209_06022021020942_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q3",
+     "locator": "BSE filing 2021-02-05 (2021-02-05_3f306403-f1d9-47ba-8cd5-08b110f0ab68.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-12-31'; printed 703.30 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "prior_year_comparative": 5581.2,
+     "published_date": "2021-02-05",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3f306403-f1d9-47ba-8cd5-08b110f0ab68.pdf",
+     "value": 7033.0,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 10221.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=109.00&RType=",
+      "nse_xbrl_inr_mn": 10221.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_71207_458306_11062021094557_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q4",
+     "locator": "BSE filing 2021-06-11 (2021-06-11_81097e3e-4881-446c-9ff6-727b3990f74d.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-03-31'; printed 1022.10 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 4654.1,
+     "published_date": "2021-06-11",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81097e3e-4881-446c-9ff6-727b3990f74d.pdf",
+     "value": 10221.0,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 9538.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=110.00&RType=",
+      "nse_xbrl_inr_mn": 9538.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_73947_498978_02082021091709_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q1",
+     "locator": "BSE filing 2021-08-02 (2021-08-02_6f97e669-1024-4d15-b1e9-30f40c06f96e.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-06-30'; printed 953.82 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "prior_year_comparative": 2356.9,
+     "published_date": "2021-08-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6f97e669-1024-4d15-b1e9-30f40c06f96e.pdf",
+     "value": 9538.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 13518.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=111.00&RType=",
+      "nse_xbrl_inr_mn": 13518.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_76580_544609_22102021011818_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q2",
+     "locator": "BSE filing 2021-10-21 (2021-10-21_faaf77b7-2aaf-44cc-8719-e383ac2e5863.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 1351.88 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "prior_year_comparative": 5648.0,
+     "published_date": "2021-10-21",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/faaf77b7-2aaf-44cc-8719-e383ac2e5863.pdf",
+     "value": 13518.8,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 14462.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=112.00&RType=",
+      "nse_xbrl_inr_mn": 14462.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_80578_599545_27012022073516_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q3",
+     "locator": "BSE filing 2022-01-27 (2022-01-27_99d5ffa5-6954-4548-a55e-c42bbbac122e.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-12-31'; printed 1446.23 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 7033.0,
+     "published_date": "2022-01-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/99d5ffa5-6954-4548-a55e-c42bbbac122e.pdf",
+     "value": 14462.3,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 14072.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=113.00&RType=",
+      "nse_xbrl_inr_mn": 14072.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_83852_650499_02052022080014_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q4",
+     "locator": "BSE filing 2022-05-02 (2022-05-02_34cd8ca6-954c-4efa-b929-55ddf71c71d3.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-03-31'; printed 1407.25 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 10221.0,
+     "published_date": "2022-05-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/34cd8ca6-954c-4efa-b929-55ddf71c71d3.pdf",
+     "value": 14072.5,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 15585.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=114.00&RType=",
+      "nse_xbrl_inr_mn": 15585.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_609914_2631_28072022130711_WEB.xml"
+     },
+     "fiscal_key": "FY2023Q1",
+     "locator": "BSE filing 2022-07-27 (2022-07-27_7c2b7aed-e98c-4558-a0ee-c4439ab3e088.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-06-30'; printed 1558.59 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "prior_year_comparative": 9538.2,
+     "published_date": "2022-07-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7c2b7aed-e98c-4558-a0ee-c4439ab3e088.pdf",
+     "value": 15585.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 15880.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=115.00&RType=",
+      "nse_xbrl_inr_mn": 15880.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_778582_4972_20102022123624_WEB.xml"
+     },
+     "fiscal_key": "FY2023Q2",
+     "locator": "BSE filing 2022-10-19 (2022-10-19_414c8bfd-08ab-486e-bd7b-7387dbbb8d93.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-09-30'; printed 1588.05 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "prior_year_comparative": 13518.8,
+     "published_date": "2022-10-19",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/414c8bfd-08ab-486e-bd7b-7387dbbb8d93.pdf",
+     "value": 15880.5,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 16452.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=116.00&RType=",
+      "nse_xbrl_inr_mn": 16452.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_87772_778267_25012023111733_WEB.xml"
+     },
+     "fiscal_key": "FY2023Q3",
+     "locator": "BSE filing 2023-01-24 (2023-01-24_cf9e63b3-439e-4963-ae29-3c4cc092a374.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-12-31'; printed 1645.27 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "prior_year_comparative": 14462.3,
+     "published_date": "2023-01-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cf9e63b3-439e-4963-ae29-3c4cc092a374.pdf",
+     "value": 16452.7,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 17877.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=117.00&RType=",
+      "nse_xbrl_inr_mn": 17877.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_91368_839240_09052023112121.xml"
+     },
+     "fiscal_key": "FY2023Q4",
+     "locator": "BSE filing 2023-05-08 (2023-05-08_cd4a79d8-96ae-45f9-aba0-5f41e789df74.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-03-31'; printed 1787.72 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 14072.5,
+     "published_date": "2023-05-08",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cd4a79d8-96ae-45f9-aba0-5f41e789df74.pdf",
+     "value": 17877.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 17660.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=118.00&RType=",
+      "nse_xbrl_inr_mn": 17660.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_94688_901686_27072023052652.xml"
+     },
+     "fiscal_key": "FY2024Q1",
+     "locator": "BSE filing 2023-07-27 (2023-07-27_c850c90a-38f9-4025-9667-f7c1b6cf8491.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-06-30'; printed 1766.01 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 15585.9,
+     "published_date": "2023-07-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c850c90a-38f9-4025-9667-f7c1b6cf8491.pdf",
+     "value": 17660.1,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 19001.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=119.00&RType=",
+      "nse_xbrl_inr_mn": 19001.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_97756_963071_20102023042636.xml"
+     },
+     "fiscal_key": "FY2024Q2",
+     "locator": "BSE filing 2023-10-20 (2023-10-20_7c699c99-86b4-44c1-ac17-a0d7ff796b67.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-09-30'; printed 1900.14) (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 15880.5,
+     "published_date": "2023-10-20",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7c699c99-86b4-44c1-ac17-a0d7ff796b67.pdf",
+     "value": 19001.4,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 18602.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=120.00&RType=",
+      "nse_xbrl_inr_mn": 18602.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_101316_1033818_23012024042458.xml"
+     },
+     "fiscal_key": "FY2024Q3",
+     "locator": "BSE filing 2024-01-23 (2024-01-23_b2a13125-442a-47ca-8a15-1c5a7289b1f2.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-12-31'; printed 1860.22 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 16452.7,
+     "published_date": "2024-01-23",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b2a13125-442a-47ca-8a15-1c5a7289b1f2.pdf",
+     "value": 18602.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 20835.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=121.00&RType=",
+      "nse_xbrl_inr_mn": 20835.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_105319_1116042_06052024044817.xml"
+     },
+     "fiscal_key": "FY2024Q4",
+     "locator": "BSE filing 2024-05-06 (2024-05-06_8e720187-c48b-4875-9c02-919c35d964a5.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-03-31'; printed 2083.54 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 17877.2,
+     "published_date": "2024-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8e720187-c48b-4875-9c02-919c35d964a5.pdf",
+     "value": 20835.4,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 21064.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=122.00&RType=",
+      "nse_xbrl_inr_mn": 21064.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_109376_1201405_24072024060048.xml"
+     },
+     "fiscal_key": "FY2025Q1",
+     "locator": "BSE filing 2024-07-24 (2024-07-24_efb361ed-9b98-4a52-938f-9d3d1d34c5c8.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-06-30'; printed 2106.41 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 17660.1,
+     "published_date": "2024-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/efb361ed-9b98-4a52-938f-9d3d1d34c5c8.pdf",
+     "value": 21064.1,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 22701.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=123.00&RType=",
+      "nse_xbrl_inr_mn": 22701.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_112954_1282973_21102024051733.xml"
+     },
+     "fiscal_key": "FY2025Q2",
+     "locator": "BSE filing 2024-10-21 (2024-10-21_9c47b7f7-3261-469a-86bf-8c6cd69af941.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-09-30'; printed 2270.19 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 19001.4,
+     "published_date": "2024-10-21",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9c47b7f7-3261-469a-86bf-8c6cd69af941.pdf",
+     "value": 22701.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 23889.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=124.00&RType=",
+      "nse_xbrl_inr_mn": 23889.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_117954_1364189_29012025010258.xml"
+     },
+     "fiscal_key": "FY2025Q3",
+     "locator": "BSE filing 2025-01-28 (2025-01-28_af476a81-837f-412c-8cca-5f2e583b49a4.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-12-31'; printed 2388.97 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 18602.2,
+     "published_date": "2025-01-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/af476a81-837f-412c-8cca-5f2e583b49a4.pdf",
+     "value": 23889.7,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "note": "BSE results DB has no record for this quarter (API returns the Dec-2024 record) and NSE XBRL list ends Dec-2024"
+     },
+     "fiscal_key": "FY2025Q4",
+     "locator": "BSE filing 2025-05-06 (2025-05-06_0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf) p.10: standalone segment-wise revenue table, row 'Revenue from operations', 1st column (quarter ended 31.03.2025); printed 2563.40 (INR crore). Check: 9M FY2025 6765.57 + Q4 = FY2025 9328.97 printed; same figure printed as 2nd column of the Q1 FY2026 filing (2025-07-24)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 20835.4,
+     "published_date": "2025-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf",
+     "value": 25634.0,
+     "verification": "pdf_plumb+annual_sum_check+later_filing"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 26434.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=126.00&RType="
+     },
+     "fiscal_key": "FY2026Q1",
+     "locator": "BSE filing 2025-07-24 (2025-07-24_305011b2-fc96-4ee7-a170-3c7b5fe1e5f0.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-06-30'; printed 2643.49 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 21064.1,
+     "published_date": "2025-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/305011b2-fc96-4ee7-a170-3c7b5fe1e5f0.pdf",
+     "value": 26434.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 26491.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=127.00&RType="
+     },
+     "fiscal_key": "FY2026Q2",
+     "locator": "BSE filing 2025-10-29 (2025-10-29_f4e20a1a-734b-49f0-8935-4969dd840ce3.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-09-30'; printed 2649.19 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 22701.9,
+     "published_date": "2025-10-29",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f4e20a1a-734b-49f0-8935-4969dd840ce3.pdf",
+     "value": 26491.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 29094.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=128.00&RType="
+     },
+     "fiscal_key": "FY2026Q3",
+     "locator": "BSE filing 2026-01-27 (2026-01-27_e1bb5589-19d4-4a49-84ed-604527f1d5c8.pdf) p.7: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-12-31'; printed 2909.44 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 23889.7,
+     "published_date": "2026-01-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e1bb5589-19d4-4a49-84ed-604527f1d5c8.pdf",
+     "value": 29094.4,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "comparative_note": "same filing (2026-05-06) p.7 standalone segment table 'Revenue from operations', 3rd column (quarter ended 31.03.2025) = 2,563.40 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 31285.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=129.00&RType="
+     },
+     "fiscal_key": "FY2026Q4",
+     "locator": "BSE filing 2026-05-06 (2026-05-06_da4f80fe-bb34-4705-96c7-5387efcd7f96.pdf) p.6: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-03-31'; printed 3128.50 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 25634.0,
+     "published_date": "2026-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/da4f80fe-bb34-4705-96c7-5387efcd7f96.pdf",
+     "value": 31285.0,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 30613.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=130.00&RType="
+     },
+     "fiscal_key": "FY2027Q1",
+     "locator": "BSE filing 2026-07-24 (2026-07-24_e3da703c-2552-4ce0-a37d-44e1f8e602cd.pdf) p.5: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-06-30'; printed 3061.37 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 26434.9,
+     "published_date": "2026-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e3da703c-2552-4ce0-a37d-44e1f8e602cd.pdf",
+     "value": 30613.7,
+     "verification": "pdf_plumb+exchange_structured"
+    }
+   ],
+   "primary": false,
+   "scope": "standalone"
+  },
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 20678.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=88.00&RType=",
+      "nse_html_net_inr_mn": 11248.5,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1019696.html"
+     },
+     "fiscal_key": "FY2016Q3",
+     "locator": "BSE filing 2016-02-02 (2016-02-02_04DE2AE7_B143_4C13_AA90_1521B4F83475_181342.pdf) p.7: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-12-31'; printed 2067.80 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2015-12-31",
+     "period_start": "2015-10-01",
+     "published_date": "2016-02-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/2/04DE2AE7_B143_4C13_AA90_1521B4F83475_181342.pdf",
+     "value": 20678.0,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 16699.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=89.00&RType=",
+      "nse_html_net_inr_mn": 16699.1,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1014139.html"
+     },
+     "fiscal_key": "FY2016Q4",
+     "locator": "BSE filing 2016-05-27 (2016-05-27_C739AA37_F821_4C06_B5A5_297F7820F89C_184827.pdf) p.17: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-03-31'; printed 1669.91 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "published_date": "2016-05-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/5/C739AA37_F821_4C06_B5A5_297F7820F89C_184827.pdf",
+     "value": 16699.1,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 14237.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=90.00&RType=",
+      "nse_html_net_inr_mn": 14237.6,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1014138.html"
+     },
+     "fiscal_key": "FY2017Q1",
+     "locator": "BSE filing 2016-08-30 (2016-08-30_41608B40_CAA0_4E87_ACF8_C197245F8680_145012.pdf) p.5: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-06-30'; printed 1423.76 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 10275.2,
+     "published_date": "2016-08-30",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/41608B40_CAA0_4E87_ACF8_C197245F8680_145012.pdf",
+     "value": 14237.6,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 14951.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=91.00&RType=",
+      "nse_html_net_inr_mn": 14951.6,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1017325.html"
+     },
+     "fiscal_key": "FY2017Q2",
+     "locator": "BSE filing 2016-12-07 (2016-12-07_7FE1FFB2_D375_41DB_B786_A6E1838EEED4_183452.pdf) p.10: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-09-30'; printed 1495.16 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 14292.2,
+     "published_date": "2016-12-07",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/12/7FE1FFB2_D375_41DB_B786_A6E1838EEED4_183452.pdf",
+     "value": 14951.6,
+     "value_basis": "net of excise duty, as originally filed",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative; equals exchange record nse_html_net=11248.5 for that quarter (prior point 20678.0)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 12440.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=92.00&RType=",
+      "nse_html_net_inr_mn": 12440.9,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1019695.html"
+     },
+     "fiscal_key": "FY2017Q3",
+     "locator": "BSE filing 2017-02-10 (2017-02-10_5F8B0FFC_DCAC_49DC_BB0A_CFE2CAC12BEE_171752.pdf) p.7: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-12-31'; printed 1244.09 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 11248.5,
+     "published_date": "2017-02-10",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/2/5F8B0FFC_DCAC_49DC_BB0A_CFE2CAC12BEE_171752.pdf",
+     "value": 12440.9,
+     "value_basis": "Ind AS gross revenue incl. excise duty, as originally filed (statement row 'Gross sales' / 'Revenue from operations' with excise duty as an expense); YoY must use prior_year_comparative from the same filing",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 17100.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=93.00&RType=",
+      "nse_html_gross_inr_mn": 17100.6,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1024219.html"
+     },
+     "fiscal_key": "FY2017Q4",
+     "locator": "BSE filing 2017-05-26 (2017-05-26_6ad2fdff-3b03-4fca-b1c9-0390282b05d7.pdf) p.9: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-03-31'; printed 1710.06 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "published_date": "2017-05-26",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/5/6ad2fdff-3b03-4fca-b1c9-0390282b05d7.pdf",
+     "value": 17100.6,
+     "value_basis": "Ind AS gross revenue incl. excise duty, as originally filed (statement row 'Gross sales' / 'Revenue from operations' with excise duty as an expense); YoY must use prior_year_comparative from the same filing",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 14364.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=94.00&RType=",
+      "nse_html_gross_inr_mn": 14364.2,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1029460.html"
+     },
+     "fiscal_key": "FY2018Q1",
+     "locator": "BSE filing 2017-08-11 (2017-08-11_f02ecf39-8dfa-4edc-ae25-73032e4256ce.pdf) p.9: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-06-30'; printed 1436.42 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "published_date": "2017-08-11",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/8/f02ecf39-8dfa-4edc-ae25-73032e4256ce.pdf",
+     "value": 14364.2,
+     "value_basis": "Ind AS gross revenue incl. excise duty, as originally filed (statement row 'Gross sales' / 'Revenue from operations' with excise duty as an expense); YoY must use prior_year_comparative from the same filing",
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "net-of-excise comparable printed by the company in the GST note of the same filing (consolidated note 5, p.18): quarter ended 30.09.2016 = 1,315.53 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 15576.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=95.00&RType=",
+      "nse_html_gross_inr_mn": 15576.1,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1032797.html"
+     },
+     "fiscal_key": "FY2018Q2",
+     "locator": "BSE results record of the Reg-33 filing, 'Net Sales/Revenue From Operations' (Rs. million); original PDF filing 2017-11-09 (2017-11-09_c9a6d6d7-d026-44f7-9cdc-939011c05fd3.pdf) is a scan not machine-readable for this cell",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 13155.3,
+     "published_date": "2017-11-09",
+     "source_url": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=95.00&RType=",
+     "value": 15576.1,
+     "verification": "exchange_structured_only"
+    },
+    {
+     "comparative_note": "net-of-excise comparable printed by the company in the GST note of the same filing (consolidated note 6, p.16): quarter ended 31.12.2016 = 1,318.69 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 15160.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=96.00&RType=",
+      "nse_html_gross_inr_mn": 15160.8,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_CGPOWER_1037468.html"
+     },
+     "fiscal_key": "FY2018Q3",
+     "locator": "BSE filing 2018-02-12 (2018-02-12_8f519385-dc1f-4ef8-acf7-fa044ca72cdf.pdf) p.16 (scanned, tesseract): consolidated note 'Net revenue from operations' (net of excise duty), 1st column (quarter ended 31.12.2017) printed 1516.08 (INR crore); 3rd column (31.12.2016, net of excise) printed 1318.69 = prior_year_comparative. Same 1516.08 re-printed in the 2018-05-30 filing (452bc062) p.17 note 5 (read visually)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 13186.9,
+     "published_date": "2018-02-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/2/8f519385-dc1f-4ef8-acf7-fa044ca72cdf.pdf",
+     "value": 15160.8,
+     "verification": "pdf_ocr+later_filing_match+exchange_structured"
+    },
+    {
+     "comparative_note": "net-of-excise comparable printed by the company in the GST note of the same filing (consolidated note 5, p.17): quarter ended 31.03.2017 = 1,517.62 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 17923.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=97.00&RType=",
+      "nse_xbrl_inr_mn": 17923.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_36467_13643_31052018122951_WEB.xml"
+     },
+     "fiscal_key": "FY2018Q4",
+     "locator": "BSE filing 2018-05-30 (2018-05-30_452bc062-1338-4d8b-8d3f-4a8f775905a8.PDF) p.13: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-03-31'; printed 1792.35 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 15176.2,
+     "published_date": "2018-05-30",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/5/452bc062-1338-4d8b-8d3f-4a8f775905a8.PDF",
+     "value": 17923.5,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "net-of-excise comparable printed by the company in the GST note of the same filing (consolidated GST note, p.13): quarter ended 30.06.2017 = 1,339.01 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 14901.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=98.00&RType="
+     },
+     "fiscal_key": "FY2019Q1",
+     "locator": "BSE filing 2018-08-10 (2018-08-10_ddc75a1a-e45d-48c0-b5f9-59998539b374.pdf) p.10: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-06-30'; printed 1490.14 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 13390.1,
+     "published_date": "2018-08-10",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/ddc75a1a-e45d-48c0-b5f9-59998539b374.pdf",
+     "value": 14901.4,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 16500.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=99.00&RType=",
+      "nse_xbrl_inr_mn": 16500.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_40876_59692_14112018040142_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q2",
+     "locator": "BSE filing 2018-11-13 (2018-11-13_5dd4303c-3ee9-4845-9d06-359977da3527.pdf) p.11: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-09-30'; printed 1650.01 (INR crore); [verify 2026-09-25] same filing p.11, 3rd column (30.09.2017) printed 1577.96 cr (read visually) -> prior_year_comparative 15779.6",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 15779.6,
+     "published_date": "2018-11-13",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/11/5dd4303c-3ee9-4845-9d06-359977da3527.pdf",
+     "value": 16500.1,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 17195.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=100.00&RType=",
+      "nse_xbrl_inr_mn": 17195.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_43030_82102_13022019035433_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q3",
+     "locator": "BSE filing 2019-02-13 (2019-02-13_ade38c1c-93b7-4489-8e02-43261d911b7a.pdf) p.11: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-12-31'; printed 1719.52 (INR crore); [verify 2026-09-25] same filing p.11, 3rd column (31.12.2017, re-presented) printed 1536.54 cr (tesseract; equals segment-table total p.12) -> prior_year_comparative 15365.4",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "prior_year_comparative": 15365.4,
+     "published_date": "2019-02-13",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ade38c1c-93b7-4489-8e02-43261d911b7a.pdf",
+     "value": 17195.2,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 19888.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=101.00&RType=",
+      "nse_xbrl_inr_mn": 19888.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_48300_134872_31082019054822_WEB.xml"
+     },
+     "fiscal_key": "FY2019Q4",
+     "locator": "BSE filing 2019-08-31 (2019-08-31_ef097b53-8a1c-4632-946e-0e95b808f755.pdf) p.56: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-03-31'; printed 1988.86 (INR crore); [verify 2026-09-25] same filing p.55 (text layer), 3rd column (31.03.2018, restated) printed 2274.82 cr -> prior_year_comparative 22748.2",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 22748.2,
+     "published_date": "2019-08-31",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ef097b53-8a1c-4632-946e-0e95b808f755.pdf",
+     "value": 19888.6,
+     "verification": "pdf_txt+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 17737.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=102.00&RType=",
+      "nse_xbrl_inr_mn": 17737.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_51882_212339_29012020052251_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q1",
+     "locator": "BSE filing 2019-11-12 (2019-11-12_79b06322-0656-4a30-9d10-e32e029e049c.pdf) p.51: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-06-30'; printed 1773.73 (INR crore); [verify 2026-09-25] same filing p.51 (text layer), 3rd column (30.06.2018, restated) printed 1827.96 cr -> prior_year_comparative 18279.6",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 18279.6,
+     "published_date": "2019-11-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/79b06322-0656-4a30-9d10-e32e029e049c.pdf",
+     "value": 17737.3,
+     "verification": "pdf_txt+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 15415.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=103.00&RType="
+     },
+     "fiscal_key": "FY2020Q2",
+     "locator": "BSE filing 2019-11-12 (2019-11-12_79b06322-0656-4a30-9d10-e32e029e049c.pdf) p.26: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-09-30'; printed 1541.58 (INR crore); [verify 2026-09-25] same filing p.26 (text layer), 3rd column (30.09.2018, restated) printed 2,109.63 cr -> prior_year_comparative 21096.3",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 21096.3,
+     "published_date": "2019-11-12",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/79b06322-0656-4a30-9d10-e32e029e049c.pdf",
+     "value": 15415.8,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 11783.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=104.00&RType=",
+      "nse_xbrl_inr_mn": 11783.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_54485_222648_14022020091844_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q3",
+     "locator": "BSE filing 2020-02-14 (2020-02-14_dcd51d89-1d1d-462e-913d-3b0f9c474447.pdf) p.29: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-12-31'; printed 1178.32 (INR crore); [verify 2026-09-25] same filing p.29 (text layer), 3rd column (31.12.2018, restated) printed 2071.47 cr -> prior_year_comparative 20714.7",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 20714.7,
+     "published_date": "2020-02-14",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/dcd51d89-1d1d-462e-913d-3b0f9c474447.pdf",
+     "value": 11783.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 6162.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=105.00&RType=",
+      "nse_xbrl_inr_mn": 6162.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_56961_270710_28062020092849_WEB.xml"
+     },
+     "fiscal_key": "FY2020Q4",
+     "locator": "BSE filing 2020-06-28 (2020-06-28_9f8b2564-fa44-4974-9b94-4caaf08e9327.pdf) p.38: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-03-31'; printed 616.25 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 19888.6,
+     "published_date": "2020-06-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9f8b2564-fa44-4974-9b94-4caaf08e9327.pdf",
+     "value": 6162.5,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 3627.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=106.00&RType=",
+      "nse_xbrl_inr_mn": 3627.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_61133_314675_08092020072218_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q1",
+     "locator": "BSE filing 2020-09-08 (2020-09-08_a48315ae-627c-40b5-ab9b-07030c091b58.pdf) p.25: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-06-30'; printed 362.73 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "prior_year_comparative": 17737.3,
+     "published_date": "2020-09-08",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a48315ae-627c-40b5-ab9b-07030c091b58.pdf",
+     "value": 3627.3,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 6638.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=107.00&RType=",
+      "nse_xbrl_inr_mn": 6638.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_62589_352281_30102020121736_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q2",
+     "locator": "BSE filing 2020-10-28 (2020-10-28_970ad3bf-9a87-4f9f-bda5-a0945d7db173.pdf) p.29: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-09-30'; printed 663.89 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "prior_year_comparative": 15415.8,
+     "published_date": "2020-10-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/970ad3bf-9a87-4f9f-bda5-a0945d7db173.pdf",
+     "value": 6638.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 8195.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=108.00&RType=",
+      "nse_xbrl_inr_mn": 8195.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_67299_403215_06022021021152_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q3",
+     "locator": "BSE filing 2021-02-05 (2021-02-05_3f306403-f1d9-47ba-8cd5-08b110f0ab68.pdf) p.23: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-12-31'; printed 819,52 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "prior_year_comparative": 11783.2,
+     "published_date": "2021-02-05",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3f306403-f1d9-47ba-8cd5-08b110f0ab68.pdf",
+     "value": 8195.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 11178.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=109.00&RType=",
+      "nse_xbrl_inr_mn": 11178.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_71234_458546_12062021055408_WEB.xml"
+     },
+     "fiscal_key": "FY2021Q4",
+     "locator": "BSE filing 2021-06-11 (2021-06-11_81097e3e-4881-446c-9ff6-727b3990f74d.pdf) p.26: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-03-31'; printed 1117.81 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 6162.5,
+     "published_date": "2021-06-11",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/81097e3e-4881-446c-9ff6-727b3990f74d.pdf",
+     "value": 11178.1,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 10500.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=110.00&RType=",
+      "nse_xbrl_inr_mn": 10500.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_73948_498981_02082021092008_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q1",
+     "locator": "BSE filing 2021-08-02 (2021-08-02_6f97e669-1024-4d15-b1e9-30f40c06f96e.pdf) p.14: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-06-30'; printed 1050.04 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "prior_year_comparative": 3627.3,
+     "published_date": "2021-08-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6f97e669-1024-4d15-b1e9-30f40c06f96e.pdf",
+     "value": 10500.4,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 14537.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=111.00&RType=",
+      "nse_xbrl_inr_mn": 14537.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_76582_544619_22102021012136_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q2",
+     "locator": "BSE filing 2021-10-21 (2021-10-21_faaf77b7-2aaf-44cc-8719-e383ac2e5863.pdf) p.15: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 1453.79 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "prior_year_comparative": 6638.9,
+     "published_date": "2021-10-21",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/faaf77b7-2aaf-44cc-8719-e383ac2e5863.pdf",
+     "value": 14537.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 15510.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=112.00&RType=",
+      "nse_xbrl_inr_mn": 15510.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_80581_599555_27012022073735_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q3",
+     "locator": "BSE filing 2022-01-27 (2022-01-27_99d5ffa5-6954-4548-a55e-c42bbbac122e.pdf) p.11: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-12-31'; printed 1551.01 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 8195.2,
+     "published_date": "2022-01-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/99d5ffa5-6954-4548-a55e-c42bbbac122e.pdf",
+     "value": 15510.1,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 15065.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=113.00&RType=",
+      "nse_xbrl_inr_mn": 15065.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_83853_650502_02052022080256_WEB.xml"
+     },
+     "fiscal_key": "FY2022Q4",
+     "locator": "BSE filing 2022-05-02 (2022-05-02_34cd8ca6-954c-4efa-b929-55ddf71c71d3.pdf) p.17: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-03-31'; printed 1506.56 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 11178.1,
+     "published_date": "2022-05-02",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/34cd8ca6-954c-4efa-b929-55ddf71c71d3.pdf",
+     "value": 15065.6,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 16652.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=114.00&RType=",
+      "nse_xbrl_inr_mn": 16652.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_609915_2631_28072022130711_WEB.xml"
+     },
+     "fiscal_key": "FY2023Q1",
+     "locator": "BSE filing 2022-07-27 (2022-07-27_7c2b7aed-e98c-4558-a0ee-c4439ab3e088.pdf) p.10: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-06-30'; printed 1665.24 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "prior_year_comparative": 10500.4,
+     "published_date": "2022-07-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7c2b7aed-e98c-4558-a0ee-c4439ab3e088.pdf",
+     "value": 16652.4,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 16962.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=115.00&RType=",
+      "nse_xbrl_inr_mn": 16962.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_778728_4972_20102022123624_WEB.xml"
+     },
+     "fiscal_key": "FY2023Q2",
+     "locator": "BSE filing 2022-10-19 (2022-10-19_414c8bfd-08ab-486e-bd7b-7387dbbb8d93.pdf) p.15: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-09-30'; printed 1696.27 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "prior_year_comparative": 14537.9,
+     "published_date": "2022-10-19",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/414c8bfd-08ab-486e-bd7b-7387dbbb8d93.pdf",
+     "value": 16962.7,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 17754.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=116.00&RType=",
+      "nse_xbrl_inr_mn": 17754.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_87776_778283_25012023112142_WEB.xml"
+     },
+     "fiscal_key": "FY2023Q3",
+     "locator": "BSE filing 2023-01-24 (2023-01-24_cf9e63b3-439e-4963-ae29-3c4cc092a374.pdf) p.12: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-12-31'; printed 1775.44) (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "prior_year_comparative": 15510.1,
+     "published_date": "2023-01-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cf9e63b3-439e-4963-ae29-3c4cc092a374.pdf",
+     "value": 17754.4,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative (prior point 15065.6, printed 1484.52)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 19027.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=117.00&RType=",
+      "nse_xbrl_inr_mn": 19027.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_91371_839253_09052023113003.xml"
+     },
+     "fiscal_key": "FY2023Q4",
+     "locator": "BSE filing 2023-05-08 (2023-05-08_cd4a79d8-96ae-45f9-aba0-5f41e789df74.pdf) p.18: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-03-31'; printed 1902.79 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 14845.2,
+     "published_date": "2023-05-08",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cd4a79d8-96ae-45f9-aba0-5f41e789df74.pdf",
+     "value": 19027.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative (prior point 16652.4, printed 1642.69)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 18740.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=118.00&RType=",
+      "nse_xbrl_inr_mn": 18740.0,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_94689_901691_27072023053011.xml"
+     },
+     "fiscal_key": "FY2024Q1",
+     "locator": "BSE filing 2023-07-27 (2023-07-27_c850c90a-38f9-4025-9667-f7c1b6cf8491.pdf) p.10: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-06-30'; printed 1874.00 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 16426.9,
+     "published_date": "2023-07-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c850c90a-38f9-4025-9667-f7c1b6cf8491.pdf",
+     "value": 18740.0,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 20015.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=119.00&RType=",
+      "nse_xbrl_inr_mn": 20015.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_97757_963140_20102023043456.xml"
+     },
+     "fiscal_key": "FY2024Q2",
+     "locator": "BSE filing 2023-10-20 (2023-10-20_7c699c99-86b4-44c1-ac17-a0d7ff796b67.pdf) p.13: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-09-30'; printed 2001.51 (INR crore); [verify 2026-09-25] same filing p.13, 3rd column (30.09.2022, re-presented ex-QEI) printed 1674.56 cr (read visually) -> prior_year_comparative 16745.6",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 16745.6,
+     "published_date": "2023-10-20",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7c699c99-86b4-44c1-ac17-a0d7ff796b67.pdf",
+     "value": 20015.1,
+     "verification": "pdf_ocr+exchange_structured"
+    },
+    {
+     "comparative_note": "restated comparative (prior point 17754.4, printed 1752.5)",
+     "cross_check": {
+      "bse_results_db_inr_mn": 19787.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=120.00&RType=",
+      "nse_xbrl_inr_mn": 19787.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_101318_1033827_23012024042640.xml"
+     },
+     "fiscal_key": "FY2024Q3",
+     "locator": "BSE filing 2024-01-23 (2024-01-23_b2a13125-442a-47ca-8a15-1c5a7289b1f2.pdf) p.11: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-12-31'; printed 1978.75 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 17525.0,
+     "published_date": "2024-01-23",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b2a13125-442a-47ca-8a15-1c5a7289b1f2.pdf",
+     "value": 19787.5,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 21917.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=121.00&RType=",
+      "nse_xbrl_inr_mn": 21917.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_105320_1116047_06052024045313.xml"
+     },
+     "fiscal_key": "FY2024Q4",
+     "locator": "BSE filing 2024-05-06 (2024-05-06_8e720187-c48b-4875-9c02-919c35d964a5.pdf) p.16: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-03-31'; printed 2191.72 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 19027.9,
+     "published_date": "2024-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8e720187-c48b-4875-9c02-919c35d964a5.pdf",
+     "value": 21917.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 22275.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=122.00&RType=",
+      "nse_xbrl_inr_mn": 22275.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_109383_1201456_24072024061720.xml"
+     },
+     "fiscal_key": "FY2025Q1",
+     "locator": "BSE filing 2024-07-24 (2024-07-24_efb361ed-9b98-4a52-938f-9d3d1d34c5c8.pdf) p.9: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-06-30'; printed 2227.52 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 18740.0,
+     "published_date": "2024-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/efb361ed-9b98-4a52-938f-9d3d1d34c5c8.pdf",
+     "value": 22275.2,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 24126.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=123.00&RType=",
+      "nse_xbrl_inr_mn": 24126.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_112955_1283005_21102024052034.xml"
+     },
+     "fiscal_key": "FY2025Q2",
+     "locator": "BSE filing 2024-10-21 (2024-10-21_9c47b7f7-3261-469a-86bf-8c6cd69af941.pdf) p.13: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-09-30'; printed 2412.69 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 20015.1,
+     "published_date": "2024-10-21",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/9c47b7f7-3261-469a-86bf-8c6cd69af941.pdf",
+     "value": 24126.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 25156.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=124.00&RType=",
+      "nse_xbrl_inr_mn": 25156.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_117955_1364192_29012025010421.xml"
+     },
+     "fiscal_key": "FY2025Q3",
+     "locator": "BSE filing 2025-01-28 (2025-01-28_af476a81-837f-412c-8cca-5f2e583b49a4.pdf) p.11: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-12-31'; printed 2515.68 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 19787.5,
+     "published_date": "2025-01-28",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/af476a81-837f-412c-8cca-5f2e583b49a4.pdf",
+     "value": 25156.8,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "note": "BSE results DB has no record for this quarter (API returns the Dec-2024 record) and NSE XBRL list ends Dec-2024"
+     },
+     "fiscal_key": "FY2025Q4",
+     "locator": "BSE filing 2025-05-06 (2025-05-06_0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf) p.20: consolidated segment-wise revenue table, row 'Revenue from operations', 1st column (quarter ended 31.03.2025); printed 2752.77 (INR crore). Check: 9M FY2025 7155.89 + Q4 = FY2025 9908.66 printed; same figure printed as 2nd column of the Q1 FY2026 filing (2025-07-24)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 21917.2,
+     "published_date": "2025-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0433a115-7fcc-4b9d-9aad-b9f180eaed3c.pdf",
+     "value": 27527.7,
+     "verification": "pdf_plumb+annual_sum_check+later_filing"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 28780.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=126.00&RType="
+     },
+     "fiscal_key": "FY2026Q1",
+     "locator": "BSE filing 2025-07-24 (2025-07-24_305011b2-fc96-4ee7-a170-3c7b5fe1e5f0.pdf) p.10: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-06-30'; printed 2878.05 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 22275.2,
+     "published_date": "2025-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/305011b2-fc96-4ee7-a170-3c7b5fe1e5f0.pdf",
+     "value": 28780.5,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 29227.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=127.00&RType="
+     },
+     "fiscal_key": "FY2026Q2",
+     "locator": "BSE filing 2025-10-29 (2025-10-29_f4e20a1a-734b-49f0-8935-4969dd840ce3.pdf) p.14: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-09-30'; printed 2922.79 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 24126.9,
+     "published_date": "2025-10-29",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f4e20a1a-734b-49f0-8935-4969dd840ce3.pdf",
+     "value": 29227.9,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 31753.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=128.00&RType="
+     },
+     "fiscal_key": "FY2026Q3",
+     "locator": "BSE filing 2026-01-27 (2026-01-27_e1bb5589-19d4-4a49-84ed-604527f1d5c8.pdf) p.13: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-12-31'; printed 3175.35 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 25156.8,
+     "published_date": "2026-01-27",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e1bb5589-19d4-4a49-84ed-604527f1d5c8.pdf",
+     "value": 31753.5,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "comparative_note": "same filing (2026-05-06) p.18 consolidated segment table 'Revenue from operations', 3rd column (quarter ended 31.03.2025) = 2,752.77 cr",
+     "cross_check": {
+      "bse_results_db_inr_mn": 34417.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=129.00&RType="
+     },
+     "fiscal_key": "FY2026Q4",
+     "locator": "BSE filing 2026-05-06 (2026-05-06_da4f80fe-bb34-4705-96c7-5387efcd7f96.pdf) p.17: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-03-31'; printed 3441.76 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 27527.7,
+     "published_date": "2026-05-06",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/da4f80fe-bb34-4705-96c7-5387efcd7f96.pdf",
+     "value": 34417.6,
+     "verification": "pdf_plumb+exchange_structured"
+    },
+    {
+     "cross_check": {
+      "bse_results_db_inr_mn": 32808.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=500093&Company=CG-Power-and-Industrial-Solutions-Ltd&qtr=130.00&RType="
+     },
+     "fiscal_key": "FY2027Q1",
+     "locator": "BSE filing 2026-07-24 (2026-07-24_e3da703c-2552-4ce0-a37d-44e1f8e602cd.pdf) p.11: consolidated Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-06-30'; printed 3280.81 (INR crore)",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 28780.5,
+     "published_date": "2026-07-24",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e3da703c-2552-4ce0-a37d-44e1f8e602cd.pdf",
+     "value": 32808.1,
+     "verification": "pdf_plumb+exchange_structured"
+    }
+   ],
+   "primary": false,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "CGPOWER IN",
+ "unit": "million"
+}

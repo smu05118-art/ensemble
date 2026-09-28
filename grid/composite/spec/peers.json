@@ -1,0 +1,529 @@
+{
+ "schema": "grid-composite-peers/1",
+ "asof": "2026-09-25",
+ "anchor": "SANIL",
+ "selection_rule": "chains/grid_data.json 에서 KGRID_062040(산일전기)을 korean_peers 로 가리키는 해외 노드 전부 + 사용자가 지정한 ABB + 대형 T&D 변압기 OEM(Siemens Energy·GE Vernova·Hitachi Energy·Hubbell·TBEA·Chung-Hsin) + 팔랑크스 컴포짓 grid 카드(FPS·POWL) + 국내 피어 6사. DY(통신 시공)는 장비 제조사가 아니어서 제외.",
+ "groups": {
+  "G1_NA": "북미(SEC·SEDAR)",
+  "G2_EU": "유럽 대형(ABB·Siemens Energy·Schneider·Legrand)",
+  "G3_JP": "일본(Hitachi Energy 세그먼트·Takaoka Toko·Daihen)",
+  "G4_EU_LATAM": "KONČAR·R&S·WEG·Elsewedy",
+  "G5_TW": "대만 MOPS 월매출",
+  "G6_CN": "중국 A주 분기 누계",
+  "G7_IN": "인도 분기 실적",
+  "G8_KR": "한국 DART(산일전기 앵커 포함)",
+  "G8_PRIVATE": "비상장 프로필"
+ },
+ "peers": [
+  {
+   "id": "SANIL",
+   "grid_node": "KGRID_062040",
+   "name": "산일전기",
+   "ticker": "062040 KS",
+   "region": "Korea",
+   "group": "G8_KR",
+   "tier": "anchor",
+   "note": "앵커. 유입·몰드·주상·패드변압기, 매출 대부분 미국 수출(전력청·인버터사·EPC)"
+  },
+  {
+   "id": "HPSA",
+   "grid_node": "GRID_HAMMOND_POWER",
+   "name": "Hammond Power Solutions",
+   "ticker": "HPS.A CN",
+   "region": "North America",
+   "group": "G1_NA",
+   "tier": "core",
+   "note": "건식 변압기; seed=phalanx. 캐나다·미국·멕시코·인도 공장"
+  },
+  {
+   "id": "HMM",
+   "grid_node": "GRID_HAMMOND_MFG",
+   "name": "Hammond Manufacturing",
+   "ticker": "HMM.A CN",
+   "region": "North America",
+   "group": "G1_NA",
+   "tier": "ext",
+   "note": "전자부품·소형 변압기·외함; 연관 약함(hypothesis)"
+  },
+  {
+   "id": "ETN",
+   "grid_node": "GRID_EATON",
+   "name": "Eaton",
+   "ticker": "ETN US",
+   "region": "North America",
+   "group": "G1_NA",
+   "tier": "core",
+   "note": "seed=phalanx 연결; Electrical Americas 세그먼트 추가 필요"
+  },
+  {
+   "id": "HUBB",
+   "grid_node": "GRID_HUBBELL",
+   "name": "Hubbell",
+   "ticker": "HUBB US",
+   "region": "North America",
+   "group": "G1_NA",
+   "tier": "core",
+   "note": "Utility Solutions 세그먼트(배전 T&D 부품)"
+  },
+  {
+   "id": "GEV",
+   "grid_node": "GRID_GEVERNOVA",
+   "name": "GE Vernova",
+   "ticker": "GEV US",
+   "region": "North America",
+   "group": "G1_NA",
+   "tier": "core",
+   "note": "Electrification 세그먼트(Grid Solutions·Prolec GE 변압기)"
+  },
+  {
+   "id": "POWL",
+   "grid_node": "GRID_POWELL",
+   "name": "Powell Industries",
+   "ticker": "POWL US",
+   "region": "North America",
+   "group": "G1_NA",
+   "tier": "core",
+   "note": "seed=phalanx; 배전반·E-house"
+  },
+  {
+   "id": "FPS",
+   "grid_node": null,
+   "name": "Forgent Power Solutions",
+   "ticker": "FPS US",
+   "region": "North America",
+   "group": "G1_NA",
+   "tier": "core",
+   "note": "seed=phalanx; 배전 장비·변압기(2025 상장)"
+  },
+  {
+   "id": "HOWARD",
+   "grid_node": "GRID_HOWARD",
+   "name": "Howard Industries (Power Solutions)",
+   "ticker": null,
+   "region": "North America",
+   "group": "G8_PRIVATE",
+   "tier": "private",
+   "note": "비상장 — 프로필·경로 프록시만"
+  },
+  {
+   "id": "ERMCO",
+   "grid_node": "GRID_ERMCO",
+   "name": "ERMCO",
+   "ticker": null,
+   "region": "North America",
+   "group": "G8_PRIVATE",
+   "tier": "private",
+   "note": "비상장(Arkansas Electric Cooperatives) — 프로필·경로 프록시만"
+  },
+  {
+   "id": "ABB",
+   "grid_node": "GRID_ABB",
+   "name": "ABB",
+   "ticker": "ABBN SW",
+   "region": "Europe",
+   "group": "G2_EU",
+   "tier": "core",
+   "note": "Electrification 세그먼트 + 연결"
+  },
+  {
+   "id": "ENR",
+   "grid_node": "GRID_SIEMENS_ENERGY",
+   "name": "Siemens Energy",
+   "ticker": "ENR GR",
+   "region": "Europe",
+   "group": "G2_EU",
+   "tier": "core",
+   "note": "Grid Technologies 세그먼트(변압기 포함) — 회계연도 10~9월"
+  },
+  {
+   "id": "SU",
+   "grid_node": "GRID_SCHNEIDER",
+   "name": "Schneider Electric",
+   "ticker": "SU FP",
+   "region": "Europe",
+   "group": "G2_EU",
+   "tier": "core",
+   "note": "Energy Management 매출(분기 매출 공시)"
+  },
+  {
+   "id": "LR",
+   "grid_node": "GRID_LEGRAND",
+   "name": "Legrand",
+   "ticker": "LR FP",
+   "region": "Europe",
+   "group": "G2_EU",
+   "tier": "ext",
+   "note": "연결 매출(분기); 변압기 비중 작음"
+  },
+  {
+   "id": "HITACHI_ENERGY",
+   "grid_node": "GRID_HITACHI_ENERGY",
+   "name": "Hitachi Energy (Hitachi Ltd 세그먼트)",
+   "ticker": "6501 JP",
+   "region": "Europe",
+   "group": "G3_JP",
+   "tier": "core",
+   "note": "Hitachi 분기 결산의 Hitachi Energy 매출"
+  },
+  {
+   "id": "KOEI",
+   "grid_node": "GRID_KONCAR",
+   "name": "KONČAR",
+   "ticker": "KOEI CZ(ZSE)",
+   "region": "Europe",
+   "group": "G4_EU_LATAM",
+   "tier": "core",
+   "note": "크로아티아; 변압기 자회사 포함 그룹"
+  },
+  {
+   "id": "KODT",
+   "grid_node": "GRID_KONCAR_DST",
+   "name": "KONČAR D&ST",
+   "ticker": "KODT ZSE",
+   "region": "Europe",
+   "group": "G4_EU_LATAM",
+   "tier": "core",
+   "note": "배전·특수 변압기 전문(크로아티아)"
+  },
+  {
+   "id": "RSGN",
+   "grid_node": "GRID_RS_GROUP",
+   "name": "R&S Group",
+   "ticker": "RSGN SW",
+   "region": "Europe",
+   "group": "G4_EU_LATAM",
+   "tier": "core",
+   "note": "변압기(스위스·폴란드 등); 반기 공시"
+  },
+  {
+   "id": "SGB_SMIT",
+   "grid_node": "GRID_SGB_SMIT",
+   "name": "SGB-SMIT Group",
+   "ticker": null,
+   "region": "Europe",
+   "group": "G8_PRIVATE",
+   "tier": "private",
+   "note": "비상장 — 프로필·경로 프록시만"
+  },
+  {
+   "id": "TAKAOKA",
+   "grid_node": "GRID_TAKAOKA_TOKO",
+   "name": "Takaoka Toko",
+   "ticker": "6617 JP",
+   "region": "Japan",
+   "group": "G3_JP",
+   "tier": "core",
+   "note": "배전 변압기·계량"
+  },
+  {
+   "id": "DAIHEN",
+   "grid_node": "GRID_DAIHEN",
+   "name": "Daihen",
+   "ticker": "6622 JP",
+   "region": "Japan",
+   "group": "G3_JP",
+   "tier": "core",
+   "note": "전력기기(변압기) 세그먼트"
+  },
+  {
+   "id": "FORTUNE",
+   "grid_node": "GRID_FORTUNE_1519",
+   "name": "Fortune Electric 華城",
+   "ticker": "1519 TT",
+   "region": "Taiwan",
+   "group": "G5_TW",
+   "tier": "core",
+   "note": "월매출 MOPS; 대미 변압기 수출"
+  },
+  {
+   "id": "SHIHLIN",
+   "grid_node": "GRID_SHIHLIN",
+   "name": "Shihlin Electric 士林電機",
+   "ticker": "1503 TT",
+   "region": "Taiwan",
+   "group": "G5_TW",
+   "tier": "core",
+   "note": "월매출 MOPS"
+  },
+  {
+   "id": "TECO",
+   "grid_node": "GRID_TECO",
+   "name": "TECO 東元",
+   "ticker": "1504 TT",
+   "region": "Taiwan",
+   "group": "G5_TW",
+   "tier": "ext",
+   "note": "월매출 MOPS; 모터 중심"
+  },
+  {
+   "id": "TATUNG",
+   "grid_node": "GRID_TATUNG",
+   "name": "Tatung 大同",
+   "ticker": "2371 TT",
+   "region": "Taiwan",
+   "group": "G5_TW",
+   "tier": "ext",
+   "note": "월매출 MOPS; 복합기업"
+  },
+  {
+   "id": "ALLIS",
+   "grid_node": "GRID_ALLIS",
+   "name": "Allis Electric 亞力電機",
+   "ticker": "1514 TT",
+   "region": "Taiwan",
+   "group": "G5_TW",
+   "tier": "core",
+   "note": "월매출 MOPS"
+  },
+  {
+   "id": "CHUNGHSIN",
+   "grid_node": "GRID_CHUNG_HSIN",
+   "name": "Chung-Hsin Electric 中興電工",
+   "ticker": "1513 TT",
+   "region": "Taiwan",
+   "group": "G5_TW",
+   "tier": "core",
+   "note": "월매출 MOPS"
+  },
+  {
+   "id": "SIEYUAN",
+   "grid_node": "GRID_SIEYUAN",
+   "name": "Sieyuan Electric 思源电气",
+   "ticker": "002028 CH",
+   "region": "China",
+   "group": "G6_CN",
+   "tier": "core",
+   "note": "분기 누계→차분"
+  },
+  {
+   "id": "CHINAXD",
+   "grid_node": "GRID_CHINA_XD",
+   "name": "China XD Electric 中国西电",
+   "ticker": "601179 CH",
+   "region": "China",
+   "group": "G6_CN",
+   "tier": "core",
+   "note": "분기 누계→차분"
+  },
+  {
+   "id": "XJ",
+   "grid_node": "GRID_XJ",
+   "name": "XJ Electric 许继电气",
+   "ticker": "000400 CH",
+   "region": "China",
+   "group": "G6_CN",
+   "tier": "ext",
+   "note": "분기 누계→차분"
+  },
+  {
+   "id": "JINPAN",
+   "grid_node": "GRID_JINPAN",
+   "name": "Jinpan Technology 金盘科技",
+   "ticker": "688676 CH",
+   "region": "China",
+   "group": "G6_CN",
+   "tier": "core",
+   "note": "건식 변압기; 분기 누계→차분"
+  },
+  {
+   "id": "TBEA",
+   "grid_node": "GRID_TBEA",
+   "name": "TBEA 特变电工",
+   "ticker": "600089 CH",
+   "region": "China",
+   "group": "G6_CN",
+   "tier": "core",
+   "note": "변압기 최대; 폴리실리콘 혼재"
+  },
+  {
+   "id": "DACHI",
+   "grid_node": "GRID_DACHI",
+   "name": "Shandong Dachi",
+   "ticker": "?",
+   "region": "China",
+   "group": "G6_CN",
+   "tier": "ext",
+   "note": "상장 여부 확인 필요"
+  },
+  {
+   "id": "CGPOWER",
+   "grid_node": "GRID_CG_POWER",
+   "name": "CG Power & Industrial Solutions",
+   "ticker": "CGPOWER IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "core",
+   "note": "Power Systems 세그먼트"
+  },
+  {
+   "id": "TARIL",
+   "grid_node": "GRID_TARIL",
+   "name": "Transformers & Rectifiers India",
+   "ticker": "TARIL IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "core",
+   "note": ""
+  },
+  {
+   "id": "VOLTAMP",
+   "grid_node": "GRID_VOLTAMP",
+   "name": "Voltamp Transformers",
+   "ticker": "VOLTAMP IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "core",
+   "note": ""
+  },
+  {
+   "id": "SHILCHAR",
+   "grid_node": "GRID_SHILCHAR",
+   "name": "Shilchar Technologies",
+   "ticker": "SHILCTECH IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "core",
+   "note": "수출 비중 큼(미국)"
+  },
+  {
+   "id": "INDOTECH",
+   "grid_node": "GRID_INDO_TECH",
+   "name": "Indo Tech Transformers",
+   "ticker": "INDOTECH IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "core",
+   "note": ""
+  },
+  {
+   "id": "BBL",
+   "grid_node": "GRID_BHARAT_BIJLEE",
+   "name": "Bharat Bijlee",
+   "ticker": "BBL IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "ext",
+   "note": "Power Systems 세그먼트(변압기)"
+  },
+  {
+   "id": "POWERINDIA",
+   "grid_node": "GRID_HITACHI_ENERGY_INDIA",
+   "name": "Hitachi Energy India",
+   "ticker": "POWERINDIA IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "core",
+   "note": ""
+  },
+  {
+   "id": "ENRIN",
+   "grid_node": "GRID_SIEMENS_ENERGY_INDIA",
+   "name": "Siemens Energy India",
+   "ticker": "ENRIN IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "ext",
+   "note": "2025 분할 상장 — 이력 짧음"
+  },
+  {
+   "id": "SCHNEIDER_IN",
+   "grid_node": "GRID_SCHNEIDER_INFRA_INDIA",
+   "name": "Schneider Electric Infrastructure",
+   "ticker": "SCHNEIDER IN",
+   "region": "India",
+   "group": "G7_IN",
+   "tier": "core",
+   "note": ""
+  },
+  {
+   "id": "WEG",
+   "grid_node": "GRID_WEG",
+   "name": "WEG",
+   "ticker": "WEGE3 BZ",
+   "region": "Latin America and Middle East",
+   "group": "G4_EU_LATAM",
+   "tier": "core",
+   "note": "GTD(발전·송배전) 사업 + 연결"
+  },
+  {
+   "id": "SWDY",
+   "grid_node": "GRID_ELSEWEDY",
+   "name": "Elsewedy Electric",
+   "ticker": "SWDY EY",
+   "region": "Latin America and Middle East",
+   "group": "G4_EU_LATAM",
+   "tier": "ext",
+   "note": "케이블·변압기 복합"
+  },
+  {
+   "id": "BAHRA",
+   "grid_node": "GRID_BAHRA",
+   "name": "Bahra Electric",
+   "ticker": null,
+   "region": "Latin America and Middle East",
+   "group": "G8_PRIVATE",
+   "tier": "private",
+   "note": "비상장 — 프로필만"
+  },
+  {
+   "id": "HDHE",
+   "grid_node": "KGRID_267260",
+   "name": "HD현대일렉트릭",
+   "ticker": "267260 KS",
+   "region": "Korea",
+   "group": "G8_KR",
+   "tier": "core",
+   "note": "DART; 전력기기 부문"
+  },
+  {
+   "id": "HYOSUNG_HI",
+   "grid_node": "KGRID_298040",
+   "name": "효성중공업",
+   "ticker": "298040 KS",
+   "region": "Korea",
+   "group": "G8_KR",
+   "tier": "core",
+   "note": "DART; 중공업 부문"
+  },
+  {
+   "id": "LSE",
+   "grid_node": "KGRID_010120",
+   "name": "LS ELECTRIC",
+   "ticker": "010120 KS",
+   "region": "Korea",
+   "group": "G8_KR",
+   "tier": "core",
+   "note": "DART; 전력 부문"
+  },
+  {
+   "id": "JERYONG",
+   "grid_node": "KGRID_033100",
+   "name": "제룡전기",
+   "ticker": "033100 KS",
+   "region": "Korea",
+   "group": "G8_KR",
+   "tier": "core",
+   "note": "DART; 배전 변압기·대미 수출"
+  },
+  {
+   "id": "ILJIN",
+   "grid_node": "KGRID_103590",
+   "name": "일진전기",
+   "ticker": "103590 KS",
+   "region": "Korea",
+   "group": "G8_KR",
+   "tier": "core",
+   "note": "DART; 중전기(변압기)"
+  },
+  {
+   "id": "SUNDO",
+   "grid_node": "KGRID_007610",
+   "name": "선도전기",
+   "ticker": "007610 KS",
+   "region": "Korea",
+   "group": "G8_KR",
+   "tier": "ext",
+   "note": "DART; 배전반"
+  }
+ ]
+}

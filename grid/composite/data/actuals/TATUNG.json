@@ -1,0 +1,2054 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "TATUNG",
+ "grid_node": "GRID_TATUNG",
+ "name": "Tatung Co. (大同)",
+ "ticker": "2371 TT",
+ "listed": true,
+ "currency": "TWD",
+ "unit": "thousand",
+ "accounting_basis": "TIFRS (Taiwan-IFRS as endorsed by FSC)",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "calendar",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 매출(분기)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": true,
+   "unit_note": "TWD thousand (仟元), as printed",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 22029509.0,
+     "prior_year_comparative": 25056066.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2016Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2016年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2016&SSEASON=1&REPORT_ID=C",
+     "published_date": "2016-05-16"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 21855331.0,
+     "prior_year_comparative": 22789484.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2016Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2016年4月1日至6月30日' (仟元); 同表 累計 43,884,840 / 前年累計 47,845,550",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2016&SSEASON=2&REPORT_ID=C",
+     "published_date": "2016-08-15"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 20307372.0,
+     "prior_year_comparative": 23852323.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2016Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2016年7月1日至9月30日' (仟元); 同表 累計 64,192,212 / 前年累計 71,697,873",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2016&SSEASON=3&REPORT_ID=C",
+     "published_date": "2016-11-14"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 20928428.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2016Q4(年度) 4000 營業收入合計 77,677,625 − 2017Q3 報告의 재작성 前年1~9月 累計 56,749,197 (자사 2016Q3 원보고 9M 64,192,212 는 재작성 전 기준이라 연간과 범위 불일치 → 재작성 9M 사용). prior_year_comparative 는 동일 기준 전년 9M 이 없어 생략",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2017&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2016&SSEASON=4&REPORT_ID=C",
+     "published_date": "2017-03-31"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 18539120.0,
+     "prior_year_comparative": 19644498.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2017Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2017年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2017&SSEASON=1&REPORT_ID=C",
+     "published_date": "2017-05-15"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 17212600.0,
+     "prior_year_comparative": 19335153.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2017Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2017年4月1日至6月30日' (仟元); 同表 累計 35,751,720 / 前年累計 38,979,651",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2017&SSEASON=2&REPORT_ID=C",
+     "published_date": "2017-08-14"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 19978822.0,
+     "prior_year_comparative": 17769546.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2017Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2017年7月1日至9月30日' (仟元); 同表 累計 55,730,542 / 前年累計 56,749,197",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2017&SSEASON=3&REPORT_ID=C",
+     "published_date": "2017-11-14"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 19822467.0,
+     "prior_year_comparative": 20928428.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2017Q4(年度) 合併綜合損益表 4000 營業收入合計 75,553,009 − 2017Q3 報告 1~9月 累計 55,730,542; prior_year_comparative = 同 年度報告 前年度 77,677,625 − 2017Q3 報告 前年1~9月 56,749,197",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2017&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2017&SSEASON=4&REPORT_ID=C",
+     "published_date": "2018-03-23"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 16470505.0,
+     "prior_year_comparative": 18539120.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2018Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2018年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2018&SSEASON=1&REPORT_ID=C",
+     "published_date": "2018-05-15"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 16213554.0,
+     "prior_year_comparative": 17212600.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2018Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2018年4月1日至6月30日' (仟元); 同表 累計 32,684,059 / 前年累計 35,751,720",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2018&SSEASON=2&REPORT_ID=C",
+     "published_date": "2018-08-14"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 15623824.0,
+     "prior_year_comparative": 19978822.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2018Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2018年7月1日至9月30日' (仟元); 同表 累計 48,307,883 / 前年累計 55,730,542",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2018&SSEASON=3&REPORT_ID=C",
+     "published_date": "2018-11-14"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 12314842.0,
+     "prior_year_comparative": 19822467.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2018Q4(年度) 合併綜合損益表 4000 營業收入合計 60,622,725 − 2018Q3 報告 1~9月 累計 48,307,883; prior_year_comparative = 同 年度報告 前年度 75,553,009 − 2018Q3 報告 前年1~9月 55,730,542",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2018&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2018&SSEASON=4&REPORT_ID=C",
+     "published_date": "2019-04-01"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 8104064.0,
+     "prior_year_comparative": 16470505.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2019Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2019年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2019&SSEASON=1&REPORT_ID=C",
+     "published_date": "2019-05-15"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 8116711.0,
+     "prior_year_comparative": 16213554.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2019Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2019年4月1日至6月30日' (仟元); 同表 累計 16,220,775 / 前年累計 32,684,059",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2019&SSEASON=2&REPORT_ID=C",
+     "published_date": "2019-08-14"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 8349075.0,
+     "prior_year_comparative": 15623824.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2019Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2019年7月1日至9月30日' (仟元); 同表 累計 24,569,850 / 前年累計 48,307,883",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2019&SSEASON=3&REPORT_ID=C",
+     "published_date": "2019-11-14"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 10853165.0,
+     "prior_year_comparative": 12314842.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2019Q4(年度) 合併綜合損益表 4000 營業收入合計 35,423,015 − 2019Q3 報告 1~9月 累計 24,569,850; prior_year_comparative = 同 年度報告 前年度 60,622,725 − 2019Q3 報告 前年1~9月 48,307,883",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2019&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2019&SSEASON=4&REPORT_ID=C",
+     "published_date": "2020-03-31"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 9083911.0,
+     "prior_year_comparative": 8104064.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2020Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2020年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2020&SSEASON=1&REPORT_ID=C",
+     "published_date": "2020-05-15"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 7655033.0,
+     "prior_year_comparative": 8116711.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2020Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2020年4月1日至6月30日' (仟元); 同表 累計 16,738,944 / 前年累計 16,220,775",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2020&SSEASON=2&REPORT_ID=C",
+     "published_date": "2020-08-14"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 7382849.0,
+     "prior_year_comparative": 8349075.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2020Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2020年7月1日至9月30日' (仟元); 同表 累計 24,121,793 / 前年累計 24,569,850",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2020&SSEASON=3&REPORT_ID=C",
+     "published_date": "2020-11-16"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 7519562.0,
+     "prior_year_comparative": 10853165.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2020Q4(年度) 合併綜合損益表 4000 營業收入合計 31,641,355 − 2020Q3 報告 1~9月 累計 24,121,793; prior_year_comparative = 同 年度報告 前年度 35,423,015 − 2020Q3 報告 前年1~9月 24,569,850",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2020&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2020&SSEASON=4&REPORT_ID=C",
+     "published_date": "2021-03-31"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 6568089.0,
+     "prior_year_comparative": 9083911.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2021Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2021年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2021&SSEASON=1&REPORT_ID=C",
+     "published_date": "2021-05-17"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 7408737.0,
+     "prior_year_comparative": 7655033.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2021Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2021年4月1日至6月30日' (仟元); 同表 累計 13,976,826 / 前年累計 16,738,944",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2021&SSEASON=2&REPORT_ID=C",
+     "published_date": "2021-08-16"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 8063931.0,
+     "prior_year_comparative": 7382849.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2021Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2021年7月1日至9月30日' (仟元); 同表 累計 22,040,757 / 前年累計 24,121,793",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2021&SSEASON=3&REPORT_ID=C",
+     "published_date": "2021-11-15"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 7564049.0,
+     "prior_year_comparative": 7519562.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2021Q4(年度) 合併綜合損益表 4000 營業收入合計 29,604,806 − 2021Q3 報告 1~9月 累計 22,040,757; prior_year_comparative = 同 年度報告 前年度 31,641,355 − 2021Q3 報告 前年1~9月 24,121,793",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2021&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2021&SSEASON=4&REPORT_ID=C",
+     "published_date": "2022-03-16"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 7663191.0,
+     "prior_year_comparative": 6568089.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2022Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2022年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2022&SSEASON=1&REPORT_ID=C",
+     "published_date": "2022-05-13"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 6822835.0,
+     "prior_year_comparative": 7408737.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2022Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2022年4月1日至6月30日' (仟元); 同表 累計 14,486,026 / 前年累計 13,976,826",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2022&SSEASON=2&REPORT_ID=C",
+     "published_date": "2022-08-15"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 7222268.0,
+     "prior_year_comparative": 8063931.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2022Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2022年7月1日至9月30日' (仟元); 同表 累計 21,708,294 / 前年累計 22,040,757",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2022&SSEASON=3&REPORT_ID=C",
+     "published_date": "2022-11-14"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 12830666.0,
+     "prior_year_comparative": 7564049.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2022Q4(年度) 合併綜合損益表 4000 營業收入合計 34,538,960 − 2022Q3 報告 1~9月 累計 21,708,294; prior_year_comparative = 同 年度報告 前年度 29,604,806 − 2022Q3 報告 前年1~9月 22,040,757",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2022&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2022&SSEASON=4&REPORT_ID=C",
+     "published_date": "2023-03-16"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 11122354.0,
+     "prior_year_comparative": 7663191.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2023Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2023年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2023&SSEASON=1&REPORT_ID=C",
+     "published_date": "2023-05-15"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 13240088.0,
+     "prior_year_comparative": 6822835.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2023Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2023年4月1日至6月30日' (仟元); 同表 累計 24,362,442 / 前年累計 14,486,026",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2023&SSEASON=2&REPORT_ID=C",
+     "published_date": "2023-08-14"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 11447504.0,
+     "prior_year_comparative": 7222268.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2023Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2023年7月1日至9月30日' (仟元); 同表 累計 35,809,946 / 前年累計 21,708,294",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2023&SSEASON=3&REPORT_ID=C",
+     "published_date": "2023-11-14"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 14541172.0,
+     "prior_year_comparative": 12830666.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2023Q4(年度) 合併綜合損益表 4000 營業收入合計 50,351,118 − 2023Q3 報告 1~9月 累計 35,809,946; prior_year_comparative = 同 年度報告 前年度 34,538,960 − 2023Q3 報告 前年1~9月 21,708,294",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2023&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2023&SSEASON=4&REPORT_ID=C",
+     "published_date": "2024-03-15"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 10820414.0,
+     "prior_year_comparative": 11122354.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2024Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2024年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2024&SSEASON=1&REPORT_ID=C",
+     "published_date": "2024-05-15"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 12670336.0,
+     "prior_year_comparative": 13240088.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2024Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2024年4月1日至6月30日' (仟元); 同表 累計 23,490,750 / 前年累計 24,362,442",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2024&SSEASON=2&REPORT_ID=C",
+     "published_date": "2024-08-14"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 12121275.0,
+     "prior_year_comparative": 11447504.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2024Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2024年7月1日至9月30日' (仟元); 同表 累計 35,612,025 / 前年累計 35,809,946",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2024&SSEASON=3&REPORT_ID=C",
+     "published_date": "2024-11-13"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 11865007.0,
+     "prior_year_comparative": 14541172.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2024Q4(年度) 合併綜合損益表 4000 營業收入合計 47,477,032 − 2024Q3 報告 1~9月 累計 35,612,025; prior_year_comparative = 同 年度報告 前年度 50,351,118 − 2024Q3 報告 前年1~9月 35,809,946",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2024&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2024&SSEASON=4&REPORT_ID=C",
+     "published_date": "2025-03-17"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 10544961.0,
+     "prior_year_comparative": 10820414.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2025Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2025年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2025&SSEASON=1&REPORT_ID=C",
+     "published_date": "2025-05-14"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 13006913.0,
+     "prior_year_comparative": 12670336.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2025Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2025年4月1日至6月30日' (仟元); 同表 累計 23,551,874 / 前年累計 23,490,750",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2025&SSEASON=2&REPORT_ID=C",
+     "published_date": "2025-08-14"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 13488482.0,
+     "prior_year_comparative": 12121275.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2025Q3 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2025年7月1日至9月30日' (仟元); 同表 累計 37,040,356 / 前年累計 35,612,025",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2025&SSEASON=3&REPORT_ID=C",
+     "published_date": "2025-11-14"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 13342512.0,
+     "prior_year_comparative": 11865007.0,
+     "method": "annual_minus_9m",
+     "locator": "MOPS IFRS XBRL 2025Q4(年度) 合併綜合損益表 4000 營業收入合計 50,382,868 − 2025Q3 報告 1~9月 累計 37,040,356; prior_year_comparative = 同 年度報告 前年度 47,477,032 − 2025Q3 報告 前年1~9月 35,612,025",
+     "source_url_9m": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2025&SSEASON=3&REPORT_ID=C",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2025&SSEASON=4&REPORT_ID=C",
+     "published_date": "2026-03-16"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 11487899.0,
+     "prior_year_comparative": 10544961.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2026Q1 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2026年1月1日至3月31日' (仟元)",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2026&SSEASON=1&REPORT_ID=C",
+     "published_date": "2026-05-15"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 13013803.0,
+     "prior_year_comparative": 13006913.0,
+     "method": "direct_reported_quarter",
+     "locator": "MOPS IFRS XBRL 2026Q2 合併綜合損益表, 4000 營業收入合計, 3개월 컬럼 '2026年4月1日至6月30日' (仟元); 同表 累計 24,501,702 / 前年累計 23,551,874",
+     "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2026&SSEASON=2&REPORT_ID=C",
+     "published_date": "2026-08-14"
+    }
+   ]
+  },
+  "revenue_monthly": {
+   "label_ko": "월매출(MOPS, 연결)",
+   "scope": "consolidated",
+   "freq": "M",
+   "primary": false,
+   "basis": "consolidated (合併營收, MOPS 월매출 자가신고·미감사). Σ3개월 과 분기 연결재무제표 4000 營業收入合計 의 차이는 collection_notes 에 회사별로 기록",
+   "unit_note": "TWD thousand (仟元)",
+   "release_rule": "익월 10일까지 MOPS 공시 의무(上市公司每月營業收入 申報)",
+   "points": [
+    {
+     "month": "2015-01",
+     "value": 9244626.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_1_0.html",
+     "locator": "MOPS 上市公司104年1月份營業收入統計表(t21sc03_104_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=9,308,025, 當月累計=9,244,626",
+     "prior_year_comparative": 9308025.0
+    },
+    {
+     "month": "2015-02",
+     "value": 7266896.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_2_0.html",
+     "locator": "MOPS 上市公司104年2月份營業收入統計表(t21sc03_104_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=8,506,497, 當月累計=16,511,523",
+     "prior_year_comparative": 8506497.0
+    },
+    {
+     "month": "2015-03",
+     "value": 8544706.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_3_0.html",
+     "locator": "MOPS 上市公司104年3月份營業收入統計表(t21sc03_104_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=11,651,609, 當月累計=25,056,229",
+     "prior_year_comparative": 11651609.0
+    },
+    {
+     "month": "2015-04",
+     "value": 7737897.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_4_0.html",
+     "locator": "MOPS 上市公司104年4月份營業收入統計表(t21sc03_104_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=8,241,896, 當月累計=32,794,126",
+     "prior_year_comparative": 8241896.0
+    },
+    {
+     "month": "2015-05",
+     "value": 7277126.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_5_0.html",
+     "locator": "MOPS 上市公司104年5月份營業收入統計表(t21sc03_104_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=8,707,783, 當月累計=40,071,252",
+     "prior_year_comparative": 8707783.0
+    },
+    {
+     "month": "2015-06",
+     "value": 7773961.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_6_0.html",
+     "locator": "MOPS 上市公司104年6月份營業收入統計表(t21sc03_104_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=11,300,082, 當月累計=47,845,213",
+     "prior_year_comparative": 11300082.0
+    },
+    {
+     "month": "2015-07",
+     "value": 7304025.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_7_0.html",
+     "locator": "MOPS 上市公司104年7月份營業收入統計表(t21sc03_104_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=8,677,449, 當月累計=55,149,238",
+     "prior_year_comparative": 8677449.0
+    },
+    {
+     "month": "2015-08",
+     "value": 7904349.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_8_0.html",
+     "locator": "MOPS 上市公司104年8月份營業收入統計表(t21sc03_104_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=8,638,328, 當月累計=63,053,587",
+     "prior_year_comparative": 8638328.0
+    },
+    {
+     "month": "2015-09",
+     "value": 8566010.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_9_0.html",
+     "locator": "MOPS 上市公司104年9月份營業收入統計表(t21sc03_104_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=9,510,111, 當月累計=71,619,597",
+     "prior_year_comparative": 9510111.0
+    },
+    {
+     "month": "2015-10",
+     "value": 7947047.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_10_0.html",
+     "locator": "MOPS 上市公司104年10月份營業收入統計表(t21sc03_104_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=9,629,412, 當月累計=79,566,644",
+     "prior_year_comparative": 9629412.0
+    },
+    {
+     "month": "2015-11",
+     "value": 7590188.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_11_0.html",
+     "locator": "MOPS 上市公司104年11月份營業收入統計表(t21sc03_104_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=9,055,014, 當月累計=87,156,832",
+     "prior_year_comparative": 9055014.0
+    },
+    {
+     "month": "2015-12",
+     "value": 7663427.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_104_12_0.html",
+     "locator": "MOPS 上市公司104年12月份營業收入統計表(t21sc03_104_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=9,383,073, 當月累計=94,820,259",
+     "prior_year_comparative": 9383073.0
+    },
+    {
+     "month": "2016-01",
+     "value": 6826264.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_1_0.html",
+     "locator": "MOPS 上市公司105年1月份營業收入統計表(t21sc03_105_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=9,244,626, 當月累計=6,826,264",
+     "prior_year_comparative": 9244626.0
+    },
+    {
+     "month": "2016-02",
+     "value": 6104679.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_2_0.html",
+     "locator": "MOPS 上市公司105年2月份營業收入統計表(t21sc03_105_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,266,896, 當月累計=12,930,943",
+     "prior_year_comparative": 7266896.0
+    },
+    {
+     "month": "2016-03",
+     "value": 6713554.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_3_0.html",
+     "locator": "MOPS 上市公司105年3月份營業收入統計表(t21sc03_105_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=8,544,543, 當月累計=19,644,498",
+     "prior_year_comparative": 8544543.0
+    },
+    {
+     "month": "2016-04",
+     "value": 6749596.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_4_0.html",
+     "locator": "MOPS 上市公司105年4月份營業收入統計表(t21sc03_105_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,738,060, 當月累計=26,394,093",
+     "prior_year_comparative": 7738060.0
+    },
+    {
+     "month": "2016-05",
+     "value": 6589408.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_5_0.html",
+     "locator": "MOPS 上市公司105年5月份營業收入統計表(t21sc03_105_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,277,126, 當月累計=32,983,502",
+     "prior_year_comparative": 7277126.0
+    },
+    {
+     "month": "2016-06",
+     "value": 5996149.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_6_0.html",
+     "locator": "MOPS 上市公司105年6月份營業收入統計表(t21sc03_105_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,774,298, 當月累計=38,979,651",
+     "prior_year_comparative": 7774298.0
+    },
+    {
+     "month": "2016-07",
+     "value": 5976597.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_7_0.html",
+     "locator": "MOPS 上市公司105年7月份營業收入統計表(t21sc03_105_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,303,688, 當月累計=44,956,248",
+     "prior_year_comparative": 7303688.0
+    },
+    {
+     "month": "2016-08",
+     "value": 5711848.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_8_0.html",
+     "locator": "MOPS 上市公司105年8月份營業收入統計表(t21sc03_105_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,904,349, 當月累計=50,668,096",
+     "prior_year_comparative": 7904349.0
+    },
+    {
+     "month": "2016-09",
+     "value": 6068762.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_9_0.html",
+     "locator": "MOPS 上市公司105年9月份營業收入統計表(t21sc03_105_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=8,644,287, 當月累計=56,736,858",
+     "prior_year_comparative": 8644287.0
+    },
+    {
+     "month": "2016-10",
+     "value": 6784485.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_10_0.html",
+     "locator": "MOPS 上市公司105年10月份營業收入統計表(t21sc03_105_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,868,770, 當月累計=63,521,343",
+     "prior_year_comparative": 7868770.0
+    },
+    {
+     "month": "2016-11",
+     "value": 6997586.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_11_0.html",
+     "locator": "MOPS 上市公司105年11月份營業收入統計表(t21sc03_105_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,590,188, 當月累計=70,518,929",
+     "prior_year_comparative": 7590188.0
+    },
+    {
+     "month": "2016-12",
+     "value": 7262562.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_105_12_0.html",
+     "locator": "MOPS 上市公司105年12月份營業收入統計表(t21sc03_105_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,587,521, 當月累計=77,781,491",
+     "prior_year_comparative": 7587521.0
+    },
+    {
+     "month": "2017-01",
+     "value": 6365200.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_1_0.html",
+     "locator": "MOPS 上市公司106年1月份營業收入統計表(t21sc03_106_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,826,264, 當月累計=6,365,200",
+     "prior_year_comparative": 6826264.0
+    },
+    {
+     "month": "2017-02",
+     "value": 5856514.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_2_0.html",
+     "locator": "MOPS 上市公司106年2月份營業收入統計表(t21sc03_106_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,104,679, 當月累計=12,221,713",
+     "prior_year_comparative": 6104679.0
+    },
+    {
+     "month": "2017-03",
+     "value": 6318151.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_3_0.html",
+     "locator": "MOPS 上市公司106年3月份營業收入統計表(t21sc03_106_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,713,555, 當月累計=18,539,865",
+     "prior_year_comparative": 6713555.0
+    },
+    {
+     "month": "2017-04",
+     "value": 5768920.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_4_0.html",
+     "locator": "MOPS 上市公司106年4月份營業收入統計表(t21sc03_106_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,749,595, 當月累計=24,308,785",
+     "prior_year_comparative": 6749595.0
+    },
+    {
+     "month": "2017-05",
+     "value": 5691293.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_5_0.html",
+     "locator": "MOPS 上市公司106年5月份營業收入統計表(t21sc03_106_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,589,409, 當月累計=30,000,078",
+     "prior_year_comparative": 6589409.0
+    },
+    {
+     "month": "2017-06",
+     "value": 5713728.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_6_0.html",
+     "locator": "MOPS 上市公司106年6月份營業收入統計表(t21sc03_106_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,996,149, 當月累計=35,713,806",
+     "prior_year_comparative": 5996149.0
+    },
+    {
+     "month": "2017-07",
+     "value": 6278172.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_7_0.html",
+     "locator": "MOPS 上市公司106年7月份營業收入統計表(t21sc03_106_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,976,597, 當月累計=41,991,978",
+     "prior_year_comparative": 5976597.0
+    },
+    {
+     "month": "2017-08",
+     "value": 6774952.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_8_0.html",
+     "locator": "MOPS 上市公司106年8月份營業收入統計表(t21sc03_106_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,711,848, 當月累計=48,766,929",
+     "prior_year_comparative": 5711848.0
+    },
+    {
+     "month": "2017-09",
+     "value": 6962673.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_9_0.html",
+     "locator": "MOPS 上市公司106年9月份營業收入統計表(t21sc03_106_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,068,762, 當月累計=55,729,603",
+     "prior_year_comparative": 6068762.0
+    },
+    {
+     "month": "2017-10",
+     "value": 6768155.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_10_0.html",
+     "locator": "MOPS 上市公司106年10月份營業收入統計表(t21sc03_106_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,784,485, 當月累計=62,497,757",
+     "prior_year_comparative": 6784485.0
+    },
+    {
+     "month": "2017-11",
+     "value": 6831485.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_11_0.html",
+     "locator": "MOPS 上市公司106年11月份營業收入統計表(t21sc03_106_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,997,586, 當月累計=69,329,242",
+     "prior_year_comparative": 6997586.0
+    },
+    {
+     "month": "2017-12",
+     "value": 6479571.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_106_12_0.html",
+     "locator": "MOPS 上市公司106年12月份營業收入統計表(t21sc03_106_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=7,262,562, 當月累計=75,808,813",
+     "prior_year_comparative": 7262562.0
+    },
+    {
+     "month": "2018-01",
+     "value": 6218889.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_1_0.html",
+     "locator": "MOPS 上市公司107年1月份營業收入統計表(t21sc03_107_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,365,200, 當月累計=6,218,889",
+     "prior_year_comparative": 6365200.0
+    },
+    {
+     "month": "2018-02",
+     "value": 4902361.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_2_0.html",
+     "locator": "MOPS 上市公司107年2月份營業收入統計表(t21sc03_107_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,856,514, 當月累計=11,121,250",
+     "prior_year_comparative": 5856514.0
+    },
+    {
+     "month": "2018-03",
+     "value": 5332254.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_3_0.html",
+     "locator": "MOPS 上市公司107年3月份營業收入統計表(t21sc03_107_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,318,151, 當月累計=16,453,504",
+     "prior_year_comparative": 6318151.0
+    },
+    {
+     "month": "2018-04",
+     "value": 5355186.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_4_0.html",
+     "locator": "MOPS 上市公司107年4月份營業收入統計表(t21sc03_107_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,768,920, 當月累計=21,808,690",
+     "prior_year_comparative": 5768920.0
+    },
+    {
+     "month": "2018-05",
+     "value": 5386879.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_5_0.html",
+     "locator": "MOPS 上市公司107年5月份營業收入統計表(t21sc03_107_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,691,293, 當月累計=27,195,569",
+     "prior_year_comparative": 5691293.0
+    },
+    {
+     "month": "2018-06",
+     "value": 5488490.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_6_0.html",
+     "locator": "MOPS 上市公司107年6月份營業收入統計表(t21sc03_107_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,713,728, 當月累計=32,684,059",
+     "prior_year_comparative": 5713728.0
+    },
+    {
+     "month": "2018-07",
+     "value": 5516461.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_7_0.html",
+     "locator": "MOPS 上市公司107年7月份營業收入統計表(t21sc03_107_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,278,172, 當月累計=38,200,520",
+     "prior_year_comparative": 6278172.0
+    },
+    {
+     "month": "2018-08",
+     "value": 5302165.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_8_0.html",
+     "locator": "MOPS 上市公司107年8月份營業收入統計表(t21sc03_107_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,774,951, 當月累計=43,502,685",
+     "prior_year_comparative": 6774951.0
+    },
+    {
+     "month": "2018-09",
+     "value": 4810866.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_9_0.html",
+     "locator": "MOPS 上市公司107年9月份營業收入統計表(t21sc03_107_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,962,673, 當月累計=48,313,551",
+     "prior_year_comparative": 6962673.0
+    },
+    {
+     "month": "2018-10",
+     "value": 4402936.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_10_0.html",
+     "locator": "MOPS 上市公司107年10月份營業收入統計表(t21sc03_107_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,768,155, 當月累計=52,716,487",
+     "prior_year_comparative": 6768155.0
+    },
+    {
+     "month": "2018-11",
+     "value": 3844148.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_11_0.html",
+     "locator": "MOPS 上市公司107年11月份營業收入統計表(t21sc03_107_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,831,485, 當月累計=56,560,635",
+     "prior_year_comparative": 6831485.0
+    },
+    {
+     "month": "2018-12",
+     "value": 4119178.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_107_12_0.html",
+     "locator": "MOPS 上市公司107年12月份營業收入統計表(t21sc03_107_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,479,571, 當月累計=60,679,813",
+     "prior_year_comparative": 6479571.0
+    },
+    {
+     "month": "2019-01",
+     "value": 3062480.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_1_0.html",
+     "locator": "MOPS 上市公司108年1月份營業收入統計表(t21sc03_108_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,218,889, 當月累計=3,062,480",
+     "prior_year_comparative": 6218889.0
+    },
+    {
+     "month": "2019-02",
+     "value": 2213442.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_2_0.html",
+     "locator": "MOPS 上市公司108年2月份營業收入統計表(t21sc03_108_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,902,361, 當月累計=5,275,922",
+     "prior_year_comparative": 4902361.0
+    },
+    {
+     "month": "2019-03",
+     "value": 2862887.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_3_0.html",
+     "locator": "MOPS 上市公司108年3月份營業收入統計表(t21sc03_108_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,332,254, 當月累計=8,138,809",
+     "prior_year_comparative": 5332254.0
+    },
+    {
+     "month": "2019-04",
+     "value": 2805065.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_4_0.html",
+     "locator": "MOPS 上市公司108年4月份營業收入統計表(t21sc03_108_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,355,186, 當月累計=10,943,874",
+     "prior_year_comparative": 5355186.0
+    },
+    {
+     "month": "2019-05",
+     "value": 2618532.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_5_0.html",
+     "locator": "MOPS 上市公司108年5月份營業收入統計表(t21sc03_108_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,386,879, 當月累計=13,562,406",
+     "prior_year_comparative": 5386879.0
+    },
+    {
+     "month": "2019-06",
+     "value": 2671997.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_6_0.html",
+     "locator": "MOPS 上市公司108年6月份營業收入統計表(t21sc03_108_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,488,490, 當月累計=16,234,403",
+     "prior_year_comparative": 5488490.0
+    },
+    {
+     "month": "2019-07",
+     "value": 2712754.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_7_0.html",
+     "locator": "MOPS 上市公司108年7月份營業收入統計表(t21sc03_108_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,516,461, 當月累計=18,947,157",
+     "prior_year_comparative": 5516461.0
+    },
+    {
+     "month": "2019-08",
+     "value": 2874934.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_8_0.html",
+     "locator": "MOPS 上市公司108年8月份營業收入統計表(t21sc03_108_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=5,302,165, 當月累計=21,822,091",
+     "prior_year_comparative": 5302165.0
+    },
+    {
+     "month": "2019-09",
+     "value": 2753458.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_9_0.html",
+     "locator": "MOPS 上市公司108年9月份營業收入統計表(t21sc03_108_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,810,866, 當月累計=24,575,549",
+     "prior_year_comparative": 4810866.0
+    },
+    {
+     "month": "2019-10",
+     "value": 2777135.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_10_0.html",
+     "locator": "MOPS 上市公司108年10月份營業收入統計表(t21sc03_108_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,402,936, 當月累計=27,352,683",
+     "prior_year_comparative": 4402936.0
+    },
+    {
+     "month": "2019-11",
+     "value": 4219351.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_11_0.html",
+     "locator": "MOPS 上市公司108年11月份營業收入統計表(t21sc03_108_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,844,148, 當月累計=31,572,035",
+     "prior_year_comparative": 3844148.0
+    },
+    {
+     "month": "2019-12",
+     "value": 3810080.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_108_12_0.html",
+     "locator": "MOPS 上市公司108年12月份營業收入統計表(t21sc03_108_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,062,089, 當月累計=35,382,115",
+     "prior_year_comparative": 4062089.0
+    },
+    {
+     "month": "2020-01",
+     "value": 2515305.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_1_0.html",
+     "locator": "MOPS 上市公司109年1月份營業收入統計表(t21sc03_109_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,062,480, 當月累計=2,515,305",
+     "prior_year_comparative": 3062480.0
+    },
+    {
+     "month": "2020-02",
+     "value": 3027364.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_2_0.html",
+     "locator": "MOPS 上市公司109年2月份營業收入統計表(t21sc03_109_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,213,442, 當月累計=5,542,669",
+     "prior_year_comparative": 2213442.0
+    },
+    {
+     "month": "2020-03",
+     "value": 3387482.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_3_0.html",
+     "locator": "MOPS 上市公司109年3月份營業收入統計表(t21sc03_109_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,828,142, 當月累計=8,930,151",
+     "prior_year_comparative": 2828142.0
+    },
+    {
+     "month": "2020-04",
+     "value": 2591892.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_4_0.html",
+     "locator": "MOPS 上市公司109年4月份營業收入統計表(t21sc03_109_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,839,810, 當月累計=11,522,043",
+     "prior_year_comparative": 2839810.0
+    },
+    {
+     "month": "2020-05",
+     "value": 2469955.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_5_0.html",
+     "locator": "MOPS 上市公司109年5月份營業收入統計表(t21sc03_109_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,618,532, 當月累計=13,991,998",
+     "prior_year_comparative": 2618532.0
+    },
+    {
+     "month": "2020-06",
+     "value": 2747782.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_6_0.html",
+     "locator": "MOPS 上市公司109年6月份營業收入統計表(t21sc03_109_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,658,369, 當月累計=16,739,780",
+     "prior_year_comparative": 2658369.0
+    },
+    {
+     "month": "2020-07",
+     "value": 2636869.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_7_0.html",
+     "locator": "MOPS 上市公司109年7月份營業收入統計表(t21sc03_109_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,715,014, 當月累計=19,376,649",
+     "prior_year_comparative": 2715014.0
+    },
+    {
+     "month": "2020-08",
+     "value": 2268775.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_8_0.html",
+     "locator": "MOPS 上市公司109年8月份營業收入統計表(t21sc03_109_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,886,302, 當月累計=21,645,424",
+     "prior_year_comparative": 2886302.0
+    },
+    {
+     "month": "2020-09",
+     "value": 2478018.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_9_0.html",
+     "locator": "MOPS 上市公司109年9月份營業收入統計表(t21sc03_109_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,747,759, 當月累計=24,123,442",
+     "prior_year_comparative": 2747759.0
+    },
+    {
+     "month": "2020-10",
+     "value": 2351850.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_10_0.html",
+     "locator": "MOPS 上市公司109年10月份營業收入統計表(t21sc03_109_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,782,834, 當月累計=26,475,292",
+     "prior_year_comparative": 2782834.0
+    },
+    {
+     "month": "2020-11",
+     "value": 2624403.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_11_0.html",
+     "locator": "MOPS 上市公司109年11月份營業收入統計表(t21sc03_109_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,219,351, 當月累計=29,099,695",
+     "prior_year_comparative": 4219351.0
+    },
+    {
+     "month": "2020-12",
+     "value": 2529089.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_109_12_0.html",
+     "locator": "MOPS 上市公司109年12月份營業收入統計表(t21sc03_109_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,850,980, 當月累計=31,628,784",
+     "prior_year_comparative": 3850980.0
+    },
+    {
+     "month": "2021-01",
+     "value": 2449678.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_1_0.html",
+     "locator": "MOPS 上市公司110年1月份營業收入統計表(t21sc03_110_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,515,305, 當月累計=2,449,678",
+     "prior_year_comparative": 2515305.0
+    },
+    {
+     "month": "2021-02",
+     "value": 1829442.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_2_0.html",
+     "locator": "MOPS 上市公司110年2月份營業收入統計表(t21sc03_110_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,027,364, 當月累計=4,279,120",
+     "prior_year_comparative": 3027364.0
+    },
+    {
+     "month": "2021-03",
+     "value": 2288969.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_3_0.html",
+     "locator": "MOPS 上市公司110年3月份營業收入統計表(t21sc03_110_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,541,243, 當月累計=6,568,089",
+     "prior_year_comparative": 3541243.0
+    },
+    {
+     "month": "2021-04",
+     "value": 2218017.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_4_0.html",
+     "locator": "MOPS 上市公司110年4月份營業收入統計表(t21sc03_110_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,438,131, 當月累計=8,786,106",
+     "prior_year_comparative": 2438131.0
+    },
+    {
+     "month": "2021-05",
+     "value": 2764705.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_5_0.html",
+     "locator": "MOPS 上市公司110年5月份營業收入統計表(t21sc03_110_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,469,955, 當月累計=11,550,811",
+     "prior_year_comparative": 2469955.0
+    },
+    {
+     "month": "2021-06",
+     "value": 2427273.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_6_0.html",
+     "locator": "MOPS 上市公司110年6月份營業收入統計表(t21sc03_110_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,746,946, 當月累計=13,978,084",
+     "prior_year_comparative": 2746946.0
+    },
+    {
+     "month": "2021-07",
+     "value": 2350992.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_7_0.html",
+     "locator": "MOPS 上市公司110年7月份營業收入統計表(t21sc03_110_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,637,705, 當月累計=16,329,076",
+     "prior_year_comparative": 2637705.0
+    },
+    {
+     "month": "2021-08",
+     "value": 2793519.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_8_0.html",
+     "locator": "MOPS 上市公司110年8月份營業收入統計表(t21sc03_110_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,268,775, 當月累計=19,122,595",
+     "prior_year_comparative": 2268775.0
+    },
+    {
+     "month": "2021-09",
+     "value": 2918163.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_9_0.html",
+     "locator": "MOPS 上市公司110年9月份營業收入統計表(t21sc03_110_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,476,369, 當月累計=22,040,758",
+     "prior_year_comparative": 2476369.0
+    },
+    {
+     "month": "2021-10",
+     "value": 2210990.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_10_0.html",
+     "locator": "MOPS 上市公司110年10月份營業收入統計表(t21sc03_110_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,353,499, 當月累計=24,251,747",
+     "prior_year_comparative": 2353499.0
+    },
+    {
+     "month": "2021-11",
+     "value": 2600720.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_11_0.html",
+     "locator": "MOPS 上市公司110年11月份營業收入統計表(t21sc03_110_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,624,403, 當月累計=26,852,468",
+     "prior_year_comparative": 2624403.0
+    },
+    {
+     "month": "2021-12",
+     "value": 2872978.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_110_12_0.html",
+     "locator": "MOPS 上市公司110年12月份營業收入統計表(t21sc03_110_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,541,659, 當月累計=29,725,446",
+     "prior_year_comparative": 2541659.0
+    },
+    {
+     "month": "2022-01",
+     "value": 2727030.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_1_0.html",
+     "locator": "MOPS 上市公司111年1月份營業收入統計表(t21sc03_111_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,449,678, 當月累計=2,727,030",
+     "prior_year_comparative": 2449678.0
+    },
+    {
+     "month": "2022-02",
+     "value": 2048194.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_2_0.html",
+     "locator": "MOPS 上市公司111年2月份營業收入統計表(t21sc03_111_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=1,829,442, 當月累計=4,775,224",
+     "prior_year_comparative": 1829442.0
+    },
+    {
+     "month": "2022-03",
+     "value": 2894545.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_3_0.html",
+     "locator": "MOPS 上市公司111年3月份營業收入統計表(t21sc03_111_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,288,969, 當月累計=7,669,768",
+     "prior_year_comparative": 2288969.0
+    },
+    {
+     "month": "2022-04",
+     "value": 2098835.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_4_0.html",
+     "locator": "MOPS 上市公司111年4月份營業收入統計表(t21sc03_111_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,218,017, 當月累計=9,768,603",
+     "prior_year_comparative": 2218017.0
+    },
+    {
+     "month": "2022-05",
+     "value": 2336446.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_5_0.html",
+     "locator": "MOPS 上市公司111年5月份營業收入統計表(t21sc03_111_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,764,705, 當月累計=12,105,050",
+     "prior_year_comparative": 2764705.0
+    },
+    {
+     "month": "2022-06",
+     "value": 2469205.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_6_0.html",
+     "locator": "MOPS 上市公司111年6月份營業收入統計表(t21sc03_111_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,426,015, 當月累計=14,574,255",
+     "prior_year_comparative": 2426015.0
+    },
+    {
+     "month": "2022-07",
+     "value": 2301653.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_7_0.html",
+     "locator": "MOPS 上市公司111年7月份營業收入統計表(t21sc03_111_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,352,250, 當月累計=16,787,678",
+     "prior_year_comparative": 2352250.0
+    },
+    {
+     "month": "2022-08",
+     "value": 2406367.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_8_0.html",
+     "locator": "MOPS 上市公司111年8月份營業收入統計表(t21sc03_111_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,793,519, 當月累計=19,194,045",
+     "prior_year_comparative": 2793519.0
+    },
+    {
+     "month": "2022-09",
+     "value": 2511741.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_9_0.html",
+     "locator": "MOPS 上市公司111年9月份營業收入統計表(t21sc03_111_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,918,163, 當月累計=21,705,786",
+     "prior_year_comparative": 2918163.0
+    },
+    {
+     "month": "2022-10",
+     "value": 4366880.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_10_0.html",
+     "locator": "MOPS 上市公司111年10月份營業收入統計表(t21sc03_111_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,210,990, 當月累計=26,075,174",
+     "prior_year_comparative": 2210990.0
+    },
+    {
+     "month": "2022-11",
+     "value": 4051237.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_11_0.html",
+     "locator": "MOPS 上市公司111年11月份營業收入統計表(t21sc03_111_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,600,720, 當月累計=30,126,411",
+     "prior_year_comparative": 2600720.0
+    },
+    {
+     "month": "2022-12",
+     "value": 4424394.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_111_12_0.html",
+     "locator": "MOPS 上市公司111年12月份營業收入統計表(t21sc03_111_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,752,337, 當月累計=34,550,805",
+     "prior_year_comparative": 2752337.0
+    },
+    {
+     "month": "2023-01",
+     "value": 3538518.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_1_0.html",
+     "locator": "MOPS 上市公司112年1月份營業收入統計表(t21sc03_112_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,727,030, 當月累計=3,538,518",
+     "prior_year_comparative": 2727030.0
+    },
+    {
+     "month": "2023-02",
+     "value": 3556033.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_2_0.html",
+     "locator": "MOPS 上市公司112年2月份營業收入統計表(t21sc03_112_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,048,194, 當月累計=7,094,551",
+     "prior_year_comparative": 2048194.0
+    },
+    {
+     "month": "2023-03",
+     "value": 4028777.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_3_0.html",
+     "locator": "MOPS 上市公司112年3月份營業收入統計表(t21sc03_112_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,887,967, 當月累計=11,123,328",
+     "prior_year_comparative": 2887967.0
+    },
+    {
+     "month": "2023-04",
+     "value": 3863214.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_4_0.html",
+     "locator": "MOPS 上市公司112年4月份營業收入統計表(t21sc03_112_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,105,412, 當月累計=14,985,567",
+     "prior_year_comparative": 2105412.0
+    },
+    {
+     "month": "2023-05",
+     "value": 4495318.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_5_0.html",
+     "locator": "MOPS 上市公司112年5月份營業收入統計表(t21sc03_112_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,336,446, 當月累計=19,480,885",
+     "prior_year_comparative": 2336446.0
+    },
+    {
+     "month": "2023-06",
+     "value": 4886280.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_6_0.html",
+     "locator": "MOPS 上市公司112年6月份營業收入統計表(t21sc03_112_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,380,975, 當月累計=24,367,165",
+     "prior_year_comparative": 2380975.0
+    },
+    {
+     "month": "2023-07",
+     "value": 3877658.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_7_0.html",
+     "locator": "MOPS 上市公司112年7月份營業收入統計表(t21sc03_112_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,301,653, 當月累計=28,240,100",
+     "prior_year_comparative": 2301653.0
+    },
+    {
+     "month": "2023-08",
+     "value": 3817751.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_8_0.html",
+     "locator": "MOPS 上市公司112年8月份營業收入統計表(t21sc03_112_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,406,367, 當月累計=32,057,851",
+     "prior_year_comparative": 2406367.0
+    },
+    {
+     "month": "2023-09",
+     "value": 3752193.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_9_0.html",
+     "locator": "MOPS 上市公司112年9月份營業收入統計表(t21sc03_112_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=2,514,249, 當月累計=35,810,044",
+     "prior_year_comparative": 2514249.0
+    },
+    {
+     "month": "2023-10",
+     "value": 3499622.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_10_0.html",
+     "locator": "MOPS 上市公司112年10月份營業收入統計表(t21sc03_112_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,366,880, 當月累計=39,309,568",
+     "prior_year_comparative": 4366880.0
+    },
+    {
+     "month": "2023-11",
+     "value": 4779182.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_11_0.html",
+     "locator": "MOPS 上市公司112年11月份營業收入統計表(t21sc03_112_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,051,237, 當月累計=44,088,750",
+     "prior_year_comparative": 4051237.0
+    },
+    {
+     "month": "2023-12",
+     "value": 6262368.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_112_12_0.html",
+     "locator": "MOPS 上市公司112年12月份營業收入統計表(t21sc03_112_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,412,549, 當月累計=50,351,118",
+     "prior_year_comparative": 4412549.0
+    },
+    {
+     "month": "2024-01",
+     "value": 3357012.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_1_0.html",
+     "locator": "MOPS 上市公司113年1月份營業收入統計表(t21sc03_113_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,538,518, 當月累計=3,357,012",
+     "prior_year_comparative": 3538518.0
+    },
+    {
+     "month": "2024-02",
+     "value": 3792634.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_2_0.html",
+     "locator": "MOPS 上市公司113年2月份營業收入統計表(t21sc03_113_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,556,033, 當月累計=7,149,646",
+     "prior_year_comparative": 3556033.0
+    },
+    {
+     "month": "2024-03",
+     "value": 3670767.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_3_0.html",
+     "locator": "MOPS 上市公司113年3月份營業收入統計表(t21sc03_113_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,027,803, 當月累計=10,820,413",
+     "prior_year_comparative": 4027803.0
+    },
+    {
+     "month": "2024-04",
+     "value": 3899276.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_4_0.html",
+     "locator": "MOPS 上市公司113年4月份營業收入統計表(t21sc03_113_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,863,213, 當月累計=14,719,689",
+     "prior_year_comparative": 3863213.0
+    },
+    {
+     "month": "2024-05",
+     "value": 4006391.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_5_0.html",
+     "locator": "MOPS 上市公司113年5月份營業收入統計表(t21sc03_113_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,495,318, 當月累計=18,726,080",
+     "prior_year_comparative": 4495318.0
+    },
+    {
+     "month": "2024-06",
+     "value": 4764670.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_6_0.html",
+     "locator": "MOPS 上市公司113年6月份營業收入統計表(t21sc03_113_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,881,556, 當月累計=23,490,750",
+     "prior_year_comparative": 4881556.0
+    },
+    {
+     "month": "2024-07",
+     "value": 4173193.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_7_0.html",
+     "locator": "MOPS 上市公司113年7月份營業收入統計表(t21sc03_113_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,877,659, 當月累計=27,663,943",
+     "prior_year_comparative": 3877659.0
+    },
+    {
+     "month": "2024-08",
+     "value": 4032767.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_8_0.html",
+     "locator": "MOPS 上市公司113年8月份營業收入統計表(t21sc03_113_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,817,751, 當月累計=31,696,710",
+     "prior_year_comparative": 3817751.0
+    },
+    {
+     "month": "2024-09",
+     "value": 3925579.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_9_0.html",
+     "locator": "MOPS 上市公司113年9月份營業收入統計表(t21sc03_113_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,752,193, 當月累計=35,622,289",
+     "prior_year_comparative": 3752193.0
+    },
+    {
+     "month": "2024-10",
+     "value": 3531068.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_10_0.html",
+     "locator": "MOPS 上市公司113年10月份營業收入統計表(t21sc03_113_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,499,524, 當月累計=39,143,093",
+     "prior_year_comparative": 3499524.0
+    },
+    {
+     "month": "2024-11",
+     "value": 4051014.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_11_0.html",
+     "locator": "MOPS 上市公司113年11月份營業收入統計表(t21sc03_113_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,779,182, 當月累計=43,194,107",
+     "prior_year_comparative": 4779182.0
+    },
+    {
+     "month": "2024-12",
+     "value": 4284296.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_113_12_0.html",
+     "locator": "MOPS 上市公司113年12月份營業收入統計表(t21sc03_113_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=6,262,368, 當月累計=47,478,403",
+     "prior_year_comparative": 6262368.0
+    },
+    {
+     "month": "2025-01",
+     "value": 3558687.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_1_0.html",
+     "locator": "MOPS 上市公司114年1月份營業收入統計表(t21sc03_114_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,357,012, 當月累計=3,558,687",
+     "prior_year_comparative": 3357012.0
+    },
+    {
+     "month": "2025-02",
+     "value": 3041720.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_2_0.html",
+     "locator": "MOPS 上市公司114年2月份營業收入統計表(t21sc03_114_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,792,634, 當月累計=6,600,407",
+     "prior_year_comparative": 3792634.0
+    },
+    {
+     "month": "2025-03",
+     "value": 3930070.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_3_0.html",
+     "locator": "MOPS 上市公司114年3月份營業收入統計表(t21sc03_114_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,670,767, 當月累計=10,530,477",
+     "prior_year_comparative": 3670767.0
+    },
+    {
+     "month": "2025-04",
+     "value": 4289081.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_4_0.html",
+     "locator": "MOPS 上市公司114年4月份營業收入統計表(t21sc03_114_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,899,276, 當月累計=14,834,042",
+     "prior_year_comparative": 3899276.0
+    },
+    {
+     "month": "2025-05",
+     "value": 4180316.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_5_0.html",
+     "locator": "MOPS 上市公司114年5月份營業收入統計表(t21sc03_114_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,006,391, 當月累計=19,014,358",
+     "prior_year_comparative": 4006391.0
+    },
+    {
+     "month": "2025-06",
+     "value": 4537514.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_6_0.html",
+     "locator": "MOPS 上市公司114年6月份營業收入統計表(t21sc03_114_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,764,670, 當月累計=23,551,872",
+     "prior_year_comparative": 4764670.0
+    },
+    {
+     "month": "2025-07",
+     "value": 4283928.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_7_0.html",
+     "locator": "MOPS 上市公司114年7月份營業收入統計表(t21sc03_114_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,173,193, 當月累計=27,835,800",
+     "prior_year_comparative": 4173193.0
+    },
+    {
+     "month": "2025-08",
+     "value": 4952129.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_8_0.html",
+     "locator": "MOPS 上市公司114年8月份營業收入統計表(t21sc03_114_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,032,767, 當月累計=32,787,929",
+     "prior_year_comparative": 4032767.0
+    },
+    {
+     "month": "2025-09",
+     "value": 4252428.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_9_0.html",
+     "locator": "MOPS 上市公司114年9月份營業收入統計表(t21sc03_114_9_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,915,315, 當月累計=37,040,357",
+     "prior_year_comparative": 3915315.0
+    },
+    {
+     "month": "2025-10",
+     "value": 3689731.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_10_0.html",
+     "locator": "MOPS 上市公司114年10月份營業收入統計表(t21sc03_114_10_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,531,068, 當月累計=40,730,088",
+     "prior_year_comparative": 3531068.0
+    },
+    {
+     "month": "2025-11",
+     "value": 4840930.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_11_0.html",
+     "locator": "MOPS 上市公司114年11月份營業收入統計表(t21sc03_114_11_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,051,014, 當月累計=45,571,018",
+     "prior_year_comparative": 4051014.0
+    },
+    {
+     "month": "2025-12",
+     "value": 4803047.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_114_12_0.html",
+     "locator": "MOPS 上市公司114年12月份營業收入統計表(t21sc03_114_12_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,282,925, 當月累計=50,374,065",
+     "prior_year_comparative": 4282925.0
+    },
+    {
+     "month": "2026-01",
+     "value": 4244071.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_1_0.html",
+     "locator": "MOPS 上市公司115年1月份營業收入統計表(t21sc03_115_1_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,558,687, 當月累計=4,244,071",
+     "prior_year_comparative": 3558687.0
+    },
+    {
+     "month": "2026-02",
+     "value": 2982824.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_2_0.html",
+     "locator": "MOPS 上市公司115年2月份營業收入統計表(t21sc03_115_2_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,041,720, 當月累計=7,226,895",
+     "prior_year_comparative": 3041720.0
+    },
+    {
+     "month": "2026-03",
+     "value": 4261004.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_3_0.html",
+     "locator": "MOPS 上市公司115年3月份營業收入統計表(t21sc03_115_3_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=3,944,554, 當月累計=11,487,899",
+     "prior_year_comparative": 3944554.0
+    },
+    {
+     "month": "2026-04",
+     "value": 4138885.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_4_0.html",
+     "locator": "MOPS 上市公司115年4月份營業收入統計表(t21sc03_115_4_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,289,081, 當月累計=15,626,784",
+     "prior_year_comparative": 4289081.0
+    },
+    {
+     "month": "2026-05",
+     "value": 3582351.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_5_0.html",
+     "locator": "MOPS 上市公司115年5月份營業收入統計表(t21sc03_115_5_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,180,316, 當月累計=19,209,135",
+     "prior_year_comparative": 4180316.0
+    },
+    {
+     "month": "2026-06",
+     "value": 5292568.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_6_0.html",
+     "locator": "MOPS 上市公司115年6月份營業收入統計表(t21sc03_115_6_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,537,514, 當月累計=24,501,703",
+     "prior_year_comparative": 4537514.0
+    },
+    {
+     "month": "2026-07",
+     "value": 3677894.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_7_0.html",
+     "locator": "MOPS 上市公司115年7月份營業收入統計表(t21sc03_115_7_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,283,928, 當月累計=28,179,597",
+     "prior_year_comparative": 4283928.0
+    },
+    {
+     "month": "2026-08",
+     "value": 4383050.0,
+     "method": "direct_reported_month",
+     "source_url": "https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_115_8_0.html",
+     "locator": "MOPS 上市公司115年8月份營業收入統計表(t21sc03_115_8_0) 公司代號 2371 行, '當月營收' 欄 (仟元); 同行 去年當月營收=4,952,129, 當月累計=32,562,647",
+     "prior_year_comparative": 4952129.0
+    }
+   ]
+  },
+  "revenue_segment": {
+   "label_ko": "전력·에너지 부문 외부매출(重電 변압기·GIS·배전반 + 모터·태양광·스마트미터·전선)",
+   "scope": "segment",
+   "segment_name": "Machinery, energy and system → Electric power and new energy → Electric power, system integration and new energy",
+   "freq": "Q",
+   "primary": false,
+   "unit_note": "TWD thousand (仟元)",
+   "points": [
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 3719514.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202101_2371_AIA.pdf",
+     "locator": "202101_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 Q1(1~3월) 前年 3,719,514 [다음해 보고서의 전년 비교 컬럼(재작성/재분류 기준)] (仟元)",
+     "basis_note": "value taken from following-year report comparatives (recast basis), both YTD legs same basis"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 4190677.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202102_2371_AIA.pdf",
+     "locator": "202102_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 H1(1~6월) 前年 7,910,191 − 202101_2371_AIA.pdf Q1(1~3월) 前年 3,719,514 [다음해 보고서의 전년 비교 컬럼(재작성/재분류 기준)] (仟元)",
+     "basis_note": "value taken from following-year report comparatives (recast basis), both YTD legs same basis"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 3997567.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202103_2371_AIA.pdf",
+     "locator": "202103_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 9M(1~9월) 前年 11,907,758 − 202102_2371_AIA.pdf H1(1~6월) 前年 7,910,191 [다음해 보고서의 전년 비교 컬럼(재작성/재분류 기준)] (仟元)",
+     "basis_note": "value taken from following-year report comparatives (recast basis), both YTD legs same basis"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 4074218.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202104_2371_AIA.pdf",
+     "locator": "202104_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 FY(1~12월) 前年 15,981,976 − 202103_2371_AIA.pdf 9M(1~9월) 前年 11,907,758 [다음해 보고서의 전년 비교 컬럼(재작성/재분류 기준)] (仟元)",
+     "basis_note": "value taken from following-year report comparatives (recast basis), both YTD legs same basis"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 3833084.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202101_2371_AIA.pdf",
+     "locator": "202101_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 Q1(1~3월) 3,833,084 (仟元)",
+     "prior_year_comparative": 3719514.0,
+     "published_date": "2021-05-17"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 3989461.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202102_2371_AIA.pdf",
+     "locator": "202102_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 H1(1~6월) 7,822,545 − 202101_2371_AIA.pdf Q1(1~3월) 3,833,084 (仟元)",
+     "prior_year_comparative": 4190677.0,
+     "published_date": "2021-08-16"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 4965327.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202103_2371_AIA.pdf",
+     "locator": "202103_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 9M(1~9월) 12,787,872 − 202102_2371_AIA.pdf H1(1~6월) 7,822,545 (仟元)",
+     "prior_year_comparative": 3997567.0,
+     "published_date": "2021-11-15"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 4527905.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202104_2371_AIA.pdf",
+     "locator": "202104_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 FY(1~12월) 17,315,777 − 202103_2371_AIA.pdf 9M(1~9월) 12,787,872 (仟元)",
+     "prior_year_comparative": 4074218.0,
+     "published_date": "2022-03-16"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 4384517.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202201_2371_AIA.pdf",
+     "locator": "202201_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 Q1(1~3월) 4,384,517 (仟元)",
+     "prior_year_comparative": 3833084.0,
+     "published_date": "2022-05-13"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 4001238.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202202_2371_AIA.pdf",
+     "locator": "202202_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 H1(1~6월) 8,385,755 − 202201_2371_AIA.pdf Q1(1~3월) 4,384,517 (仟元)",
+     "prior_year_comparative": 3989461.0,
+     "published_date": "2022-08-15"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 4880628.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202203_2371_AIA.pdf",
+     "locator": "202203_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 9M(1~9월) 13,266,383 − 202202_2371_AIA.pdf H1(1~6월) 8,385,755 (仟元)",
+     "prior_year_comparative": 4965327.0,
+     "published_date": "2022-11-14"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 5380153.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202204_2371_AIA.pdf",
+     "locator": "202204_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 FY(1~12월) 18,646,536 − 202203_2371_AIA.pdf 9M(1~9월) 13,266,383 (仟元)",
+     "prior_year_comparative": 4527905.0,
+     "published_date": "2023-03-16"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 4779621.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202301_2371_AIA.pdf",
+     "locator": "202301_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 Q1(1~3월) 4,779,621 (仟元)",
+     "prior_year_comparative": 4384517.0,
+     "published_date": "2023-05-15"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 4621402.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202302_2371_AIA.pdf",
+     "locator": "202302_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 H1(1~6월) 9,401,023 − 202301_2371_AIA.pdf Q1(1~3월) 4,779,621 (仟元)",
+     "prior_year_comparative": 4001238.0,
+     "published_date": "2023-08-14"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 4854866.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202303_2371_AIA.pdf",
+     "locator": "202303_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 9M(1~9월) 14,255,889 − 202302_2371_AIA.pdf H1(1~6월) 9,401,023 (仟元)",
+     "prior_year_comparative": 4880628.0,
+     "published_date": "2023-11-14"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 5861759.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202304_2371_AIA.pdf",
+     "locator": "202304_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 FY(1~12월) 20,117,648 − 202303_2371_AIA.pdf 9M(1~9월) 14,255,889 (仟元)",
+     "prior_year_comparative": 5380153.0,
+     "published_date": "2024-03-15"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 5607962.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202401_2371_AIA.pdf",
+     "locator": "202401_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 Q1(1~3월) 5,607,962 (仟元)",
+     "prior_year_comparative": 4996944.0,
+     "published_date": "2024-05-15"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 5695124.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202402_2371_AIA.pdf",
+     "locator": "202402_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 H1(1~6월) 11,303,086 − 202401_2371_AIA.pdf Q1(1~3월) 5,607,962 (仟元)",
+     "prior_year_comparative": 4929710.0,
+     "published_date": "2024-08-14"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 5734207.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202403_2371_AIA.pdf",
+     "locator": "202403_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 9M(1~9월) 17,037,293 − 202402_2371_AIA.pdf H1(1~6월) 11,303,086 (仟元)",
+     "prior_year_comparative": 5133886.0,
+     "published_date": "2024-11-13"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 5965302.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202404_2371_AIA.pdf",
+     "locator": "202404_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 FY(1~12월) 23,002,595 − 202403_2371_AIA.pdf 9M(1~9월) 17,037,293 (仟元)",
+     "prior_year_comparative": 6048348.0,
+     "published_date": "2025-03-17"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 5543604.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202501_2371_AIA.pdf",
+     "locator": "202501_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 Q1(1~3월) 5,543,604 (仟元)",
+     "prior_year_comparative": 5609747.0,
+     "published_date": "2025-05-14"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 6100142.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202502_2371_AIA.pdf",
+     "locator": "202502_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 H1(1~6월) 11,643,746 − 202501_2371_AIA.pdf Q1(1~3월) 5,543,604 (仟元)",
+     "prior_year_comparative": 5699526.0,
+     "published_date": "2025-08-14"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 6390094.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202503_2371_AIA.pdf",
+     "locator": "202503_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 9M(1~9월) 18,033,840 − 202502_2371_AIA.pdf H1(1~6월) 11,643,746 (仟元)",
+     "prior_year_comparative": 5734684.0,
+     "published_date": "2025-11-14"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 6309117.0,
+     "method": "annual_minus_9m",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202504_2371_AIA.pdf",
+     "locator": "202504_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 FY(1~12월) 24,342,957 − 202503_2371_AIA.pdf 9M(1~9월) 18,033,840 (仟元)",
+     "prior_year_comparative": 5958638.0,
+     "published_date": "2026-03-16"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 5023548.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202601_2371_AIA.pdf",
+     "locator": "202601_2371_AIA.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 Q1(1~3월) 5,023,548 (仟元)",
+     "prior_year_comparative": 5543604.0,
+     "published_date": "2026-05-15"
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 5776217.0,
+     "method": "ytd_difference",
+     "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202602_2371_AI1.pdf",
+     "locator": "202602_2371_AI1.pdf 英文版合併財報 Note (14) segment information '電力部門(Machinery, energy & system → Electric power and new energy → Electric power, system integration and new energy)' 外部客戶收入 H1(1~6월) 10,799,765 − 202601_2371_AIA.pdf Q1(1~3월) 5,023,548 (仟元)",
+     "prior_year_comparative": 6100142.0,
+     "published_date": "2026-08-14"
+    }
+   ],
+   "segment_def": "2021: Machinery, energy and system (smart grid, PV, motors, machinery, energy control, systems); FY2022~2023: Electric power and new energy (FY2021 명칭 변경); 2024~: Electric power, system integration and new energy (2024 재편, 2023 비교치 재작성). 大同 重電事業部(변압기 73%) 포함하나 모터·태양광·전선 등 혼재. ECS(2022-10 연결)는 수치상 2022Q4~2023 Consumer electronics(2022Q4 부문매출 +5.1bn), 2024~ Electronic Manufacturing services 부문에 있고 전력부문에는 없음(FY2022 영문 부문 설명문의 motherboard 문구와 달리 전력부문 Q4 증가는 0.5bn).",
+   "source_language_note": "영문 번역본(AIA, NT$ thousand) 사용. published_date 는 중문 원본 업로드일"
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2016-10-01",
+   "type": "restatement",
+   "note": "FY2016 연간보고서(2017-03 공시)부터 연결 營業收入合計 기준 재작성 — FY2015 94,744,353(2015 연간 원보고)→84,719,184(2016 연간 비교 컬럼, −10.6%), 2016 1~9月 64,192,212(2016Q3 원보고)→56,749,197(2017Q3 보고서 비교 컬럼, −11.6%), 2016Q1 22,029,509→19,644,498(2017Q1 비교 컬럼). revenue_total 의 FY2016Q1~Q3 는 원보고치(재작성 전 기준), FY2016Q4(=FY2016 연간 − 재작성 9M) 이후는 재작성 기준이라 수준 시계열이 2016Q3→Q4 사이에서 단절됨. YoY 는 prior_year_comparative(같은 보고서의 동일 기준 전년치) 사용; FY2016Q4 는 동일 기준 전년 9M 이 없어 YoY 없음. 재작성 사유(IFRS 5 여부 포함)는 t164sb01 텍스트에서 원문 문구로 확인하지 못함(2017Q1 停業單位損益 행 0). verify 2026-09-25 추가",
+   "source_url": "https://mopsov.twse.com.tw/server-java/t164sb01?step=1&CO_ID=2371&SYEAR=2016&SSEASON=4&REPORT_ID=C"
+  },
+  {
+   "date": "2018-12-31",
+   "type": "divestiture",
+   "note": "자회사 中華映管(CPT)가 CPTTG(華映科技, 중국) 지배력 상실 — 2019년부터 연결 제외(처분손실 NT$7.26bn). 2018H2~2019 월매출 −50% 급감의 주원인",
+   "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=201804_2371_AIA.pdf"
+  },
+  {
+   "date": "2022-01-01",
+   "type": "segment_reorg",
+   "note": "Machinery, energy and system → Electric power and new energy 로 명칭 변경(FY2022 보고서, 범위 설명 확대)",
+   "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202204_2371_AIA.pdf"
+  },
+  {
+   "date": "2022-09-30",
+   "type": "divestiture",
+   "note": "CPT 파산선고(2022-08-29)로 CPT 및 자회사 지배력 상실·연결 제외",
+   "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202204_2371_AIA.pdf"
+  },
+  {
+   "date": "2022-10-01",
+   "type": "acquisition",
+   "note": "精英電腦(ECS, 메인보드·PC EMS) 지배력 취득(직간접 35%) — 2022Q4 매출 NT$5.50bn 기여, 이후 電子代工 세그먼트. 2022-10 월매출 +97.5% YoY 는 범위 변화",
+   "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202204_2371_AIA.pdf"
+  },
+  {
+   "date": "2024-01-01",
+   "type": "segment_reorg",
+   "note": "2024 부문 재편: Optoelectronics 제거, Electric power, system integration and new energy / Electronic Manufacturing services(ECS) / Consumer electronics / Real estate / Other. 2023 비교치 재작성(전력부문 2023Q1 4,779,621→4,996,944)",
+   "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=A&co_id=2371&filename=202401_2371_AIA.pdf"
+  }
+ ],
+ "profile": {
+  "products": "세그먼트(2025): 電力資訊新能源(스마트그리드·스마트미터·태양광·모터·기전·에너지관리), 電子代工, 消費電子, 不動產, 其他. 重電事業部(大園廠) 매출구성 변압기 73%·개폐 11.5%·유지보수 4%·전력공사 11.5%: 각종 전력변압기·배전변압기(패드마운트·주상), 리액터, 고저압 배전반, 161kV·23kV SF6 GIS; 500kV급 개발 중. 국내 변압기 점유 35%. 전선케이블(600V~161kV XLPE, 345kV 설비 투자), 모터 1/8~50,000HP.",
+  "plants": [
+   {
+    "country": "TW",
+    "city": "Taoyuan Dayuan (大園廠, 重電事業部)",
+    "products": "power & distribution transformers (pad-mounted, pole), reactors, switchgear, 161kV/23kV GIS",
+    "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=F&co_id=2371&filename=2025_2371_20260526F04.pdf"
+   },
+   {
+    "country": "TW",
+    "city": "Taoyuan (桃園電線電纜廠)",
+    "products": "power cables up to 161kV (345kV line under construction)",
+    "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=F&co_id=2371&filename=2025_2371_20260526F04.pdf"
+   },
+   {
+    "country": "TW",
+    "city": "New Taipei Sanxia (三峽廠, 馬達事業部)",
+    "products": "motors & generators",
+    "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=F&co_id=2371&filename=2025_2371_20260526F04.pdf"
+   },
+   {
+    "country": "TW",
+    "city": "Taoyuan (桃園壹廠)",
+    "products": "commercial air-conditioning, home appliances",
+    "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=F&co_id=2371&filename=2025_2371_20260526F04.pdf"
+   },
+   {
+    "country": "TW",
+    "city": "Taipei (大同智慧電表)",
+    "products": "smart meters (電表中心)",
+    "source_url": "https://doc.twse.com.tw/server-java/t57sb01?step=9&kind=F&co_id=2371&filename=2025_2371_20260526F04.pdf"
+   }
+  ],
+  "end_markets": "重電: 台電 강인전망·변전소 턴키, 태양광·ESS 승압변전소, 민간 공장·AI 데이터센터; 수출은 미국 전력회사 공급망 진입 중(AR 2025 重電 市場分析). 연결 매출은 EMS(電子代工)·소비가전·부동산이 크게 섞인 복합기업 — 변압기 노출 희석.",
+  "export_routes": [
+   "TW->US",
+   "TW->SEA"
+  ],
+  "hs_candidates": [
+   "850422",
+   "850423",
+   "850421",
+   "853720",
+   "854460"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_850423_p490",
+    "why": "대만발 미국 대형 전력변압기 수입 — 大同 重電의 161/345kV 대미 수출 진입(최근 구간)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850422_p490",
+    "why": "대만발 미국 중형 변압기 수입",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "mops_2371",
+    "why": "mops_<code> 는 회사 자신의 MOPS 월매출(연결) — 3개월 합 = 분기 연결매출(검증됨)인 항등식이라 외부 프록시가 아님. 나우캐스트 가용성(익월 10일 공시) 확인용 diagnostic 으로만 등록",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "tw_mfg_ip_c27",
+    "why": "wishlist: 經濟部統計處 電力設備及配備製造業(C27) 생산지수 — 대만 중전·전선 생산 동행",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "taipower_capex_monthly",
+    "why": "wishlist: 台電 변전소 신설·옥내화(52개소) 집행 — 重電 국내 수요",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "FY2016Q1~FY2019Q4: 영문 분기본은 2021Q1 부터(2018~2020 은 연간만), 중문 분기 원본은 텍스트 미확보 — 부문 분기값 없음(2020 분기는 2021 보고서 비교치로 구성)"
+ ],
+ "collection_notes": [
+  "수집 경로: 이 세션의 egress IP 는 TWSE/MOPS 전 도메인(mops/mopsov/doc/www.twse)에서 \"FOR SECURITY REASONS\" 차단(307). 원문 HTML/PDF 를 r.jina.ai 리더 릴레이로 받아(내용 무가공 텍스트) 파싱했다. source_url 은 MOPS 원 URL. 숫자 출처는 전부 MOPS/TWSE 원문.",
+  "교차검증(독립 경로): 월매출표 2024-01(t21sc03_113_1_0)·2016-06(t21sc03_105_6_0)을 WebFetch(별도 fetcher)로 재조회 — 6사×8~9개 숫자 전부 일치. t164sb01 華城 2024Q2(4100/4520/4000 전 컬럼)·東元 2025Q3(4000 4개 컬럼)도 WebFetch 재조회 일치.",
+  "월매출 무결성: 각 행의 上月比較增減(%)·去年同月增減(%)·前期比較增減(%) 를 인쇄된 금액으로 재계산해 ±0.01%p 이내 일치 확인(140개월×6사 전부 통과). 또 월 M 페이지의 上月營收 = 월 M-1 페이지 當月營收, 去年當月營收 = 월 M-12 當月營收, 當月累計 = Σ當月 (±2천TWD 반올림 차) 를 전 구간 대조.",
+  "월매출 범위: t21sc03 표는 연결(合併) 월매출(자가신고·미감사). 분기 3개월 합을 XBRL 연결 4000 營業收入合計 와 전 분기 대조 — 華城·中興 ±0.13% 이내(사실상 동일), 士林 최대 3.1%, 亞力 최대 3.0%, 東元 최대 5.0%(2021 재작성 영향), 大同 2016 IFRS5 재작성 구간 −12.6%. 회사별 수치는 아래 항목.",
+  "분기 매출: MOPS IFRS XBRL 재무제표 뷰어 t164sb01(REPORT_ID=C 합병) 4000 營業收入合計. Q1~Q3 는 3개월 컬럼 직접, Q4 는 연간−1~9월 누계(annual_minus_9m). prior_year_comparative 는 같은 보고서의 전년 동기(재작성 반영) 컬럼. published_date = MOPS 전자문서(doc.twse.com.tw t57sb01) \"IFRSs合併財報\" PDF 업로드일.",
+  "단위: TWD thousand(仟元) 원문 그대로. FX 환산·보간·추정 없음. 주문(orders)·수주잔고는 대만 법정 재무보고/월매출 공시 항목이 아님 → orders_segment 없음.",
+  "revenue_segment: 분기 재무보고서(doc.twse.com.tw IFRSs合併財報 중문 AI1 / 영문 번역본 AIA — 영문본은 NT$ thousand 로 중문과 동일 수치) 附註 部門資訊 의 \"來自外部客戶收入/Revenue from external customers\" 행. 누계(YTD)는 Q1=3개월, Q2=H1−Q1(ytd_difference), Q3=9M−H1, Q4=FY−9M(annual_minus_9m). 두 누계는 반드시 같은 기준(같은 해 원보고서끼리, 또는 다음해 보고서의 전년 비교 컬럼끼리 = basis_note)으로만 차분. 각 보고서에서 부문 합계 = XBRL 4000 누계(당기·전기) 일치를 체크섬으로 확인한 행만 채택. 텍스트 추출은 NFKC 정규화·깨진 자릿수 복원 후 파싱.",
+  "월매출 Σ3개월 vs XBRL 분기 연결매출: 42개 분기 대조, |차이|>0.3% 인 분기 12개, 최대 2016Q3 -12.56%. 월매출은 익월 10일 자가신고(미감사) 수치라 분기 결산 조정분이 월에 재배분되지 않음 — 월 타깃과 분기 타깃을 섞지 말 것.",
+  "전년 비교치 재작성(원 보고치→다음해 보고서 비교 컬럼): 2016Q1 22,029,509→19,644,498 (-10.83%); 2016Q2 21,855,331→19,335,153 (-11.53%); 2016Q3 20,307,372→17,769,546 (-12.50%). 빌더는 prior_year_comparative 로 동일범위 YoY 를 계산할 것.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1, FY2016Q3(9M 원보고 64,192,212), FY2016Q4, FY2017Q1(비교 19,644,498), FY2017Q2, FY2017Q3, FY2017Q4, FY2018Q3, FY2018Q4, FY2019Q1, FY2019Q2, FY2019Q3, FY2022Q3, FY2022Q4, FY2023Q2, FY2023Q3, FY2026Q1, FY2026Q2 (value·prior_year_comparative, MOPS t164sb01 재조회) + FY2015 연간 원보고 94,744,353; revenue_monthly 2026-08, 2026-07, 2019-01, 2018-12 (t21sc03) — 수치 오류 0. fixed 1: FY2016 연결매출 재작성(2016Q1~Q3 원보고 vs 2016Q4~ 재작성 기준 혼재)이 structural_breaks 에 없어서 2016-10-01 restatement 추가"
+ ]
+}

@@ -1,0 +1,909 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "INDOTECH",
+ "grid_node": "GRID_INDO_TECH",
+ "name": "Indo Tech Transformers Ltd",
+ "ticker": "INDOTECH IN",
+ "listed": true,
+ "currency": "INR",
+ "unit": "million",
+ "accounting_basis": "Ind AS from FY2018 (Apr-2017); Indian GAAP before",
+ "fiscal_year_end_month": 3,
+ "quarter_calendar": "calendar quarters; Indian fiscal year Apr-Mar labelled by the year in which it ends (FY2026Q1 = Apr-Jun 2025)",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "별도 매출(단일 부문: 변압기)",
+   "scope": "standalone",
+   "freq": "Q",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2015-04-01",
+     "period_end": "2015-06-30",
+     "value": 416.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2015/8/F24363FD_FF7D_4142_A291_7021C129136F_140002.pdf",
+     "locator": "BSE filing 2015-08-14 (2015-08-14_F24363FD_FF7D_4142_A291_7021C129136F_140002.pdf) p.1: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-06-30'; printed 4,167 (INR lakh)",
+     "published_date": "2015-08-14",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 413.7,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1001849.html",
+      "bse_results_db_inr_mn": 416.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=86.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2015-07-01",
+     "period_end": "2015-09-30",
+     "value": 542.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2015/11/705E533A_18E2_49E2_8A4C_09257E34CC60_143531.pdf",
+     "locator": "BSE filing 2015-11-04 (2015-11-04_705E533A_18E2_49E2_8A4C_09257E34CC60_143531.pdf) p.1: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-09-30'; printed 5,426 (INR lakh)",
+     "published_date": "2015-11-04",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 539.0,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1002975.html",
+      "bse_results_db_inr_mn": 542.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=87.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2015-10-01",
+     "period_end": "2015-12-31",
+     "value": 429.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/2/E1413524_2DA9_429F_B747_A659A47798E9_143151.pdf",
+     "locator": "BSE filing 2016-02-10 (2016-02-10_E1413524_2DA9_429F_B747_A659A47798E9_143151.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2015-12-31'; printed 4,293 (INR lakh)",
+     "published_date": "2016-02-10",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 426.8,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1005326.html",
+      "bse_results_db_inr_mn": 429.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=88.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2016-01-01",
+     "period_end": "2016-03-31",
+     "value": 510.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/1C5D9EF3_F2A9_447A_9915_879E985E0DFB_132240.pdf",
+     "locator": "BSE filing 2016-08-03 (2016-08-03_1C5D9EF3_F2A9_447A_9915_879E985E0DFB_132240.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2016-03-31; printed 5,101 (INR lakh). Original filing 2016-05-25 (2016-05-25_609C9C1E_AC52_4236_8C12_E5FFD790B228_175852.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2016-05-25",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 506.3,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1008440.html",
+      "bse_results_db_inr_mn": 510.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=89.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 266.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/8/1C5D9EF3_F2A9_447A_9915_879E985E0DFB_132240.pdf",
+     "locator": "BSE filing 2016-08-03 (2016-08-03_1C5D9EF3_F2A9_447A_9915_879E985E0DFB_132240.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-06-30'; printed 2,668 (INR lakh)",
+     "published_date": "2016-08-03",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 416.7,
+     "cross_check": {
+      "nse_html_net_inr_mn": 264.9,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1011357.html",
+      "nse_html_gross_inr_mn": 293.4,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1030433.html",
+      "bse_results_db_inr_mn": 266.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=90.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 395.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2016/10/664AFD94_F826_4936_9EBC_F74F3E817E74_152545.pdf",
+     "locator": "BSE filing 2016-10-26 (2016-10-26_664AFD94_F826_4936_9EBC_F74F3E817E74_152545.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-09-30'; printed 3,954 (INR lakh)",
+     "published_date": "2016-10-26",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 542.6,
+     "cross_check": {
+      "nse_html_net_inr_mn": 393.4,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1015021.html",
+      "nse_html_gross_inr_mn": 426.1,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1034161.html",
+      "bse_results_db_inr_mn": 395.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=91.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 258.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/2/0E894602_4B02_4F37_A8A9_97D7306E3551_151208.pdf",
+     "locator": "BSE filing 2017-02-08 (2017-02-08_0E894602_4B02_4F37_A8A9_97D7306E3551_151208.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2016-12-31'; printed 2,581 (INR lakh)",
+     "published_date": "2017-02-08",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 429.3,
+     "cross_check": {
+      "nse_html_net_inr_mn": 255.2,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1019012.html",
+      "nse_html_gross_inr_mn": 288.2,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1036441.html",
+      "bse_results_db_inr_mn": 258.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=92.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 567.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/5/533d6f9a-9cf3-4c9f-97a7-d9e928d1a609.pdf",
+     "locator": "BSE filing 2017-05-17 (2017-05-17_533d6f9a-9cf3-4c9f-97a7-d9e928d1a609.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-03-31'; printed 5,678 (INR lakh)",
+     "published_date": "2017-05-17",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_html_net_inr_mn": 565.2,
+      "nse_html_net_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1027365.html",
+      "bse_results_db_inr_mn": 567.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=93.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 610.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf",
+     "locator": "BSE filing 2018-08-13 (Q1 FY2019 results, 2018-08-13_eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf) p.2 note 4 table 'Revenue from operations excluding excise duty (A-B)', column quarter ended 30.06.2017; printed 6,101 (Rs. in lakhs). Original Q1 FY2018 filing 2017-09-06 printed Ind AS revenue incl. excise 6,645 lakh (NSE record) — not used",
+     "published_date": "2017-09-06",
+     "verification": "pdf_plumb",
+     "cross_check": {
+      "nse_html_gross_inr_mn": 664.5,
+      "bse_results_db_inr_mn": 664.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=94.00&RType="
+     },
+     "value_basis": "Ind AS revenue excluding excise duty (company-printed, GST-comparable)"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 429.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2017/11/fe2deeed-581f-4459-b3ab-2b192263ccdc.pdf",
+     "locator": "BSE filing 2017-11-29 (2017-11-29_fe2deeed-581f-4459-b3ab-2b192263ccdc.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-09-30'; printed 4,294 (INR lakh)",
+     "published_date": "2017-11-29",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "nse_html_gross_inr_mn": 429.4,
+      "nse_html_gross_url": "https://nsearchives.nseindia.com/archives/financial_results/financial_res_INDOTECH_1034160.html",
+      "bse_results_db_inr_mn": 429.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=95.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 466.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/2/81dedefc-d580-4d4e-8d79-c1e09cc1b9a5.pdf",
+     "locator": "BSE filing 2018-02-07 (2018-02-07_81dedefc-d580-4d4e-8d79-c1e09cc1b9a5.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2017-12-31'; printed 4,660 (INR lakh)",
+     "published_date": "2018-02-07",
+     "verification": "pdf_ocr+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 466.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=96.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 696.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf",
+     "locator": "BSE filing 2018-08-13 (2018-08-13_eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2018-03-31; printed 6,962 (INR lakh). Original filing 2018-05-16 (2018-05-16_3d0f367c-2b83-4232-9ed9-03a0d550fb99.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2018-05-16",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 696.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_35260_9834_17052018033038_WEB.xml",
+      "bse_results_db_inr_mn": 696.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=97.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 476.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf",
+     "locator": "BSE filing 2018-08-13 (2018-08-13_eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-06-30'; printed 4,762 (INR lakh)",
+     "published_date": "2018-08-13",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 476.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_38732_34658_13082018095250_WEB.xml",
+      "bse_results_db_inr_mn": 476.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=98.00&RType="
+     },
+     "prior_year_comparative": 610.1,
+     "comparative_note": "comparative from the same filing's note 4: 'Revenue from operations excluding excise duty (A-B)' for quarter ended 30.06.2017 = 6,101 lakh"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 498.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/10/5b0695fc-1e8f-4bf3-ae6d-9437cd504715.pdf",
+     "locator": "BSE filing 2018-10-31 (2018-10-31_5b0695fc-1e8f-4bf3-ae6d-9437cd504715.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-09-30'; printed 4,988 (INR lakh)",
+     "published_date": "2018-10-31",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 429.4,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 498.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_39916_56844_01112018032931_WEB.xml",
+      "bse_results_db_inr_mn": 498.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=99.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 481.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e22ec283-5d7c-4f46-b90f-0f0dfb34da73.pdf",
+     "locator": "BSE filing 2019-02-07 (2019-02-07_e22ec283-5d7c-4f46-b90f-0f0dfb34da73.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2018-12-31'; printed 4,817 (INR lakh)",
+     "published_date": "2019-02-07",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 466.0,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 481.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_42497_80541_08022019011705_WEB.xml",
+      "bse_results_db_inr_mn": 481.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=100.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 677.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6e9d7e3f-7624-40d2-a5e1-5a2ba3c554f1.pdf",
+     "locator": "BSE filing 2019-05-22 (2019-05-22_6e9d7e3f-7624-40d2-a5e1-5a2ba3c554f1.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-03-31'; printed 6,772 (INR lakh)",
+     "published_date": "2019-05-22",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 696.2,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 677.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_44600_103676_22052019111607_WEB.xml",
+      "bse_results_db_inr_mn": 677.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=101.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 405.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/450987a8-eaa2-4f69-b032-742f69f6ca47.pdf",
+     "locator": "BSE filing 2019-08-14 (2019-08-14_450987a8-eaa2-4f69-b032-742f69f6ca47.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-06-30'; printed 4,055 (INR lakh)",
+     "published_date": "2019-08-14",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 476.2,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 405.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_48054_132681_14082019065203_WEB.xml",
+      "bse_results_db_inr_mn": 405.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=102.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 607.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/892da451-64d2-483a-ac2f-3ce2ef694785.pdf",
+     "locator": "BSE filing 2019-11-13 (2019-11-13_892da451-64d2-483a-ac2f-3ce2ef694785.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-09-30'; printed 6,078 (INR lakh)",
+     "published_date": "2019-11-13",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 498.8,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 607.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_50628_168238_14112019052316_WEB.xml",
+      "bse_results_db_inr_mn": 607.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=103.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 674.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b23e6bb-71b9-4689-86d2-4ac557f8dce0.pdf",
+     "locator": "BSE filing 2020-02-06 (2020-02-06_7b23e6bb-71b9-4689-86d2-4ac557f8dce0.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2019-12-31'; printed 6,744 (INR lakh)",
+     "published_date": "2020-02-06",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 481.7,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 674.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_52816_216428_07022020051357_WEB.xml",
+      "bse_results_db_inr_mn": 674.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=104.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 365.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f9cb0bd6-0d12-448b-a1d3-be36918ad4b6.pdf",
+     "locator": "BSE filing 2020-06-30 (2020-06-30_f9cb0bd6-0d12-448b-a1d3-be36918ad4b6.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-03-31'; printed 3,656 (INR lakh)",
+     "published_date": "2020-06-30",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 677.2,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 365.6,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_57321_272136_30062020051407_WEB.xml",
+      "bse_results_db_inr_mn": 365.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=105.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 164.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5e2585fa-0de5-41b0-874f-f2387cb18fc7.pdf",
+     "locator": "BSE filing 2020-09-15 (2020-09-15_5e2585fa-0de5-41b0-874f-f2387cb18fc7.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-06-30'; printed 1,642 (INR lakh)",
+     "published_date": "2020-09-15",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 405.5,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 164.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_61695_317831_15092020053036_WEB.xml",
+      "bse_results_db_inr_mn": 164.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=106.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 389.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1eabb7c6-5cc5-45ab-bf82-00800fca8c38.pdf",
+     "locator": "BSE filing 2020-11-09 (2020-11-09_1eabb7c6-5cc5-45ab-bf82-00800fca8c38.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-09-30'; printed 3,894 (INR lakh)",
+     "published_date": "2020-11-09",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 607.8,
+     "cross_check": {
+      "bse_results_db_inr_mn": 389.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=107.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 538.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/63ec9d1d-0178-4962-bcb7-cbb5ce2d9d81.pdf",
+     "locator": "BSE filing 2021-02-10 (2021-02-10_63ec9d1d-0178-4962-bcb7-cbb5ce2d9d81.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2020-12-31'; printed 5,383 (INR lakh)",
+     "published_date": "2021-02-10",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 674.4,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 538.3,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_67858_405653_11022021121819_WEB.xml",
+      "bse_results_db_inr_mn": 538.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=108.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 968.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1744719b-8766-483e-8786-e75b06667fac.pdf",
+     "locator": "BSE filing 2021-06-22 (2021-06-22_1744719b-8766-483e-8786-e75b06667fac.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-03-31'; printed 9,681 (INR lakh)",
+     "published_date": "2021-06-22",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 365.6,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 968.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_71696_463013_23062021082642_WEB.xml",
+      "bse_results_db_inr_mn": 968.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=109.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 226.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ec2c02b7-5660-4d63-8ed3-279fa846d034.pdf",
+     "locator": "BSE filing 2021-08-09 (2021-08-09_ec2c02b7-5660-4d63-8ed3-279fa846d034.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-06-30'; printed 2,265 (INR lakh)",
+     "published_date": "2021-08-09",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 164.2,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 226.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_74516_501944_10082021095328_WEB.xml",
+      "bse_results_db_inr_mn": 226.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=110.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 763.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/07269adf-2817-4468-bf4a-4800c3f3fa8f.pdf",
+     "locator": "BSE filing 2021-11-10 (2021-11-10_07269adf-2817-4468-bf4a-4800c3f3fa8f.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-09-30'; printed 7,632 (INR lakh)",
+     "published_date": "2021-11-10",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 389.4,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 763.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_78412_554674_11112021053249_WEB.xml",
+      "bse_results_db_inr_mn": 763.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=111.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 818.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/8bcfdc05-c1cf-4c6a-9b02-daf765890bfd.pdf",
+     "locator": "BSE filing 2022-02-02 (2022-02-02_8bcfdc05-c1cf-4c6a-9b02-daf765890bfd.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2021-12-31'; printed 8,181 (INR lakh)",
+     "published_date": "2022-02-02",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 538.3,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 818.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_81030_602258_02022022061726_WEB.xml",
+      "bse_results_db_inr_mn": 818.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=112.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 992.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/336e6bba-b7d7-444c-aef2-55683a8e76c0.pdf",
+     "locator": "BSE filing 2022-05-27 (2022-05-27_336e6bba-b7d7-444c-aef2-55683a8e76c0.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-03-31'; printed 9,929 (INR lakh)",
+     "published_date": "2022-05-27",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 968.1,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 992.9,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_86168_665478_28052022053850_WEB.xml",
+      "bse_results_db_inr_mn": 992.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=113.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 540.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3dbee4d8-7004-422c-8ec9-e2163080ddea.pdf",
+     "locator": "BSE filing 2022-08-12 (2022-08-12_3dbee4d8-7004-422c-8ec9-e2163080ddea.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-06-30'; printed 5,408 (INR lakh)",
+     "published_date": "2022-08-12",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 226.5,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 540.8,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_662763_3000_13082022173246_WEB.xml",
+      "bse_results_db_inr_mn": 540.8,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=114.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 885.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/46d88d94-9c62-4808-83cd-f9007189cc20.pdf",
+     "locator": "BSE filing 2023-02-10 (2023-02-10_46d88d94-9c62-4808-83cd-f9007189cc20.pdf) p.2: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2022-09-30; printed 8,854 (INR lakh). Original filing 2022-11-10 (2022-11-10_0915224c-6643-485d-9a99-3fbe7da53c83.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2022-11-10",
+     "verification": "pdf_plumb_later_filing+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 885.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_858165_5339_11112022132534_WEB.xml",
+      "bse_results_db_inr_mn": 885.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=115.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 836.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/46d88d94-9c62-4808-83cd-f9007189cc20.pdf",
+     "locator": "BSE filing 2023-02-10 (2023-02-10_46d88d94-9c62-4808-83cd-f9007189cc20.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2022-12-31'; printed 8,362 (INR lakh)",
+     "published_date": "2023-02-10",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 818.1,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 836.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_89601_791755_10022023095748.xml",
+      "bse_results_db_inr_mn": 836.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=116.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 1446.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/95895c90-56d3-43d9-97a9-705e561f5976.pdf",
+     "locator": "BSE filing 2023-05-19 (2023-05-19_95895c90-56d3-43d9-97a9-705e561f5976.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-03-31'; printed 14,467 (INR lakh)",
+     "published_date": "2023-05-19",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 992.9,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1446.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_92154_847481_19052023085221.xml",
+      "bse_results_db_inr_mn": 1446.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=117.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 932.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/497430ec-b196-4861-9420-bbfde4efda9c.pdf",
+     "locator": "BSE filing 2023-08-11 (2023-08-11_497430ec-b196-4861-9420-bbfde4efda9c.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-06-30'; printed 9,322 (INR lakh)",
+     "published_date": "2023-08-11",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 540.8,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 932.2,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_96994_917407_12082023062302.xml",
+      "bse_results_db_inr_mn": 932.2,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=118.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 958.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5c8451c9-3305-4fa6-b4ab-db9b77648c97.pdf",
+     "locator": "BSE filing 2023-11-09 (2023-11-09_5c8451c9-3305-4fa6-b4ab-db9b77648c97.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-09-30'; printed 9581 (INR lakh)",
+     "published_date": "2023-11-09",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 885.4,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 958.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_100243_984808_10112023020701.xml",
+      "bse_results_db_inr_mn": 958.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=119.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 1394.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c9dd12d1-8da2-434a-9383-75594eb72bf1.pdf",
+     "locator": "BSE filing 2024-02-13 (2024-02-13_c9dd12d1-8da2-434a-9383-75594eb72bf1.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2023-12-31'; printed 13,947 (INR lakh)",
+     "published_date": "2024-02-13",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 836.2,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1394.7,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_103981_1054547_14022024115047.xml",
+      "bse_results_db_inr_mn": 1394.7,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=120.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 1751.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5e411717-61fc-4c81-a67f-b875a4b22d31.pdf",
+     "locator": "BSE filing 2024-05-23 (2024-05-23_5e411717-61fc-4c81-a67f-b875a4b22d31.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-03-31'; printed 17,511 (INR lakh)",
+     "published_date": "2024-05-23",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1446.7,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1751.1,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_106937_1136656_24052024104415.xml",
+      "bse_results_db_inr_mn": 1751.1,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=121.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 821.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1a703611-41b0-4d78-b6a1-2a6144e89f43.pdf",
+     "locator": "BSE filing 2024-08-06 (2024-08-06_1a703611-41b0-4d78-b6a1-2a6144e89f43.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-06-30'; printed 8,215 (INR lakh)",
+     "published_date": "2024-08-06",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 932.2,
+     "cross_check": {
+      "nse_xbrl_inr_mn": 821.5,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_110569_1214831_07082024121214.xml",
+      "bse_results_db_inr_mn": 821.5,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=122.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 1462.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/aef0adeb-5faf-4b37-a20d-116dbe35b28f.pdf",
+     "locator": "BSE filing 2024-11-12 (2024-11-12_aef0adeb-5faf-4b37-a20d-116dbe35b28f.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-09-30'; printed 14,623 (INR lakh)",
+     "published_date": "2024-11-12",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 958.1,
+     "cross_check": {
+      "bse_results_db_inr_mn": 1462.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=123.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 1773.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/ebcbbda1-8c30-4e27-8544-e12c17136919.pdf",
+     "locator": "BSE filing 2025-02-11 (2025-02-11_ebcbbda1-8c30-4e27-8544-e12c17136919.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2024-12-31'; printed 17,734 (INR lakh)",
+     "published_date": "2025-02-11",
+     "verification": "pdf_plumb+exchange_structured",
+     "cross_check": {
+      "nse_xbrl_inr_mn": 1773.4,
+      "nse_xbrl_url": "https://nsearchives.nseindia.com/corporate/xbrl/INDAS_119756_1378938_11022025104355.xml",
+      "bse_results_db_inr_mn": 1773.4,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=124.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 2060.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/1e07aac2-efd4-40e7-a2f4-c1bbca2a81df.pdf",
+     "locator": "BSE filing 2025-05-20 (2025-05-20_1e07aac2-efd4-40e7-a2f4-c1bbca2a81df.pdf) p.9: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-03-31'; printed 20,606 (INR lakh)",
+     "published_date": "2025-05-20",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 1747.1,
+     "cross_check": {
+      "bse_results_db_inr_mn": 2060.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=125.00&RType="
+     },
+     "comparative_note": "restated comparative (prior point 1751.1, printed 17471.0)"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 1639.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cacba223-d590-41e6-b43e-d2ac2b3aedd4.pdf",
+     "locator": "BSE filing 2025-08-13 (2025-08-13_cacba223-d590-41e6-b43e-d2ac2b3aedd4.pdf) p.2: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-06-30'; printed 16,393 (INR lakh)",
+     "published_date": "2025-08-13",
+     "verification": "pdf_plumb+exchange_structured",
+     "prior_year_comparative": 821.5,
+     "cross_check": {
+      "bse_results_db_inr_mn": 1639.3,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=126.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 1828.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6f6851df-b90d-4a6a-a8a4-a6aff67b9d31.pdf",
+     "locator": "BSE filing 2026-02-04 (2026-02-04_6f6851df-b90d-4a6a-a8a4-a6aff67b9d31.pdf) p.3: standalone Reg-33 statement, row 'Revenue from operations', 2nd column (preceding quarter) = 3 months ended 2025-09-30; printed 18,286 (INR lakh). Original filing 2025-11-13 (2025-11-13_ede922ad-5f17-443d-abe3-420cb5f627b2.pdf) is a scan not machine-readable for this cell",
+     "published_date": "2025-11-13",
+     "verification": "pdf_ocr_later_filing+exchange_structured",
+     "cross_check": {
+      "bse_results_db_inr_mn": 1828.6,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=127.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 1963.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/6f6851df-b90d-4a6a-a8a4-a6aff67b9d31.pdf",
+     "locator": "BSE filing 2026-02-04 (2026-02-04_6f6851df-b90d-4a6a-a8a4-a6aff67b9d31.pdf) p.3: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2025-12-31'; printed 19,630 (INR lakh)",
+     "published_date": "2026-02-04",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1773.4,
+     "cross_check": {
+      "bse_results_db_inr_mn": 1963.0,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=128.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2026Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 2389.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a94c0941-b2c0-4470-a079-1e32036c1c30.pdf",
+     "locator": "BSE filing 2026-05-20 (2026-05-20_a94c0941-b2c0-4470-a079-1e32036c1c30.pdf) p.8: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-03-31'; printed 23,899 (INR lakh)",
+     "published_date": "2026-05-20",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 2060.6,
+     "cross_check": {
+      "bse_results_db_inr_mn": 2389.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=129.00&RType="
+     }
+    },
+    {
+     "fiscal_key": "FY2027Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 2278.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/3488e3e6-e08c-4652-ad38-67cd11fb912b.pdf",
+     "locator": "BSE filing 2026-08-11 (2026-08-11_3488e3e6-e08c-4652-ad38-67cd11fb912b.pdf) p.4: standalone Reg-33 results statement, row 'Revenue from operations', column '3 months ended 2026-06-30'; printed 22,789 (INR lakh)",
+     "published_date": "2026-08-11",
+     "verification": "pdf_ocr+exchange_structured",
+     "prior_year_comparative": 1639.3,
+     "cross_check": {
+      "bse_results_db_inr_mn": 2278.9,
+      "bse_results_page": "https://www.bseindia.com/corporates/results.aspx?Code=532717&Company=Indo-Tech-Transformers-Ltd&qtr=130.00&RType="
+     }
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2017-04-01",
+   "type": "restatement",
+   "note": "Ind AS adoption from FY2018; FY2016-FY2017 quarters are IGAAP net-of-excise as originally filed",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf"
+  },
+  {
+   "date": "2017-07-01",
+   "type": "restatement",
+   "note": "GST; FY2018Q1 uses company-printed revenue excluding excise duty",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/CorpAttachment/2018/8/eb92e2a1-91af-482c-949a-3fe48ef5dd9c.pdf"
+  },
+  {
+   "date": "2019-12-21",
+   "type": "ownership_change",
+   "note": "Shirdi Sai Electricals Ltd announced mandatory open offer after acquiring control from the Prolec GE group (filing on Prolec GE India letterhead); no change of reporting scope (standalone company)",
+   "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f8faf488-0321-4a61-916d-924ff2c34e53.pdf"
+  }
+ ],
+ "profile": {
+  "products": "Power transformers up to 250 MVA (work under way to extend to 400 kV / 500 MVA by 2028), distribution transformers 100 kVA/11 kV to 5,000 kVA/33 kV, inverter/converter special application transformers, skid-mounted substations. Single segment (transformers). Installed capacity ~12,000 MVA, to 25,000 MVA (company website; AR FY2025-26).",
+  "plants": [
+   {
+    "country": "IN",
+    "city": "Illuppapattu (near Rajakulam), Kancheepuram, Tamil Nadu",
+    "products": "Large power transformers and distribution transformers (main plant, since 2008)",
+    "source_url": "https://www.indo-tech.com/about-us/"
+   },
+   {
+    "country": "IN",
+    "city": "Thirumazhisai (SIDCO estate), Chennai, Tamil Nadu",
+    "products": "Secondary facility (distribution transformers)",
+    "source_url": "https://www.indo-tech.com/about-us/"
+   }
+  ],
+  "end_markets": "Indian transmission & generation utilities, hydro/wind/solar, DISCOMs, steel, cement, textiles. Almost entirely domestic: FY2025-26 revenue by geography India INR 78,109.44 lakh vs rest of world INR 98.47 lakh (AR FY26 p.140). Ownership: part of Prolec GE until Shirdi Sai Electricals Ltd's Dec-2019 open offer; SSEL is now the holding company.",
+  "export_routes": [],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "india_iip_27",
+    "why": "Indian electrical-equipment production — Indo Tech is ~100% domestic",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "india_iip_capgoods",
+    "why": "Indian capital-goods cycle (utility/industrial transformer demand)",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "in_exp_850423_p0",
+    "why": "India >10 MVA transformer exports — domestic power-transformer industry tightness/pricing",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "in_exp_850422_p0",
+    "why": "India 650-10,000 kVA exports — distribution transformer cycle",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cea_transformation_capacity_added_mva",
+    "why": "WISHLIST: CEA monthly substation transformation capacity additions (MVA) — physical demand for 220-400 kV transformers",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [],
+ "collection_notes": [
+  "fiscal_key 규칙: 인도 회계연도(4월~3월)를 '끝나는 해'로 표기 — FY2026Q1 = 2025-04-01~2025-06-30, FY2026Q4 = 2026-01-01~2026-03-31. period_end 는 원문 결산일(달력 분기말).",
+  "단위: INR million. 원문은 INR lakh(=0.1 million) 또는 crore(=10 million) 로 인쇄 — 배율 환산만 했고 (lakh×0.1, crore×10, XBRL INR÷1e6) 통화 환산·추정 없음. printed 값은 locator 에 원문 그대로 남김.",
+  "인도 Reg-33 결산의 1~3월(4분기) 3개월 칸은 '연간 감사치 − 12월 누계 공시치' 로 회사가 산출·인쇄한 balancing figure 이다. 인쇄된 3개월 칸을 그대로 쓰므로 method=direct_reported_quarter.",
+  "검증: 모든 분기 값은 (1) BSE 결과 DB(Corp_detailedResult / 연결 API, Rs. million) (2) NSE XBRL·NSE 결과 레코드 중 가용한 거래소 구조화 공시와 대조했고, (3) BSE 원문 PDF(텍스트층·pdfplumber·tesseract OCR)에서 같은 숫자를 찾으면 그 PDF를 source_url 로 둔다(verification 필드). PDF 셀을 읽지 못한 분기는 거래소 구조화 공시(XBRL/NSE 레코드/BSE DB)를 source_url 로 둔다(CONTRACT §0-1 예외).",
+  "2017-07-01 GST 도입: 그 이전 매출(IGAAP 'Net sales (net of excise duty)' 또는 Ind AS 총액)은 물품세 포함 여부가 다르다. 2017-06 분기는 회사가 '물품세 제외 매출'을 인쇄한 경우에만 그 값을 쓰고, 아니면 비운다. FY2018Q1~FY2019Q1 공시의 전년동기 비교칸(Ind AS 재작성·물품세 포함)은 prior_year_comparative 로 싣지 않는다.",
+  "FY2016Q1: PY column 4466.0 != prior point 442.1 (kind=ocr, excise_window=False) -> not stored",
+  "FY2016Q2: PY column 3591.0 != prior point 354.70000000000005 (kind=ocr, excise_window=False) -> not stored",
+  "FY2016Q3: PY column 4010.0 != prior point 397.5 (kind=ocr, excise_window=False) -> not stored",
+  "FY2017Q4: PY column 5401.0 != prior point 510.1 (kind=ocr, excise_window=False) -> not stored",
+  "FY2018Q2: PY column 10939.0 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2018Q3: PY column 2882.0 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2019Q1: PY column 6645.0 printed in a GST-transition filing (Ind AS comparative may include excise duty) -> not stored",
+  "FY2025Q3: PY column 13047.0 deviates >2% from prior point 1394.7 -> not stored",
+  "범위: 연결 결산 공시 없음(NSE·BSE 결과 목록 standalone 만) — 별도=회사 전체. AR FY26 note: 변압기 단일 부문 → primary_target=revenue_total.",
+  "단위: 2024 년까지 INR lakh 정수(소수점 없음)로 인쇄 → 0.1 INR mn 정밀도.",
+  "orders: 분기 수주액 공시 없음 — orders_segment 미작성.",
+  "verify 2026-09-25: checked revenue_total FY2016Q1,FY2016Q3,FY2017Q1-Q3,FY2018Q1-Q4,FY2019Q1,FY2019Q4,FY2020Q3-Q4,FY2021Q1-Q4,FY2022Q1-Q4,FY2023Q1,FY2023Q4,FY2024Q1-Q3,FY2025Q1-Q2,FY2025Q4,FY2026Q1,FY2026Q4,FY2027Q1 (incl. prior_year_comparative) against BSE PDFs (text layer, tesseract); fixed 0. IGAAP-era values are 'Total income from operations (net of excise)', consistent with Ind AS revenue from operations."
+ ]
+}

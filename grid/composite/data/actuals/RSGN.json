@@ -1,0 +1,345 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "RSGN",
+ "grid_node": "GRID_RS_GROUP",
+ "name": "R&S Group Holding AG",
+ "ticker": "RSGN SW",
+ "listed": true,
+ "currency": "CHF",
+ "unit": "million",
+ "accounting_basis": "Swiss GAAP FER",
+ "fiscal_year_end_month": 12,
+ "quarter_calendar": "semiannual (H1 = Jan–Jun, H2 = Jul–Dec)",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "연결 순매출(반기) — 변압기 전업",
+   "scope": "consolidated",
+   "freq": "H",
+   "primary": true,
+   "points": [
+    {
+     "fiscal_key": "FY2023H1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-06-30",
+     "value": 102.974,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/236b38c6-c415-4d08-be0f-f663c5ce15a3/assets/RSGN_Final_Semi-annual%20Report_2024.pdf",
+     "locator": "R&S Group Semi-annual Report 2024 p.10 consolidated income statement, 'Net sales' comparative column 30 June 2023 (TCHF 102,974; includes SERW, divested 5-Dec-2023; adjusted ex-SERW 95.4m on p.6). Pre-listing period (R&S International Holding) as printed after the de-SPAC. TCHF → CHF million."
+    },
+    {
+     "fiscal_key": "FY2023H2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-12-31",
+     "value": 113.933,
+     "method": "annual_minus_h1",
+     "source_url": "https://www.eqs-news.com/media/document/c9f9bc33-44a0-408b-9a56-1874cac922f5/assets/RSGN_Final_Annual_Report_2023_Website.pdf",
+     "locator": "Annual Report 2023 p.60 consolidated income statement 'Net sales' 2023 TCHF 216,907 minus H1-2023 TCHF 102,974 (Semi-annual Report 2024 p.10 comparative column). Includes SERW for 11 months. TCHF → CHF million."
+    },
+    {
+     "fiscal_key": "FY2024H1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-06-30",
+     "value": 109.933,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/236b38c6-c415-4d08-be0f-f663c5ce15a3/assets/RSGN_Final_Semi-annual%20Report_2024.pdf",
+     "locator": "Semi-annual Report 2024 p.10 consolidated income statement 'Net sales' 30 June 2024 (TCHF 109,933); comparative TCHF 102,974. TCHF → CHF million.",
+     "prior_year_comparative": 102.974,
+     "published_date": "2024-09-10"
+    },
+    {
+     "fiscal_key": "FY2024H2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-12-31",
+     "value": 172.693,
+     "method": "annual_minus_h1",
+     "source_url": "https://www.eqs-news.com/media/document/14612da7-e0f9-4a06-93fc-f7623879bf78/assets/RSGN_Full-Year_Report_2024.pdf",
+     "locator": "Annual Report 2024 p.67 consolidated income statement 'Net sales' 2024 TCHF 282,626 minus H1-2024 TCHF 109,933 (Semi-annual Report 2024 p.10). Includes Kyte Powertech from 20-Aug-2024. prior_year_comparative = FY2023 TCHF 216,907 (AR2024 p.67 comparative) minus H1-2023 102,974 (SAR2024 comparative). TCHF → CHF million.",
+     "prior_year_comparative": 113.933,
+     "published_date": "2025-04-15"
+    },
+    {
+     "fiscal_key": "FY2025H1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-06-30",
+     "value": 206.342,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/164f0d4c-5dc7-42d3-a5f7-4bba86a983c3/assets/RSGN_Semi-annual_Report_2026.pdf",
+     "locator": "Semi-annual Report 2026 p.12 consolidated income statement comparative column 30 June 2025 'Net sales' TCHF 206,342 (the Semi-annual Report 2025 PDF is image-only; its p.6 key-figure table, read by OCR, shows HY2025 net sales 206.3 MCHF vs HY2024 109.9 — consistent). TCHF → CHF million.",
+     "prior_year_comparative": 109.9,
+     "published_date": "2025-09-11",
+     "prior_year_comparative_note": "109.9 MCHF = HY2024 reported, printed (1 decimal) in the Semi-annual Report 2025 key-figure table p.6"
+    },
+    {
+     "fiscal_key": "FY2025H2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-12-31",
+     "value": 208.501,
+     "method": "annual_minus_h1",
+     "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf",
+     "locator": "Annual Report 2025 p.68 consolidated income statement 'Net sales' 2025 TCHF 414,843 minus H1-2025 TCHF 206,342 (SAR2026 p.12 comparative). prior_year_comparative = FY2024 TCHF 282,626 (AR2025 comparative) minus H1-2024 TCHF 109,933. TCHF → CHF million.",
+     "prior_year_comparative": 172.693,
+     "published_date": "2026-04-08"
+    },
+    {
+     "fiscal_key": "FY2026H1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-06-30",
+     "value": 179.167,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/164f0d4c-5dc7-42d3-a5f7-4bba86a983c3/assets/RSGN_Semi-annual_Report_2026.pdf",
+     "locator": "Semi-annual Report 2026 p.12 consolidated income statement 'Net sales' 30 June 2026 TCHF 179,167; comparative TCHF 206,342 (reported; 201.4 MCHF adjusted for the switches & connectors business divested Dec-2025, p.6). TCHF → CHF million.",
+     "prior_year_comparative": 206.342,
+     "published_date": "2026-09-16"
+    }
+   ]
+  },
+  "orders_segment": {
+   "label_ko": "연결 수주(Order intake, 반기) — 변압기 전업이므로 사실상 변압기 수주",
+   "scope": "consolidated",
+   "segment_name": "Group order intake (pure-play transformers)",
+   "metric": "orders_received",
+   "freq": "H",
+   "primary": false,
+   "points": [
+    {
+     "fiscal_key": "FY2023H1",
+     "period_start": "2023-01-01",
+     "period_end": "2023-06-30",
+     "value": 133.3,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/236b38c6-c415-4d08-be0f-f663c5ce15a3/assets/RSGN_Final_Semi-annual%20Report_2024.pdf",
+     "locator": "Semi-annual Report 2024 p.6 key-figure table, 'Order intake' HY2023 reported 133.3 MCHF (adjusted ex-SERW 119.3)."
+    },
+    {
+     "fiscal_key": "FY2023H2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-12-31",
+     "value": 131.3,
+     "method": "annual_minus_h1",
+     "source_url": "https://www.eqs-news.com/media/document/c9f9bc33-44a0-408b-9a56-1874cac922f5/assets/RSGN_Final_Annual_Report_2023_Website.pdf",
+     "locator": "Annual Report 2023 p.19 'Consolidated Key Financials' Order Intake 2023 reported 264.6 MCHF minus HY2023 133.3 (SAR2024 p.6)."
+    },
+    {
+     "fiscal_key": "FY2024H1",
+     "period_start": "2024-01-01",
+     "period_end": "2024-06-30",
+     "value": 141.0,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/236b38c6-c415-4d08-be0f-f663c5ce15a3/assets/RSGN_Final_Semi-annual%20Report_2024.pdf",
+     "locator": "Semi-annual Report 2024 p.6 key-figure table 'Order intake' HY2024 141.0 MCHF; comparative HY2023 reported 133.3.",
+     "prior_year_comparative": 133.3,
+     "published_date": "2024-09-10"
+    },
+    {
+     "fiscal_key": "FY2024H2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-12-31",
+     "value": 164.5,
+     "method": "annual_minus_h1",
+     "source_url": "https://www.eqs-news.com/media/document/14612da7-e0f9-4a06-93fc-f7623879bf78/assets/RSGN_Full-Year_Report_2024.pdf",
+     "locator": "Annual Report 2024 p.23 key financials Order Intake 2024 305.5 MCHF minus HY2024 141.0; comparative = 2023 264.6 (AR2024 p.23) minus HY2023 133.3.",
+     "prior_year_comparative": 131.3,
+     "published_date": "2025-04-15"
+    },
+    {
+     "fiscal_key": "FY2025H1",
+     "period_start": "2025-01-01",
+     "period_end": "2025-06-30",
+     "value": 244.8,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/164f0d4c-5dc7-42d3-a5f7-4bba86a983c3/assets/RSGN_Semi-annual_Report_2026.pdf",
+     "locator": "Semi-annual Report 2026 p.6 table 'Order intake' HY2025 reported 244.8 MCHF (same figure in the image-only Semi-annual Report 2025 p.6 key-figure table, OCR: 244.8 vs HY2024 141.0).",
+     "prior_year_comparative": 141.0,
+     "published_date": "2025-09-11"
+    },
+    {
+     "fiscal_key": "FY2025H2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-12-31",
+     "value": 232.0,
+     "method": "annual_minus_h1",
+     "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf",
+     "locator": "Annual Report 2025 p.23 key financials Order intake 2025 476.8 MCHF minus HY2025 244.8; comparative = 2024 305.5 minus HY2024 141.0.",
+     "prior_year_comparative": 164.5,
+     "published_date": "2026-04-08"
+    },
+    {
+     "fiscal_key": "FY2026H1",
+     "period_start": "2026-01-01",
+     "period_end": "2026-06-30",
+     "value": 216.8,
+     "method": "direct_reported_half",
+     "source_url": "https://www.eqs-news.com/media/document/164f0d4c-5dc7-42d3-a5f7-4bba86a983c3/assets/RSGN_Semi-annual_Report_2026.pdf",
+     "locator": "Semi-annual Report 2026 p.6 table 'Order intake' HY2026 216.8 MCHF; comparative HY2025 reported 244.8 (adjusted 240.6).",
+     "prior_year_comparative": 244.8,
+     "published_date": "2026-09-16"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_total",
+ "structural_breaks": [
+  {
+   "date": "2023-10-01",
+   "type": "acquisition",
+   "note": "Tesar Gulf Power Transformers LLC (Al Ain, UAE) acquired Oct-2023.",
+   "source_url": "https://www.eqs-news.com/media/document/c9f9bc33-44a0-408b-9a56-1874cac922f5/assets/RSGN_Final_Annual_Report_2023_Website.pdf"
+  },
+  {
+   "date": "2023-12-05",
+   "type": "divestiture",
+   "note": "SERW spol. s r.o. (Czech HV switches) sold 5-Dec-2023 (2023 sales 15.6m, 2022 10.8m CHF); reported H1/FY2023 still include it (adjusted figures in reports).",
+   "source_url": "https://www.eqs-news.com/media/document/c9f9bc33-44a0-408b-9a56-1874cac922f5/assets/RSGN_Final_Annual_Report_2023_Website.pdf"
+  },
+  {
+   "date": "2023-12-13",
+   "type": "listing",
+   "note": "De-SPAC: VT5 Acquisition Company acquired R&S International Holding and was renamed R&S Group Holding AG; trading on SIX from 13-Dec-2023. Pre-listing history before H1-2023 is only available as FY2022 (155.1m) in AR2023 — no half-year split.",
+   "source_url": "https://www.eqs-news.com/media/document/c9f9bc33-44a0-408b-9a56-1874cac922f5/assets/RSGN_Final_Annual_Report_2023_Website.pdf"
+  },
+  {
+   "date": "2024-08-20",
+   "type": "acquisition",
+   "note": "Kyte Powertech (Cavan, Ireland; oil distribution transformers up to 10 MVA, UK/IE utilities) consolidated from 20-Aug-2024; H2-2024 includes ~4.3 months.",
+   "source_url": "https://www.eqs-news.com/media/document/14612da7-e0f9-4a06-93fc-f7623879bf78/assets/RSGN_Full-Year_Report_2024.pdf"
+  },
+  {
+   "date": "2025-12-31",
+   "type": "divestiture",
+   "note": "Non-core electrical switches & connectors business of Rauscher & Stoecklin sold Dec-2025 (2025 sales 7.3m, 2024 9.4m CHF); H1-2026 comparisons adjusted by the company (201.4 vs reported 206.3).",
+   "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf"
+  }
+ ],
+ "profile": {
+  "products": "Pure-play transformers: oil-immersed distribution transformers (Rauscher & Stoecklin, Sissach CH: up to 3.15 MVA / 36 kV; Krzeczów/Bochnia PL plant up to 6.0 MVA / 36 kV; Kyte Powertech IE: single-phase pole-mount 15–100 kVA, 3-phase up to 10 MVA; large distribution 1,600 kVA–10 MVA), oil-immersed power transformers up to 125 MVA / 170 kV (ZREW, Łódź; expanding to 160 MVA / 220 kV with the new Łódź plant from end-2026), cast-resin dry-type and instrument transformers (Tesar, Italy; Tesar Polska), Middle-East units (Tesar Gulf, UAE). Backlog CHF 357.9m at 30-Jun-2026, 61% power transformers.",
+  "plants": [
+   {
+    "country": "CH",
+    "city": "Sissach",
+    "products": "oil distribution transformers up to 3.15 MVA / 36 kV (Rauscher & Stoecklin)",
+    "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf"
+   },
+   {
+    "country": "PL",
+    "city": "Krzeczów (Bochnia)",
+    "products": "oil distribution transformers 250 kVA–6.0 MVA / 36 kV (new 10,000 m² plant)",
+    "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf"
+   },
+   {
+    "country": "PL",
+    "city": "Łódź",
+    "products": "ZREW power transformers up to 125 MVA / 170 kV; new plant (≈CHF 29m) doubling capacity by 2028, opening Nov-2026",
+    "source_url": "https://www.eqs-news.com/media/document/164f0d4c-5dc7-42d3-a5f7-4bba86a983c3/assets/RSGN_Semi-annual_Report_2026.pdf"
+   },
+   {
+    "country": "PL",
+    "city": "Niepołomice",
+    "products": "Tesar Polska — cast-resin dry-type transformers",
+    "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf"
+   },
+   {
+    "country": "IT",
+    "city": "Subbiano",
+    "products": "Tesar — cast-resin dry-type & instrument transformers",
+    "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf"
+   },
+   {
+    "country": "AE",
+    "city": "Al Ain",
+    "products": "Tesar Gulf Power Transformers",
+    "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf"
+   },
+   {
+    "country": "IE",
+    "city": "Cavan",
+    "products": "Kyte Powertech — oil distribution transformers (pole-mount, up to 10 MVA), substations",
+    "source_url": "https://www.eqs-news.com/media/document/0fec9fb0-b91a-4deb-aef1-5cb2afb265d8/assets/RSG_Annual_report_2025_def.pdf"
+   }
+  ],
+  "end_markets": "European distribution utilities (CH, UK, IE, DE, PL, IT), renewables (wind/solar/BESS grid connection), data centers, industry, rail, harbor electrification, Middle East. H1-2026 gross sales: Europe 165.0 of 181.2 CHF m; America 0.2m (UL certification for the US in progress).",
+  "export_routes": [
+   "PL->EU (DE, Nordics)",
+   "IT->EU",
+   "CH->EU",
+   "IE->UK",
+   "AE->GCC",
+   "PL/IT->US (future, UL certification in progress)"
+  ],
+  "hs_candidates": [
+   "850421",
+   "850422",
+   "850423",
+   "850433",
+   "850434",
+   "850431"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "eurostat_ip_C271_PL",
+    "why": "Polish C27.1 production — ZREW/Tesar Polska/Krzeczów are the group's largest plants",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_IT",
+    "why": "Italian C27.1 production — Tesar cast-resin transformers",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_DE",
+    "why": "German C27.1 production / grid capex — Germany = 11% of H1-2026 sales and the main export market for Łódź power transformers",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C271_IE",
+    "why": "Irish C27.1 production — Kyte Powertech (Cavan)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "ch_exp_850422_p0",
+    "why": "Swiss exports of 650 kVA–10 MVA liquid transformers — Rauscher & Stoecklin",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "it_exp_850433_p0",
+    "why": "Italian exports of dry-type transformers 16–500 kVA — Tesar",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "it_exp_850434_p0",
+    "why": "Italian exports of dry-type transformers >500 kVA — Tesar",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "wishlist:pl_exp_850423_p0",
+    "why": "Polish exports of >10 MVA liquid transformers (ZREW) — Poland is not yet in the exporter panel (GUS/Comext)",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "wishlist:uk_ons_dno_capex_or_ofgem",
+    "why": "UK DNO distribution capex / transformer procurement (Ofgem RIIO-ED2) — Kyte's main market, currently destocking",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_total/orders FY2016H1–FY2022H2: R&S was private until Dec-2023; the only pre-listing figure in the published reports is FY2022 (net sales 155.1m, order intake 240.9m) without an H1/H2 split. The VT5 listing prospectus (8-Nov-2023, formerly on vt5.ch) could contain more history but is no longer reachable (vt5.ch redirects to the R&S IR site) — not collected.",
+  "Semi-annual only (no quarterly reporting); H2 values are annual minus H1.",
+  "Semi-annual Report 2025 PDF has no text layer (images/vector outlines); its figures were taken from the 2026 comparative and OCR of the key-figure page."
+ ],
+ "collection_notes": [
+  "Sources: company reports distributed via EQS (eqs-news.com media documents; the ir.the-rsgroup.com site is a JS app without static links).",
+  "Net sales in TCHF from the consolidated income statements → CHF million; order intake in MCHF (1 decimal) from key-figure tables.",
+  "prior_year_comparative uses the REPORTED comparative (statutory), not the company's 'adjusted' like-for-like figures (adjusted values quoted in locators).",
+  "verify 2026-09-25: checked revenue_total FY2023H1, FY2023H2 (annual_minus_h1), FY2024H1, FY2024H2 (annual_minus_h1), FY2025H1, FY2025H2 (annual_minus_h1), FY2026H1 and orders_segment all 7 halves against the Semi-annual Reports 2024/2026 and Annual Reports 2023/2024/2025 (net sales TCHF 102,974 / 216,907 / 109,933 / 282,626 / 206,342 / 414,843 / 179,167; order intake 133.3 / 264.6 / 141.0 / 305.5 / 244.8 / 476.8 / 216.8). All matched. Plant claims spot-checked in AR2025 (Sissach oil distribution transformers up to 3.15 MVA; Krzeczów up to 6.0 MVA; ZREW Łódź power transformers up to 125 MVA / 170 kV, new plant up to 160 MVA / 220 kV) — confirmed. Fixed 0."
+ ]
+}

@@ -1,0 +1,1132 @@
+{
+ "accounting_basis": "US GAAP",
+ "collected_at": "2026-09-25",
+ "collection_notes": [
+  "SEC EDGAR XBRL(10-Q/10-K) + Q4 실적 보도자료(8-K Ex.99.1) 원문. User-Agent 헤더 준수.",
+  "Q1–Q3 = 해당 분기 10-Q의 3개월 세그먼트 매출(StatementBusinessSegmentsAxis=hubb:PowerSegmentMember/UtilitySolutionsSegmentMember) + 같은 10-Q 전년 동기 = PYC.",
+  "Q4 = Q4 보도자료의 \"Utility Solutions\"(2019년 이전 \"Power segment\") 표 Net Sales 3개월 열(현재/전년). 10-K 연간−9M 차분과 교차검증: FY2018Q4 477.5 vs 477.6, FY2021Q4 PYC 515.2 vs 515.4(반올림) 외 전부 일치.",
+  "revenue_total Q4 = 보도자료 요약 손익표 \"Net sales\" 3개월 열.",
+  "verify 2026-09-25: checked revenue_segment FY2016Q1, FY2018Q2, FY2018Q3, FY2018Q4, FY2021Q1 (recast PYC 526.6), FY2021Q4, FY2025Q4, FY2026Q2 incl. PYC (cited 10-Q segment tables / Q4 release 'Utility Solutions'/'Power segment' Net Sales) and revenue_total all 42 points vs SEC XBRL (FY2026Q2 from 10-Q statement 1,711.8/1,484.3); breaks for Aclara 2018, 2021 Gas Connectors move and C&I Lighting disc-ops present — all values match; fixed 0."
+ ],
+ "currency": "USD",
+ "fiscal_year_end_month": 12,
+ "gaps": [
+  "Hubbell은 수주(orders) 금액을 공시하지 않음 — orders_segment 없음.",
+  "revenue_total FY2021Q4 이후는 C&I Lighting 중단영업 제외 범위(레벨 단절) — YoY는 각 포인트 PYC(같은 문서 재작성치)로 동일 범위 유지.",
+  "2016Q1 이전(2015) 분기는 수집 범위 밖(PYC로만 존재)."
+ ],
+ "grid_node": "GRID_HUBBELL",
+ "id": "HUBB",
+ "listed": true,
+ "name": "Hubbell Incorporated",
+ "primary_target": "revenue_segment",
+ "profile": {
+  "end_markets": "electric T&D utilities (grid infrastructure, grid automation), gas & water utilities, telecom; US = 96% of Utility Solutions 2025 sales (3,518.9 of 3,672.3 $M)",
+  "export_routes": [
+   "US domestic",
+   "MX->US",
+   "CN->US"
+  ],
+  "hs_candidates": [
+   "853521",
+   "853529",
+   "853720",
+   "850421",
+   "854620",
+   "853690",
+   "902830"
+  ],
+  "plants": [
+   {
+    "city": "(multiple; 35 Utility Solutions manufacturing facilities globally, 5.7M sq ft)",
+    "country": "US",
+    "products": "utility T&D components, meters, controls",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026007500/hubb-20251231.htm"
+   },
+   {
+    "city": "(unspecified)",
+    "country": "MX",
+    "products": "products manufactured/assembled by subsidiaries in Mexico (both segments)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026007500/hubb-20251231.htm"
+   },
+   {
+    "city": "Jiangsu (Xiangyuan Electric Equipment, acq. 2016)",
+    "country": "CN",
+    "products": "utility products (Power segment acquisition)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017001423/hubb-20161231x10k.htm"
+   },
+   {
+    "city": "(Balestro, acq. Oct-2023)",
+    "country": "BR",
+    "products": "utility T&D components",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024003792/hubb-20231231.htm"
+   }
+  ],
+  "products": "Utility Solutions (63% of 2025 sales): utility T&D components — arresters, insulators, connectors, anchors, bushings, enclosures, cutouts, hot-line tools, gas distribution components; grid automation/communications — Aclara smart meters & AMI, Beckwith Electric protective relays, EIG power-quality meters, Systems Control substation control & relay panels/buildings, Meramec instrument transformers, DMC Power substation connectors. Hubbell does NOT manufacture distribution/power transformers; exposure is to the same utility T&D capex cycle (In Front of the Meter). Electrical Solutions: wiring devices, connectors (Burndy), harsh & hazardous, data-center enclosures (PCX), etc.",
+  "proxy_routes": [
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_TLPWRCONS",
+    "role": "primary",
+    "why": "미국 전력 건설투자 — 유틸리티 T&D capex = Utility Solutions 수요 동행/선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_A35SNO",
+    "role": "primary",
+    "why": "미국 전기장비 신규수주 — 배전·T&D 장비 사이클 선행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_IPG3353S",
+    "role": "diagnostic",
+    "why": "미국 전기장비 산업생산 — 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "fred_PCU335311335311",
+    "role": "diagnostic",
+    "why": "변압기 PPI — 유틸리티 장비 가격 사이클(명목 매출) 동행"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_850421_p0",
+    "role": "primary",
+    "why": "미국 소형 유입식 배전변압기(≤650kVA) 수입 — 배전망 신설·교체 물량(같은 유틸리티 capex에서 Hubbell 선로 자재 동반)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853521_p0",
+    "role": "diagnostic",
+    "why": "미국 72.5kV 미만 자동차단기 수입 — 배전 변전소 활동"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853529_p0",
+    "role": "diagnostic",
+    "why": "미국 고압 자동차단기 수입 — 송전·변전소 활동(DMC Power·Systems Control 수요와 동조)"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_853720_p0",
+    "role": "diagnostic",
+    "why": "미국 1kV 초과 배전반 수입 — 변전소 제어반 수요"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_854620_p0",
+    "role": "wishlist",
+    "why": "WISHLIST: 미국 세라믹 애자(HS854620) 수입 — Hubbell 애자·부싱 시장"
+   },
+   {
+    "expected_sign": "+",
+    "proxy_hint": "us_imp_902830_p0",
+    "role": "wishlist",
+    "why": "WISHLIST: 미국 전력량계(HS902830) 수입 — Aclara AMI 교체 사이클"
+   }
+  ]
+ },
+ "quarter_calendar": "calendar (10-Q periods end Mar 31 / Jun 30 / Sep 30; FY Dec 31)",
+ "schema": "grid-composite-actuals/1",
+ "structural_breaks": [
+  {
+   "date": "2016-01-01",
+   "note": "Power: R.W. Lyall (gas distribution components) Jan-2016; Jiangsu Xiangyuan Electric Equipment (China) Q3-2016.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017001423/hubb-20161231x10k.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2017-11-01",
+   "note": "Power: Meramec Instrument Transformer Company (Nov-2017, $69.7M).",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018001740/hubb-20171231x10k.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2018-02-02",
+   "note": "Power: Aclara (smart meters/grid automation) $1.1B — FY2018Q1 부분 편입, FY2018Q2부터 전 분기. PYC(2017)는 인수 전 범위라 YoY에 인수효과 포함.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019001446/hubb-20181231x10k.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2020-01-01",
+   "note": "Power 세그먼트 → Utility Solutions 로 명칭 변경(범위 동일: Q1 2020 10-Q의 2019 비교치 = 2019 원공시치).",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020006030/hubb-2020033110q.htm",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2021-01-01",
+   "note": "Hubbell Gas Connectors and Accessories 사업을 Electrical → Utility Solutions 로 이관, 2020 비교치 재작성(예: 2020Q1 484.2→526.6). value=당해 10-Q, PYC=같은 문서 재작성치 → 동일 범위 YoY.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021007817/hubb-20210331.htm",
+   "type": "segment_reorg"
+  },
+  {
+   "date": "2021-12-31",
+   "note": "C&I Lighting(Electrical) 매각(2022-02) — 2021 10-K부터 중단영업 재작성: revenue_total 2021Q4 이후 레벨 단절(2021Q1–Q3 원공시 1,078/1,192/1,214 vs 재작성 956/1,054/1,083). Utility Solutions 영향 없음.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022002255/hubb-20211231.htm",
+   "type": "divestiture"
+  },
+  {
+   "date": "2023-12-12",
+   "note": "Utility Solutions: Systems Control (Northern Star Holdings; substation control & relay panels, control buildings) ~$1.1B.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024003792/hubb-20231231.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2025-10-01",
+   "note": "Utility Solutions: DMC Power (substation/transmission connectors & tooling) ~$829M.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026007500/hubb-20251231.htm",
+   "type": "acquisition"
+  },
+  {
+   "date": "2026-06-09",
+   "note": "NSI Industries ~$3.0B (electrical fittings/connectors) — Q2 2026 10-Q Note 2: \"added to the Electrical Solutions segment\". Utility Solutions 타깃 영향 없음; revenue_total 은 2026Q2부터 범위 확대.",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026050405/hubb-20260630.htm",
+   "type": "acquisition"
+  }
+ ],
+ "targets": {
+  "revenue_segment": {
+   "freq": "Q",
+   "label_ko": "Utility Solutions 세그먼트 매출(2019년까지 Power 세그먼트)",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "10-Q for period ended 2016-03-31 (filed 2016-04-27), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:SalesRevenueNet {\"us-gaap:ConsolidationItemsAxis\": \"us-gaap:OperatingSegmentsMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 240.0,
+     "published_date": "2016-04-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828016014813/hubb-2016033110q.htm",
+     "value": 252.1
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "10-Q for period ended 2016-06-30 (filed 2016-07-27), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:SalesRevenueNet {\"us-gaap:ConsolidationItemsAxis\": \"us-gaap:OperatingSegmentsMember\", \"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 259.0,
+     "published_date": "2016-07-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828016017777/hubb-2016063010q.htm",
+     "value": 267.4
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "10-Q for period ended 2016-09-30 (filed 2016-10-26), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:SalesRevenueNet {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 259.5,
+     "published_date": "2016-10-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828016020273/hubb-2016093010q.htm",
+     "value": 272.8
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "Hubbell Q4 2016 earnings release (Form 8-K Ex.99.1), segment table \"Power segment\", row \"Net Sales [a]\", Three Months Ended December 31 2016 (col1) / 2015 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 243.7,
+     "published_date": "2017-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017000641/exhibit991_013117.htm",
+     "value": 252.7
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "10-Q for period ended 2017-03-31 (filed 2017-04-26), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:SalesRevenueNet {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 252.1,
+     "published_date": "2017-04-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017004299/hubb-2017033110q.htm",
+     "value": 264.8
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "10-Q for period ended 2017-06-30 (filed 2017-07-26), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:SalesRevenueNet {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "prior_year_comparative": 267.4,
+     "published_date": "2017-07-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017007275/hubb-2017063010q.htm",
+     "value": 291.9
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "10-Q for period ended 2017-09-30 (filed 2017-10-25), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:SalesRevenueNet {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 272.8,
+     "published_date": "2017-10-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017010113/hubb-2017093010q.htm",
+     "value": 296.5
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "Hubbell Q4 2017 earnings release (Form 8-K Ex.99.1), segment table \"Power segment\", row \"Net Sales [a]\", Three Months Ended December 31 2017 (col1) / 2016 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 252.7,
+     "published_date": "2018-01-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018000694/exhibit991_013018.htm",
+     "value": 282.8
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "10-Q for period ended 2018-03-31 (filed 2018-04-25), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 264.8,
+     "published_date": "2018-04-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018005005/hubb-2018033110q.htm",
+     "value": 373.1
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "10-Q for period ended 2018-06-30 (filed 2018-07-25), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 291.9,
+     "published_date": "2018-07-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018009572/hubb-2018063010q.htm",
+     "value": 478.1
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "10-Q for period ended 2018-09-30 (filed 2018-10-24), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 296.5,
+     "published_date": "2018-10-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018012833/hubb-2018093010q.htm",
+     "value": 492.3
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Hubbell Q4 2018 earnings release (Form 8-K Ex.99.1), segment table \"Power segment\", row \"Net Sales [a]\", Three Months Ended December 31 2018 (col1) / 2017 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "prior_year_comparative": 282.8,
+     "published_date": "2019-02-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019000915/exhibit991_02052019.htm",
+     "value": 477.5
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "10-Q for period ended 2019-03-31 (filed 2019-05-01), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 373.1,
+     "published_date": "2019-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019005330/hubb-2019033110q.htm",
+     "value": 457.1
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "10-Q for period ended 2019-06-30 (filed 2019-07-31), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 478.1,
+     "published_date": "2019-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019009335/hubb-2019063010q.htm",
+     "value": 508.2
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "10-Q for period ended 2019-09-30 (filed 2019-10-30), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:PowerSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 492.3,
+     "published_date": "2019-10-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019012727/hubb-2019093010q.htm",
+     "value": 514.7
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "Hubbell Q4 2019 earnings release (Form 8-K Ex.99.1), segment table \"Power segment\", row \"Net Sales [a]\", Three Months Ended December 31 2019 (col1) / 2018 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 477.5,
+     "published_date": "2020-02-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020000954/exhibit99102042020.htm",
+     "value": 485.3
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "10-Q for period ended 2020-03-31 (filed 2020-05-01), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 457.1,
+     "published_date": "2020-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020006030/hubb-2020033110q.htm",
+     "value": 484.2
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "10-Q for period ended 2020-06-30 (filed 2020-07-31), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "prior_year_comparative": 508.2,
+     "published_date": "2020-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020011076/hubb-20200630.htm",
+     "value": 442.1
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "10-Q for period ended 2020-09-30 (filed 2020-10-28), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "prior_year_comparative": 514.7,
+     "published_date": "2020-10-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020014919/hubb-20200930.htm",
+     "value": 517.4
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "Hubbell Q4 2020 earnings release (Form 8-K Ex.99.1), segment table \"Utility Solutions\", row \"Net Sales [a]\", Three Months Ended December 31 2020 (col1) / 2019 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "prior_year_comparative": 485.3,
+     "published_date": "2021-02-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021001257/exhibit991_02022021.htm",
+     "value": 478.7
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "10-Q for period ended 2021-03-31 (filed 2021-04-28), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 526.6,
+     "published_date": "2021-04-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021007817/hubb-20210331.htm",
+     "value": 532.2
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "10-Q for period ended 2021-06-30 (filed 2021-07-28), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "prior_year_comparative": 479.8,
+     "published_date": "2021-07-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021014632/hubb-20210630.htm",
+     "value": 588.9
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "10-Q for period ended 2021-09-30 (filed 2021-10-27), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "prior_year_comparative": 557.6,
+     "published_date": "2021-10-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021020576/hubb-20210930.htm",
+     "value": 601.7
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "Hubbell Q4 2021 earnings release (Form 8-K Ex.99.1), segment table \"Utility Solutions\", row \"Net Sales [a]\", Three Months Ended December 31 2021 (col1) / 2020 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 515.2,
+     "published_date": "2022-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022001739/exhibit991_02032022.htm",
+     "value": 611.6
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "10-Q for period ended 2022-03-31 (filed 2022-04-27), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 532.2,
+     "published_date": "2022-04-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022010690/hubb-20220331.htm",
+     "value": 651.8
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "10-Q for period ended 2022-06-30 (filed 2022-07-27), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "prior_year_comparative": 588.8,
+     "published_date": "2022-07-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022019492/hubb-20220630.htm",
+     "value": 728.5
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "10-Q for period ended 2022-09-30 (filed 2022-10-26), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "prior_year_comparative": 601.8,
+     "published_date": "2022-10-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022027022/hubb-20220930.htm",
+     "value": 774.5
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "Hubbell Q4 2022 earnings release (Form 8-K Ex.99.1), segment table \"Utility Solutions\", row \"Net Sales [a]\", Three Months Ended December 31 2022 (col1) / 2021 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "prior_year_comparative": 611.6,
+     "published_date": "2023-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023001785/exhibit991_01312023.htm",
+     "value": 716.3
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "10-Q for period ended 2023-03-31 (filed 2023-04-28), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 651.8,
+     "published_date": "2023-04-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023014179/hubb-20230331.htm",
+     "value": 781.6
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "10-Q for period ended 2023-06-30 (filed 2023-07-26), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 728.5,
+     "published_date": "2023-07-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023025628/hubb-20230630.htm",
+     "value": 830.8
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "10-Q for period ended 2023-09-30 (filed 2023-11-01), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 774.5,
+     "published_date": "2023-11-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023035804/hubb-20230930.htm",
+     "value": 837.9
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "Hubbell Q4 2023 earnings release (Form 8-K Ex.99.1), segment table \"Utility Solutions\", row \"Net Sales [a]\", Three Months Ended December 31 2023 (col1) / 2022 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 716.3,
+     "published_date": "2024-01-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024002494/exhibit991_01302024.htm",
+     "value": 811.4
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-05-01), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 781.6,
+     "published_date": "2024-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024019474/hubb-20240331.htm",
+     "value": 894.0
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-07-31), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 830.8,
+     "published_date": "2024-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024033632/hubb-20240630.htm",
+     "value": 926.5
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-30), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 837.9,
+     "published_date": "2024-10-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024044201/hubb-20240930.htm",
+     "value": 933.1
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "Hubbell Q4 2024 earnings release (Form 8-K Ex.99.1), segment table \"Utility Solutions\", row \"Net Sales [a]\", Three Months Ended December 31 2024 (col1) / 2023 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 811.4,
+     "published_date": "2025-02-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025003586/exhibit991_02042025.htm",
+     "value": 847.1
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "10-Q for period ended 2025-03-31 (filed 2025-05-02), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 894.0,
+     "published_date": "2025-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025021677/hubb-20250331.htm",
+     "value": 857.1
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "10-Q for period ended 2025-06-30 (filed 2025-07-30), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 926.5,
+     "published_date": "2025-07-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025036564/hubb-20250630.htm",
+     "value": 935.5
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "10-Q for period ended 2025-09-30 (filed 2025-10-29), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 933.1,
+     "published_date": "2025-10-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025046924/hubb-20250930.htm",
+     "value": 943.8
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Hubbell Q4 2025 earnings release (Form 8-K Ex.99.1), segment table \"Utility Solutions\", row \"Net Sales [a]\", Three Months Ended December 31 2025 (col1) / 2024 (col2)",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 847.1,
+     "published_date": "2026-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026004800/exhibit991_02032026.htm",
+     "value": 935.9
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "10-Q for period ended 2026-03-31 (filed 2026-05-01), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 857.1,
+     "published_date": "2026-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026029110/hubb-20260331.htm",
+     "value": 948.9
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "10-Q for period ended 2026-06-30 (filed 2026-07-29), segment information note, net sales — Utility Solutions segment (named \"Power\" segment before 2020); three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {\"us-gaap:StatementBusinessSegmentsAxis\": \"hubb:UtilitySolutionsSegmentMember\"}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 935.5,
+     "published_date": "2026-07-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026050405/hubb-20260630.htm",
+     "value": 1025.8
+    }
+   ],
+   "primary": true,
+   "scope": "segment",
+   "segment_name": "Utility Solutions (named \"Power\" segment through FY2019; renamed Q1 2020 with identical scope)"
+  },
+  "revenue_total": {
+   "freq": "Q",
+   "label_ko": "연결 매출",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "locator": "10-Q for period ended 2016-03-31 (filed 2016-04-27), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-03-31",
+     "period_start": "2016-01-01",
+     "prior_year_comparative": 809.7,
+     "published_date": "2016-04-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828016014813/hubb-2016033110q.htm",
+     "value": 834.8
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "locator": "10-Q for period ended 2016-06-30 (filed 2016-07-27), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-06-30",
+     "period_start": "2016-04-01",
+     "prior_year_comparative": 874.0,
+     "published_date": "2016-07-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828016017777/hubb-2016063010q.htm",
+     "value": 908.8
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "locator": "10-Q for period ended 2016-09-30 (filed 2016-10-26), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-09-30",
+     "period_start": "2016-07-01",
+     "prior_year_comparative": 877.0,
+     "published_date": "2016-10-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828016020273/hubb-2016093010q.htm",
+     "value": 907.4
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "locator": "Hubbell Q4 2016 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2016 / 2015",
+     "method": "direct_reported_quarter",
+     "period_end": "2016-12-31",
+     "period_start": "2016-10-01",
+     "prior_year_comparative": 829.7,
+     "published_date": "2017-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017000641/exhibit991_013117.htm",
+     "value": 854.2
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "locator": "10-Q for period ended 2017-03-31 (filed 2017-04-26), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-03-31",
+     "period_start": "2017-01-01",
+     "prior_year_comparative": 834.8,
+     "published_date": "2017-04-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017004299/hubb-2017033110q.htm",
+     "value": 852.3
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "locator": "10-Q for period ended 2017-06-30 (filed 2017-07-26), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-06-30",
+     "period_start": "2017-04-01",
+     "prior_year_comparative": 908.8,
+     "published_date": "2017-07-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017007275/hubb-2017063010q.htm",
+     "value": 948.3
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "locator": "10-Q for period ended 2017-09-30 (filed 2017-10-25), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:SalesRevenueNet {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-09-30",
+     "period_start": "2017-07-01",
+     "prior_year_comparative": 907.4,
+     "published_date": "2017-10-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828017010113/hubb-2017093010q.htm",
+     "value": 950.5
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "locator": "Hubbell Q4 2017 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2017 / 2016",
+     "method": "direct_reported_quarter",
+     "period_end": "2017-12-31",
+     "period_start": "2017-10-01",
+     "prior_year_comparative": 854.2,
+     "published_date": "2018-01-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018000694/exhibit991_013018.htm",
+     "value": 917.7
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "locator": "10-Q for period ended 2018-03-31 (filed 2018-04-25), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-03-31",
+     "period_start": "2018-01-01",
+     "prior_year_comparative": 852.3,
+     "published_date": "2018-04-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018005005/hubb-2018033110q.htm",
+     "value": 991.2
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "locator": "10-Q for period ended 2018-06-30 (filed 2018-07-25), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-06-30",
+     "period_start": "2018-04-01",
+     "prior_year_comparative": 948.3,
+     "published_date": "2018-07-25",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018009572/hubb-2018063010q.htm",
+     "value": 1166.7
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "locator": "10-Q for period ended 2018-09-30 (filed 2018-10-24), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-09-30",
+     "period_start": "2018-07-01",
+     "prior_year_comparative": 950.5,
+     "published_date": "2018-10-24",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828018012833/hubb-2018093010q.htm",
+     "value": 1179.7
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "locator": "Hubbell Q4 2018 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2018 / 2017",
+     "method": "direct_reported_quarter",
+     "period_end": "2018-12-31",
+     "period_start": "2018-10-01",
+     "prior_year_comparative": 917.7,
+     "published_date": "2019-02-05",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019000915/exhibit991_02052019.htm",
+     "value": 1144.1
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "locator": "10-Q for period ended 2019-03-31 (filed 2019-05-01), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-03-31",
+     "period_start": "2019-01-01",
+     "prior_year_comparative": 991.2,
+     "published_date": "2019-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019005330/hubb-2019033110q.htm",
+     "value": 1087.3
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "locator": "10-Q for period ended 2019-06-30 (filed 2019-07-31), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-06-30",
+     "period_start": "2019-04-01",
+     "prior_year_comparative": 1166.7,
+     "published_date": "2019-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019009335/hubb-2019063010q.htm",
+     "value": 1196.4
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "locator": "10-Q for period ended 2019-09-30 (filed 2019-10-30), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-09-30",
+     "period_start": "2019-07-01",
+     "prior_year_comparative": 1179.7,
+     "published_date": "2019-10-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828019012727/hubb-2019093010q.htm",
+     "value": 1204.0
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "locator": "Hubbell Q4 2019 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2019 / 2018",
+     "method": "direct_reported_quarter",
+     "period_end": "2019-12-31",
+     "period_start": "2019-10-01",
+     "prior_year_comparative": 1144.1,
+     "published_date": "2020-02-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020000954/exhibit99102042020.htm",
+     "value": 1103.3
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "locator": "10-Q for period ended 2020-03-31 (filed 2020-05-01), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-03-31",
+     "period_start": "2020-01-01",
+     "prior_year_comparative": 1087.3,
+     "published_date": "2020-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020006030/hubb-2020033110q.htm",
+     "value": 1090.3
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "locator": "10-Q for period ended 2020-06-30 (filed 2020-07-31), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-06-30",
+     "period_start": "2020-04-01",
+     "prior_year_comparative": 1196.4,
+     "published_date": "2020-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020011076/hubb-20200630.htm",
+     "value": 949.2
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "locator": "10-Q for period ended 2020-09-30 (filed 2020-10-28), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-09-30",
+     "period_start": "2020-07-01",
+     "prior_year_comparative": 1204.0,
+     "published_date": "2020-10-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828020014919/hubb-20200930.htm",
+     "value": 1108.6
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "locator": "Hubbell Q4 2020 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2020 / 2019",
+     "method": "direct_reported_quarter",
+     "period_end": "2020-12-31",
+     "period_start": "2020-10-01",
+     "prior_year_comparative": 1103.3,
+     "published_date": "2021-02-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021001257/exhibit991_02022021.htm",
+     "value": 1037.9
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "locator": "10-Q for period ended 2021-03-31 (filed 2021-04-28), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-03-31",
+     "period_start": "2021-01-01",
+     "prior_year_comparative": 1090.3,
+     "published_date": "2021-04-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021007817/hubb-20210331.htm",
+     "value": 1078.4
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "locator": "10-Q for period ended 2021-06-30 (filed 2021-07-28), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-06-30",
+     "period_start": "2021-04-01",
+     "prior_year_comparative": 949.2,
+     "published_date": "2021-07-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021014632/hubb-20210630.htm",
+     "value": 1191.8
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "locator": "10-Q for period ended 2021-09-30 (filed 2021-10-27), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-09-30",
+     "period_start": "2021-07-01",
+     "prior_year_comparative": 1108.6,
+     "published_date": "2021-10-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828021020576/hubb-20210930.htm",
+     "value": 1213.6
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "locator": "Hubbell Q4 2021 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2021 / 2020",
+     "method": "direct_reported_quarter",
+     "period_end": "2021-12-31",
+     "period_start": "2021-10-01",
+     "prior_year_comparative": 917.1,
+     "published_date": "2022-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022001739/exhibit991_02032022.htm",
+     "value": 1100.1
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "locator": "10-Q for period ended 2022-03-31 (filed 2022-04-27), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-03-31",
+     "period_start": "2022-01-01",
+     "prior_year_comparative": 956.3,
+     "published_date": "2022-04-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022010690/hubb-20220331.htm",
+     "value": 1156.1
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "locator": "10-Q for period ended 2022-06-30 (filed 2022-07-27), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-06-30",
+     "period_start": "2022-04-01",
+     "prior_year_comparative": 1054.3,
+     "published_date": "2022-07-27",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022019492/hubb-20220630.htm",
+     "value": 1256.0
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "locator": "10-Q for period ended 2022-09-30 (filed 2022-10-26), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-09-30",
+     "period_start": "2022-07-01",
+     "prior_year_comparative": 1083.4,
+     "published_date": "2022-10-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828022027022/hubb-20220930.htm",
+     "value": 1316.2
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "locator": "Hubbell Q4 2022 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2022 / 2021",
+     "method": "direct_reported_quarter",
+     "period_end": "2022-12-31",
+     "period_start": "2022-10-01",
+     "prior_year_comparative": 1100.1,
+     "published_date": "2023-01-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023001785/exhibit991_01312023.htm",
+     "value": 1219.6
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "locator": "10-Q for period ended 2023-03-31 (filed 2023-04-28), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-03-31",
+     "period_start": "2023-01-01",
+     "prior_year_comparative": 1156.1,
+     "published_date": "2023-04-28",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023014179/hubb-20230331.htm",
+     "value": 1285.4
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "locator": "10-Q for period ended 2023-06-30 (filed 2023-07-26), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-06-30",
+     "period_start": "2023-04-01",
+     "prior_year_comparative": 1256.0,
+     "published_date": "2023-07-26",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023025628/hubb-20230630.htm",
+     "value": 1365.9
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "locator": "10-Q for period ended 2023-09-30 (filed 2023-11-01), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-09-30",
+     "period_start": "2023-07-01",
+     "prior_year_comparative": 1316.2,
+     "published_date": "2023-11-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828023035804/hubb-20230930.htm",
+     "value": 1375.8
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "locator": "Hubbell Q4 2023 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2023 / 2022",
+     "method": "direct_reported_quarter",
+     "period_end": "2023-12-31",
+     "period_start": "2023-10-01",
+     "prior_year_comparative": 1219.6,
+     "published_date": "2024-01-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024002494/exhibit991_01302024.htm",
+     "value": 1345.8
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "locator": "10-Q for period ended 2024-03-31 (filed 2024-05-01), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-03-31",
+     "period_start": "2024-01-01",
+     "prior_year_comparative": 1285.4,
+     "published_date": "2024-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024019474/hubb-20240331.htm",
+     "value": 1399.1
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "locator": "10-Q for period ended 2024-06-30 (filed 2024-07-31), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-06-30",
+     "period_start": "2024-04-01",
+     "prior_year_comparative": 1365.9,
+     "published_date": "2024-07-31",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024033632/hubb-20240630.htm",
+     "value": 1452.5
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "locator": "10-Q for period ended 2024-09-30 (filed 2024-10-30), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-09-30",
+     "period_start": "2024-07-01",
+     "prior_year_comparative": 1375.8,
+     "published_date": "2024-10-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828024044201/hubb-20240930.htm",
+     "value": 1442.6
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "locator": "Hubbell Q4 2024 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2024 / 2023",
+     "method": "direct_reported_quarter",
+     "period_end": "2024-12-31",
+     "period_start": "2024-10-01",
+     "prior_year_comparative": 1345.8,
+     "published_date": "2025-02-04",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025003586/exhibit991_02042025.htm",
+     "value": 1334.3
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "locator": "10-Q for period ended 2025-03-31 (filed 2025-05-02), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-03-31",
+     "period_start": "2025-01-01",
+     "prior_year_comparative": 1399.1,
+     "published_date": "2025-05-02",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025021677/hubb-20250331.htm",
+     "value": 1365.2
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "locator": "10-Q for period ended 2025-06-30 (filed 2025-07-30), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-06-30",
+     "period_start": "2025-04-01",
+     "prior_year_comparative": 1452.5,
+     "published_date": "2025-07-30",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025036564/hubb-20250630.htm",
+     "value": 1484.3
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "locator": "10-Q for period ended 2025-09-30 (filed 2025-10-29), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-09-30",
+     "period_start": "2025-07-01",
+     "prior_year_comparative": 1442.6,
+     "published_date": "2025-10-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828025046924/hubb-20250930.htm",
+     "value": 1502.4
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "locator": "Hubbell Q4 2025 earnings release (Form 8-K Ex.99.1), Condensed Consolidated Statement of Income, row \"Net sales\", Three Months Ended December 31 2025 / 2024",
+     "method": "direct_reported_quarter",
+     "period_end": "2025-12-31",
+     "period_start": "2025-10-01",
+     "prior_year_comparative": 1334.3,
+     "published_date": "2026-02-03",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026004800/exhibit991_02032026.htm",
+     "value": 1492.7
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "locator": "10-Q for period ended 2026-03-31 (filed 2026-05-01), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-03-31",
+     "period_start": "2026-01-01",
+     "prior_year_comparative": 1365.2,
+     "published_date": "2026-05-01",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026029110/hubb-20260331.htm",
+     "value": 1516.7
+    },
+    {
+     "fiscal_key": "FY2026Q2",
+     "locator": "10-Q for period ended 2026-06-30 (filed 2026-07-29), Condensed Consolidated Statement of Income, Net sales; three-months column. XBRL us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax {}",
+     "method": "direct_reported_quarter",
+     "period_end": "2026-06-30",
+     "period_start": "2026-04-01",
+     "prior_year_comparative": 1484.3,
+     "published_date": "2026-07-29",
+     "source_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026050405/hubb-20260630.htm",
+     "value": 1711.8
+    }
+   ],
+   "primary": false,
+   "scope": "consolidated"
+  }
+ },
+ "ticker": "HUBB US",
+ "unit": "million"
+}

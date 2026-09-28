@@ -1,0 +1,1350 @@
+{
+ "schema": "grid-composite-actuals/1",
+ "id": "HITACHI_ENERGY",
+ "grid_node": "GRID_HITACHI_ENERGY",
+ "name": "Hitachi Energy (business of Hitachi, Ltd.; reported inside Hitachi segment disclosures)",
+ "ticker": "6501 JP",
+ "listed": true,
+ "currency": "JPY",
+ "unit": "billion",
+ "accounting_basis": "IFRS",
+ "fiscal_year_end_month": 3,
+ "quarter_calendar": "calendar quarters; fiscal year Apr-Mar; fiscal_key uses the start-year label (FY2025Q1 = Apr-Jun 2025 = 2026年3月期 第1四半期)",
+ "collected_at": "2026-09-25",
+ "targets": {
+  "revenue_total": {
+   "label_ko": "히타치(6501) 연결 매출 — 참고용(에너지 노출이 희석됨)",
+   "scope": "consolidated",
+   "freq": "Q",
+   "primary": false,
+   "unit_note": "JPY billion (converted from JPY million printed in the releases; 3 decimals kept)",
+   "points": [
+    {
+     "fiscal_key": "FY2016Q1",
+     "period_start": "2016-04-01",
+     "period_end": "2016-06-30",
+     "value": 2130.467,
+     "prior_year_comparative": 2314.023,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2016/07/160729/2016_1Q_00e_all.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2016), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,130,467; prior-year 2,314,023); converted to JPY billion",
+     "published_date": "2016-07-29"
+    },
+    {
+     "fiscal_key": "FY2016Q2",
+     "period_start": "2016-07-01",
+     "period_end": "2016-09-30",
+     "value": 2223.307,
+     "prior_year_comparative": 2492.865,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2016/10/161028/2016_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,353,774 minus prior cumulative 2,130,467 (2016_1Q_00e_all release); prior-year comparative = prior-year cumulative columns 4,806,888 - 2,314,023 printed in the same two releases; JPY million -> billion",
+     "published_date": "2016-10-28",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2016/07/160729/2016_1Q_00e_all.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2016Q3",
+     "period_start": "2016-10-01",
+     "period_end": "2016-12-31",
+     "value": 2165.537,
+     "prior_year_comparative": 2423.37,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2017/02/170201/2016_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 6,519,311 minus prior cumulative 4,353,774 (2016_2Q release); prior-year comparative = prior-year cumulative columns 7,230,258 - 4,806,888 printed in the same two releases; JPY million -> billion",
+     "published_date": "2017-02-01",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2016/10/161028/2016_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2016Q4",
+     "period_start": "2017-01-01",
+     "period_end": "2017-03-31",
+     "value": 2642.953,
+     "prior_year_comparative": 2804.047,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2017/05/170512/2016_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 9,162,264 minus prior cumulative 6,519,311 (2016_3Q release); prior-year comparative = prior-year cumulative columns 10,034,305 - 7,230,258 printed in the same two releases; JPY million -> billion",
+     "published_date": "2017-05-12",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2017/02/170201/2016_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2017Q1",
+     "period_start": "2017-04-01",
+     "period_end": "2017-06-30",
+     "value": 2088.669,
+     "prior_year_comparative": 2130.467,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2017/07/170728/2017_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2017), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,088,669; prior-year 2,130,467); converted to JPY billion",
+     "published_date": "2017-07-28"
+    },
+    {
+     "fiscal_key": "FY2017Q2",
+     "period_start": "2017-07-01",
+     "period_end": "2017-09-30",
+     "value": 2287.798,
+     "prior_year_comparative": 2223.307,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2017/10/171026/2017_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,376,467 minus prior cumulative 2,088,669 (2017_1Q release); prior-year comparative = prior-year cumulative columns 4,353,774 - 2,130,467 printed in the same two releases; JPY million -> billion",
+     "published_date": "2017-10-26",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2017/07/170728/2017_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2017Q3",
+     "period_start": "2017-10-01",
+     "period_end": "2017-12-31",
+     "value": 2297.561,
+     "prior_year_comparative": 2165.537,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2018/01/180131/2017_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 6,674,028 minus prior cumulative 4,376,467 (2017_2Q release); prior-year comparative = prior-year cumulative columns 6,519,311 - 4,353,774 printed in the same two releases; JPY million -> billion",
+     "published_date": "2018-01-31",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2017/10/171026/2017_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2017Q4",
+     "period_start": "2018-01-01",
+     "period_end": "2018-03-31",
+     "value": 2694.586,
+     "prior_year_comparative": 2642.953,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2018/04/180427/2017_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 9,368,614 minus prior cumulative 6,674,028 (2017_3Q release); prior-year comparative = prior-year cumulative columns 9,162,264 - 6,519,311 printed in the same two releases; JPY million -> billion",
+     "published_date": "2018-04-27",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2018/01/180131/2017_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2018Q1",
+     "period_start": "2018-04-01",
+     "period_end": "2018-06-30",
+     "value": 2165.899,
+     "prior_year_comparative": 2088.669,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2018/07/180727/2018_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2018), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,165,899; prior-year 2,088,669); converted to JPY billion",
+     "published_date": "2018-07-27"
+    },
+    {
+     "fiscal_key": "FY2018Q2",
+     "period_start": "2018-07-01",
+     "period_end": "2018-09-30",
+     "value": 2325.935,
+     "prior_year_comparative": 2287.798,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2018/10/181026/2018_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,491,834 minus prior cumulative 2,165,899 (2018_1Q release); prior-year comparative = prior-year cumulative columns 4,376,467 - 2,088,669 printed in the same two releases; JPY million -> billion",
+     "published_date": "2018-10-26",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2018/07/180727/2018_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2018Q3",
+     "period_start": "2018-10-01",
+     "period_end": "2018-12-31",
+     "value": 2291.135,
+     "prior_year_comparative": 2297.561,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2019/02/190201/2018_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 6,782,969 minus prior cumulative 4,491,834 (2018_2Q release); prior-year comparative = prior-year cumulative columns 6,674,028 - 4,376,467 printed in the same two releases; JPY million -> billion",
+     "published_date": "2019-02-01",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2018/10/181026/2018_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2018Q4",
+     "period_start": "2019-01-01",
+     "period_end": "2019-03-31",
+     "value": 2697.65,
+     "prior_year_comparative": 2694.586,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2019/04/190426/2018_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 9,480,619 minus prior cumulative 6,782,969 (2018_3Q release); prior-year comparative = prior-year cumulative columns 9,368,614 - 6,674,028 printed in the same two releases; JPY million -> billion",
+     "published_date": "2019-04-26",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2019/02/190201/2018_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2019Q1",
+     "period_start": "2019-04-01",
+     "period_end": "2019-06-30",
+     "value": 2032.582,
+     "prior_year_comparative": 2165.899,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2019/07/190729/2019_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2019), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,032,582; prior-year 2,165,899); converted to JPY billion",
+     "published_date": "2019-07-29"
+    },
+    {
+     "fiscal_key": "FY2019Q2",
+     "period_start": "2019-07-01",
+     "period_end": "2019-09-30",
+     "value": 2188.745,
+     "prior_year_comparative": 2325.935,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2019/10/191030/2019_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,221,327 minus prior cumulative 2,032,582 (2019_1Q release); prior-year comparative = prior-year cumulative columns 4,491,834 - 2,165,899 printed in the same two releases; JPY million -> billion",
+     "published_date": "2019-10-30",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2019/07/190729/2019_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2019Q3",
+     "period_start": "2019-10-01",
+     "period_end": "2019-12-31",
+     "value": 2122.854,
+     "prior_year_comparative": 2291.135,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2020/01/200131/2019_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 6,344,181 minus prior cumulative 4,221,327 (2019_2Q release); prior-year comparative = prior-year cumulative columns 6,782,969 - 4,491,834 printed in the same two releases; JPY million -> billion",
+     "published_date": "2020-01-31",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2019/10/191030/2019_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2019Q4",
+     "period_start": "2020-01-01",
+     "period_end": "2020-03-31",
+     "value": 2423.082,
+     "prior_year_comparative": 2697.65,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2020/05/200529/2019_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 8,767,263 minus prior cumulative 6,344,181 (2019_3Q release); prior-year comparative = prior-year cumulative columns 9,480,619 - 6,782,969 printed in the same two releases; JPY million -> billion",
+     "published_date": "2020-05-29",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2020/01/200131/2019_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2020Q1",
+     "period_start": "2020-04-01",
+     "period_end": "2020-06-30",
+     "value": 1594.277,
+     "prior_year_comparative": 2032.582,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2020/07/200730/2020_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2020), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 1,594,277; prior-year 2,032,582); converted to JPY billion",
+     "published_date": "2020-07-30"
+    },
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 2165.78,
+     "prior_year_comparative": 2188.745,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2020/10/201028/2020_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 3,760,057 minus prior cumulative 1,594,277 (2020_1Q release); prior-year comparative = prior-year cumulative columns 4,221,327 - 2,032,582 printed in the same two releases; JPY million -> billion",
+     "published_date": "2020-10-28",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2020/07/200730/2020_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 2218.943,
+     "prior_year_comparative": 2122.854,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/02/210203/2020_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 5,979,000 minus prior cumulative 3,760,057 (2020_2Q release); prior-year comparative = prior-year cumulative columns 6,344,181 - 4,221,327 printed in the same two releases; JPY million -> billion",
+     "published_date": "2021-02-03",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2020/10/201028/2020_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 2750.196,
+     "prior_year_comparative": 2423.082,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/04/210428/2020_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 8,729,196 minus prior cumulative 5,979,000 (2020_3Q release); prior-year comparative = prior-year cumulative columns 8,767,263 - 6,344,181 printed in the same two releases; JPY million -> billion",
+     "published_date": "2021-04-28",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2021/02/210203/2020_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 2367.437,
+     "prior_year_comparative": 1594.277,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/07/210730/2021_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2021), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,367,437; prior-year 1,594,277); converted to JPY billion",
+     "published_date": "2021-07-30"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 2465.228,
+     "prior_year_comparative": 2165.78,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/10/211027/2021_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,832,665 minus prior cumulative 2,367,437 (2021_1Q release); prior-year comparative = prior-year cumulative columns 3,760,057 - 1,594,277 printed in the same two releases; JPY million -> billion",
+     "published_date": "2021-10-27",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2021/07/210730/2021_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 2514.0,
+     "prior_year_comparative": 2218.943,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/02/220202/2021_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 7,346,665 minus prior cumulative 4,832,665 (2021_2Q release); prior-year comparative = prior-year cumulative columns 5,979,000 - 3,760,057 printed in the same two releases; JPY million -> billion",
+     "published_date": "2022-02-02",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2021/10/211027/2021_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 2917.937,
+     "prior_year_comparative": 2750.196,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/04/220428/2021_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 10,264,602 minus prior cumulative 7,346,665 (2021_3Q release); prior-year comparative = prior-year cumulative columns 8,729,196 - 5,979,000 printed in the same two releases; JPY million -> billion",
+     "published_date": "2022-04-28",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2022/02/220202/2021_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 2569.816,
+     "prior_year_comparative": 2367.437,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/07/220729/2022_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2022), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,569,816; prior-year 2,367,437); converted to JPY billion",
+     "published_date": "2022-07-29"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 2846.963,
+     "prior_year_comparative": 2465.228,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/10/221028/2022_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 5,416,779 minus prior cumulative 2,569,816 (2022_1Q release); prior-year comparative = prior-year cumulative columns 4,832,665 - 2,367,437 printed in the same two releases; JPY million -> billion",
+     "published_date": "2022-10-28",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2022/07/220729/2022_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 2692.017,
+     "prior_year_comparative": 2514.0,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/02/230201/2022_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 8,108,796 minus prior cumulative 5,416,779 (2022_2Q release); prior-year comparative = prior-year cumulative columns 7,346,665 - 4,832,665 printed in the same two releases; JPY million -> billion",
+     "published_date": "2023-02-01",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2022/10/221028/2022_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 2772.354,
+     "prior_year_comparative": 2917.937,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/04/230427/2022_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 10,881,150 minus prior cumulative 8,108,796 (2022_3Q release); prior-year comparative = prior-year cumulative columns 10,264,602 - 7,346,665 printed in the same two releases; JPY million -> billion",
+     "published_date": "2023-04-27",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2023/02/230201/2022_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 2322.488,
+     "prior_year_comparative": 2569.816,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/07/230728/2023_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2023), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,322,488; prior-year 2,569,816); converted to JPY billion",
+     "published_date": "2023-07-28"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 2637.581,
+     "prior_year_comparative": 2846.963,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/10/231027/2023_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,960,069 minus prior cumulative 2,322,488 (2023_1Q release); prior-year comparative = prior-year cumulative columns 5,416,779 - 2,569,816 printed in the same two releases; JPY million -> billion",
+     "published_date": "2023-10-27",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2023/07/230728/2023_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 2258.085,
+     "prior_year_comparative": 2692.017,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/01/240131/2023_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 7,218,154 minus prior cumulative 4,960,069 (2023_2Q release); prior-year comparative = prior-year cumulative columns 8,108,796 - 5,416,779 printed in the same two releases; JPY million -> billion",
+     "published_date": "2024-01-31",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2023/10/231027/2023_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 2510.562,
+     "prior_year_comparative": 2772.354,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/04/240426/2023_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 9,728,716 minus prior cumulative 7,218,154 (2023_3Q release); prior-year comparative = prior-year cumulative columns 10,881,150 - 8,108,796 printed in the same two releases; JPY million -> billion",
+     "published_date": "2024-04-26",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2024/01/240131/2023_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 2211.423,
+     "prior_year_comparative": 2322.488,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/07/240731/2024_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2024), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,211,423; prior-year 2,322,488); converted to JPY billion",
+     "published_date": "2024-07-31"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 2334.559,
+     "prior_year_comparative": 2637.581,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/10/241030/2024_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,545,982 minus prior cumulative 2,211,423 (2024_1Q release); prior-year comparative = prior-year cumulative columns 4,960,069 - 2,322,488 printed in the same two releases; JPY million -> billion",
+     "published_date": "2024-10-30",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2024/07/240731/2024_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 2465.24,
+     "prior_year_comparative": 2258.085,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/01/250131/2024_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 7,011,222 minus prior cumulative 4,545,982 (2024_2Q release); prior-year comparative = prior-year cumulative columns 7,218,154 - 4,960,069 printed in the same two releases; JPY million -> billion",
+     "published_date": "2025-01-31",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2024/10/241030/2024_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 2772.148,
+     "prior_year_comparative": 2510.562,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/04/250428/2024_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 9,783,370 minus prior cumulative 7,011,222 (2024_3Q release); prior-year comparative = prior-year cumulative columns 9,728,716 - 7,218,154 printed in the same two releases; JPY million -> billion",
+     "published_date": "2025-04-28",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2025/01/250131/2024_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 2258.325,
+     "prior_year_comparative": 2211.423,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/07/250731/2025_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2025), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,258,325; prior-year 2,211,423); converted to JPY billion",
+     "published_date": "2025-07-31"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 2529.081,
+     "prior_year_comparative": 2334.559,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/10/251030/2025_2Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (six months ended September 30) JPY million 4,787,406 minus prior cumulative 2,258,325 (2025_1Q release); prior-year comparative = prior-year cumulative columns 4,545,982 - 2,211,423 printed in the same two releases; JPY million -> billion",
+     "published_date": "2025-10-30",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2025/07/250731/2025_1Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 2714.391,
+     "prior_year_comparative": 2465.24,
+     "method": "ytd_difference",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2026/01/260129/2025_3Q.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (nine months ended December 31) JPY million 7,501,797 minus prior cumulative 4,787,406 (2025_2Q release); prior-year comparative = prior-year cumulative columns 7,011,222 - 4,545,982 printed in the same two releases; JPY million -> billion",
+     "published_date": "2026-01-29",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2025/10/251030/2025_2Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 3084.984,
+     "prior_year_comparative": 2772.148,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/04/260427/2025_An.pdf",
+     "locator": "Hitachi consolidated results release, 'Revenues' cumulative (fiscal year ended March 31) JPY million 10,586,781 minus prior cumulative 7,501,797 (2025_3Q release); prior-year comparative = prior-year cumulative columns 9,783,370 - 7,011,222 printed in the same two releases; JPY million -> billion",
+     "published_date": "2026-04-27",
+     "source_url_prev_cumulative": "https://www.hitachi.com/New/cnews/month/2026/01/260129/2025_3Q.pdf",
+     "prior_year_comparative_method": "ytd_difference of prior-year cumulative columns (same two releases)"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 2709.586,
+     "prior_year_comparative": 2258.325,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/07/260729/2026_1Q.pdf",
+     "locator": "Hitachi consolidated financial results release (three months ended June 30 2026), Summary table / Condensed Quarterly Consolidated Statement of Profit or Loss, 'Revenues' (JPY million 2,709,586; prior-year 2,258,325); converted to JPY billion",
+     "published_date": "2026-07-29"
+    }
+   ]
+  },
+  "revenue_segment": {
+   "label_ko": "히타치에너지(구 ABB 파워그리드) 매출 — FY2025부터 Power Grid(s) BU(히타치에너지 포함)",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": true,
+   "segment_name": "Hitachi ABB Power Grids → Hitachi Energy (Standalone) [FY2020Q2–FY2024Q4]; Power Grid(s) BU incl. Hitachi Energy, Energy sector [FY2025Q1–]",
+   "unit_note": "JPY billion as printed (no FX conversion). Standalone = excludes PMI/acquisition-related cost line; subsegment figures include intersegment transactions.",
+   "points": [
+    {
+     "fiscal_key": "FY2020Q2",
+     "period_start": "2020-07-01",
+     "period_end": "2020-09-30",
+     "value": 233.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2020/10/201028/2020_2Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2020_2Qsup) PDF p.6: 5.2 Energy Segment table, row 'Hitachi ABB Power Grids (Standalone)', column Q2 FY2020 (Q1 FY2020 '-': not yet consolidated); JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2020-10-28",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2020Q3",
+     "period_start": "2020-10-01",
+     "period_end": "2020-12-31",
+     "value": 273.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/02/210203/2020_3Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2020_3Qsup) PDF p.6: 5.2 Energy Segment table, row 'Hitachi ABB Power Grids (Standalone)', column Q3 FY2020; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2021-02-03",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2020Q4",
+     "period_start": "2021-01-01",
+     "period_end": "2021-03-31",
+     "value": 215.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/04/210428/2020_Ansup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2020_Ansup) PDF p.6: Energy Segment table (quarterly columns), row 'Hitachi ABB Power Grids (Standalone)', column Q4 FY2020; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2021-04-28",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2021Q1",
+     "period_start": "2021-04-01",
+     "period_end": "2021-06-30",
+     "value": 264.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/07/210730/2021_1Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2021_1Qsup) PDF p.6: Energy Segment table, row 'Hitachi ABB Power Grids (Standalone)', column Q1 FY2021 (Q1 FY2020 printed '-'); JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2021-07-30",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2021Q2",
+     "period_start": "2021-07-01",
+     "period_end": "2021-09-30",
+     "value": 253.6,
+     "prior_year_comparative": 233.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2021/10/211027/2021_2Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2021_2Qsup) PDF p.6: Energy Segment table, row 'Hitachi Energy (Standalone)', columns Q2 FY2020 / Q2 FY2021; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2021-10-27",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 280.4,
+     "prior_year_comparative": 273.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/02/220202/2021_3Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2021_3Qsup) PDF p.6: Energy Segment table, row 'Hitachi Energy (Standalone)', columns Q3 FY2020 / Q3 FY2021; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2022-02-02",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 277.1,
+     "prior_year_comparative": 215.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/04/220428/2021_Ansup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2021_Ansup) PDF p.7: 6.2 Energy Segment table, row 'Hitachi Energy (Standalone)', columns Q4 FY2020 / Q4 FY2021; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2022-04-28",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 301.9,
+     "prior_year_comparative": 264.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/07/220729/2022_1Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2022_1Qsup) PDF p.6: 5.2 Green Energy & Mobility Segment table, row 'Hitachi Energy (Standalone)', columns Q1 FY2021 / Q1 FY2022; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2022-07-29",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 328.1,
+     "prior_year_comparative": 253.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/10/221028/2022_2Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2022_2Qsup) PDF p.6: Green Energy & Mobility Segment table, row 'Hitachi Energy (Standalone)', columns Q2 FY2021 / Q2 FY2022; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2022-10-28",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 388.4,
+     "prior_year_comparative": 280.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/02/230201/2022_3Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2022_3Qsup) PDF p.6: Green Energy & Mobility Segment table, row 'Hitachi Energy (Standalone)', columns Q3 FY2021 / Q3 FY2022; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2023-02-01",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 395.4,
+     "prior_year_comparative": 277.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/04/230427/2022_Ansup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2022_Ansup) PDF p.6: Green Energy & Mobility Segment table, row 'Hitachi Energy (Standalone)', columns Q4 FY2021 / Q4 FY2022; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2023-04-27",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 385.9,
+     "prior_year_comparative": 301.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/07/230728/2023_1Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2023_1Qsup) PDF p.6: Green Energy & Mobility Segment table, row 'Hitachi Energy (Standalone)', columns Q1 FY2022 / Q1 FY2023; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2023-07-28",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 441.5,
+     "prior_year_comparative": 328.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/10/231027/2023_2Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2023_2Qsup) PDF p.6: Green Energy & Mobility Segment table, row 'Hitachi Energy (Standalone)', columns Q2 FY2022 / Q2 FY2023; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2023-10-27",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 484.3,
+     "prior_year_comparative": 388.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/01/240131/2023_3Qsup.pdf",
+     "locator": "Supplemental Information for Consolidated Financial Results (2023_3Qsup) PDF p.6: 5.2 Green Energy & Mobility Segment table, row 'Hitachi Energy (Standalone)', columns Q3 FY2022 / Q3 FY2023; JPY billion; subsegment figures include intersegment transactions",
+     "published_date": "2024-01-31",
+     "scope": "Hitachi ABB Power Grids / Hitachi Energy (Standalone), excl. PMI/related costs line"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 537.6,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/04/240426/2023_Anpre.pdf",
+     "locator": "FY2023 results presentation PDF p.15 'Performance by Business Segment (GEM)' row 'Hitachi Energy (Standalone)' FY2023 revenues 1,849.2 minus Q1-Q3 FY2023 cumulative 1,311.6 printed in Q3 FY2023 Supplemental Information p.6 (Green Energy & Mobility Segment table, Q3 (Apr.-Dec.) FY2023)",
+     "published_date": "2024-04-26",
+     "scope": "Hitachi Energy (Standalone)",
+     "source_url_9m": "https://www.hitachi.com/New/cnews/month/2024/01/240131/2023_3Qsup.pdf"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 573.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/07/240731/2024_1Qpre.pdf",
+     "locator": "Q1 FY2024 results presentation PDF p.17 'Performance by Business Segment (GEM)' row 'Hitachi Energy (Standalone)' Q1 FY24 revenues (YoY +49% printed; prior-year value not printed)",
+     "published_date": "2024-07-31",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 542.3,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/10/241030/2024_2Qpre.pdf",
+     "locator": "Q2 FY2024 results presentation PDF p.17 'Performance by Business Segment (GEM)' row 'Hitachi Energy (Standalone)' Q2 FY24 revenues (YoY +23% printed)",
+     "published_date": "2024-10-30",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 609.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/01/250131/2024_3Qpre.pdf",
+     "locator": "Q3 FY2024 results presentation PDF p.17 'Performance by Business Segment (GEM)' row 'Hitachi Energy (Standalone)' Q3 FY24 revenues (YoY +26% printed)",
+     "published_date": "2025-01-31",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 670.3,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/04/250428/2024_Anpre.pdf",
+     "locator": "FY2024 results presentation PDF p.21 GEM table row 'Hitachi Energy (Standalone)' FY2024 revenues 2,395.5 minus sum of reported Q1-Q3 FY2024 quarters (573.0+542.3+609.9=1,725.2; Hitachi printed no Q1-Q3 cumulative for this line)",
+     "published_date": "2025-04-28",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 640.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/07/250731/2025_1Qpre.pdf",
+     "locator": "Q1 FY2025 results presentation PDF p.18 'Energy: Performance by Business Segment in FY2025' row 'Power Grid' Q1 FY2025 revenues (YoY +11% printed). Slide text is outlined (not extractable) — value read from rendered page image and cross-checked vs Energy 667.5 = Power Grid 640.9 + Nuclear 26.6",
+     "published_date": "2025-07-31",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 706.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/10/251030/2025_2Qpre.pdf",
+     "locator": "Q2 FY2025 results presentation PDF p.20 'Energy: Performance by Business Segment in FY2025' row 'Power Grids' Q2 FY2025 revenue (YoY +29% printed)",
+     "published_date": "2025-10-30",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 821.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2026/01/260129/2025_3Qpre.pdf",
+     "locator": "Q3 FY2025 results presentation PDF p.19 'Energy: Performance by Business Segment' row 'Power Grids' Q3 FY2025 revenue (YoY +34% printed)",
+     "published_date": "2026-01-29",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 836.4,
+     "method": "annual_minus_9m",
+     "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/04/260427/2025_Anpre.pdf",
+     "locator": "FY2025 results presentation PDF p.25 'Energy: Performance by Business Segment' row 'Power Grids' FY2025 revenue 3,005.6 minus sum of reported Q1-Q3 FY2025 quarters (640.9+706.4+821.9=2,169.2; no Q1-Q3 cumulative printed for Power Grids)",
+     "published_date": "2026-04-27",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 867.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/07/260729/2026_1Qpre.pdf",
+     "locator": "Q1 FY2026 results presentation PDF p.23 'Energy: Performance by Business Segment' row 'Power Grids' Q1 FY2026 revenue (YoY +35% printed)",
+     "published_date": "2026-07-29",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    }
+   ]
+  },
+  "orders_segment": {
+   "label_ko": "히타치에너지 수주(엔화) — FY2025부터 Power Grid(s) BU",
+   "scope": "segment",
+   "freq": "Q",
+   "primary": false,
+   "segment_name": "Hitachi Energy orders [FY2021Q3–FY2024Q4]; Power Grid(s) BU orders [FY2025Q1–]",
+   "unit_note": "JPY billion as printed. Earlier quarters (FY2020Q2–FY2021Q2) were only printed in USD and are not stored.",
+   "points": [
+    {
+     "fiscal_key": "FY2021Q3",
+     "period_start": "2021-10-01",
+     "period_end": "2021-12-31",
+     "value": 481.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/02/220202/2021_3Qpre.pdf",
+     "locator": "Results presentation (2021_3Qpre) PDF p.7 'FY21 Orders YoY Dynamics (Q3 FY21)' table row 'Hitachi Energy' Q3 481.9 (Q1-Q3 1,057.0; YoY 162%); JPY billion",
+     "published_date": "2022-02-02",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2021Q4",
+     "period_start": "2022-01-01",
+     "period_end": "2022-03-31",
+     "value": 339.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/04/220428/2021_Anpre.pdf",
+     "locator": "Results presentation (2021_Anpre) PDF p.21 'Orders YoY Dynamics (Q4 FY21)' table row 'Hitachi Energy' Q4 339.6 (FY 1,396.5); JPY billion",
+     "published_date": "2022-04-28",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2022Q1",
+     "period_start": "2022-04-01",
+     "period_end": "2022-06-30",
+     "value": 600.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/07/220729/2022_1Qpre.pdf",
+     "locator": "Results presentation (2022_1Qpre) PDF p.8 'Orders YoY Dynamics' table row 'Hitachi Energy' Q1 FY22 orders 600.8 (YoY 202%); JPY billion",
+     "published_date": "2022-07-29",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2022Q2",
+     "period_start": "2022-07-01",
+     "period_end": "2022-09-30",
+     "value": 575.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2022/10/221028/2022_2Qpre.pdf",
+     "locator": "Results presentation (2022_2Qpre) PDF p.8 Orders table row 'Hitachi Energy' Q2 FY22 575.4 (H1 1,176.2); JPY billion",
+     "published_date": "2022-10-28",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2022Q3",
+     "period_start": "2022-10-01",
+     "period_end": "2022-12-31",
+     "value": 554.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/02/230201/2022_3Qpre.pdf",
+     "locator": "Results presentation (2022_3Qpre) PDF p.8 Orders table row 'Hitachi Energy' Q3 FY22 554.4 (Q1-Q3 1,730.6); JPY billion",
+     "published_date": "2023-02-01",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2022Q4",
+     "period_start": "2023-01-01",
+     "period_end": "2023-03-31",
+     "value": 559.5,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/04/230427/2022_Anpre.pdf",
+     "locator": "Results presentation (2022_Anpre) PDF p.23 'Orders Results by Business Segment' row 'Hitachi Energy' Q4 FY22 559.5 (FY2022 2,290.1); JPY billion",
+     "published_date": "2023-04-27",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2023Q1",
+     "period_start": "2023-04-01",
+     "period_end": "2023-06-30",
+     "value": 1015.4,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/07/230728/2023_1Qpre.pdf",
+     "locator": "Results presentation (2023_1Qpre) PDF p.20 'Orders Results by Business Segment' row 'Hitachi Energy' Q1 FY23 1,015.4 (YoY +69%); JPY billion",
+     "published_date": "2023-07-28",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2023Q2",
+     "period_start": "2023-07-01",
+     "period_end": "2023-09-30",
+     "value": 653.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2023/10/231027/2023_2Qpre.pdf",
+     "locator": "Results presentation (2023_2Qpre) PDF p.22 'Orders Results by Business Segment' row 'Hitachi Energy' Q2 FY23 653.8 (H1 1,669.3); JPY billion",
+     "published_date": "2023-10-27",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2023Q3",
+     "period_start": "2023-10-01",
+     "period_end": "2023-12-31",
+     "value": 951.7,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/01/240131/2023_3Qpre.pdf",
+     "locator": "Results presentation (2023_3Qpre) PDF p.22 'Orders Results by Business Segment' row 'Hitachi Energy' Q3 FY23 951.7 (Q1-Q3 2,620.9); JPY billion",
+     "published_date": "2024-01-31",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2023Q4",
+     "period_start": "2024-01-01",
+     "period_end": "2024-03-31",
+     "value": 795.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/04/240426/2023_Anpre.pdf",
+     "locator": "Results presentation (2023_Anpre) PDF p.22 'Orders Results by Business Segment' row 'Hitachi Energy' Q4 FY23 795.0 (FY2023 3,415.9); JPY billion",
+     "published_date": "2024-04-26",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2024Q1",
+     "period_start": "2024-04-01",
+     "period_end": "2024-06-30",
+     "value": 1072.2,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/07/240731/2024_1Qpre.pdf",
+     "locator": "Results presentation (2024_1Qpre) PDF p.11 'Orders Results by Business Segment' row 'Hitachi Energy' Q1 FY24 1,072.2 (YoY +6%); JPY billion",
+     "published_date": "2024-07-31",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2024Q2",
+     "period_start": "2024-07-01",
+     "period_end": "2024-09-30",
+     "value": 893.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2024/10/241030/2024_2Qpre.pdf",
+     "locator": "Results presentation (2024_2Qpre) PDF p.11 'Orders Results by Business Segment (Q2/H1 FY24)' row 'Hitachi Energy' Q2 FY24 893.8 (H1 1,966.0); JPY billion",
+     "published_date": "2024-10-30",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2024Q3",
+     "period_start": "2024-10-01",
+     "period_end": "2024-12-31",
+     "value": 1560.0,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/01/250131/2024_3Qpre.pdf",
+     "locator": "Results presentation (2024_3Qpre) PDF p.11 'Orders Results by Business Segment (Q3/Q1-Q3 FY24)' row 'Hitachi Energy' Q3 FY24 1,560.0 (Q1-Q3 3,526.0); JPY billion",
+     "published_date": "2025-01-31",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2024Q4",
+     "period_start": "2025-01-01",
+     "period_end": "2025-03-31",
+     "value": 713.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/04/250428/2024_Anpre.pdf",
+     "locator": "Results presentation (2024_Anpre) PDF p.12 'Orders Results by Business Segment in Q4 FY2024/FY2024' row 'Hitachi Energy' Q4 FY24 713.6 (FY24 4,239.6); JPY billion",
+     "published_date": "2025-04-28",
+     "scope": "Hitachi Energy (Standalone)"
+    },
+    {
+     "fiscal_key": "FY2025Q1",
+     "period_start": "2025-04-01",
+     "period_end": "2025-06-30",
+     "value": 967.1,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/07/250731/2025_1Qpre.pdf",
+     "locator": "Results presentation (2025_1Qpre) PDF p.11 'Orders Results by Business Segment in Q1 FY2025' row 'Power Grid' Q1 FY25 967.1 (YoY (10)%); slide text outlined — read from rendered page image; Energy 1,020.9 = Power Grid 967.1 + Nuclear 61.5 - elim/rounding; JPY billion",
+     "published_date": "2025-07-31",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2025Q2",
+     "period_start": "2025-07-01",
+     "period_end": "2025-09-30",
+     "value": 1007.9,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2025/10/251030/2025_2Qpre.pdf",
+     "locator": "Results presentation (2025_2Qpre) PDF p.13 'Orders Results by Business Segment' row 'Power Grids' Q2 FY25 1,007.9 (H1 1,975.0); JPY billion",
+     "published_date": "2025-10-30",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2025Q3",
+     "period_start": "2025-10-01",
+     "period_end": "2025-12-31",
+     "value": 1795.8,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/New/cnews/month/2026/01/260129/2025_3Qpre.pdf",
+     "locator": "Results presentation (2025_3Qpre) PDF p.12 'Orders Results by Business Segment' row 'Power Grids' Q3 FY25 1,795.8 (Q1-Q3 3,770.8); JPY billion",
+     "published_date": "2026-01-29",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2025Q4",
+     "period_start": "2026-01-01",
+     "period_end": "2026-03-31",
+     "value": 1207.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/04/260427/2025_Anpre.pdf",
+     "locator": "Results presentation (2025_Anpre) PDF p.16 'Orders Results by Business Segment' row 'Power Grids' Q4 FY25 1,207.6 (FY2025 4,978.4); JPY billion",
+     "published_date": "2026-04-27",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    },
+    {
+     "fiscal_key": "FY2026Q1",
+     "period_start": "2026-04-01",
+     "period_end": "2026-06-30",
+     "value": 1871.6,
+     "method": "direct_reported_quarter",
+     "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/07/260729/2026_1Qpre.pdf",
+     "locator": "Results presentation (2026_1Qpre) PDF p.17 'Order Results by Business Segment in Q1 FY2026' row 'Power Grids' Q1 FY2026 1,871.6 (YoY +94%); JPY billion",
+     "published_date": "2026-07-29",
+     "scope": "Power Grid(s) BU (incl. Hitachi Energy) — Energy sector from FY2025"
+    }
+   ]
+  }
+ },
+ "primary_target": "revenue_segment",
+ "structural_breaks": [
+  {
+   "date": "2020-04-01",
+   "type": "divestiture",
+   "target": "revenue_total",
+   "note": "Hitachi Chemical deconsolidated from FY2020 (Hitachi consolidated revenue only).",
+   "source_url": "https://www.hitachi.com/New/cnews/month/2021/04/210428/2020_Anpre.pdf"
+  },
+  {
+   "date": "2020-07-01",
+   "type": "acquisition",
+   "target": "revenue_segment,revenue_total",
+   "note": "Hitachi completed acquisition of 80.1% of ABB Power Grids → \"Hitachi ABB Power Grids\" consolidated from FY2020Q2 (Energy segment sub-line, Q1 FY2020 printed \"-\"). Segment history starts FY2020Q2; pre-acquisition history is in ABB (USD).",
+   "source_url": "https://www.hitachi.com/New/cnews/month/2020/10/201028/2020_2Qsup.pdf"
+  },
+  {
+   "date": "2022-04-01",
+   "type": "segment_reorg",
+   "target": "revenue_segment",
+   "note": "Hitachi moved Hitachi Energy (Standalone) line from Energy segment to new Green Energy & Mobility (GEM) segment; FY2021 comparatives printed unchanged (e.g. Q1 FY2021 264.6) → no break in the standalone line itself.",
+   "source_url": "https://www.hitachi.com/New/cnews/month/2022/07/220729/2022_1Qsup.pdf"
+  },
+  {
+   "date": "2023-01-05",
+   "type": "divestiture",
+   "target": "revenue_total",
+   "note": "Hitachi Metals shares transferred (53.4%→0%), deconsolidated; Hitachi Construction Machinery also left consolidation during FY2022 (Hitachi lists Astemo, HCM, Metals as \"deconsolidated business\").",
+   "source_url": "https://www.hitachi.com/New/cnews/month/2023/02/230201/2022_3Q.pdf"
+  },
+  {
+   "date": "2023-10-16",
+   "type": "divestiture",
+   "target": "revenue_total",
+   "note": "Hitachi Astemo became an equity-method affiliate (deconsolidated).",
+   "source_url": "https://www.hitachi.com/New/cnews/month/2024/01/240131/2023_3Qpre.pdf"
+  },
+  {
+   "date": "2024-05-31",
+   "type": "acquisition",
+   "target": "revenue_total",
+   "note": "Railway Systems completed acquisition of Thales's railway signalling business (GTS) in May 2024 (Hitachi consolidated only).",
+   "source_url": "https://www.hitachi.com/New/cnews/month/2024/07/240731/2024_1Qpre.pdf"
+  },
+  {
+   "date": "2025-04-01",
+   "type": "segment_reorg",
+   "target": "revenue_segment,orders_segment",
+   "note": "GEM split into Energy and Mobility sectors. From FY2025 Hitachi prints JPY revenue/orders only for the \"Power Grid(s)\" BU (incl. Hitachi Energy); Hitachi Energy standalone is printed only in USD. Scope gap measured on FY2024 annual: Power Grid (recast) 2,417.1 vs Hitachi Energy (Standalone) 2,395.5 bn yen = +0.9%. FY2025 YoY computed against FY2024 standalone points therefore carries ~+0.9pp scope bias (company-printed like-for-like YoY: Q1 +11%, Q2 +29%, Q3 +34%, FY +24%).",
+   "source_url": "https://www.hitachi.com/New/cnews/month/2025/04/250428/2024_Anpre.pdf"
+  }
+ ],
+ "profile": {
+  "products": "Hitachi Energy (ex-ABB Power Grids): power transformers incl. large power and HVDC converter transformers (765 kV class for North America/India, Varennes is one of the largest HVDC transformer makers), shunt reactors, distribution transformers (single-phase padmount etc.), dry and traction transformers, bushings/insulation components; HVDC systems, GIS / dead-tank breakers / hybrid switchgear, FACTS (STATCOM, series compensation), grid automation & asset-management software. Company states 60+ transformer factories and service centers worldwide. Revenue here is in JPY as consolidated by Hitachi (strong USD/EUR translation effect).",
+  "plants": [
+   {
+    "country": "CA",
+    "city": "Varennes, QC",
+    "products": "large power transformers, HVDC transformers (capacity to nearly triple; CAD 270m + CAD 140m programs)",
+    "source_url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2025/09/hitachi-energy-invests-an-additional-270-million-cad-195-million-usd-to-expand-large-power-transformer-manufacturing-capacity-in-varennes-quebec"
+   },
+   {
+    "country": "US",
+    "city": "South Boston, VA",
+    "products": "distribution & power transformers, traction transformers; new US$457m large-power-transformer facility (groundbreaking Jun 2026)",
+    "source_url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/06/hitachi-energy-breaks-ground-on-the-nation-s-largest-facility-for-the-production-of-large-power-transformers-in-south-boston-virginia"
+   },
+   {
+    "country": "US",
+    "city": "Crystal Springs / Gallman, MS",
+    "products": "power transformers; new US$528m Gallman plant (production from 2029) will more than double Crystal Springs capacity",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2026/09/hitachi-deepens-commitment-to-u-s-manufacturing-with-528-million-mississippi-transformer-factory"
+   },
+   {
+    "country": "US",
+    "city": "Alamo, TN",
+    "products": "transformer components (US$106m expansion, 2025)",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2026/09/hitachi-deepens-commitment-to-u-s-manufacturing-with-528-million-mississippi-transformer-factory"
+   },
+   {
+    "country": "US",
+    "city": "Jefferson City, MO",
+    "products": "transformer factory (US$10m expansion completed 2024)",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2024/04/hitachi-energy-to-invest-additional-1-5-billion-to-ramp-up-global-transformer-production-by-2027"
+   },
+   {
+    "country": "US",
+    "city": "Bland, VA",
+    "products": "existing facility, expansion under the 2025 US$1bn US plan (product not specified in release)",
+    "source_url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2025/09/hitachi-announces-historic-1-billion-usd-manufacturing-investment-to-power-america-s-energy-future-through-production-of-critical-grid-infrastructure"
+   },
+   {
+    "country": "US",
+    "city": "Mount Pleasant, PA",
+    "products": "dead-tank breakers, gas-insulated & hybrid switchgear (not transformers)",
+    "source_url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2024/09/hitachi-energy-bolsters-manufacturing-capacity-in-north-america-with-additional-investments-of-over-155-million-usd"
+   },
+   {
+    "country": "MX",
+    "city": "Reynosa",
+    "products": "single-phase padmount distribution transformers (US$70m, announced 2024)",
+    "source_url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2024/09/hitachi-energy-bolsters-manufacturing-capacity-in-north-america-with-additional-investments-of-over-155-million-usd"
+   },
+   {
+    "country": "BR",
+    "city": "Guarulhos, SP (+ new Pindamonhangaba, SP by 2028)",
+    "products": "power transformers (US$200m+ expansion; exports incl. Saudi Arabia)",
+    "source_url": "https://www.hitachienergy.com/us/en/news-and-events/features/2024/09/hitachi-energy-invests-over-200-million-usd-to-expand-transformer-operations-in-brazil-and-address-increased-global-demand"
+   },
+   {
+    "country": "SE",
+    "city": "Ludvika",
+    "products": "large power transformers AC & DC (HVDC), bushings; +~40% LPT capacity by autumn 2026",
+    "source_url": "https://www.hitachienergy.com/news-and-events/features/2025/11/hitachi-energy-celebrates-the-start-of-construction-of-the-transformer-factory-expansion-in-ludvika-sweden"
+   },
+   {
+    "country": "DE",
+    "city": "Bad Honnef",
+    "products": "power transformers (EUR 30m+ expansion)",
+    "source_url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2024/02/hitachi-energy-invests-over-30-million-euros-to-expand-transformer-operations-in-germany"
+   },
+   {
+    "country": "FI",
+    "city": "Vaasa",
+    "products": "new transformer campus (~US$180m)",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2024/04/hitachi-energy-to-invest-additional-1-5-billion-to-ramp-up-global-transformer-production-by-2027"
+   },
+   {
+    "country": "IN",
+    "city": "Vadodara (Maneja; new Karjan LPT plant FY28)",
+    "products": "power, dry distribution and traction transformers (Gujarat); components in Mysuru & Halol",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2026/06/hitachi-energy-secures-india-s-grid-future-with-major-manufacturing-expansion"
+   },
+   {
+    "country": "CN",
+    "city": "Chongqing",
+    "products": "transformer factory (inaugurated 2024)",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2024/04/hitachi-energy-to-invest-additional-1-5-billion-to-ramp-up-global-transformer-production-by-2027"
+   },
+   {
+    "country": "VN",
+    "city": "Hanoi",
+    "products": "transformer factory (inaugurated 2024)",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2024/04/hitachi-energy-to-invest-additional-1-5-billion-to-ramp-up-global-transformer-production-by-2027"
+   },
+   {
+    "country": "CO",
+    "city": "Dosquebradas",
+    "products": "transformer factory (expansion completed 2024)",
+    "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2024/04/hitachi-energy-to-invest-additional-1-5-billion-to-ramp-up-global-transformer-production-by-2027"
+   }
+  ],
+  "end_markets": "Transmission & distribution utilities/TSOs (NA, Europe, India, China, Brazil), HVDC interconnectors & offshore-wind grid connections, renewables integration, data centers/AI loads, industry, railways (traction transformers).",
+  "export_routes": [
+   "CA->US",
+   "MX->US",
+   "BR->US",
+   "SE->US",
+   "DE->US",
+   "IN->US",
+   "SE->World",
+   "DE->World",
+   "BR->World",
+   "IN->World",
+   "CN->World",
+   "VN->World"
+  ],
+  "hs_candidates": [
+   "850423",
+   "850422",
+   "850421",
+   "850433",
+   "850434",
+   "850440",
+   "853529",
+   "853720"
+  ],
+  "proxy_routes": [
+   {
+    "proxy_hint": "us_imp_850423_p124",
+    "why": "바렌(퀘벡) 대형·HVDC 변압기 → 미국 전력망; 캐나다발 미국 LPT 수입의 핵심 공급자",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "statcan_mfg_salesnsa_335311_QC",
+    "why": "퀘벡 변압기 제조 출하(NAICS 335311) — 바렌 공장 생산과 직접 겹침",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p0",
+    "why": "미국 대형(>10MVA) 액침 변압기 총수입 — 히타치에너지 최대 시장의 LPT 수요·납품 흐름",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p752",
+    "why": "루드비카(스웨덴) LPT·HVDC 변압기 → 미국",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p76",
+    "why": "과률류스(브라질) 전력변압기 → 미국 수출",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "us_imp_850423_p276",
+    "why": "바트호네프(독일) 전력변압기 → 미국 (지멘스에너지와 공유 경로 — 진단적 성격)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "us_imp_850421_p484",
+    "why": "레이노사(멕시코) 단상 패드마운트 배전변압기(≤650kVA 액침) → 미국; 2024년 이후 증설분이라 초기 구간은 약함",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "se_exp_850423_p0",
+    "why": "스웨덴 LPT 총수출 ≈ 루드비카(유럽·HVDC 프로젝트) 출하",
+    "expected_sign": "+",
+    "role": "primary"
+   },
+   {
+    "proxy_hint": "br_exp_850423_p0",
+    "why": "브라질 LPT 총수출(과률류스; WEG와 공유)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "in_exp_850423_p0",
+    "why": "인도 LPT 수출(바도다라 마네자 공장)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "de_exp_850423_p0",
+    "why": "독일 LPT 수출(바트호네프; 경쟁사 공유)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "eurostat_ip_C27_SE",
+    "why": "스웨덴 전기장비 생산지수(루드비카·베스테로스 등 히타치에너지 스웨덴 거점)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_PCU335311335311",
+    "why": "미국 변압기 PPI — 수주잔고 재가격(가격 전가)이 매출로 전환",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_A35SUO",
+    "why": "미국 전기장비 수주잔고(M3) — 백로그 전환형 매출의 선행 후보",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_TLPWRCONS",
+    "why": "미국 전력 건설투자 — 송배전 설비 수요",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "cn_exp_850423_p0",
+    "why": "중국 LPT 수출(충칭 공장; 경쟁 공급 포함 — 진단용)",
+    "expected_sign": "+",
+    "role": "diagnostic"
+   },
+   {
+    "proxy_hint": "fred_EXJPUS",
+    "why": "엔/달러 월평균(FRED EXJPUS, 엔 per USD) — 매출이 엔화 환산이므로 엔 약세(+)가 매출 YoY 를 끌어올림. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "ecb_eurjpy_monthly",
+    "why": "EUR/JPY 월평균(ECB SDW EXR.M.JPY.EUR.SP00.A) — 유럽 매출 환산 효과. 현재 패널에 없음",
+    "expected_sign": "+",
+    "role": "wishlist"
+   },
+   {
+    "proxy_hint": "hitachi_energy_usd_revenue_q",
+    "why": "히타치 결산자료에 인쇄된 히타치에너지 USD 매출(FY2024 15.7BUSD, FY2025 Q1 4.4·Q2 4.8·Q3 5.3·연 19.8, FY2026Q1 5.40BUSD) — FX 제거 검증용 대체 타깃(분기 USD 는 FY2025Q1부터만 인쇄)",
+    "expected_sign": "+",
+    "role": "wishlist"
+   }
+  ]
+ },
+ "gaps": [
+  "revenue_segment FY2016Q1–FY2020Q1: Hitachi did not own ABB Power Grids (consolidated from 2020-07-01); Hitachi FY2020Q1 column prints \"-\". Pre-acquisition history exists only as ABB Power Grids division data in USD (see ABB).",
+  "revenue_segment FY2025Q1+: Hitachi no longer prints Hitachi Energy standalone in JPY (USD only); the JPY line is Power Grid(s) BU incl. Hitachi Energy (+0.9% scope on FY2024). No like-for-like prior-year JPY values printed (YoY % only) → prior_year_comparative left empty.",
+  "revenue_segment prior_year_comparative missing FY2023Q4–FY2024Q4 (presentations print YoY % only; supplementary data books with quarterly columns ended after Q3 FY2023).",
+  "orders_segment FY2020Q2–FY2021Q2: orders printed only in USD (Q2 FY20 $2.2bn, Q3 FY20 $2.9bn, Q4 FY20 $2.3bn, Q1 FY21 $2.7bn, Q2 FY21 $2.5bn) — not stored (no FX conversion). JPY H1 FY2021 derivable only as a half-year sum (1,057.0 − 481.9 = 575.1) — not stored."
+ ],
+ "collection_notes": [
+  "All values JPY billion as printed by Hitachi, Ltd.; no FX conversion. Hitachi labels its fiscal year by the start year (\"fiscal 2025\" = Apr 2025–Mar 2026), same as fiscal_key here.",
+  "FY2020Q2–FY2023Q3 from \"Supplemental Information for Consolidated Financial Results\" (quarterly columns with prior-year quarter printed). FY2023Q4 onward from the quarterly results presentations (\"…pre.pdf\").",
+  "Q4 values FY2023/FY2024/FY2025 = annual minus Q1–Q3 (FY2023 uses the printed Q1–Q3 cumulative 1,311.6; FY2024/FY2025 use the sum of the three printed quarters because no Q1–Q3 line was printed).",
+  "Q1 FY2025 presentation text is outlined (not machine-readable); values (Power Grid revenue 640.9, orders 967.1) were read from the rendered slide images p.18/p.11 and checked against the sector totals on the same slide.",
+  "Hitachi Energy standalone excludes the separately printed \"Related cost\"/PMI line; 2021-10 the business was renamed from Hitachi ABB Power Grids to Hitachi Energy (no scope change).",
+  "revenue_total = Hitachi, Ltd. consolidated revenues; Q2–Q4 by ytd_difference of cumulative figures in the English consolidated results releases (prior-year cumulative columns matched the previous year releases exactly, i.e. no restatements).",
+  "Cross-checks: quarterly consolidated revenues equal the presentation quarter columns (e.g. Q2 FY2024 2,334.559 vs 2,334.5 printed); orders quarters sum to printed H1/Q1–Q3/FY totals.",
+  "verify 2026-09-25: checked revenue_segment all 24 points (supplement tables FY2020Q2–FY2023Q3 incl. column headers and prior-year columns; presentation rows FY2024Q1–Q3, FY2025Q2–Q3, FY2026Q1; derived FY2023Q4 = 1,849.2 − 1,311.6, FY2024Q4 = 2,395.5 − 1,725.2, FY2025Q4 = 3,005.6 − 2,169.2; FY2025Q1 640.9 re-read from rendered slide p.18), orders_segment all 19 (quarters sum to printed H1/9M/FY totals; FY2025Q1 967.1 re-read from rendered slide p.11 and equal to H1 1,975.0 − Q2 1,007.9), revenue_total all 41 (JPY-million cumulatives and differencing), printed YoY % against stored values, Power Grid vs standalone scope (+0.9% on FY2024), no consolidation lag (Q2 FY2020 is the first quarter after the 2020-07-01 close); fixed 0."
+ ]
+}
