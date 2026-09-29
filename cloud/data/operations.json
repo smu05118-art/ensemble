@@ -5,8 +5,8 @@
     "jobs": {
       "url": "https://boards-api.greenhouse.io/v1/boards/nebius/jobs",
       "health": "ok",
-      "attempted_at": "2026-09-28T09:52:33+00:00",
-      "updated_at": "2026-09-28T09:52:33+00:00",
+      "attempted_at": "2026-09-29T09:54:23+00:00",
+      "updated_at": "2026-09-29T09:54:23+00:00",
       "rows": [
         {
           "id": "4959063101",
@@ -339,6 +339,16 @@
           "baseline_import": true
         },
         {
+          "id": "4784157101",
+          "title": "Data Center IT Infrastructure Engineer",
+          "location": "Israel",
+          "url": "https://careers.nebius.com/?gh_jid=4784157101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
           "id": "4784195101",
           "title": "Data Center IT Infrastructure Engineer",
           "location": "Israel",
@@ -349,14 +359,14 @@
           "baseline_import": true
         },
         {
-          "id": "4784157101",
-          "title": "Data Center IT Infrastructure Engineer",
-          "location": "Israel",
-          "url": "https://careers.nebius.com/?gh_jid=4784157101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "id": "4988211101",
+          "title": "Data Center IT Infrastructure Lead",
+          "location": "Hyderabad, India",
+          "url": "https://careers.nebius.com/?gh_jid=4988211101",
+          "source_updated_at": "2026-09-28T12:51:49-04:00",
           "data_center": true,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
+          "first_seen_at": "2026-09-29T09:54:23+00:00",
+          "baseline_import": false
         },
         {
           "id": "4752361101",
@@ -379,16 +389,6 @@
           "baseline_import": true
         },
         {
-          "id": "4873803101",
-          "title": "Data Center IT Technician",
-          "location": "Tallinn, Estonia",
-          "url": "https://careers.nebius.com/?gh_jid=4873803101",
-          "source_updated_at": "2026-09-04T09:49:02-04:00",
-          "data_center": true,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4976328101",
           "title": "Data Center IT Technician",
           "location": "Béthune, Pas-de-Calais, France",
@@ -399,14 +399,14 @@
           "baseline_import": false
         },
         {
-          "id": "4975997101",
+          "id": "4873803101",
           "title": "Data Center IT Technician",
-          "location": "Kansas City, Missouri, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4975997101",
-          "source_updated_at": "2026-09-17T16:55:37-04:00",
+          "location": "Tallinn, Estonia",
+          "url": "https://careers.nebius.com/?gh_jid=4873803101",
+          "source_updated_at": "2026-09-04T09:49:02-04:00",
           "data_center": true,
-          "first_seen_at": "2026-09-18T08:18:36+00:00",
-          "baseline_import": false
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
         },
         {
           "id": "4883814101",
@@ -417,6 +417,16 @@
           "data_center": true,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
+        },
+        {
+          "id": "4975997101",
+          "title": "Data Center IT Technician",
+          "location": "Kansas City, Missouri, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4975997101",
+          "source_updated_at": "2026-09-17T16:55:37-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-09-18T08:18:36+00:00",
+          "baseline_import": false
         },
         {
           "id": "4866023101",
@@ -519,21 +529,21 @@
           "baseline_import": true
         },
         {
-          "id": "4765032101",
-          "title": "Data Center Technician",
-          "location": "Minnesota, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4765032101",
-          "source_updated_at": "2026-09-17T16:18:45-04:00",
-          "data_center": true,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4752751101",
           "title": "Data Center Technician",
           "location": "New Jersey, United States",
           "url": "https://careers.nebius.com/?gh_jid=4752751101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4765032101",
+          "title": "Data Center Technician",
+          "location": "Minnesota, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4765032101",
+          "source_updated_at": "2026-09-17T16:18:45-04:00",
           "data_center": true,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -597,6 +607,16 @@
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
+        },
+        {
+          "id": "4798625101",
+          "title": "Delivery Operations Manager - Token Factory",
+          "location": "Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4798625101",
+          "source_updated_at": "2026-09-28T16:47:25-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-29T09:54:23+00:00",
+          "baseline_import": false
         },
         {
           "id": "4918986101",
@@ -749,21 +769,21 @@
           "baseline_import": true
         },
         {
-          "id": "4977003101",
-          "title": "Field Deploy Engineer",
-          "location": "Hyderabad, India",
-          "url": "https://careers.nebius.com/?gh_jid=4977003101",
-          "source_updated_at": "2026-09-18T07:25:44-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-19T08:06:39+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4977012101",
           "title": "Field Deploy Engineer",
           "location": "Singapore",
           "url": "https://careers.nebius.com/?gh_jid=4977012101",
           "source_updated_at": "2026-09-18T07:27:51-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-19T08:06:39+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "4977003101",
+          "title": "Field Deploy Engineer",
+          "location": "Hyderabad, India",
+          "url": "https://careers.nebius.com/?gh_jid=4977003101",
+          "source_updated_at": "2026-09-18T07:25:44-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-19T08:06:39+00:00",
           "baseline_import": false
@@ -869,21 +889,21 @@
           "baseline_import": true
         },
         {
-          "id": "4975421101",
-          "title": "Fixed Assets Manager",
-          "location": "Amsterdam, Netherlands",
-          "url": "https://careers.nebius.com/?gh_jid=4975421101",
-          "source_updated_at": "2026-09-17T09:09:12-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-18T08:18:36+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4979481101",
           "title": "Fixed Assets Manager",
           "location": "Remote - United States",
           "url": "https://careers.nebius.com/?gh_jid=4979481101",
           "source_updated_at": "2026-09-17T09:09:16-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-18T08:18:36+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "4975421101",
+          "title": "Fixed Assets Manager",
+          "location": "Amsterdam, Netherlands",
+          "url": "https://careers.nebius.com/?gh_jid=4975421101",
+          "source_updated_at": "2026-09-17T09:09:12-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-18T08:18:36+00:00",
           "baseline_import": false
@@ -999,6 +1019,16 @@
           "baseline_import": true
         },
         {
+          "id": "4657940101",
+          "title": "GPU Cluster Architect",
+          "location": "Remote - United States",
+          "url": "https://careers.nebius.com/?gh_jid=4657940101",
+          "source_updated_at": "2026-09-28T14:05:17-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-29T09:54:23+00:00",
+          "baseline_import": false
+        },
+        {
           "id": "4967578101",
           "title": "  GRC Program Coordinator",
           "location": "Tel Aviv, Israel",
@@ -1031,22 +1061,22 @@
         {
           "id": "4987727101",
           "title": "Head of Employee Relations",
-          "location": "Remote",
+          "location": "London, United Kingdom; Remote - Europe",
           "url": "https://careers.nebius.com/?gh_jid=4987727101",
-          "source_updated_at": "2026-09-28T03:41:25-04:00",
+          "source_updated_at": "2026-09-28T07:56:28-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-28T09:52:33+00:00",
           "baseline_import": false
         },
         {
-          "id": "4942690101",
-          "title": "Head of Forward Deployed Engineering - Ecosystem ",
-          "location": "United States",
-          "url": "https://careers.nebius.com/?gh_jid=4942690101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "id": "4988430101",
+          "title": "Head of Employee Relations ",
+          "location": "Amsterdam, Netherlands",
+          "url": "https://careers.nebius.com/?gh_jid=4988430101",
+          "source_updated_at": "2026-09-29T05:31:43-04:00",
           "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
+          "first_seen_at": "2026-09-29T09:54:23+00:00",
+          "baseline_import": false
         },
         {
           "id": "4961188101",
@@ -1159,16 +1189,6 @@
           "baseline_import": true
         },
         {
-          "id": "4941529101",
-          "title": "Internal Control Business Partner",
-          "location": "Prague, Czech Republic",
-          "url": "https://careers.nebius.com/?gh_jid=4941529101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4941520101",
           "title": "Internal Control Business Partner",
           "location": "Berlin, Germany",
@@ -1184,6 +1204,16 @@
           "location": "Remote - United States",
           "url": "https://careers.nebius.com/?gh_jid=4941567101",
           "source_updated_at": "2026-09-11T05:48:02-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4941529101",
+          "title": "Internal Control Business Partner",
+          "location": "Prague, Czech Republic",
+          "url": "https://careers.nebius.com/?gh_jid=4941529101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -1239,26 +1269,6 @@
           "baseline_import": true
         },
         {
-          "id": "4883833101",
-          "title": "IT Infrastructure Engineer (RMA & Diag)",
-          "location": "Newport, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4883833101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4866066101",
-          "title": "IT Infrastructure Engineer – RMA & Hardware Diagnostics",
-          "location": "Oklahoma, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4866066101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4765077101",
           "title": "IT Infrastructure Engineer – RMA & Hardware Diagnostics",
           "location": "Minnesota, United States",
@@ -1279,11 +1289,21 @@
           "baseline_import": true
         },
         {
+          "id": "4941902101",
+          "title": "IT Risks & Control Manager",
+          "location": "London, United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=4941902101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
           "id": "4941897101",
           "title": "IT Risks & Control Manager",
           "location": "Remote - United States",
           "url": "https://careers.nebius.com/?gh_jid=4941897101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "source_updated_at": "2026-09-28T08:58:53-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -1303,16 +1323,6 @@
           "title": "IT Risks & Control Manager",
           "location": "Spain",
           "url": "https://careers.nebius.com/?gh_jid=4941900101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4941902101",
-          "title": "IT Risks & Control Manager",
-          "location": "London, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4941902101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1359,21 +1369,21 @@
           "baseline_import": true
         },
         {
-          "id": "4828978101",
-          "title": "L1 IT Technician",
-          "location": "Lappeenranta, Finland",
-          "url": "https://careers.nebius.com/?gh_jid=4828978101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4947388101",
           "title": "L1 IT Technician",
           "location": "Reykjanesbær, Iceland",
           "url": "https://careers.nebius.com/?gh_jid=4947388101",
           "source_updated_at": "2026-09-11T05:13:11-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4828978101",
+          "title": "L1 IT Technician",
+          "location": "Lappeenranta, Finland",
+          "url": "https://careers.nebius.com/?gh_jid=4828978101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -1389,11 +1399,11 @@
           "baseline_import": true
         },
         {
-          "id": "4977022101",
+          "id": "4794437101",
           "title": "L3 Support Engineer",
-          "location": "Singapore",
-          "url": "https://careers.nebius.com/?gh_jid=4977022101",
-          "source_updated_at": "2026-09-21T11:34:58-04:00",
+          "location": "Béthune, Pas-de-Calais, France",
+          "url": "https://careers.nebius.com/?gh_jid=4794437101",
+          "source_updated_at": "2026-09-21T08:47:04-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-22T08:36:08+00:00",
           "baseline_import": false
@@ -1409,11 +1419,11 @@
           "baseline_import": false
         },
         {
-          "id": "4794437101",
+          "id": "4977022101",
           "title": "L3 Support Engineer",
-          "location": "Béthune, Pas-de-Calais, France",
-          "url": "https://careers.nebius.com/?gh_jid=4794437101",
-          "source_updated_at": "2026-09-21T08:47:04-04:00",
+          "location": "Singapore",
+          "url": "https://careers.nebius.com/?gh_jid=4977022101",
+          "source_updated_at": "2026-09-21T11:34:58-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-22T08:36:08+00:00",
           "baseline_import": false
@@ -1499,20 +1509,20 @@
           "baseline_import": true
         },
         {
-          "id": "4952080101",
+          "id": "4952091101",
           "title": "Manager, ML Solutions Architecture - Token Factory",
-          "location": "Remote - United States",
-          "url": "https://careers.nebius.com/?gh_jid=4952080101",
+          "location": "Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4952091101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
         },
         {
-          "id": "4952091101",
+          "id": "4952080101",
           "title": "Manager, ML Solutions Architecture - Token Factory",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4952091101",
+          "location": "Remote - United States",
+          "url": "https://careers.nebius.com/?gh_jid=4952080101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1619,21 +1629,21 @@
           "baseline_import": false
         },
         {
-          "id": "4940656101",
-          "title": "Network Planning Technical Project Manager",
-          "location": "Singapore",
-          "url": "https://careers.nebius.com/?gh_jid=4940656101",
-          "source_updated_at": "2026-09-08T16:22:04-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4933721101",
           "title": "Network Planning Technical Project Manager",
           "location": "Amsterdam, Netherlands; Remote - Europe",
           "url": "https://careers.nebius.com/?gh_jid=4933721101",
           "source_updated_at": "2026-09-04T09:42:08-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4940656101",
+          "title": "Network Planning Technical Project Manager",
+          "location": "Singapore",
+          "url": "https://careers.nebius.com/?gh_jid=4940656101",
+          "source_updated_at": "2026-09-08T16:22:04-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -1649,16 +1659,6 @@
           "baseline_import": false
         },
         {
-          "id": "4929228101",
-          "title": "New AI and ISV Partner Business Development Manager",
-          "location": "San Francisco Bay Area, California, United States; United States",
-          "url": "https://careers.nebius.com/?gh_jid=4929228101",
-          "source_updated_at": "2026-09-24T10:04:30-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-25T08:53:02+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4876829101",
           "title": "New AI and ISV Partner Business Development Manager",
           "location": "United States",
@@ -1667,6 +1667,16 @@
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
+        },
+        {
+          "id": "4929228101",
+          "title": "New AI and ISV Partner Business Development Manager",
+          "location": "San Francisco Bay Area, California, United States; United States",
+          "url": "https://careers.nebius.com/?gh_jid=4929228101",
+          "source_updated_at": "2026-09-24T10:04:30-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-25T08:53:02+00:00",
+          "baseline_import": false
         },
         {
           "id": "4945675101",
@@ -1719,20 +1729,20 @@
           "baseline_import": false
         },
         {
-          "id": "4776108101",
+          "id": "4869782101",
           "title": "Partner Solutions Architect",
-          "location": "Remote - United States",
-          "url": "https://careers.nebius.com/?gh_jid=4776108101",
+          "location": "Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4869782101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
         },
         {
-          "id": "4869782101",
+          "id": "4776108101",
           "title": "Partner Solutions Architect",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4869782101",
+          "location": "Remote - United States",
+          "url": "https://careers.nebius.com/?gh_jid=4776108101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1873,10 +1883,20 @@
           "title": "Project Manager — Cyber Security PMO ",
           "location": "Amsterdam, Netherlands",
           "url": "https://careers.nebius.com/?gh_jid=4961454101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "source_updated_at": "2026-09-29T04:00:16-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
+        },
+        {
+          "id": "4949159101",
+          "title": "Project Manager Team Lead ",
+          "location": "Tel Aviv, Israel",
+          "url": "https://careers.nebius.com/?gh_jid=4949159101",
+          "source_updated_at": "2026-09-28T10:20:00-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-29T09:54:23+00:00",
+          "baseline_import": false
         },
         {
           "id": "4958389101",
@@ -1899,16 +1919,6 @@
           "baseline_import": false
         },
         {
-          "id": "4976888101",
-          "title": "Regional Asset Manager",
-          "location": "Finland",
-          "url": "https://careers.nebius.com/?gh_jid=4976888101",
-          "source_updated_at": "2026-09-17T05:39:42-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-18T08:18:36+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4784080101",
           "title": "Regional Asset Manager",
           "location": "Israel",
@@ -1917,6 +1927,16 @@
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
+        },
+        {
+          "id": "4976888101",
+          "title": "Regional Asset Manager",
+          "location": "Finland",
+          "url": "https://careers.nebius.com/?gh_jid=4976888101",
+          "source_updated_at": "2026-09-17T05:39:42-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-18T08:18:36+00:00",
+          "baseline_import": false
         },
         {
           "id": "4965707101",
@@ -2013,7 +2033,7 @@
           "title": "Security Risk Lead",
           "location": "Tel Aviv, Israel",
           "url": "https://careers.nebius.com/?gh_jid=4967584101",
-          "source_updated_at": "2026-09-07T05:52:38-04:00",
+          "source_updated_at": "2026-09-29T04:36:52-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2089,16 +2109,6 @@
           "baseline_import": false
         },
         {
-          "id": "4558219101",
-          "title": "Senior Backend Engineer",
-          "location": "Germany",
-          "url": "https://careers.nebius.com/?gh_jid=4558219101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4930031101",
           "title": "Senior Backend Engineer",
           "location": "Prague, Czech Republic",
@@ -2109,20 +2119,30 @@
           "baseline_import": true
         },
         {
-          "id": "4930024101",
+          "id": "4930028101",
           "title": "Senior Backend Engineer",
-          "location": "United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4930024101",
+          "location": "Tel Aviv, Israel",
+          "url": "https://careers.nebius.com/?gh_jid=4930028101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
         },
         {
-          "id": "4930028101",
+          "id": "4558219101",
           "title": "Senior Backend Engineer",
-          "location": "Tel Aviv, Israel",
-          "url": "https://careers.nebius.com/?gh_jid=4930028101",
+          "location": "Germany",
+          "url": "https://careers.nebius.com/?gh_jid=4558219101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4930024101",
+          "title": "Senior Backend Engineer",
+          "location": "United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=4930024101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -2263,7 +2283,7 @@
           "title": "Senior Employment Counsel ",
           "location": "Amsterdam, Netherlands",
           "url": "https://careers.nebius.com/?gh_jid=4961405101",
-          "source_updated_at": "2026-09-11T07:03:45-04:00",
+          "source_updated_at": "2026-09-28T08:57:58-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2379,21 +2399,21 @@
           "baseline_import": false
         },
         {
-          "id": "4986448101",
-          "title": "Senior Machine Learning Engineer, LLM Inference Optimization",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4986448101",
-          "source_updated_at": "2026-09-24T06:39:24-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-25T08:53:02+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4986451101",
           "title": "Senior Machine Learning Engineer, LLM Inference Optimization",
           "location": "Zurich, Switzerland",
           "url": "https://careers.nebius.com/?gh_jid=4986451101",
           "source_updated_at": "2026-09-24T06:41:29-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-25T08:53:02+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "4986448101",
+          "title": "Senior Machine Learning Engineer, LLM Inference Optimization",
+          "location": "Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4986448101",
+          "source_updated_at": "2026-09-24T06:39:24-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-25T08:53:02+00:00",
           "baseline_import": false
@@ -2413,7 +2433,7 @@
           "title": "Senior Manager, SEO & GEO",
           "location": "Remote - United States; United States",
           "url": "https://careers.nebius.com/?gh_jid=4986889101",
-          "source_updated_at": "2026-09-25T12:14:26-04:00",
+          "source_updated_at": "2026-09-28T18:14:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-26T08:39:24+00:00",
           "baseline_import": false
@@ -2479,21 +2499,21 @@
           "baseline_import": true
         },
         {
-          "id": "4846524101",
-          "title": "Senior ML Solutions Architect - Token Factory",
-          "location": "Singapore",
-          "url": "https://careers.nebius.com/?gh_jid=4846524101",
-          "source_updated_at": "2026-09-10T11:17:28-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4648728101",
           "title": "Senior ML Solutions Architect - Token Factory",
           "location": "United States",
           "url": "https://careers.nebius.com/?gh_jid=4648728101",
           "source_updated_at": "2026-09-10T11:17:47-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4846524101",
+          "title": "Senior ML Solutions Architect - Token Factory",
+          "location": "Singapore",
+          "url": "https://careers.nebius.com/?gh_jid=4846524101",
+          "source_updated_at": "2026-09-10T11:17:28-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2569,6 +2589,16 @@
           "baseline_import": true
         },
         {
+          "id": "4970604101",
+          "title": "Senior Product Manager, Vertical Search",
+          "location": "Tel Aviv, Israel",
+          "url": "https://careers.nebius.com/?gh_jid=4970604101",
+          "source_updated_at": "2026-09-08T07:33:06-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
           "id": "4970711101",
           "title": "Senior Product Manager, Vertical Search",
           "location": "London, United Kingdom",
@@ -2584,16 +2614,6 @@
           "location": "Amsterdam, Netherlands",
           "url": "https://careers.nebius.com/?gh_jid=4970709101",
           "source_updated_at": "2026-09-08T07:37:20-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4970604101",
-          "title": "Senior Product Manager, Vertical Search",
-          "location": "Tel Aviv, Israel",
-          "url": "https://careers.nebius.com/?gh_jid=4970604101",
-          "source_updated_at": "2026-09-08T07:33:06-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2653,7 +2673,7 @@
           "title": "Senior Revenue and Accounts Receivable Analyst",
           "location": "Amsterdam, Netherlands",
           "url": "https://careers.nebius.com/?gh_jid=4955913101",
-          "source_updated_at": "2026-09-25T06:53:26-04:00",
+          "source_updated_at": "2026-09-28T08:58:31-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3239,26 +3259,6 @@
           "baseline_import": true
         },
         {
-          "id": "4942657101",
-          "title": "Solution Marketing Lead — Retail and E-Commerce",
-          "location": "United States",
-          "url": "https://careers.nebius.com/?gh_jid=4942657101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4376580101",
-          "title": "Solutions Architect",
-          "location": "Remote - United States",
-          "url": "https://careers.nebius.com/?gh_jid=4376580101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4939855101",
           "title": "Solutions Architect",
           "location": "Singapore",
@@ -3279,10 +3279,10 @@
           "baseline_import": true
         },
         {
-          "id": "4947283101",
-          "title": "Solutions & Integrations Engineer ",
-          "location": "Israel",
-          "url": "https://careers.nebius.com/?gh_jid=4947283101",
+          "id": "4376580101",
+          "title": "Solutions Architect",
+          "location": "Remote - United States",
+          "url": "https://careers.nebius.com/?gh_jid=4376580101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -3303,7 +3303,7 @@
           "title": "Sr. HR Business Partner",
           "location": "San Francisco Bay Area, California, United States",
           "url": "https://careers.nebius.com/?gh_jid=4850307101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "source_updated_at": "2026-09-28T12:24:08-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3369,16 +3369,6 @@
           "baseline_import": true
         },
         {
-          "id": "4977312101",
-          "title": "Staff / Principal Applied AI Researcher (Agentic Search)",
-          "location": "Zurich, Switzerland",
-          "url": "https://careers.nebius.com/?gh_jid=4977312101",
-          "source_updated_at": "2026-09-16T08:15:13-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-17T08:42:51+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4948471101",
           "title": "Staff / Principal Applied AI Researcher (Agentic Search)",
           "location": "Remote - Europe",
@@ -3389,10 +3379,30 @@
           "baseline_import": true
         },
         {
+          "id": "4977312101",
+          "title": "Staff / Principal Applied AI Researcher (Agentic Search)",
+          "location": "Zurich, Switzerland",
+          "url": "https://careers.nebius.com/?gh_jid=4977312101",
+          "source_updated_at": "2026-09-16T08:15:13-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-17T08:42:51+00:00",
+          "baseline_import": false
+        },
+        {
           "id": "4826618101",
           "title": "Staff / Principal Applied AI Researcher (Agentic Search)",
           "location": "Amsterdam, Netherlands; London, United Kingdom; Remote - Europe",
           "url": "https://careers.nebius.com/?gh_jid=4826618101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4906376101",
+          "title": "Staff / Senior Software Engineer (Agentic Search) - Crawler",
+          "location": "Amsterdam, Netherlands; London, United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=4906376101",
           "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -3407,16 +3417,6 @@
           "data_center": false,
           "first_seen_at": "2026-09-17T08:42:51+00:00",
           "baseline_import": false
-        },
-        {
-          "id": "4906376101",
-          "title": "Staff / Senior Software Engineer (Agentic Search) - Crawler",
-          "location": "Amsterdam, Netherlands; London, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4906376101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
         },
         {
           "id": "4977336101",
@@ -3439,16 +3439,6 @@
           "baseline_import": true
         },
         {
-          "id": "4977340101",
-          "title": "Staff / Senior Software Engineer (Agentic Search) - Runtime",
-          "location": "Zurich, Switzerland",
-          "url": "https://careers.nebius.com/?gh_jid=4977340101",
-          "source_updated_at": "2026-09-16T08:10:33-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-17T08:42:51+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4824821101",
           "title": "Staff / Senior Software Engineer (Agentic Search) - Runtime",
           "location": "Amsterdam, Netherlands; London, United Kingdom",
@@ -3457,6 +3447,16 @@
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
+        },
+        {
+          "id": "4977340101",
+          "title": "Staff / Senior Software Engineer (Agentic Search) - Runtime",
+          "location": "Zurich, Switzerland",
+          "url": "https://careers.nebius.com/?gh_jid=4977340101",
+          "source_updated_at": "2026-09-16T08:10:33-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-17T08:42:51+00:00",
+          "baseline_import": false
         },
         {
           "id": "4765226101",
@@ -3669,11 +3669,11 @@
           "baseline_import": true
         },
         {
-          "id": "4965102101",
+          "id": "4829432101",
           "title": "Technical Project Manager / IT Infrastructure Engineer",
-          "location": "Béthune, Pas-de-Calais, France",
-          "url": "https://careers.nebius.com/?gh_jid=4965102101",
-          "source_updated_at": "2026-09-03T05:23:43-04:00",
+          "location": "Lappeenranta, Finland",
+          "url": "https://careers.nebius.com/?gh_jid=4829432101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3689,11 +3689,11 @@
           "baseline_import": true
         },
         {
-          "id": "4829432101",
+          "id": "4965102101",
           "title": "Technical Project Manager / IT Infrastructure Engineer",
-          "location": "Lappeenranta, Finland",
-          "url": "https://careers.nebius.com/?gh_jid=4829432101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "location": "Béthune, Pas-de-Calais, France",
+          "url": "https://careers.nebius.com/?gh_jid=4965102101",
+          "source_updated_at": "2026-09-03T05:23:43-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3709,14 +3709,24 @@
           "baseline_import": true
         },
         {
-          "id": "4955968101",
+          "id": "4988639101",
           "title": " Technology Commercial Legal Counsel",
-          "location": "Austin, Texas, United States; New York, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4955968101",
-          "source_updated_at": "2026-09-25T10:52:28-04:00",
+          "location": "New York, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4988639101",
+          "source_updated_at": "2026-09-28T10:07:15-04:00",
           "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
+          "first_seen_at": "2026-09-29T09:54:23+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "4988641101",
+          "title": "Technology Commercial Legal Counsel",
+          "location": "Austin, Texas, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4988641101",
+          "source_updated_at": "2026-09-28T10:06:43-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-29T09:54:23+00:00",
+          "baseline_import": false
         },
         {
           "id": "4986845101",
@@ -3779,16 +3789,6 @@
           "baseline_import": true
         },
         {
-          "id": "4794078101",
-          "title": "Warehouse Logistics Specialist",
-          "location": "Bet Shemesh, Israel; Israel",
-          "url": "https://careers.nebius.com/?gh_jid=4794078101",
-          "source_updated_at": "2026-09-01T05:10:27-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4965870101",
           "title": "Warehouse Logistics Specialist",
           "location": "Oklahoma, United States",
@@ -3797,6 +3797,16 @@
           "data_center": false,
           "first_seen_at": "2026-09-16T08:39:20+00:00",
           "baseline_import": false
+        },
+        {
+          "id": "4794078101",
+          "title": "Warehouse Logistics Specialist",
+          "location": "Bet Shemesh, Israel; Israel",
+          "url": "https://careers.nebius.com/?gh_jid=4794078101",
+          "source_updated_at": "2026-09-01T05:10:27-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
         }
       ],
       "baseline_at": "2026-09-10T12:27:13+00:00"
@@ -3804,8 +3814,8 @@
     "regions": {
       "url": "https://status.nebius.com/api/v2/components.json",
       "health": "ok",
-      "attempted_at": "2026-09-28T09:52:33+00:00",
-      "updated_at": "2026-09-28T09:52:33+00:00",
+      "attempted_at": "2026-09-29T09:54:23+00:00",
+      "updated_at": "2026-09-29T09:54:23+00:00",
       "rows": [
         {
           "id": "g389s72ckww8",
@@ -3862,8 +3872,8 @@
     "incidents": {
       "url": "https://status.nebius.com/api/v2/incidents.json",
       "health": "ok",
-      "attempted_at": "2026-09-28T09:52:33+00:00",
-      "updated_at": "2026-09-28T09:52:33+00:00",
+      "attempted_at": "2026-09-29T09:54:23+00:00",
+      "updated_at": "2026-09-29T09:54:23+00:00",
       "rows": [
         {
           "id": "16jx7nyhzjsd",
@@ -5545,6 +5555,110 @@
       "at": "2026-09-28T09:52:33+00:00",
       "label": "Senior Sales Engineer - Token Factory",
       "url": "https://careers.nebius.com/?gh_jid=4795955101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "4988211101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Data Center IT Infrastructure Lead",
+      "url": "https://careers.nebius.com/?gh_jid=4988211101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "4798625101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Delivery Operations Manager - Token Factory",
+      "url": "https://careers.nebius.com/?gh_jid=4798625101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "4657940101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "GPU Cluster Architect",
+      "url": "https://careers.nebius.com/?gh_jid=4657940101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "4988430101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Head of Employee Relations ",
+      "url": "https://careers.nebius.com/?gh_jid=4988430101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "4949159101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Project Manager Team Lead ",
+      "url": "https://careers.nebius.com/?gh_jid=4949159101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "4988639101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": " Technology Commercial Legal Counsel",
+      "url": "https://careers.nebius.com/?gh_jid=4988639101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "4988641101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Technology Commercial Legal Counsel",
+      "url": "https://careers.nebius.com/?gh_jid=4988641101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4883833101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "IT Infrastructure Engineer (RMA & Diag)",
+      "url": "https://careers.nebius.com/?gh_jid=4883833101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4955968101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": " Technology Commercial Legal Counsel",
+      "url": "https://careers.nebius.com/?gh_jid=4955968101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4866066101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "IT Infrastructure Engineer – RMA & Hardware Diagnostics",
+      "url": "https://careers.nebius.com/?gh_jid=4866066101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4942657101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Solution Marketing Lead — Retail and E-Commerce",
+      "url": "https://careers.nebius.com/?gh_jid=4942657101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4947283101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Solutions & Integrations Engineer ",
+      "url": "https://careers.nebius.com/?gh_jid=4947283101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4942690101",
+      "at": "2026-09-29T09:54:23+00:00",
+      "label": "Head of Forward Deployed Engineering - Ecosystem ",
+      "url": "https://careers.nebius.com/?gh_jid=4942690101"
     }
   ],
   "snapshots": [
@@ -5661,7 +5775,13 @@
       "jobs": 379,
       "dc_jobs": 53,
       "region_groups": 7
+    },
+    {
+      "date": "2026-09-29",
+      "jobs": 380,
+      "dc_jobs": 54,
+      "region_groups": 7
     }
   ],
-  "attempted_at": "2026-09-28T09:52:33+00:00"
+  "attempted_at": "2026-09-29T09:54:23+00:00"
 }
