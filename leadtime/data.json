@@ -17326,11 +17326,24 @@
     },
     {
       "component": "CPU·서버 PCB",
-      "status": "정성 정보 확인",
-      "note": "일반 서버 CPU·PCB는 2026-04-15 원문이 약 1년이라고 표현했습니다. 정확한 주수로 환산하지 않았으며 AI 서버 전용 제품 범위와도 구분합니다.",
+      "status": "서버 CPU 25–30주 수록 · PCB 별도 범위",
+      "note": "TrendForce Weekly Radar 003(2026-09-28)의 AI 인프라 서버 CPU 집계 납기 25–30주, 균형 기준 16–20주를 수록했습니다. 제조사·세부 사양·지역은 미공개입니다. 2026-04-15 원문의 일반 서버 CPU·PCB 약 1년 표현은 다른 범위이며 정확한 주수로 환산하거나 주간 CPU 집계와 합치지 않습니다.",
       "source_urls": [
-        "https://www.trendforce.com/presscenter/news/20260415-13013.html"
-      ]
+        "https://www.trendforce.com/presscenter/news/20260415-13013.html",
+        "https://insights.trendforce.com/p/weekly-radar-003"
+      ],
+      "previous_versions": [
+        {
+          "component": "CPU·서버 PCB",
+          "status": "정성 정보 확인",
+          "note": "일반 서버 CPU·PCB는 2026-04-15 원문이 약 1년이라고 표현했습니다. 정확한 주수로 환산하지 않았으며 AI 서버 전용 제품 범위와도 구분합니다.",
+          "source_urls": [
+            "https://www.trendforce.com/presscenter/news/20260415-13013.html"
+          ],
+          "recorded_at": "2026-09-29"
+        }
+      ],
+      "updated_at": "2026-09-29"
     },
     {
       "component": "AI 서버 PSU",
@@ -17371,17 +17384,41 @@
     },
     {
       "component": "Rebound 메모리 과거호",
-      "status": "7개 발간호 · 105개 관측",
-      "note": "2020Q4·2021Q1/Q2/Q3/Q4·2022Q1·2023Q2호의 16개 제조사·제품 계열입니다. 표지 분기는 발간호이며 정확한 발간일·조사일은 미확인입니다. 2023Q2 Samsung LED 오표기 등 모호한 행은 제외했습니다.",
+      "status": "21개 발간호 · 236개 관측",
+      "note": "2020Q4·2021Q1–Q4·2022Q1·2023Q1–2026Q3호의 16개 제조사·제품 계열입니다. 표지 분기는 발간호이며 정확한 발간일·조사일은 미확인입니다. 2022Q2–Q4 미확보 분기는 실측 공백으로 유지하며 2023Q2 Samsung LED 오표기 등 모호한 행은 제외했습니다.",
       "source_urls": [
-        "https://reboundeu.com/wp-content/uploads/2020/09/Market-Insight-Q4-2020.pdf"
-      ]
+        "https://reboundeu.com/wp-content/uploads/2020/09/Market-Insight-Q4-2020.pdf",
+        "https://reboundeu.com/wp-content/uploads/2023/04/Market-Insights-Q1-2023.pdf",
+        "https://reboundeu.com/wp-content/uploads/2026/09/Q3-2026-Quarterly-Market-Insights-Buyers-Guide44.pdf"
+      ],
+      "previous_versions": [
+        {
+          "component": "Rebound 메모리 과거호",
+          "status": "7개 발간호 · 105개 관측",
+          "note": "2020Q4·2021Q1/Q2/Q3/Q4·2022Q1·2023Q2호의 16개 제조사·제품 계열입니다. 표지 분기는 발간호이며 정확한 발간일·조사일은 미확인입니다. 2023Q2 Samsung LED 오표기 등 모호한 행은 제외했습니다.",
+          "source_urls": [
+            "https://reboundeu.com/wp-content/uploads/2020/09/Market-Insight-Q4-2020.pdf"
+          ],
+          "recorded_at": "2026-09-29"
+        }
+      ],
+      "updated_at": "2026-09-29"
     },
     {
       "component": "ABF 과거 이력",
       "status": "2026년 이전 ABF 단독 연속 수치 미확인",
       "note": "2021년 SEMI의 IC 패키지 기판 전체 14주 이상은 별도 범위로 수록했습니다. 2021년 Amazon 제출문의 ABF 수치는 원문 직접 접근이 확인되지 않아 수치 원장에 넣지 않았습니다.",
       "source_urls": []
+    },
+    {
+      "component": "Sourceability 최신 분기",
+      "status": "Q3 2026 안내 확인 · 수치표 접근 미확인",
+      "note": "공식 Q3 2026 보고서 안내와 2026-09-22 웨비나를 확인했습니다. 보고서와 녹화는 등록 화면으로 연결되어 제품·제조사별 수치표를 직접 확인하지 못했습니다. Q3를 미발간으로 취급하지 않으며 확인된 기존 분기 수치를 유지합니다.",
+      "source_urls": [
+        "https://sourceability.com/lead-time-report",
+        "https://sourceability.com/events/sourceability-lead-time-report-webinar-q3-2026-trends-forecasts"
+      ],
+      "updated_at": "2026-09-29"
     }
   ]
 }
