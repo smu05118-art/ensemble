@@ -1,0 +1,88 @@
+{
+ "schema_version": "ensemble-analyst-models-build/1",
+ "as_of": "2026-09-30",
+ "model_vintage": "2024-03-01",
+ "input": {
+  "name": "data.json",
+  "sha256": "74a68d77350886ef4be5ba53912fff3924e0148fac2fe289b3336f8f6563c957"
+ },
+ "outputs": {
+  "data.json": "d145c66bfaac9a43cd0f414cd315ee9b6654133d021409cae3e0e29038120dfd",
+  "ensemble-tab.js": "3767ab6c0786ee1ebb5a5d8338a7feb7b079215b447e16f57e89dcc291937efb",
+  "index.html": "d93715125d9f8f301537e3712e4b74aa32388856f9f0784c0f5b31148d209035"
+ },
+ "companies": [
+  {
+   "id": "HYBE",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "updated"
+  },
+  {
+   "id": "SM",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "updated"
+  },
+  {
+   "id": "JYP",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "updated"
+  },
+  {
+   "id": "YG",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "updated"
+  },
+  {
+   "id": "CJ_ENM",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "proxy"
+  },
+  {
+   "id": "STUDIO_DRAGON",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "updated"
+  },
+  {
+   "id": "CONTENTREE",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "proxy_unreliable"
+  },
+  {
+   "id": "SBS",
+   "model_status": "analyst",
+   "roll_forward": "ok",
+   "valuation": "updated"
+  },
+  {
+   "id": "GKL",
+   "model_status": "template",
+   "roll_forward": "ok",
+   "valuation": "no_analyst_target"
+  },
+  {
+   "id": "KANGWON",
+   "model_status": "template",
+   "roll_forward": "ok",
+   "valuation": "no_analyst_target"
+  },
+  {
+   "id": "LOTTE_TOUR",
+   "model_status": "template",
+   "roll_forward": "ok",
+   "valuation": "no_analyst_target"
+  },
+  {
+   "id": "PARADISE",
+   "model_status": "template",
+   "roll_forward": "ok",
+   "valuation": "no_analyst_target"
+  }
+ ]
+}
