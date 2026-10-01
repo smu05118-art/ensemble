@@ -1,15 +1,15 @@
 {
  "schema_version": "ensemble-analyst-models-build/1",
- "as_of": "2026-09-30",
+ "as_of": "2026-10-01",
  "model_vintage": "2024-03-01",
  "input": {
   "name": "data.json",
-  "sha256": "74a68d77350886ef4be5ba53912fff3924e0148fac2fe289b3336f8f6563c957"
+  "sha256": "60fa63091b6642ceaeeefbe6026e164e9fd09b3fcbfc1fed4669b6603deacbbe"
  },
  "outputs": {
-  "data.json": "d145c66bfaac9a43cd0f414cd315ee9b6654133d021409cae3e0e29038120dfd",
+  "data.json": "9a0dc1dc095270aba35964324322f9d5351294fcf547fa6ba7b8dfc4628b9b7c",
   "ensemble-tab.js": "3767ab6c0786ee1ebb5a5d8338a7feb7b079215b447e16f57e89dcc291937efb",
-  "index.html": "d93715125d9f8f301537e3712e4b74aa32388856f9f0784c0f5b31148d209035"
+  "index.html": "65c53f4ffa1126cbb7ab74c30af4c78e8ba0d08513fd58925b481be759c0816e"
  },
  "companies": [
   {
@@ -52,7 +52,7 @@
    "id": "CONTENTREE",
    "model_status": "analyst",
    "roll_forward": "ok",
-   "valuation": "proxy_unreliable"
+   "valuation": "not_valued_rehabilitation"
   },
   {
    "id": "SBS",
