@@ -1,224 +1,988 @@
+/* 앙상블 '커버리지 모델 12사' — 홈 탭(#pane-models)과 단독 페이지(#models-standalone) 공용 렌더러. 데이터 계약 ensemble-analyst-models/2.
+   HTML 문자열을 만드는 순수 함수와 DOM 연결(mount)을 나눴다. Node에서 require하면 순수 함수만 module.exports로 내보내고 DOM은 건드리지 않는다. */
 (function () {
   'use strict';
-  const standalone = document.getElementById('models-standalone');
-  const ownScript = document.currentScript;
-  const assetRoot = ownScript && ownScript.src ? new URL('.', ownScript.src) : new URL('.', location.href);
-  const esc = x => String(x == null ? '' : x).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const fmt = (x, d) => (typeof x === 'number' && Number.isFinite(x)) ? new Intl.NumberFormat('ko-KR', {maximumFractionDigits: d == null ? 1 : d, minimumFractionDigits: 0}).format(x) : '—';
-  const pct = (x, d) => (typeof x === 'number' && Number.isFinite(x)) ? (x > 0 ? '+' : '') + fmt(x, d == null ? 1 : d) + '%' : '—';
-  const won = x => (typeof x === 'number' && Number.isFinite(x)) ? new Intl.NumberFormat('ko-KR').format(Math.round(x)) + '원' : '—';
+  const SCHEMA = 'ensemble-analyst-models/2';
+  const SCEN = ['bear', 'base', 'bull'];
+  const DART = 'https://dart.fss.or.kr/dsaf001/main.do?rcpNo=';
+  const CHART_W = 640;
+
+  // ── 형식 ──
+  const esc = x => String(x == null ? '' : x).replace(/[&<>"']/g, ch => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[ch]));
+  const isNum = x => typeof x === 'number' && Number.isFinite(x);
+  const obj = x => (x && typeof x === 'object' && !Array.isArray(x)) ? x : {};
+  const arr = x => Array.isArray(x) ? x : [];
+  const str = x => typeof x === 'string' ? x : '';
+  const nfs = {};
+  const nf = (min, max) => nfs[min + ':' + max] || (nfs[min + ':' + max] = new Intl.NumberFormat('ko-KR', {minimumFractionDigits: min, maximumFractionDigits: max}));
+  const z = (x, d) => (Math.abs(x) < 0.5 * Math.pow(10, -d) ? 0 : x);
+  const fmt = (x, d) => { d = d == null ? 1 : d; return isNum(x) ? nf(0, d).format(z(x, d)) : '—'; };
+  const fx = (x, d) => { d = d == null ? 1 : d; return isNum(x) ? nf(d, d).format(z(x, d)) : '—'; };
+  const sgn = (x, d) => { d = d == null ? 1 : d; if (!isNum(x)) return '—'; const v = z(x, d); return (v > 0 ? '+' : '') + nf(d, d).format(v); };
+  const pct = (x, d) => isNum(x) ? sgn(x, d) + '%' : '—';
+  const pctR = (r, d) => isNum(r) ? pct(r * 100, d) : '—';
+  const lvlR = (r, d) => isNum(r) ? fx(r * 100, d == null ? 1 : d) + '%' : '—';
+  const won = x => isNum(x) ? nf(0, 0).format(z(Math.round(x), 0)) + '원' : '—';
+  const wonE = x => isNum(x) ? nf(0, 2).format(z(x, 2)) + '원' : '—'; // 12MF EPS처럼 소수 둘째 자리까지 오는 값(4,336.5원)은 반올림하지 않는다
+  const mult = (x, d) => isNum(x) ? fmt(x, d == null ? 3 : d) + '배' : '—';
+  const bnTxt = x => isNum(x) ? fx(x, 1) + '십억원' : '—';
+  const ratio = (a, b) => (isNum(a) && isNum(b) && b > 0) ? a / b : null;
+  const r1 = v => Math.round(v * 10) / 10;
+  const ymd = s => /^\d{8}$/.test(str(s)) ? s.slice(0, 4) + '-' + s.slice(4, 6) + '-' + s.slice(6) : str(s);
+  const host = u => { try { return new URL(u).hostname; } catch (e) { return ''; } };
+  const safeUrl = u => /^https?:\/\//.test(str(u)) ? u : '';
+  // 엔진 설명문에 섞인 내부 파일명·필드명(rollfwd.py, (da_verified) 등)은 화면에 쓰지 않는다
+  const plain = s => str(s).replace(/\s*\([A-Za-z0-9_.-]+\.(?:py|json|tsv|csv|xlsx?|xlsm)\)/g, '').replace(/\b[A-Za-z0-9_-]+\.(?:py|json|tsv|csv|xlsx?|xlsm)\b\s*/g, '').replace(/\s*\([a-z]+_[a-z0-9_]+\)/g, '');
+  // 커버리지 레인 문구의 키 이름: as_of → 기준일, 점으로 이은 내부 경로(official_evidence.calibration) → 일반 명칭
+  const plainNote = s => plain(s).replace(/\bas_of\b/g, '기준일').replace(/\b[a-z]+(?:_[a-z0-9]+)+\.[a-z_][a-z0-9_]*\b/g, '커버리지 레인 근거 자료');
+  // 근거·출처 문구의 접수번호 키 이름(rcept_no·rcpNo)은 'DART'로 바꾸고 번호는 공시 링크로 단다.
+  // Open DART API 이름(fnlttSinglAcntAll)과 XBRL 계정 id(ifrs-full_…)도 화면 이름으로 바꾼다
+  const rcptHtml = s => esc(str(s).replace(/\s*\((?:fnltt\w+|ifrs-full_[^)]*)\)/g, '').replace(/\bfnltt\w+\s+CFS\s+CF\b/g, '연결 현금흐름표').replace(/\bfnltt\w+\b/g, '전체 재무제표')
+    .replace(/\b(?:DART\s+)?(?:rcept_no|rcpNo)\s*/g, 'DART ')).replace(/\b20\d{12}\b/g, no => dartLink(no, no));
+
+  // ── 이름표 ──
   const sectorNames = {ent: '엔터테인먼트', media: '미디어', leisure: '레저'};
-  const metricNames = {revenue: '매출액', operating_profit: '영업이익', net_income: '당기순이익', controlling_net_income: '지배순이익', gross_profit: '매출총이익', sga: '판관비', cogs: '매출원가', ebitda: 'EBITDA', pretax_income: '세전이익', income_tax: '법인세', eps_basic: '기본 EPS(원)', total_assets: '자산총계', total_liabilities: '부채총계', equity: '자본총계', controlling_equity: '지배지분', cash: '현금및현금성자산'};
-  const methodNames = {per: 'PER (목표 P/E × 12MF EPS)', ev_ebitda: 'EV/EBITDA', sotp: 'SOTP (부문합산)', unknown: '템플릿 · 애널리스트 산식 없음'};
-  const statusNames = {analyst: '애널리스트 추정 포함', template: '템플릿(추정 미입력)'};
-  let data, root, state = {sector: 'ent', company: 'HYBE', scenario: 'base', driversOpen: {}};
-  const css = `
-  .am{--bg:#0b1018;--panel:#131b27;--line:#293447;--ink:#e8eef6;--dim:#92a3b9;--accent:#f2b84b;--teal:#65dec2;--blue:#819df8;--red:#ff7b72;background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;padding:24px;max-width:1440px;margin:auto;box-sizing:border-box}
-  .am *{box-sizing:border-box}.am h1,.am h2,.am h3,.am p{margin:0}.am h1{font-size:28px;letter-spacing:-1px}.am h2{font-size:17px;margin-bottom:10px}.am h3{font-size:13px;color:var(--dim)}.am a{color:var(--teal)}.am .dim{color:var(--dim)}.am .eyebrow{font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:700}
-  .am header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:20px;flex-wrap:wrap}.am .asof{text-align:right;color:var(--dim);font-size:12px}
-  .am button,.am select{font:inherit;color:var(--ink);border:1px solid var(--line);background:#192333;border-radius:7px;padding:7px 12px;cursor:pointer}.am button.active{color:#1b1400;background:var(--accent);border-color:var(--accent);font-weight:700}.am button:focus-visible,.am a:focus-visible,.am summary:focus-visible{outline:3px solid #b6ed7e;outline-offset:3px}
-  .am .sectors{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.am .layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:20px}.am .layout>section{min-width:0}
-  .am .companies{display:flex;flex-direction:column;gap:7px}.am .company{padding:11px 12px;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:6px}.am .company small{display:block;font-size:11px;opacity:.75}.am .company .tag{font-size:10px;white-space:nowrap;color:var(--dim)}
-  .am .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:16px}
-  .am .title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}.am .badges{display:flex;gap:6px;flex-wrap:wrap}.am .badge{font-size:10.5px;font-weight:700;border:1px solid var(--line);padding:2px 8px;border-radius:20px;white-space:nowrap;color:var(--dim)}.am .badge.ok{color:var(--teal)}.am .badge.warn{color:var(--accent)}.am .badge.bad{color:var(--red)}
-  .am .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:12px 0}.am .kpi{background:var(--bg);border:1px solid var(--line);padding:10px 12px;border-radius:8px}.am .kpi b{display:block;font-size:19px;font-variant-numeric:tabular-nums}.am .kpi small{color:var(--dim);font-size:11px;display:block}.am .kpi .sub{font-size:11px;color:var(--dim)}
-  .am .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:6px 0 10px}.am label{font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:center}
-  .am .tablewrap{overflow-x:auto}.am table{width:100%;border-collapse:collapse;font-size:12px;min-width:640px}.am th{text-align:right;color:var(--dim);font-weight:500;padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}.am th:first-child,.am td:first-child{text-align:left}.am td{padding:6px 8px;border-bottom:1px solid #223046;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.am td.l{text-align:left;white-space:normal}.am tr.sub td{color:var(--dim);font-size:11px}.am td.est{color:var(--blue)}.am td.model{color:#c8aae9}.am td.neg{color:var(--red)}.am th.est{color:var(--blue)}
-  .am .chart{width:100%;height:auto;min-height:200px;display:block}.am .chart text{font:11px -apple-system,sans-serif;fill:var(--dim)}.am .chart .grid{stroke:var(--line)}.am .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--dim);margin-top:4px}.am .legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}
-  .am .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.am .notice{border-left:3px solid var(--accent);padding:8px 12px;color:var(--dim);font-size:12px;margin-top:10px;background:#1a1c26}.am .notice.blue{border-color:var(--blue);background:#141d30}
-  .am details{border-top:1px solid var(--line);padding:8px 0}.am summary{cursor:pointer}.am .details-body{padding:10px 0 0;font-size:12px;color:var(--dim);overflow-wrap:anywhere}
-  .am .foot{font-size:11px;color:var(--dim);margin:18px 0}.am .empty{text-align:center;padding:40px 10px;color:var(--dim);border:1px dashed var(--line);border-radius:8px}
-  .am .pill{display:inline-block;font-size:10px;border:1px solid var(--line);border-radius:20px;padding:1px 7px;margin-left:6px;color:var(--dim)}
-  @media(max-width:900px){.am{padding:16px}.am .layout{grid-template-columns:1fr}.am .companies{display:grid;grid-template-columns:repeat(2,1fr)}.am .two{grid-template-columns:1fr}.am .kpis{grid-template-columns:repeat(3,1fr)}}
-  @media(max-width:480px){.am h1{font-size:22px}.am .kpis{grid-template-columns:repeat(2,1fr)}.am .card{padding:14px}.am header{display:block}.am .asof{text-align:left;margin-top:8px}}
-  @media(prefers-color-scheme:light){html:not([data-theme=dark]) .am{--bg:#f3f6fa;--panel:#fff;--line:#d6deea;--ink:#152235;--dim:#64758a;--accent:#b8781b;--teal:#087c66;--blue:#3b57c4;--red:#c43b3b}html:not([data-theme=dark]) .am button,html:not([data-theme=dark]) .am select{background:#f5f7fa;color:var(--ink)}html:not([data-theme=dark]) .am button.active{background:#b8781b;color:#fff}html:not([data-theme=dark]) .am .notice{background:#fff7e8}html:not([data-theme=dark]) .am .notice.blue{background:#edf2ff}html:not([data-theme=dark]) .am td{border-color:#e4eaf1}}
-  `;
-  const co = () => data.companies.find(c => c.id === state.company);
-  const hv = (c, metric, year) => { const r = ((c.history.annual[metric] || {})[String(year)]); return r ? r.value : null; };
-  const mv = (c, metric, year) => { const r = ((c.model.annual[metric] || {})[String(year)]); return r ? r : null; };
-  const fv = (c, year, key, sc) => { const s = (c.roll_forward.scenarios || {})[sc || state.scenario]; return s && s[String(year)] ? s[String(year)][key] : null; };
-  const YEARS_A = [2020, 2021, 2022, 2023, 2024, 2025], YEARS_E = [2026, 2027, 2028];
-  function yoy(c, metric, y) { const a = hv(c, metric, y), b = hv(c, metric, y - 1); return (a != null && b) ? (a / b - 1) * 100 : null; }
-  function fyoy(c, y, key) { const a = fv(c, y, key), b = y === 2026 ? hv(c, key, 2025) : fv(c, y - 1, key); return (a != null && b) ? (a / b - 1) * 100 : null; }
-  function cell(v, cls, d) { const neg = typeof v === 'number' && v < 0; return '<td class="' + (cls || '') + (neg ? ' neg' : '') + '">' + fmt(v, d) + '</td>'; }
-  function pcell(v, cls) { const neg = typeof v === 'number' && v < 0; return '<td class="' + (cls || '') + (neg ? ' neg' : '') + '">' + pct(v) + '</td>'; }
-  function annualTable(c) {
-    const isT = c.model.status === 'template';
-    const head = '<tr><th>십억원</th>' + YEARS_A.map(y => '<th>' + y + 'A</th>').join('') + YEARS_E.map(y => '<th class="est">' + y + 'E</th>').join('') + '</tr>';
-    const row = (label, metric, key, opts) => {
-      opts = opts || {};
-      let h = '<tr><td class="l">' + esc(label) + '</td>';
-      YEARS_A.forEach(y => { h += cell(opts.pctRow ? yoy(c, metric, y) : hv(c, metric, y), '', opts.pctRow ? 1 : (metric === 'eps_basic' ? 0 : 1)); });
-      YEARS_E.forEach(y => { h += cell(opts.pctRow ? fyoy(c, y, key) : fv(c, y, key), 'est', opts.pctRow ? 1 : (key === 'eps' ? 0 : 1)); });
-      return h + '</tr>';
+  const scenName = s => ({bear: 'BEAR', base: 'BASE', bull: 'BULL'}[s] || '');
+  const statusLabels = {updated: '규칙 환산가', range: 'SOTP 범위', reference_band: '밴드 참고가', not_valued_rehabilitation: '회생절차 · 환산가 미산정', not_computable: '환산가 산출 불가'};
+  const methodNames = {per: 'PER', pbr: 'PBR', ev_ebitda: 'EV/EBITDA', sotp: 'SOTP(부문합산)', none: '산정 안 함', unknown: '원본 산식 없음(템플릿)'};
+  const bindingNames = {band_p80_cap: '자기 밴드 80백분위 상한', street_ceiling: '스트리트 상한', pbr_cap: 'PBR 정합 상한', eps_clamp: 'EPS 입력 ±30% 제한'};
+  const bandSourceNames = {workbook: '워크북 밴드 × k', dart_fy: 'DART 연간', ttm: '최근 4개 분기'};
+  const bucketNames = {borrowings: '차입금·사채', leases: '리스부채', cash: '현금및현금성자산', short_term_financial: '단기금융상품', other_current_financial: '기타유동금융자산'};
+  const unitNames = {ratio: '비율(%)', KRWbn: '십억원', KRWmn: '백만원', persons: '명', visits: '회'};
+  const confNames = {low: '낮음', medium: '중간', high: '높음'};
+  const metricKo = {revenue: '매출액', operating_profit: '영업이익', net_income: '순이익', controlling_net_income: '지배순이익', eps_basic: 'EPS'};
+  const srcStatusNames = {official_original_acquired: '공식 원본', primary_company_file_retrieved: '회사 원본 파일', agent_model_not_official: '에이전트 모델(공식 자료 아님)', agent_model_design: '에이전트 설계 문서', agent_model_not_company_guidance: '에이전트 모델(회사 가이던스 아님)', coverage_lane_source: '커버리지 레인 수집 자료'};
+  const pubStatusNames = {unknown_observed_by_cutoff: '수집 시점까지 확인 안 됨'};
+  // 레저 드라이버·커버리지 가정 지표의 화면 이름(목록에 없는 지표는 원문 명칭 그대로)
+  const driverNames = {
+    table_participant_estimate: '테이블 참가자 수(추정)', table_drop: '테이블 드롭액', machine_drop: '머신 드롭액', total_drop: '총 드롭액',
+    table_drop_per_participant: '참가자당 테이블 드롭액', total_hold: '전체 홀드율', table_hold: '테이블 홀드율', machine_hold: '머신 홀드율',
+    table_net_revenue: '테이블 순매출', slot_net_revenue: '슬롯머신 순매출', casino_net_revenue: '카지노 순매출', casino_visits: '카지노 방문객 수',
+    drop_per_visit: '방문당 드롭액', casino_gross_operating_revenue: '카지노 총매출', gross_operating_hold: '총매출 기준 홀드율', high1_points: '하이원 포인트',
+    casino_food_beverage_revenue: '카지노 식음료 매출', casino_segment_revenue: '카지노 부문 매출', noncasino_revenue: '비카지노 매출',
+    hotel_segment_revenue: '호텔 부문 매출', travel_revenue: '여행 부문 매출', vip_visiting_days: 'VIP 방문일수', japan_vip_drop: '일본 VIP 드롭액',
+    china_vip_drop: '중국 VIP 드롭액', other_vip_drop: '기타 VIP 드롭액', mass_drop: '일반(매스) 드롭액',
+    fixed_cost_inflation_yoy: '고정비 상승률(전년 대비)', drop_growth_yoy: '드롭액 증가율(전년 대비)', september_drop_growth_yoy: '9월 드롭액 증가율(전년 대비)',
+    recent_machine_drop_growth_yoy: '최근 머신 드롭액 증가율(전년 대비)', variable_cost_ratio: '변동비율', noncasino_net_revenue_growth_yoy: '비카지노 순매출 증가율(전년 대비)',
+    hotel_net_revenue_growth_yoy: '호텔 순매출 증가율(전년 대비)', travel_other_revenue_growth_yoy: '여행·기타 매출 증가율(전년 대비)',
+    organic_noncasino_growth_yoy: '기존 비카지노 매출 증가율(전년 대비)', hyatt_incremental_noncasino_revenue: '하얏트 추가 비카지노 매출',
+    high1_points_to_gross_revenue: '하이원 포인트 ÷ 카지노 총매출', accounting_bridge: '월간 카지노 매출 → 연결 매출 조정',
+    nonrecurring_bonus_normalization: '일회성 상여 감소분 환원', reinforcement_depreciation_release: '보강 공사 감가상각 종료분'
+  };
+  const metricLabel = k => driverNames[k] ? esc(driverNames[k]) : '<code>' + esc(k) + '</code>';
+  const howTxt = s => str(s).replace(/\b[a-z][a-z0-9]*(?:_[a-z0-9]+)+\b/g, k => driverNames[k] || k);
+  const priceSourceName = s => /naver/i.test(str(s)) ? '네이버 금융 시세' : /aikstockdata/i.test(str(s)) ? '한국주식데이터 시세' : '시세 제공처 표기 없음';
+  function histSourceName(s) {
+    s = str(s);
+    if (s === 'model_report_vendor_actual') return '워크북 내 벤더 실적';
+    if (s === 'dart_cfs') return 'Open DART 연결 정기보고서';
+    if (s === 'dart_note_da_verified') return 'DART 연결주석 실측';
+    if (s === 'operating_profit + dart_note_da_verified') return '영업이익 + DART 연결주석 D&A';
+    if (s.indexOf('coverage:') === 0) return '커버리지 레인(회사 공식 자료)';
+    return s ? '출처 표기 확인 필요' : '';
+  }
+
+  // ── 데이터 접근 (모두 undefined 안전) ──
+  const hist = c => obj(obj(c).history);
+  const model = c => obj(obj(c).model);
+  const rf = c => obj(obj(c).roll_forward);
+  const val = c => obj(obj(c).valuation);
+  const isTemplate = c => model(c).status === 'template';
+  const isCovDriver = c => rf(c).method === 'coverage_driver';
+  const vintageYM = d => str(obj(d).model_vintage).slice(0, 7) || '워크북 작성 시점';
+  const disclaimer = d => str(obj(obj(d).method).disclaimer) || '투자 권유가 아닙니다.';
+  function hrec(c, freq, metric, key) { const r = obj(obj(hist(c)[freq])[metric])[key]; return (r && typeof r === 'object') ? r : null; }
+  function hv(c, metric, key, freq) { const r = hrec(c, freq || 'annual', metric, key); return r && isNum(r.value) ? r.value : null; }
+  function fv(c, year, key, sc) { const v = obj(obj(obj(rf(c).scenarios)[sc])[String(year)])[key]; return isNum(v) ? v : null; }
+  function mrec(c, freq, metric, key) { const r = obj(obj(model(c)[freq])[metric])[key]; return (r && isNum(r.value)) ? r : null; }
+  function yearsA(c) { const ks = Object.keys(obj(obj(hist(c).annual).revenue)).filter(k => /^\d{4}$/.test(k)).sort(); return ks.length ? ks : ['2020', '2021', '2022', '2023', '2024', '2025']; }
+  function yearsE(c) { const ks = Object.keys(obj(obj(rf(c).scenarios).base)).filter(k => /^\d{4}$/.test(k)).sort(); return ks.length ? ks : ['2026', '2027', '2028']; }
+  function yoyA(c, metric, y) { const a = hv(c, metric, y), b = hv(c, metric, String(+y - 1)); return (isNum(a) && isNum(b) && b > 0) ? (a / b - 1) * 100 : null; }
+  function fyoy(c, y, key, sc) { const a = fv(c, y, key, sc), b = y === yearsE(c)[0] ? hv(c, key, String(+y - 1)) : fv(c, +y - 1, key, sc); return (isNum(a) && isNum(b) && b > 0) ? (a / b - 1) * 100 : null; }
+  function quarterKeys(c) { return Object.keys(obj(obj(hist(c).quarterly).revenue)).filter(k => /^\d{4}Q[1-4]$/.test(k) && k >= '2023Q1').sort(); }
+  function modelQ(c, metric, k) {
+    if (isTemplate(c)) return null;
+    const thru = obj(model(c).horizon).quarterly_through, r = mrec(c, 'quarterly', metric, k);
+    return (r && r.flag === 'F' && typeof thru === 'string' && k <= thru) ? r.value : null;
+  }
+  function pickCompany(d, company) {
+    if (company && typeof company === 'object') return company;
+    return arr(obj(d).companies).find(x => obj(x).id === company) || {};
+  }
+
+  // ── 밸류에이션 상태 ──
+  const statusLabel = v => statusLabels[obj(v).status] || '상태 미확인';
+  function valTone(v) {
+    v = obj(v);
+    if (v.status === 'updated') return v.confidence === 'medium' ? 'ok' : 'warn';
+    if (v.status === 'range' || v.status === 'reference_band') return 'warn';
+    return 'bad';
+  }
+  const hasValue = v => ['updated', 'range', 'reference_band'].indexOf(v.status) >= 0 && isNum(v.updated_target_price);
+  // 신종자본증권을 뺀 보통주 BPS가 0 이하라 엔진이 보고 기준 PBR을 내지 않은 경우(콘텐트리중앙)
+  const pbrOff = v => !isNum(v.pbr_now) && isNum(v.bps_ex_hybrid) && v.bps_ex_hybrid <= 0;
+  const pbrOffWhy = v => '보통주 BPS ' + won(v.bps_ex_hybrid) + '(자본 내 신종자본증권 제외) ≤ 0 — 보고 BPS ' + won(v.bps) + ' 기준 PBR은 보통주 가치를 나타내지 않아 표시하지 않음';
+
+  // ── 작은 조각 ──
+  const badge = (text, tone) => '<span class="badge' + (tone ? ' ' + tone : '') + '">' + esc(text) + '</span>';
+  const dartLink = (no, text) => no ? '<a href="' + DART + encodeURIComponent(no) + '" target="_blank" rel="noopener noreferrer">' + esc(text || 'DART ' + no) + '</a>' : esc(text || '');
+  const negCls = (cls, neg) => [cls || '', neg ? 'neg' : ''].filter(Boolean).join(' ');
+  const tdTxt = (html, cls) => '<td' + (cls ? ' class="' + cls + '"' : '') + '>' + html + '</td>';
+  function td(v, d, cls, mark) { d = d == null ? 1 : d; return tdTxt(fx(v, d) + (mark || ''), negCls(cls, isNum(v) && z(v, d) < 0)); }
+  const tdPct = (v, cls, mark) => tdTxt(pct(v) + (mark || ''), negCls(cls, isNum(v) && z(v, 1) < 0));
+  const tdR = (r, cls) => tdTxt(lvlR(r), negCls(cls, isNum(r) && z(r * 100, 1) < 0));
+  const tw = (label, table) => '<div class="tablewrap" role="region" tabindex="0" aria-label="' + esc(label) + '">' + table + '</div>';
+  const card = (title, body, extra) => '<div class="card' + (extra ? ' ' + extra : '') + '"><h2>' + esc(title) + '</h2>' + body + '</div>';
+  const notice = (html, cls) => '<div class="notice' + (cls ? ' ' + cls : '') + '" role="note">' + html + '</div>';
+  // 값도 근거도 없는 행은 그리지 않는다(삭제된 필드가 라벨만 남기지 않도록)
+  function kv(rows) {
+    const body = rows.filter(r => r && ((r[1] != null && r[1] !== '') || r[2])).map(r => '<tr><td class="l k">' + esc(r[0]) + '</td><td class="l">' + (r[1] || '') + (r[2] ? '<div class="basis">' + esc(r[2]) + '</div>' : '') + '</td></tr>').join('');
+    return body ? '<div class="tablewrap"><table class="kv"><tbody>' + body + '</tbody></table></div>' : '';
+  }
+  function det(st, key, defOpen, summary, body) {
+    const open = Object.prototype.hasOwnProperty.call(st.open, key) ? !!st.open[key] : defOpen;
+    return '<details data-dkey="' + esc(key) + '"' + (open ? ' open' : '') + '><summary>' + summary + '</summary><div class="details-body">' + body + '</div></details>';
+  }
+  const yearMap = (m, f) => { const o = obj(m), ks = Object.keys(o).sort(); return ks.length ? ks.map(k => k + ' ' + f(o[k])).join(' · ') : ''; };
+  function unitVal(v, unit) {
+    if (unit === 'ratio') return isNum(v) ? fmt(v * 100, 2) + '%' : '—';
+    if (unit === 'persons' || unit === 'visits') return fmt(v, 0);
+    if (unit === 'KRWbn') return fx(v, 1);
+    if (unit === 'KRWmn') return fx(v, 2);
+    return fmt(v, 3);
+  }
+  // 수집기가 붙인 제목의 군더더기(앞 번호·끝 날짜·'PDF')를 걷고, 영문 DART 캐시 제목은 한국어로 바꾼다
+  function cleanTitle(t) {
+    t = str(t).trim();
+    const m = t.match(/^[A-Z][A-Z0-9_]* (?:FY(\d{4})|(\d{4})(H1|Q[1-4])) consolidated DART statement$/);
+    if (m) return 'DART 연결 재무제표(' + (m[1] ? m[1] + ' 사업보고서' : m[2] + (m[3] === 'H1' ? ' 반기' : ' ' + m[3].slice(1) + '분기')) + ')';
+    return t.replace(/\s+PDF$/i, '').replace(/^\d+\s+(?=\d{4}년)/, '').replace(/\s+\d{4}-\d{2}-\d{2}(?:\s+\d+)?$/, '').trim();
+  }
+  function sourceLabel(s, c) {
+    s = obj(s);
+    const h = host(s.url), t = cleanTitle(s.title);
+    if (t) return t + (h ? ' · ' + h : '');
+    return (/dart\.fss\.or\.kr$/.test(h) ? 'DART 공시 원문' : (obj(c).name || '회사') + ' 공식 자료') + (h ? ' · ' + h : '');
+  }
+  function sourceItem(s, c) {
+    s = obj(s);
+    const pub = s.published_at ? '공표 ' + s.published_at + (s.publication_date_status === 'verified' ? '(확인)' : '') : '공표일 미상' + (pubStatusNames[s.publication_date_status] ? '(' + pubStatusNames[s.publication_date_status] + ')' : '');
+    const meta = [pub, !s.published_at && s.retrieved_at ? '수집 ' + str(s.retrieved_at).slice(0, 10) : '', srcStatusNames[s.status]].filter(Boolean).join(' · ');
+    const u = safeUrl(s.url), label = sourceLabel(s, c);
+    return (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + ' ↗</a>' : esc(label)) + ' <span class="dim">· ' + esc(meta) + '</span>';
+  }
+
+  // ── 상태 정리·딥링크 ──
+  function normState(data, state) {
+    const st = Object.assign({}, state || {}), cs = arr(obj(data).companies);
+    const c = cs.find(x => obj(x).id === st.company) || cs.find(x => obj(x).sector === st.sector) || cs[0] || {};
+    st.company = c.id; st.sector = c.sector;
+    if (SCEN.indexOf(st.scenario) < 0) st.scenario = 'base';
+    if (st.mode !== 'home') st.mode = 'standalone';
+    if (typeof st.coverageHref !== 'string' || !st.coverageHref) st.coverageHref = '../coverage/index.html';
+    if (!st.open || typeof st.open !== 'object') st.open = {};
+    return st;
+  }
+  function parseHash(hash) {
+    const h = String(hash || '').replace(/^#/, ''), m = h.match(/(?:^|&)models=([A-Za-z0-9_]+)(?:&|$)/);
+    if (!m) return null;
+    const s = h.match(/(?:^|&)scenario=(bear|base|bull)(?:&|$)/);
+    return {company: m[1], scenario: s ? s[1] : null};
+  }
+  const buildHash = st => '#models=' + encodeURIComponent(st.company) + (st.scenario && st.scenario !== 'base' ? '&scenario=' + st.scenario : '');
+
+  // ── 머리 카드 · KPI ──
+  function scenButtons(st) {
+    return '<div class="seg" role="group" aria-label="연장 시나리오"><span>시나리오</span>' + SCEN.map(s => '<button type="button" data-scenario="' + s + '" aria-pressed="' + (st.scenario === s) + '">' + scenName(s) + '</button>').join('') + '</div>';
+  }
+  function coverageLink(st) {
+    if (st.mode === 'home') return '<a class="covlink" data-cov="1" href="' + esc(st.coverageHref) + '">커버리지 레인(드라이버 모델) 탭 열기</a>';
+    return '<a class="covlink" href="' + esc(st.coverageHref) + '" target="_blank" rel="noopener">커버리지 레인(드라이버 모델) ↗</a>';
+  }
+  function kpi(label, value, sub, cls) { return '<div class="kpi' + (cls ? ' ' + cls : '') + '"><small>' + label + '</small><b>' + value + '</b><span class="sub">' + (sub || '') + '</span></div>'; }
+  const kU = (x, u) => isNum(x) ? fx(x, 1) + '<span class="u">' + u + '</span>' : '—';
+  function valKpi(c, st) {
+    const v = val(c), base = esc(v.scenario || 'base');
+    const title = esc(v.label || '앙상블 규칙 환산가') + (v.status === 'reference_band' ? ' · 밴드 참고가' : '');
+    const basis = '환산가는 ' + base + ' 기준' + (st.scenario !== base ? '(선택한 ' + scenName(st.scenario) + '와 무관)' : '');
+    if (!hasValue(v)) return '<div class="kpi kpi-val"><small>' + title + '</small><div class="kb">' + badge(statusLabel(v), valTone(v)) + '</div><span class="sub">' + esc(v.label_note) + '</span></div>';
+    const sub = basis + ' · 현재가 대비 ' + pct(v.upside_pct) + (v.status === 'range' ? ' · 범위의 base 값' : '');
+    return kpi(title, '<span class="tpv">' + won(v.updated_target_price) + '</span>', sub, 'kpi-val');
+  }
+  function kpis(c, st) {
+    const sc = st.scenario, v = val(c), S = scenName(sc);
+    const r25 = hv(c, 'revenue', '2025'), o25 = hv(c, 'operating_profit', '2025');
+    const e27 = fv(c, '2027', 'eps', sc), per27 = (isNum(e27) && e27 > 0 && isNum(v.price_now)) ? v.price_now / e27 : null;
+    const perTxt = per27 != null ? fmt(per27, 1) + '배' : (isNum(e27) ? '— (EPS ≤ 0)' : '—');
+    return '<div class="kpis">' +
+      kpi('2025A 매출', kU(r25, '십억원'), 'YoY ' + pct(yoyA(c, 'revenue', '2025'))) +
+      kpi('2025A 영업이익', kU(o25, '십억원'), 'OPM ' + lvlR(ratio(o25, r25))) +
+      kpi('2026E 매출 · ' + S, kU(fv(c, '2026', 'revenue', sc), '십억원'), 'YoY ' + pct(fyoy(c, '2026', 'revenue', sc))) +
+      kpi('2026E 영업이익 · ' + S, kU(fv(c, '2026', 'operating_profit', sc), '십억원'), 'OPM ' + lvlR(fv(c, '2026', 'opm', sc))) +
+      kpi('2027E EPS · ' + S, won(e27), '현재가 기준 PER ' + perTxt) +
+      valKpi(c, st) + '</div>';
+  }
+  function titleCard(d, c, st) {
+    const m = model(c), v = val(c), r = obj(v.rule);
+    const who = m.status === 'template' ? badge('템플릿(애널리스트 추정 미입력)', 'warn') : badge('애널리스트 추정 포함 워크북') + (m.analyst ? badge('워크북 담당자 ' + m.analyst) : '');
+    const badges = who + badge('워크북 ' + (m.vintage || obj(d).model_vintage || '—')) + badge('최신 분기 ' + (hist(c).latest_quarter || '—')) +
+      badge(statusLabel(v), valTone(v)) + (r.method_applied ? badge('환산 방식 ' + (methodNames[r.method_applied] || r.method_applied)) : '');
+    return '<div class="card"><div class="title"><div><h2 class="cname">' + esc(c.name) + ' <span class="dim">' + esc(c.ticker) + ' · ' + esc(sectorNames[c.sector] || c.sector_name || '') + '</span></h2><div class="badges">' + badges + '</div></div>' +
+      '<div class="controls">' + scenButtons(st) + coverageLink(st) + '</div></div>' + kpis(c, st) + '</div>';
+  }
+
+  // ── 연간 표 ──
+  function sourceYearsText(c, ya) {
+    const runs = [];
+    ya.forEach(y => { const lab = histSourceName(obj(hrec(c, 'annual', 'revenue', y)).source) || '출처 없음', last = runs[runs.length - 1]; if (last && last.lab === lab) last.to = y; else runs.push({lab, from: y, to: y}); });
+    return runs.map(r => (r.from === r.to ? r.from : r.from + '–' + r.to) + 'A ' + r.lab).join(' · ');
+  }
+  function annualTable(d, c, st) {
+    const sc = st.scenario, ya = yearsA(c), ye = yearsE(c), tpl = isTemplate(c), showCov = !isCovDriver(c), restated = [];
+    const act = (metric, y, dd) => {
+      const r = hrec(c, 'annual', metric, y);
+      if (!r || !isNum(r.value)) return '<td>—</td>';
+      if (r.restated) restated.push({metric, y, r});
+      return td(r.value, dd, '', r.restated ? '<sup title="재작성">*</sup>' : '');
     };
-    const modelRow = (label, metric) => {
-      let h = '<tr class="sub"><td class="l">' + esc(label) + (isT ? '<span class="pill">템플릿</span>' : '') + '</td>';
-      YEARS_A.forEach(y => { const m = mv(c, metric, y); h += (m && m.flag === 'E' && !isT) ? cell(m.value, 'model') : '<td class="model">' + (m && !isT ? '·' : '—') + '</td>'; });
-      YEARS_E.forEach(() => { h += '<td class="model">—</td>'; });
-      return h + '</tr>';
+    const dashes = n => new Array(n).fill('<td>—</td>').join('');
+    const row = (label, metric, key, dd) => '<tr><td class="l">' + label + '</td>' + ya.map(y => act(metric, y, dd)).join('') + ye.map(y => td(fv(c, y, key, sc), dd, 'est')).join('') + '</tr>';
+    const yoyRow = (label, metric) => '<tr class="sub"><td class="l">' + label + '</td>' + ya.map(y => tdPct(yoyA(c, metric, y))).join('') + ye.map(y => tdPct(fyoy(c, y, metric, sc), 'est')).join('') + '</tr>';
+    const opmRow = () => '<tr class="sub"><td class="l">영업이익률</td>' + ya.map(y => tdR(ratio(hv(c, 'operating_profit', y), hv(c, 'revenue', y)))).join('') + ye.map(y => tdR(fv(c, y, 'opm', sc), 'est')).join('') + '</tr>';
+    const modelRow = metric => tpl ? '' : '<tr class="sub"><td class="l">· 워크북 원본 추정</td>' + ya.map(y => { const r = mrec(c, 'annual', metric, y); return r && r.flag === 'E' ? td(r.value, 1, 'model') : '<td>—</td>'; }).join('') + dashes(ye.length) + '</tr>';
+    const covRow = metric => {
+      if (!showCov) return '';
+      const s = obj(obj(obj(obj(c.coverage_lane).series)[metric])[sc]), pick = y => isNum(s[y]) ? s[y] : (isNum(s[y + 'FY']) ? s[y + 'FY'] : null);
+      if (!ye.some(y => isNum(pick(y)))) return '';
+      return '<tr class="sub cov-row"><td class="l">· 커버리지 레인 추정(' + scenName(sc) + ')</td>' + dashes(ya.length) + ye.map(y => td(pick(y), 1, 'est')).join('') + '</tr>';
     };
-    const opmRow = () => {
-      let h = '<tr class="sub"><td class="l">영업이익률</td>';
-      YEARS_A.forEach(y => { const r = hv(c, 'revenue', y), o = hv(c, 'operating_profit', y); h += pcell((r && o != null) ? o / r * 100 : null); });
-      YEARS_E.forEach(y => { const m = fv(c, y, 'opm'); h += pcell(m == null ? null : m * 100, 'est'); });
-      return h + '</tr>';
-    };
-    const covRow = (metric, label) => {
-      const s = ((c.coverage_lane.series || {})[metric] || {})[state.scenario] || {};
-      if (!Object.keys(s).length) return '';
-      let h = '<tr class="sub"><td class="l">' + esc(label) + ' · 커버리지 레인(드라이버 추정)</td>';
-      YEARS_A.forEach(() => { h += '<td>—</td>'; });
-      YEARS_E.forEach(y => { h += cell(s[String(y)] ?? s[String(y) + 'FY'] ?? null, 'est'); });
-      return h + '</tr>';
-    };
-    return '<div class="tablewrap"><table><thead>' + head + '</thead><tbody>' +
-      row('매출액', 'revenue', 'revenue') + modelRow('· 모델 원본(2024-03) 추정', 'revenue') + covRow('revenue', '· 매출') + row('YoY', 'revenue', 'revenue', {pctRow: true}) +
-      row('영업이익', 'operating_profit', 'operating_profit') + modelRow('· 모델 원본 추정', 'operating_profit') + covRow('operating_profit', '· 영업이익') + opmRow() +
-      row('지배순이익', 'controlling_net_income', 'controlling_net_income') + modelRow('· 모델 원본 추정', 'controlling_net_income') +
-      row('EPS(원, 기본)', 'eps_basic', 'eps') +
-      '</tbody></table></div><p class="dim" style="font-size:11px;margin-top:6px">2020-2022A: 모델 내 벤더 실적 · 2023-2025A: Open DART 연결 · 2026-2028E: 앙상블 연장(' + esc(state.scenario.toUpperCase()) + ') · 보라색: 교보 모델 원본 추정 · EPS(E)는 연장 지배순이익 ÷ 유통주식수</p>';
-  }
-  function quarterKeys(c) { const q = c.history.quarterly.revenue || {}; return Object.keys(q).filter(k => k >= '2023Q1').sort(); }
-  function quarterlyChart(c) {
-    const keys = quarterKeys(c); if (!keys.length) return '<div class="empty">분기 실적 없음</div>';
-    const rev = keys.map(k => (c.history.quarterly.revenue[k] || {}).value), op = keys.map(k => ((c.history.quarterly.operating_profit || {})[k] || {}).value);
-    const mrev = keys.map(k => { const m = (c.model.quarterly.revenue || {})[k]; return (m && m.flag === 'F' && c.model.status !== 'template' && k <= '2025Q4') ? m.value : null; });
-    const W = 1000, H = 300, L = 64, R = 56, T = 20, B = 40, n = keys.length;
-    const vals = rev.concat(mrev).filter(v => typeof v === 'number'); const hi = Math.max(...vals, 1) * 1.1, lo = Math.min(0, ...vals);
-    const ops = op.filter(v => typeof v === 'number'); const ohi = Math.max(...ops, 1) * 1.15, olo = Math.min(0, ...ops) * 1.15;
-    const x = i => L + (W - L - R) * (i + 0.5) / n, bw = (W - L - R) / n * 0.6, y = v => T + (H - T - B) * (hi - v) / (hi - lo), yo = v => T + (H - T - B) * (ohi - v) / (ohi - olo);
-    let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="분기 매출과 영업이익"><title>분기 매출(막대)·영업이익(선)·모델 원본 분기 추정(점)</title>';
-    for (let j = 0; j < 5; j++) { const v = lo + (hi - lo) * j / 4; s += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v) + '" y2="' + y(v) + '"/><text x="' + (L - 8) + '" y="' + (y(v) + 4) + '" text-anchor="end">' + fmt(v, 0) + '</text>'; }
-    for (let j = 0; j < 5; j++) { const v = olo + (ohi - olo) * j / 4; s += '<text x="' + (W - R + 8) + '" y="' + (yo(v) + 4) + '" text-anchor="start">' + fmt(v, 0) + '</text>'; }
-    keys.forEach((k, i) => { if (typeof rev[i] === 'number') s += '<rect x="' + (x(i) - bw / 2) + '" y="' + Math.min(y(rev[i]), y(0)) + '" width="' + bw + '" height="' + Math.abs(y(0) - y(rev[i])) + '" fill="#3f6fd8" opacity=".85"><title>' + esc(k + ' 매출 ' + fmt(rev[i]) + ' (' + ((c.history.quarterly.revenue[k] || {}).source || '') + ')') + '</title></rect>'; if (i % 2 === 0 || n < 10) s += '<text x="' + x(i) + '" y="' + (H - 12) + '" text-anchor="middle">' + esc(k.replace('Q', 'Q')) + '</text>'; });
-    let run = []; keys.forEach((k, i) => { if (typeof op[i] === 'number') run.push(x(i) + ',' + yo(op[i])); });
-    if (run.length > 1) s += '<polyline points="' + run.join(' ') + '" fill="none" stroke="#f2b84b" stroke-width="2.5"/>';
-    keys.forEach((k, i) => { if (typeof op[i] === 'number') s += '<circle cx="' + x(i) + '" cy="' + yo(op[i]) + '" r="3.5" fill="#f2b84b"><title>' + esc(k + ' 영업이익 ' + fmt(op[i])) + '</title></circle>'; });
-    keys.forEach((k, i) => { if (typeof mrev[i] === 'number') s += '<circle cx="' + x(i) + '" cy="' + y(mrev[i]) + '" r="4" fill="none" stroke="#c8aae9" stroke-width="2"><title>' + esc(k + ' 모델 원본 매출 추정 ' + fmt(mrev[i])) + '</title></circle>'; });
-    s += '</svg><div class="legend"><span><i style="background:#3f6fd8"></i>분기 매출(좌, 십억원)</span><span><i style="background:#f2b84b"></i>분기 영업이익(우)</span><span><i style="background:none;border:2px solid #c8aae9"></i>모델 원본 분기 매출 추정</span></div>';
-    return s;
-  }
-  function annualChart(c) {
-    const years = YEARS_A.concat(YEARS_E), n = years.length;
-    const act = YEARS_A.map(y => hv(c, 'revenue', y)).concat(YEARS_E.map(() => null));
-    const mod = years.map(y => { const m = mv(c, 'revenue', y); return (m && m.flag === 'E' && c.model.status !== 'template') ? m.value : null; });
-    const sc = {}; ['bear', 'base', 'bull'].forEach(k => { sc[k] = YEARS_A.map(() => null).concat(YEARS_E.map(y => fv(c, y, 'revenue', k))); });
-    const vals = act.concat(mod, sc.bear, sc.base, sc.bull).filter(v => typeof v === 'number'); if (!vals.length) return '<div class="empty">연간 데이터 없음</div>';
-    const W = 1000, H = 280, L = 64, R = 20, T = 20, B = 36, hi = Math.max(...vals) * 1.1, lo = Math.min(0, ...vals);
-    const x = i => L + (W - L - R) * (i + 0.5) / n, bw = (W - L - R) / n * 0.55, y = v => T + (H - T - B) * (hi - v) / (hi - lo);
-    let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="연간 매출 실적과 연장 시나리오"><title>연간 매출: 실적·모델 원본·앙상블 연장(bear/base/bull)</title>';
-    for (let j = 0; j < 5; j++) { const v = lo + (hi - lo) * j / 4; s += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v) + '" y2="' + y(v) + '"/><text x="' + (L - 8) + '" y="' + (y(v) + 4) + '" text-anchor="end">' + fmt(v, 0) + '</text>'; }
-    years.forEach((yr, i) => {
-      s += '<text x="' + x(i) + '" y="' + (H - 10) + '" text-anchor="middle">' + yr + (i < 6 ? 'A' : 'E') + '</text>';
-      if (typeof act[i] === 'number') s += '<rect x="' + (x(i) - bw / 2) + '" y="' + y(act[i]) + '" width="' + bw + '" height="' + (y(0) - y(act[i])) + '" fill="#3f6fd8" opacity=".85"><title>' + esc(yr + 'A 매출 ' + fmt(act[i])) + '</title></rect>';
-      const b = sc.base[i]; if (typeof b === 'number') { s += '<rect x="' + (x(i) - bw / 2) + '" y="' + y(b) + '" width="' + bw + '" height="' + (y(0) - y(b)) + '" fill="#819df8" opacity=".55"><title>' + esc(yr + 'E base ' + fmt(b)) + '</title></rect>'; const lo_ = sc.bear[i], hi_ = sc.bull[i]; if (typeof lo_ === 'number' && typeof hi_ === 'number') s += '<line x1="' + x(i) + '" x2="' + x(i) + '" y1="' + y(hi_) + '" y2="' + y(lo_) + '" stroke="#e8eef6" stroke-width="2"/><line x1="' + (x(i) - 8) + '" x2="' + (x(i) + 8) + '" y1="' + y(hi_) + '" y2="' + y(hi_) + '" stroke="#e8eef6" stroke-width="2"/><line x1="' + (x(i) - 8) + '" x2="' + (x(i) + 8) + '" y1="' + y(lo_) + '" y2="' + y(lo_) + '" stroke="#e8eef6" stroke-width="2"/>'; }
-      if (typeof mod[i] === 'number') s += '<circle cx="' + x(i) + '" cy="' + y(mod[i]) + '" r="5" fill="none" stroke="#c8aae9" stroke-width="2.5"><title>' + esc(yr + 'E 모델 원본 매출 ' + fmt(mod[i])) + '</title></circle>';
-    });
-    s += '</svg><div class="legend"><span><i style="background:#3f6fd8"></i>실적</span><span><i style="background:#819df8"></i>앙상블 연장 base</span><span><i style="background:#e8eef6;width:2px"></i>bear–bull 범위</span><span><i style="background:none;border:2px solid #c8aae9"></i>모델 원본(2024-03) 추정</span></div>';
-    return s;
-  }
-  function scorecardTable(c) {
-    if (c.model.status === 'template') return '<p class="dim">템플릿 모델에는 애널리스트 추정치가 없어 예측 오차를 계산하지 않습니다.</p>';
-    const rows = c.scorecard.filter(r => ['revenue', 'operating_profit', 'controlling_net_income'].some(m => r[m].model != null && r[m].model_flag === 'E'));
-    if (!rows.length) return '<p class="dim">비교 가능한 추정 연도가 없습니다.</p>';
-    let h = '<div class="tablewrap"><table><thead><tr><th>연도</th><th>매출 모델</th><th>매출 실적</th><th>오차</th><th>영업이익 모델</th><th>실적</th><th>오차</th><th>지배순이익 모델</th><th>실적</th><th>오차</th></tr></thead><tbody>';
-    rows.forEach(r => { h += '<tr><td class="l">' + r.year + 'E vs A</td>'; ['revenue', 'operating_profit', 'controlling_net_income'].forEach(m => { h += cell(r[m].model, 'model') + cell(r[m].actual) + pcell(r[m].error_pct); }); h += '</tr>'; });
-    return h + '</tbody></table></div><p class="dim" style="font-size:11px;margin-top:6px">오차 = 모델 ÷ 실적 − 1. 모델은 2024-03-01 시점 추정(2023E는 잠정실적 반영 전후일 수 있음).</p>';
-  }
-  function valuationCard(c) {
-    const v = c.valuation, m = c.model.target_price;
-    let h = '<div class="two"><div><h3>모델 원본 산식 · ' + esc(methodNames[v.method] || v.method) + '</h3>';
-    const items = (m.items || []).filter(it => it.value != null || it.note);
-    h += items.length ? '<div class="tablewrap"><table style="min-width:0"><tbody>' + items.map(it => '<tr><td class="l">' + esc(it.label) + '</td><td class="l dim">' + esc(it.unit || '') + '</td>' + (typeof it.value === 'number' ? cell(it.value, '', Math.abs(it.value) >= 1000 ? 0 : 2) : '<td class="l">' + esc(it.value == null ? '' : it.value) + '</td>') + '<td class="l dim">' + esc(it.note || '') + '</td></tr>').join('') + '</tbody></table></div>' : '<p class="dim">TP 시트에 산식 입력 없음 (템플릿).</p>';
-    if (m.house_peers && m.house_peers.length) h += '<details><summary>모델 시점 타사 목표주가 ' + m.house_peers.length + '건</summary><div class="details-body"><table style="min-width:0"><tbody>' + m.house_peers.map(p => '<tr><td class="l">' + esc(p.house) + '</td>' + cell(p.target_price, '', 0) + cell(p.target_pe, '', 1) + '<td class="l dim">' + esc(p.note || '') + '</td></tr>').join('') + '</tbody></table></div></details>';
-    h += '</div><div><h3>갱신 계산 (' + esc(data.as_of) + ')</h3><div class="tablewrap"><table style="min-width:0"><tbody>';
-    const kv = (k, val) => '<tr><td class="l">' + esc(k) + '</td><td class="l">' + val + '</td></tr>';
-    h += kv('현재가', won(v.price_now) + ' <span class="dim">(' + esc(v.price_as_of || '') + ')</span>') + kv('유통주식수', fmt(v.shares_outstanding, 0) + '주 <span class="dim">(발행−자기주식, DART)</span>');
-    if (v.method === 'per') h += kv('목표 PER(모델)', fmt(v.inputs.target_pe, 1) + '배 <span class="dim">' + esc(v.inputs.target_pe_note || '') + '</span>') + kv('12MF EPS(연장 base)', won(v.eps_12mf) + ' <span class="dim">' + esc(v.inputs.eps_weights || '') + '</span>');
-    if (v.method === 'ev_ebitda') h += kv('목표 EV/EBITDA(모델)', fmt(v.inputs.target_ev_ebitda, 2) + '배') + kv('2027E EBITDA(연장)', fmt(v.inputs.ebitda_2027e) + ' <span class="dim">D&A ' + fmt(v.inputs.da_bn) + ' · ' + esc(v.inputs.da_basis || '') + '</span>') + kv('순차입금', fmt(v.inputs.net_debt_bn) + ' <span class="dim">' + esc(v.net_debt_basis || '') + '</span>');
-    if (v.method === 'sotp') { const i = v.inputs; h += kv('원본 영업/사업가치', fmt(i.operating_value_original_bn ?? i.business_value_original_bn) + ' <span class="dim">십억원</span>') + kv('비례 갱신 계수', fmt(i.scale_proxy, 3) + ' <span class="dim">= 연장 2027E ' + (i.roll_op_2027e_bn != null ? '영업이익 ' + fmt(i.roll_op_2027e_bn) + ' ÷ 모델 2024E ' + fmt(i.model_op_2024e_bn) : 'EBITDA ' + fmt(i.roll_ebitda_2027e_bn) + ' ÷ 모델 2024E ' + fmt(i.model_ebitda_2024e_bn)) + '</span>') + kv('순차입금(최신)', fmt(i.net_debt_bn) + ' <span class="dim">' + esc(v.net_debt_basis || '') + '</span>'); if (i.stakes) h += kv('지분가치(현재 시총, 40% 할인)', fmt(i.stake_value_bn) + ' <span class="dim">' + i.stakes.map(s => esc(s.name) + ' ' + fmt(s.value_bn)).join(' · ') + '</span>'); }
-    if (v.method === 'unknown') h += kv('참고 배수', '2027E PER ' + fmt(v.per_now_2027e, 1) + '배 · PBR ' + fmt(v.pbr_now, 2) + '배 <span class="dim">(현재가 기준, 목표주가 아님)</span>');
-    h += kv('목표주가 원본(2024-03)', won(v.original_target_price) + (v.original_tp_vs_price_now_pct != null ? ' <span class="dim">현재가 대비 ' + pct(v.original_tp_vs_price_now_pct) + '</span>' : '') + ' <span class="dim">' + esc(v.original_recommendation || '') + '</span>');
-    h += kv('목표주가 갱신', (v.updated_target_price ? '<b>' + won(v.updated_target_price) + '</b> <span class="badge ' + (v.status === 'proxy' ? 'warn' : 'ok') + '">' + esc(v.status) + '</span> 상승여력 ' + pct(v.upside_pct) : '<span class="badge bad">' + esc(v.status || '') + '</span>'));
-    h += kv('2027E PER · PBR (현재가)', fmt(v.per_now_2027e, 1) + '배 · ' + fmt(v.pbr_now, 2) + '배 <span class="dim">BPS ' + won(v.bps) + '</span>');
-    h += '</tbody></table></div>' + (v.note ? '<div class="notice">' + esc(v.note) + '</div>' : '') + ((v.warnings || []).length ? '<div class="notice" style="border-color:var(--red)">' + v.warnings.map(esc).join('<br>') + '</div>' : '') + '</div></div>';
-    return h;
-  }
-  function assumptionsCard(c) {
-    const a = c.roll_forward.assumptions || {}; if (c.roll_forward.status !== 'ok') return '<div class="notice">' + esc((c.roll_forward.notes || []).join(' · ') || '연장 계산 불가') + '</div>';
-    const rows = [['2026 상반기 YoY(실적)', pct(a.h1_2026_yoy * 100)], ['2026 하반기 성장률(base)', pct(a.g_h2_2026 * 100) + ' <span class="dim">= 상반기 YoY, −30%~+50% 제한</span>'], ['2027E 성장률', pct(a.g_2027 * 100) + ' <span class="dim">' + esc(a.g_2027_basis) + '</span>'], ['2028E 성장률', pct(a.g_2028 * 100) + ' <span class="dim">(2027E+5%)/2</span>'], ['2026 하반기 영업이익률', pct(a.opm_h2_2026 * 100) + ' <span class="dim">2025 하반기·2026 상반기 평균</span>'], ['목표 영업이익률(2028E)', pct(a.opm_target * 100) + ' <span class="dim">' + esc(a.opm_target_basis) + '</span>'], ['지배순이익/영업이익 전환', fmt(a.ni_to_op_ratio, 3) + ' <span class="dim">' + esc(a.ni_ratio_basis) + '</span>'], ['2026 상반기 실적(매출/영업이익/지배순이익)', fmt(a.h1_2026_actual.revenue) + ' / ' + fmt(a.h1_2026_actual.operating_profit) + ' / ' + fmt(a.h1_2026_actual.controlling_net_income)], ['2025 하반기 실적', fmt(a.h2_2025_actual.revenue) + ' / ' + fmt(a.h2_2025_actual.operating_profit) + ' / ' + fmt(a.h2_2025_actual.controlling_net_income)]];
-    return '<div class="tablewrap"><table style="min-width:0"><tbody>' + rows.map(r => '<tr><td class="l">' + r[0] + '</td><td class="l">' + r[1] + '</td></tr>').join('') + '</tbody></table></div>' + ((c.roll_forward.notes || []).length ? '<div class="notice">' + c.roll_forward.notes.map(esc).join('<br>') + '</div>' : '') + '<div class="notice blue">Bear/Bull: 성장률 ∓10pp(2026 하반기) ∓5pp(2027-28), 영업이익률 ∓2pp. 확률 보정 없음. 회사 가이던스·컨센서스가 아니라 앙상블 에이전트의 규칙 기반 연장입니다.</div>';
-  }
-  function driversCard(c) {
-    const ds = c.model.drivers || []; if (!ds.length || c.model.status === 'template') return '<p class="dim">' + (c.model.status === 'template' ? '템플릿 워크북: 드라이버 가정이 입력되지 않았습니다. 세그먼트 실적은 아래 커버리지 레인 자료를 참고.' : '드라이버 시트 없음') + '</p>';
-    return ds.map((d, i) => { const years = (d.years || []).filter(y => y >= 2020).map(String); const open = !!state.driversOpen[c.id + ':' + i]; const rows = d.rows.slice(0, open ? 120 : 25); return '<details ' + (i === 0 ? 'open' : '') + '><summary>' + esc(d.sheet) + ' <span class="dim">' + d.rows.length + '행' + (d.total_rows > d.rows.length ? ' (원본 ' + d.total_rows + ')' : '') + '</span></summary><div class="details-body"><div class="tablewrap"><table><thead><tr><th>항목</th><th>단위</th>' + years.map(y => '<th>' + y + (y <= '2022' ? 'A' : 'E') + '</th>').join('') + '</tr></thead><tbody>' + rows.map(r => '<tr><td class="l" style="padding-left:' + (8 + r.indent * 10) + 'px">' + esc(r.label) + '</td><td class="l dim">' + esc(r.unit || '') + '</td>' + years.map(y => cell(r.values[y], y > '2022' ? 'model' : '', 1)).join('') + '</tr>').join('') + '</tbody></table></div>' + (d.rows.length > rows.length ? '<button data-drivers="' + i + '" style="margin-top:8px">더 보기 (' + d.rows.length + '행)</button>' : '') + '</div></details>'; }).join('');
-  }
-  function segmentsCard(c) {
-    const seg = c.history.segments || {}; const names = Object.keys(seg); if (!names.length) return '<p class="dim">세그먼트 공식 자료 없음</p>';
-    const keys = [...new Set(names.flatMap(n => Object.keys(seg[n])))].filter(k => k >= '2025Q1' && /Q/.test(k)).sort();
-    return '<div class="tablewrap"><table><thead><tr><th>지표(커버리지 레인 원문 명칭)</th>' + keys.map(k => '<th>' + k + '</th>').join('') + '</tr></thead><tbody>' + names.map(n => '<tr><td class="l">' + esc(n) + '</td>' + keys.map(k => cell((seg[n][k] || {}).value)).join('') + '</tr>').join('') + '</tbody></table></div><p class="dim" style="font-size:11px;margin-top:6px">단위 십억원. 앙상블 커버리지 레인이 회사 IR 자료에서 검증한 값이며, 출처는 아래 계보 카드에 나열됩니다.</p>';
-  }
-  function consensusCard(c) {
-    const cs = c.model.consensus_at_vintage; if (!cs || !cs.columns || !cs.columns.length) return '<p class="dim">컨센 시트 없음</p>';
-    const cols = cs.columns.filter(x => x.item && (cs.stats.mean[x.col] != null));
-    return '<p class="dim" style="font-size:11px">' + esc(cs.as_of_note || '') + ' · ' + esc(cs.consensus_date || '') + ' · 매출 등은 원 단위(백만원 표기)일 수 있음 — 원본 표기 그대로</p><div class="tablewrap"><table><thead><tr><th>항목</th>' + cols.map(x => '<th>' + esc(x.item) + '<br><span class="dim">' + esc(x.period || '') + '</span></th>').join('') + '</tr></thead><tbody>' + ['mean', 'high', 'median', 'low'].map(k => '<tr><td class="l">' + k + '</td>' + cols.map(x => cell(cs.stats[k][x.col], '', 0)).join('') + '</tr>').join('') + '</tbody></table></div>' + (cs.houses && cs.houses.length ? '<details><summary>증권사별 ' + cs.houses.length + '건</summary><div class="details-body"><table><tbody>' + cs.houses.map(hh => '<tr><td class="l">' + esc(hh.date) + '</td><td class="l">' + esc(hh.house) + ' ' + esc(hh.analyst || '') + '</td>' + cols.slice(0, 3).map(x => cell(hh.values[x.col], '', 0)).join('') + '</tr>').join('') + '</tbody></table></div></details>' : '');
-  }
-  function lineageCard(c) {
-    const dp = c.history.dart_periods || {}; const src = data.sources || {};
-    let h = '<h3>Open DART 정기보고서(연결)</h3><p class="dim" style="font-size:12px">' + Object.keys(dp).map(k => dp[k].rcept_no ? '<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=' + esc(dp[k].rcept_no) + '" target="_blank" rel="noopener noreferrer">' + esc(k) + '</a>' : esc(k) + '(없음)').join(' · ') + '</p>';
-    const ids = c.coverage_source_ids || []; if (ids.length) h += '<h3 style="margin-top:10px">커버리지 레인 공식 자료</h3>' + ids.map(id => { const s = src[id] || {}; return '<p class="dim" style="font-size:12px">' + (s.url ? '<a href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer">' + esc(s.title || id) + ' ↗</a>' : esc(s.title || id)) + ' <span>· 공표 ' + esc(s.published_at || '미확인') + ' · ' + esc(s.status || '') + '</span></p>'; }).join('');
-    const mk = c.history.market || {}; h += '<h3 style="margin-top:10px">시세·주식수</h3><p class="dim" style="font-size:12px">현재가: ' + esc(mk.price_source || '') + ' (' + esc(mk.price_as_of || '') + ') · 발행주식수: ' + esc(mk.shares_source || '') + (mk.citation ? ' · ' + esc(mk.citation) : '') + (c.history.shares && c.history.shares.rcept_no ? ' · 자기주식: DART <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=' + esc(c.history.shares.rcept_no) + '" target="_blank" rel="noopener noreferrer">주식총수 현황</a>' : '') + '</p>';
-    h += '<h3 style="margin-top:10px">원본 모델</h3><p class="dim" style="font-size:12px">' + esc(c.model.file) + ' · ' + esc(c.model.house) + ' ' + esc(c.model.analyst) + ' · 모델 vintage ' + esc(c.model.vintage) + ' · sha256 ' + esc((c.model.sha256 || '').slice(0, 16)) + '… · 시트 ' + (c.model.sheets || []).length + '개 · 상태: ' + esc(statusNames[c.model.status] || c.model.status) + '</p>';
-    return h;
-  }
-  function kpis(c) {
-    const v = c.valuation, r25 = hv(c, 'revenue', 2025), o25 = hv(c, 'operating_profit', 2025), r26 = fv(c, 2026, 'revenue'), o26 = fv(c, 2026, 'operating_profit');
-    const k = (label, val, sub) => '<div class="kpi"><small>' + label + '</small><b>' + val + '</b><span class="sub">' + (sub || '') + '</span></div>';
-    return '<div class="kpis">' + k('2025A 매출', fmt(r25), 'YoY ' + pct(yoy(c, 'revenue', 2025))) + k('2025A 영업이익', fmt(o25), 'OPM ' + pct(r25 && o25 != null ? o25 / r25 * 100 : null)) + k('2026E 매출 · ' + state.scenario, fmt(r26), 'YoY ' + pct(fyoy(c, 2026, 'revenue'))) + k('2026E 영업이익', fmt(o26), 'OPM ' + pct(fv(c, 2026, 'opm') == null ? null : fv(c, 2026, 'opm') * 100)) + k('2027E EPS · PER', won(fv(c, 2027, 'eps')), fmt(v.per_now_2027e, 1) + '배 (현재가 ' + won(v.price_now) + ')') + k('목표주가', v.updated_target_price ? won(v.updated_target_price) : '—', (v.original_target_price ? '원본 ' + won(v.original_target_price) + ' → ' : '') + (v.upside_pct != null ? '상승여력 ' + pct(v.upside_pct) : esc(v.status || ''))) + '</div>';
-  }
-  function render() {
-    const c = co();
-    const list = data.companies.filter(x => x.sector === state.sector).map(x => '<button class="company ' + (x.id === state.company ? 'active' : '') + '" data-company="' + esc(x.id) + '"><span>' + esc(x.name) + '<small>' + esc(x.ticker) + '</small></span><span class="tag">' + (x.model.status === 'template' ? '템플릿' : (x.valuation.updated_target_price ? won(x.valuation.updated_target_price) : '추정')) + '</span></button>').join('');
-    root.innerHTML = '<div class="am"><header><div><div class="eyebrow">ENSEMBLE / ANALYST MODELS</div><h1>커버리지 모델 12사</h1><p class="dim">' + esc(data.model_house) + ' ' + esc(data.model_analyst) + ' 엔터·미디어·레저 모델(' + esc(data.model_vintage) + ')을 최신 실적으로 갱신하고 2026-2028을 연장한 페이지</p></div><div class="asof">기준일 ' + esc(data.as_of) + '<br>DART ' + esc((data.dart_retrieved_at || '').slice(0, 10)) + ' · 시세 ' + esc((data.market_retrieved_at || '').slice(0, 10)) + '<br>실적 · 모델 원본 · 앙상블 연장 분리 표기</div></header>' +
-      '<nav class="sectors" aria-label="섹터">' + Object.keys(sectorNames).map(s => '<button data-sector="' + s + '" class="' + (state.sector === s ? 'active' : '') + '">' + sectorNames[s] + ' <small>4</small></button>').join('') + '</nav>' +
-      '<div class="layout"><aside><div class="companies">' + list + '</div><div class="notice" style="margin-top:12px">모델 원본은 2024-03-01 시점 교보증권 리서치 워크북이며, 연장·목표주가 갱신은 앙상블 에이전트의 규칙 계산입니다. 애널리스트의 현재 의견이 아닙니다.</div></aside><section>' +
-      '<div class="card"><div class="title"><div><h2 style="font-size:22px">' + esc(c.name) + ' <span class="dim" style="font-size:13px">' + esc(c.ticker) + ' · ' + esc(sectorNames[c.sector]) + '</span></h2><div class="badges"><span class="badge ' + (c.model.status === 'template' ? 'warn' : 'ok') + '">' + esc(statusNames[c.model.status]) + '</span><span class="badge">모델 ' + esc(c.model.vintage) + '</span><span class="badge">최신 분기 ' + esc(c.history.latest_quarter || '—') + '</span><span class="badge">' + esc(methodNames[c.valuation.method] || '') + '</span>' + (c.model.profile && c.model.profile.recommendation ? '<span class="badge">원본 의견 ' + esc(c.model.profile.recommendation) + ' · TP ' + won(c.valuation.original_target_price) + ' (당시 주가 ' + won(c.model.profile.price_krw) + ')</span>' : '') + '</div></div><div class="controls"><label>시나리오 <select data-state="scenario">' + ['base', 'bear', 'bull'].map(s => '<option value="' + s + '" ' + (state.scenario === s ? 'selected' : '') + '>' + s.toUpperCase() + '</option>').join('') + '</select></label><a href="../coverage/index.html" target="_blank" rel="noopener">커버리지 레인(드라이버 모델) ↗</a></div></div>' + kpis(c) + '</div>' +
-      '<div class="card"><h2>연간 실적 · 모델 원본 · 앙상블 연장</h2>' + annualTable(c) + '</div>' +
-      '<div class="two"><div class="card"><h2>분기 실적 (2023Q1~' + esc(c.history.latest_quarter || '') + ')</h2>' + quarterlyChart(c) + '</div><div class="card"><h2>연간 매출: 실적 · 원본 추정 · 연장 범위</h2>' + annualChart(c) + '</div></div>' +
-      '<div class="two"><div class="card"><h2>연장 가정 (' + esc(state.scenario.toUpperCase()) + ' 기준 base 파라미터)</h2>' + assumptionsCard(c) + '</div><div class="card"><h2>모델 원본 vs 실적 (예측 오차)</h2>' + scorecardTable(c) + '</div></div>' +
-      '<div class="card"><h2>밸류에이션 · 목표주가</h2>' + valuationCard(c) + '</div>' +
-      '<div class="card"><h2>모델 드라이버 가정 (원본 시트 발췌, 2024-03 시점)</h2>' + driversCard(c) + '</div>' +
-      '<div class="card"><h2>최신 세그먼트 실적 (회사 공식 자료, 커버리지 레인 검증)</h2>' + segmentsCard(c) + '</div>' +
-      '<div class="two"><div class="card"><h2>모델 시점 컨센서스</h2>' + consensusCard(c) + '</div><div class="card"><h2>투자포인트 (원문)</h2>' + ((c.model.target_price.investment_points || []).length ? '<ul class="dim" style="padding-left:18px;margin:0">' + c.model.target_price.investment_points.map(p => '<li>' + esc(p) + '</li>').join('') + '</ul>' : '<p class="dim">TP 시트에 투자포인트 기재 없음</p>') + '</div></div>' +
-      '<div class="card"><h2>출처 · 계보</h2>' + lineageCard(c) + '</div>' +
-      '<div class="card"><h2>방법</h2><p class="dim" style="font-size:12px">' + esc(data.method.history) + '</p><p class="dim" style="font-size:12px;margin-top:6px">' + esc(data.method.roll_forward) + '</p><p class="dim" style="font-size:12px;margin-top:6px">' + esc(data.method.valuation) + '</p><div class="notice">' + esc(data.method.disclaimer) + '</div></div>' +
-      '</section></div><p class="foot">숫자는 십억원(별도 표기 제외). 실적·모델 원본·연장·커버리지 레인 값은 서로 대체하지 않으며 미확인 값은 빈칸으로 둡니다.</p></div>';
-    root.querySelectorAll('[data-sector]').forEach(b => b.addEventListener('click', () => { state.sector = b.dataset.sector; state.company = data.companies.find(x => x.sector === state.sector).id; render(); window.scrollTo(0, root.offsetTop - 60); }));
-    root.querySelectorAll('[data-company]').forEach(b => b.addEventListener('click', () => { state.company = b.dataset.company; render(); }));
-    root.querySelectorAll('[data-state]').forEach(s => s.addEventListener('change', () => { state[s.dataset.state] = s.value; render(); }));
-    root.querySelectorAll('[data-drivers]').forEach(b => b.addEventListener('click', () => { state.driversOpen[state.company + ':' + b.dataset.drivers] = true; render(); }));
-  }
-  async function init() {
-    const style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
-    if (standalone) root = standalone;
-    else {
-      const tabs = document.querySelector('.tabs'), firstPane = document.querySelector('.pane');
-      if (!tabs || !firstPane) return;
-      if (document.getElementById('pane-models')) return;
-      const button = document.createElement('button'); button.className = 'tabbtn'; button.dataset.tab = 'models'; button.textContent = '📐 커버리지 모델 12사'; tabs.appendChild(button);
-      root = document.createElement('div'); root.id = 'pane-models'; root.className = 'pane'; firstPane.parentElement.insertBefore(root, firstPane.nextSibling);
-      button.addEventListener('click', () => { document.querySelectorAll('.tabbtn,.pane').forEach(e => e.classList.remove('on')); button.classList.add('on'); root.classList.add('on'); });
+    const head = '<tr><th>십억원</th>' + ya.map(y => '<th>' + y + 'A</th>').join('') + ye.map(y => '<th class="est">' + y + 'E</th>').join('') + '</tr>';
+    const body = row('매출액', 'revenue', 'revenue', 1) + modelRow('revenue') + covRow('revenue') + yoyRow('매출 YoY', 'revenue') +
+      row('영업이익', 'operating_profit', 'operating_profit', 1) + modelRow('operating_profit') + covRow('operating_profit') + opmRow() +
+      row('지배순이익', 'controlling_net_income', 'controlling_net_income', 1) + modelRow('controlling_net_income') +
+      row('EPS(원, 기본)', 'eps_basic', 'eps', 0);
+    const a = obj(rf(c).assumptions), cov = obj(c.coverage_lane);
+    let foot = '<p class="dim small">' + esc(sourceYearsText(c, ya)) + ' · ' + esc(ye[0] + '–' + ye[ye.length - 1]) + 'E 앙상블 연장(' + scenName(sc) + ', ' + (isCovDriver(c) ? '커버리지 레인 드라이버 추정 채택' : '일반 규칙') + ')' +
+      (showCov && cov.as_of ? ' · 커버리지 레인 추정 기준일 ' + esc(cov.as_of) : '') + (a.eps_basis ? ' · EPS(E): ' + esc(a.eps_basis) : '') + '</p>';
+    foot += '<div class="legend"><span><i class="sw est"></i>추정(앙상블 연장·커버리지 레인)</span>' + (tpl ? '<span>템플릿 워크북: 원본 추정 행 없음</span>' : '<span><i class="sw model"></i>워크북 원본 추정(' + esc(vintageYM(d)) + ')</span>') + '</div>';
+    if (restated.length) {
+      const r0 = restated[0].r;
+      foot += '<p class="dim small">* 재작성 반영: ' + restated.map(x => esc(x.y + 'A ' + (metricKo[x.metric] || x.metric) + ' ' + fx(x.r.value, x.metric === 'eps_basic' ? 0 : 1) + '(원공시 ' + fx(x.r.as_filed, x.metric === 'eps_basic' ? 0 : 1) + ')')).join(' · ') +
+        ' — 다음 해 사업보고서의 전기 열 값' + (r0.restated_rcept_no ? ' (' + dartLink(r0.restated_rcept_no, 'DART 공시') + ')' : '') + '</p>';
     }
-    root.innerHTML = '<div class="am"><p>모델 데이터를 불러오는 중입니다.</p></div>';
-    try {
-      const embedded = document.getElementById('models-data');
-      if (embedded) data = JSON.parse(embedded.textContent);
-      else { const response = await fetch(new URL('data.json', assetRoot), {cache: 'no-cache'}); if (!response.ok) throw new Error('HTTP ' + response.status); data = await response.json(); }
-      if (data.schema_version !== 'ensemble-analyst-models/1' || !Array.isArray(data.companies)) throw new Error('지원하지 않는 데이터 계약');
-      const hash = (location.hash.match(/models=([A-Z_]+)/) || [])[1]; if (hash && data.companies.some(x => x.id === hash)) { state.company = hash; state.sector = data.companies.find(x => x.id === hash).sector; }
-      render();
-    } catch (error) { root.innerHTML = '<div class="am"><div class="card"><h2>데이터를 표시할 수 없습니다</h2><p>' + esc(error.message) + '</p><p class="dim">기존 탭은 그대로 사용할 수 있습니다.</p></div></div>'; }
+    return tw('연간 실적과 연장', '<table class="wide"><thead>' + head + '</thead><tbody>' + body + '</tbody></table>') + foot;
   }
-  init();
+  function oneOffNotice(c, st) {
+    const a = obj(rf(c).assumptions), oo = a.h1_2026_one_off_op, y0 = yearsE(c)[0];
+    if (!isNum(oo) || Math.abs(oo) < 0.05) return '';
+    const op = obj(a.h1_2026_actual).operating_profit, e = fv(c, y0, 'eps', st.scenario), eb = fv(c, y0, 'eps', 'base');
+    return notice('<b>' + esc(y0) + 'E EPS ' + won(e) + ' (' + scenName(st.scenario) + ')' + (st.scenario !== 'base' ? ' · base ' + won(eb) : '') + '</b> — 2026 상반기 IFRS 영업이익 ' + fx(op, 1) + '십억원은 회사 공시 조정 영업이익보다 ' + fx(Math.abs(oo), 1) + '십억원 ' + (oo > 0 ? '낮습니다' : '높습니다') +
+      '(일회성 항목). ' + esc(y0) + 'E 합계 영업이익·지배순이익·EPS는 IFRS 상반기 실적을 그대로 더한 값이라 이 항목이 포함되어 있고, 하반기·2027E 이익률은 조정 영업이익률(2026 상반기 ' + lvlR(a.opm_h1_2026_normalised) + ') 기준입니다.', 'oneoff');
+  }
+
+  // ── 분기 ──
+  // viewBox 폭 = 실제 표시 폭(px)이라 축 글자 11px가 그대로 11px로 보인다
+  function chartW(w) { return Math.max(240, Math.round(isNum(w) && w > 0 ? w : CHART_W)); }
+  function quarterlyChart(c, w) {
+    const keys = quarterKeys(c);
+    if (!keys.length) return '<div class="empty">분기 실적 없음</div>';
+    const rev = keys.map(k => hv(c, 'revenue', k, 'quarterly')), op = keys.map(k => hv(c, 'operating_profit', k, 'quarterly')), mq = keys.map(k => modelQ(c, 'revenue', k));
+    const W = chartW(w), H = 240, narrow = W < 480, L = narrow ? 44 : 60, R = narrow ? 40 : 52, T = 14, B = 30, n = keys.length, pw = W - L - R;
+    const rv = rev.concat(mq).filter(isNum), ov = op.filter(isNum);
+    const hi = Math.max(1, ...rv) * 1.08, lo = Math.min(0, ...rv), ohi = Math.max(1, ...ov) * 1.15, olo = Math.min(0, ...ov) * 1.15;
+    const x = i => L + pw * (i + 0.5) / n, bw = pw / n * 0.6, y = v => T + (H - T - B) * (hi - v) / (hi - lo), yo = v => T + (H - T - B) * (ohi - v) / (ohi - olo);
+    const step = Math.max(1, Math.ceil(n * 52 / pw));
+    let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="분기 매출(막대, 왼쪽 축)과 영업이익(선, 오른쪽 축), 십억원. 수치는 아래 표에 있음">';
+    for (let j = 0; j <= 4; j++) { const v = lo + (hi - lo) * j / 4, yy = r1(y(v)); s += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + yy + '" y2="' + yy + '"/><text x="' + (L - 6) + '" y="' + r1(yy + 4) + '" text-anchor="end">' + fmt(v, 0) + '</text>'; }
+    for (let j = 0; j <= 4; j++) { const v = olo + (ohi - olo) * j / 4; if (olo < 0 && Math.abs(yo(v) - yo(0)) < 12) continue; s += '<text x="' + (W - R + 6) + '" y="' + r1(yo(v) + 4) + '">' + fmt(v, 0) + '</text>'; }
+    if (olo < 0) s += '<line class="zero" x1="' + L + '" x2="' + (W - R) + '" y1="' + r1(yo(0)) + '" y2="' + r1(yo(0)) + '"/><text class="zero-t" x="' + (W - R + 6) + '" y="' + r1(yo(0) + 4) + '">0</text>';
+    keys.forEach((k, i) => {
+      if (isNum(rev[i])) s += '<rect class="bar" x="' + r1(x(i) - bw / 2) + '" y="' + r1(Math.min(y(rev[i]), y(0))) + '" width="' + r1(bw) + '" height="' + r1(Math.abs(y(0) - y(rev[i]))) + '"><title>' + esc(k + ' 매출 ' + fx(rev[i], 1)) + '</title></rect>';
+      if (i % step === 0) s += '<text x="' + r1(x(i)) + '" y="' + (H - 10) + '" text-anchor="middle">' + esc(narrow ? k.slice(2) : k) + '</text>';
+    });
+    let run = [];
+    const flush = () => { if (run.length > 1) s += '<polyline class="opl" points="' + run.join(' ') + '"/>'; run = []; };
+    keys.forEach((k, i) => { if (isNum(op[i])) run.push(r1(x(i)) + ',' + r1(yo(op[i]))); else flush(); });
+    flush();
+    keys.forEach((k, i) => { if (isNum(op[i])) s += '<circle class="opd" cx="' + r1(x(i)) + '" cy="' + r1(yo(op[i])) + '" r="3.5"><title>' + esc(k + ' 영업이익 ' + fx(op[i], 1)) + '</title></circle>'; });
+    keys.forEach((k, i) => { if (isNum(mq[i])) s += '<circle class="mdl" cx="' + r1(x(i)) + '" cy="' + r1(y(mq[i])) + '" r="4.5"><title>' + esc(k + ' 워크북 원본 매출 추정 ' + fx(mq[i], 1)) + '</title></circle>'; });
+    s += '</svg><div class="legend"><span><i class="sw bar"></i>분기 매출(왼쪽 축)</span><span><i class="sw op"></i>분기 영업이익(오른쪽 축)</span>' +
+      (olo < 0 ? '<span><i class="sw zero"></i>영업이익 0선</span>' : '') + (mq.some(isNum) ? '<span><i class="sw ring"></i>워크북 원본 분기 매출 추정(~' + esc(obj(model(c).horizon).quarterly_through) + ')</span>' : '') + '</div>';
+    return s;
+  }
+  function qSourceName(r) {
+    const s = str(obj(r).source);
+    if (s === 'dart_cfs') return 'DART' + (/9M/.test(str(r.how)) ? '(사업보고서 − 3분기 누적)' : '');
+    if (s.indexOf('coverage:') === 0) return '커버리지 레인(회사 자료)';
+    return '—';
+  }
+  function gapRows(c) {
+    const q = obj(hist(c).quarterly), out = [];
+    ['revenue', 'operating_profit', 'net_income', 'controlling_net_income'].forEach(m => Object.keys(obj(q[m])).sort().forEach(k => { const r = obj(obj(q[m])[k]); if (r.coverage_gap_flag === true) out.push({m, k, r}); }));
+    return out;
+  }
+  // 커버리지 비교값의 공표일: 날짜가 있으면 그 날짜, 없고 상태 필드가 있으면 '공표일 미상'(+ 출처 목록의 수집일)
+  function gapPub(r, s) {
+    if (r.coverage_published_at) return ' 공표 ' + r.coverage_published_at;
+    if (!r.coverage_published_at_status && !s.publication_date_status) return '';
+    return ' 공표일 미상' + (s.retrieved_at ? ' · 수집 ' + str(s.retrieved_at).slice(0, 10) : '');
+  }
+  function quarterlyTable(d, c, st) {
+    const keys = quarterKeys(c);
+    if (!keys.length) return '';
+    const q = obj(hist(c).quarterly), showM = keys.some(k => isNum(modelQ(c, 'revenue', k)) || isNum(modelQ(c, 'operating_profit', k)));
+    const cellQ = (m, k) => { const r = obj(obj(q[m])[k]); return isNum(r.value) ? td(r.value, 1, '', r.coverage_gap_flag === true ? '<sup>†</sup>' : '') : '<td>—</td>'; };
+    const head = '<tr><th>분기</th><th>매출액</th><th>영업이익</th><th>영업이익률</th><th>순이익</th><th>지배순이익</th>' + (showM ? '<th>워크북 매출 추정</th><th>워크북 영업이익 추정</th>' : '') + '<th class="l">출처</th></tr>';
+    const body = keys.map(k => '<tr><td class="l">' + esc(k) + '</td>' + cellQ('revenue', k) + cellQ('operating_profit', k) + tdR(ratio(hv(c, 'operating_profit', k, 'quarterly'), hv(c, 'revenue', k, 'quarterly'))) +
+      cellQ('net_income', k) + cellQ('controlling_net_income', k) + (showM ? td(modelQ(c, 'revenue', k), 1, 'model') + td(modelQ(c, 'operating_profit', k), 1, 'model') : '') + '<td class="l">' + esc(qSourceName(obj(q.revenue)[k])) + '</td></tr>').join('');
+    const gaps = gapRows(c), src = obj(obj(d).sources);
+    const gapTxt = gaps.length ? '<p class="dim small">† DART 정기보고서 기준 값이 커버리지 레인의 IR 발표값과 다른 분기(십억원): ' + gaps.map(g => {
+      const s = obj(src[g.r.coverage_source_id]);
+      return esc(g.k + ' ' + (metricKo[g.m] || g.m) + ' DART ' + fx(g.r.value, 1) + ' vs IR ' + fx(g.r.coverage_value, 1) + ' (차이 ' + sgn(g.r.coverage_gap_abs, 1) + ')') +
+        ' <span class="dim">· ' + esc(sourceLabel(s, c)) + esc(gapPub(g.r, s)) + '</span>';
+    }).join(' · ') + '. 4분기 DART 값은 사업보고서 − 3분기 누적으로 계산합니다.</p>' : '';
+    return det(st, 'qtable', true, '분기 수치 표 (십억원)', tw('분기 실적 표', '<table class="wide"><thead>' + head + '</thead><tbody>' + body + '</tbody></table>') + gapTxt +
+      (showM ? '<p class="dim small">워크북 원본 분기 추정은 워크북의 분기 추정 범위(~' + esc(obj(model(c).horizon).quarterly_through) + ')까지만 표시합니다.</p>' : ''));
+  }
+  function annualChart(c, w, state) {
+    const sc = SCEN.indexOf(obj(state).scenario) >= 0 ? state.scenario : 'base', ya = yearsA(c), ye = yearsE(c), years = ya.concat(ye), n = years.length, na = ya.length;
+    const act = years.map((yr, i) => i < na ? hv(c, 'revenue', yr) : null), sel = years.map((yr, i) => i < na ? null : fv(c, yr, 'revenue', sc));
+    const bear = years.map((yr, i) => i < na ? null : fv(c, yr, 'revenue', 'bear')), bull = years.map((yr, i) => i < na ? null : fv(c, yr, 'revenue', 'bull'));
+    const mod = years.map(yr => { const r = mrec(c, 'annual', 'revenue', yr); return (!isTemplate(c) && r && r.flag === 'E') ? r.value : null; });
+    const vals = act.concat(sel, bear, bull, mod).filter(isNum);
+    if (!vals.length) return '<div class="empty">연간 데이터 없음</div>';
+    const W = chartW(w), H = 230, narrow = W < 480, L = narrow ? 44 : 60, R = 14, T = 14, B = 30, pw = W - L - R;
+    let hi = Math.max(...vals) * 1.08; const lo = Math.min(0, ...vals); if (!(hi > lo)) hi = lo + 1;
+    const x = i => L + pw * (i + 0.5) / n, bw = pw / n * 0.55, y = v => T + (H - T - B) * (hi - v) / (hi - lo), step = Math.max(1, Math.ceil(n * 44 / pw));
+    let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="연간 매출 실적과 연장(' + scenName(sc) + '), bear–bull 범위, 십억원. 수치는 연간 표에 있음">';
+    for (let j = 0; j <= 4; j++) { const v = lo + (hi - lo) * j / 4, yy = r1(y(v)); s += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + yy + '" y2="' + yy + '"/><text x="' + (L - 6) + '" y="' + r1(yy + 4) + '" text-anchor="end">' + fmt(v, 0) + '</text>'; }
+    years.forEach((yr, i) => {
+      if (i % step === 0) s += '<text x="' + r1(x(i)) + '" y="' + (H - 10) + '" text-anchor="middle">' + esc((narrow ? yr.slice(2) : yr) + (i < na ? 'A' : 'E')) + '</text>';
+      const bar = (v, cls, label) => isNum(v) ? '<rect class="' + cls + '" x="' + r1(x(i) - bw / 2) + '" y="' + r1(Math.min(y(v), y(0))) + '" width="' + r1(bw) + '" height="' + r1(Math.abs(y(0) - y(v))) + '"><title>' + esc(label + ' ' + fx(v, 1)) + '</title></rect>' : '';
+      s += bar(act[i], 'bar', yr + 'A 매출') + bar(sel[i], 'barE', yr + 'E 연장 ' + scenName(sc));
+      if (isNum(bear[i]) && isNum(bull[i])) { const a = r1(y(bull[i])), b = r1(y(bear[i])), xi = r1(x(i)); s += '<g class="rng"><title>' + esc(yr + 'E bear ' + fx(bear[i], 1) + ' – bull ' + fx(bull[i], 1)) + '</title><line x1="' + xi + '" x2="' + xi + '" y1="' + a + '" y2="' + b + '"/><line x1="' + r1(xi - 7) + '" x2="' + r1(xi + 7) + '" y1="' + a + '" y2="' + a + '"/><line x1="' + r1(xi - 7) + '" x2="' + r1(xi + 7) + '" y1="' + b + '" y2="' + b + '"/></g>'; }
+      if (isNum(mod[i])) s += '<circle class="mdl" cx="' + r1(x(i)) + '" cy="' + r1(y(mod[i])) + '" r="5"><title>' + esc(yr + 'E 워크북 원본 매출 추정 ' + fx(mod[i], 1)) + '</title></circle>';
+    });
+    s += '</svg><div class="legend"><span><i class="sw bar"></i>실적</span><span><i class="sw barE"></i>앙상블 연장 ' + scenName(sc) + '</span><span><i class="sw rng"></i>bear–bull 범위</span>' + (mod.some(isNum) ? '<span><i class="sw ring"></i>워크북 원본 추정</span>' : '') + '</div>';
+    return s;
+  }
+  const chartBox = (kind, svg) => '<div class="chartbox" data-chart="' + kind + '">' + svg + '</div>';
+
+  // ── 연장 가정 ──
+  const triple = o => { o = obj(o); return [o.revenue, o.operating_profit, o.controlling_net_income].some(isNum) ? fx(o.revenue, 1) + ' / ' + fx(o.operating_profit, 1) + ' / ' + fx(o.controlling_net_income, 1) : ''; };
+  const hasOneOff = a => [a.h1_2026_one_off_op, a.h2_2025_one_off_op].some(x => isNum(x) && Math.abs(x) >= 0.05);
+  // 일회성 키가 null = 조정 영업이익 자료가 없어 재지 않음(0과 다름). 그 반기 이익률은 IFRS 값 그대로다
+  const oneOffTxt = x => isNum(x) ? sgn(x, 1) : '자료 없음(조정하지 않음)';
+  const oneOffOpm = (r, x) => lvlR(r) + (isNum(x) ? '' : '(조정 자료 없음 — IFRS 그대로)');
+  function rowsAdder() {
+    const rows = [];
+    rows.add = (label, value, basis) => { if ((value == null || value === '' || value === '—') && !basis) return; rows.push([label, value || '', basis ? str(basis) : '']); };
+    return rows;
+  }
+  function notesBlock(c) {
+    const ns = arr(rf(c).notes).filter(x => typeof x === 'string' && x);
+    return ns.length ? notice('<b>연장 메모</b> (금액은 십억원)<ul>' + ns.map(x => '<li>' + esc(plainNote(x)) + '</li>').join('') + '</ul>') : '';
+  }
+  function ruleAssumptions(d, c) {
+    const a = obj(rf(c).assumptions), rows = rowsAdder(), seas = obj(a.h2_h1_seasonality), sk = Object.keys(seas).sort(), obs = obj(a.ni_ratio_observed), ok = Object.keys(obs).sort();
+    rows.add('2026 상반기 매출 YoY(실적)', pctR(a.h1_2026_yoy));
+    rows.add('2026 하반기 성장률', pctR(a.g_h2_2026), a.g_h2_basis);
+    if (sk.length) rows.add('H2/H1 매출 계절비', esc(sk.map(k => k + ' ' + fx(seas[k], 3)).join(' · ')) + ' → 중앙값 ' + fx(a.h2_h1_seasonality_median, 3) + ' · 계절비 기준 ' + pctR(a.g_h2_seasonal));
+    rows.add('2027E 성장률', pctR(a.g_2027) + (isNum(a.g_2027_raw) && isNum(a.g_2027) && Math.abs(a.g_2027_raw - a.g_2027) > 1e-9 ? ' <span class="dim">(제한 전 ' + pctR(a.g_2027_raw) + ')</span>' : ''), a.g_2027_basis);
+    rows.add('2028E 성장률', pctR(a.g_2028), a.g_2028_basis);
+    rows.add('2026 하반기 영업이익률', lvlR(a.opm_h2_2026), a.opm_h2_2026_basis);
+    if (hasOneOff(a)) rows.add('일회성 조정(조정 − IFRS 영업이익, 십억원)', '2026 상반기 ' + oneOffTxt(a.h1_2026_one_off_op) + ' · 2025 하반기 ' + oneOffTxt(a.h2_2025_one_off_op),
+      '반기 영업이익률(일회성 제외): 2026 상반기 ' + oneOffOpm(a.opm_h1_2026_normalised, a.h1_2026_one_off_op) + ' · 2025 하반기 ' + oneOffOpm(a.opm_h2_2025_normalised, a.h2_2025_one_off_op));
+    rows.add('목표 영업이익률(2028E)', lvlR(a.opm_target) + ((isNum(a.opm_ttm) || isNum(a.opm_hist_median)) ? ' <span class="dim">(최근 4개 분기 ' + lvlR(a.opm_ttm) + ' · 2023-2025A 중앙값 ' + lvlR(a.opm_hist_median) + ')</span>' : ''), a.opm_target_basis);
+    rows.add('참고(' + vintageYM(d) + ' 워크북 2025E)', lvlR(a.opm_model_2025e), a.opm_model_2025e_basis);
+    rows.add('2027E 영업이익률', '', a.opm_2027_basis);
+    rows.add('지배순이익/영업이익 전환비율', fx(a.ni_to_op_ratio, 3) + (ok.length ? ' <span class="dim">(관측 ' + esc(ok.map(k => k + ' ' + fx(obs[k], 3)).join(' · ')) + ')</span>' : ''), a.ni_ratio_basis);
+    rows.add('2026E 지배순이익', '', a.ni_2026_basis);
+    rows.add('EPS', isNum(a.shares_outstanding) ? '유통주식수 ' + fmt(a.shares_outstanding, 0) + '주' : '', a.eps_basis);
+    rows.add('2026 상반기 실적', triple(a.h1_2026_actual), '매출 / 영업이익 / 지배순이익(십억원)');
+    rows.add('2025 하반기 실적', triple(a.h2_2025_actual), '매출 / 영업이익 / 지배순이익(십억원)');
+    return kv(rows) + notesBlock(c) +
+      notice('Bear/Bull: 성장률 ∓10pp(2026 하반기)·∓5pp(2027-28), 영업이익률 ∓2pp. 확률 보정 없음. 회사 가이던스·컨센서스가 아니라 앙상블 에이전트의 규칙 기반 연장입니다.', 'blue scen-rule');
+  }
+  function assumptionRowsTable(c, st) {
+    const rows = arr(rf(c).assumption_rows).map(obj).filter(r => r.metric && (r.scenario === st.scenario || SCEN.indexOf(r.scenario) < 0));
+    if (!rows.length) return '';
+    const groups = new Map();
+    rows.forEach(r => { const key = r.metric + '|' + str(r.unit); if (!groups.has(key)) groups.set(key, {metric: r.metric, unit: str(r.unit), basis: str(r.basis), vals: []}); groups.get(key).vals.push(r); });
+    const body = Array.from(groups.values()).map(g => {
+      g.vals.sort((p, q) => String(p.period).localeCompare(String(q.period)));
+      return '<tr><td class="l">' + metricLabel(g.metric) + '</td><td class="l">' + esc(unitNames[g.unit] || g.unit) + '</td><td class="l">' + g.vals.map(r => esc(r.period) + ' <b>' + unitVal(r.value, r.unit) + '</b>').join(' · ') + '</td><td class="l basis">' + esc(plainNote(g.basis)) + '</td></tr>';
+    }).join('');
+    return '<h3>커버리지 레인 가정 행 (' + scenName(st.scenario) + ')</h3>' + tw('커버리지 레인 가정 행', '<table class="wide"><thead><tr><th class="l">지표</th><th class="l">단위</th><th class="l">기간별 값</th><th class="l">근거(커버리지 레인 원문)</th></tr></thead><tbody>' + body + '</tbody></table>');
+  }
+  function coverageAssumptions(d, c, st) {
+    const r = rf(c), a = obj(r.assumptions), src = obj(r.source), br = obj(r.bridge), hc = obj(src.h1_check), rows = rowsAdder();
+    const mode = a.ni_bridge_mode || br.mode;
+    rows.add('방식', '', a.method_basis);
+    rows.add('커버리지 레인 기준일', esc(a.source_as_of || src.as_of || ''));
+    rows.add('Bear/Bull', '', a.scenario_basis);
+    rows.add('지배순이익 브리지', esc(mode === 'ratio' ? '비율 방식' : mode === 'additive' ? '가산 방식' : ''), a.ni_bridge_basis || br.basis);
+    if (isNum(a.ni_to_op_ratio)) rows.add('전환비율', fx(a.ni_to_op_ratio, 4));
+    if (isNum(a.nonop_annual)) rows.add('영업외손익(연, 십억원)', sgn(a.nonop_annual, 1));
+    if (isNum(a.tax_rate)) rows.add('세율', lvlR(a.tax_rate, 2));
+    rows.add('연도별 지배순이익/영업이익', esc(yearMap(a.ni_op_ratio_by_year || br.ni_op_ratio_by_year, v => fx(v, 3))));
+    rows.add('연도별 영업외손익(십억원)', esc(yearMap(br.nonop_by_year, v => sgn(v, 1))));
+    rows.add('연도별 세율', esc(yearMap(br.tax_rate_by_year, v => lvlR(v, 1))));
+    if (isNum(br.controlling_share_h1_2026)) rows.add('2026 상반기 지배/연결 순이익 비율', fx(br.controlling_share_h1_2026, 3));
+    rows.add('2026E 지배순이익', '', a.ni_2026_basis);
+    rows.add('순이익 추정', '', a.net_income_basis);
+    rows.add('EPS', isNum(a.shares_outstanding) ? '유통주식수 ' + fmt(a.shares_outstanding, 0) + '주' : '', a.eps_basis);
+    rows.add('2026 상반기 DART vs 커버리지(십억원)', esc(['revenue', 'operating_profit'].filter(k => hc[k]).map(k => { const x = obj(hc[k]); return metricKo[k] + ' DART ' + fx(x.dart, 1) + ' · 커버리지 ' + fx(x.coverage, 1) + ' (차이 ' + sgn(x.diff, 3) + ')'; }).join(' / ')));
+    if (isNum(src.fy_row_max_abs_diff)) rows.add('커버리지 FY 행 − 분기 합 최대 차이', fx(src.fy_row_max_abs_diff, 3) + '십억원');
+    return kv(rows) + assumptionRowsTable(c, st) + notesBlock(c);
+  }
+  function assumptionsCard(d, c, st) {
+    const r = rf(c);
+    if (r.status !== 'ok') return notice(esc(arr(r.notes).join(' · ') || '연장 계산 불가'));
+    return isCovDriver(c) ? coverageAssumptions(d, c, st) : ruleAssumptions(d, c);
+  }
+
+  // ── 점수표 (#14 #37) ──
+  function scorecardTable(d, c) {
+    if (isTemplate(c)) return '<p class="dim">템플릿 워크북에는 애널리스트 추정이 없어 점수표를 만들지 않습니다.</p>';
+    const metrics = [['revenue', '매출액'], ['operating_profit', '영업이익'], ['controlling_net_income', '지배순이익']], rows = [], late = [];
+    let nonPos = false;
+    arr(c.scorecard).map(obj).forEach(r => {
+      const lt = r.model_after_year_end === true, before = rows.length;
+      metrics.forEach(m => {
+        const x = obj(r[m[0]]);
+        if (!isNum(x.model)) return;
+        const np = isNum(x.actual) && x.actual <= 0;
+        if (np) nonPos = true;
+        rows.push('<tr><td class="l">' + esc(r.year) + 'E vs A' + (lt ? '<sup>‡</sup>' : '') + '</td><td class="l">' + m[1] + '</td>' + td(x.model, 1, 'model') + td(x.actual, 1) + tdPct(x.error_pct, np ? 'dim' : '', np ? '†' : '') + td(x.error_abs, 1) + '</tr>');
+      });
+      if (lt && rows.length > before) late.push(r);
+    });
+    if (!rows.length) return '<p class="dim">비교 가능한 추정 연도가 없습니다.</p>';
+    const md = arr(c.scorecard).map(r => str(obj(r).model_date)).find(Boolean) || str(model(c).model_date);
+    return tw('워크북 원본 추정 대비 실적 오차', '<table><caption>금액 십억원</caption><thead><tr><th>연도</th><th class="l">지표</th><th>워크북 추정</th><th>실적</th><th>오차율</th><th>차이</th></tr></thead><tbody>' + rows.join('') + '</tbody></table>') +
+      '<p class="dim small">오차 = (모델 − 실적) ÷ |실적|. 양수 = 모델이 실적보다 높음. 차이 = 모델 − 실적(십억원).' + (nonPos ? ' † 실적이 0 이하인 칸은 오차율의 크기 해석에 주의하고 차이(십억원)를 함께 볼 것.' : '') + ' 모델은 ' + esc(vintageYM(d)) + ' 워크북 추정' + (md ? '(워크북 작성일 ' + esc(md) + ')' : '') + '입니다.</p>' +
+      (late.length ? '<p class="dim small">‡ ' + late.map(r => esc(r.model_after_year_end_note || (r.year + '년 종료 후 작성된 워크북 값 — 잠정 실적이 반영됐을 수 있어 예측 오차로 읽지 않음'))).join(' · ') + '</p>' : '');
+  }
+
+  // ── 현재 컨센서스 ──
+  function consensusNowCard(d, c) {
+    const cn = c.consensus_now;
+    if (!cn || typeof cn !== 'object') return '<p class="dim">FnGuide 집계 컨센서스 자료 없음</p>';
+    const fw = obj(cn.forward), ys = Object.keys(fw).filter(y => /^\d{4}$/.test(y)).sort(), ntm = obj(cn.ntm), u = obj(cn.unit), v = val(c), rule = obj(v.rule), k = obj(rule.street).k, bind = arr(rule.binding);
+    const mets = [['revenue', '매출액', 1], ['operating_profit', '영업이익', 1], ['controlling_net_income', '지배순이익', 1], ['eps', 'EPS(원)', 0]];
+    const any = ys.some(y => mets.some(m => isNum(obj(fw[y])[m[0]])));
+    // 엔진 method.consensus와 같은 조건: 헤드라인이 배수 규칙인 회사에서 스트리트 상한이 걸렸고 PBR 정합 상한이 없을 때
+    const setBy = (v.status === 'updated' || v.status === 'reference_band') && bind.indexOf('street_ceiling') >= 0 && bind.indexOf('pbr_cap') < 0;
+    let h = '<p class="dim small">' + esc(cn.source || 'FnGuide 집계') + ' · 기준일 ' + esc(cn.as_of || ntm.date || '—') + '</p>';
+    h += kv([['12개월 선행 EPS(E12)', won(ntm.E12)], ['12개월 선행 BPS(B12)', won(ntm.B12)], ['컨센서스 목표주가 평균(TP)', won(ntm.TP)], ['주가(P)', won(ntm.P) + (ntm.date ? ' <span class="dim">(' + esc(ntm.date) + ')</span>' : ''), ntm.P_basis]]);
+    if (!any) h += '<p class="dim small">이 종목은 FnGuide 집계 연간 추정치가 없습니다.</p>';
+    else {
+      const head = '<tr><th>지표</th>' + ys.map(y => '<th>' + esc(y) + 'E 컨센서스</th><th class="est">' + esc(y) + 'E 연장 base</th>').join('') + '</tr>';
+      const body = mets.map(m => '<tr><td class="l">' + m[1] + '</td>' + ys.map(y => td(obj(fw[y])[m[0]], m[2]) + td(fv(c, y, m[0], 'base'), m[2], 'est')).join('') + '</tr>').join('');
+      h += tw('컨센서스와 연장 base 비교', '<table class="wide"><thead>' + head + '</thead><tbody>' + body + '</tbody></table>');
+    }
+    h += '<p class="dim small">단위: 매출·영업이익·지배순이익 ' + esc(u.revenue || '십억원') + ', EPS·E12·B12·TP ' + esc(u.ntm || u.eps || '원') + '. ' + esc(cn.note) +
+      (isNum(k) ? ' 주식수 기준 차이 k(유통/발행) = ' + fx(k, 4) + ' — 발행주식 기준 EPS = 유통주식 기준 EPS × k.' : '') +
+      ' 컨센서스는 실적·연장 값과 섞지 않습니다. 다만 규칙 환산가의 입력으로 쓰입니다: 스트리트 상한(컨센서스 목표주가 ÷ 12MF EPS × k, PBR 회사는 ÷ BPS)과 PER 회사의 연장 12MF EPS ±30% 제한.' +
+      (setBy ? ' 이 종목은 스트리트 상한이 환산가를 정했습니다.' : '') + (bind.indexOf('eps_clamp') >= 0 ? ' 이 종목은 연장 EPS가 컨센서스 ±30% 범위로 제한됐습니다.' : '') + '</p>';
+    return h;
+  }
+
+  // ── 밸류에이션 (#26 #27 #28 #34 #35) ──
+  function confidenceBlock(v) {
+    const rs = arr(v.confidence_reasons).filter(x => typeof x === 'string' && x);
+    return v.confidence ? '<p class="small">' + badge('신뢰도 ' + (confNames[v.confidence] || v.confidence)) + '</p>' + (rs.length ? '<ul class="plain">' + rs.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' : '') : '';
+  }
+  function warningsBlock(v) {
+    const ws = arr(v.warnings).filter(x => typeof x === 'string' && x);
+    return ws.length ? notice('<b>경고</b><ul>' + ws.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>', 'bad') : '';
+  }
+  function commonKv(c) {
+    const v = val(c), sc = v.scenario || 'base', inp = obj(v.inputs), mk = obj(hist(c).market), ei = obj(obj(v.rule).earnings_input);
+    const perTxt = isNum(v.per_now_2027e) ? mult(v.per_now_2027e, 1) : (isNum(v.eps_2027e) && v.eps_2027e <= 0 ? '— (EPS ≤ 0)' : '—');
+    const eps12 = ei.kind === 'eps_12mf' && isNum(ei.raw) ? ei.raw : v.eps_12mf, off = pbrOff(v);
+    return '<h3>입력과 현재 배수 (연장 ' + esc(sc) + ')</h3>' + kv([
+      ['현재가', won(v.price_now) + (v.price_as_of ? ' <span class="dim">(' + esc(v.price_as_of) + ')</span>' : ''), isNum(mk.price_krw) && mk.price_krw === v.price_now ? mk.price_basis : ''],
+      ['유통주식수', isNum(v.shares_outstanding) ? fmt(v.shares_outstanding, 0) + '주' : '—'],
+      ['BPS', won(v.bps), off ? '보고 기준(자본 내 신종자본증권 포함)' : ''],
+      ['12MF EPS(연장 ' + sc + ')', wonE(eps12) + (inp.eps_weights ? ' <span class="dim">' + esc(inp.eps_weights) + '</span>' : '')],
+      ['2026E · 2027E EPS(연장 ' + sc + ')', won(v.eps_2026e) + ' · ' + won(v.eps_2027e)],
+      ['현재가 기준 2027E PER', perTxt],
+      ['현재가 기준 PBR', isNum(v.pbr_now) ? mult(v.pbr_now, 3) : '—', off ? pbrOffWhy(v) : ''],
+      ['순차입금', bnTxt(v.net_debt_bn) + (v.net_debt_basis ? ' <span class="dim">(' + esc(v.net_debt_basis) + (isNum(v.gross_debt_bn) ? ' · 차입금·사채 ' + bnTxt(v.gross_debt_bn) : '') + ')</span>' : '')]
+    ]);
+  }
+  function rangeBlock(c, st) {
+    const v = val(c), g = obj(v.range), scs = obj(g.scenarios), sm = obj(g.summary), w = obj(obj(v.rule).weights);
+    const mi = obj(g.minority), mItems = arr(mi.items).map(obj), mv = obj(mi.variants), noDed = obj(mv.no_deduction), book = obj(mv.book_nci);
+    const hasMin = !!(g.minority && typeof g.minority === 'object') || SCEN.some(s => isNum(obj(scs[s]).minority_bn));
+    const ndv = arr(g.net_debt_variants).map(obj), leaseNote = str(obj(obj(v.inputs).net_debt).lease_note), nCols = hasMin ? 6 : 5;
+    const ps = x => isNum(x.per_share) ? won(x.per_share) : ((x.equity_le_zero || (isNum(x.equity_value_bn) && x.equity_value_bn <= 0)) ? '주주가치 ≤ 0' : '—');
+    const dash = '<td>—</td>', minDash = hasMin ? dash : '';
+    const subRow = (label, cells) => '<tr class="sub"><td class="l">' + label + '</td>' + cells + '</tr>';
+    const scRows = SCEN.map(s => { const x = obj(scs[s]); return '<tr' + (s === 'base' ? ' class="hl"' : '') + '><td class="l">' + scenName(s) + (s === 'base' ? ' (헤드라인)' : '') + '</td>' + td(x.operating_value_bn, 1) + td(x.stake_value_bn, 1) + td(x.net_debt_bn, 1) + (hasMin ? td(x.minority_bn, 1) : '') + td(x.equity_value_bn, 1) + '<td>' + ps(x) + '</td></tr>'; }).join('');
+    // 리스부채 행이 없는 회사는 엔진이 리스 포함 변형을 내지 않는다 — 값 대신 그 사유를 같은 자리에 둔다
+    const ndRows = ndv.map(x => subRow('base · 순차입금 정의: ' + esc(x.label), dash + dash + td(x.net_debt_bn, 1) + minDash + td(x.equity_value_bn, 1) + '<td>' + ps(x) + '</td>')).join('') +
+      (leaseNote && !ndv.some(x => x.key === 'incl_lease') ? subRow('base · 순차입금 정의: 리스부채 포함', '<td class="l dim" colspan="' + nCols + '">' + esc(leaseNote) + '</td>') : '');
+    const minRows = hasMin ? ((isNum(noDed.per_share) || isNum(noDed.equity_value_bn)) ? subRow('base · 상장 자회사 비지배지분 차감 전(참고)', dash + dash + dash + '<td>미차감</td>' + td(noDed.equity_value_bn, 1) + '<td>' + ps(noDed) + '</td>') : '') +
+      ((isNum(book.per_share) || isNum(book.equity_value_bn)) ? subRow('base · 연결 비지배지분 장부가 전액 차감(참고, 시가 차감 대신)', dash + dash + dash + td(book.nci_book_bn, 1) + td(book.equity_value_bn, 1) + '<td>' + ps(book) + '</td>') : '') : '';
+    const be = obj(g.bookends), beRows = Object.keys(be).sort().map(k => subRow('base · ' + esc(k) + ' 이익 기준', dash + dash + dash + minDash + dash + '<td>' + won(be[k]) + '</td>')).join('');
+    let h = '<h3>SOTP 범위</h3>' + tw('SOTP 범위 표', '<table class="wide range-summary"><caption>' + esc((g.basis || '') + (g.weights ? ' · ' + g.weights : '')) + ' — 금액 십억원, 주당 값 원</caption><thead><tr><th class="l">구분</th><th>영업가치</th><th>지분가치</th><th>순차입금</th>' + (hasMin ? '<th>비지배지분 차감</th>' : '') + '<th>주주가치</th><th>주당 값</th></tr></thead><tbody>' + scRows + ndRows + minRows + beRows + '</tbody></table>');
+    h += '<p class="small">base ' + won(sm.base) + ' · bear ' + (isNum(sm.bear) ? won(sm.bear) : '주주가치 ≤ 0') + ' · bull ' + won(sm.bull) + ' · 순차입금 정의별 base ' + won(sm.base_low) + '~' + won(sm.base_high) +
+      (isNum(noDed.per_share) ? ' · 비지배지분 차감 전 ' + won(noDed.per_share) : '') + (isNum(book.per_share) ? ' · 연결 비지배지분 장부가 전액 차감 ' + won(book.per_share) : '') + '. 단일 값이 아니라 범위로 읽을 것.</p>';
+    if (hasMin) {
+      if (mItems.length) h += '<h3>상장 자회사 비지배지분 시가 차감 (bear·base·bull 공통)</h3>' + tw('비지배지분 차감 표', '<table class="wide minority"><caption>금액 십억원</caption><thead><tr><th class="l">자회사</th><th>보유 지분율</th><th>시가총액</th><th>차감액</th><th class="l">근거</th></tr></thead><tbody>' +
+        mItems.map(x => '<tr><td class="l">' + esc(x.name) + (x.unverified === true ? ' ' + badge('미검증', 'warn') : '') + '</td><td>' + lvlR(x.pct_owned, 2) + '</td>' + td(x.market_cap_bn, 1) + td(x.minority_value_bn, 1) + '<td class="l basis">' + rcptHtml(x.basis || x.stake_basis) + '</td></tr>').join('') +
+        '<tr class="tot"><td class="l">차감 합계</td><td></td><td></td>' + td(mi.deduction_bn, 1) + '<td></td></tr></tbody></table>');
+      else h += '<p class="dim small">상장 자회사 비지배지분 차감 항목 없음 — 위 값은 비지배지분을 빼지 않은 값입니다.</p>';
+      if (mi.note) h += '<p class="dim small">' + esc(mi.note) + '</p>';
+    }
+    const near = isNum(w.near_fy) ? 'FY' + w.near_fy + 'E' : '근접 연도', far = isNum(w.far_fy) ? 'FY' + w.far_fy + 'E' : '다음 연도';
+    const segs = arr(g.segments).map(obj);
+    if (segs.length) {
+      const segRows = segs.map(x => '<tr><td class="l">' + esc(x.label) + '</td>' + td(x.op_fy_near, 1) + td(x.op_fy_far, 1) + td(x.op_used, 1) + td(x.noplat, 1) + '<td>' + mult(x.multiple, 2) + '</td>' + td(x.value_bn, 1, '', x.floored_at_zero ? '<sup>0</sup>' : '') +
+        '<td class="l basis">' + esc(x.multiple_basis) + (x.substitute_note ? '<br>' + esc(x.substitute_note) : '') + ((isNum(x.workbook_multiple) || isNum(x.workbook_value_bn)) ? '<br>워크북: 배수 ' + esc(mult(x.workbook_multiple, 2)) + ' · 가치 ' + bnTxt(x.workbook_value_bn) : '') + '</td></tr>').join('');
+      const base = obj(scs.base);
+      h += '<h3>부문별 SOTP (base, 십억원)</h3>' + tw('부문별 SOTP 표', '<table class="wide"><thead><tr><th class="l">부문</th><th>' + near + ' 영업이익</th><th>' + far + ' 영업이익</th><th>12MF 영업이익</th><th>NOPLAT</th><th>배수</th><th>가치</th><th class="l">배수 근거</th></tr></thead><tbody>' + segRows +
+        '<tr class="tot"><td class="l">영업가치 합계</td><td></td><td></td><td></td><td></td><td></td>' + td(base.operating_value_bn, 1) + '<td></td></tr></tbody></table>') +
+        '<p class="dim small">NOPLAT = 12MF 영업이익 × (1 − ' + lvlR(g.noplat_tax_rate, 0) + '). ' + esc(g.excluded) + (segs.some(x => x.floored_at_zero) ? ' · <sup>0</sup> 음수 가치는 0으로 둠' : '') + '</p>';
+      const peers = [];
+      let hasK = false;
+      segs.forEach(x => arr(x.peers).map(obj).forEach(p => {
+        if (Object.prototype.hasOwnProperty.call(p, 'k')) hasK = true;
+        peers.push('<tr><td class="l">' + esc(x.label) + '</td><td class="l">' + esc(p.name) + '</td>' + td(p.price, 0) + td(p.eps_near, 0) + td(p.eps_far, 0) + tdTxt(fmt(p.eps_12mf, 2)) + '<td>' + (isNum(p.k) ? fx(p.k, 4) : '—') + '</td><td>' + mult(p.per_12mf, 2) + '</td><td class="l">' + esc(p.price_basis) + '</td><td class="l basis">' + esc(p.k_basis) + '</td></tr>');
+      }));
+      if (peers.length) h += det(st, 'sotp-peers', false, '피어 12MF PER (' + peers.length + '종목)', tw('피어 표', '<table class="wide"><caption>종가·EPS 원' + (hasK ? ' · 12MF PER = 종가 × k ÷ 12MF EPS (k = 유통/발행 주식수, 자료가 없으면 1)' : '') + '</caption><thead><tr><th class="l">부문</th><th class="l">종목</th><th>종가</th><th>' + near + ' EPS</th><th>' + far + ' EPS</th><th>12MF EPS</th><th>k(유통/발행)</th><th>12MF PER</th><th class="l">가격 기준</th><th class="l">k 근거</th></tr></thead><tbody>' + peers.join('') + '</tbody></table>'));
+    }
+    const stakes = arr(g.stakes).map(obj);
+    if (stakes.length) {
+      const asOf = stakes.map(x => x.price_as_of).filter(Boolean)[0];
+      h += '<h3>상장 지분가치 (할인 ' + lvlR(g.stake_discount, 0) + (asOf ? ' · 시가총액 기준일 ' + esc(asOf) : '') + ')</h3>' + tw('지분 표', '<table class="wide stakes"><caption>시가총액·가치 십억원</caption><thead><tr><th class="l">종목</th><th>지분율</th><th class="l">검증</th><th>할인</th><th>시가총액</th><th>가치</th><th class="l">근거</th></tr></thead><tbody>' +
+        stakes.map(x => '<tr><td class="l">' + esc(x.name) + '</td><td>' + lvlR(x.stake_pct, 2) + '</td><td class="l">' + (x.unverified === true ? badge('미검증', 'warn') : x.unverified === false ? badge('확인') : '—') + '</td><td>' + lvlR(x.discount, 0) + '</td>' + td(x.market_cap_bn, 1) + td(x.value_bn, 1) + '<td class="l basis">' + rcptHtml(x.stake_basis) + '</td></tr>').join('') +
+        '<tr class="tot"><td class="l">지분가치 합계</td><td></td><td></td><td></td><td></td>' + td(g.stake_value_bn, 1) + '<td></td></tr></tbody></table>');
+    }
+    if (g.source) h += '<p class="dim small">출처: ' + esc(g.source) + '</p>';
+    return h;
+  }
+  function rehabBlock(d, c) {
+    const v = val(c), ds = obj(v.distress), cw = obj(v.claims_waterfall), ctm = obj(cw.claims_to_market_cap);
+    let h = '<p>' + badge('회생절차 · 환산가 미산정', 'bad') + '</p>' + ((ds.note || v.note) ? '<p class="small">' + esc(ds.note || v.note) + '</p>' : '');
+    const fl = arr(ds.filings).map(obj);
+    if (fl.length) h += '<h3>회생 관련 공시 (DART)</h3><ul class="plain">' + fl.map(f => '<li>' + esc(f.date) + ' · ' + dartLink(f.rcept_no, f.title || '공시') + '</li>').join('') + '</ul>';
+    const steps = arr(cw.steps).map(obj);
+    if (steps.length) {
+      const rows = steps.map(s => '<tr' + (s.subtotal ? ' class="tot"' : '') + '><td class="l">' + esc(s.label) + (s.contested ? ' ' + badge('다툼 있음', 'warn') : '') + (s.subtotal && s.no_items === true ? ' <span class="dim">(이 단계에 더한 수기 항목 없음 — 직전 단계와 같음)</span>' : '') + '</td>' + td(s.value_bn, 1) + '<td>' + (s.subtotal && isNum(ctm[s.key]) ? fx(ctm[s.key], 1) + '배' : '') + '</td><td class="l basis">' +
+        [esc(s.source), esc(s.locator)].filter(Boolean).join(' · ') + (s.rcept_no ? ' · ' + dartLink(s.rcept_no, '공시') : '') + '</td></tr>').join('');
+      h += '<h3>청구권 순위표 (' + esc(cw.basis || '') + ' · ' + esc(cw.unit || '십억원') + ')</h3>' + tw('청구권 순위표', '<table class="wide claims"><thead><tr><th class="l">단계</th><th>금액</th><th>시가총액 대비</th><th class="l">출처</th></tr></thead><tbody>' + rows + '</tbody></table>') +
+        '<p class="small">시가총액 ' + bnTxt(cw.market_cap_bn) + (cw.market_cap_basis ? ' (' + esc(cw.market_cap_basis) + ')' : '') + ' · 기본 정의 순차입금 ' + bnTxt(cw.net_debt_dart_map_bn) + ' · 기타유동금융자산 ' + bnTxt(cw.other_current_financial_bn) + (cw.rcept_no ? ' · ' + dartLink(cw.rcept_no, '기준 공시') : '') + '</p>';
+    }
+    const memo = arr(cw.memo).map(obj);
+    if (memo.length) h += '<ul class="plain">' + memo.map(m => '<li>메모: ' + esc(m.label) + ' · ' + esc(m.unit) + ' ' + fmt(m.value, 0) + (m.locator ? ' · ' + esc(m.locator) : '') + (m.note ? ' — ' + esc(m.note) : '') + '</li>').join('') + '</ul>';
+    if (cw.note) h += '<p class="dim small">' + esc(cw.note) + (cw.overlay_as_of ? ' 수기 입력 기준일 ' + esc(cw.overlay_as_of) + '.' : '') + '</p>';
+    const pbrEx = isNum(v.pbr_ex_hybrid) ? mult(v.pbr_ex_hybrid, 3) : (isNum(v.bps_ex_hybrid) && v.bps_ex_hybrid <= 0 ? '산출 불가(BPS ≤ 0)' : '—');
+    h += '<h3>BPS</h3>' + kv([['BPS(보고 기준)', won(v.bps), pbrOff(v) ? '자본 내 신종자본증권 포함 — 보통주 가치를 나타내지 않음' : ''], ['신종자본증권 제외 BPS', won(v.bps_ex_hybrid), v.bps_ex_hybrid_basis], ['PBR(신종자본증권 제외)', pbrEx]]);
+    return h;
+  }
+  function statusBlock(d, c, st) {
+    const v = val(c), inp = obj(v.inputs);
+    let h = '';
+    if (v.status === 'not_valued_rehabilitation') h += rehabBlock(d, c);
+    else if (hasValue(v)) {
+      const lab = v.status === 'reference_band' ? '밴드 참고가' : v.status === 'range' ? 'SOTP 범위 base' : (v.label || '앙상블 규칙 환산가');
+      h += '<div class="valhead"><span class="dim">' + esc(lab) + '</span><span class="tpv">' + won(v.updated_target_price) + '</span><span class="dim">' + esc(v.scenario || 'base') + ' 기준 · 현재가 ' + won(v.price_now) + (v.price_as_of ? '(' + esc(v.price_as_of) + ')' : '') + ' 대비 ' + pct(v.upside_pct) + '</span></div>';
+    } else h += '<p>' + badge(statusLabel(v), valTone(v)) + '</p>';
+    if (v.status !== 'not_valued_rehabilitation') {
+      if (inp.formula) h += '<p class="formula">' + esc(inp.formula) + '</p>';
+      if (v.note) h += '<p class="dim small">' + esc(v.note) + '</p>';
+      if (v.status === 'range') h += rangeBlock(c, st);
+    }
+    return h + confidenceBlock(v) + warningsBlock(v) + commonKv(c);
+  }
+  function valuationCard(d, c, st) {
+    const v = val(c), base = v.scenario || 'base';
+    let h = '<div class="card val-card"><div class="title"><div><h2>' + esc(v.label || '앙상블 규칙 환산가') + '</h2><p class="dim small">' + esc(v.label_note) + '</p></div><div class="badges">' + badge(statusLabel(v), valTone(v)) + (v.confidence ? badge('신뢰도 ' + (confNames[v.confidence] || v.confidence)) : '') + '</div></div>';
+    if (st.scenario !== base) h += notice('환산가는 ' + esc(base) + ' 시나리오 기준입니다. 선택한 ' + scenName(st.scenario) + ' 시나리오는 실적 연장 표·차트에만 반영되며, 이 카드와 아래 규칙 카드의 EPS·배수·값은 모두 ' + esc(base) + ' 값입니다.', 'blue');
+    return h + statusBlock(d, c, st) + notice(esc(disclaimer(d)), 'disclaimer') + '</div>';
+  }
+  function earningsInputHtml(ei, v) {
+    ei = obj(ei);
+    if (ei.kind === 'eps_12mf') {
+      const band = arr(ei.band);
+      return '12MF EPS(연장 ' + esc(ei.scenario || v.scenario || 'base') + ') ' + wonE(ei.raw) + ' → 입력 ' + wonE(ei.value) + ' <span class="dim">(' + (ei.clamped === true ? '±30% 윈저라이즈 적용' : ei.clamped === false ? '윈저라이즈 미적용' : '윈저라이즈 여부 미기재') +
+        (band.length === 2 ? ' · 허용 범위 ' + won(band[0]) + '~' + won(band[1]) : '') + (isNum(ei.consensus_12mf_lane) ? ' · 컨센서스 12MF(유통주식 기준) ' + wonE(ei.consensus_12mf_lane) + ' 대비 ' + pct(ei.gap_vs_consensus_pct) : '') + ')</span>';
+    }
+    if (ei.kind === 'bps') {
+      const parts = [esc(ei.basis), isNum(ei.lane_eps_12mf) ? '참고: 연장 12MF EPS ' + wonE(ei.lane_eps_12mf) : '', isNum(ei.lane_roe_12mf) ? '12MF ROE ' + lvlR(ei.lane_roe_12mf) : ''].filter(Boolean);
+      return 'BPS ' + won(ei.value) + (parts.length ? ' <span class="dim">(' + parts.join(' · ') + ')</span>' : '');
+    }
+    return [isNum(ei.bps) ? 'BPS ' + won(ei.bps) : '', isNum(ei.lane_eps_12mf) ? '연장 12MF EPS ' + wonE(ei.lane_eps_12mf) : ''].filter(Boolean).join(' · ') || '—';
+  }
+  function ruleCard(d, c, st) {
+    const v = val(c), r = obj(v.rule), band = obj(r.own_band), sr = obj(r.street), inp = obj(v.inputs), ns = obj(r.n_sensitivity);
+    const vy = arr(band.valid_years).map(String), bk = band.kind === 'per' ? 'PER' : band.kind === 'pbr' ? 'PBR' : '';
+    const nsTxt = Object.keys(ns).sort((a, b) => +a - +b).map(k => 'N=' + esc(k) + ' ' + won(ns[k])).join(' · ') || '—';
+    const binding = arr(r.binding).map(b => bindingNames[b] || b).join(' · ') || '없음';
+    let h = kv([
+      ['판단 근거', '', r.reason],
+      ['방식', esc(methodNames[r.method_original] || r.method_original || '—') + ' → ' + esc(methodNames[r.method_applied] || r.method_applied || '—') + (r.s_rule_method ? ' <span class="dim">(규칙 환산가 교차 확인: ' + esc(methodNames[r.s_rule_method] || r.s_rule_method) + ')</span>' : '')],
+      ['자기 밴드 기준 H', mult(band.H) + ' <span class="dim">' + esc(bk) + (isNum(band.median) ? ' · 중앙값 ' + mult(band.median) : '') + (isNum(band.p80) ? ' · 80백분위 ' + mult(band.p80) : '') + (vy.length ? ' · 기준 연도 ' + esc(vy.join('·')) : '') + (band.consecutive === false ? ' · 기준 연도 비연속' : '') + '</span>'],
+      isNum(band.pbr_p80) ? ['PBR 정합 상한(P80 PBR)', mult(band.pbr_p80)] : null,
+      ['스트리트 상한 배수', mult(sr.S) + ' <span class="dim">' + [isNum(sr.tp) ? '컨센서스 목표주가 평균 ' + won(sr.tp) : '', isNum(sr.eps_12mf) ? '12MF EPS ' + wonE(sr.eps_12mf) + (isNum(sr.eps_12mf_lane) ? '(유통주식 기준 ' + wonE(sr.eps_12mf_lane) + ')' : '') : '', isNum(sr.k) ? 'k ' + fx(sr.k, 4) : ''].filter(Boolean).join(' · ') + '</span>', [sr.basis, sr.e12_source, sr.date].filter(Boolean).join(' · ')],
+      ['적용 배수 · 실효 배수', mult(r.target_multiple) + ' · ' + mult(r.effective_multiple) + (inp.multiple_kind ? ' <span class="dim">(' + esc(inp.multiple_kind) + ')</span>' : '')],
+      ['걸린 상한', esc(binding)],
+      ['이익 입력', earningsInputHtml(r.earnings_input, v)],
+      ['12MF 가중', esc(obj(r.weights).text || '—')],
+      ['N 민감도(최근 N개 유효 연도)', nsTxt]
+    ]);
+    const years = obj(band.years), yk = Object.keys(years).sort(), off = pbrOff(v);
+    if (yk.length) {
+      const yn = b => b === true ? '유효' : b === false ? '제외' : '—';
+      // 보통주 BPS ≤ 0이면 기준연도(최신 분기 BPS = 보고 BPS) PBR도 내지 않는다
+      const hideRef = x => off && x.source === 'ttm';
+      const rows = yk.map(y => { const x = obj(years[y]), on = vy.indexOf(y) >= 0; return '<tr' + (on ? ' class="hl"' : '') + '><td class="l">' + esc(y) + (on ? ' ●' : '') + '</td><td class="l">' + esc(bandSourceNames[x.source] || '') + '</td>' + td(x.eps, 0) + td(x.bps, 0) + tdR(x.roe) + td(x.per, 2) + (hideRef(x) ? '<td>—</td>' : td(x.pbr, 3)) + td(x.months, 0) + '<td>' + yn(x.valid_per) + '</td><td>' + yn(x.valid_pbr) + '</td></tr>'; }).join('');
+      h += '<h3>자기 밴드 (연평균 배수' + (bk ? ', 기준 ' + bk : '') + ')</h3>' + tw('자기 밴드 표', '<table class="wide band"><caption>EPS·BPS 원</caption><thead><tr><th>연도</th><th class="l">출처</th><th>EPS</th><th>BPS</th><th>ROE</th><th>PER</th><th>PBR</th><th>개월</th><th>PER 유효</th><th>PBR 유효</th></tr></thead><tbody>' + rows + '</tbody></table>') +
+        '<p class="dim small">● 중앙값 H를 낸 기준 연도. ' + esc(band.p80_method) + (off && yk.some(y => hideRef(obj(years[y]))) ? ' 기준연도(최근 4개 분기) PBR은 비움: ' + esc(pbrOffWhy(v)) + '.' : '') + '</p>';
+    }
+    return h;
+  }
+  function alternativesCard(c) {
+    const alts = arr(val(c).alternatives).map(obj);
+    if (!alts.length) return '<p class="dim">대안 값 없음</p>';
+    return tw('대안 값 표', '<table class="wide"><thead><tr><th class="l">대안</th><th>값</th><th>배수</th><th class="l">근거</th></tr></thead><tbody>' + alts.map(a => {
+      const extra = [a.da_basis ? 'D&A ' + a.da_basis : '', a.da_source, a.workbook_note ? '워크북 비고: ' + a.workbook_note : ''].filter(Boolean);
+      return '<tr><td class="l">' + esc(a.label) + '</td><td>' + won(a.value) + '</td><td>' + mult(a.multiple) + '</td><td class="l basis">' + esc(a.basis) + extra.map(x => '<br>' + rcptHtml(x)).join('') + '</td></tr>';
+    }).join('') + '</tbody></table>') + '<p class="dim small">값은 원 단위입니다. 연장 이익을 쓰는 값은 ' + esc(val(c).scenario || 'base') + ' 시나리오 기준입니다.</p>';
+  }
+  const multipleUnit = {per: '배', pbr: '배', ev_ebitda: '배', sotp: '십억원'};
+  function workbookCard(d, c, st) {
+    const v = val(c), o = obj(v.original), tpa = obj(model(c).target_price_active), mu = obj(o.multiple), vt = vintageYM(d);
+    if (!v.original && !model(c).target_price_active) return '<p class="dim">템플릿 워크북: TP 시트에 산식·목표주가 입력이 없습니다.</p>';
+    const tp = isNum(o.target_price) ? o.target_price : tpa.target_price, px = isNum(o.price) ? o.price : tpa.current_price;
+    const pxl = [o.price_label || tpa.current_price_label, o.price_date || tpa.current_price_date].filter(Boolean).join(' · ');
+    const muTxt = [str(mu.label), isNum(mu.value) ? fmt(mu.value, 2) + (multipleUnit[mu.kind] || '') : ''].filter(Boolean).join(' ');
+    let h = kv([
+      ['블록', esc('블록 ' + (o.block || tpa.block || '—') + ' · ' + (o.header_basis || tpa.header_basis || '')), tpa.active_block_basis],
+      ['워크북 일자', esc(o.model_date || tpa.model_date || '—')],
+      ['원본 산식 핵심 항목', esc(muTxt), mu.note],
+      ['목표주가(워크북 TP 시트 값)', won(tp) + ' <span class="dim">— ' + esc(vt) + ' 워크북 TP 시트 값(공표 목표주가와 다를 수 있음)</span>'],
+      ['시트 주가', won(px) + (pxl ? ' <span class="dim">(' + esc(pxl) + ')</span>' : ''), '워크북 작성 당시 시트 값 — 현재가가 아님'],
+      ['출처', esc(o.source || '')]
+    ]);
+    const items = arr(tpa.items).map(obj);
+    if (items.length) h += det(st, 'tpitems', false, '활성 블록 항목 ' + items.length + '개', tw('TP 시트 활성 블록 항목', '<table><caption>' + esc(vt) + ' 워크북 작성 당시 시트 값 그대로 — 주가·상승여력 항목도 그 시점 기준이며 현재 시세나 현재 의견이 아님</caption><thead><tr><th class="l">항목</th><th class="l">단위</th><th>값</th><th class="l">비고</th></tr></thead><tbody>' +
+      items.map(it => '<tr><td class="l">' + esc(it.label) + '</td><td class="l">' + esc(it.unit) + '</td>' + (isNum(it.value) ? td(it.value, Math.abs(it.value) >= 1000 ? 0 : 2) : '<td class="l">' + esc(typeof it.value === 'string' ? it.value : '') + '</td>') + '<td class="l">' + esc(it.note) + '</td></tr>').join('') + '</tbody></table>'));
+    return h;
+  }
+
+  // ── 드라이버 · 세그먼트 · 워크북 컨센 ──
+  function driversCard(d, c) {
+    const rows = arr(hist(c).drivers_actual).map(obj).filter(r => r.metric), src = obj(obj(d).sources);
+    if (!rows.length) return '<p class="dim">' + (isTemplate(c) ? '드라이버 실적 자료 없음' : '워크북 드라이버 시트는 공개본에 싣지 않습니다(원자료 보호).') + '</p>';
+    const keys = Array.from(new Set([].concat(...rows.map(r => Object.keys(obj(r.values)))))).filter(k => /^\d{4}Q[1-4]$/.test(k)).sort().slice(-8);
+    const showSrc = rows.some(r => Array.isArray(r.source_ids) || r.as_of != null);
+    // 출처 id는 출처 목록(data.sources)에 있는 것만 번호를 붙여 아래 목록에 연결하고, 목록에 없는 id는 건너뛴다
+    const refs = [], usedBy = {}, missing = new Set();
+    const ref = (id, metric) => { let i = refs.indexOf(id); if (i < 0) { refs.push(id); usedBy[id] = []; i = refs.length - 1; } if (usedBy[id].indexOf(metric) < 0) usedBy[id].push(metric); return '[' + (i + 1) + ']'; };
+    const body = rows.map(r => {
+      const ids = arr(r.source_ids).filter(id => typeof id === 'string' && id);
+      ids.filter(id => !src[id]).forEach(id => missing.add(id));
+      const refTxt = ids.filter(id => src[id]).map(id => ref(id, r.metric)).join(' ');
+      return '<tr><td class="l">' + metricLabel(r.metric) + '<div class="basis">' + esc(howTxt(r.how)) + '</div></td><td class="l">' + esc(unitNames[r.unit] || r.unit) + '</td>' + keys.map(k => { const x = obj(r.values)[k]; return tdTxt(unitVal(x, r.unit), isNum(x) && x < 0 ? 'neg' : ''); }).join('') +
+        (showSrc ? '<td class="l">' + (refTxt || '—') + '</td><td>' + esc(r.as_of || '—') + '</td>' : '') + '</tr>';
+    }).join('');
+    return tw('드라이버 실적 표', '<table class="wide"><thead><tr><th class="l">지표</th><th class="l">단위</th>' + keys.map(k => '<th>' + esc(k) + '</th>').join('') + (showSrc ? '<th class="l">출처</th><th>기준일</th>' : '') + '</tr></thead><tbody>' + body + '</tbody></table>') +
+      '<p class="dim small">커버리지 레인이 회사 월간·분기 IR 자료에서 집계한 실적입니다. 각 행 아래에 계산 방식(월 3개월 합, 분기 합끼리의 비율 등)을 적었습니다.' +
+      (showSrc ? ' 기준일은 그 행 값에 쓴 원자료의 가장 늦은 기간 말일이고, 출처 번호는 아래 목록의 번호입니다.' + (missing.size ? ' 출처 목록에 없는 자료 ' + missing.size + '건은 표시하지 않았습니다.' : '') : '') + '</p>' +
+      (refs.length ? '<ol class="plain refs">' + refs.map(id => '<li>' + sourceItem(src[id], c) + ' <span class="dim">— ' + esc(usedBy[id].map(m => driverNames[m] || m).join(' · ')) + '</span></li>').join('') + '</ol>' : '');
+  }
+  function segmentsCard(d, c) {
+    const seg = obj(hist(c).segments), names = Object.keys(seg), src = obj(obj(d).sources);
+    if (!names.length) return '<p class="dim">세그먼트 자료 없음</p>';
+    const keys = Array.from(new Set([].concat(...names.map(n => Object.keys(obj(seg[n])))))).filter(k => /^\d{4}Q[1-4]$/.test(k) && k >= '2025Q1').sort();
+    if (!keys.length) return '<p class="dim">2025년 이후 분기 세그먼트 자료 없음</p>';
+    const ids = Array.from(new Set([].concat(...names.map(n => Object.values(obj(seg[n])).map(r => obj(r).source_id))).filter(id => id && src[id])));
+    return tw('세그먼트 실적 표', '<table class="wide"><thead><tr><th class="l">지표(커버리지 레인 원문 명칭)</th>' + keys.map(k => '<th>' + esc(k) + '</th>').join('') + '</tr></thead><tbody>' +
+      names.map(n => '<tr><td class="l"><code>' + esc(n) + '</code></td>' + keys.map(k => td(obj(obj(seg[n])[k]).value, 1)).join('') + '</tr>').join('') + '</tbody></table>') +
+      '<p class="dim small">단위 십억원. 커버리지 레인이 회사 IR 자료·DART 공시에서 수집한 보고 실적이며 잠정치와 기간 차감 계산값을 포함할 수 있습니다.' + (ids.length ? ' 출처: ' + ids.map(id => sourceItem(src[id], c)).join(' / ') : '') + '</p>';
+  }
+  function vintageConsensusCard(d, c, st) {
+    const cs = obj(model(c).consensus_at_vintage), cols = arr(cs.columns).map(obj), stats = obj(cs.stats), u = obj(cs.unit);
+    if (!cols.length) return '<p class="dim">워크북 컨센 시트 없음</p>';
+    const thousand = u.monetary === 'KRW thousand', perShare = x => /목표주가|EPS/.test(str(x.item));
+    const conv = (x, v) => !isNum(v) ? null : (perShare(x) || !thousand) ? v : v / 1e6;
+    const unitOf = x => perShare(x) ? '원' : thousand ? '십억원' : '원자료 단위';
+    const period = p => isNum(p) && /^\d{6}$/.test(String(p)) ? String(p).slice(0, 4) + '.' + String(p).slice(4) : (p == null ? '—' : String(p));
+    const ks = ['mean', 'high', 'median', 'low'], has = x => ks.some(k => isNum(obj(stats[k])[String(x.col)]));
+    const rows = cols.filter(has), annual = rows.filter(x => x.period == null || /AS$/.test(String(x.period))), quarterly = rows.filter(x => annual.indexOf(x) < 0);
+    const table = (list, label) => tw(label, '<table class="wide"><thead><tr><th class="l">항목</th><th class="l">기간</th><th class="l">단위</th><th>평균</th><th>최고</th><th>중앙</th><th>최저</th></tr></thead><tbody>' +
+      list.map(x => '<tr><td class="l">' + esc(x.item) + '</td><td class="l">' + esc(period(x.period)) + '</td><td class="l">' + unitOf(x) + '</td>' + ks.map(k => td(conv(x, obj(stats[k])[String(x.col)]), perShare(x) ? 0 : 1)).join('') + '</tr>').join('') + '</tbody></table>');
+    const unitTxt = thousand ? '금액 항목은 원자료 단위가 천원(KRW thousand)이라 ÷1,000,000 해서 십억원으로 표시' : '금액 항목은 원자료 단위 그대로';
+    let h = (cs.source ? '<p class="small">' + esc(cs.source) + '</p>' : '') + '<p class="dim small">' + esc([cs.as_of_note, cs.consensus_date].filter(Boolean).join(' · ')) + (isNum(cs.house_count) ? ' · 증권사 ' + cs.house_count + '곳' : '') + ' · ' + unitTxt + ', 목표주가·EPS는 ' + esc(u.per_share === 'KRW' ? '원' : (u.per_share || '원')) + '. 증권사별 값은 공개하지 않습니다.</p>';
+    if (annual.length) h += table(annual, '워크북 컨센 연간·목표주가');
+    if (quarterly.length) h += det(st, 'vintage-q', false, '분기 항목 ' + quarterly.length + '개', table(quarterly, '워크북 컨센 분기'));
+    return h;
+  }
+
+  // ── 재무 세부 ──
+  function netDebtDetails(c, st) {
+    const nd = hist(c).net_debt;
+    if (!nd || typeof nd !== 'object') return '<p class="dim small">재무상태표 순차입금 자료 없음</p>';
+    const items = arr(nd.items).map(obj), vnd = obj(obj(val(c).inputs).net_debt);
+    // 리스부채 행이 없으면 리스 0·리스 포함 순차입금 대신 엔진의 사유(lease_note)를 보인다
+    const noLeaseRow = items.length > 0 && !items.some(x => x.bucket === 'leases') && !(isNum(nd.lease_liabilities_bn) && nd.lease_liabilities_bn !== 0);
+    const leaseNote = str(nd.lease_note) || str(vnd.lease_note) || (noLeaseRow ? '재무상태표에 리스부채 별도 행 없음 — 리스 포함 순차입금을 표시하지 않음' : '');
+    const it = items.length ? tw('순차입금 구성 행', '<table><thead><tr><th class="l">계정(DART 원문)</th><th class="l">구분</th><th>십억원</th></tr></thead><tbody>' + items.map(x => '<tr><td class="l">' + esc(x.account_nm) + '</td><td class="l">' + esc(bucketNames[x.bucket] || '기타') + '</td>' + td(x.value, 1) + '</tr>').join('') + '</tbody></table>') : '';
+    const sum = kv([['차입금·사채(리스 제외)', fx(nd.borrowings_bn, 1)], leaseNote ? ['리스부채 · 리스 포함 순차입금', '', leaseNote] : ['리스부채', fx(nd.lease_liabilities_bn, 1)], ['현금및현금성자산', fx(nd.cash_bn, 1)], ['단기금융상품', fx(nd.short_term_financial_bn, 1)], ['기타유동금융자산', fx(nd.other_current_financial_bn, 1)],
+      ['순차입금(기본 정의)', '<b>' + fx(nd.net_debt_bn, 1) + '</b>'], ['기타유동금융자산 미차감', fx(nd.net_debt_ex_other_financial_bn, 1)], leaseNote ? null : ['리스부채 포함', fx(nd.net_debt_incl_lease_bn, 1)]]);
+    return det(st, 'netdebt', false, '순차입금 내역 (' + esc(nd.label || '') + ' · 십억원)', sum + it + '<p class="small">' + esc(nd.basis) + (nd.rcept_no ? ' · ' + dartLink(nd.rcept_no, 'DART 공시') : '') + '</p>');
+  }
+  function ebitdaDetails(c, st) {
+    const a = obj(hist(c).annual), eb = obj(a.ebitda), dep = obj(a.depreciation), am = obj(a.amortisation);
+    const ir = obj(obj(hist(c).quarterly).ebitda_company_ir), irk = Object.keys(ir).filter(k => isNum(obj(ir[k]).value)).sort();
+    const ks = Array.from(new Set(Object.keys(eb).concat(Object.keys(dep), Object.keys(am)))).sort();
+    if (!ks.length && !irk.length) return '<p class="dim small">EBITDA·D&amp;A 이력 없음</p>';
+    const label = k => /^\d{4}$/.test(k) ? k + 'A' : /^\d{4}H1$/.test(k) ? k.slice(0, 4) + ' 상반기' : /^TTM_/.test(k) ? '최근 4개 분기(~' + k.slice(4) + ')' : k;
+    const rows = ks.map(k => {
+      const e = obj(eb[k]), dp = obj(dep[k]), mm = obj(am[k]), op = isNum(e.operating_profit) ? e.operating_profit : hv(c, 'operating_profit', k);
+      const srcName = histSourceName(e.source || dp.source || mm.source), docs = Array.from(new Set([e.source_doc, dp.source_doc, mm.source_doc].filter(Boolean)));
+      const extra = [dp.incl_rou ? '감가상각비는 사용권자산 상각 포함' : '', isNum(dp.dart_cf_value) ? 'DART 현금흐름표 감가상각비 ' + fx(dp.dart_cf_value, 1) : '', isNum(e.da_verified_ebitda) ? '주석 집계 EBITDA ' + fx(e.da_verified_ebitda, 1) : ''].filter(Boolean);
+      return '<tr><td class="l">' + esc(label(k)) + '</td>' + td(op, 1) + td(dp.value, 1) + td(mm.value, 1) + td(e.value, 1) + '<td class="l basis">' + esc(srcName) + docs.map(x => '<br>' + rcptHtml(x)).join('') + (extra.length ? '<br>' + esc(extra.join(' · ')) : '') + '</td></tr>';
+    }).join('');
+    let body = '';
+    // 같은 'EBITDA'라도 정의가 둘이다: 영업이익 + DART 주석 D&A(연간 표)와 회사 IR 자료의 EBITDA(분기). 이름과 정의를 나눠 보이고 섞지 않는다
+    if (ks.length) body += tw('EBITDA와 감가상각 이력', '<table class="wide"><thead><tr><th class="l">기간</th><th>영업이익</th><th>감가상각비</th><th>무형자산상각비</th><th>EBITDA(영업이익 + D&amp;A)</th><th class="l">출처</th></tr></thead><tbody>' + rows + '</tbody></table>') +
+      '<p class="dim small">EBITDA(영업이익 + D&amp;A) = 영업이익 + 감가상각비(사용권자산 포함) + 무형자산상각비. D&amp;A는 DART 연결주석 실측이고, 출처가 워크북 내 벤더 실적인 연도는 벤더 값 그대로(정의 확인 안 됨). 회사 IR 자료가 발표하는 EBITDA와는 정의가 다릅니다.</p>';
+    if (irk.length) {
+      const defs = Array.from(new Set(irk.map(k => str(obj(ir[k]).definition)).filter(Boolean)));
+      body += '<h3>회사 IR 기준 EBITDA (분기, 십억원)</h3>' + tw('회사 IR 기준 EBITDA', '<table><thead><tr><th class="l">분기</th><th>회사 IR EBITDA</th><th class="l">출처</th></tr></thead><tbody>' +
+        irk.map(k => { const r = obj(ir[k]); return '<tr><td class="l">' + esc(k) + '</td>' + td(r.value, 1) + '<td class="l">' + esc(qSourceName(r)) + '</td></tr>'; }).join('') + '</tbody></table>') +
+        '<p class="dim small">정의(회사 IR): ' + (defs.length ? defs.map(esc).join(' / ') : '회사 IR 자료 표기 그대로') + ' — 위 EBITDA(영업이익 + D&amp;A)와 더하거나 비교하지 않습니다.</p>';
+    }
+    return det(st, 'ebitda', false, 'EBITDA·D&amp;A 이력 (출처 포함, 십억원)', body);
+  }
+
+  // ── 출처 · 방법 ──
+  function sourceIds(c, src) {
+    const q = obj(hist(c).quarterly), seg = obj(hist(c).segments), ids = arr(c.coverage_source_ids).slice();
+    Object.keys(q).forEach(m => Object.values(obj(q[m])).forEach(r => ids.push(obj(r).coverage_source_id)));
+    Object.keys(seg).forEach(m => Object.values(obj(seg[m])).forEach(r => ids.push(obj(r).source_id)));
+    arr(hist(c).drivers_actual).forEach(r => arr(obj(r).source_ids).forEach(id => ids.push(id)));
+    arr(obj(rf(c).source).driver_source_ids).forEach(id => ids.push(id));
+    return Array.from(new Set(ids.filter(id => typeof id === 'string' && src[id])));
+  }
+  function lineageCard(d, c) {
+    const h = hist(c), dp = obj(h.dart_periods), mk = obj(h.market), sh = obj(h.shares), m = model(c), src = obj(obj(d).sources), cn = c.consensus_now ? obj(c.consensus_now) : null, lic = obj(mk.license), hz = obj(m.horizon), op = obj(m.op_row), ex = obj(op.excluded_years), exk = Object.keys(ex).sort();
+    let s = '<h3>Open DART 정기보고서(연결)</h3><p class="small">' + (Object.keys(dp).map(k => { const r = obj(dp[k]); return r.rcept_no ? dartLink(r.rcept_no, k) : esc(k) + '(없음)'; }).join(' · ') || '—') + '</p>';
+    s += '<h3>시세 · 주식수</h3><ul class="plain"><li>현재가: ' + esc(priceSourceName(mk.price_source)) + ' ' + won(mk.price_krw) + (mk.price_as_of ? ' (' + esc(mk.price_as_of) + ')' : '') + (obj(d).market_retrieved_at ? ' · 수집 ' + esc(str(d.market_retrieved_at).slice(0, 10)) : '') + (mk.price_basis ? '<div class="basis">' + esc(mk.price_basis) + '</div>' : '') + '</li>';
+    if (isNum(sh.outstanding)) s += '<li>유통주식수(EPS·밸류에이션 기준): DART 주식총수 현황 — 발행 ' + fmt(sh.issued, 0) + '주' + (isNum(sh.treasury) ? ' − 자기주식 ' + fmt(sh.treasury, 0) + '주' : '(자기주식 미기재)') + ' = ' + fmt(sh.outstanding, 0) + '주' + (sh.rcept_no ? ' · ' + dartLink(sh.rcept_no, '공시') : '') + '</li>';
+    if (isNum(mk.shares_outstanding)) s += '<li>KRX 발행주식수(자기주식 미차감, 참고): ' + fmt(mk.shares_outstanding, 0) + '주' + (mk.shares_as_of ? ' (' + esc(ymd(mk.shares_as_of)) + ')' : '') + (mk.citation ? ' · ' + esc(mk.citation) : '') + (safeUrl(lic.url) ? ' · 라이선스 <a href="' + esc(lic.url) + '" target="_blank" rel="noopener noreferrer">' + esc(lic.name || lic.id || '보기') + '</a>' : '') + '</li>';
+    s += '</ul><h3>컨센서스</h3><p class="small">' + (cn ? esc(cn.source || 'FnGuide 집계') + ' · 기준일 ' + esc(cn.as_of || obj(d).consensus_as_of || '—') + (obj(d).consensus_retrieved_at ? ' · 수집 ' + esc(str(d.consensus_retrieved_at).slice(0, 10)) : '') : '컨센서스 자료 없음') + '</p>';
+    const ids = sourceIds(c, src);
+    if (ids.length) s += '<h3>커버리지 레인 공식 자료</h3><ul class="plain">' + ids.map(id => '<li>' + sourceItem(src[id], c) + '</li>').join('') + '</ul>';
+    s += '<h3>워크북</h3><p class="small">' + esc(m.house || obj(d).model_house || '') + (m.analyst ? ' · 워크북 담당자 ' + esc(m.analyst) : (m.status === 'template' ? ' · 템플릿(애널리스트 추정 미입력)' : '')) + ' · 워크북 기준 ' + esc(m.vintage || obj(d).model_vintage || '—') + (m.model_date ? ' · 워크북 일자 ' + esc(m.model_date) : '') +
+      (hz.quarterly_through ? ' · 분기 추정 범위 ~' + esc(hz.quarterly_through) : '') + (hz.annual_through ? ' · 연간 추정 범위 ~' + esc(hz.annual_through) : '') +
+      (typeof op.reconciled === 'boolean' ? ' · 분기 영업이익 행 대사 ' + (op.reconciled ? '일치' : '불일치') + (isNum(op.max_abs_diff) ? '(최대 차이 ' + fx(op.max_abs_diff, 3) + '십억원)' : '') : '') +
+      (exk.length ? ' · 대사에서 뺀 연도: ' + esc(exk.map(k => k + ' ' + str(ex[k])).join('; ')) : '') + '</p>';
+    return s;
+  }
+  function methodCard(d) {
+    const m = obj(obj(d).method), names = {history: '실적', roll_forward: '연장', valuation: '밸류에이션', consensus: '컨센서스'};
+    return Object.keys(names).filter(k => m[k]).map(k => '<h3>' + names[k] + '</h3><p class="dim small">' + esc(plain(m[k])) + '</p>').join('') || '<p class="dim">방법 설명 없음</p>';
+  }
+
+  // ── 페이지 ──
+  function renderCompany(data, company, state) {
+    const d = obj(data), c = pickCompany(d, company), st = normState(d, Object.assign({}, state, {company: c.id}));
+    const qk = quarterKeys(c);
+    return titleCard(d, c, st) +
+      card('연간 실적 · 워크북 원본 · 앙상블 연장 (' + scenName(st.scenario) + ')', annualTable(d, c, st) + oneOffNotice(c, st)) +
+      '<div class="two">' + card('분기 실적' + (qk.length ? ' (' + qk[0] + '~' + qk[qk.length - 1] + ')' : ''), chartBox('q', quarterlyChart(c, CHART_W)) + quarterlyTable(d, c, st)) +
+      card('연간 매출: 실적 · 워크북 원본 · 연장 범위', chartBox('a', annualChart(c, CHART_W, st))) + '</div>' +
+      '<div class="two">' + card(isCovDriver(c) ? '연장 가정 · 커버리지 레인 드라이버 추정' : '연장 가정 · 일반 규칙', assumptionsCard(d, c, st)) + card('워크북 원본 추정 vs 실적 (예측 오차)', scorecardTable(d, c)) + '</div>' +
+      card('현재 컨센서스 vs 앙상블 연장(base)', consensusNowCard(d, c)) +
+      valuationCard(d, c, st) +
+      card('환산 규칙 (' + (val(c).scenario || 'base') + ' 기준)', ruleCard(d, c, st)) +
+      '<div class="two">' + card('대안 값', alternativesCard(c)) + card('워크북 TP 시트(' + vintageYM(d) + ') 활성 블록', workbookCard(d, c, st)) + '</div>' +
+      card(arr(hist(c).drivers_actual).length ? '드라이버 실적 (최근 8개 분기)' : '모델 드라이버', driversCard(d, c)) +
+      card('최신 세그먼트 실적 (회사 공식 자료·DART 공시, 커버리지 레인 수집)', segmentsCard(d, c)) +
+      card('워크북 컨센 시트 (작성 시점 스냅숏)', vintageConsensusCard(d, c, st)) +
+      card('재무 세부: 순차입금 · EBITDA', netDebtDetails(c, st) + ebitdaDetails(c, st)) +
+      card('출처 · 계보', lineageCard(d, c)) +
+      card('방법', methodCard(d));
+  }
+  function listTag(c) {
+    const v = val(c);
+    return '<span class="tag ' + valTone(v) + '">' + esc(statusLabel(v)) + (hasValue(v) && isNum(v.upside_pct) ? '<br>' + (v.status === 'range' ? 'base ' : '') + '현재가 대비 ' + pct(v.upside_pct) : '') + '</span>';
+  }
+  function renderApp(data, state) {
+    const d = obj(data), st = normState(d, state), cs = arr(d.companies).filter(x => obj(x).id), c = cs.find(x => x.id === st.company) || {};
+    const nA = cs.filter(x => model(x).status === 'analyst').length, nT = cs.filter(isTemplate).length;
+    const sectors = Object.keys(sectorNames).concat(Array.from(new Set(cs.map(x => x.sector))).filter(s => s && !sectorNames[s])).filter(s => cs.some(x => x.sector === s));
+    const secName = s => sectorNames[s] || obj(cs.find(x => x.sector === s)).sector_name || s;
+    const list = cs.filter(x => x.sector === st.sector).map(x => '<button type="button" class="company" data-company="' + esc(x.id) + '"' + (x.id === st.company ? ' aria-current="true"' : '') + '><span>' + esc(x.name) + ' <small>' + esc(x.ticker) + (isTemplate(x) ? ' · 템플릿' : '') + '</small></span>' + listTag(x) + '</button>').join('');
+    return '<div class="am ' + (st.mode === 'home' ? 'am-home' : 'am-solo') + '">' +
+      '<header><div><div class="eyebrow">ENSEMBLE / ANALYST MODELS</div><h1>커버리지 모델 ' + cs.length + '사</h1><p class="dim">앙상블 에이전트가 ' + esc(d.model_house) + ' 워크북 ' + cs.length + '사(' + esc(d.model_vintage) + ')를 출발점으로 최신 실적을 반영하고 2026–2028을 규칙 기반으로 연장한 페이지 · 애널리스트 추정 포함 워크북 ' + nA + '사 · 추정 미입력 템플릿 ' + nT + '사</p></div>' +
+      '<div class="asof">기준일 ' + esc(d.as_of) + '<br>DART 수집 ' + esc(str(d.dart_retrieved_at).slice(0, 10)) + ' · 시세 ' + esc(str(d.market_retrieved_at).slice(0, 10)) + '<br>컨센서스 기준일 ' + esc(d.consensus_as_of || '—') + '</div></header>' +
+      '<nav class="sectors" aria-label="섹터">' + sectors.map(s => '<button type="button" data-sector="' + esc(s) + '" aria-pressed="' + (st.sector === s) + '">' + esc(secName(s)) + ' <small>' + cs.filter(x => x.sector === s).length + '</small></button>').join('') + '</nav>' +
+      '<div class="layout"><aside><nav class="companies" aria-label="회사 목록">' + list + '</nav><div class="notice" style="margin-top:12px">워크북은 ' + esc(d.model_vintage) + ' 시점 ' + esc(d.model_house) + ' 리서치 워크북이며, 연장과 환산 값은 앙상블 에이전트의 규칙 계산입니다.</div></aside>' +
+      '<section aria-label="' + esc(c.name) + '">' + renderCompany(d, c, st) + '</section></div>' +
+      '<p class="foot">숫자는 십억원(별도 표기 제외). 실적 · 워크북 원본 · 앙상블 연장 · 커버리지 레인 · 컨센서스 값은 서로 대체하지 않으며, 미확인 값은 —로 둡니다.</p>' + notice(esc(disclaimer(d)), 'disclaimer') + '</div>';
+  }
+
+  const css = `
+  .am{--bg:#0b1018;--panel:#131b27;--panel2:#192333;--line:#293447;--line2:#223046;--ink:#e8eef6;--dim:#9aa9bd;--accent:#f2b84b;--on-accent:#1b1400;--ok:#65dec2;--warn:#f2b84b;--bad:#ff8a80;--link:#65dec2;--est:#93a9ff;--model:#cfb3f0;--neg:#ff8a80;--focus:#b6ed7e;--notice:#1a1c26;--notice2:#141d30;--bar:#3f6fd8;--base:#819df8;--op:#f2b84b;--range:#e8eef6;background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;padding:24px;max-width:1440px;margin:0 auto;box-sizing:border-box;overflow-wrap:anywhere}
+  .am.am-home{--bg:#0d1117;--panel:#151d23;--panel2:#1b252d;--line:#233038;--line2:#1b242c;--ink:#e6edf3;--dim:#8f99a8;padding:8px 0 0}
+  .am *{box-sizing:border-box}.am h1,.am h2,.am h3,.am p{margin:0}.am h1{font-size:28px;letter-spacing:-1px}.am h2{font-size:17px;margin-bottom:10px}.am h3{font-size:13px;color:var(--dim);margin:14px 0 6px}.am a{color:var(--link)}.am .dim{color:var(--dim)}.am .small{font-size:12px;margin-top:6px}.am code{font:12px ui-monospace,Menlo,monospace}.am .eyebrow{font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:700}
+  .am header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:20px;flex-wrap:wrap}.am header>div{min-width:0}.am .asof{text-align:right;color:var(--dim);font-size:12px}
+  .am button{font:inherit;color:var(--ink);border:1px solid var(--line);background:var(--panel2);border-radius:7px;padding:7px 12px;cursor:pointer}.am button:hover{border-color:var(--dim)}
+  .am button[aria-pressed="true"],.am button[aria-current="true"]{color:var(--on-accent);background:var(--accent);border-color:var(--accent);font-weight:700}
+  .am button:focus-visible,.am a:focus-visible,.am summary:focus-visible,.am .tablewrap:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+  .am .sectors{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.am .layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:20px}.am .layout>*{min-width:0}
+  .am .companies{display:flex;flex-direction:column;gap:7px}.am .company{padding:10px 12px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}.am .company small{font-size:11px;opacity:.85}
+  .am .tag{font-size:11px;line-height:1.35;font-weight:600}.am .tag.ok{color:var(--ok)}.am .tag.warn{color:var(--warn)}.am .tag.bad{color:var(--bad)}.am .company[aria-current="true"] .tag{color:inherit}
+  .am .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:16px;min-width:0}
+  .am .title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}.am .title>div{min-width:0}.am .cname{font-size:22px;margin-bottom:4px}.am .cname .dim{font-size:13px;font-weight:400}
+  .am .badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.am .badge{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--line);padding:2px 8px;border-radius:20px;color:var(--dim);line-height:1.5}
+  .am .badge.ok{color:var(--ok);border-color:var(--ok)}.am .badge.warn{color:var(--warn);border-color:var(--warn)}.am .badge.bad{color:var(--bad);border-color:var(--bad)}
+  .am .controls{display:flex;gap:10px 14px;flex-wrap:wrap;align-items:center}.am .seg{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.am .seg>span{font-size:12px;color:var(--dim)}.am .covlink{font-size:13px}
+  .am .kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:12px}.am .kpi{background:var(--bg);border:1px solid var(--line);padding:10px 12px;border-radius:8px;min-width:0}
+  .am .kpi b{display:block;font-size:19px;font-variant-numeric:tabular-nums}.am .kpi b .u{font-size:11px;font-weight:400;color:var(--dim);margin-left:3px}.am .kpi small,.am .kpi .sub{color:var(--dim);font-size:11px;display:block}.am .kpi .kb{margin:4px 0}.am .kpi .tpv{font-size:19px}
+  .am .tablewrap{overflow-x:auto;max-width:100%;margin-top:6px}.am table{width:100%;border-collapse:collapse;font-size:12px}.am .tablewrap>table.wide{min-width:640px}.am caption{text-align:left;color:var(--dim);font-size:12px;padding:0 0 6px}
+  .am th{text-align:right;color:var(--dim);font-weight:500;padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}.am th:first-child,.am td:first-child,.am th.l,.am td.l{text-align:left}
+  .am td{padding:6px 8px;border-bottom:1px solid var(--line2);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.am td.l{white-space:normal}.am td.dim{color:var(--dim)}
+  .am tr.sub td{font-size:11px}.am tr.sub td.l{color:var(--dim)}.am tr.hl td{background:var(--panel2)}.am tr.tot td{font-weight:700}
+  .am td.neg{color:var(--neg)}.am td.est,.am th.est{color:var(--est)}.am td.model{color:var(--model)}
+  .am table.kv td.k{color:var(--dim);width:34%}.am .basis{font-size:11px;color:var(--dim);margin-top:2px}.am td.basis{min-width:200px}
+  .am .chartbox{width:100%;min-width:0}.am .chart{display:block;width:100%;height:auto}.am .chart text{font-size:11px;fill:var(--dim);font-family:inherit}
+  .am .chart .grid{stroke:var(--line)}.am .chart .bar{fill:var(--bar)}.am .chart .barE{fill:var(--base);opacity:.6}.am .chart .opl{fill:none;stroke:var(--op);stroke-width:2.5}.am .chart .opd{fill:var(--op)}
+  .am .chart .zero{stroke:var(--op);stroke-dasharray:4 3}.am .chart .zero-t{fill:var(--op)}.am .chart .mdl{fill:none;stroke:var(--model);stroke-width:2}.am .chart .rng line{stroke:var(--range);stroke-width:2}
+  .am .legend{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:11px;color:var(--dim);margin-top:6px}.am .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  .am .sw.bar{background:var(--bar)}.am .sw.barE{background:var(--base)}.am .sw.op{background:var(--op)}.am .sw.est{background:var(--est)}.am .sw.model{background:var(--model)}
+  .am .sw.ring{background:none;border:2px solid var(--model);border-radius:50%}.am .sw.rng{width:2px;background:var(--range)}.am .sw.zero{height:0;border-top:2px dashed var(--op);border-radius:0;vertical-align:middle}
+  .am .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.am .two>*{min-width:0}
+  .am .notice{border-left:3px solid var(--warn);padding:8px 12px;color:var(--dim);font-size:12px;margin-top:10px;background:var(--notice)}.am .notice.blue{border-color:var(--est);background:var(--notice2)}.am .notice.bad{border-color:var(--bad)}.am .notice ul{margin:4px 0 0;padding-left:18px}.am .notice b{color:var(--ink)}
+  .am details{border-top:1px solid var(--line);padding:8px 0;margin-top:8px}.am summary{cursor:pointer}.am .details-body{padding:8px 0 0;font-size:12px;color:var(--dim)}.am .details-body table{color:var(--ink)}
+  .am .valhead{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:4px 0 6px}.am .tpv{font-size:26px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}.am .formula{font-size:13px;margin:4px 0}
+  .am ul.plain,.am ol.plain{margin:6px 0 0;padding-left:18px;font-size:12px;color:var(--dim)}.am .foot{font-size:12px;color:var(--dim);margin:18px 0 0}.am .empty{text-align:center;padding:40px 10px;color:var(--dim);border:1px dashed var(--line);border-radius:8px}
+  @media(max-width:900px){.am{padding:16px}.am .layout{grid-template-columns:minmax(0,1fr)}.am .companies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.am .two{grid-template-columns:minmax(0,1fr)}.am .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media(max-width:480px){.am{padding:12px 10px}.am h1{font-size:22px}.am .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.am .card{padding:14px 12px}.am header{display:block}.am .asof{text-align:left;margin-top:8px}.am .tpv{font-size:22px}.am td.basis{min-width:160px}}
+  @media(prefers-color-scheme:light){.am.am-solo{--bg:#f3f6fa;--panel:#ffffff;--panel2:#eef2f7;--line:#d3dbe7;--line2:#e4eaf1;--ink:#152235;--dim:#56677c;--accent:#9a5d0b;--on-accent:#ffffff;--ok:#08745f;--warn:#985c0a;--bad:#b3261e;--link:#08745f;--est:#3550b8;--model:#6a3db8;--neg:#b3261e;--focus:#3550b8;--notice:#fff6e5;--notice2:#ebf0ff;--bar:#3b6fd8;--base:#8ea4ee;--op:#a8650c;--range:#152235}}
+  `;
+
+  // ── DOM 연결 ──
+  function mount() {
+    const standalone = document.getElementById('models-standalone');
+    const ownScript = document.currentScript;
+    const assetRoot = ownScript && ownScript.src ? new URL('.', ownScript.src) : new URL('.', location.href);
+    let data = null, root = null, tabButton = null, state = {open: {}};
+    const cssEsc = s => (window.CSS && CSS.escape) ? CSS.escape(s) : String(s).replace(/["\\]/g, '\\$&');
+    function activate() {
+      if (!tabButton) return;
+      document.querySelectorAll('.tabbtn,.pane').forEach(e => e.classList.remove('on'));
+      tabButton.classList.add('on'); root.classList.add('on');
+      drawCharts(false);
+    }
+    function drawCharts(force) {
+      if (!data || !root) return;
+      const c = arr(data.companies).find(x => obj(x).id === state.company);
+      if (!c) return;
+      root.querySelectorAll('[data-chart]').forEach(el => {
+        const w = el.clientWidth;
+        if (!w || (!force && el.dataset.w === String(w))) return;
+        el.dataset.w = String(w);
+        el.innerHTML = el.dataset.chart === 'q' ? quarterlyChart(c, w) : annualChart(c, w, state);
+      });
+    }
+    function focusKey(el) {
+      const ds = el.dataset || {};
+      for (const k of ['company', 'sector', 'scenario']) if (ds[k] != null) return '[data-' + k + '="' + cssEsc(ds[k]) + '"]';
+      const dt = el.tagName === 'SUMMARY' && el.parentElement && el.parentElement.dataset ? el.parentElement.dataset.dkey : null;
+      return dt ? 'details[data-dkey="' + cssEsc(dt) + '"] > summary' : null;
+    }
+    function render() {
+      const a = document.activeElement, fk = (a && a !== document.body && root.contains(a)) ? focusKey(a) : null;
+      root.innerHTML = renderApp(data, state);
+      drawCharts(true);
+      const el = fk ? root.querySelector(fk) : null;
+      if (el && el.focus) el.focus({preventScroll: true});
+    }
+    function syncHash() {
+      const cur = location.hash;
+      if (cur && cur !== '#' && !parseHash(cur)) return; // 다른 탭이 쓰는 해시는 그대로 둔다
+      try { history.replaceState(history.state, '', buildHash(state)); } catch (err) { /* file:// 등에서 막히면 해시 갱신만 건너뛴다 */ }
+    }
+    function fromHash() {
+      const h = parseHash(location.hash);
+      if (!h || !arr(data.companies).some(x => obj(x).id === h.company)) return false;
+      state.company = h.company; state.scenario = h.scenario || 'base';
+      return true;
+    }
+    function wire() {
+      root.addEventListener('click', e => {
+        if (!data) return;
+        const el = e.target && e.target.closest ? e.target.closest('[data-company],[data-sector],[data-scenario],[data-cov]') : null;
+        if (!el || !root.contains(el)) return;
+        const ds = el.dataset;
+        if (ds.cov != null) {
+          const b = document.querySelector('.tabbtn[data-tab="coverage"]');
+          if (b) { e.preventDefault(); b.click(); b.focus(); }
+          return;
+        }
+        if (ds.sector != null) {
+          const first = arr(data.companies).find(x => obj(x).sector === ds.sector);
+          if (ds.sector === state.sector || !first) return;
+          state.sector = ds.sector; state.company = first.id;
+        } else if (ds.company != null) {
+          if (ds.company === state.company) return;
+          state.company = ds.company;
+        } else {
+          if (ds.scenario === state.scenario || SCEN.indexOf(ds.scenario) < 0) return;
+          state.scenario = ds.scenario;
+        }
+        state = normState(data, state);
+        syncHash(); render();
+      });
+      root.addEventListener('toggle', e => { const t = e.target; if (t && t.dataset && t.dataset.dkey) state.open[t.dataset.dkey] = t.open; }, true);
+      window.addEventListener('hashchange', () => { if (!data || !fromHash()) return; state = normState(data, state); render(); activate(); });
+      if (window.ResizeObserver) new ResizeObserver(() => drawCharts(false)).observe(root);
+      else window.addEventListener('resize', () => drawCharts(false));
+    }
+    async function init() {
+      if (!document.querySelector('style[data-am-style]')) { const style = document.createElement('style'); style.setAttribute('data-am-style', '1'); style.textContent = css; document.head.appendChild(style); }
+      let mode = 'standalone';
+      if (standalone) root = standalone;
+      else {
+        const tabs = document.querySelector('.tabs'), firstPane = document.querySelector('.pane');
+        if (!tabs || !firstPane || document.getElementById('pane-models')) return;
+        tabButton = document.createElement('button'); tabButton.type = 'button'; tabButton.className = 'tabbtn'; tabButton.dataset.tab = 'models'; tabButton.textContent = '📐 커버리지 모델 12사'; tabs.appendChild(tabButton);
+        root = document.createElement('div'); root.id = 'pane-models'; root.className = 'pane'; firstPane.parentElement.insertBefore(root, firstPane.nextSibling);
+        tabButton.addEventListener('click', activate);
+        mode = 'home';
+      }
+      state = {mode, coverageHref: mode === 'home' ? new URL('../coverage/index.html', assetRoot).href : '../coverage/index.html', open: {}, scenario: 'base'};
+      root.innerHTML = '<div class="am ' + (mode === 'home' ? 'am-home' : 'am-solo') + '"><p>모델 데이터를 불러오는 중입니다.</p></div>';
+      wire();
+      try {
+        const embedded = document.getElementById('models-data');
+        let loaded;
+        if (embedded) loaded = JSON.parse(embedded.textContent);
+        else { const response = await fetch(new URL('data.json', assetRoot), {cache: 'no-cache'}); if (!response.ok) throw new Error('HTTP ' + response.status); loaded = await response.json(); }
+        if (obj(loaded).schema_version !== SCHEMA || !arr(obj(loaded).companies).length) throw new Error('지원하지 않는 데이터 계약: ' + (obj(loaded).schema_version || '버전 표기 없음') + ' (필요: ' + SCHEMA + ')');
+        data = loaded;
+        const hit = fromHash();
+        state = normState(data, state);
+        render();
+        if (hit) activate();
+      } catch (error) {
+        data = null;
+        root.innerHTML = '<div class="am ' + (mode === 'home' ? 'am-home' : 'am-solo') + '"><div class="card"><h2>데이터를 표시할 수 없습니다</h2><p>' + esc(error && error.message) + '</p><p class="dim">기존 탭은 그대로 사용할 수 있습니다.</p></div></div>';
+      }
+    }
+    init();
+  }
+
+  const api = {SCHEMA, renderApp, renderCompany, quarterlyChart, annualChart, normState, parseHash, buildHash, valTone, statusLabel};
+  if (typeof module !== 'undefined' && module && module.exports) module.exports = api;
+  if (typeof document !== 'undefined' && typeof window !== 'undefined') mount();
 })();

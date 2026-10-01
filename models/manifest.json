@@ -1,15 +1,15 @@
 {
  "schema_version": "ensemble-analyst-models-build/1",
- "as_of": "2026-10-01",
+ "as_of": "2026-10-02",
  "model_vintage": "2024-03-01",
  "input": {
   "name": "data.json",
-  "sha256": "60fa63091b6642ceaeeefbe6026e164e9fd09b3fcbfc1fed4669b6603deacbbe"
+  "sha256": "83bd1db205a6e5c123407a5736d05629ad7403c39ac1073b2a66b762cad46812"
  },
  "outputs": {
-  "data.json": "9a0dc1dc095270aba35964324322f9d5351294fcf547fa6ba7b8dfc4628b9b7c",
-  "ensemble-tab.js": "3767ab6c0786ee1ebb5a5d8338a7feb7b079215b447e16f57e89dcc291937efb",
-  "index.html": "65c53f4ffa1126cbb7ab74c30af4c78e8ba0d08513fd58925b481be759c0816e"
+  "data.json": "b6059fe7aa0446a8296bdd66d0fced03fb445c496103dcb18a47bcead6598932",
+  "ensemble-tab.js": "0bc00a6dd12ffc4368b146c305d336aa9ea8fab55bc7b75a96288ec039954f92",
+  "index.html": "61614e35d8b259d8ab299bef1bb7b49457c5bd3bf48e7a5c1b1103c2c810fa71"
  },
  "companies": [
   {
@@ -40,7 +40,7 @@
    "id": "CJ_ENM",
    "model_status": "analyst",
    "roll_forward": "ok",
-   "valuation": "proxy"
+   "valuation": "range"
   },
   {
    "id": "STUDIO_DRAGON",
@@ -64,25 +64,25 @@
    "id": "GKL",
    "model_status": "template",
    "roll_forward": "ok",
-   "valuation": "no_analyst_target"
+   "valuation": "reference_band"
   },
   {
    "id": "KANGWON",
    "model_status": "template",
    "roll_forward": "ok",
-   "valuation": "no_analyst_target"
+   "valuation": "reference_band"
   },
   {
    "id": "LOTTE_TOUR",
    "model_status": "template",
    "roll_forward": "ok",
-   "valuation": "no_analyst_target"
+   "valuation": "reference_band"
   },
   {
    "id": "PARADISE",
    "model_status": "template",
    "roll_forward": "ok",
-   "valuation": "no_analyst_target"
+   "valuation": "reference_band"
   }
  ]
 }
