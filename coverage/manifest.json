@@ -1,40 +1,37 @@
 {
   "schema_version": "ensemble-coverage-build/1",
-  "as_of": "2026-09-29",
-  "input_hash": "fcfd229d8822d03979b00214d5a84ec31afe8ec60e2f89c12fda88f9bbf91527",
+  "as_of": "2026-10-01",
+  "input_hash": "2d60b13eec376472a8c164ed4874212c12f5ddcada2a4ad296fdafdac3d40563",
   "inputs": [
     {
       "name": "entertainment_forecast.json",
-      "sha256": "5349451cfb3039771264f03e5b13b03716429dc38f6f93cdd379cd0a2faa552f"
+      "sha256": "0f6d7b5a9ec1e44d737f40900553d34bff27fe1535f9084bff3ccea2721be406"
     },
     {
       "name": "leisure_forecast.json",
-      "sha256": "c8d34daefb32653175c79545bf5afb726279322ec2252946057741a5ab338194"
+      "sha256": "7cf45898ff1994b84628c514dacf280b12b303125f9e658884c24388bde9ab06"
     },
     {
       "name": "media_forecast.json",
-      "sha256": "fb7686652c070b2afa2e78764ab5f51e905009170c6850d4d0df06ce135a5841"
+      "sha256": "04cc0deebb5329c1231d941e7985ee24ec08288fe066145164472d148149892b"
     }
   ],
-  "core_registry": {
-    "name": "registry.json",
-    "sha256": "e8a43f36c6a11ecc5feff6fb6975099786131d54779f816b749a588e805199f3"
-  },
+  "core_registry": null,
   "outputs": {
-    "data.json": "f542bb7fb94e1a47039e3553554ecffdf23710d14e19a27e12b8a855a37d19b5",
+    "data.json": "9795b9c7e16ae260c2e593c9a38f14fa0072835926d852a9b7f92c5c6effa6ab",
     "ensemble-tab.js": "a287693957cf0b06d5938f6a8399cc6bc3add1033cad08976276a1df4ee86cd7",
-    "index.html": "ed0e81943953e12b6bc8e512e0103df11c7f0136141cb334d7618c9971e98e77"
+    "index.html": "44e940f2a11c5af5de9c889628a5b0a1954947b5f9b6009191d8efb535db9f7c"
   },
   "summary": {
     "coverage_companies": 12,
-    "core_companies": 39,
-    "directory_companies": 51,
+    "core_companies": 0,
+    "directory_companies": 12,
     "observations": 5763,
     "reported_actuals": 1473,
     "agent_estimates": 1430,
     "scenarios": 2860,
     "partial_periods": 0,
-    "sources": 43,
+    "sources": 583,
     "model_gaps": 0
   }
 }
