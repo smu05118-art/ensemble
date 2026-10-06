@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-29",
+  "updated_at": "2026-10-06",
   "intro_ko": "분기별 제조사·고객사 재고 주수입니다. 직접 보고된 제품 재고와 기업 전체 재고회전일수의 주수 환산을 구분합니다. 원문이 없는 제품·역할·분기는 공백으로 남깁니다.",
   "products": [
     {
@@ -717,6 +717,17 @@
       "published_at": "2026-07-28",
       "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
       "evidence_tier": "primary"
+    },
+    {
+      "id": "inv-micron-2026-q4-remarks",
+      "publisher": "Micron",
+      "title": "Micron FY 2026Q4 Prepared Remarks",
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+      "published_at": "2026-09-30",
+      "locator": "PDF page 8, Inventory section",
+      "evidence_tier": "primary",
+      "sha256": "2821d4ccaae50b40dcd28cd4e766c69c509e73d666e4109d5907c7205a03b700",
+      "reported_metric_label": "days of inventory (DIO)"
     }
   ],
   "series": [
@@ -5533,6 +5544,31 @@
       "locator": "Condensed consolidated balance sheets, Inventories, net row; consolidated statements of operations, current Three Months Ended Cost of revenue row",
       "period_end_source_url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/",
       "period_end_locator": "Release opening paragraph and financial statement date headings"
+    },
+    {
+      "id": "micron-memory-total-2026-Q4",
+      "series_id": "micron-memory-total",
+      "source_id": "inv-micron-2026-q4-remarks",
+      "quarter": "2026-Q4",
+      "period_label": "FY 2026Q4",
+      "period_start": "2026-05-29",
+      "period_end": "2026-09-03",
+      "as_of": "2026-09-03",
+      "value_min": 18.428571428571427,
+      "value_max": 18.428571428571427,
+      "qualifier": "exact",
+      "approximate": false,
+      "raw_value_min": 129,
+      "raw_value_max": 129,
+      "raw_unit": "days",
+      "conversion": "days_div_7",
+      "measure_type": "reported",
+      "narrative_ko": "Micron의 FY 2026Q4 보고 재고일수는 129일입니다. 원문 일수를 7로 나눠 18.43주로 표시합니다. 직전 분기 120일보다 9일 증가했습니다. 회사는 공정 수명 종료에 따른 선행 생산과 제조 관련 성과보상 비용의 재고 반영이 증가에 영향을 주었다고 설명했습니다. 회계분기 말 기준이며 FY 표기를 보존합니다. 기업 전체 참고값이며 DRAM·NAND 제품별 공급가능 재고 주수가 아닙니다.",
+      "locator": "PDF page 8, Inventory section",
+      "period_end_source_url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+      "period_end_locator": "Release first body paragraph: which ended September 3, 2026; consolidated statements date columns",
+      "period_start_source_url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+      "period_start_locator": "Next day after preceding fiscal quarter ended May 28, 2026, shown in consolidated statements date columns"
     }
   ],
   "coverage": [
