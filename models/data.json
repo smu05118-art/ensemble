@@ -5,7 +5,7 @@
  "model_house": "교보증권",
  "market_retrieved_at": "2026-10-06T16:09:06.008576+00:00",
  "dart_retrieved_at": "2026-09-30T08:36:44.223299+00:00",
- "consensus_retrieved_at": "2026-10-01T16:44:42.026744+00:00",
+ "consensus_retrieved_at": "2026-10-07T16:49:15.598857+00:00",
  "consensus_as_of": "2026-09-30",
  "method": {
   "history": "2020-2022 모델 내 벤더 실적, 2023-2025 및 분기(2024Q1-2026Q2, 3분기보고서가 제출되면 2026Q3까지) Open DART 연결(CFS) 정기보고서. Q2=반기보고서 3개월 열, Q4=사업보고서−3분기 누적(원공시 기준). 법인세비용은 양수 = 비용으로 싣는다. 한 공시의 법인세 행이 같은 열의 세전이익 − 순이익과 부호만 반대이면 그 열의 부호를 바꾸고, 세전이익·순이익과 나머지 손익 행은 원공시 부호 그대로다. DART 분기가 없는 기간(일부 회사의 2022Q1-2023Q4)은 커버리지 레인의 회사 IR 분기값을 싣고(출처는 커버리지 자료 id로 표시) 2026 하반기 성장률의 H2/H1 계절비에도 쓴다. 연간 2023-2024는 다음 해 사업보고서의 전기 열이 다르면 재작성 값을 쓰고 원공시 값을 함께 둔다(같은 표준계정·부호 반전 제외, 손익·자산·부채·자본 12개 항목). 감가상각비(사용권자산 포함)·무형자산상각비는 DART 연결주석 실측, EBITDA = 영업이익 + 감가상각비 + 무형자산상각비(2023-2025, 2026 상반기, 최근 4개 분기). 순차입금 = 차입금·사채(리스 제외) − 현금 − 단기금융상품 − 기타유동금융자산, 최신 재무상태표의 구성 행 포함. 분기 실적이 커버리지 레인의 보고 실적과 다르면 차이를 남기고(차이율 = (DART − 커버리지) ÷ |커버리지|, 양수 = DART가 큼), 핵심 4개 지표에서 0.15십억원 이상·2% 초과일 때만 표시한다. 레저 4사는 연장에 쓰는 같은 판의 커버리지 자료와 비교한다(그 판이 DART 값으로 채운 분기는 차이가 0). 커버리지 자료의 공표일은 출처 목록을 따르고, 미상이면 비워 둔다. 같은 파일로 합친 출처는 가장 이른 공표일 하나를 쓴다.",
@@ -915,8 +915,8 @@
      },
      "street": {
       "tp": 322143.0,
-      "eps_12mf": 7825.48,
-      "eps_12mf_lane": 7957,
+      "eps_12mf": 7818.75,
+      "eps_12mf_lane": 7950,
       "k": 0.9835,
       "S": 3.979,
       "date": "2026-09-30",
@@ -995,34 +995,34 @@
      "date": "2026-09-30",
      "P": 156600.0,
      "TP": 322143.0,
-     "E12": 7825.485,
-     "B12": 87755.1,
+     "E12": 7818.7525,
+     "B12": 87760.2225,
      "P_basis": "FnGuide 집계(WiseReport 경유) 기준월 말 주가 — 현재가(네이버 시세 조회가)와 출처·시점이 달라 값이 다를 수 있음"
     },
     "forward": {
      "2026": {
       "label": "2026.12(E)",
       "estimate": true,
-      "revenue": 4877.7,
-      "operating_profit": 282.9,
-      "controlling_net_income": 186.1,
-      "eps": 4319.0
+      "revenue": 4857.6,
+      "operating_profit": 281.2,
+      "controlling_net_income": 185.2,
+      "eps": 4300.0
      },
      "2027": {
       "label": "2027.12(E)",
       "estimate": true,
-      "revenue": 4295.9,
-      "operating_profit": 483.4,
-      "controlling_net_income": 387.7,
-      "eps": 8994.0
+      "revenue": 4253.9,
+      "operating_profit": 483.3,
+      "controlling_net_income": 388.6,
+      "eps": 9016.0
      },
      "2028": {
       "label": "2028.12(E)",
       "estimate": true,
-      "revenue": 4601.1,
-      "operating_profit": 536.5,
-      "controlling_net_income": 447.1,
-      "eps": 10373.0
+      "revenue": 4552.4,
+      "operating_profit": 535.9,
+      "controlling_net_income": 447.6,
+      "eps": 10383.0
      }
     },
     "unit": {
@@ -4896,11 +4896,11 @@
       "bps_basis": "2021-2022: 워크북 Valuation 시트 BPS(발행주식 기준) ÷ 그 해 연말 k(유통 ÷ 발행주식수) · 2023년 이후: 연말 지배주주지분 ÷ 그 해 연말 유통주식수(DART 사업보고서 주식의 총수 현황) · 기준연도와 사업보고서가 없는 연도: 최신 분기 지배주주지분 ÷ 그 분기말 유통주식수(반기말·연말만 보관)"
      },
      "street": {
-      "tp": 113778.0,
-      "eps_12mf": 6144.26,
-      "eps_12mf_lane": 6144,
+      "tp": 112667.0,
+      "eps_12mf": 6147.95,
+      "eps_12mf_lane": 6148,
       "k": 1.0,
-      "S": 18.518,
+      "S": 18.326,
       "date": "2026-09-30",
       "e12_source": "FnGuide 월말 12개월 선행 EPS",
       "basis": "TP ÷ 12MF EPS × k",
@@ -4913,14 +4913,14 @@
       "kind": "eps_12mf",
       "scenario": "base",
       "raw": 7366.0,
-      "consensus_12mf_lane": 6144,
+      "consensus_12mf_lane": 6148,
       "band": [
-       4301,
-       7988
+       4304,
+       7992
       ],
       "value": 7366.0,
       "clamped": false,
-      "gap_vs_consensus_pct": 19.9
+      "gap_vs_consensus_pct": 19.8
      },
      "weights": {
       "near_fy": 2026,
@@ -4948,16 +4948,16 @@
      {
       "key": "consensus_eps",
       "label": "같은 배수 × 컨센서스 12MF EPS(유통주식 기준)",
-      "value": 94100,
+      "value": 94200,
       "multiple": 15.319,
-      "basis": "15.32배 × 6,144.26원 (FnGuide 12MF 6,144.26원 ÷ k 1.0000)"
+      "basis": "15.32배 × 6,147.95원 (FnGuide 12MF 6,147.95원 ÷ k 1.0000)"
      },
      {
       "key": "street",
       "label": "스트리트 내재 PER(컨센서스 목표주가 ÷ 12MF EPS × k) × EPS 입력값",
-      "value": 136400,
-      "multiple": 18.518,
-      "basis": "18.52배 × 7,366원"
+      "value": 135000,
+      "multiple": 18.326,
+      "basis": "18.33배 × 7,366원"
      },
      {
       "key": "own_band_median",
@@ -4987,7 +4987,7 @@
      "유효 연도 수(2~5개)를 바꾼 민감도 85,700원~133,100원 — 환산가 대비 ±15% 범위를 벗어남"
     ],
     "status": "updated",
-    "note": "PER 15.319배 × 12MF EPS 7,366원 = 112,800원. 자기 밴드 H 15.319배(최근 유효 2023·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 18.518배. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "PER 15.319배 × 12MF EPS 7,366원 = 112,800원. 자기 밴드 H 15.319배(최근 유효 2023·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 18.326배. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": []
    },
@@ -4997,9 +4997,9 @@
     "ntm": {
      "date": "2026-09-30",
      "P": 81500.0,
-     "TP": 113778.0,
-     "E12": 6144.2575,
-     "B12": 50686.975,
+     "TP": 112667.0,
+     "E12": 6147.955,
+     "B12": 50692.5025,
      "P_basis": "FnGuide 집계(WiseReport 경유) 기준월 말 주가 — 현재가(네이버 시세 조회가)와 출처·시점이 달라 값이 다를 수 있음"
     },
     "forward": {
@@ -7697,10 +7697,10 @@
      },
      "street": {
       "tp": 65632.0,
-      "eps_12mf": 3590.26,
-      "eps_12mf_lane": 3850,
+      "eps_12mf": 3594.04,
+      "eps_12mf_lane": 3854,
       "k": 0.9325,
-      "S": 17.046,
+      "S": 17.028,
       "date": "2026-09-30",
       "e12_source": "FnGuide 월말 12개월 선행 EPS",
       "basis": "TP ÷ 12MF EPS × k",
@@ -7713,14 +7713,14 @@
       "kind": "eps_12mf",
       "scenario": "base",
       "raw": 4336.5,
-      "consensus_12mf_lane": 3850,
+      "consensus_12mf_lane": 3854,
       "band": [
-       2695,
-       5005
+       2698,
+       5011
       ],
       "value": 4336.5,
       "clamped": false,
-      "gap_vs_consensus_pct": 12.6
+      "gap_vs_consensus_pct": 12.5
      },
      "weights": {
       "near_fy": 2026,
@@ -7733,8 +7733,8 @@
      "n_sensitivity": {
       "2": 69300,
       "3": 73200,
-      "4": 73900,
-      "5": 73900
+      "4": 73800,
+      "5": 73800
      }
     },
     "alternatives": [
@@ -7750,14 +7750,14 @@
       "label": "같은 배수 × 컨센서스 12MF EPS(유통주식 기준)",
       "value": 65000,
       "multiple": 16.87,
-      "basis": "16.87배 × 3,850.26원 (FnGuide 12MF 3,590.26원 ÷ k 0.9325)"
+      "basis": "16.87배 × 3,854.31원 (FnGuide 12MF 3,594.04원 ÷ k 0.9325)"
      },
      {
       "key": "street",
       "label": "스트리트 내재 PER(컨센서스 목표주가 ÷ 12MF EPS × k) × EPS 입력값",
-      "value": 73900,
-      "multiple": 17.046,
-      "basis": "17.05배 × 4,336.5원"
+      "value": 73800,
+      "multiple": 17.028,
+      "basis": "17.028배 × 4,336.5원"
      },
      {
       "key": "own_band_median",
@@ -7786,10 +7786,10 @@
      "기본 등급: 연도별 관측 3개에 기댄 평균회귀 값이라 높음 등급은 두지 않음"
     ],
     "status": "updated",
-    "note": "PER 16.870배 × 12MF EPS 4,336.5원 = 73,200원. 자기 밴드 H 16.870배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 17.046배. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "PER 16.870배 × 12MF EPS 4,336.5원 = 73,200원. 자기 밴드 H 16.870배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 17.028배. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": [
-     "현재가 대비 +91.9%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 16.87배(자기 밴드 H 16.87배, 스트리트 17.05배 중 낮은 값) · 연장 12MF EPS 4,336.5원 — 컨센서스(유통주식 기준) 3,850원 대비 +13% · 컨센서스 EPS 적용 시 65,000원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
+     "현재가 대비 +91.9%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 16.87배(자기 밴드 H 16.87배, 스트리트 17.03배 중 낮은 값) · 연장 12MF EPS 4,336.5원 — 컨센서스(유통주식 기준) 3,854원 대비 +13% · 컨센서스 EPS 적용 시 65,000원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
     ]
    },
    "consensus_now": {
@@ -7799,8 +7799,8 @@
      "date": "2026-09-30",
      "P": 37550.0,
      "TP": 65632.0,
-     "E12": 3590.2625,
-     "B12": 23877.9175,
+     "E12": 3594.04,
+     "B12": 23899.2825,
      "P_basis": "FnGuide 집계(WiseReport 경유) 기준월 말 주가 — 현재가(네이버 시세 조회가)와 출처·시점이 달라 값이 다를 수 있음"
     },
     "forward": {
@@ -11206,8 +11206,8 @@
     "eps_12mf": 3274,
     "per_now_2027e": 11.3,
     "pbr_now": 1.459,
-    "updated_target_price": 73400,
-    "upside_pct": 79.2,
+    "updated_target_price": 73300,
+    "upside_pct": 79.0,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -11222,9 +11222,9 @@
       "net_debt_ex_other_financial_bn": -236.1,
       "net_debt_incl_lease_bn": -246.1
      },
-     "formula": "PER 22.409배 × 12MF EPS 3,274.25원 = 73,400원",
+     "formula": "PER 22.390배 × 12MF EPS 3,274.25원 = 73,300원",
      "multiple_kind": "PER",
-     "multiple": 22.409,
+     "multiple": 22.39,
      "earnings_input": 3274.25
     },
     "rule": {
@@ -11336,18 +11336,18 @@
       "bps_basis": "2021-2022: 워크북 Valuation 시트 BPS(발행주식 기준) ÷ 그 해 연말 k(유통 ÷ 발행주식수) · 2023년 이후: 연말 지배주주지분 ÷ 그 해 연말 유통주식수(DART 사업보고서 주식의 총수 현황) · 기준연도와 사업보고서가 없는 연도: 최신 분기 지배주주지분 ÷ 그 분기말 유통주식수(반기말·연말만 보관)"
      },
      "street": {
-      "tp": 61111.0,
-      "eps_12mf": 2706.07,
-      "eps_12mf_lane": 2727,
+      "tp": 60556.0,
+      "eps_12mf": 2683.7,
+      "eps_12mf_lane": 2705,
       "k": 0.9923,
-      "S": 22.409,
+      "S": 22.39,
       "date": "2026-09-30",
       "e12_source": "FnGuide 월말 12개월 선행 EPS",
       "basis": "TP ÷ 12MF EPS × k",
       "bps": null
      },
-     "target_multiple": 22.409,
-     "effective_multiple": 22.409,
+     "target_multiple": 22.39,
+     "effective_multiple": 22.39,
      "binding": [
       "street_ceiling"
      ],
@@ -11355,14 +11355,14 @@
       "kind": "eps_12mf",
       "scenario": "base",
       "raw": 3274.25,
-      "consensus_12mf_lane": 2727,
+      "consensus_12mf_lane": 2705,
       "band": [
-       1909,
-       3545
+       1893,
+       3516
       ],
       "value": 3274.25,
       "clamped": false,
-      "gap_vs_consensus_pct": 20.1
+      "gap_vs_consensus_pct": 21.1
      },
      "weights": {
       "near_fy": 2026,
@@ -11373,33 +11373,33 @@
       "text": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)"
      },
      "n_sensitivity": {
-      "2": 73400,
-      "3": 73400,
-      "4": 73400,
-      "5": 73400
+      "2": 73300,
+      "3": 73300,
+      "4": 73300,
+      "5": 73300
      }
     },
     "alternatives": [
      {
       "key": "raw_lane_eps",
       "label": "같은 배수 × 연장 12MF EPS(±30% 제한 전)",
-      "value": 73400,
-      "multiple": 22.409,
-      "basis": "22.41배 × 3,274.25원"
+      "value": 73300,
+      "multiple": 22.39,
+      "basis": "22.39배 × 3,274.25원"
      },
      {
       "key": "consensus_eps",
       "label": "같은 배수 × 컨센서스 12MF EPS(유통주식 기준)",
-      "value": 61100,
-      "multiple": 22.409,
-      "basis": "22.41배 × 2,727.1원 (FnGuide 12MF 2,706.07원 ÷ k 0.9923)"
+      "value": 60600,
+      "multiple": 22.39,
+      "basis": "22.39배 × 2,704.56원 (FnGuide 12MF 2,683.7원 ÷ k 0.9923)"
      },
      {
       "key": "street",
       "label": "스트리트 내재 PER(컨센서스 목표주가 ÷ 12MF EPS × k) × EPS 입력값",
-      "value": 73400,
-      "multiple": 22.409,
-      "basis": "22.41배 × 3,274.25원"
+      "value": 73300,
+      "multiple": 22.39,
+      "basis": "22.39배 × 3,274.25원"
      },
      {
       "key": "own_band_median",
@@ -11428,10 +11428,10 @@
      "스트리트 상한 적용"
     ],
     "status": "updated",
-    "note": "PER 22.409배 × 12MF EPS 3,274.25원 = 73,400원. 자기 밴드 H 38.913배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 22.409배 · 스트리트 상한 적용. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "PER 22.390배 × 12MF EPS 3,274.25원 = 73,300원. 자기 밴드 H 38.913배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 22.390배 · 스트리트 상한 적용. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": [
-     "현재가 대비 +79.2%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 22.41배(자기 밴드 H 38.91배, 스트리트 22.41배 중 낮은 값) · 연장 12MF EPS 3,274.25원 — 컨센서스(유통주식 기준) 2,727원 대비 +20% · 컨센서스 EPS 적용 시 61,100원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
+     "현재가 대비 +79.0%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 22.39배(자기 밴드 H 38.91배, 스트리트 22.39배 중 낮은 값) · 연장 12MF EPS 3,274.25원 — 컨센서스(유통주식 기준) 2,705원 대비 +21% · 컨센서스 EPS 적용 시 60,600원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
     ]
    },
    "consensus_now": {
@@ -11440,35 +11440,35 @@
     "ntm": {
      "date": "2026-09-30",
      "P": 42900.0,
-     "TP": 61111.0,
-     "E12": 2706.065,
-     "B12": 31581.9525,
+     "TP": 60556.0,
+     "E12": 2683.695,
+     "B12": 31571.0775,
      "P_basis": "FnGuide 집계(WiseReport 경유) 기준월 말 주가 — 현재가(네이버 시세 조회가)와 출처·시점이 달라 값이 다를 수 있음"
     },
     "forward": {
      "2026": {
       "label": "2026.12(E)",
       "estimate": true,
-      "revenue": 629.1,
-      "operating_profit": 76.7,
-      "controlling_net_income": 48.0,
-      "eps": 2567.0
+      "revenue": 626.1,
+      "operating_profit": 75.9,
+      "controlling_net_income": 47.3,
+      "eps": 2530.0
      },
      "2027": {
       "label": "2027.12(E)",
       "estimate": true,
-      "revenue": 570.2,
-      "operating_profit": 72.1,
-      "controlling_net_income": 51.4,
-      "eps": 2752.0
+      "revenue": 572.8,
+      "operating_profit": 72.4,
+      "controlling_net_income": 51.8,
+      "eps": 2770.0
      },
      "2028": {
       "label": "2028.12(E)",
       "estimate": true,
-      "revenue": 607.9,
-      "operating_profit": 80.5,
-      "controlling_net_income": 56.6,
-      "eps": 3026.0
+      "revenue": 614.5,
+      "operating_profit": 82.1,
+      "controlling_net_income": 57.7,
+      "eps": 3089.0
      }
     },
     "unit": {
@@ -14463,8 +14463,8 @@
     "eps_12mf": 2284,
     "per_now_2027e": 15.5,
     "pbr_now": 0.249,
-    "updated_target_price": 18100,
-    "upside_pct": -47.4,
+    "updated_target_price": 18200,
+    "upside_pct": -47.1,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -14480,12 +14480,12 @@
       "net_debt_incl_lease_bn": null,
       "lease_note": "재무상태표에 리스부채 별도 행 없음(기타금융부채 등에 포함 가능) — 리스 포함 순차입금 미산출"
      },
-     "operating_value_bn": 1826.7,
+     "operating_value_bn": 1828.6,
      "stake_value_bn": 363.2,
      "net_debt_bn": 1532.0,
      "minority_bn": 281.8,
-     "equity_value_bn": 376.1,
-     "formula": "영업가치 1,826.7 + 지분가치 363.2 − 순차입금 1,532.0 − 상장 자회사 비지배지분 281.8 = 주주가치 376.1십억원 ÷ 20,766,908주"
+     "equity_value_bn": 378.0,
+     "formula": "영업가치 1,828.6 + 지분가치 363.2 − 순차입금 1,532.0 − 상장 자회사 비지배지분 281.8 = 주주가치 378.0십억원 ÷ 20,766,908주"
     },
     "rule": {
      "method_original": "sotp",
@@ -14648,21 +14648,21 @@
      {
       "key": "sotp_nd_ex_other_financial",
       "label": "SOTP base · 순차입금 기타유동금융자산을 현금성으로 보지 않음",
-      "value": 6800,
+      "value": 6900,
       "multiple": null,
       "basis": "순차입금 1,767.2십억원"
      },
      {
       "key": "sotp_no_deduction",
       "label": "SOTP base · 비지배지분 차감 전(참고)",
-      "value": 31700,
+      "value": 31800,
       "multiple": null,
       "basis": "상장 자회사 비지배지분 281.8십억원 미차감"
      },
      {
       "key": "sotp_book_nci",
       "label": "SOTP base · 연결 비지배지분 장부가 전액 차감(보수적 하한)",
-      "value": 800,
+      "value": 900,
       "multiple": null,
       "basis": "2026Q2 연결 재무상태표 비지배지분 641.4십억원 차감(시가 차감 대신)"
      },
@@ -14671,12 +14671,12 @@
       "label": "SOTP base · FY2026E 이익 기준",
       "value": null,
       "multiple": null,
-      "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용 · 주주가치 -286.8십억원 ≤ 0"
+      "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용 · 주주가치 -285.4십억원 ≤ 0"
      },
      {
       "key": "sotp_FY2027E",
       "label": "SOTP base · FY2027E 이익 기준",
-      "value": 28700,
+      "value": 28900,
       "multiple": null,
       "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용"
      }
@@ -14685,10 +14685,10 @@
     "confidence_reasons": [
      "부문 배수 대체(글로벌 OTT·현대홈쇼핑·피프스시즌 갱신 불가)와 순차입금 정의·이익 연도에 따라 값이 크게 달라짐 — 범위로만 제시",
      "bear 시나리오 주주가치 ≤ 0",
-     "비지배지분은 상장 자회사(스튜디오드래곤)만 시가로 차감 — 비상장 자회사 몫은 빼지 않아 base가 높게 나올 수 있음(연결 장부가 전액 차감 시 800원)"
+     "비지배지분은 상장 자회사(스튜디오드래곤)만 시가로 차감 — 비상장 자회사 몫은 빼지 않아 base가 높게 나올 수 있음(연결 장부가 전액 차감 시 900원)"
     ],
     "status": "range",
-    "note": "CJ ENM 부문별 SOTP(12MF, 상장 자회사 비지배지분 시가 차감). base 18,100원 · bear 주주가치 ≤ 0(순차입금·상장 자회사 비지배지분이 영업가치+지분가치를 넘음) · bull 84,100원 · 순차입금 정의별 6,800원~18,100원 · 비지배지분 차감 전 31,700원 · 연결 비지배지분 장부가 전액 차감 시 800원. 단일 값이 아니라 범위로 읽을 것. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "CJ ENM 부문별 SOTP(12MF, 상장 자회사 비지배지분 시가 차감). base 18,200원 · bear 주주가치 ≤ 0(순차입금·상장 자회사 비지배지분이 영업가치+지분가치를 넘음) · bull 84,200원 · 순차입금 정의별 6,900원~18,200원 · 비지배지분 차감 전 31,800원 · 연결 비지배지분 장부가 전액 차감 시 900원. 단일 값이 아니라 범위로 읽을 것. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": [
      "리스부채가 재무상태표 별도 행으로 없어(기타금융부채 등에 포함 추정) 리스 포함 순차입금 변형을 산출하지 않음",
@@ -14699,11 +14699,11 @@
      "weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "scenarios": {
       "bear": {
-       "operating_value_bn": 535.1,
+       "operating_value_bn": 535.8,
        "stake_value_bn": 363.2,
        "net_debt_bn": 1532.0,
        "minority_bn": 281.8,
-       "equity_value_bn": -915.6,
+       "equity_value_bn": -914.8,
        "per_share": null,
        "equity_le_zero": true,
        "segments": [
@@ -14725,8 +14725,8 @@
          "op_fy_far": 77.56,
          "op_used": 80.27,
          "noplat": 60.21,
-         "multiple": 7.374,
-         "value_bn": 444.0,
+         "multiple": 7.387,
+         "value_bn": 444.7,
          "floored_at_zero": false
         },
         {
@@ -14736,8 +14736,8 @@
          "op_fy_far": 11.83,
          "op_used": 11.68,
          "noplat": 8.76,
-         "multiple": 10.4,
-         "value_bn": 91.1,
+         "multiple": 10.393,
+         "value_bn": 91.0,
          "floored_at_zero": false
         },
         {
@@ -14747,19 +14747,19 @@
          "op_fy_far": -33.12,
          "op_used": -29.52,
          "noplat": -22.14,
-         "multiple": 14.021,
+         "multiple": 14.058,
          "value_bn": 0.0,
          "floored_at_zero": true
         }
        ]
       },
       "base": {
-       "operating_value_bn": 1826.7,
+       "operating_value_bn": 1828.6,
        "stake_value_bn": 363.2,
        "net_debt_bn": 1532.0,
        "minority_bn": 281.8,
-       "equity_value_bn": 376.1,
-       "per_share": 18100,
+       "equity_value_bn": 378.0,
+       "per_share": 18200,
        "equity_le_zero": false,
        "segments": [
         {
@@ -14780,8 +14780,8 @@
          "op_fy_far": 108.89,
          "op_used": 107.42,
          "noplat": 80.56,
-         "multiple": 7.374,
-         "value_bn": 594.1,
+         "multiple": 7.387,
+         "value_bn": 595.1,
          "floored_at_zero": false
         },
         {
@@ -14791,8 +14791,8 @@
          "op_fy_far": 64.68,
          "op_used": 57.89,
          "noplat": 43.42,
-         "multiple": 10.4,
-         "value_bn": 451.5,
+         "multiple": 10.393,
+         "value_bn": 451.2,
          "floored_at_zero": false
         },
         {
@@ -14802,19 +14802,19 @@
          "op_fy_far": 50.4,
          "op_used": 42.5,
          "noplat": 31.87,
-         "multiple": 14.021,
-         "value_bn": 446.9,
+         "multiple": 14.058,
+         "value_bn": 448.0,
          "floored_at_zero": false
         }
        ]
       },
       "bull": {
-       "operating_value_bn": 3196.1,
+       "operating_value_bn": 3199.7,
        "stake_value_bn": 363.2,
        "net_debt_bn": 1532.0,
        "minority_bn": 281.8,
-       "equity_value_bn": 1745.5,
-       "per_share": 84100,
+       "equity_value_bn": 1749.1,
+       "per_share": 84200,
        "equity_le_zero": false,
        "segments": [
         {
@@ -14835,8 +14835,8 @@
          "op_fy_far": 130.79,
          "op_used": 126.16,
          "noplat": 94.62,
-         "multiple": 7.374,
-         "value_bn": 697.7,
+         "multiple": 7.387,
+         "value_bn": 699.0,
          "floored_at_zero": false
         },
         {
@@ -14846,8 +14846,8 @@
          "op_fy_far": 117.96,
          "op_used": 103.91,
          "noplat": 77.93,
-         "multiple": 10.4,
-         "value_bn": 810.4,
+         "multiple": 10.393,
+         "value_bn": 809.9,
          "floored_at_zero": false
         },
         {
@@ -14857,8 +14857,8 @@
          "op_fy_far": 121.89,
          "op_used": 105.56,
          "noplat": 79.17,
-         "multiple": 14.021,
-         "value_bn": 1110.1,
+         "multiple": 14.058,
+         "value_bn": 1113.0,
          "floored_at_zero": false
         }
        ]
@@ -14869,24 +14869,24 @@
        "key": "net_debt",
        "label": "차입금(유동성사채 포함) − 현금 − 단기금융상품 − 기타유동금융자산(기본 정의)",
        "net_debt_bn": 1532.0,
-       "equity_value_bn": 376.1,
-       "per_share": 18100
+       "equity_value_bn": 378.0,
+       "per_share": 18200
       },
       {
        "key": "ex_other_financial",
        "label": "기타유동금융자산을 현금성으로 보지 않음",
        "net_debt_bn": 1767.2,
-       "equity_value_bn": 140.8,
-       "per_share": 6800
+       "equity_value_bn": 142.8,
+       "per_share": 6900
       }
      ],
      "bookends": {
       "FY2026E": {
        "per_share": null,
        "equity_le_zero": true,
-       "equity_value_bn": -286.8
+       "equity_value_bn": -285.4
       },
-      "FY2027E": 28700
+      "FY2027E": 28900
      },
      "segments": [
       {
@@ -14939,8 +14939,8 @@
        "op_fy_far": 108.89,
        "op_used": 107.42,
        "noplat": 80.56,
-       "multiple": 7.374,
-       "value_bn": 594.1,
+       "multiple": 7.387,
+       "value_bn": 595.1,
        "floored_at_zero": false,
        "op_source": "커버리지 레인 부문 영업이익(SOTP 입력)",
        "peers": [
@@ -14949,12 +14949,12 @@
          "name": "GS리테일",
          "price": 22500.0,
          "price_basis": "월봉 종가",
-         "eps_near": 2683.0,
-         "eps_far": 2995.0,
-         "eps_12mf": 2917.0,
+         "eps_near": 2671.0,
+         "eps_far": 2986.0,
+         "eps_12mf": 2907.25,
          "k": null,
          "k_basis": "자기주식 자료 없음 — 발행주식 기준 그대로(k = 1)",
-         "per_12mf": 7.71
+         "per_12mf": 7.74
         },
         {
          "code": "023530",
@@ -14970,7 +14970,7 @@
         }
        ],
        "peer_adjustment": 1.0,
-       "multiple_basis": "GS리테일 7.71배 · 롯데쇼핑 7.03배 평균",
+       "multiple_basis": "GS리테일 7.74배 · 롯데쇼핑 7.03배 평균",
        "substitute_note": "워크북 기준 현대홈쇼핑은 시세가 없어 GS리테일·롯데쇼핑 12MF PER로 대체(순수 홈쇼핑 업체 아님)",
        "workbook_multiple": 7.75,
        "workbook_value_bn": 459.1
@@ -14982,8 +14982,8 @@
        "op_fy_far": 64.68,
        "op_used": 57.89,
        "noplat": 43.42,
-       "multiple": 10.4,
-       "value_bn": 451.5,
+       "multiple": 10.393,
+       "value_bn": 451.2,
        "floored_at_zero": false,
        "op_source": "커버리지 레인 부문 영업이익(SOTP 입력)",
        "peers": [
@@ -15016,16 +15016,16 @@
          "name": "와이지엔터테인먼트",
          "price": 43200.0,
          "price_basis": "월봉 종가",
-         "eps_near": 2567.0,
-         "eps_far": 2752.0,
-         "eps_12mf": 2705.75,
+         "eps_near": 2530.0,
+         "eps_far": 2770.0,
+         "eps_12mf": 2710.0,
          "k": 0.9923,
          "k_basis": "유통주식수 ÷ 발행주식수(DART)",
-         "per_12mf": 15.84
+         "per_12mf": 15.82
         }
        ],
        "peer_adjustment": 0.8,
-       "multiple_basis": "에스엠 13.38배 · JYP Ent. 9.78배 · 와이지엔터테인먼트 15.84배 평균 × 0.8",
+       "multiple_basis": "에스엠 13.38배 · JYP Ent. 9.78배 · 와이지엔터테인먼트 15.82배 평균 × 0.8",
        "substitute_note": "엔터 3사(SM·JYP·YG) 12MF PER 평균에 20% 할인(워크북 표 1 관례)",
        "workbook_multiple": 14.7,
        "workbook_value_bn": 1222.4
@@ -15037,8 +15037,8 @@
        "op_fy_far": 50.4,
        "op_used": 42.5,
        "noplat": 31.87,
-       "multiple": 14.021,
-       "value_bn": 446.9,
+       "multiple": 14.058,
+       "value_bn": 448.0,
        "floored_at_zero": false,
        "op_source": "커버리지 레인 부문 영업이익(SOTP 입력)",
        "peers": [
@@ -15048,15 +15048,15 @@
          "price": 20250.0,
          "price_basis": "월봉 종가",
          "eps_near": 1187.0,
-         "eps_far": 1530.0,
-         "eps_12mf": 1444.25,
+         "eps_far": 1525.0,
+         "eps_12mf": 1440.5,
          "k": 1.0,
          "k_basis": "유통주식수 ÷ 발행주식수(DART)",
-         "per_12mf": 14.02
+         "per_12mf": 14.06
         }
        ],
        "peer_adjustment": 1.0,
-       "multiple_basis": "스튜디오드래곤 14.02배 평균",
+       "multiple_basis": "스튜디오드래곤 14.06배 평균",
        "substitute_note": "워크북의 (스튜디오드래곤 시총 + 피프스시즌 평가액) × 50% 방식은 피프스시즌이 비상장이라 갱신 불가 → 스튜디오드래곤 12MF PER × NOPLAT",
        "workbook_multiple": null,
        "workbook_value_bn": 1039.4
@@ -15119,23 +15119,23 @@
       "deduction_bn": 281.8,
       "variants": {
        "no_deduction": {
-        "equity_value_bn": 657.9,
-        "per_share": 31700
+        "equity_value_bn": 659.8,
+        "per_share": 31800
        },
        "book_nci": {
         "nci_book_bn": 641.4,
-        "equity_value_bn": 16.5,
-        "per_share": 800
+        "equity_value_bn": 18.4,
+        "per_share": 900
        }
       },
       "note": "부문 NOPLAT은 100% 연결 기준이라 상장 자회사(스튜디오드래곤)의 외부 주주 몫을 시가로 뺀다(시가총액 × (1 − 보유 지분율), 할인 없음). 티빙·피프스시즌 등 비상장 자회사의 비지배지분은 시가가 없어 빼지 않는다. 연결 재무상태표 비지배지분 장부가 전액을 빼는 값은 보수적 하한 참고로만 둔다."
      },
      "summary": {
       "bear": null,
-      "base": 18100,
-      "bull": 84100,
-      "base_low": 6800,
-      "base_high": 18100
+      "base": 18200,
+      "bull": 84200,
+      "base_low": 6900,
+      "base_high": 18200
      },
      "sensitivity": {
       "axes": {
@@ -15158,75 +15158,75 @@
        [
         null,
         null,
-        500,
+        600,
         7600,
-        14600
+        14700
        ],
        [
         null,
-        1400,
-        9300,
-        17200,
-        25100
+        1500,
+        9400,
+        17300,
+        25200
        ],
        [
-        500,
-        9300,
-        18100,
-        26900,
-        35700
+        600,
+        9400,
+        18200,
+        27000,
+        35800
        ],
        [
         7600,
-        17200,
-        26900,
-        36600,
-        46300
+        17300,
+        27000,
+        36700,
+        46400
        ],
        [
-        14600,
-        25100,
-        35700,
-        46300,
-        56800
+        14700,
+        25200,
+        35800,
+        46400,
+        56900
        ]
       ],
       "variants": [
        {
         "key": "tax_22",
         "label": "NOPLAT 세율 22%",
-        "per_share": 21600,
-        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 449.1십억원"
+        "per_share": 21700,
+        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 451.1십억원"
        },
        {
         "key": "tax_27_5",
         "label": "NOPLAT 세율 27.5%",
-        "per_share": 15200,
-        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 315.2십억원"
+        "per_share": 15300,
+        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 317.0십억원"
        },
        {
         "key": "media_workbook_18_1",
         "label": "미디어플랫폼 배수 워크북 18.1배",
-        "per_share": 33100,
-        "note": "워크북 2024-02 TP 표의 글로벌 OTT/방송사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.38배 대신) · 주주가치 686.7십억원"
+        "per_share": 33200,
+        "note": "워크북 2024-02 TP 표의 글로벌 OTT/방송사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.38배 대신) · 주주가치 688.6십억원"
        },
        {
         "key": "media_workbook_22",
         "label": "미디어플랫폼 배수 워크북 22배",
-        "per_share": 39800,
-        "note": "워크북 2023-04 TP 표의 글로벌 OTT 4사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.38배 대신) · 주주가치 825.7십억원"
+        "per_share": 39900,
+        "note": "워크북 2023-04 TP 표의 글로벌 OTT 4사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.38배 대신) · 주주가치 827.6십억원"
        },
        {
         "key": "music_no_discount",
         "label": "음악 배수 할인 없음",
-        "per_share": 23500,
-        "note": "피어 12MF PER 평균 13.00배 그대로(20% 할인 제외) · 주주가치 489.0십억원"
+        "per_share": 23600,
+        "note": "피어 12MF PER 평균 12.99배 그대로(20% 할인 제외) · 주주가치 490.8십억원"
        },
        {
         "key": "no_minority_deduction",
         "label": "비지배지분 미차감",
-        "per_share": 31700,
-        "note": "상장 자회사 비지배지분 미차감(시가 281.8십억원) · 주주가치 657.9십억원"
+        "per_share": 31800,
+        "note": "상장 자회사 비지배지분 미차감(시가 281.8십억원) · 주주가치 659.8십억원"
        }
       ],
       "note": "base 12MF · 기본 순차입금 · 상장 자회사 비지배지분 차감 기준. 행 = 모든 부문 배수 변화(%), 열 = 모든 부문 NOPLAT 변화(%) — 둘 다 영업가치에 곱해져 표가 대칭이다. 지분가치·순차입금·비지배지분은 고정. 주주가치 ≤ 0이면 빈칸."
@@ -15248,7 +15248,7 @@
       "basis": "커버리지 레인 부문 영업이익(SOTP 입력) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일",
       "text": "커버리지 레인 base 연결 영업이익 12MF 240.2십억원 = 부문 영업이익 합계 255.3(SOTP 입력) + 연결조정 -15.1 · FnGuide 컨센서스 12MF 영업이익 191.7십억원(연결 기준, 같은 가중) · 차이 +25.3% — SOTP 영업가치는 연결조정을 뺀 부문 영업이익에 비례하므로 커버리지 레인 이익이 컨센서스와 다른 만큼 달라진다(앙상블 연장 영업이익과는 다른 계열)"
      },
-     "headline_text": "base 18,100원 · 순차입금 정의별 6,800~18,100원 · 비지배지분 차감 전 31,700원 · bull 84,100원 · bear 주주가치 ≤ 0",
+     "headline_text": "base 18,200원 · 순차입금 정의별 6,900~18,200원 · 비지배지분 차감 전 31,800원 · bull 84,200원 · bear 주주가치 ≤ 0",
      "excluded": "연결조정(부문 합계와 연결 영업이익의 차이)은 워크북처럼 제외 · 티빙·피프스시즌 등 비상장 자회사의 비지배지분은 시가가 없어 차감하지 않음(상장 자회사 스튜디오드래곤의 비지배지분만 시가로 차감)",
      "source": "커버리지 레인 부문 영업이익(SOTP 입력) — 2026Q1~Q2 실적 + 이후 시나리오 · FnGuide 피어 컨센서스 EPS와 기준월 종가 · 관계사 시가총액(종가 × 상장주식수) · DART 연결 순차입금"
     }
@@ -18584,26 +18584,26 @@
      "2026": {
       "label": "2026.12(E)",
       "estimate": true,
-      "revenue": 584.9,
-      "operating_profit": 47.4,
+      "revenue": 586.0,
+      "operating_profit": 47.5,
       "controlling_net_income": 35.7,
       "eps": 1187.0
      },
      "2027": {
       "label": "2027.12(E)",
       "estimate": true,
-      "revenue": 646.7,
-      "operating_profit": 59.0,
-      "controlling_net_income": 46.0,
-      "eps": 1530.0
+      "revenue": 646.0,
+      "operating_profit": 58.9,
+      "controlling_net_income": 45.8,
+      "eps": 1525.0
      },
      "2028": {
       "label": "2028.12(E)",
       "estimate": true,
-      "revenue": 694.7,
+      "revenue": 694.4,
       "operating_profit": 68.6,
-      "controlling_net_income": 52.7,
-      "eps": 1753.0
+      "controlling_net_income": 52.6,
+      "eps": 1750.0
      }
     },
     "unit": {
@@ -25924,11 +25924,11 @@
       "bps_basis": "2021-2022: 워크북 Valuation 시트 BPS(발행주식 기준) ÷ 그 해 연말 k(유통 ÷ 발행주식수) · 2023년 이후: 연말 지배주주지분 ÷ 그 해 연말 유통주식수(DART 사업보고서 주식의 총수 현황) · 기준연도와 사업보고서가 없는 연도: 최신 분기 지배주주지분 ÷ 그 분기말 유통주식수(반기말·연말만 보관)"
      },
      "street": {
-      "tp": 17667.0,
-      "eps_12mf": 1125.26,
-      "eps_12mf_lane": 1125,
+      "tp": 17500.0,
+      "eps_12mf": 1206.57,
+      "eps_12mf_lane": 1207,
       "k": 0.9998,
-      "S": 0.353,
+      "S": 0.349,
       "date": "2026-09-30",
       "e12_source": "FnGuide 월말 12개월 선행 EPS",
       "basis": "TP ÷ 최신 BPS",
@@ -25955,8 +25955,8 @@
      "n_sensitivity": {
       "2": 14700,
       "3": 15100,
-      "4": 17700,
-      "5": 17700
+      "4": 17500,
+      "5": 17500
      }
     },
     "alternatives": [
@@ -25970,8 +25970,8 @@
      {
       "key": "street",
       "label": "컨센서스 목표주가 평균(= 스트리트 PBR × BPS)",
-      "value": 17667.0,
-      "multiple": 0.353,
+      "value": 17500.0,
+      "multiple": 0.349,
       "basis": "FnGuide 집계 목표주가 ÷ 최신 BPS"
      },
      {
@@ -25992,10 +25992,10 @@
     "confidence": "low",
     "confidence_reasons": [
      "PBR 폴백 적용(이익 입력을 쓰지 않음)",
-     "유효 연도 수(2~5개)를 바꾼 민감도 14,700원~17,700원 — 환산가 대비 ±15% 범위를 벗어남"
+     "유효 연도 수(2~5개)를 바꾼 민감도 14,700원~17,500원 — 환산가 대비 ±15% 범위를 벗어남"
     ],
     "status": "updated",
-    "note": "PBR 0.302배 × BPS 50,088원 = 15,100원. 자기 밴드 H 0.302배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 0.353배. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "PBR 0.302배 × BPS 50,088원 = 15,100원. 자기 밴드 H 0.302배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 0.349배. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": []
    },
@@ -26005,9 +26005,9 @@
     "ntm": {
      "date": "2026-09-30",
      "P": 11670.0,
-     "TP": 17667.0,
-     "E12": 1125.26,
-     "B12": 70649.65,
+     "TP": 17500.0,
+     "E12": 1206.565,
+     "B12": 65237.0025,
      "P_basis": "FnGuide 집계(WiseReport 경유) 기준월 말 주가 — 현재가(네이버 시세 조회가)와 출처·시점이 달라 값이 다를 수 있음"
     },
     "forward": {
@@ -29604,8 +29604,8 @@
     "eps_12mf": 867,
     "per_now_2027e": 9.3,
     "pbr_now": 1.153,
-    "updated_target_price": 10600,
-    "upside_pct": 25.7,
+    "updated_target_price": 10800,
+    "upside_pct": 28.1,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -29620,9 +29620,9 @@
       "net_debt_ex_other_financial_bn": -198.4,
       "net_debt_incl_lease_bn": -378.6
      },
-     "formula": "PER 12.262배 × 12MF EPS 866.75원 = 10,600원",
+     "formula": "PER 12.415배 × 12MF EPS 866.75원 = 10,800원",
      "multiple_kind": "PER",
-     "multiple": 12.262,
+     "multiple": 12.415,
      "earnings_input": 866.75
     },
     "rule": {
@@ -29733,18 +29733,18 @@
       "bps_basis": "2021-2022: 워크북 Valuation 시트 BPS(발행주식 기준) ÷ 그 해 연말 k(유통 ÷ 발행주식수) · 2023년 이후: 연말 지배주주지분 ÷ 그 해 연말 유통주식수(DART 사업보고서 주식의 총수 현황) · 기준연도와 사업보고서가 없는 연도: 최신 분기 지배주주지분 ÷ 그 분기말 유통주식수(반기말·연말만 보관)"
      },
      "street": {
-      "tp": 12750.0,
-      "eps_12mf": 1039.81,
-      "eps_12mf_lane": 1040,
+      "tp": 13143.0,
+      "eps_12mf": 1058.6,
+      "eps_12mf_lane": 1059,
       "k": 1.0,
-      "S": 12.262,
+      "S": 12.415,
       "date": "2026-09-30",
       "e12_source": "FnGuide 월말 12개월 선행 EPS",
       "basis": "TP ÷ 12MF EPS × k",
       "bps": null
      },
-     "target_multiple": 12.262,
-     "effective_multiple": 12.262,
+     "target_multiple": 12.415,
+     "effective_multiple": 12.415,
      "binding": [
       "street_ceiling"
      ],
@@ -29752,14 +29752,14 @@
       "kind": "eps_12mf",
       "scenario": "base",
       "raw": 866.75,
-      "consensus_12mf_lane": 1040,
+      "consensus_12mf_lane": 1059,
       "band": [
-       728,
-       1352
+       741,
+       1376
       ],
       "value": 866.75,
       "clamped": false,
-      "gap_vs_consensus_pct": -16.6
+      "gap_vs_consensus_pct": -18.1
      },
      "weights": {
       "near_fy": 2026,
@@ -29770,32 +29770,32 @@
       "text": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)"
      },
      "n_sensitivity": {
-      "2": 10600,
-      "3": 10600,
-      "4": 10600
+      "2": 10800,
+      "3": 10800,
+      "4": 10800
      }
     },
     "alternatives": [
      {
       "key": "raw_lane_eps",
       "label": "같은 배수 × 연장 12MF EPS(±30% 제한 전)",
-      "value": 10600,
-      "multiple": 12.262,
-      "basis": "12.26배 × 866.75원"
+      "value": 10800,
+      "multiple": 12.415,
+      "basis": "12.42배 × 866.75원"
      },
      {
       "key": "consensus_eps",
       "label": "같은 배수 × 컨센서스 12MF EPS(유통주식 기준)",
-      "value": 12800,
-      "multiple": 12.262,
-      "basis": "12.262배 × 1,039.81원 (FnGuide 12MF 1,039.81원 ÷ k 1.0000)"
+      "value": 13100,
+      "multiple": 12.415,
+      "basis": "12.42배 × 1,058.6원 (FnGuide 12MF 1,058.6원 ÷ k 1.0000)"
      },
      {
       "key": "street_per",
       "label": "스트리트 내재 PER(컨센서스 목표주가 ÷ 12MF EPS × k) × EPS 입력값",
-      "value": 10600,
-      "multiple": 12.262,
-      "basis": "12.26배 × 866.75원"
+      "value": 10800,
+      "multiple": 12.415,
+      "basis": "12.42배 × 866.75원"
      },
      {
       "key": "own_band_median",
@@ -29835,7 +29835,7 @@
      {
       "key": "street",
       "label": "컨센서스 목표주가 평균",
-      "value": 12750.0,
+      "value": 13143.0,
       "multiple": null,
       "basis": "FnGuide 집계 · 배수 없음(컨센서스 목표주가 평균 그대로)"
      }
@@ -29845,7 +29845,7 @@
      "스트리트 상한 적용"
     ],
     "status": "reference_band",
-    "note": "워크북에 애널리스트 추정이 없는 템플릿 — 자기 밴드 참고가. PER 12.262배 × 12MF EPS 866.75원 = 10,600원. 자기 밴드 H 18.441배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 12.262배 · 스트리트 상한 적용. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "워크북에 애널리스트 추정이 없는 템플릿 — 자기 밴드 참고가. PER 12.415배 × 12MF EPS 866.75원 = 10,800원. 자기 밴드 H 18.441배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 12.415배 · 스트리트 상한 적용. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": []
    },
@@ -29855,35 +29855,35 @@
     "ntm": {
      "date": "2026-09-30",
      "P": 8780.0,
-     "TP": 12750.0,
-     "E12": 1039.81,
-     "B12": 8042.74,
+     "TP": 13143.0,
+     "E12": 1058.6025,
+     "B12": 8057.53,
      "P_basis": "FnGuide 집계(WiseReport 경유) 기준월 말 주가 — 현재가(네이버 시세 조회가)와 출처·시점이 달라 값이 다를 수 있음"
     },
     "forward": {
      "2026": {
       "label": "2026.12(E)",
       "estimate": true,
-      "revenue": 467.2,
-      "operating_profit": 67.8,
-      "controlling_net_income": 58.3,
-      "eps": 942.0
+      "revenue": 466.0,
+      "operating_profit": 67.5,
+      "controlling_net_income": 58.0,
+      "eps": 938.0
      },
      "2027": {
       "label": "2027.12(E)",
       "estimate": true,
-      "revenue": 492.3,
-      "operating_profit": 76.7,
-      "controlling_net_income": 66.3,
-      "eps": 1072.0
+      "revenue": 491.5,
+      "operating_profit": 76.5,
+      "controlling_net_income": 66.1,
+      "eps": 1069.0
      },
      "2028": {
       "label": "2028.12(E)",
       "estimate": true,
-      "revenue": 508.4,
-      "operating_profit": 85.9,
-      "controlling_net_income": 71.7,
-      "eps": 1160.0
+      "revenue": 507.3,
+      "operating_profit": 85.6,
+      "controlling_net_income": 71.5,
+      "eps": 1156.0
      }
     },
     "unit": {
@@ -34269,26 +34269,26 @@
      "2026": {
       "label": "2026.12(E)",
       "estimate": true,
-      "revenue": 1466.5,
-      "operating_profit": 213.0,
-      "controlling_net_income": 288.1,
-      "eps": 1346.0
+      "revenue": 1464.0,
+      "operating_profit": 210.1,
+      "controlling_net_income": 284.9,
+      "eps": 1332.0
      },
      "2027": {
       "label": "2027.12(E)",
       "estimate": true,
-      "revenue": 1479.5,
-      "operating_profit": 207.6,
-      "controlling_net_income": 282.8,
-      "eps": 1322.0
+      "revenue": 1473.0,
+      "operating_profit": 203.0,
+      "controlling_net_income": 278.3,
+      "eps": 1301.0
      },
      "2028": {
       "label": "2028.12(E)",
       "estimate": true,
-      "revenue": 1602.8,
-      "operating_profit": 270.6,
-      "controlling_net_income": 326.1,
-      "eps": 1524.0
+      "revenue": 1595.2,
+      "operating_profit": 265.3,
+      "controlling_net_income": 320.8,
+      "eps": 1499.0
      }
     },
     "unit": {
@@ -38057,26 +38057,26 @@
      "2026": {
       "label": "2026.12(E)",
       "estimate": true,
-      "revenue": 777.0,
-      "operating_profit": 193.7,
-      "controlling_net_income": 65.6,
-      "eps": 824.0
+      "revenue": 773.4,
+      "operating_profit": 190.3,
+      "controlling_net_income": 61.5,
+      "eps": 772.0
      },
      "2027": {
       "label": "2027.12(E)",
       "estimate": true,
-      "revenue": 856.4,
-      "operating_profit": 226.9,
-      "controlling_net_income": 122.8,
-      "eps": 1540.0
+      "revenue": 854.9,
+      "operating_profit": 224.8,
+      "controlling_net_income": 119.3,
+      "eps": 1496.0
      },
      "2028": {
       "label": "2028.12(E)",
       "estimate": true,
-      "revenue": 952.2,
-      "operating_profit": 266.9,
-      "controlling_net_income": 164.4,
-      "eps": 2062.0
+      "revenue": 950.3,
+      "operating_profit": 263.5,
+      "controlling_net_income": 157.8,
+      "eps": 1979.0
      }
     },
     "unit": {
@@ -41583,8 +41583,8 @@
     "eps_12mf": 866,
     "per_now_2027e": 10.0,
     "pbr_now": 0.472,
-    "updated_target_price": 12100,
-    "upside_pct": 28.5,
+    "updated_target_price": 12200,
+    "upside_pct": 29.5,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -41599,9 +41599,9 @@
       "net_debt_ex_other_financial_bn": 832.4,
       "net_debt_incl_lease_bn": 1028.3
      },
-     "formula": "PER 14.019배 × 12MF EPS 865.75원 = 12,100원",
+     "formula": "PER 14.103배 × 12MF EPS 865.75원 = 12,200원",
      "multiple_kind": "PER",
-     "multiple": 14.019,
+     "multiple": 14.103,
      "earnings_input": 865.75
     },
     "rule": {
@@ -41712,18 +41712,18 @@
       "bps_basis": "2021-2022: 워크북 Valuation 시트 BPS(발행주식 기준) ÷ 그 해 연말 k(유통 ÷ 발행주식수) · 2023년 이후: 연말 지배주주지분 ÷ 그 해 연말 유통주식수(DART 사업보고서 주식의 총수 현황) · 기준연도와 사업보고서가 없는 연도: 최신 분기 지배주주지분 ÷ 그 분기말 유통주식수(반기말·연말만 보관)"
      },
      "street": {
-      "tp": 16556.0,
-      "eps_12mf": 1118.9,
-      "eps_12mf_lane": 1181,
+      "tp": 17100.0,
+      "eps_12mf": 1148.79,
+      "eps_12mf_lane": 1213,
       "k": 0.9474,
-      "S": 14.019,
+      "S": 14.103,
       "date": "2026-09-30",
       "e12_source": "FnGuide 월말 12개월 선행 EPS",
       "basis": "TP ÷ 12MF EPS × k",
       "bps": null
      },
-     "target_multiple": 14.019,
-     "effective_multiple": 14.019,
+     "target_multiple": 14.103,
+     "effective_multiple": 14.103,
      "binding": [
       "street_ceiling"
      ],
@@ -41731,14 +41731,14 @@
       "kind": "eps_12mf",
       "scenario": "base",
       "raw": 865.75,
-      "consensus_12mf_lane": 1181,
+      "consensus_12mf_lane": 1213,
       "band": [
-       827,
-       1535
+       849,
+       1576
       ],
       "value": 865.75,
       "clamped": false,
-      "gap_vs_consensus_pct": -26.7
+      "gap_vs_consensus_pct": -28.6
      },
      "weights": {
       "near_fy": 2026,
@@ -41749,32 +41749,32 @@
       "text": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)"
      },
      "n_sensitivity": {
-      "2": 12100,
-      "3": 12100,
-      "4": 12100
+      "2": 12200,
+      "3": 12200,
+      "4": 12200
      }
     },
     "alternatives": [
      {
       "key": "raw_lane_eps",
       "label": "같은 배수 × 연장 12MF EPS(±30% 제한 전)",
-      "value": 12100,
-      "multiple": 14.019,
-      "basis": "14.02배 × 865.75원"
+      "value": 12200,
+      "multiple": 14.103,
+      "basis": "14.10배 × 865.75원"
      },
      {
       "key": "consensus_eps",
       "label": "같은 배수 × 컨센서스 12MF EPS(유통주식 기준)",
-      "value": 16600,
-      "multiple": 14.019,
-      "basis": "14.02배 × 1,180.99원 (FnGuide 12MF 1,118.9원 ÷ k 0.9474)"
+      "value": 17100,
+      "multiple": 14.103,
+      "basis": "14.10배 × 1,212.54원 (FnGuide 12MF 1,148.79원 ÷ k 0.9474)"
      },
      {
       "key": "street_per",
       "label": "스트리트 내재 PER(컨센서스 목표주가 ÷ 12MF EPS × k) × EPS 입력값",
-      "value": 12100,
-      "multiple": 14.019,
-      "basis": "14.02배 × 865.75원"
+      "value": 12200,
+      "multiple": 14.103,
+      "basis": "14.10배 × 865.75원"
      },
      {
       "key": "own_band_median",
@@ -41814,7 +41814,7 @@
      {
       "key": "street",
       "label": "컨센서스 목표주가 평균",
-      "value": 16556.0,
+      "value": 17100.0,
       "multiple": null,
       "basis": "FnGuide 집계 · 배수 없음(컨센서스 목표주가 평균 그대로)"
      }
@@ -41824,7 +41824,7 @@
      "스트리트 상한 적용"
     ],
     "status": "reference_band",
-    "note": "워크북에 애널리스트 추정이 없는 템플릿 — 자기 밴드 참고가. PER 14.019배 × 12MF EPS 865.75원 = 12,100원. 자기 밴드 H 14.124배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 14.019배 · 스트리트 상한 적용. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "워크북에 애널리스트 추정이 없는 템플릿 — 자기 밴드 참고가. PER 14.103배 × 12MF EPS 865.75원 = 12,200원. 자기 밴드 H 14.124배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 14.103배 · 스트리트 상한 적용. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": []
    },
@@ -41834,35 +41834,35 @@
     "ntm": {
      "date": "2026-09-30",
      "P": 9330.0,
-     "TP": 16556.0,
-     "E12": 1118.8975,
-     "B12": 21284.8225,
+     "TP": 17100.0,
+     "E12": 1148.79,
+     "B12": 21345.765,
      "P_basis": "FnGuide 집계(WiseReport 경유) 기준월 말 주가 — 현재가(네이버 시세 조회가)와 출처·시점이 달라 값이 다를 수 있음"
     },
     "forward": {
      "2026": {
       "label": "2026.12(E)",
       "estimate": true,
-      "revenue": 1268.6,
-      "operating_profit": 166.1,
-      "controlling_net_income": 82.8,
-      "eps": 894.0
+      "revenue": 1271.9,
+      "operating_profit": 166.3,
+      "controlling_net_income": 82.9,
+      "eps": 895.0
      },
      "2027": {
       "label": "2027.12(E)",
       "estimate": true,
-      "revenue": 1381.7,
-      "operating_profit": 205.0,
-      "controlling_net_income": 110.6,
-      "eps": 1194.0
+      "revenue": 1380.8,
+      "operating_profit": 203.7,
+      "controlling_net_income": 109.8,
+      "eps": 1186.0
      },
      "2028": {
       "label": "2028.12(E)",
       "estimate": true,
-      "revenue": 1474.4,
-      "operating_profit": 241.1,
-      "controlling_net_income": 137.9,
-      "eps": 1489.0
+      "revenue": 1472.3,
+      "operating_profit": 239.7,
+      "controlling_net_income": 137.1,
+      "eps": 1481.0
      }
     },
     "unit": {
