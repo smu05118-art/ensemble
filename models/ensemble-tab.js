@@ -2,7 +2,9 @@
    HTML 문자열을 만드는 순수 함수와 DOM 연결(mount)을 나눴다. Node에서 require하면 순수 함수만 module.exports로 내보내고 DOM은 건드리지 않는다.
    계약의 선택 필드(range.sensitivity·cross_checks·op_vs_consensus·headline_text, flags, break_even, mapping_check, bps_basis,
    house_tp_in_consensus_snapshot, 현금흐름·세전이익 이력, sources.aliases·doc_type 등)와 이번 라운드 필드(op_vs_consensus.basis·segment_sum_bn·consolidation_adjustment_bn,
-   break_even.required_multiples, history.segment_labels·shares_history, own_band.years[].shares_basis, roll_forward.source.ytd_through·ytd_check)는 없을 수 있다 — 없으면 그 조각을 그리지 않는다. */
+   break_even.required_multiples, history.segment_labels·shares_history, own_band.years[].shares_basis, roll_forward.source.ytd_through·ytd_check)는 없을 수 있다 — 없으면 그 조각을 그리지 않는다.
+   라운드 4 필드(consensus_now.forward_retrieved_on·forward_point_in_time, range.segments[].peers[].eps_basis·eps_basis_label, op_vs_consensus.consensus_vintage,
+   range.sensitivity.equity_le_zero)도 없을 수 있다 — 없으면 이전 표기 그대로 둔다. */
 (function () {
   'use strict';
   const SCHEMA = 'ensemble-analyst-models/2';
@@ -40,8 +42,9 @@
   // 커버리지 레인 문구의 키 이름: as_of → 기준일, 점으로 이은 내부 경로(official_evidence.calibration) → 일반 명칭
   const plainNote = s => plain(s).replace(/\bas_of\b/g, '기준일').replace(/\b[a-z]+(?:_[a-z0-9]+)+\.[a-z_][a-z0-9_]*\b/g, '커버리지 레인 근거 자료');
   // 근거·출처 문구의 접수번호 키 이름(rcept_no·rcpNo)은 'DART'로 바꾸고 번호는 공시 링크로 단다.
-  // Open DART API 이름(fnlttSinglAcntAll)과 XBRL 계정 id(ifrs-full_…)도 화면 이름으로 바꾼다
-  const rcptHtml = s => esc(str(s).replace(/\s*\((?:fnltt\w+|ifrs-full_[^)]*)\)/g, '').replace(/\bfnltt\w+\s+CFS\s+CF\b/g, '연결 현금흐름표').replace(/\bfnltt\w+\b/g, '전체 재무제표')
+  // Open DART API 이름(fnlttSinglAcntAll)과 XBRL 계정 id(ifrs-full_…)도 화면 이름으로 바꾼다.
+  // 수집기가 붙인 영문 괄호('(dart.fss.or.kr viewer HTML)', '…, fetch_da.py)' 포함)는 걷는다 — 접수번호가 이미 DART 공시 링크다
+  const rcptHtml = s => esc(str(s).replace(/\s*\((?:fnltt\w+|ifrs-full_[^)]*)\)/g, '').replace(/\s*\(dart\.fss\.or\.kr\s+viewer\s+HTML[^)]*\)/gi, '').replace(/\bfnltt\w+\s+CFS\s+CF\b/g, '연결 현금흐름표').replace(/\bfnltt\w+\b/g, '전체 재무제표')
     .replace(/\b(?:DART\s+)?(?:rcept_no|rcpNo)\s*/g, 'DART ')).replace(/\b20\d{12}\b/g, no => dartLink(no, no));
 
   // ── 이름표 ──
@@ -50,7 +53,8 @@
   const statusLabels = {updated: '규칙 환산가', range: 'SOTP 범위', reference_band: '밴드 참고가', not_valued_rehabilitation: '회생절차 · 환산가 미산정', not_computable: '환산가 산출 불가'};
   const methodNames = {per: 'PER', pbr: 'PBR', ev_ebitda: 'EV/EBITDA', sotp: 'SOTP(부문합산)', none: '산정 안 함', unknown: '원본 산식 없음(템플릿)'};
   const bindingNames = {band_p80_cap: '자기 밴드 80백분위 상한', street_ceiling: '스트리트 상한', pbr_cap: 'PBR 정합 상한', eps_clamp: 'EPS 입력 ±30% 제한'};
-  const bandSourceNames = {workbook: '워크북 밴드 × k', dart_fy: 'DART 연간', ttm: '최근 4개 분기'};
+  // 워크북 연도(발행주식 기준)는 유통주식 기준으로 환산한다: EPS·BPS ÷ k, PER·PBR × k (k = 그 해 연말 유통/발행)
+  const bandSourceNames = {workbook: '워크북 밴드(EPS·BPS ÷ k, 배수 × k)', dart_fy: 'DART 연간', ttm: '최근 4개 분기'};
   const bucketNames = {borrowings: '차입금·사채', leases: '리스부채', cash: '현금및현금성자산', short_term_financial: '단기금융상품', other_current_financial: '기타유동금융자산'};
   const unitNames = {ratio: '비율(%)', KRWbn: '십억원', KRWmn: '백만원', persons: '명', visits: '회', visiting_days: '일'};
   const confNames = {low: '낮음', medium: '중간', high: '높음'};
@@ -130,6 +134,8 @@
   // 커버리지 레인 분기 추정(roll_forward.quarterly)의 지표 이름
   const rfqLabel = k => metricKo[k] ? esc(metricKo[k]) : driverNames[k] ? esc(driverNames[k]) : segmentNames[k] ? esc(segmentNames[k]) : '<code>' + esc(k) + '</code>';
   const flagNames = {going_concern: '계속기업 전제', sll_cb_mark: 'SLL 전환사채 전환가'};
+  // SOTP 피어 12MF EPS 출처(peers[].eps_basis)의 화면 이름 — 엔진 eps_basis_label이 없을 때만 쓴다
+  const epsBasisNames = {ntm: 'FnGuide 월말 12개월 선행 EPS(기준일 시점)', fy_blend: 'FnGuide 연간 추정 EPS 가중(FY 표 조회일 값)'};
   const variantNames = {tax_22: 'NOPLAT 세율 22%', tax_27_5: 'NOPLAT 세율 27.5%', media_workbook_18_1: '미디어 배수 18.1배(워크북)', media_workbook_22: '미디어 배수 22배(워크북)', music_no_discount: '음악 할인 없음', no_minority_deduction: '비지배지분 차감 안 함'};
   const docTypeNames = {ir_factsheet: 'IR 팩트시트', factsheet: 'IR 팩트시트', earnings: '실적 자료', earnings_release: '실적 자료', dart: 'DART 공시', dart_filing: 'DART 공시', monthly: '월간 자료'};
   const priceSourceName = s => /naver/i.test(str(s)) ? '네이버 금융 시세' : /aikstockdata/i.test(str(s)) ? '한국주식데이터 시세' : '시세 제공처 표기 없음';
@@ -541,8 +547,9 @@
     const list = Array.from(groups.values());
     list.forEach(g => g.vals.sort((p, q) => String(p.period).localeCompare(String(q.period))));
     list.sort((a, b) => (order.indexOf(a.metric) - order.indexOf(b.metric)) || String(a.vals[0].period).localeCompare(String(b.vals[0].period)));
-    // 근거는 커버리지 레인 원문 그대로다. 한국어가 없는 문장은 '영문 원문'으로 표시한다(번역·요약하지 않음)
-    const basisHtml = b => { const t = plainNote(b); return t ? (hasHangul(t) ? esc(t) : '<span class="lang">영문 원문</span><span lang="en">' + esc(t) + '</span>') : ''; };
+    // 근거는 커버리지 레인 원문 그대로다. 한국어가 없는 문장은 '영문 원문'으로 표시한다(번역·요약하지 않음).
+    // 언어는 키 이름을 바꾸기 전 원문으로 정한다 — 바꾼 한국어 명칭('커버리지 레인 근거 자료')이 섞여도 영문 문장이면 표지를 단다
+    const basisHtml = b => { const t = plainNote(b); return t ? (hasHangul(b) ? esc(t) : '<span class="lang">영문 원문</span><span lang="en">' + esc(t) + '</span>') : ''; };
     const body = list.map(g => '<tr><td class="l">' + metricLabel(g.metric) + '</td><td class="l">' + esc(unitNames[g.unit] || g.unit) + '</td><td class="l">' + g.vals.map(r => esc(r.period) + ' <b>' + unitVal(r.value, r.unit) + '</b>').join(' · ') + '</td><td class="l basis">' + basisHtml(g.basis) + '</td></tr>').join('');
     return '<h3>커버리지 레인 가정 행 (' + scenName(st.scenario) + ')</h3>' + tw('커버리지 레인 가정 행', '<table class="wide"><thead><tr><th class="l">지표</th><th class="l">단위</th><th class="l">기간별 값</th><th class="l">근거(커버리지 레인 원문)</th></tr></thead><tbody>' + body + '</tbody></table>');
   }
@@ -625,6 +632,13 @@
   }
 
   // ── 현재 컨센서스 ──
+  // 연간 추정(FY) 표의 조회일 표기 'FY 표 조회일 2026-10-07 (기준일 시점 값 아님)'. 엔진 필드(forward_retrieved_on·forward_point_in_time)가 없는 옛 데이터는 ''
+  function fyDateTxt(cn) {
+    cn = obj(cn);
+    const rd = str(cn.forward_retrieved_on).trim();
+    if (!rd && cn.forward_point_in_time !== false) return '';
+    return 'FY 표 조회일 ' + (rd || '미기재') + (cn.forward_point_in_time === true ? '' : ' (기준일 시점 값 아님)');
+  }
   function consensusNowCard(d, c) {
     const cn = c.consensus_now;
     if (!cn || typeof cn !== 'object') return '<p class="dim">FnGuide 집계 컨센서스 자료 없음</p>';
@@ -633,16 +647,20 @@
     const any = ys.some(y => mets.some(m => isNum(obj(fw[y])[m[0]])));
     // 엔진 method.consensus와 같은 조건: 헤드라인이 배수 규칙인 회사에서 스트리트 상한이 걸렸고 PBR 정합 상한이 없을 때
     const setBy = (v.status === 'updated' || v.status === 'reference_band') && bind.indexOf('street_ceiling') >= 0 && bind.indexOf('pbr_cap') < 0;
-    let h = '<p class="dim small">' + esc(cn.source || 'FnGuide 집계') + ' · 기준일 ' + esc(cn.as_of || ntm.date || '—') + '</p>';
+    // 12개월 선행(ntm)은 기준일 시점 값이고, 연간 추정(FY) 표는 조회일 값이다(forward_retrieved_on). 엔진이 두 날짜를 나눠 실었으면 둘 다 적고, 없는 옛 데이터는 기준일 하나
+    const ntmDate = cn.as_of || ntm.date || '—', fyDate = fyDateTxt(cn);
+    let h = '<p class="dim small">' + esc(cn.source || 'FnGuide 집계') + (fyDate ? ' · 12개월 선행 기준일 ' + esc(ntmDate) + ' · ' + esc(fyDate) : ' · 기준일 ' + esc(ntmDate)) + '</p>';
     h += kv([['12개월 선행 EPS(E12)', won(ntm.E12)], ['12개월 선행 BPS(B12)', won(ntm.B12)], ['컨센서스 목표주가 평균(TP)', won(ntm.TP)], ['주가(P)', won(ntm.P) + (ntm.date ? ' <span class="dim">(' + esc(ntm.date) + ')</span>' : ''), ntm.P_basis]]);
     if (!any) h += '<p class="dim small">이 종목은 FnGuide 집계 연간 추정치가 없습니다.</p>';
     else {
       const head = '<tr><th>지표</th>' + ys.map(y => '<th>' + esc(y) + 'E 컨센서스</th><th class="est">' + esc(y) + 'E 연장 base</th>').join('') + '</tr>';
       const body = mets.map(m => '<tr><td class="l">' + m[1] + '</td>' + ys.map(y => td(obj(fw[y])[m[0]], m[2]) + td(fv(c, y, m[0], 'base'), m[2], 'est')).join('') + '</tr>').join('');
-      h += tw('컨센서스와 연장 base 비교', '<table class="wide"><thead>' + head + '</thead><tbody>' + body + '</tbody></table>');
+      h += tw('컨센서스와 연장 base 비교', '<table class="wide">' + (fyDate ? '<caption>컨센서스 열: FnGuide 연간 추정 · ' + esc(fyDate) + '</caption>' : '') + '<thead>' + head + '</thead><tbody>' + body + '</tbody></table>');
     }
-    // 환산가를 내지 않은 회사(콘텐트리중앙)에는 '규칙 환산가의 입력'과 k 환산 문장을 쓰지 않는다
-    h += '<p class="dim small">단위: 매출·영업이익·지배순이익 ' + esc(u.revenue || '십억원') + ', EPS·E12·B12·TP ' + esc(u.ntm || u.eps || '원') + '. ' + esc(cn.note) +
+    // 환산가를 내지 않은 회사(콘텐트리중앙)에는 '규칙 환산가의 입력'과 k 환산 문장을 쓰지 않는다.
+    // 엔진 메모(note)가 마침표 없이 끝나면 다음 문장과 붙지 않게 마침표를 단다
+    const nt = str(cn.note).trim();
+    h += '<p class="dim small">단위: 매출·영업이익·지배순이익 ' + esc(u.revenue || '십억원') + ', EPS·E12·B12·TP ' + esc(u.ntm || u.eps || '원') + '.' + (nt ? ' ' + esc(nt) + (/[.。!?]$/.test(nt) ? '' : '.') : '') +
       (any && isNum(k) ? ' 주식수 기준 차이 k(유통/발행) = ' + fx(k, 4) + ' — 발행주식 기준 EPS = 유통주식 기준 EPS × k.' : '') +
       ' 컨센서스는 실적·연장 값과 섞지 않습니다.' + (hasValue(v) ? ' 다만 규칙 환산가의 입력으로 쓰입니다: 스트리트 상한(컨센서스 목표주가 ÷ 12MF EPS × k, PBR 회사는 ÷ BPS)과 PER 회사의 연장 12MF EPS ±30% 제한.' : ' 이 종목은 환산가를 산정하지 않아 규칙 입력으로도 쓰지 않습니다.') +
       (setBy ? ' 이 종목은 스트리트 상한이 환산가를 정했습니다.' : '') + (bind.indexOf('eps_clamp') >= 0 ? ' 이 종목은 연장 EPS가 컨센서스 ±30% 범위로 제한됐습니다.' : '') + '</p>';
@@ -681,34 +699,48 @@
       ['순차입금', bnTxt(v.net_debt_bn) + (v.net_debt_basis ? ' <span class="dim">(' + esc(v.net_debt_basis) + (isNum(v.gross_debt_bn) ? ' · 차입금·사채 ' + bnTxt(v.gross_debt_bn) : '') + ')</span>' : '')]
     ]);
   }
-  // CJ ENM 민감도(range.sensitivity): 행 = 배수 변화율, 열 = NOPLAT 변화율, 주주가치 ≤ 0인 칸은 엔진이 null로 둔다. 각주 맨 앞에 엔진의 기준 설명(note)을 둔다
+  // CJ ENM 민감도(range.sensitivity): 행 = 배수 변화율, 열 = NOPLAT 변화율, 주당 값이 없는 칸은 엔진이 null로 둔다. 각주 맨 앞에 엔진의 기준 설명(note)을 둔다.
+  // null 칸은 글자로 적으므로('주주가치 ≤ 0') 옛 메모의 '빈칸' 문장은 떼고 칸 글자의 뜻을 페이지가 적는다. 엔진이 칸별 표지(equity_le_zero)를 실으면
+  // false인 null 칸(주주가치는 양수, 주당 값이 백 원 단위 반올림으로 0)은 '주당 50원 이하'로 적는다. 표지가 없는 옛 데이터의 null 칸은 '주주가치 ≤ 0'
+  const SENS_LE0 = '주주가치 ≤ 0', SENS_SUB50 = '주당 50원 이하';
   function sensitivityBlock(g) {
     const se = g.sensitivity;
     if (!se || typeof se !== 'object') return '';
-    const s = obj(se), ax = obj(s.axes), rp = arr(ax.multiple_pct), cp = arr(ax.noplat_pct), m = arr(s.per_share), vars = arr(s.variants).map(obj).filter(x => x.label || x.key);
+    const s = obj(se), ax = obj(s.axes), rp = arr(ax.multiple_pct), cp = arr(ax.noplat_pct), m = arr(s.per_share), le0 = arr(s.equity_le_zero), vars = arr(s.variants).map(obj).filter(x => x.label || x.key);
     const axTxt = x => isNum(x) ? (x > 0 ? '+' : '') + fmt(x, 1) + '%' : '—';
-    const cell = x => isNum(x) ? won(x) : x === null ? '주주가치 ≤ 0' : '—';
+    const cell = (x, f) => isNum(x) ? won(x) : x === null ? (f === false ? SENS_SUB50 : SENS_LE0) : '—';
     let h = '';
-    if (rp.length && cp.length && m.length) h += '<h3>민감도: 부문 배수 × NOPLAT (base, 주당 값 원)</h3>' + tw('SOTP 민감도 표', '<table class="wide sens"><thead><tr><th class="l">배수 변화 ↓ · NOPLAT 변화 →</th>' + cp.map(x => '<th>' + axTxt(x) + '</th>').join('') + '</tr></thead><tbody>' +
-      rp.map((r, i) => '<tr><td class="l">' + axTxt(r) + '</td>' + cp.map((cc, j) => '<td' + (r === 0 && cc === 0 ? ' class="hl0"' : '') + '>' + cell(arr(m[i])[j]) + '</td>').join('') + '</tr>').join('') + '</tbody></table>') +
-      '<p class="dim small">' + (str(s.note).trim() ? esc(str(s.note).trim()) + ' ' : '') + '엔진 민감도 표 그대로(백 원 단위 반올림). 굵은 칸이 base(변화 없음)입니다.</p>';
+    if (rp.length && cp.length && m.length) {
+      const cells = rp.map((r, i) => cp.map((cc, j) => cell(arr(m[i])[j], arr(le0[i])[j])));
+      const used = t => cells.some(row => row.indexOf(t) >= 0);
+      const note = str(s.note).trim().replace(/\s*주주가치 ≤ 0이면 빈칸\.?$/, '').trim();
+      const why = (used(SENS_LE0) && !/주주가치 ≤ 0인 칸/.test(note) ? ' "' + SENS_LE0 + '" 칸은 주주가치가 0 이하라 주당 값을 내지 않은 칸입니다.' : '') +
+        (used(SENS_SUB50) ? ' "' + SENS_SUB50 + '" 칸은 주주가치는 양수지만 주당 값이 백 원 단위 반올림으로 0이 되는 칸입니다.' : '');
+      h += '<h3>민감도: 부문 배수 × NOPLAT (base, 주당 값 원)</h3>' + tw('SOTP 민감도 표', '<table class="wide sens"><thead><tr><th class="l">배수 변화 ↓ · NOPLAT 변화 →</th>' + cp.map(x => '<th>' + axTxt(x) + '</th>').join('') + '</tr></thead><tbody>' +
+        rp.map((r, i) => '<tr><td class="l">' + axTxt(r) + '</td>' + cp.map((cc, j) => '<td' + (r === 0 && cc === 0 ? ' class="hl0"' : '') + '>' + cells[i][j] + '</td>').join('') + '</tr>').join('') + '</tbody></table>') +
+        '<p class="dim small">' + (note ? esc(note) + ' ' : '') + '엔진 민감도 표 그대로(백 원 단위 반올림). 굵은 칸이 base(변화 없음)입니다.' + why + '</p>';
+    }
     if (vars.length) h += '<h3>민감도: 대안 가정 (base, 주당 값 원)</h3>' + tw('SOTP 대안 가정 표', '<table class="wide"><thead><tr><th class="l">가정</th><th>주당 값</th><th class="l">비고</th></tr></thead><tbody>' +
       vars.map(x => '<tr><td class="l">' + esc(x.label || variantNames[x.key] || '대안 가정') + '</td><td>' + (isNum(x.per_share) ? won(x.per_share) : '산출 안 됨') + '</td><td class="l basis">' + esc(x.note) + '</td></tr>').join('') + '</tbody></table>');
     return h;
   }
-  // CJ ENM 컨센 괴리(range.op_vs_consensus). 이 비교의 영업이익은 SOTP 입력인 커버리지 레인 부문 영업이익이다. 이 페이지에서 '연장 base'는 앙상블 연장
+  // CJ ENM 컨센 괴리(range.op_vs_consensus). 연결 행이 있으면(consolidation_adjustment_bn) 비교 영업이익은 커버리지 레인 연결 영업이익(부문 합계 + 연결조정)이고,
+  // 없으면 SOTP 입력인 부문 영업이익 합계다. 상자 머리는 엔진 기준(basis) 그대로, 없을 때만 페이지가 같은 구분으로 적는다. 이 페이지에서 '연장 base'는 앙상블 연장
   // (연간 표·컨센서스 카드)을 뜻하므로 그 이름을 쓰지 않는다. 엔진 문구(text)가 그 이름을 쓰지 않으면 그대로 보이고 숫자를 다시 붙이지 않는다(같은 숫자 두 번).
-  // 옛 계약 문구('연장 base 부문 영업이익 …')면 숫자로 문장을 다시 만든다 — 옛 계약(basis 없음)의 lane_12mf_op_bn은 연결조정을 뺀 부문 합계, 새 계약은 연결 기준
+  // 옛 계약 문구('연장 base 부문 영업이익 …')면 숫자로 문장을 다시 만든다 — 옛 계약(basis 없음)의 lane_12mf_op_bn은 연결조정을 뺀 부문 합계, 새 계약은 연결 기준.
+  // '다른 계열' 안내는 엔진 문구에 이미 있으면 다시 붙이지 않는다. 컨센서스 영업이익의 조회일(consensus_vintage)은 엔진 문구에 없을 때만 덧붙인다
   const OVC_OLD_NAME = /연장 base|연장 이익/;
   function opVsConsensus(g, c) {
     const oc = obj(g.op_vs_consensus), lane = oc.lane_12mf_op_bn, cop = oc.consensus_12mf_op_bn, seg = oc.segment_sum_bn, adj = oc.consolidation_adjustment_bn, basis = str(oc.basis).trim();
-    const engTxt = str(oc.text).trim(), useEng = !!engTxt && !OVC_OLD_NAME.test(engTxt);
+    const engTxt = str(oc.text).trim(), useEng = !!engTxt && !OVC_OLD_NAME.test(engTxt), vin = str(oc.consensus_vintage || oc.consensus_retrieved_on).trim();
     const laneName = isNum(adj) && isNum(seg) ? '커버리지 레인 base 연결 영업이익 12MF(부문 합계 ' + fx(seg, 1) + ' · 연결조정 ' + sgn(adj, 1) + ')' : (basis || isNum(seg)) ? '커버리지 레인 base 영업이익 12MF' : '커버리지 레인 base 부문 영업이익 12MF 합계(연결조정 제외)';
     const numTxt = isNum(lane) && isNum(cop) ? laneName + ' ' + bnTxt(lane) + ' vs FnGuide 컨센서스 12MF 영업이익(같은 가중) ' + bnTxt(cop) + (isNum(oc.gap_pct) ? ' · 차이 ' + pct(oc.gap_pct) : '') : '';
     const body = useEng ? engTxt : numTxt;
     if (!body) return '';
-    return notice('<b>컨센서스 대비 · ' + esc(basis || 'SOTP 입력(커버리지 레인 부문 영업이익) vs FnGuide 컨센서스 영업이익') + '</b> ' + esc(body) +
-      (isCovDriver(c) ? '' : ' <span class="dim">— 컨센서스 카드의 연장 base(앙상블 연장 영업이익)와 다른 계열입니다.</span>'), 'blue');
+    const head = basis || (isNum(adj) ? '커버리지 레인 연결 영업이익(부문 영업이익 합계 + 연결조정) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일' : 'SOTP 입력(커버리지 레인 부문 영업이익) vs FnGuide 컨센서스 영업이익');
+    return notice('<b>컨센서스 대비 · ' + esc(head) + '</b> ' + esc(body) +
+      (vin && body.indexOf(vin) < 0 ? ' <span class="dim">· 컨센서스 영업이익은 FnGuide 연간 추정(FY) 표의 ' + esc(vin) + ' 조회 값입니다(기준일 시점 값 아님).</span>' : '') +
+      (isCovDriver(c) || /다른 계열/.test(body) ? '' : ' <span class="dim">— 컨센서스 카드의 연장 base(앙상블 연장 영업이익)와 다른 계열입니다.</span>'), 'blue');
   }
   function rangeExtras(g, c) {
     let h = sensitivityBlock(g);
@@ -758,13 +790,16 @@
       h += '<h3>부문별 SOTP (base · 커버리지 레인 부문 영업이익(SOTP 입력), 십억원)</h3>' + tw('부문별 SOTP 표', '<table class="wide"><thead><tr><th class="l">부문</th><th>' + near + ' 영업이익</th><th>' + far + ' 영업이익</th><th>12MF 영업이익</th><th>NOPLAT</th><th>배수</th><th>가치</th><th class="l">배수 근거</th></tr></thead><tbody>' + segRows +
         '<tr class="tot"><td class="l">영업가치 합계</td><td></td><td></td><td></td><td></td><td></td>' + td(base.operating_value_bn, 1) + '<td></td></tr></tbody></table>') +
         '<p class="dim small">NOPLAT = 12MF 영업이익 × (1 − ' + lvlR(g.noplat_tax_rate, 0) + '). ' + esc(g.excluded) + (segs.some(x => x.floored_at_zero) ? ' · <sup>0</sup> 음수 가치는 0으로 둠' : '') + '</p>';
-      const peers = [];
-      let hasK = false;
-      segs.forEach(x => arr(x.peers).map(obj).forEach(p => {
-        if (Object.prototype.hasOwnProperty.call(p, 'k')) hasK = true;
-        peers.push('<tr><td class="l">' + esc(x.label) + '</td><td class="l">' + esc(p.name) + '</td>' + td(p.price, 0) + td(p.eps_near, 0) + td(p.eps_far, 0) + tdTxt(fmt(p.eps_12mf, 2)) + '<td>' + (isNum(p.k) ? fx(p.k, 4) : '—') + '</td><td>' + mult(p.per_12mf, 2) + '</td><td class="l">' + esc(p.price_basis) + '</td><td class="l basis">' + esc(p.k_basis) + '</td></tr>');
-      }));
-      if (peers.length) h += det(st, 'sotp-peers', false, '피어 12MF PER (' + peers.length + '종목)', tw('피어 표', '<table class="wide"><caption>종가·EPS 원' + (hasK ? ' · 12MF PER = 종가 × k ÷ 12MF EPS (k = 유통/발행 주식수, 자료가 없으면 1)' : '') + '</caption><thead><tr><th class="l">부문</th><th class="l">종목</th><th>종가</th><th>' + near + ' EPS</th><th>' + far + ' EPS</th><th>12MF EPS</th><th>k(유통/발행)</th><th>12MF PER</th><th class="l">가격 기준</th><th class="l">k 근거</th></tr></thead><tbody>' + peers.join('') + '</tbody></table>'));
+      // 피어 12MF EPS의 출처(peers[].eps_basis·eps_basis_label): 'ntm' = FnGuide 월말 12개월 선행 EPS(밸류에이션 기준일 시점), 'fy_blend' = 연간 추정 EPS 가중(FY 표 조회일 값).
+      // 엔진이 실은 한국어 이름을 그대로 쓰고, 이름이 없을 때만 페이지 이름. 어느 행에도 없으면(옛 데이터) 열을 그리지 않는다
+      const pRows = [].concat(...segs.map(x => arr(x.peers).map(obj).map(p => ({x, p}))));
+      const ebTxt = p => str(p.eps_basis_label).trim() || (hasHangul(p.eps_basis) ? str(p.eps_basis).trim() : epsBasisNames[p.eps_basis] || '');
+      const hasK = pRows.some(r => Object.prototype.hasOwnProperty.call(r.p, 'k')), hasEb = pRows.some(r => ebTxt(r.p));
+      const peers = pRows.map(({x, p}) => '<tr><td class="l">' + esc(x.label) + '</td><td class="l">' + esc(p.name) + '</td>' + td(p.price, 0) + td(p.eps_near, 0) + td(p.eps_far, 0) + tdTxt(fmt(p.eps_12mf, 2)) +
+        (hasEb ? '<td class="l basis">' + esc(ebTxt(p) || '—') + '</td>' : '') + '<td>' + (isNum(p.k) ? fx(p.k, 4) : '—') + '</td><td>' + mult(p.per_12mf, 2) + '</td><td class="l">' + esc(p.price_basis) + '</td><td class="l basis">' + esc(p.k_basis) + '</td></tr>');
+      if (peers.length) h += det(st, 'sotp-peers', false, '피어 12MF PER (' + peers.length + '종목)', tw('피어 표', '<table class="wide"><caption>종가·EPS 원' + (hasK ? ' · 12MF PER = 종가 × k ÷ 12MF EPS (k = 유통/발행 주식수, 자료가 없으면 1)' : '') +
+        (hasEb ? ' · 12MF EPS 기준은 종목마다 다를 수 있음(월말 12개월 선행 EPS는 기준일 시점 값, 연간 추정 EPS 가중은 FY 표 조회일 값)' : '') + '</caption><thead><tr><th class="l">부문</th><th class="l">종목</th><th>종가</th><th>' + near + ' EPS</th><th>' + far + ' EPS</th><th>12MF EPS</th>' +
+        (hasEb ? '<th class="l">12MF EPS 기준</th>' : '') + '<th>k(유통/발행)</th><th>12MF PER</th><th class="l">가격 기준</th><th class="l">k 근거</th></tr></thead><tbody>' + peers.join('') + '</tbody></table>'));
     }
     const stakes = arr(g.stakes).map(obj);
     if (stakes.length) {
@@ -786,18 +821,25 @@
   }
   // 콘텐트리중앙 손익분기(break_even): EBITDA × 배수 = EV가 청구권 B·C·D를 덮는지. 청구권을 모두 덮는 데 필요한 배수(required_multiples)와 배수별 EV만 보인다.
   // 주당 값(rows[].per_share_vs)과 EV − 청구권(equity_bn_vs)은 비지배지분 장부가 차감 전이고 회생계획(출자전환·감자) 전 주식수·청구권 기준이라
-  // 환산가를 내지 않는 회사 화면에 싣지 않는다(PAGE-03). 엔진 메모는 표 앞에 둔다
+  // 환산가를 내지 않는 회사 화면에 싣지 않는다(PAGE-03). 엔진 메모는 표 앞에 둔다.
+  // 옛 엔진 메모는 그리지 않는 열(주주 몫 = EV − 청구권, 주당 값의 주식수 기준·빈칸 규칙)을 설명한다 — 그 문장만 그린 표(EV·필요 배수)에 맞게 바꾸고 나머지는 그대로 둔다
+  const beNoteTxt = s => str(s).trim()
+    .replace(/EV = 배수 × EBITDA, 주주 몫 = EV − 청구권(\([^)]*\))?\.\s*/, (m0, p) => 'EV = 배수 × EBITDA를 청구권 B·C·D와 비교한다' + (p || '') + '. ')
+    .replace(/\s*주당 값은 현재 유통주식수 기준이며 회생계획\(출자전환·감자\)으로 주식수가 바뀌므로 가치 추정이 아니다\.?/, ' 회생계획(출자전환·감자)으로 주식수와 청구권이 바뀌므로 가치 추정이 아니다.')
+    .replace(/\s*주주 몫 ≤ 0이면 주당 값을 비운다\.?/, '').trim();
   function breakEvenBlock(v) {
     const b = obj(obj(v).break_even), rows = arr(b.rows).map(obj), cl = obj(b.claims), L = ['B', 'C', 'D'], ek = {ltm: 'LTM', ex_sports: '스포츠 중계권 손실 제외'};
     const req = arr(b.required_multiples).map(obj).filter(r => L.some(k => isNum(r[k])));
     if (!rows.length && !req.length && !isNum(b.ltm_ebitda_bn)) return '';
-    let h = '<h3>손익분기 EV/EBITDA (청구권 대비 · 가치 추정 아님)</h3>' + (b.note ? notice(esc(b.note), 'bad') : '') + kv([
+    const note = beNoteTxt(b.note);
+    let h = '<h3>손익분기 EV/EBITDA (청구권 대비 · 가치 추정 아님)</h3>' + (note ? notice(esc(note), 'bad') : '') + kv([
       ['LTM EBITDA', bnTxt(b.ltm_ebitda_bn), b.ltm_ebitda_basis],
       ['스포츠 중계권 손실 제외 EBITDA', isNum(b.ex_sports_ebitda_bn) ? bnTxt(b.ex_sports_ebitda_bn) : (b.ex_sports_basis ? '산출 안 됨' : ''), b.ex_sports_basis],
       L.some(k => isNum(cl[k])) ? ['청구권', L.map(k => k + ' ' + bnTxt(cl[k])).join(' · ')] : null
     ]);
+    // 필요 배수는 엔진 메모('B 6.60배')와 같은 소수 둘째 자리로 적는다
     if (req.length) h += tw('청구권을 덮는 배수 표', '<table><caption>청구권을 모두 덮는 데 필요한 EV/EBITDA 배수 = 청구권 ÷ EBITDA · EBITDA 십억원</caption><thead><tr><th class="l">EBITDA 기준</th><th>EBITDA</th>' + L.map(k => '<th>청구권 ' + k + '</th>').join('') + '</tr></thead><tbody>' +
-      req.map(r => '<tr><td class="l">' + esc(ek[r.ebitda_key] || '기타') + '</td>' + td(r.ebitda_bn, 1) + L.map(k => '<td>' + mult(r[k], 2) + '</td>').join('') + '</tr>').join('') + '</tbody></table>');
+      req.map(r => '<tr><td class="l">' + esc(ek[r.ebitda_key] || '기타') + '</td>' + td(r.ebitda_bn, 1) + L.map(k => '<td>' + (isNum(r[k]) ? fx(r[k], 2) + '배' : '—') + '</td>').join('') + '</tr>').join('') + '</tbody></table>');
     if (rows.length) h += tw('배수별 EV 표', '<table><caption>EV = 배수 × EBITDA · 십억원 — 위 청구권 B·C·D와 비교</caption><thead><tr><th>배수</th><th class="l">EBITDA 기준</th><th>EV</th></tr></thead><tbody>' +
       rows.map(r => '<tr><td>' + mult(r.multiple, 2) + '</td><td class="l">' + esc(ek[r.ebitda_key] || '기타') + '</td>' + td(r.ev_bn, 1) + '</tr>').join('') + '</tbody></table>');
     return h + '<p class="dim small">EV에서 청구권을 뺀 주주 몫과 주당 값은 싣지 않습니다 — 비지배지분 장부가를 빼기 전 값이고, 회생계획(출자전환·감자)으로 주식수와 청구권이 바뀌어 가치 추정이 될 수 없습니다.</p>';
@@ -1107,7 +1149,8 @@
     // 인용문은 원문 페이지(history.market.page_url)가 있으면 링크로 단다
     const cite = mk.citation ? (pageUrl ? '<a href="' + esc(pageUrl) + '" target="_blank" rel="noopener noreferrer">' + esc(mk.citation) + ' ↗</a>' : esc(mk.citation)) : '';
     if (isNum(mk.shares_outstanding)) s += '<li>KRX 발행주식수(자기주식 미차감, 참고): ' + fmt(mk.shares_outstanding, 0) + '주' + (mk.shares_as_of ? ' (' + esc(ymd(mk.shares_as_of)) + ')' : '') + (cite ? ' · ' + cite : '') + (safeUrl(lic.url) ? ' · 라이선스 <a href="' + esc(lic.url) + '" target="_blank" rel="noopener noreferrer">' + esc(lic.name || lic.id || '보기') + '</a>' : '') + '</li>';
-    s += '</ul><h3>컨센서스</h3><p class="small">' + (cn ? esc(cn.source || 'FnGuide 집계') + ' · 기준일 ' + esc(cn.as_of || obj(d).consensus_as_of || '—') + (obj(d).consensus_retrieved_at ? ' · 수집 ' + esc(str(d.consensus_retrieved_at).slice(0, 10)) : '') : '컨센서스 자료 없음') + '</p>';
+    const fyD = cn ? fyDateTxt(cn) : '';
+    s += '</ul><h3>컨센서스</h3><p class="small">' + (cn ? esc(cn.source || 'FnGuide 집계') + (fyD ? ' · 12개월 선행 기준일 ' : ' · 기준일 ') + esc(cn.as_of || obj(d).consensus_as_of || '—') + (fyD ? ' · ' + esc(fyD) : '') + (obj(d).consensus_retrieved_at ? ' · 수집 ' + esc(str(d.consensus_retrieved_at).slice(0, 10)) : '') : '컨센서스 자료 없음') + '</p>';
     const ids = sourceIds(c, si);
     if (ids.length) s += '<h3>커버리지 레인 공식 자료</h3><ul class="plain">' + ids.map(id => '<li>' + sourceItem(si.get(id), c, d) + '</li>').join('') + '</ul>';
     // 템플릿 워크북에는 애널리스트 추정이 없으므로 추정 범위·분기 영업이익 대사 문구를 쓰지 않는다

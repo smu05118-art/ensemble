@@ -5,13 +5,13 @@
  "model_house": "교보증권",
  "market_retrieved_at": "2026-10-06T16:09:06.008576+00:00",
  "dart_retrieved_at": "2026-09-30T08:36:44.223299+00:00",
- "consensus_retrieved_at": "2026-10-07T16:49:15.598857+00:00",
+ "consensus_retrieved_at": "2026-10-07T17:48:51.488905+00:00",
  "consensus_as_of": "2026-09-30",
  "method": {
   "history": "2020-2022 모델 내 벤더 실적, 2023-2025 및 분기(2024Q1-2026Q2, 3분기보고서가 제출되면 2026Q3까지) Open DART 연결(CFS) 정기보고서. Q2=반기보고서 3개월 열, Q4=사업보고서−3분기 누적(원공시 기준). 법인세비용은 양수 = 비용으로 싣는다. 한 공시의 법인세 행이 같은 열의 세전이익 − 순이익과 부호만 반대이면 그 열의 부호를 바꾸고, 세전이익·순이익과 나머지 손익 행은 원공시 부호 그대로다. DART 분기가 없는 기간(일부 회사의 2022Q1-2023Q4)은 커버리지 레인의 회사 IR 분기값을 싣고(출처는 커버리지 자료 id로 표시) 2026 하반기 성장률의 H2/H1 계절비에도 쓴다. 연간 2023-2024는 다음 해 사업보고서의 전기 열이 다르면 재작성 값을 쓰고 원공시 값을 함께 둔다(같은 표준계정·부호 반전 제외, 손익·자산·부채·자본 12개 항목). 감가상각비(사용권자산 포함)·무형자산상각비는 DART 연결주석 실측, EBITDA = 영업이익 + 감가상각비 + 무형자산상각비(2023-2025, 2026 상반기, 최근 4개 분기). 순차입금 = 차입금·사채(리스 제외) − 현금 − 단기금융상품 − 기타유동금융자산, 최신 재무상태표의 구성 행 포함. 분기 실적이 커버리지 레인의 보고 실적과 다르면 차이를 남기고(차이율 = (DART − 커버리지) ÷ |커버리지|, 양수 = DART가 큼), 핵심 4개 지표에서 0.15십억원 이상·2% 초과일 때만 표시한다. 레저 4사는 연장에 쓰는 같은 판의 커버리지 자료와 비교한다(그 판이 DART 값으로 채운 분기는 차이가 0). 커버리지 자료의 공표일은 출처 목록을 따르고, 미상이면 비워 둔다. 같은 파일로 합친 출처는 가장 이른 공표일 하나를 쓴다.",
   "roll_forward": "일반 규칙: 2026E 매출 = 2026 상반기 실적 + 2025 하반기 실적 × (1 + g)(3분기 실적이 들어와도 상반기 기준), g = min(상반기 YoY, 2026 상반기 × 2022-2025 H2/H1 매출 계절비 중앙값 ÷ 2025 하반기 − 1; 완결 연도 2개 이상일 때), −30%~+50% 제한. 2026 하반기 영업이익률 = 2025 하반기·2026 상반기 평균(회사가 조정 영업이익을 공시한 분기는 일회성 제외, 2026E 합계는 IFRS 상반기 실적 유지). 목표 영업이익률(2028E) = max(최근 4개 분기, 2023-2025A 중앙값) — 실현 기준, 워크북 2025E 이익률은 참고값. 2027E 영업이익률 = (2026 하반기 + 목표) / 2. 2027E 성장률 = 워크북 2025E/2024E 성장률(템플릿 폴백은 (2026E 성장률 + 5%) / 2), −10%~+25% 제한, 2028E = (2027E + 5%) / 2. 지배순이익 = 영업이익 × 2023-2025A 지배순이익/영업이익(0.3~1.3 범위 내 중앙값, 범위 내가 없으면 관측 중앙값을 경계로 제한, 영업흑자 연도가 없을 때만 0.75; 손실 구간 ×0.9), 2026E는 상반기 실제 지배순이익 + 하반기분. EPS = 지배순이익 ÷ 유통주식수. Bear/Bull = 성장률 ∓10pp(2026 하반기)·∓5pp(2027-28), 영업이익률 ∓2pp. 레저 4사는 커버리지 레인 드라이버 추정 채택(2026E = DART 이력과 커버리지 판이 모두 실적을 가진 2026년 최신 분기까지의 DART 누적 실적 + 남은 분기 커버리지 추정 — 지금은 상반기 + 2026Q3·Q4, 3분기 실적이 양쪽에 들어오면 1~3분기 누적 + 2026Q4; 한쪽만 앞선 분기의 실적은 2026E에 쓰지 않음. 2027E·2028E = 커버리지 FY 행. FY 행 = 분기 합(2026은 커버리지 누적 실적 포함) ±0.05와 DART·커버리지 누적 실적 차이 1% 이내를 확인하고, 실패하거나 남은 분기 추정이 없으면 일반 규칙), Bear/Bull은 커버리지 레인의 결합 스트레스, 지배순이익은 브리지(범위 내 전환비율 표본 2개 이상이면 비율, 아니면 (영업이익 + 영업외손익) × (1 − 세율)).",
-  "valuation": "규칙 환산가 — 2024-03 워크북의 목표 배수를 그대로 쓰지 않고 규칙으로 다시 정한다. ① 방식: 12MF EPS > 0, 12MF EPS/BPS ≥ 3%, 2021년 이후 유효 PER 연도 3개 이상이면 PER, 아니면 PBR(BPS가 0 이하이거나 BPS + 12MF EPS가 BPS의 50% 미만이면 산정하지 않음). ② 자기 밴드 기준 배수 H = 최근 유효 3개 연도 연평균 배수의 중앙값, 그 연도들의 월별 배수 80백분위를 넘지 않음(2021-2022는 워크북 밴드, 이후는 월봉 종가 ÷ 해당 연도 EPS·BPS, 기준연도는 최근 4개 분기 EPS·최신 분기 BPS). ③ 스트리트 상한: 적용 배수 = min(H, 컨센서스 목표주가 ÷ 12MF EPS × k), PBR이면 min(H, 컨센서스 목표주가 ÷ BPS) — 컨센서스 배수가 H보다 낮은 회사는 컨센서스가 환산가를 정한다. ④ PER 회사는 연장 12MF EPS를 컨센서스 12MF EPS(유통주식 기준) ±30% 안으로 제한한다. ⑤ PER 회사의 가격은 같은 기준 연도의 월별 PBR 80백분위 × BPS를 넘지 않는다(PBR 정합 상한). 결과는 100원 단위. 12MF 가중은 기준월(컨센서스 기준일, 없으면 시세 기준일)로 정하고, 발행주식수 기준인 컨센서스·워크북 밴드는 k = 유통/발행 주식수로 환산한다. 대안 값과 신뢰도를 함께 싣는다. CJ ENM은 부문별 12MF NOPLAT × 피어 12MF PER(피어 EPS도 피어별 유통/발행 주식수로 환산) + 상장 지분가치(40% 할인) − 순차입금의 범위(base·bear·bull)로 싣고, 상장 자회사 비지배지분(시가) 차감 값을 함께 둔다. 콘텐트리중앙은 회생절차로 환산가를 내지 않고 채권 순위표만, 스튜디오드래곤은 PER 규칙이 헤드라인이고 EV/EBITDA 재실행 값은 대안, 레저 4사는 워크북에 애널리스트 추정이 없는 템플릿이라 자기 밴드 참고가. 주주가치나 환산가가 0 이하이면 산출 불가.",
-  "consensus": "FnGuide 집계(WiseReport 경유)의 12개월 선행 EPS·BPS(E12·B12)·목표주가 평균과 FY2026E-2028E 추정. 실적과 연장에는 섞지 않는다. 다만 규칙 환산가의 입력이다: 스트리트 상한(컨센서스 목표주가 ÷ 12MF EPS × k, PBR 회사는 ÷ BPS)이 자기 밴드 배수보다 낮으면 그 배수가 환산가를 정하고, PER 회사의 연장 12MF EPS는 컨센서스 ±30% 안으로 제한된다. 증권사별 값은 싣지 않는다. 이번 계산: 스트리트 상한이 환산가를 정한 회사 — 와이지엔터테인먼트·스튜디오드래곤·GKL·파라다이스.",
+  "valuation": "규칙 환산가 — 2024-03 워크북의 목표 배수를 그대로 쓰지 않고 규칙으로 다시 정한다. ① 방식: 12MF EPS > 0, 12MF EPS/BPS ≥ 3%, 2021년 이후 유효 PER 연도 3개 이상이면 PER, 아니면 PBR(BPS가 0 이하이거나 BPS + 12MF EPS가 BPS의 50% 미만이면 산정하지 않음). ② 자기 밴드 기준 배수 H = 최근 유효 3개 연도 연평균 배수의 중앙값, 그 연도들의 월별 배수 80백분위를 넘지 않음(2021-2022는 워크북 밴드, 이후는 월봉 종가 ÷ 해당 연도 EPS·BPS, 기준연도는 최근 4개 분기 EPS·최신 분기 BPS). ③ 스트리트 상한: 적용 배수 = min(H, 컨센서스 목표주가 ÷ 12MF EPS × k), PBR이면 min(H, 컨센서스 목표주가 ÷ BPS) — 컨센서스 배수가 H보다 낮은 회사는 컨센서스가 환산가를 정한다. ④ PER 회사는 연장 12MF EPS를 컨센서스 12MF EPS(유통주식 기준) ±30% 안으로 제한한다. ⑤ PER 회사의 가격은 같은 기준 연도의 월별 PBR 80백분위 × BPS를 넘지 않는다(PBR 정합 상한). 결과는 100원 단위. 12MF 가중은 기준월(컨센서스 기준일, 없으면 시세 기준일)로 정하고, 발행주식수 기준인 컨센서스·워크북 밴드는 k = 유통/발행 주식수로 환산한다. 대안 값과 신뢰도를 함께 싣는다. CJ ENM은 부문별 12MF NOPLAT × 피어 12MF PER(피어 12MF EPS는 기준월 말 12개월 선행 EPS, 없으면 연간 추정표 가중이며 피어별 유통/발행 주식수로 환산) + 상장 지분가치(40% 할인) − 순차입금의 범위(base·bear·bull)로 싣고, 상장 자회사 비지배지분(시가) 차감 값을 함께 둔다. 콘텐트리중앙은 회생절차로 환산가를 내지 않고 채권 순위표만, 스튜디오드래곤은 PER 규칙이 헤드라인이고 EV/EBITDA 재실행 값은 대안, 레저 4사는 워크북에 애널리스트 추정이 없는 템플릿이라 자기 밴드 참고가. 주주가치나 환산가가 0 이하이면 산출 불가.",
+  "consensus": "FnGuide 집계(WiseReport 경유)의 12개월 선행 EPS·BPS(E12·B12)·목표주가 평균과 FY2026E-2028E 추정. 실적과 연장에는 섞지 않는다. 12개월 선행 값은 기준일(월말) 시점값이고, FY 연간 추정표는 기준일 시점값이 아니라 수집한 날의 표다(조회일을 함께 적는다). 다만 규칙 환산가의 입력이다: 스트리트 상한(컨센서스 목표주가 ÷ 12MF EPS × k, PBR 회사는 ÷ BPS)이 자기 밴드 배수보다 낮으면 그 배수가 환산가를 정하고, PER 회사의 연장 12MF EPS는 컨센서스 ±30% 안으로 제한된다. 증권사별 값은 싣지 않는다. 이번 계산: 스트리트 상한이 환산가를 정한 회사 — 와이지엔터테인먼트·스튜디오드래곤·GKL·파라다이스.",
   "disclaimer": "앙상블 규칙 환산값이며 교보증권 또는 워크북 작성자의 현재 의견이 아니다. 투자 권유가 아니다."
  },
  "alias_of": {
@@ -817,7 +817,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 1.0000 = 유통 41,353,387주 ÷ 발행 41,353,387주(DART 20220322000653) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 3606,
         "bps": 67998,
@@ -830,7 +830,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 1.0000 = 유통 41,353,387주 ÷ 발행 41,353,387주(DART 20230403004275) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 1265,
         "bps": 66995,
@@ -991,6 +991,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 156600.0,
@@ -1032,7 +1034,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -2264,7 +2266,7 @@
        "value": 423.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 295.643 + D&A 127.352 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250321001187 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250321001187 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 295.643,
        "da_total": 127.352
       },
@@ -2272,7 +2274,7 @@
        "value": 330.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 184.045 + D&A 146.143 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 184.045,
        "da_total": 146.143
       },
@@ -2280,7 +2282,7 @@
        "value": 195.9,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 49.318 + D&A 146.545 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 49.318,
        "da_total": 146.545
       },
@@ -2288,7 +2290,7 @@
        "value": 46.9,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -25.650 + D&A 72.539 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814004127 연결주석 [27. 영업으로부터 창출된 현금흐름 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814004127 연결주석 [27. 영업으로부터 창출된 현금흐름 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": -25.65,
        "da_total": 72.539
       },
@@ -2318,28 +2320,28 @@
        "value": 53.1,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 20.366; 사용권자산상각비 32.764",
-       "source_doc": "DART rcpNo 20250321001187 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250321001187 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 61.6,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 22.064; 사용권자산상각비 39.573",
-       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 59.0,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 16.581; 사용권자산상각비 42.447",
-       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 28.6,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 7.766; 사용권자산상각비 20.820",
-       "source_doc": "DART rcpNo 20260814004127 연결주석 [27. 영업으로부터 창출된 현금흐름 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814004127 연결주석 [27. 영업으로부터 창출된 현금흐름 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -2348,25 +2350,25 @@
        "value": 74.2,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20250321001187 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250321001187 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 84.5,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 87.5,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260320000802 연결주석 [28. 영업으로부터 창출된 현금흐름 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 44.0,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260814004127 연결주석 [27. 영업으로부터 창출된 현금흐름 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814004127 연결주석 [27. 영업으로부터 창출된 현금흐름 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -4796,7 +4798,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9855 = 유통 23,401,216주 ÷ 발행 23,745,901주(DART 20220331003351) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 5750,
         "bps": 26333,
@@ -4809,7 +4811,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9933 = 유통 23,644,316주 ÷ 발행 23,804,501주(DART 20230331004445) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 3386,
         "bps": 29467,
@@ -4994,6 +4996,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 81500.0,
@@ -5035,7 +5039,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -6110,7 +6114,7 @@
        "value": 171.5,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 113.463 + D&A 58.013 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250718000170 연결주석 [34. 현금흐름표 - 연결 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250718000170 연결주석 [34. 현금흐름표 - 연결 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 113.463,
        "da_total": 58.013
       },
@@ -6118,7 +6122,7 @@
        "value": 149.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 87.297 + D&A 61.933 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 87.297,
        "da_total": 61.933
       },
@@ -6126,7 +6130,7 @@
        "value": 250.3,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 183.034 + D&A 67.269 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 183.034,
        "da_total": 67.269
       },
@@ -6134,7 +6138,7 @@
        "value": 126.6,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 91.479 + D&A 35.152 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814002930 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814002930 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 91.479,
        "da_total": 35.152
       },
@@ -6164,28 +6168,28 @@
        "value": 29.8,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 9.885; 사용권자산상각비 19.907",
-       "source_doc": "DART rcpNo 20250718000170 연결주석 [34. 현금흐름표 - 연결 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250718000170 연결주석 [34. 현금흐름표 - 연결 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 33.1,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 11.692; 사용권자산상각비 21.364",
-       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 33.7,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 11.517; 사용권자산상각비 22.215",
-       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 15.8,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 4.330; 사용권자산상각비 11.470",
-       "source_doc": "DART rcpNo 20260814002930 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814002930 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -6194,25 +6198,25 @@
        "value": 28.2,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20250718000170 연결주석 [34. 현금흐름표 - 연결 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250718000170 연결주석 [34. 현금흐름표 - 연결 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 28.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 33.5,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260317000781 연결주석 [34. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 19.4,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260814002930 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814002930 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -7595,7 +7599,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9324 = 유통 33,098,059주 ÷ 발행 35,497,492주(DART 20220321001029) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 2038,
         "bps": 7451,
@@ -7608,7 +7612,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9324 = 유통 33,098,059주 ÷ 발행 35,497,492주(DART 20230320000741) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 2039,
         "bps": 9081,
@@ -7795,6 +7799,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 37550.0,
@@ -7836,7 +7842,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -11236,7 +11242,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9922 = 유통 18,300,198주 ÷ 발행 18,444,369주(DART 20220317001082) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 364,
         "bps": 20632,
@@ -11249,7 +11255,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9923 = 유통 18,510,798주 ÷ 발행 18,654,969주(DART 20230814002127) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 1827,
         "bps": 22130,
@@ -11437,6 +11443,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 42900.0,
@@ -11478,7 +11486,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -12618,7 +12626,7 @@
        "value": 106.5,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 86.932 + D&A 19.551 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250320001675 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001675 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 86.932,
        "da_total": 19.551
       },
@@ -12626,7 +12634,7 @@
        "value": 9.4,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -20.558 + D&A 29.978 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": -20.558,
        "da_total": 29.978
       },
@@ -12634,7 +12642,7 @@
        "value": 101.6,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 71.342 + D&A 30.213 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 71.342,
        "da_total": 30.213
       },
@@ -12642,7 +12650,7 @@
        "value": 45.4,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 30.386 + D&A 15.022 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814004237 연결주석 [18. 영업에서 창출한 현금흐름 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814004237 연결주석 [18. 영업에서 창출한 현금흐름 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 30.386,
        "da_total": 15.022
       },
@@ -12672,28 +12680,28 @@
        "value": 13.2,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 13.138; 투자부동산상각비 0.086",
-       "source_doc": "DART rcpNo 20250320001675 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001675 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 14.6,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 14.506; 투자부동산감가상각비 0.048",
-       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 13.9,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 13.846; 투자부동산감가상각비 0.016",
-       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 6.8,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 6.823; 투자부동산감가상각비 0.011",
-       "source_doc": "DART rcpNo 20260814004237 연결주석 [18. 영업에서 창출한 현금흐름 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814004237 연결주석 [18. 영업에서 창출한 현금흐름 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -12702,25 +12710,25 @@
        "value": 6.3,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20250320001675 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250320001675 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 15.4,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 16.4,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260323001610 연결주석 [33. 영업에서 창출한 현금흐름 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 8.2,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260814004237 연결주석 [18. 영업에서 창출한 현금흐름 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814004237 연결주석 [18. 영업에서 창출한 현금흐름 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -14463,8 +14471,8 @@
     "eps_12mf": 2284,
     "per_now_2027e": 15.5,
     "pbr_now": 0.249,
-    "updated_target_price": 18200,
-    "upside_pct": -47.1,
+    "updated_target_price": 17500,
+    "upside_pct": -49.1,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -14480,12 +14488,12 @@
       "net_debt_incl_lease_bn": null,
       "lease_note": "재무상태표에 리스부채 별도 행 없음(기타금융부채 등에 포함 가능) — 리스 포함 순차입금 미산출"
      },
-     "operating_value_bn": 1828.6,
+     "operating_value_bn": 1814.3,
      "stake_value_bn": 363.2,
      "net_debt_bn": 1532.0,
      "minority_bn": 281.8,
-     "equity_value_bn": 378.0,
-     "formula": "영업가치 1,828.6 + 지분가치 363.2 − 순차입금 1,532.0 − 상장 자회사 비지배지분 281.8 = 주주가치 378.0십억원 ÷ 20,766,908주"
+     "equity_value_bn": 363.7,
+     "formula": "영업가치 1,814.3 + 지분가치 363.2 − 순차입금 1,532.0 − 상장 자회사 비지배지분 281.8 = 주주가치 363.7십억원 ÷ 20,766,908주"
     },
     "rule": {
      "method_original": "sotp",
@@ -14496,7 +14504,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9453 = 유통 20,729,619주 ÷ 발행 21,929,154주(DART 20220321001256) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 9332,
         "bps": 182220,
@@ -14509,7 +14517,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9453 = 유통 20,729,619주 ÷ 발행 21,929,154주(DART 20230320000724) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -5793,
         "bps": 171357,
@@ -14648,21 +14656,21 @@
      {
       "key": "sotp_nd_ex_other_financial",
       "label": "SOTP base · 순차입금 기타유동금융자산을 현금성으로 보지 않음",
-      "value": 6900,
+      "value": 6200,
       "multiple": null,
       "basis": "순차입금 1,767.2십억원"
      },
      {
       "key": "sotp_no_deduction",
       "label": "SOTP base · 비지배지분 차감 전(참고)",
-      "value": 31800,
+      "value": 31100,
       "multiple": null,
       "basis": "상장 자회사 비지배지분 281.8십억원 미차감"
      },
      {
       "key": "sotp_book_nci",
       "label": "SOTP base · 연결 비지배지분 장부가 전액 차감(보수적 하한)",
-      "value": 900,
+      "value": 200,
       "multiple": null,
       "basis": "2026Q2 연결 재무상태표 비지배지분 641.4십억원 차감(시가 차감 대신)"
      },
@@ -14671,12 +14679,12 @@
       "label": "SOTP base · FY2026E 이익 기준",
       "value": null,
       "multiple": null,
-      "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용 · 주주가치 -285.4십억원 ≤ 0"
+      "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용 · 주주가치 -291.0십억원 ≤ 0"
      },
      {
       "key": "sotp_FY2027E",
       "label": "SOTP base · FY2027E 이익 기준",
-      "value": 28900,
+      "value": 28000,
       "multiple": null,
       "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용"
      }
@@ -14685,10 +14693,10 @@
     "confidence_reasons": [
      "부문 배수 대체(글로벌 OTT·현대홈쇼핑·피프스시즌 갱신 불가)와 순차입금 정의·이익 연도에 따라 값이 크게 달라짐 — 범위로만 제시",
      "bear 시나리오 주주가치 ≤ 0",
-     "비지배지분은 상장 자회사(스튜디오드래곤)만 시가로 차감 — 비상장 자회사 몫은 빼지 않아 base가 높게 나올 수 있음(연결 장부가 전액 차감 시 900원)"
+     "비지배지분은 상장 자회사(스튜디오드래곤)만 시가로 차감 — 비상장 자회사 몫은 빼지 않아 base가 높게 나올 수 있음(연결 장부가 전액 차감 시 200원)"
     ],
     "status": "range",
-    "note": "CJ ENM 부문별 SOTP(12MF, 상장 자회사 비지배지분 시가 차감). base 18,200원 · bear 주주가치 ≤ 0(순차입금·상장 자회사 비지배지분이 영업가치+지분가치를 넘음) · bull 84,200원 · 순차입금 정의별 6,900원~18,200원 · 비지배지분 차감 전 31,800원 · 연결 비지배지분 장부가 전액 차감 시 900원. 단일 값이 아니라 범위로 읽을 것. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "CJ ENM 부문별 SOTP(12MF, 상장 자회사 비지배지분 시가 차감). base 17,500원 · bear 주주가치 ≤ 0(순차입금·상장 자회사 비지배지분이 영업가치+지분가치를 넘음) · bull 83,100원 · 순차입금 정의별 6,200원~17,500원 · 비지배지분 차감 전 31,100원 · 연결 비지배지분 장부가 전액 차감 시 200원. 단일 값이 아니라 범위로 읽을 것. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": [
      "리스부채가 재무상태표 별도 행으로 없어(기타금융부채 등에 포함 추정) 리스 포함 순차입금 변형을 산출하지 않음",
@@ -14699,11 +14707,11 @@
      "weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "scenarios": {
       "bear": {
-       "operating_value_bn": 535.8,
+       "operating_value_bn": 534.4,
        "stake_value_bn": 363.2,
        "net_debt_bn": 1532.0,
        "minority_bn": 281.8,
-       "equity_value_bn": -914.8,
+       "equity_value_bn": -916.3,
        "per_share": null,
        "equity_le_zero": true,
        "segments": [
@@ -14714,7 +14722,7 @@
          "op_fy_far": -12.9,
          "op_used": -13.85,
          "noplat": -10.39,
-         "multiple": 9.381,
+         "multiple": 9.029,
          "value_bn": 0.0,
          "floored_at_zero": true
         },
@@ -14725,8 +14733,8 @@
          "op_fy_far": 77.56,
          "op_used": 80.27,
          "noplat": 60.21,
-         "multiple": 7.387,
-         "value_bn": 444.7,
+         "multiple": 7.358,
+         "value_bn": 443.0,
          "floored_at_zero": false
         },
         {
@@ -14736,8 +14744,8 @@
          "op_fy_far": 11.83,
          "op_used": 11.68,
          "noplat": 8.76,
-         "multiple": 10.393,
-         "value_bn": 91.0,
+         "multiple": 10.43,
+         "value_bn": 91.4,
          "floored_at_zero": false
         },
         {
@@ -14747,19 +14755,19 @@
          "op_fy_far": -33.12,
          "op_used": -29.52,
          "noplat": -22.14,
-         "multiple": 14.058,
+         "multiple": 14.026,
          "value_bn": 0.0,
          "floored_at_zero": true
         }
        ]
       },
       "base": {
-       "operating_value_bn": 1828.6,
+       "operating_value_bn": 1814.3,
        "stake_value_bn": 363.2,
        "net_debt_bn": 1532.0,
        "minority_bn": 281.8,
-       "equity_value_bn": 378.0,
-       "per_share": 18200,
+       "equity_value_bn": 363.7,
+       "per_share": 17500,
        "equity_le_zero": false,
        "segments": [
         {
@@ -14769,8 +14777,8 @@
          "op_fy_far": 58.4,
          "op_used": 47.5,
          "noplat": 35.63,
-         "multiple": 9.381,
-         "value_bn": 334.2,
+         "multiple": 9.029,
+         "value_bn": 321.7,
          "floored_at_zero": false
         },
         {
@@ -14780,8 +14788,8 @@
          "op_fy_far": 108.89,
          "op_used": 107.42,
          "noplat": 80.56,
-         "multiple": 7.387,
-         "value_bn": 595.1,
+         "multiple": 7.358,
+         "value_bn": 592.8,
          "floored_at_zero": false
         },
         {
@@ -14791,8 +14799,8 @@
          "op_fy_far": 64.68,
          "op_used": 57.89,
          "noplat": 43.42,
-         "multiple": 10.393,
-         "value_bn": 451.2,
+         "multiple": 10.43,
+         "value_bn": 452.8,
          "floored_at_zero": false
         },
         {
@@ -14802,19 +14810,19 @@
          "op_fy_far": 50.4,
          "op_used": 42.5,
          "noplat": 31.87,
-         "multiple": 14.058,
-         "value_bn": 448.0,
+         "multiple": 14.026,
+         "value_bn": 447.0,
          "floored_at_zero": false
         }
        ]
       },
       "bull": {
-       "operating_value_bn": 3199.7,
+       "operating_value_bn": 3175.6,
        "stake_value_bn": 363.2,
        "net_debt_bn": 1532.0,
        "minority_bn": 281.8,
-       "equity_value_bn": 1749.1,
-       "per_share": 84200,
+       "equity_value_bn": 1725.0,
+       "per_share": 83100,
        "equity_le_zero": false,
        "segments": [
         {
@@ -14824,8 +14832,8 @@
          "op_fy_far": 97.37,
          "op_used": 82.13,
          "noplat": 61.6,
-         "multiple": 9.381,
-         "value_bn": 577.8,
+         "multiple": 9.029,
+         "value_bn": 556.2,
          "floored_at_zero": false
         },
         {
@@ -14835,8 +14843,8 @@
          "op_fy_far": 130.79,
          "op_used": 126.16,
          "noplat": 94.62,
-         "multiple": 7.387,
-         "value_bn": 699.0,
+         "multiple": 7.358,
+         "value_bn": 696.2,
          "floored_at_zero": false
         },
         {
@@ -14846,8 +14854,8 @@
          "op_fy_far": 117.96,
          "op_used": 103.91,
          "noplat": 77.93,
-         "multiple": 10.393,
-         "value_bn": 809.9,
+         "multiple": 10.43,
+         "value_bn": 812.8,
          "floored_at_zero": false
         },
         {
@@ -14857,8 +14865,8 @@
          "op_fy_far": 121.89,
          "op_used": 105.56,
          "noplat": 79.17,
-         "multiple": 14.058,
-         "value_bn": 1113.0,
+         "multiple": 14.026,
+         "value_bn": 1110.5,
          "floored_at_zero": false
         }
        ]
@@ -14869,24 +14877,24 @@
        "key": "net_debt",
        "label": "차입금(유동성사채 포함) − 현금 − 단기금융상품 − 기타유동금융자산(기본 정의)",
        "net_debt_bn": 1532.0,
-       "equity_value_bn": 378.0,
-       "per_share": 18200
+       "equity_value_bn": 363.7,
+       "per_share": 17500
       },
       {
        "key": "ex_other_financial",
        "label": "기타유동금융자산을 현금성으로 보지 않음",
        "net_debt_bn": 1767.2,
-       "equity_value_bn": 142.8,
-       "per_share": 6900
+       "equity_value_bn": 128.5,
+       "per_share": 6200
       }
      ],
      "bookends": {
       "FY2026E": {
        "per_share": null,
        "equity_le_zero": true,
-       "equity_value_bn": -285.4
+       "equity_value_bn": -291.0
       },
-      "FY2027E": 28900
+      "FY2027E": 28000
      },
      "segments": [
       {
@@ -14896,8 +14904,8 @@
        "op_fy_far": 58.4,
        "op_used": 47.5,
        "noplat": 35.63,
-       "multiple": 9.381,
-       "value_bn": 334.2,
+       "multiple": 9.029,
+       "value_bn": 321.7,
        "floored_at_zero": false,
        "op_source": "커버리지 레인 부문 영업이익(SOTP 입력)",
        "peers": [
@@ -14906,28 +14914,32 @@
          "name": "SBS",
          "price": 11680.0,
          "price_basis": "월봉 종가",
-         "eps_near": 159.0,
-         "eps_far": 1447.0,
-         "eps_12mf": 1125.0,
+         "eps_near": 265.93,
+         "eps_far": 1520.11,
+         "eps_12mf": 1206.57,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": 0.9998,
          "k_basis": "유통주식수 ÷ 발행주식수(DART)",
-         "per_12mf": 10.38
+         "per_12mf": 9.68
         },
         {
          "code": "053210",
          "name": "스카이라이프",
          "price": 3985.0,
          "price_basis": "월봉 종가",
-         "eps_near": 327.0,
-         "eps_far": 525.0,
-         "eps_12mf": 475.5,
+         "eps_near": 327.21,
+         "eps_far": 525.01,
+         "eps_12mf": 475.56,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": null,
          "k_basis": "자기주식 자료 없음 — 발행주식 기준 그대로(k = 1)",
          "per_12mf": 8.38
         }
        ],
        "peer_adjustment": 1.0,
-       "multiple_basis": "SBS 10.38배 · 스카이라이프 8.38배 평균",
+       "multiple_basis": "SBS 9.68배 · 스카이라이프 8.38배 평균",
        "substitute_note": "워크북의 글로벌 OTT/방송사 평균 배수(18.1배·22배)는 구성 종목이 없어 갱신 불가 → 국내 방송·플랫폼 피어(SBS·스카이라이프) 12MF PER로 대체",
        "workbook_multiple": 18.1,
        "workbook_value_bn": 786.9
@@ -14939,8 +14951,8 @@
        "op_fy_far": 108.89,
        "op_used": 107.42,
        "noplat": 80.56,
-       "multiple": 7.387,
-       "value_bn": 595.1,
+       "multiple": 7.358,
+       "value_bn": 592.8,
        "floored_at_zero": false,
        "op_source": "커버리지 레인 부문 영업이익(SOTP 입력)",
        "peers": [
@@ -14949,28 +14961,32 @@
          "name": "GS리테일",
          "price": 22500.0,
          "price_basis": "월봉 종가",
-         "eps_near": 2671.0,
-         "eps_far": 2986.0,
-         "eps_12mf": 2907.25,
+         "eps_near": 2683.1,
+         "eps_far": 2994.95,
+         "eps_12mf": 2916.99,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": null,
          "k_basis": "자기주식 자료 없음 — 발행주식 기준 그대로(k = 1)",
-         "per_12mf": 7.74
+         "per_12mf": 7.71
         },
         {
          "code": "023530",
          "name": "롯데쇼핑",
          "price": 101500.0,
          "price_basis": "월봉 종가",
-         "eps_near": 12003.0,
-         "eps_far": 15237.0,
-         "eps_12mf": 14428.5,
+         "eps_near": 12106.74,
+         "eps_far": 15291.21,
+         "eps_12mf": 14495.09,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": null,
          "k_basis": "자기주식 자료 없음 — 발행주식 기준 그대로(k = 1)",
-         "per_12mf": 7.03
+         "per_12mf": 7.0
         }
        ],
        "peer_adjustment": 1.0,
-       "multiple_basis": "GS리테일 7.74배 · 롯데쇼핑 7.03배 평균",
+       "multiple_basis": "GS리테일 7.71배 · 롯데쇼핑 7.00배 평균",
        "substitute_note": "워크북 기준 현대홈쇼핑은 시세가 없어 GS리테일·롯데쇼핑 12MF PER로 대체(순수 홈쇼핑 업체 아님)",
        "workbook_multiple": 7.75,
        "workbook_value_bn": 459.1
@@ -14982,8 +14998,8 @@
        "op_fy_far": 64.68,
        "op_used": 57.89,
        "noplat": 43.42,
-       "multiple": 10.393,
-       "value_bn": 451.2,
+       "multiple": 10.43,
+       "value_bn": 452.8,
        "floored_at_zero": false,
        "op_source": "커버리지 레인 부문 영업이익(SOTP 입력)",
        "peers": [
@@ -14992,40 +15008,46 @@
          "name": "에스엠",
          "price": 82200.0,
          "price_basis": "월봉 종가",
-         "eps_near": 5333.0,
-         "eps_far": 6415.0,
-         "eps_12mf": 6144.5,
+         "eps_near": 5335.54,
+         "eps_far": 6418.76,
+         "eps_12mf": 6147.95,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": 1.0,
          "k_basis": "유통주식수 ÷ 발행주식수(DART)",
-         "per_12mf": 13.38
+         "per_12mf": 13.37
         },
         {
          "code": "035900",
          "name": "JYP Ent.",
          "price": 37650.0,
          "price_basis": "월봉 종가",
-         "eps_near": 3355.0,
-         "eps_far": 3669.0,
-         "eps_12mf": 3590.5,
+         "eps_near": 3371.86,
+         "eps_far": 3668.1,
+         "eps_12mf": 3594.04,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": 0.9325,
          "k_basis": "유통주식수 ÷ 발행주식수(DART)",
-         "per_12mf": 9.78
+         "per_12mf": 9.77
         },
         {
          "code": "122870",
          "name": "와이지엔터테인먼트",
          "price": 43200.0,
          "price_basis": "월봉 종가",
-         "eps_near": 2530.0,
-         "eps_far": 2770.0,
-         "eps_12mf": 2710.0,
+         "eps_near": 2585.61,
+         "eps_far": 2716.39,
+         "eps_12mf": 2683.7,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": 0.9923,
          "k_basis": "유통주식수 ÷ 발행주식수(DART)",
-         "per_12mf": 15.82
+         "per_12mf": 15.97
         }
        ],
        "peer_adjustment": 0.8,
-       "multiple_basis": "에스엠 13.38배 · JYP Ent. 9.78배 · 와이지엔터테인먼트 15.82배 평균 × 0.8",
+       "multiple_basis": "에스엠 13.37배 · JYP Ent. 9.77배 · 와이지엔터테인먼트 15.97배 평균 × 0.8",
        "substitute_note": "엔터 3사(SM·JYP·YG) 12MF PER 평균에 20% 할인(워크북 표 1 관례)",
        "workbook_multiple": 14.7,
        "workbook_value_bn": 1222.4
@@ -15037,8 +15059,8 @@
        "op_fy_far": 50.4,
        "op_used": 42.5,
        "noplat": 31.87,
-       "multiple": 14.058,
-       "value_bn": 448.0,
+       "multiple": 14.026,
+       "value_bn": 447.0,
        "floored_at_zero": false,
        "op_source": "커버리지 레인 부문 영업이익(SOTP 입력)",
        "peers": [
@@ -15047,16 +15069,18 @@
          "name": "스튜디오드래곤",
          "price": 20250.0,
          "price_basis": "월봉 종가",
-         "eps_near": 1187.0,
-         "eps_far": 1525.0,
-         "eps_12mf": 1440.5,
+         "eps_near": 1186.58,
+         "eps_far": 1529.52,
+         "eps_12mf": 1443.79,
+         "eps_basis": "ntm",
+         "eps_basis_label": "FnGuide 월말 12개월 선행 EPS(2026-09-30 시점값)",
          "k": 1.0,
          "k_basis": "유통주식수 ÷ 발행주식수(DART)",
-         "per_12mf": 14.06
+         "per_12mf": 14.03
         }
        ],
        "peer_adjustment": 1.0,
-       "multiple_basis": "스튜디오드래곤 14.06배 평균",
+       "multiple_basis": "스튜디오드래곤 14.03배 평균",
        "substitute_note": "워크북의 (스튜디오드래곤 시총 + 피프스시즌 평가액) × 50% 방식은 피프스시즌이 비상장이라 갱신 불가 → 스튜디오드래곤 12MF PER × NOPLAT",
        "workbook_multiple": null,
        "workbook_value_bn": 1039.4
@@ -15119,23 +15143,23 @@
       "deduction_bn": 281.8,
       "variants": {
        "no_deduction": {
-        "equity_value_bn": 659.8,
-        "per_share": 31800
+        "equity_value_bn": 645.5,
+        "per_share": 31100
        },
        "book_nci": {
         "nci_book_bn": 641.4,
-        "equity_value_bn": 18.4,
-        "per_share": 900
+        "equity_value_bn": 4.1,
+        "per_share": 200
        }
       },
       "note": "부문 NOPLAT은 100% 연결 기준이라 상장 자회사(스튜디오드래곤)의 외부 주주 몫을 시가로 뺀다(시가총액 × (1 − 보유 지분율), 할인 없음). 티빙·피프스시즌 등 비상장 자회사의 비지배지분은 시가가 없어 빼지 않는다. 연결 재무상태표 비지배지분 장부가 전액을 빼는 값은 보수적 하한 참고로만 둔다."
      },
      "summary": {
       "bear": null,
-      "base": 18200,
-      "bull": 84200,
-      "base_low": 6900,
-      "base_high": 18200
+      "base": 17500,
+      "bull": 83100,
+      "base_low": 6200,
+      "base_high": 17500
      },
      "sensitivity": {
       "axes": {
@@ -15158,78 +15182,115 @@
        [
         null,
         null,
-        600,
-        7600,
-        14700
+        null,
+        7000,
+        14000
        ],
        [
         null,
-        1500,
-        9400,
-        17300,
-        25200
+        900,
+        8800,
+        16600,
+        24500
        ],
        [
-        600,
-        9400,
-        18200,
-        27000,
-        35800
+        null,
+        8800,
+        17500,
+        26300,
+        35000
        ],
        [
-        7600,
-        17300,
-        27000,
-        36700,
-        46400
+        7000,
+        16600,
+        26300,
+        35900,
+        45500
        ],
        [
-        14700,
-        25200,
-        35800,
-        46400,
-        56900
+        14000,
+        24500,
+        35000,
+        45500,
+        56000
+       ]
+      ],
+      "equity_le_zero": [
+       [
+        true,
+        true,
+        false,
+        false,
+        false
+       ],
+       [
+        true,
+        false,
+        false,
+        false,
+        false
+       ],
+       [
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       [
+        false,
+        false,
+        false,
+        false,
+        false
+       ],
+       [
+        false,
+        false,
+        false,
+        false,
+        false
        ]
       ],
       "variants": [
        {
         "key": "tax_22",
         "label": "NOPLAT 세율 22%",
-        "per_share": 21700,
-        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 451.1십억원"
+        "per_share": 21000,
+        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 436.3십억원"
        },
        {
         "key": "tax_27_5",
         "label": "NOPLAT 세율 27.5%",
-        "per_share": 15300,
-        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 317.0십억원"
+        "per_share": 14600,
+        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 303.2십억원"
        },
        {
         "key": "media_workbook_18_1",
         "label": "미디어플랫폼 배수 워크북 18.1배",
-        "per_share": 33200,
-        "note": "워크북 2024-02 TP 표의 글로벌 OTT/방송사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.38배 대신) · 주주가치 688.6십억원"
+        "per_share": 33100,
+        "note": "워크북 2024-02 TP 표의 글로벌 OTT/방송사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.03배 대신) · 주주가치 686.9십억원"
        },
        {
         "key": "media_workbook_22",
         "label": "미디어플랫폼 배수 워크북 22배",
-        "per_share": 39900,
-        "note": "워크북 2023-04 TP 표의 글로벌 OTT 4사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.38배 대신) · 주주가치 827.6십억원"
+        "per_share": 39800,
+        "note": "워크북 2023-04 TP 표의 글로벌 OTT 4사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.03배 대신) · 주주가치 825.8십억원"
        },
        {
         "key": "music_no_discount",
         "label": "음악 배수 할인 없음",
-        "per_share": 23600,
-        "note": "피어 12MF PER 평균 12.99배 그대로(20% 할인 제외) · 주주가치 490.8십억원"
+        "per_share": 23000,
+        "note": "피어 12MF PER 평균 13.04배 그대로(20% 할인 제외) · 주주가치 476.9십억원"
        },
        {
         "key": "no_minority_deduction",
         "label": "비지배지분 미차감",
-        "per_share": 31800,
-        "note": "상장 자회사 비지배지분 미차감(시가 281.8십억원) · 주주가치 659.8십억원"
+        "per_share": 31100,
+        "note": "상장 자회사 비지배지분 미차감(시가 281.8십억원) · 주주가치 645.5십억원"
        }
       ],
-      "note": "base 12MF · 기본 순차입금 · 상장 자회사 비지배지분 차감 기준. 행 = 모든 부문 배수 변화(%), 열 = 모든 부문 NOPLAT 변화(%) — 둘 다 영업가치에 곱해져 표가 대칭이다. 지분가치·순차입금·비지배지분은 고정. 주주가치 ≤ 0이면 빈칸."
+      "note": "base 12MF · 기본 순차입금 · 상장 자회사 비지배지분 차감 기준. 행 = 모든 부문 배수 변화(%), 열 = 모든 부문 NOPLAT 변화(%) — 둘 다 영업가치에 곱해져 표가 대칭이다. 지분가치·순차입금·비지배지분은 고정. 주주가치 ≤ 0인 칸은 값 대신 '주주가치 ≤ 0'으로 적고, 주주가치가 양수라도 주당 50원 이하이면 값을 내지 않는다."
      },
      "cross_checks": [
       {
@@ -15244,18 +15305,21 @@
       "segment_sum_bn": 255.3,
       "consolidation_adjustment_bn": -15.1,
       "consensus_12mf_op_bn": 191.7,
+      "consensus_vintage": "2026-10-08",
       "gap_pct": 25.3,
-      "basis": "커버리지 레인 부문 영업이익(SOTP 입력) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일",
-      "text": "커버리지 레인 base 연결 영업이익 12MF 240.2십억원 = 부문 영업이익 합계 255.3(SOTP 입력) + 연결조정 -15.1 · FnGuide 컨센서스 12MF 영업이익 191.7십억원(연결 기준, 같은 가중) · 차이 +25.3% — SOTP 영업가치는 연결조정을 뺀 부문 영업이익에 비례하므로 커버리지 레인 이익이 컨센서스와 다른 만큼 달라진다(앙상블 연장 영업이익과는 다른 계열)"
+      "basis": "커버리지 레인 연결 영업이익(부문 영업이익 합계 + 연결조정) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일",
+      "text": "커버리지 레인 base 연결 영업이익 12MF 240.2십억원 = 부문 영업이익 합계 255.3(SOTP 입력) + 연결조정 -15.1 · FnGuide 컨센서스 12MF 영업이익 191.7십억원(연결 기준, 같은 가중 · 연간 추정표 2026-10-08 조회값 — 기준일 시점값 아님) · 차이 +25.3% — SOTP 영업가치는 연결조정을 뺀 부문 영업이익에 비례하므로 커버리지 레인 이익이 컨센서스와 다른 만큼 달라진다(앙상블 연장 영업이익과는 다른 계열)"
      },
-     "headline_text": "base 18,200원 · 순차입금 정의별 6,900~18,200원 · 비지배지분 차감 전 31,800원 · bull 84,200원 · bear 주주가치 ≤ 0",
+     "headline_text": "base 17,500원 · 순차입금 정의별 6,200~17,500원 · 비지배지분 차감 전 31,100원 · bull 83,100원 · bear 주주가치 ≤ 0",
      "excluded": "연결조정(부문 합계와 연결 영업이익의 차이)은 워크북처럼 제외 · 티빙·피프스시즌 등 비상장 자회사의 비지배지분은 시가가 없어 차감하지 않음(상장 자회사 스튜디오드래곤의 비지배지분만 시가로 차감)",
-     "source": "커버리지 레인 부문 영업이익(SOTP 입력) — 2026Q1~Q2 실적 + 이후 시나리오 · FnGuide 피어 컨센서스 EPS와 기준월 종가 · 관계사 시가총액(종가 × 상장주식수) · DART 연결 순차입금"
+     "source": "커버리지 레인 부문 영업이익(SOTP 입력) — 2026Q1~Q2 실적 + 이후 시나리오 · FnGuide 피어 12개월 선행 EPS(기준월 말 시점값, 없으면 연간 추정 EPS 가중)와 기준월 종가 · 관계사 시가총액(종가 × 상장주식수) · DART 연결 순차입금"
     }
    },
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 36800.0,
@@ -15297,7 +15361,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -16542,7 +16606,7 @@
        "value": 962.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -14.600 + D&A 976.579 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250319000884 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250319000884 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": -14.6,
        "da_total": 976.579
       },
@@ -16550,7 +16614,7 @@
        "value": 1706.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 104.478 + D&A 1601.731 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 104.478,
        "da_total": 1601.731
       },
@@ -16558,7 +16622,7 @@
        "value": 1386.6,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 132.888 + D&A 1253.695 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 132.888,
        "da_total": 1253.695
       },
@@ -16566,7 +16630,7 @@
        "value": 640.4,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 34.906 + D&A 605.461 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814002422 연결주석 [24. 영업으로부터 창출된 현금 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814002422 연결주석 [24. 영업으로부터 창출된 현금 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 34.906,
        "da_total": 605.461
       },
@@ -16596,28 +16660,28 @@
        "value": 77.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 77.468",
-       "source_doc": "DART rcpNo 20250319000884 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250319000884 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 81.0,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 80.987",
-       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 81.9,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 81.937",
-       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 41.0,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 40.987",
-       "source_doc": "DART rcpNo 20260814002422 연결주석 [24. 영업으로부터 창출된 현금 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814002422 연결주석 [24. 영업으로부터 창출된 현금 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -16626,25 +16690,25 @@
        "value": 899.1,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20250319000884 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250319000884 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 1520.7,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 1171.8,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260318001469 연결주석 [33. 영업으로부터 창출된 현금 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 564.5,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260814002422 연결주석 [24. 영업으로부터 창출된 현금 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814002422 연결주석 [24. 영업으로부터 창출된 현금 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -18364,7 +18428,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 1.0000 = 유통 30,014,185주 ÷ 발행 30,014,185주(DART 20220321000889) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 1301,
         "bps": 22785,
@@ -18377,7 +18441,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 1.0000 = 유통 30,058,498주 ÷ 발행 30,058,498주(DART 20230320000722) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 1684,
         "bps": 21982,
@@ -18572,6 +18636,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 20150.0,
@@ -18613,7 +18679,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -19831,7 +19897,7 @@
        "value": 242.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 55.871 + D&A 186.115 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250319000636 연결주석 [30. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250319000636 연결주석 [30. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 55.871,
        "da_total": 186.115
       },
@@ -19839,7 +19905,7 @@
        "value": 183.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 36.394 + D&A 146.621 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 36.394,
        "da_total": 146.621
       },
@@ -19847,7 +19913,7 @@
        "value": 165.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 30.359 + D&A 134.814 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 30.359,
        "da_total": 134.814
       },
@@ -19855,7 +19921,7 @@
        "value": 92.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 21.861 + D&A 70.186 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814003033 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814003033 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 21.861,
        "da_total": 70.186
       },
@@ -19885,28 +19951,28 @@
        "value": 3.0,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 1.407; 사용권자산감가상각비 1.626",
-       "source_doc": "DART rcpNo 20250319000636 연결주석 [30. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250319000636 연결주석 [30. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 3.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 1.784; 사용권자산감가상각비 1.717",
-       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 3.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 1.771; 사용권자산감가상각비 1.694",
-       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 1.6,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 0.842; 사용권자산감가상각비 0.720",
-       "source_doc": "DART rcpNo 20260814003033 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814003033 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -19915,25 +19981,25 @@
        "value": 183.1,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20250319000636 연결주석 [30. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250319000636 연결주석 [30. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 143.1,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 131.3,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260318001699 연결주석 [29. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 68.6,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260814003033 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814003033 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -22612,7 +22678,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9914 = 유통 18,139,787주 ÷ 발행 18,297,538주(DART 20220323001342) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -3095,
         "bps": 9670,
@@ -22625,7 +22691,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9918 = 유통 19,104,557주 ÷ 발행 19,262,308주(DART 20230321001329) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -2276,
         "bps": 9617,
@@ -22708,8 +22774,8 @@
       "eps_12mf_lane": null,
       "k": 0.9918,
       "S": null,
-      "date": "2026-09-30",
-      "e12_source": "FnGuide 연간 추정 EPS를 기준일 가중으로 재계산",
+      "date": "2026-10-08",
+      "e12_source": "FnGuide 연간 추정 EPS를 기준일 가중으로 재계산(연간 추정표 2026-10-08 조회값 — 기준일 시점값 아님)",
       "basis": null,
       "bps": null
      },
@@ -22917,130 +22983,52 @@
       {
        "multiple": 5.15,
        "ebitda_key": "ltm",
-       "ev_bn": 989.9,
-       "equity_bn_vs": {
-        "B": -278.0,
-        "C": -652.8,
-        "D": -886.9
-       },
-       "per_share_vs": {
-        "B": null,
-        "C": null,
-        "D": null
-       }
+       "ev_bn": 989.9
       },
       {
        "multiple": 7.74,
        "ebitda_key": "ltm",
-       "ev_bn": 1487.8,
-       "equity_bn_vs": {
-        "B": 219.9,
-        "C": -154.9,
-        "D": -389.0
-       },
-       "per_share_vs": {
-        "B": 11500,
-        "C": null,
-        "D": null
-       }
+       "ev_bn": 1487.8
       },
       {
        "multiple": 8.68,
        "ebitda_key": "ltm",
-       "ev_bn": 1668.4,
-       "equity_bn_vs": {
-        "B": 400.5,
-        "C": 25.7,
-        "D": -208.4
-       },
-       "per_share_vs": {
-        "B": 21000,
-        "C": 1300,
-        "D": null
-       }
+       "ev_bn": 1668.4
       },
       {
        "multiple": 10.0,
        "ebitda_key": "ltm",
-       "ev_bn": 1922.2,
-       "equity_bn_vs": {
-        "B": 654.3,
-        "C": 279.5,
-        "D": 45.4
-       },
-       "per_share_vs": {
-        "B": 34200,
-        "C": 14600,
-        "D": 2400
-       }
+       "ev_bn": 1922.2
       },
       {
        "multiple": 5.15,
        "ebitda_key": "ex_sports",
-       "ev_bn": 1228.4,
-       "equity_bn_vs": {
-        "B": -39.5,
-        "C": -414.3,
-        "D": -648.4
-       },
-       "per_share_vs": {
-        "B": null,
-        "C": null,
-        "D": null
-       }
+       "ev_bn": 1228.4
       },
       {
        "multiple": 7.74,
        "ebitda_key": "ex_sports",
-       "ev_bn": 1846.1,
-       "equity_bn_vs": {
-        "B": 578.2,
-        "C": 203.4,
-        "D": -30.7
-       },
-       "per_share_vs": {
-        "B": 30300,
-        "C": 10600,
-        "D": null
-       }
+       "ev_bn": 1846.1
       },
       {
        "multiple": 8.68,
        "ebitda_key": "ex_sports",
-       "ev_bn": 2070.3,
-       "equity_bn_vs": {
-        "B": 802.4,
-        "C": 427.6,
-        "D": 193.5
-       },
-       "per_share_vs": {
-        "B": 42000,
-        "C": 22400,
-        "D": 10100
-       }
+       "ev_bn": 2070.3
       },
       {
        "multiple": 10.0,
        "ebitda_key": "ex_sports",
-       "ev_bn": 2385.2,
-       "equity_bn_vs": {
-        "B": 1117.3,
-        "C": 742.5,
-        "D": 508.4
-       },
-       "per_share_vs": {
-        "B": 58500,
-        "C": 38900,
-        "D": 26600
-       }
+       "ev_bn": 2385.2
       }
      ],
-     "note": "EV = 배수 × EBITDA, 주주 몫 = EV − 청구권(비지배지분 장부가 71.7십억원 차감 전). 배수: 5.15배 메가박스(워크북 CJ CGV 2017-19 평균 × 70%) · 7.74배 워크북 SLL·메가박스 혼합 · 8.68배 SLL(워크북 12.4배 × 70%) · 10배 예시 — 2024-03 워크북 배수와 예시값이며 추정이 아님. 청구권을 모두 덮는 배수(LTM 기준): B 6.60배 · C 8.55배 · D 9.76배. 주당 값은 현재 유통주식수 기준이며 회생계획(출자전환·감자)으로 주식수가 바뀌므로 가치 추정이 아니다. 주주 몫 ≤ 0이면 주당 값을 비운다."
+     "note": "EV = 배수 × EBITDA를 청구권 B·C·D와 비교한다(비지배지분 장부가 71.7십억원 차감 전). 배수: 5.15배 메가박스(워크북 CJ CGV 2017-19 평균 × 70%) · 7.74배 워크북 SLL·메가박스 혼합 · 8.68배 SLL(워크북 12.4배 × 70%) · 10배 예시 — 2024-03 워크북 배수와 예시값이며 추정이 아님. 청구권을 모두 덮는 배수(LTM 기준): B 6.60배 · C 8.55배 · D 9.76배. 회생계획(출자전환·감자)으로 주식수와 청구권이 바뀌므로 가치 추정이 아니다."
     }
    },
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 1548.0,
@@ -23082,7 +23070,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -24215,7 +24203,7 @@
        "value": 123.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -67.967 + D&A 191.180 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250320001749 연결주석 [37. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001749 연결주석 [37. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": -67.967,
        "da_total": 191.18,
        "da_verified_ebitda": 123.053
@@ -24224,7 +24212,7 @@
        "value": 155.7,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -47.379 + D&A 203.080 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": -47.379,
        "da_total": 203.08
       },
@@ -24232,7 +24220,7 @@
        "value": 233.4,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 8.845 + D&A 224.529 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 8.845,
        "da_total": 224.529
       },
@@ -24240,7 +24228,7 @@
        "value": 38.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -61.330 + D&A 99.311 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814004220 연결주석 [27. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814004220 연결주석 [27. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": -61.33,
        "da_total": 99.311
       },
@@ -24270,28 +24258,28 @@
        "value": 84.0,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 29.294; 사용권자산감가상각비 조정 54.694",
-       "source_doc": "DART rcpNo 20250320001749 연결주석 [37. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001749 연결주석 [37. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 79.2,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 28.732; 사용권자산감가상각비 조정 50.420",
-       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 78.4,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 30.971; 사용권자산감가상각비 조정 47.396",
-       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 38.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 15.921; 사용권자산감가상각비 조정 22.554",
-       "source_doc": "DART rcpNo 20260814004220 연결주석 [27. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814004220 연결주석 [27. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -24300,25 +24288,25 @@
        "value": 107.2,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20250320001749 연결주석 [37. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250320001749 연결주석 [37. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 123.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 146.2,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260318001520 연결주석 [37. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 60.8,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260814004220 연결주석 [27. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814004220 연결주석 [27. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -25825,7 +25813,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9692 = 유통 17,690,068주 ÷ 발행 18,252,582주(DART 20220317001064) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 7693,
         "bps": 37150,
@@ -25838,7 +25826,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9692 = 유통 17,690,068주 ÷ 발행 18,252,582주(DART 20230316000964) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 8623,
         "bps": 46405,
@@ -26002,6 +25990,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 11670.0,
@@ -26043,7 +26033,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [
     {
@@ -27106,7 +27096,7 @@
        "value": 88.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 58.323 + D&A 29.683 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250320001108 연결주석 [35. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001108 연결주석 [35. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 58.323,
        "da_total": 29.683
       },
@@ -27114,7 +27104,7 @@
        "value": 18.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -19.185 + D&A 37.348 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": -19.185,
        "da_total": 37.348
       },
@@ -27122,7 +27112,7 @@
        "value": 56.1,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 18.151 + D&A 37.917 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 18.151,
        "da_total": 37.917
       },
@@ -27130,7 +27120,7 @@
        "value": 9.4,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -9.839 + D&A 19.237 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814003339 연결주석 [32. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814003339 연결주석 [32. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": -9.839,
        "da_total": 19.237
       },
@@ -27160,28 +27150,28 @@
        "value": 26.4,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비(유형자산) 22.656; 감가상각비(사용권자산) 3.657; 감가상각비(투자부동산) 0.040",
-       "source_doc": "DART rcpNo 20250320001108 연결주석 [35. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001108 연결주석 [35. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 33.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 30.218; 감가상각비(사용권자산) 3.216; 감가상각비(투자부동산) 0.040",
-       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 34.0,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 30.871; 감가상각비(사용권자산) 3.029; 감가상각비(투자부동산) 0.074",
-       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 17.3,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비(유형자산) 15.893; 감가상각비(사용권자산) 1.381; 감가상각비(투자부동산) 0.050",
-       "source_doc": "DART rcpNo 20260814003339 연결주석 [32. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814003339 연결주석 [32. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -27190,25 +27180,25 @@
        "value": 3.3,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20250320001108 연결주석 [35. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250320001108 연결주석 [35. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 3.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 3.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260319001224 연결주석 [32. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 1.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비 (판권·콘텐츠 상각 포함)",
-       "source_doc": "DART rcpNo 20260814003339 연결주석 [32. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814003339 연결주석 [32. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -29634,7 +29624,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 1.0000 = 유통 61,855,670주 ÷ 발행 61,855,670주(DART 20220321000040) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -1831,
         "bps": 6201,
@@ -29647,7 +29637,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 1.0000 = 유통 61,855,670주 ÷ 발행 61,855,670주(DART 20230713000041) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -368,
         "bps": 6183,
@@ -29852,6 +29842,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 8780.0,
@@ -29893,7 +29885,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [],
    "coverage_lane": {
@@ -30877,7 +30869,7 @@
        "value": 81.6,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 51.018 + D&A 30.598 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250328001704 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250328001704 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 51.018,
        "da_total": 30.598
       },
@@ -30885,7 +30877,7 @@
        "value": 70.3,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 38.325 + D&A 31.992 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 38.325,
        "da_total": 31.992
       },
@@ -30893,7 +30885,7 @@
        "value": 84.9,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 52.644 + D&A 32.218 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 52.644,
        "da_total": 32.218
       },
@@ -30901,7 +30893,7 @@
        "value": 55.7,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 38.983 + D&A 16.683 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814001705 연결주석 [21. 비용의 성격별 분류 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814001705 연결주석 [21. 비용의 성격별 분류 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 38.983,
        "da_total": 16.683
       },
@@ -30931,7 +30923,7 @@
        "value": 30.2,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 8.809; 감가상각비, 사용권자산 21.407",
-       "source_doc": "DART rcpNo 20250328001704 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250328001704 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true,
        "dart_cf_value": 8.808985777
       },
@@ -30939,7 +30931,7 @@
        "value": 31.6,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 8.801; 사용권자산감가상각비 22.812",
-       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true,
        "dart_cf_value": 8.801241686
       },
@@ -30947,7 +30939,7 @@
        "value": 31.9,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 8.443; 사용권자산감가상각비 23.493",
-       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true,
        "dart_cf_value": 8.443216207
       },
@@ -30955,7 +30947,7 @@
        "value": 16.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 4.239; 사용권자산감가상각비 12.304",
-       "source_doc": "DART rcpNo 20260814001705 연결주석 [21. 비용의 성격별 분류 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814001705 연결주석 [21. 비용의 성격별 분류 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -30964,28 +30956,28 @@
        "value": 0.4,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20250328001704 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250328001704 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "dart_cf_value": 0.382451749
       },
       "2024": {
        "value": 0.4,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "dart_cf_value": 0.37868873
       },
       "2025": {
        "value": 0.3,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260608000223 연결주석 [22. 비용의 성격별 분류 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "dart_cf_value": 0.281390656
       },
       "2026H1": {
        "value": 0.1,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260814001705 연결주석 [21. 비용의 성격별 분류 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814001705 연결주석 [21. 비용의 성격별 분류 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -34039,7 +34031,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9476 = 유통 202,738,998주 ÷ 발행 213,940,500주(DART 20220323000547) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -52,
         "bps": 16044,
@@ -34052,7 +34044,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9476 = 유통 202,738,998주 ÷ 발행 213,940,500주(DART 20230321000399) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 570,
         "bps": 16846,
@@ -34257,6 +34249,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 14260.0,
@@ -34298,7 +34292,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [],
    "coverage_lane": {
@@ -35143,7 +35137,7 @@
        "value": 362.7,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 282.263 + D&A 80.485 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250318001106 연결주석 [31. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250318001106 연결주석 [31. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 282.263,
        "da_total": 80.485
       },
@@ -35151,7 +35145,7 @@
        "value": 364.3,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 285.790 + D&A 78.475 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 285.79,
        "da_total": 78.475
       },
@@ -35159,7 +35153,7 @@
        "value": 319.7,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 235.311 + D&A 84.387 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 235.311,
        "da_total": 84.387
       },
@@ -35167,7 +35161,7 @@
        "value": 157.4,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 112.719 + D&A 44.644 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814003905 연결주석 [29. 비용의 성격별 분류 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814003905 연결주석 [29. 비용의 성격별 분류 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 112.719,
        "da_total": 44.644
       },
@@ -35197,7 +35191,7 @@
        "value": 79.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 79.507",
-       "source_doc": "DART rcpNo 20250318001106 연결주석 [31. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250318001106 연결주석 [31. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true,
        "dart_cf_value": 79.507233224
       },
@@ -35205,7 +35199,7 @@
        "value": 77.6,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 77.583",
-       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true,
        "dart_cf_value": 77.5827163
       },
@@ -35213,7 +35207,7 @@
        "value": 83.7,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 83.696",
-       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true,
        "dart_cf_value": 83.696079927
       },
@@ -35221,7 +35215,7 @@
        "value": 44.2,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비 44.182",
-       "source_doc": "DART rcpNo 20260814003905 연결주석 [29. 비용의 성격별 분류 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814003905 연결주석 [29. 비용의 성격별 분류 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -35230,28 +35224,28 @@
        "value": 1.0,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20250318001106 연결주석 [31. 비용의 성격별 분류 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250318001106 연결주석 [31. 비용의 성격별 분류 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "dart_cf_value": 0.978182977
       },
       "2024": {
        "value": 0.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 전기열 (DART 공시 뷰어 원문)",
        "dart_cf_value": 0.892165554
       },
       "2025": {
        "value": 0.7,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260323000917 연결주석 [30. 비용의 성격별 분류 (연결) / 연결 현금흐름표(fnlttSinglAcntAll)] 당기열 (DART 공시 뷰어 원문)",
        "dart_cf_value": 0.690473105
       },
       "2026H1": {
        "value": 0.5,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260814003905 연결주석 [29. 비용의 성격별 분류 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814003905 연결주석 [29. 비용의 성격별 분류 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -37856,7 +37850,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 1.0000 = 유통 69,275,662주 ÷ 발행 69,275,662주(DART 20220317000948) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -2895,
         "bps": 811,
@@ -37869,7 +37863,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 1.0000 = 유통 72,966,610주 ÷ 발행 72,966,610주(DART 20230418000483) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -3136,
         "bps": 3223,
@@ -38045,6 +38039,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 11550.0,
@@ -38086,7 +38082,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [],
    "coverage_lane": {
@@ -38927,7 +38923,7 @@
        "value": 26.1,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 -60.606 + D&A 86.723 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250320001631 연결주석 [28. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001631 연결주석 [28. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": -60.606,
        "da_total": 86.723
       },
@@ -38935,7 +38931,7 @@
        "value": 124.0,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 39.007 + D&A 85.004 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 39.007,
        "da_total": 85.004
       },
@@ -38943,7 +38939,7 @@
        "value": 231.8,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 143.328 + D&A 88.495 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 143.328,
        "da_total": 88.495
       },
@@ -38951,7 +38947,7 @@
        "value": 124.8,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 80.714 + D&A 44.063 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260813001149 연결주석 [26. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260813001149 연결주석 [26. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 80.714,
        "da_total": 44.063
       },
@@ -38981,28 +38977,28 @@
        "value": 84.2,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 84.192",
-       "source_doc": "DART rcpNo 20250320001631 연결주석 [28. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250320001631 연결주석 [28. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 82.9,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 82.928",
-       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 86.6,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 86.595",
-       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 43.4,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 43.420",
-       "source_doc": "DART rcpNo 20260813001149 연결주석 [26. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260813001149 연결주석 [26. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -39011,25 +39007,25 @@
        "value": 2.5,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20250320001631 연결주석 [28. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250320001631 연결주석 [28. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 2.1,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 1.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260319000832 연결주석 [28. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 0.6,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260813001149 연결주석 [26. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260813001149 연결주석 [26. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
@@ -41613,7 +41609,7 @@
       "years": {
        "2021": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2021 연말 k 0.9405 = 유통 85,531,374주 ÷ 발행 90,942,672주(DART 20220317001345) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": -614,
         "bps": 14400,
@@ -41626,7 +41622,7 @@
        },
        "2022": {
         "source": "workbook",
-        "eps_basis": "워크북 Valuation 시트(발행주식 기준) × k",
+        "eps_basis": "워크북 Valuation 시트(발행주식 기준) — EPS·BPS ÷ k, PER·PBR × k",
         "shares_basis": "2022 연말 k 0.9405 = 유통 85,597,748주 ÷ 발행 91,009,046주(DART 20230316001131) — 워크북 값(발행주식 기준)을 유통주식 기준으로 환산",
         "eps": 296,
         "bps": 15915,
@@ -41831,6 +41827,8 @@
    "consensus_now": {
     "source": "FnGuide 집계(WiseReport 경유)",
     "as_of": "2026-09-30",
+    "forward_retrieved_on": "2026-10-08",
+    "forward_point_in_time": false,
     "ntm": {
      "date": "2026-09-30",
      "P": 9330.0,
@@ -41872,7 +41870,7 @@
      "eps": "원",
      "ntm": "원"
     },
-    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의"
+    "note": "EPS·E12·B12는 FnGuide 주식수 기준(발행·가중평균), 이 레인의 연장 EPS는 유통주식수 기준 — 나란히 볼 때 주식수 기준 차이에 주의."
    },
    "scorecard": [],
    "coverage_lane": {
@@ -42891,7 +42889,7 @@
        "value": 228.8,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 145.770 + D&A 82.998 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2023)",
-       "source_doc": "DART rcpNo 20250415000021 연결주석 [31. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250415000021 연결주석 [31. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 145.77,
        "da_total": 82.998
       },
@@ -42899,7 +42897,7 @@
        "value": 214.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 136.055 + D&A 78.113 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2024)",
-       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "operating_profit": 136.055,
        "da_total": 78.113
       },
@@ -42907,7 +42905,7 @@
        "value": 230.5,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 155.816 + D&A 74.659 (감가상각비(사용권자산 포함) + 무형자산상각비, FY2025)",
-       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "operating_profit": 155.816,
        "da_total": 74.659
       },
@@ -42915,7 +42913,7 @@
        "value": 114.2,
        "source": "operating_profit + dart_note_da_verified",
        "basis": "영업이익 72.855 + D&A 41.352 (감가상각비(사용권자산 포함) + 무형자산상각비, 2026 상반기)",
-       "source_doc": "DART rcpNo 20260814002485 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814002485 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "operating_profit": 72.855,
        "da_total": 41.352
       },
@@ -42945,28 +42943,28 @@
        "value": 78.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 57.429; 사용권자산감가상각비 조정 20.043; 투자부동산감가상각비 조정 1.042",
-       "source_doc": "DART rcpNo 20250415000021 연결주석 [31. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20250415000021 연결주석 [31. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2024": {
        "value": 74.3,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 53.407; 사용권자산감가상각비 조정 19.922; 투자부동산감가상각비 조정 1.000",
-       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2025": {
        "value": 71.4,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 49.471; 사용권자산감가상각비 조정 20.953; 투자부동산감가상각비 조정 1.014",
-       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       },
       "2026H1": {
        "value": 39.5,
        "source": "dart_note_da_verified",
        "basis": "유형자산 감가상각비 + 사용권자산 상각비 + 투자부동산 상각비: 감가상각비에 대한 조정 28.509; 사용권자산감가상각비 조정 10.471; 투자부동산감가상각비 조정 0.505",
-       "source_doc": "DART rcpNo 20260814002485 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)",
+       "source_doc": "DART rcpNo 20260814002485 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)",
        "incl_rou": true
       }
      },
@@ -42975,25 +42973,25 @@
        "value": 4.5,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20250415000021 연결주석 [31. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20250415000021 연결주석 [31. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2024": {
        "value": 3.8,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 전기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 전기열 (DART 공시 뷰어 원문)"
       },
       "2025": {
        "value": 3.2,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 당기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260319001270 연결주석 [31. 현금흐름표 (연결)] 당기열 (DART 공시 뷰어 원문)"
       },
       "2026H1": {
        "value": 1.9,
        "source": "dart_note_da_verified",
        "basis": "무형자산상각비",
-       "source_doc": "DART rcpNo 20260814002485 연결주석 [24. 현금흐름표 (연결)] 당반기열 (dart.fss.or.kr viewer HTML)"
+       "source_doc": "DART rcpNo 20260814002485 연결주석 [24. 현금흐름표 (연결)] 당반기열 (DART 공시 뷰어 원문)"
       }
      },
      "controlling_equity": {
