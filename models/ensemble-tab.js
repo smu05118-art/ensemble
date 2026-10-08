@@ -105,7 +105,7 @@
     nonoperating_income: '영업외수익', nonoperating_expense: '영업외비용', noncontrolling_net_income: '비지배지분 순이익', adjusted_operating_profit: '조정 영업이익(회사 기준)', adjusted_ebitda: '조정 EBITDA(회사 기준)',
     subsidiaries_eliminations_rounding_revenue: '자회사·연결조정(내부거래 제거·반올림) 매출',
     physical_album_revenue: '음반(실물) 매출', streaming_revenue: '음원(스트리밍) 매출', advertising_revenue: '광고 매출', appearance_revenue: '출연 매출',
-    other_operating_income: '기타영업수익', other_operating_expense: '기타영업비용', nonoperating_income_before_associates: '영업외수익(지분법 제외)', associates_income: '지분법손익',
+    other_operating_income: '기타영업수익', other_operating_expense: '기타영업비용', nonoperating_income_before_associates: '영업외손익(지분법 제외)', associates_income: '지분법손익',
     product_revenue: '제품 매출', music_service_revenue: '음악서비스 매출', advertising_business_revenue: '광고사업 매출', service_revenue: '용역 매출',
     product_cogs: '제품 매출원가', music_service_cogs: '음악서비스 매출원가', concert_cogs: '공연 매출원가', service_cogs: '용역 매출원가',
     broadcast_revenue: '편성 매출', sales_revenue: '판매 매출', domestic_revenue: '국내 매출', overseas_revenue: '해외 매출',
@@ -124,12 +124,14 @@
     if (n) return esc(n.name) + ' <span class="dim">(키 해석 · 원문 명칭 <code>' + esc(k) + '</code>)</span>';
     return '<code>' + esc(k) + '</code> <span class="dim">(원문 명칭 · 뜻 확인 필요)</span>';
   }
-  // 세그먼트 표의 묶음: 매출 / 비용 / 이익 / 영업외 / 조정·잔차(비용 항목·조정 영업이익이 '세그먼트'로 읽히지 않게)
-  const SEG_GROUPS = [['rev', '매출(부문·유형별)'], ['cost', '비용 항목'], ['profit', '이익(부문·회사 기준)'], ['other', '영업외·금융·지분 손익'], ['adj', '조정·잔차']];
+  // 세그먼트 표의 묶음: 매출 / 비용 / 기타영업수익·비용 / 이익 / 영업외 / 조정·잔차(비용 항목·조정 영업이익이 '세그먼트'로 읽히지 않게)
+  // 와이지 기타영업수익·기타영업비용은 연결 포괄손익계산서에서 매출총이익과 판매비와관리비 사이에 있고 영업이익에 들어간다(2025 사업보고서·2026 반기보고서)
+  const SEG_GROUPS = [['rev', '매출(부문·유형별)'], ['cost', '비용 항목'], ['opother', '기타영업수익·비용(영업이익에 포함)'], ['profit', '이익(부문·회사 기준)'], ['other', '영업외·금융·지분 손익'], ['adj', '조정·잔차']];
   function segGroup(k) {
     if (/eliminations|consolidation|rounding|_adjustment$/.test(k)) return 'adj';
     if (/operating_profit$|ebitda$/.test(k)) return 'profit';
-    if (/nonoperating|^financial_|net_financial|associates|noncontrolling|^other_operating_(?:income|expense)$/.test(k)) return 'other';
+    if (/^other_operating_(?:income|expense)$/.test(k)) return 'opother';
+    if (/nonoperating|^financial_|net_financial|associates|noncontrolling/.test(k)) return 'other';
     if (/(?:_cogs|_sga|_cost|_costs|_cost_of_sales|_expenses?|_depreciation|_total|_levies|_tax|_fund)$|^(?:comps|commissions|sales_promotion)$/.test(k)) return 'cost';
     return 'rev';
   }
@@ -140,10 +142,16 @@
   const epsBasisNames = {ntm: 'FnGuide 월말 12개월 선행 EPS(기준일 시점)', fy_blend: 'FnGuide 연간 추정 EPS 가중(FY 표 조회일 값)'};
   const variantNames = {tax_22: 'NOPLAT 세율 22%', tax_27_5: 'NOPLAT 세율 27.5%', media_workbook_18_1: '미디어 배수 18.1배(워크북)', media_workbook_22: '미디어 배수 22배(워크북)', music_no_discount: '음악 할인 없음', no_minority_deduction: '비지배지분 차감 안 함'};
   const docTypeNames = {ir_factsheet: 'IR 팩트시트', factsheet: 'IR 팩트시트', earnings: '실적 자료', earnings_release: '실적 자료', dart: 'DART 공시', dart_filing: 'DART 공시', monthly: '월간 자료'};
-  const priceSourceName = s => /naver/i.test(str(s)) ? '네이버 금융 시세' : /aikstockdata/i.test(str(s)) ? '한국주식데이터 시세' : '시세 제공처 표기 없음';
+  // DART 주식총수 현황은 자기주식이 없으면 '-'로 적는다(fetch_shares가 None으로 저장). 발행 = 유통이면 0주로 읽는다(HYBE 2021~2023, 에스엠 2025~)
+  const noTreasury = r => !isNum((r || {}).treasury) && isNum((r || {}).issued) && r.issued === r.outstanding;
+  const priceSourceName = s => /fsc_close/i.test(str(s)) ? '금융위원회 확정 종가(한국주식데이터 경유)' : /minute/i.test(str(s)) ? '네이버 금융 분봉' :
+    /naver/i.test(str(s)) ? '네이버 금융 시세' : /aikstockdata/i.test(str(s)) ? '한국주식데이터 시세' : '시세 제공처 표기 없음';
   // 관계사 시가총액 산식(range.stakes[].market_cap_basis = affiliates.json mcap_basis 원문 'naver close × aikstockdata shares')의 제공처 약칭을 화면 이름으로 바꾼다.
   // 이름은 시세 제공처 표기(priceSourceName)와 계보 카드의 'KRX 발행주식수(자기주식 미차감)'에 맞춘다. 바꾼 뒤에도 한국어가 없으면 '영문 원문' 표지를 단다
-  const mcapBasisTxt = s => str(s).replace(/\bnaver close\b/gi, '네이버 금융 종가').replace(/\baikstockdata shares\b/gi, 'KRX 발행주식수(한국주식데이터 수집, 자기주식 미차감)');
+  const mcapBasisTxt = s => str(s).replace(/\bnaver close\b/gi, '현재가').replace(/\baikstockdata shares\b/gi, 'KRX 발행주식수(한국주식데이터 수집, 자기주식 미차감)');
+  // 관계사 시가의 종류(range.stakes[].price_source, fetch_snapshot.official_close) — 정규장 종가를 확인하지 못한 조회가는 그렇다고 적는다
+  const stakePxTxt = s => ({aikstockdata_fsc_close: 'KRX 정규장 종가(금융위원회 확정 종가)', naver_minute_closing_auction: 'KRX 정규장 종가(네이버 분봉)',
+    naver_mobile_basic: '네이버 시세 조회가 — 정규장 종가를 확인하지 못함(장중·연장 거래 체결가일 수 있음)'})[str(s)] || priceSourceName(s);
   const mcapBasisHtml = s => { const t = mcapBasisTxt(s); return hasHangul(t) ? esc(t) : '<span class="lang">영문 원문</span><span lang="en">' + esc(t) + '</span>'; };
   function histSourceName(s) {
     s = str(s);
@@ -270,16 +278,17 @@
   // 제목이 없거나 id 모양일 때의 문서 종류: 엔진 doc_type이 한국어면 그대로, 아니면 id·제목의 분기 표기(2q26)·종류 단서(factsheet·monthly)와 호스트로 정한다
   function srcDocType(s, h) {
     const dt = str(s.doc_type).trim(), k = [s.id, s.title].concat(arr(s.aliases)).map(str).join(' ').toLowerCase();
-    const q = k.match(/(?:^|[^a-z0-9])([1-4])q(\d{2})(?![0-9])/), hy = k.match(/(20\d{2})h1(?![0-9])/);
-    const per = q ? '20' + q[2] + '년 ' + q[1] + '분기' : hy ? hy[1] + ' 반기' : '';
+    const q = k.match(/(?:^|[^a-z0-9])([1-4])q(\d{2})(?![0-9])/), hy = k.match(/(20\d{2})h1(?![0-9])/), kq = k.match(/(20\d{2})년\s*([1-4])분기/);
+    const per = q ? '20' + q[2] + '년 ' + q[1] + '분기' : hy ? hy[1] + ' 반기' : kq ? kq[1] + '년 ' + kq[2] + '분기' : '';
     const kind = hasHangul(dt) ? dt : docTypeNames[dt] ? docTypeNames[dt] : /dart\.fss\.or\.kr$/.test(h) ? 'DART 공시 원문' : /factsheet/.test(k) ? 'IR 팩트시트' : /monthly/.test(k) ? '월간 자료' : 'IR 자료';
     return kind + (per && !/\d/.test(kind) ? '(' + per + ')' : '');
   }
   function sourceLabel(s, c, d) {
     s = obj(s);
     const h = host(s.url), t = cleanTitle(s.title, s);
-    // 한국어 제목은 그대로 쓴다. 영문만인 제목('HYBE official factsheet')은 엔진 doc_type이 한국어면 그쪽을 우선한다 — 라벨을 '{회사} {문서 종류}({기간})'로 맞춘다
-    if (t && (hasHangul(t) || !hasHangul(s.doc_type))) return t + (h ? ' · ' + h : '');
+    // 한국어 제목은 그대로 쓴다. 영문 제목('HYBE official factsheet')과 한국어가 괄호 속 기간뿐인 영문 제목('Quarterly IR Pack (2026년 2분기)')은 엔진 doc_type이
+    // 한국어면 그쪽을 우선한다 — 라벨을 '{회사} {문서 종류}({기간})'로 맞추고, 기간은 제목의 '2026년 2분기'에서도 읽는다
+    if (t && (hasHangul(t.replace(/\([^)]*\)/g, '')) || !hasHangul(s.doc_type))) return t + (h ? ' · ' + h : '');
     const cid = str(s.company_id), co = obj(cid ? arr(obj(d).companies).find(x => obj(x).id === cid) : null).name || obj(c).name || '회사';
     return co + ' ' + srcDocType(s, h) + (h ? ' · ' + h : '');
   }
@@ -392,7 +401,7 @@
       (showCov && cov.as_of ? ' · 커버리지 레인 추정 기준일 ' + esc(cov.as_of) : '') + (a.eps_basis ? ' · EPS(E): ' + esc(a.eps_basis) : '') + '</p>';
     // EPS 실적은 출처마다 주식수 기준이 다르다: 워크북 내 벤더 EPS는 발행주식, DART 기본 EPS는 가중평균 유통주식
     const epsSrc = y => str(obj(hrec(c, 'annual', 'eps_basic', y)).source), vY = ya.filter(y => epsSrc(y) === 'model_report_vendor_actual'), dY = ya.filter(y => epsSrc(y) === 'dart_cfs');
-    if (vY.length && dY.length) foot += '<p class="dim small">EPS 주식수 기준: ' + esc(yearSpan(vY)) + ' 워크북 내 벤더 EPS는 발행주식 기준, ' + esc(yearSpan(dY)) + ' DART 기본 EPS는 가중평균 유통주식 기준, 연장(E) EPS는 현재 유통주식수(자기주식 제외) 기준이라 연도 사이 비교에 주식수 차이가 섞입니다.</p>';
+    if (vY.length && dY.length) foot += '<p class="dim small">EPS 주식수 기준: ' + esc(yearSpan(vY)) + ' 워크북 내 벤더 EPS는 연평균 발행주식수(자기주식 포함) 기준, ' + esc(yearSpan(dY)) + ' DART 기본 EPS는 가중평균 유통주식 기준, 연장(E) EPS는 현재 유통주식수(자기주식 제외) 기준이라 연도 사이 비교에 주식수 차이가 섞입니다.</p>';
     foot += '<div class="legend"><span><i class="sw est"></i>추정(앙상블 연장·커버리지 레인)</span>' + (tpl ? '<span>템플릿 워크북: 원본 추정 행 없음</span>' : '<span><i class="sw model"></i>워크북 원본 추정(' + esc(vintageYM(d)) + ')</span>') + '</div>';
     if (restated.length) {
       const r0 = restated[0].r;
@@ -808,7 +817,7 @@
       const asOf = stakes.map(x => x.price_as_of).filter(Boolean)[0];
       h += '<h3>상장 지분가치 (할인 ' + lvlR(g.stake_discount, 0) + (asOf ? ' · 시가총액 기준일 ' + esc(asOf) : '') + ')</h3>' + tw('지분 표', '<table class="wide stakes"><caption>시가총액·가치 십억원</caption><thead><tr><th class="l">종목</th><th>지분율</th><th class="l">검증</th><th>할인</th><th>시가총액</th><th>가치</th><th class="l">근거</th></tr></thead><tbody>' +
         stakes.map(x => '<tr><td class="l">' + esc(x.name) + '</td><td>' + lvlR(x.stake_pct, 2) + '</td><td class="l">' + (x.unverified === true ? badge('미검증', 'warn') : x.unverified === false ? badge('확인') : '—') + '</td><td>' + lvlR(x.discount, 0) + '</td>' + td(x.market_cap_bn, 1) + td(x.value_bn, 1) +
-          '<td class="l basis">' + rcptHtml(x.stake_basis) + (x.market_cap_basis ? '<br>시가총액 산식: ' + mcapBasisHtml(x.market_cap_basis) : '') + '</td></tr>').join('') +
+          '<td class="l basis">' + rcptHtml(x.stake_basis) + (x.market_cap_basis ? '<br>시가총액 산식: ' + mcapBasisHtml(x.market_cap_basis) : '') + (x.price_source ? '<br>시가: ' + esc(stakePxTxt(x.price_source)) : '') + '</td></tr>').join('') +
         '<tr class="tot"><td class="l">지분가치 합계</td><td></td><td></td><td></td><td></td>' + td(g.stake_value_bn, 1) + '<td></td></tr></tbody></table>');
     }
     if (g.source) h += '<p class="dim small">출처: ' + esc(g.source) + '</p>';
@@ -1111,11 +1120,17 @@
     const yrs = Array.from(new Set([].concat(...la.map(r => Object.keys(obj(A[r[0]])))))).filter(k => /^\d{4}$/.test(k)).sort();
     const qs = Array.from(new Set([].concat(...lq.map(r => Object.keys(obj(Q[r[0]])))))).filter(k => /^\d{4}Q[1-4]$/.test(k)).sort().slice(-8);
     const cell = (m, k, dd) => { const r = obj(obj(m)[k]); return isNum(r.value) ? td(r.value, dd) : '<td>—</td>'; };
+    // 영업이익에 들어가지만 판관비 행에 없는 항목(와이지 기타영업수익·비용, CJ ENM 매출채권 대손상각비 등)이 있으면 매출총이익 − 판관비 ≠ 영업이익이다.
+    // 차이가 0.5십억원 이상인 해가 있으면 그 차이를 행으로 보인다(이름은 항목을 단정하지 않는다)
+    const oth = {}; yrs.forEach(y => { const g = obj(obj(A.gross_profit)[y]).value, s = obj(obj(A.sga)[y]).value, o = obj(obj(A.operating_profit)[y]).value;
+      if (isNum(g) && isNum(s) && isNum(o)) oth[y] = Math.round((o - (g - s)) * 10) / 10; });
+    const showOth = la.some(r => r[0] === 'sga') && Object.keys(oth).some(y => Math.abs(oth[y]) >= 0.5);
+    const othRow = showOth ? '<tr><td class="l">판관비 밖 영업손익(차감: 영업이익 − 매출총이익 + 판관비)</td>' + yrs.map(y => isNum(oth[y]) ? td(oth[y], 1) : '<td>—</td>').join('') + '</tr>' : '';
     const srcs = Array.from(new Set([].concat(...la.map(r => yrs.map(y => histSourceName(obj(obj(A[r[0]])[y]).source))), ...lq.map(r => qs.map(k => histSourceName(obj(obj(Q[r[0]])[k]).source)))).filter(Boolean)));
     let h = '';
-    if (la.length) h += tw('연간 현금흐름·손익 세부', '<table class="wide"><thead><tr><th class="l">십억원</th>' + yrs.map(y => '<th>' + esc(y) + 'A</th>').join('') + '</tr></thead><tbody>' + la.map(r => '<tr><td class="l">' + esc(r[1]) + '</td>' + yrs.map(y => cell(A[r[0]], y, 1)).join('') + '</tr>').join('') + '</tbody></table>');
+    if (la.length) h += tw('연간 현금흐름·손익 세부', '<table class="wide"><thead><tr><th class="l">십억원</th>' + yrs.map(y => '<th>' + esc(y) + 'A</th>').join('') + '</tr></thead><tbody>' + la.map(r => '<tr><td class="l">' + esc(r[1]) + '</td>' + yrs.map(y => cell(A[r[0]], y, 1)).join('') + '</tr>' + (r[0] === 'sga' ? othRow : '')).join('') + '</tbody></table>');
     if (lq.length) h += '<h3>분기 세부</h3>' + tw('분기 세전이익·법인세·EPS', '<table class="wide"><thead><tr><th class="l">분기</th>' + lq.map(r => '<th>' + esc(r[1]) + '</th>').join('') + '</tr></thead><tbody>' + qs.map(k => '<tr><td class="l">' + esc(k) + '</td>' + lq.map(r => cell(Q[r[0]], k, r[2])).join('') + '</tr>').join('') + '</tbody></table>');
-    h += '<p class="dim small">금액 십억원(EPS는 원).' + (la.some(r => r[0] === 'capex' || r[0] === 'dividends_paid') ? ' CAPEX·배당금 지급은 현금 유출이라 음수로 둡니다.' : '') + (srcs.length ? ' 출처: ' + esc(srcs.join(' · ')) : '') + '</p>';
+    h += '<p class="dim small">금액 십억원(EPS는 원).' + (showOth ? ' 판관비 밖 영업손익 행은 영업이익에서 매출총이익 − 판관비를 뺀 차이로, 영업이익에 들어가지만 판관비 행에 없는 항목(기타영업수익·비용, 매출채권 대손상각비 등)입니다. 워크북 벤더 실적 연도는 벤더가 이런 항목을 판관비에 넣었으면 0으로 보입니다.' : '') + (la.some(r => r[0] === 'capex' || r[0] === 'dividends_paid') ? ' CAPEX·배당금 지급은 현금 유출이라 음수로 둡니다.' : '') + (srcs.length ? ' 출처: ' + esc(srcs.join(' · ')) : '') + '</p>';
     return det(st, 'fin', false, '현금흐름·세전이익·법인세 (십억원)', h);
   }
   // 연도별 주식수 이력(history.shares_history: DART 정기보고서 주식의 총수 현황, 보통주). 키는 '2021'…'2025'(사업보고서 기말)·'2026H1'(반기말).
@@ -1127,10 +1142,10 @@
     const n = x => isNum(x) ? tdTxt(fmt(x, 0)) : '<td>—</td>';
     const rows = ks.map(k => {
       const r = obj(sh[k]), src = [esc(r.basis || ''), r.rcept_no ? dartLink(r.rcept_no, '공시') : ''].filter(Boolean).join(' · ');
-      return '<tr><td class="l">' + esc(label(k)) + '</td><td class="l">' + esc(r.stlm_dt || '') + '</td>' + n(r.issued) + (isNum(r.treasury) ? tdTxt(fmt(r.treasury, 0)) : tdTxt('미기재', 'dim')) + n(r.outstanding) + '<td class="l">' + src + '</td></tr>';
+      return '<tr><td class="l">' + esc(label(k)) + '</td><td class="l">' + esc(r.stlm_dt || '') + '</td>' + n(r.issued) + (isNum(r.treasury) ? tdTxt(fmt(r.treasury, 0)) : noTreasury(r) ? tdTxt('0 (보고서 "-")') : tdTxt('미기재', 'dim')) + n(r.outstanding) + '<td class="l">' + src + '</td></tr>';
     }).join('');
     return det(st, 'shares', false, '주식수 이력 (DART 주식총수 현황, 보통주)', tw('주식수 이력', '<table class="wide"><thead><tr><th class="l">시점</th><th class="l">기준일</th><th>발행주식수</th><th>자기주식수</th><th>유통주식수</th><th class="l">출처</th></tr></thead><tbody>' + rows + '</tbody></table>') +
-      '<p class="dim small">단위 주. 유통주식수 = 발행주식수 − 자기주식수(보고서 값 그대로). "미기재"는 자료에 자기주식 수가 없는 시점입니다.</p>');
+      '<p class="dim small">단위 주. 유통주식수 = 발행주식수 − 자기주식수(보고서 값 그대로). 보고서가 자기주식을 "-"로 적고 발행주식수와 유통주식수가 같으면 0주로 보며, "미기재"는 자료에 자기주식 수가 없는 시점입니다.</p>');
   }
 
   // ── 출처 · 방법 ──
@@ -1147,7 +1162,7 @@
     const tplM = m.status === 'template', pageUrl = safeUrl(mk.page_url);
     let s = '<h3>Open DART 정기보고서(연결)</h3><p class="small">' + (Object.keys(dp).map(k => { const r = obj(dp[k]); return r.rcept_no ? dartLink(r.rcept_no, k) : esc(k) + '(없음)'; }).join(' · ') || '—') + '</p>';
     s += '<h3>시세 · 주식수</h3><ul class="plain"><li>현재가: ' + esc(priceSourceName(mk.price_source)) + ' ' + won(mk.price_krw) + (mk.price_as_of ? ' (' + esc(mk.price_as_of) + ')' : '') + (obj(d).market_retrieved_at ? ' · 수집 ' + esc(kstDay(d.market_retrieved_at)) : '') + (mk.price_basis ? '<div class="basis">' + esc(mk.price_basis) + '</div>' : '') + '</li>';
-    if (isNum(sh.outstanding)) s += '<li>유통주식수(EPS·밸류에이션 기준): DART 주식총수 현황 — 발행 ' + fmt(sh.issued, 0) + '주' + (isNum(sh.treasury) ? ' − 자기주식 ' + fmt(sh.treasury, 0) + '주' : '(자기주식 미기재)') + ' = ' + fmt(sh.outstanding, 0) + '주' + (sh.rcept_no ? ' · ' + dartLink(sh.rcept_no, '공시') : '') + '</li>';
+    if (isNum(sh.outstanding)) s += '<li>유통주식수(EPS·밸류에이션 기준): DART 주식총수 현황 — 발행 ' + fmt(sh.issued, 0) + '주' + (isNum(sh.treasury) ? ' − 자기주식 ' + fmt(sh.treasury, 0) + '주' : noTreasury(sh) ? ' − 자기주식 0주(보고서 "-")' : '(자기주식 미기재)') + ' = ' + fmt(sh.outstanding, 0) + '주' + (sh.rcept_no ? ' · ' + dartLink(sh.rcept_no, '공시') : '') + '</li>';
     // 인용문은 원문 페이지(history.market.page_url)가 있으면 링크로 단다
     const cite = mk.citation ? (pageUrl ? '<a href="' + esc(pageUrl) + '" target="_blank" rel="noopener noreferrer">' + esc(mk.citation) + ' ↗</a>' : esc(mk.citation)) : '';
     if (isNum(mk.shares_outstanding)) s += '<li>KRX 발행주식수(자기주식 미차감, 참고): ' + fmt(mk.shares_outstanding, 0) + '주' + (mk.shares_as_of ? ' (' + esc(ymd(mk.shares_as_of)) + ')' : '') + (cite ? ' · ' + cite : '') + (safeUrl(lic.url) ? ' · 라이선스 <a href="' + esc(lic.url) + '" target="_blank" rel="noopener noreferrer">' + esc(lic.name || lic.id || '보기') + '</a>' : '') + '</li>';

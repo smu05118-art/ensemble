@@ -1,15 +1,15 @@
 {
  "schema_version": "ensemble-analyst-models-build/1",
- "as_of": "2026-10-08",
+ "as_of": "2026-10-09",
  "model_vintage": "2024-03-01",
  "input": {
   "name": "data.json",
-  "sha256": "3139ebdf4f18fc3561d54819d54ca72492059b467700fd335595c3a8a4792508"
+  "sha256": "f36d2791cffff8b15a4b6e80d32f28fe9d103fc9805887649c234961298529df"
  },
  "outputs": {
-  "data.json": "b44bef50a8eedd82f69da9d0402476b1685ee0b03cbbb8d044669b66900ede07",
-  "ensemble-tab.js": "b9da662ff10231932f4193ea1853c4c64fe11151d5dcbf73ac8c8277b231b1bb",
-  "index.html": "f9c61f88b11335ba26ed47267017f7ccaa59733f455cf315ce9312a83d95f3a3"
+  "data.json": "a08e1e2ca30b850f5b0b53420490563fdf9a297a45fd27b75fe46fb9e598557c",
+  "ensemble-tab.js": "5d02d5af33d5d8e42d6b1d5e94140c78fe0382d5308034aaef45074e156a4d4d",
+  "index.html": "8d666a2c4f4811e716df3f27388f3e232b3cba741e3cc6fc0eeebc5f49a397aa"
  },
  "companies": [
   {
