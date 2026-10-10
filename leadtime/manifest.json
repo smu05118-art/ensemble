@@ -11,6 +11,30 @@
     "observations": 164,
     "sources": 68
   },
+  "estimate_layer": {
+    "state": "ready",
+    "model_version": "1.1.0",
+    "as_of": "2026-10-06",
+    "source_estimates": {
+      "provided": true,
+      "rows": 68,
+      "matched": 68,
+      "unmatched": [],
+      "by_flag": {
+        "e": 17,
+        "f": 51
+      },
+      "counted_as_observations": false,
+      "used_as_model_truth": false,
+      "publisher": "Linesight",
+      "vintage": "2026-06",
+      "basis_labels_ko": {
+        "e": "출처 추정 (e)",
+        "f": "출처 전망 (f)"
+      },
+      "note_ko": "출처 추정·전망은 별도 basis로만 보존합니다. 관측 수, 앵커, 백테스트 정답에 절대 포함하지 않으며 자체 모형 수치에 출처명을 붙이지 않습니다."
+    }
+  },
   "files": {
     "updates.md": "f60973cd8a766531cda1bdcfaa3896351c18555a341f40e7e240020853f1ffb1",
     "inventory-updates.md": "4ac4ce15b5548e32140ae7f626410d6bfd79b09e3d6272903d7bf41fd5f8cfbd",
@@ -19,12 +43,14 @@
     "ensemble-tab.js": "8a2c0d516d9d6a62bdc64639c037be99337d556b1ed3516203c35091cc318539",
     "trends.json": "3210038193ed0db4f2e0b15ec7a2340b3bd43f2a0a2a7318d750f3aca609a17a",
     "quarterly.csv": "0679ce641d2556369bb808bd4bac848f30c43156be9149da9e0f158b1457535b",
+    "projections.json": "f2191874aec748d7745729b53fe3f7fa5c4c1228234e370acf10f7cee4fdee5c",
+    "projections.csv": "8a99a0173902ba43bbd42eee5654adca0397d5a26b4e14416ac39d1e05fd2f38",
     "leadtime.js": "2a2259ce73095b9f6c6a30e10093dd0a2cc786bba8259428909bd4905e23a389",
     "leadtime.css": "69d81f308602ebddd7e25062e7b3a6cc55ab697937a5a8d5966f1e9d5a6dc8b6",
-    "inventory.js": "c2f4c6d9f9e46044ed2d27aa27f32e2a8680d2415f14cb6f474b72fab80ee7ac",
-    "inventory.css": "0ac30500b6d2b4c6970988b5f0873dafb47489dd9c1b4b359b1af2e41729f53a",
-    "trends.js": "b399387b3d4578b52da543c3e1480833f92576db994649cf7c83597fc143b0d3",
-    "trends.css": "5870871b645f382e8d37191d4e0b646b488e25182c1d2aa91541bc4942420651",
+    "inventory.js": "9213bfde4e7f0c73ffe18c2a5de0e71b7df747147998c8eed6aea2dd1b7a91a0",
+    "inventory.css": "674d806a74f30ecf03af075756b1bf19aec87e955bbb38be93ddc43c985f8452",
+    "trends.js": "f9d7d5f0de0674bf901e345399a0e8ecacd93b284afc73d288080906a17a318d",
+    "trends.css": "79b8238e5ede51ee727c88fd088ee8b2fedd1c01d20da6587eedf873911172ac",
     "index.html": "dac0f2e3aed63284bf934d71dfb87c5a4654b4c6391188a07d84f0bce5a30b41"
   }
 }
