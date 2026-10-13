@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-13",
   "intro_ko": "TrendForce Weekly Radar는 2026-09-14 첫 발간되었습니다. 6개 부품의 주간표는 첫 호부터 누적합니다. 그 이전 이력과 다른 부품은 원문이 확인된 별도 출처·제품 범위로 표시하며, 누락된 주차나 미공표 수치는 채우지 않습니다.",
   "sources": [
     {
@@ -1007,6 +1007,20 @@
       "date_precision": "day",
       "date_note_ko": "발간일 기준 현재 납기 스냅샷입니다. 별도 조사일은 공개되지 않았습니다.",
       "verified_via": "Official article read through web tool; official HTML fetched and SHA-256 retained."
+    },
+    {
+      "id": "tf-weekly-005",
+      "publisher": "TrendForce",
+      "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+      "url": "https://insights.trendforce.com/p/weekly-radar-005",
+      "asset_url": "https://substack-post-media.s3.amazonaws.com/public/images/e566c593-5538-4cc1-847d-3b5c0cccabc7_2048x1838.png",
+      "published_at": "2026-10-12",
+      "published_at_timestamp": "2026-10-12T10:04:48+00:00",
+      "observed_at": "2026-10-12",
+      "evidence_type": "original_table",
+      "locator": "Supply Chain Radar table; source footer TrendForce, Oct 12, 2026",
+      "verified_via": "Original article and full-size original table visually read; HTML datePublished metadata and table footer agree",
+      "sha256": "88b46fb02a530f18619c8cd587d090aacace902e8bd85b34f451af383c25d87e"
     }
   ],
   "series": [
@@ -16130,6 +16144,125 @@
       "measure_type": "reported",
       "locator": "Why 2026 Costs More / item 1; FAQ / electronic component pricing and lead times",
       "narrative_ko": "DDR5 RDIMM 납기는 부품과 할당 상태에 따라 3–7개월입니다. 제조사·밀도·지역·조사일은 미공개이며 원문 월 단위를 유지합니다. 인접한 64GB 가격 사례를 납기 범위로 한정하지 않습니다."
+    },
+    {
+      "id": "tf-weekly-cpu-20261012",
+      "series_id": "tf-weekly-cpu",
+      "source_id": "tf-weekly-005",
+      "release_id": "tf-weekly-005",
+      "as_of": "2026-10-12",
+      "value_min": 25,
+      "value_max": 30,
+      "qualifier": "range",
+      "raw_value": "25–30W",
+      "unit": "weeks",
+      "balanced_min": 16,
+      "balanced_max": 20,
+      "status": "Tight",
+      "locator": "Supply Chain Radar table / CPU",
+      "narrative_ko": "현재 25–30주, 균형 기준 16–20주로 공급 제약입니다. 주력 및 신플랫폼 전반에서 서버 CPU 공급이 계속 확대되고 있지만 고객 주문 충족은 여전히 어렵다고 설명합니다."
+    },
+    {
+      "id": "tf-weekly-gpu-20261012",
+      "series_id": "tf-weekly-gpu",
+      "source_id": "tf-weekly-005",
+      "release_id": "tf-weekly-005",
+      "as_of": "2026-10-12",
+      "value_min": 30,
+      "value_max": 40,
+      "qualifier": "range",
+      "raw_value": "30–40W",
+      "unit": "weeks",
+      "balanced_min": 30,
+      "balanced_max": 40,
+      "status": "Balanced",
+      "locator": "Supply Chain Radar table / GPU",
+      "narrative_ko": "현재와 균형 기준이 모두 30–40주로 수급 균형입니다. NVIDIA와 AMD는 각각 Blackwell과 MI350을 주로 출하하며 차세대 Rubin·MI450 AI 서버 시스템은 조정에 시간이 더 필요하다고 설명합니다."
+    },
+    {
+      "id": "tf-weekly-dram-20261012",
+      "series_id": "tf-weekly-dram",
+      "source_id": "tf-weekly-005",
+      "release_id": "tf-weekly-005",
+      "as_of": "2026-10-12",
+      "value_min": 20,
+      "value_max": 20,
+      "qualifier": "exact",
+      "raw_value": "20W",
+      "unit": "weeks",
+      "balanced_min": 8,
+      "balanced_max": 8,
+      "status": "Very Tight",
+      "locator": "Supply Chain Radar table / DRAM",
+      "narrative_ko": "현재 20주, 균형 기준 8주로 심각한 부족입니다. PC OEM의 2026년 4분기 계약가격 인상 흡수 여력이 제한되면서 DRAM 공급사가 PC DRAM 비트를 서버 DRAM으로 재배분하고, 주로 미국 CSP 수요를 충족한다고 설명합니다."
+    },
+    {
+      "id": "tf-weekly-nand-essd-20261012",
+      "series_id": "tf-weekly-nand-essd",
+      "source_id": "tf-weekly-005",
+      "release_id": "tf-weekly-005",
+      "as_of": "2026-10-12",
+      "value_min": 16,
+      "value_max": 16,
+      "qualifier": "exact",
+      "raw_value": "16W",
+      "unit": "weeks",
+      "balanced_min": 8,
+      "balanced_max": 8,
+      "status": "Tight",
+      "locator": "Supply Chain Radar table / NAND-ESSD",
+      "narrative_ko": "현재 16주, 균형 기준 8주로 공급 제약입니다. CSP가 HDD와 마찬가지로 2027년까지 eSSD 공급 확보를 시도하고 있으며 eSSD 납기는 높은 수준을 유지한다고 설명합니다."
+    },
+    {
+      "id": "tf-weekly-hdd-20261012",
+      "series_id": "tf-weekly-hdd",
+      "source_id": "tf-weekly-005",
+      "release_id": "tf-weekly-005",
+      "as_of": "2026-10-12",
+      "value_min": 50,
+      "value_max": 50,
+      "qualifier": "exact",
+      "raw_value": "50W",
+      "unit": "weeks",
+      "balanced_min": 16,
+      "balanced_max": 16,
+      "status": "Very Tight",
+      "locator": "Supply Chain Radar table / HDD",
+      "narrative_ko": "현재 50주, 균형 기준 16주로 심각한 부족입니다. CSP는 HDD 벤더와 공급을 확보하려는 수요가 계속 강하며 2027년까지 납기 단축 조짐이 없다고 설명합니다. 이는 전망 설명이며 현재 납기는 표의 50주로 보존합니다."
+    },
+    {
+      "id": "tf-weekly-abf-20261012",
+      "series_id": "tf-weekly-abf",
+      "source_id": "tf-weekly-005",
+      "release_id": "tf-weekly-005",
+      "as_of": "2026-10-12",
+      "value_min": 48,
+      "value_max": 56,
+      "qualifier": "range",
+      "raw_value": "48–56W",
+      "unit": "weeks",
+      "balanced_min": 12,
+      "balanced_max": 12,
+      "status": "Very Tight",
+      "locator": "Supply Chain Radar table / ABF",
+      "narrative_ko": "현재 48–56주, 균형 기준 12주로 심각한 부족입니다. ABF 기판 증설이 빠르게 늘어난 수요보다 크게 늦어 단기 완화 여지가 작다고 설명합니다. 2026년 3분기부터 2027년 4분기까지 분기당 10–15% 가격 인상 예상은 가격 전망이며 납기 관측에 포함하지 않습니다."
+    },
+    {
+      "id": "tf-weekly-mlcc-20261012",
+      "series_id": "tf-weekly-mlcc",
+      "source_id": "tf-weekly-005",
+      "release_id": "tf-weekly-005",
+      "as_of": "2026-10-12",
+      "value_min": 35,
+      "value_max": 35,
+      "qualifier": "exact",
+      "raw_value": "35W",
+      "unit": "weeks",
+      "balanced_min": 12,
+      "balanced_max": 12,
+      "status": "Tight",
+      "locator": "Supply Chain Radar table / MLCC",
+      "narrative_ko": "현재 35주, 균형 기준 12주로 공급 제약입니다. 스마트폰·노트북 ODM이 MLCC 재고 축적을 늦추는 가운데, 저용량 제품 수요는 약하고 고용량 제품 수요는 강해 소비자용 MLCC 수요가 분화한다고 설명합니다."
     }
   ],
   "releases": [
@@ -18053,6 +18186,26 @@
         "fusion-ddr5-rdimm-20260929"
       ],
       "summary_ko": "DDR5 RDIMM 납기는 부품과 할당 상태에 따라 3–7개월입니다. 제조사·밀도·지역·조사일은 미공개이며 원문 월 단위를 유지합니다. 인접한 64GB 가격 사례를 납기 범위로 한정하지 않습니다."
+    },
+    {
+      "id": "tf-weekly-005",
+      "publisher": "TrendForce",
+      "label": "Weekly Radar 005",
+      "published_at": "2026-10-12",
+      "as_of": "2026-10-12",
+      "source_ids": [
+        "tf-weekly-005"
+      ],
+      "summary_ko": "CPU 25–30주, GPU 30–40주, DRAM 20주, NAND(eSSD) 16주, HDD 50주, ABF 48–56주, MLCC 35주는 전호와 같습니다. CPU·NAND·MLCC는 공급 제약, DRAM·HDD·ABF는 심각한 부족, GPU는 수급 균형이며 균형 기준도 유지됩니다. 이번 호는 PC DRAM 비트를 서버 DRAM으로 재배분하는 움직임과 CSP의 2027년 eSSD·HDD 공급 확보 수요를 강조합니다. HDD 2027년까지의 단축 부재와 ABF 가격 인상은 전망 설명으로 보존하며 현재 납기 수치와 섞지 않습니다.",
+      "observation_ids": [
+        "tf-weekly-cpu-20261012",
+        "tf-weekly-gpu-20261012",
+        "tf-weekly-dram-20261012",
+        "tf-weekly-nand-essd-20261012",
+        "tf-weekly-hdd-20261012",
+        "tf-weekly-abf-20261012",
+        "tf-weekly-mlcc-20261012"
+      ]
     }
   ],
   "coverage": [

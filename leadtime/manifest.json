@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-13",
   "series": 145,
-  "observations": 795,
-  "releases": 85,
-  "sources": 83,
+  "observations": 802,
+  "releases": 86,
+  "sources": 84,
   "inventory": {
     "products": 22,
     "series": 39,
@@ -14,7 +14,7 @@
   "estimate_layer": {
     "state": "ready",
     "model_version": "1.1.0",
-    "as_of": "2026-10-06",
+    "as_of": "2026-10-13",
     "source_estimates": {
       "provided": true,
       "rows": 68,
@@ -36,15 +36,15 @@
     }
   },
   "files": {
-    "updates.md": "f60973cd8a766531cda1bdcfaa3896351c18555a341f40e7e240020853f1ffb1",
+    "updates.md": "67e1f6a36c644dbf1a2aeafd37b60a1fdc59af6f15489f496507d1ea1211e69c",
     "inventory-updates.md": "4ac4ce15b5548e32140ae7f626410d6bfd79b09e3d6272903d7bf41fd5f8cfbd",
-    "data.json": "0a15aa100f2e15c65f338bc94eecdcf8f35253bc6704b0f91d955e24587de4d0",
+    "data.json": "ab71615a70b2087893be5fb9185ae8e80ded6592a65627c9522290c7608b402c",
     "inventory.json": "52c35891bbd253c1fb7f413ceb54bdb0e02a719cd39baf3b4c15858a49a48e0a",
     "ensemble-tab.js": "8a2c0d516d9d6a62bdc64639c037be99337d556b1ed3516203c35091cc318539",
-    "trends.json": "3210038193ed0db4f2e0b15ec7a2340b3bd43f2a0a2a7318d750f3aca609a17a",
-    "quarterly.csv": "0679ce641d2556369bb808bd4bac848f30c43156be9149da9e0f158b1457535b",
-    "projections.json": "f2191874aec748d7745729b53fe3f7fa5c4c1228234e370acf10f7cee4fdee5c",
-    "projections.csv": "8a99a0173902ba43bbd42eee5654adca0397d5a26b4e14416ac39d1e05fd2f38",
+    "trends.json": "2d4afdd98e89e8874f7dd0aa0dedbf3eed6ef6bf606eeb70e9f74150d9b37298",
+    "quarterly.csv": "8b6836e74e11edb0a2c9d7a69646d46651c0134759f27866af404d129d03a763",
+    "projections.json": "bea08335daee482511f958bf4a8d8d9491840a93b94c9691f9e6d58550b3c672",
+    "projections.csv": "8adf63baf8b1e2edcbc8bdff47f96ffa7c41580cf4ac7c30eb457ca9ea031fae",
     "leadtime.js": "2a2259ce73095b9f6c6a30e10093dd0a2cc786bba8259428909bd4905e23a389",
     "leadtime.css": "69d81f308602ebddd7e25062e7b3a6cc55ab697937a5a8d5966f1e9d5a6dc8b6",
     "inventory.js": "9213bfde4e7f0c73ffe18c2a5de0e71b7df747147998c8eed6aea2dd1b7a91a0",

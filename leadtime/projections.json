@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "model_version": "1.1.0",
-  "as_of": "2026-10-06",
+  "as_of": "2026-10-13",
   "as_of_basis": "argument",
   "current_quarter": "2026-Q4",
   "horizon_quarters": 3,
@@ -36,7 +36,7 @@
   },
   "config": {
     "config_version": "1.1.0",
-    "as_of_default": "2026-10-06",
+    "as_of_default": "2026-10-13",
     "horizon_quarters": 3,
     "strict_validation": true,
     "causal_filter": {
@@ -251,11 +251,11 @@
     }
   },
   "generated_from": {
-    "trends_updated_at": "2026-10-06",
+    "trends_updated_at": "2026-10-13",
     "inventory_updated_at": "2026-10-06",
-    "trends_fingerprint": "464fdb11e01936909eace6dad9ce5e4464e45ab9570dd04d31e40410405873ae",
+    "trends_fingerprint": "aa8f36ce215bb9df6e923d8277fb867110c8cb1723702ef790ad2e74c1777327",
     "inventory_fingerprint": "37d3866e2e0db12bbe78b3a3a1750d26ccc669dd49132ffc26f34466847eb37b",
-    "config_hash": "d2830768e7b9b938cd02f66ba92d9ad7682e5889eced6df8cc9267a4de55eb2b",
+    "config_hash": "b91b10f0066c095c7e8c0092f0036821417a0ab2b5ca30d4d59f6fc4f45af4d9",
     "source_estimates_fingerprint": "89fb71aeeaae8d8553c458e2a3f190e3a9e0caca20a6430b2e026e91733b2176",
     "causal_cutoff_applied": true,
     "python_stdlib_only": true
@@ -1306,7 +1306,7 @@
         "tf-h100-20240717-h100",
         "tf-weekly-gpu"
       ],
-      "raw_observations": 9,
+      "raw_observations": 10,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -2854,20 +2854,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-gpu-20261005",
+          "id": "tf-weekly-gpu-20261012",
           "series_id": "tf-weekly-gpu",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / GPU",
           "evidence_tier": "primary",
           "scope": "GPU / B300·GB300을 포함한 AI 인프라 집계",
           "comparison_key": "tf-weekly-gpu",
-          "narrative_ko": "현재 30–40주, 균형 기준 30–40주로 수급 균형입니다. Blackwell이 주력 출하 플랫폼이며 Rubin은 시스템 수준 시험·검증 문제가 남아 있습니다. 2026년 4분기 또는 2027년 1분기의 Rubin 물량 확대와 Blackwell 수요의 2027년 상반기 지속은 전망입니다.",
+          "narrative_ko": "현재와 균형 기준이 모두 30–40주로 수급 균형입니다. NVIDIA와 AMD는 각각 Blackwell과 MI350을 주로 출하하며 차세대 Rubin·MI450 AI 서버 시스템은 조정에 시간이 더 필요하다고 설명합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -2903,14 +2903,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-gpu-20261005"
+            "tf-weekly-gpu-20261005",
+            "tf-weekly-gpu-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -2931,7 +2932,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -2978,7 +2979,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-gpu-20260928",
-              "tf-weekly-gpu-20261005"
+              "tf-weekly-gpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -2997,15 +2998,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-gpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-gpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 30,
                 "value_upper": 40,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -3107,7 +3108,7 @@
             "exact_pct": null,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-gpu-20261005",
+            "previous_id": "tf-weekly-gpu-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -3180,7 +3181,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-gpu-20260928",
-              "tf-weekly-gpu-20261005"
+              "tf-weekly-gpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -3199,15 +3200,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-gpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-gpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 30,
                 "value_upper": 40,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -3382,7 +3383,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-gpu-20260928",
-              "tf-weekly-gpu-20261005"
+              "tf-weekly-gpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -3401,15 +3402,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-gpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-gpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 30,
                 "value_upper": 40,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -3547,7 +3548,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-gpu-20261005",
+          "point_id": "tf-weekly-gpu-20261012",
           "level": {
             "lower": 30,
             "upper": 40,
@@ -3555,7 +3556,7 @@
             "upper_open": false,
             "label": "30–40 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -3654,7 +3655,7 @@
       "series_ids": [
         "tf-weekly-gpu"
       ],
-      "raw_observations": 4,
+      "raw_observations": 5,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -3755,20 +3756,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-gpu-20261005",
+          "id": "tf-weekly-gpu-20261012",
           "series_id": "tf-weekly-gpu",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / GPU",
           "evidence_tier": "primary",
           "scope": "GPU / B300·GB300을 포함한 AI 인프라 집계",
           "comparison_key": "tf-weekly-gpu",
-          "narrative_ko": "현재 30–40주, 균형 기준 30–40주로 수급 균형입니다. Blackwell이 주력 출하 플랫폼이며 Rubin은 시스템 수준 시험·검증 문제가 남아 있습니다. 2026년 4분기 또는 2027년 1분기의 Rubin 물량 확대와 Blackwell 수요의 2027년 상반기 지속은 전망입니다.",
+          "narrative_ko": "현재와 균형 기준이 모두 30–40주로 수급 균형입니다. NVIDIA와 AMD는 각각 Blackwell과 MI350을 주로 출하하며 차세대 Rubin·MI450 AI 서버 시스템은 조정에 시간이 더 필요하다고 설명합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -3804,14 +3805,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-gpu-20261005"
+            "tf-weekly-gpu-20261005",
+            "tf-weekly-gpu-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -3832,7 +3834,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -3879,7 +3881,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-gpu-20260928",
-              "tf-weekly-gpu-20261005"
+              "tf-weekly-gpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -3898,15 +3900,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-gpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-gpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 30,
                 "value_upper": 40,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -4008,7 +4010,7 @@
             "exact_pct": null,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-gpu-20261005",
+            "previous_id": "tf-weekly-gpu-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -4081,7 +4083,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-gpu-20260928",
-              "tf-weekly-gpu-20261005"
+              "tf-weekly-gpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -4100,15 +4102,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-gpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-gpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 30,
                 "value_upper": 40,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -4283,7 +4285,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-gpu-20260928",
-              "tf-weekly-gpu-20261005"
+              "tf-weekly-gpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -4302,15 +4304,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-gpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-gpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 30,
                 "value_upper": 40,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -4448,7 +4450,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-gpu-20261005",
+          "point_id": "tf-weekly-gpu-20261012",
           "level": {
             "lower": 30,
             "upper": 40,
@@ -4456,7 +4458,7 @@
             "upper_open": false,
             "label": "30–40 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -17421,7 +17423,7 @@
         "sourceability-q2-2026-dram",
         "tf-weekly-dram"
       ],
-      "raw_observations": 11,
+      "raw_observations": 12,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -22483,20 +22485,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-dram-20261005",
+          "id": "tf-weekly-dram-20261012",
           "series_id": "tf-weekly-dram",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / DRAM",
           "evidence_tier": "primary",
           "scope": "서버 DRAM",
           "comparison_key": "tf-weekly-dram",
-          "narrative_ko": "현재 20주, 균형 기준 8주로 심각한 부족입니다. 2026년 4분기 계약가격 초기 협의에서 상당한 인상이 논의되며 미국 CSP를 중심으로 수요가 강해지고 있다고 설명합니다.",
+          "narrative_ko": "현재 20주, 균형 기준 8주로 심각한 부족입니다. PC OEM의 2026년 4분기 계약가격 인상 흡수 여력이 제한되면서 DRAM 공급사가 PC DRAM 비트를 서버 DRAM으로 재배분하고, 주로 미국 CSP 수요를 충족한다고 설명합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -22532,14 +22534,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-dram-20261005"
+            "tf-weekly-dram-20261005",
+            "tf-weekly-dram-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -22560,7 +22563,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -22607,7 +22610,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-dram-20260928",
-              "tf-weekly-dram-20261005"
+              "tf-weekly-dram-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -22626,15 +22629,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-dram-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-dram-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 20,
                 "value_upper": 20,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -22736,7 +22739,7 @@
             "exact_pct": 0.0,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-dram-20261005",
+            "previous_id": "tf-weekly-dram-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -22809,7 +22812,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-dram-20260928",
-              "tf-weekly-dram-20261005"
+              "tf-weekly-dram-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -22828,15 +22831,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-dram-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-dram-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 20,
                 "value_upper": 20,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -23011,7 +23014,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-dram-20260928",
-              "tf-weekly-dram-20261005"
+              "tf-weekly-dram-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -23030,15 +23033,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-dram-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-dram-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 20,
                 "value_upper": 20,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -23176,7 +23179,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-dram-20261005",
+          "point_id": "tf-weekly-dram-20261012",
           "level": {
             "lower": 20,
             "upper": 20,
@@ -23184,7 +23187,7 @@
             "upper_open": false,
             "label": "20 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -23281,7 +23284,7 @@
       "series_ids": [
         "tf-weekly-dram"
       ],
-      "raw_observations": 4,
+      "raw_observations": 5,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -23382,20 +23385,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-dram-20261005",
+          "id": "tf-weekly-dram-20261012",
           "series_id": "tf-weekly-dram",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / DRAM",
           "evidence_tier": "primary",
           "scope": "서버 DRAM",
           "comparison_key": "tf-weekly-dram",
-          "narrative_ko": "현재 20주, 균형 기준 8주로 심각한 부족입니다. 2026년 4분기 계약가격 초기 협의에서 상당한 인상이 논의되며 미국 CSP를 중심으로 수요가 강해지고 있다고 설명합니다.",
+          "narrative_ko": "현재 20주, 균형 기준 8주로 심각한 부족입니다. PC OEM의 2026년 4분기 계약가격 인상 흡수 여력이 제한되면서 DRAM 공급사가 PC DRAM 비트를 서버 DRAM으로 재배분하고, 주로 미국 CSP 수요를 충족한다고 설명합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -23431,14 +23434,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-dram-20261005"
+            "tf-weekly-dram-20261005",
+            "tf-weekly-dram-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -23459,7 +23463,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -23506,7 +23510,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-dram-20260928",
-              "tf-weekly-dram-20261005"
+              "tf-weekly-dram-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -23525,15 +23529,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-dram-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-dram-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 20,
                 "value_upper": 20,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -23635,7 +23639,7 @@
             "exact_pct": 0.0,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-dram-20261005",
+            "previous_id": "tf-weekly-dram-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -23708,7 +23712,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-dram-20260928",
-              "tf-weekly-dram-20261005"
+              "tf-weekly-dram-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -23727,15 +23731,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-dram-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-dram-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 20,
                 "value_upper": 20,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -23910,7 +23914,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-dram-20260928",
-              "tf-weekly-dram-20261005"
+              "tf-weekly-dram-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -23929,15 +23933,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-dram-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-dram-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 20,
                 "value_upper": 20,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -24075,7 +24079,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-dram-20261005",
+          "point_id": "tf-weekly-dram-20261012",
           "level": {
             "lower": 20,
             "upper": 20,
@@ -24083,7 +24087,7 @@
             "upper_open": false,
             "label": "20 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -46516,7 +46520,7 @@
         "tf-storage-20250915-qlc",
         "tf-weekly-nand-essd"
       ],
-      "raw_observations": 15,
+      "raw_observations": 16,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -50265,20 +50269,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-nand-essd-20261005",
+          "id": "tf-weekly-nand-essd-20261012",
           "series_id": "tf-weekly-nand-essd",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / NAND-ESSD",
           "evidence_tier": "primary",
           "scope": "기업용 SSD용 NAND",
           "comparison_key": "tf-weekly-nand-essd",
-          "narrative_ko": "현재 16주, 균형 기준 8주로 공급 제약입니다. DRAM 부족이 일부 NAND 공급사의 기업용 SSD 솔루션 공급을 제한합니다. 2026년 내내 기업용 SSD 공급 부족이 이어질 것이라는 내용은 전망으로 구분합니다.",
+          "narrative_ko": "현재 16주, 균형 기준 8주로 공급 제약입니다. CSP가 HDD와 마찬가지로 2027년까지 eSSD 공급 확보를 시도하고 있으며 eSSD 납기는 높은 수준을 유지한다고 설명합니다.",
           "approximate": false,
           "source_change": true,
           "scope_break": true,
@@ -50309,19 +50313,20 @@
             "exact": null,
             "lower": null,
             "upper": null,
-            "base_id": "tf-weekly-nand-essd-20261005",
+            "base_id": "tf-weekly-nand-essd-20261012",
             "base_date": "2026-Q4",
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-nand-essd-20261005"
+            "tf-weekly-nand-essd-20261005",
+            "tf-weekly-nand-essd-20261012"
           ],
           "connect_previous": false,
           "yoy": {
@@ -50342,7 +50347,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -50388,22 +50393,22 @@
             "method_label_ko": "단일 앵커 수준 복사(희소 시나리오)",
             "explanation_ko": "실측 앵커가 1개뿐이라 2026-Q4 수준(16–16주)을 그대로 둔 시나리오입니다. 새 근거가 아닙니다.",
             "anchor_ids": [
-              "tf-weekly-nand-essd-20261005"
+              "tf-weekly-nand-essd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q4"
             ],
             "anchor_sources": [
               {
-                "id": "tf-weekly-nand-essd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-nand-essd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 16,
                 "value_upper": 16,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -50501,7 +50506,7 @@
             "exact_pct": 0.0,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-nand-essd-20261005",
+            "previous_id": "tf-weekly-nand-essd-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -50525,7 +50530,7 @@
             "exact": 100.0,
             "lower": 100.0,
             "upper": 100.0,
-            "base_id": "tf-weekly-nand-essd-20261005",
+            "base_id": "tf-weekly-nand-essd-20261012",
             "base_date": "2026-Q4",
             "is_estimate": true,
             "base_status": "observed"
@@ -50573,22 +50578,22 @@
             "method_label_ko": "단일 앵커 수준 복사(희소 시나리오)",
             "explanation_ko": "실측 앵커가 1개뿐이라 2026-Q4 수준(16–16주)을 그대로 둔 시나리오입니다. 새 근거가 아닙니다.",
             "anchor_ids": [
-              "tf-weekly-nand-essd-20261005"
+              "tf-weekly-nand-essd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q4"
             ],
             "anchor_sources": [
               {
-                "id": "tf-weekly-nand-essd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-nand-essd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 16,
                 "value_upper": 16,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -50710,7 +50715,7 @@
             "exact": 100.0,
             "lower": 100.0,
             "upper": 100.0,
-            "base_id": "tf-weekly-nand-essd-20261005",
+            "base_id": "tf-weekly-nand-essd-20261012",
             "base_date": "2026-Q4",
             "is_estimate": true,
             "base_status": "observed"
@@ -50758,22 +50763,22 @@
             "method_label_ko": "단일 앵커 수준 복사(희소 시나리오)",
             "explanation_ko": "실측 앵커가 1개뿐이라 2026-Q4 수준(16–16주)을 그대로 둔 시나리오입니다. 새 근거가 아닙니다.",
             "anchor_ids": [
-              "tf-weekly-nand-essd-20261005"
+              "tf-weekly-nand-essd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q4"
             ],
             "anchor_sources": [
               {
-                "id": "tf-weekly-nand-essd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-nand-essd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 16,
                 "value_upper": 16,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -50895,7 +50900,7 @@
             "exact": 100.0,
             "lower": 100.0,
             "upper": 100.0,
-            "base_id": "tf-weekly-nand-essd-20261005",
+            "base_id": "tf-weekly-nand-essd-20261012",
             "base_date": "2026-Q4",
             "is_estimate": true,
             "base_status": "observed"
@@ -50907,7 +50912,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-nand-essd-20261005",
+          "point_id": "tf-weekly-nand-essd-20261012",
           "level": {
             "lower": 16,
             "upper": 16,
@@ -50915,7 +50920,7 @@
             "upper_open": false,
             "label": "16 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -51014,7 +51019,7 @@
       "series_ids": [
         "tf-weekly-nand-essd"
       ],
-      "raw_observations": 4,
+      "raw_observations": 5,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -51115,20 +51120,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-nand-essd-20261005",
+          "id": "tf-weekly-nand-essd-20261012",
           "series_id": "tf-weekly-nand-essd",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / NAND-ESSD",
           "evidence_tier": "primary",
           "scope": "기업용 SSD용 NAND",
           "comparison_key": "tf-weekly-nand-essd",
-          "narrative_ko": "현재 16주, 균형 기준 8주로 공급 제약입니다. DRAM 부족이 일부 NAND 공급사의 기업용 SSD 솔루션 공급을 제한합니다. 2026년 내내 기업용 SSD 공급 부족이 이어질 것이라는 내용은 전망으로 구분합니다.",
+          "narrative_ko": "현재 16주, 균형 기준 8주로 공급 제약입니다. CSP가 HDD와 마찬가지로 2027년까지 eSSD 공급 확보를 시도하고 있으며 eSSD 납기는 높은 수준을 유지한다고 설명합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -51164,14 +51169,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-nand-essd-20261005"
+            "tf-weekly-nand-essd-20261005",
+            "tf-weekly-nand-essd-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -51192,7 +51198,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -51239,7 +51245,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-nand-essd-20260928",
-              "tf-weekly-nand-essd-20261005"
+              "tf-weekly-nand-essd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -51258,15 +51264,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-nand-essd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-nand-essd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 16,
                 "value_upper": 16,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -51368,7 +51374,7 @@
             "exact_pct": 0.0,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-nand-essd-20261005",
+            "previous_id": "tf-weekly-nand-essd-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -51441,7 +51447,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-nand-essd-20260928",
-              "tf-weekly-nand-essd-20261005"
+              "tf-weekly-nand-essd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -51460,15 +51466,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-nand-essd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-nand-essd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 16,
                 "value_upper": 16,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -51643,7 +51649,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-nand-essd-20260928",
-              "tf-weekly-nand-essd-20261005"
+              "tf-weekly-nand-essd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -51662,15 +51668,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-nand-essd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-nand-essd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 16,
                 "value_upper": 16,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -51808,7 +51814,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-nand-essd-20261005",
+          "point_id": "tf-weekly-nand-essd-20261012",
           "level": {
             "lower": 16,
             "upper": 16,
@@ -51816,7 +51822,7 @@
             "upper_open": false,
             "label": "16 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -114474,7 +114480,7 @@
         "tf-storage-20250915-hdd",
         "tf-weekly-hdd"
       ],
-      "raw_observations": 11,
+      "raw_observations": 12,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -117917,20 +117923,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-hdd-20261005",
+          "id": "tf-weekly-hdd-20261012",
           "series_id": "tf-weekly-hdd",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / HDD",
           "evidence_tier": "primary",
           "scope": "AI 인프라 HDD 집계",
           "comparison_key": "tf-weekly-hdd",
-          "narrative_ko": "현재 50주, 균형 기준 16주로 심각한 부족입니다. Toshiba의 생산라인 확대 발표에도 가동까지 최소 12–24개월이 걸린다고 설명합니다. 2027년 말 이전의 납기 개선이 어렵다는 내용은 전망이며 현재 납기로 바꾸지 않습니다.",
+          "narrative_ko": "현재 50주, 균형 기준 16주로 심각한 부족입니다. CSP는 HDD 벤더와 공급을 확보하려는 수요가 계속 강하며 2027년까지 납기 단축 조짐이 없다고 설명합니다. 이는 전망 설명이며 현재 납기는 표의 50주로 보존합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -117966,14 +117972,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-hdd-20261005"
+            "tf-weekly-hdd-20261005",
+            "tf-weekly-hdd-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -117994,7 +118001,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -118041,7 +118048,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-hdd-20260928",
-              "tf-weekly-hdd-20261005"
+              "tf-weekly-hdd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -118060,15 +118067,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-hdd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-hdd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 50,
                 "value_upper": 50,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -118170,7 +118177,7 @@
             "exact_pct": 0.0,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-hdd-20261005",
+            "previous_id": "tf-weekly-hdd-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -118243,7 +118250,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-hdd-20260928",
-              "tf-weekly-hdd-20261005"
+              "tf-weekly-hdd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -118262,15 +118269,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-hdd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-hdd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 50,
                 "value_upper": 50,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -118445,7 +118452,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-hdd-20260928",
-              "tf-weekly-hdd-20261005"
+              "tf-weekly-hdd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -118464,15 +118471,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-hdd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-hdd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 50,
                 "value_upper": 50,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -118610,7 +118617,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-hdd-20261005",
+          "point_id": "tf-weekly-hdd-20261012",
           "level": {
             "lower": 50,
             "upper": 50,
@@ -118618,7 +118625,7 @@
             "upper_open": false,
             "label": "50 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -118716,7 +118723,7 @@
       "series_ids": [
         "tf-weekly-hdd"
       ],
-      "raw_observations": 4,
+      "raw_observations": 5,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -118817,20 +118824,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-hdd-20261005",
+          "id": "tf-weekly-hdd-20261012",
           "series_id": "tf-weekly-hdd",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / HDD",
           "evidence_tier": "primary",
           "scope": "AI 인프라 HDD 집계",
           "comparison_key": "tf-weekly-hdd",
-          "narrative_ko": "현재 50주, 균형 기준 16주로 심각한 부족입니다. Toshiba의 생산라인 확대 발표에도 가동까지 최소 12–24개월이 걸린다고 설명합니다. 2027년 말 이전의 납기 개선이 어렵다는 내용은 전망이며 현재 납기로 바꾸지 않습니다.",
+          "narrative_ko": "현재 50주, 균형 기준 16주로 심각한 부족입니다. CSP는 HDD 벤더와 공급을 확보하려는 수요가 계속 강하며 2027년까지 납기 단축 조짐이 없다고 설명합니다. 이는 전망 설명이며 현재 납기는 표의 50주로 보존합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -118866,14 +118873,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-hdd-20261005"
+            "tf-weekly-hdd-20261005",
+            "tf-weekly-hdd-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -118894,7 +118902,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -118941,7 +118949,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-hdd-20260928",
-              "tf-weekly-hdd-20261005"
+              "tf-weekly-hdd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -118960,15 +118968,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-hdd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-hdd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 50,
                 "value_upper": 50,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -119070,7 +119078,7 @@
             "exact_pct": 0.0,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-hdd-20261005",
+            "previous_id": "tf-weekly-hdd-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -119143,7 +119151,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-hdd-20260928",
-              "tf-weekly-hdd-20261005"
+              "tf-weekly-hdd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -119162,15 +119170,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-hdd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-hdd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 50,
                 "value_upper": 50,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -119345,7 +119353,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-hdd-20260928",
-              "tf-weekly-hdd-20261005"
+              "tf-weekly-hdd-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -119364,15 +119372,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-hdd-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-hdd-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 50,
                 "value_upper": 50,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -119510,7 +119518,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-hdd-20261005",
+          "point_id": "tf-weekly-hdd-20261012",
           "level": {
             "lower": 50,
             "upper": 50,
@@ -119518,7 +119526,7 @@
             "upper_open": false,
             "label": "50 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -139377,7 +139385,7 @@
         "semi-package-substrates",
         "tf-weekly-abf"
       ],
-      "raw_observations": 5,
+      "raw_observations": 6,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -142371,20 +142379,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-abf-20261005",
+          "id": "tf-weekly-abf-20261012",
           "series_id": "tf-weekly-abf",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / ABF",
           "evidence_tier": "primary",
           "scope": "AI 인프라 ABF 기판 집계",
           "comparison_key": "tf-weekly-abf",
-          "narrative_ko": "현재 48–56주, 균형 기준 12주로 심각한 부족입니다. ABF 기판 증설 속도가 수요 증가를 따라가지 못한다고 설명합니다. 2026년 3분기부터 2027년 4분기까지 분기당 10–15% 가격 상승 예상은 가격 전망이며 납기 관측에 포함하지 않습니다.",
+          "narrative_ko": "현재 48–56주, 균형 기준 12주로 심각한 부족입니다. ABF 기판 증설이 빠르게 늘어난 수요보다 크게 늦어 단기 완화 여지가 작다고 설명합니다. 2026년 3분기부터 2027년 4분기까지 분기당 10–15% 가격 인상 예상은 가격 전망이며 납기 관측에 포함하지 않습니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -142420,14 +142428,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-abf-20261005"
+            "tf-weekly-abf-20261005",
+            "tf-weekly-abf-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -142448,7 +142457,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -142495,7 +142504,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-abf-20260928",
-              "tf-weekly-abf-20261005"
+              "tf-weekly-abf-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -142514,15 +142523,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-abf-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-abf-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 48,
                 "value_upper": 56,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -142624,7 +142633,7 @@
             "exact_pct": null,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-abf-20261005",
+            "previous_id": "tf-weekly-abf-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -142697,7 +142706,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-abf-20260928",
-              "tf-weekly-abf-20261005"
+              "tf-weekly-abf-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -142716,15 +142725,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-abf-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-abf-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 48,
                 "value_upper": 56,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -142899,7 +142908,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-abf-20260928",
-              "tf-weekly-abf-20261005"
+              "tf-weekly-abf-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -142918,15 +142927,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-abf-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-abf-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 48,
                 "value_upper": 56,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -143064,7 +143073,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-abf-20261005",
+          "point_id": "tf-weekly-abf-20261012",
           "level": {
             "lower": 48,
             "upper": 56,
@@ -143072,7 +143081,7 @@
             "upper_open": false,
             "label": "48–56 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -143169,7 +143178,7 @@
       "series_ids": [
         "tf-weekly-abf"
       ],
-      "raw_observations": 4,
+      "raw_observations": 5,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -143270,20 +143279,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-abf-20261005",
+          "id": "tf-weekly-abf-20261012",
           "series_id": "tf-weekly-abf",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / ABF",
           "evidence_tier": "primary",
           "scope": "AI 인프라 ABF 기판 집계",
           "comparison_key": "tf-weekly-abf",
-          "narrative_ko": "현재 48–56주, 균형 기준 12주로 심각한 부족입니다. ABF 기판 증설 속도가 수요 증가를 따라가지 못한다고 설명합니다. 2026년 3분기부터 2027년 4분기까지 분기당 10–15% 가격 상승 예상은 가격 전망이며 납기 관측에 포함하지 않습니다.",
+          "narrative_ko": "현재 48–56주, 균형 기준 12주로 심각한 부족입니다. ABF 기판 증설이 빠르게 늘어난 수요보다 크게 늦어 단기 완화 여지가 작다고 설명합니다. 2026년 3분기부터 2027년 4분기까지 분기당 10–15% 가격 인상 예상은 가격 전망이며 납기 관측에 포함하지 않습니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -143319,14 +143328,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-abf-20261005"
+            "tf-weekly-abf-20261005",
+            "tf-weekly-abf-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -143347,7 +143357,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -143394,7 +143404,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-abf-20260928",
-              "tf-weekly-abf-20261005"
+              "tf-weekly-abf-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -143413,15 +143423,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-abf-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-abf-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 48,
                 "value_upper": 56,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -143523,7 +143533,7 @@
             "exact_pct": null,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-abf-20261005",
+            "previous_id": "tf-weekly-abf-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -143596,7 +143606,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-abf-20260928",
-              "tf-weekly-abf-20261005"
+              "tf-weekly-abf-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -143615,15 +143625,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-abf-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-abf-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 48,
                 "value_upper": 56,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -143798,7 +143808,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-abf-20260928",
-              "tf-weekly-abf-20261005"
+              "tf-weekly-abf-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -143817,15 +143827,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-abf-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-abf-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 48,
                 "value_upper": 56,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -143963,7 +143973,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-abf-20261005",
+          "point_id": "tf-weekly-abf-20261012",
           "level": {
             "lower": 48,
             "upper": 56,
@@ -143971,7 +143981,7 @@
             "upper_open": false,
             "label": "48–56 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -148678,7 +148688,7 @@
         "tti-paumanok-mlcc-allcase",
         "vishay-commercial-mlcc"
       ],
-      "raw_observations": 19,
+      "raw_observations": 20,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -153145,20 +153155,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-mlcc-20261005",
+          "id": "tf-weekly-mlcc-20261012",
           "series_id": "tf-weekly-mlcc",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / MLCC",
           "evidence_tier": "primary",
           "scope": "AI 인프라 MLCC 집계",
           "comparison_key": "tf-weekly-mlcc",
-          "narrative_ko": "현재 35주, 균형 기준 12주로 공급 제약입니다. 전호의 32주에서 3주 늘었습니다. 저가 소비자용 수요는 둔화되지만 AI용 고급 0805 표준품은 부족해 시장 수요의 양극화가 지속된다고 설명합니다.",
+          "narrative_ko": "현재 35주, 균형 기준 12주로 공급 제약입니다. 스마트폰·노트북 ODM이 MLCC 재고 축적을 늦추는 가운데, 저용량 제품 수요는 약하고 고용량 제품 수요는 강해 소비자용 MLCC 수요가 분화한다고 설명합니다.",
           "approximate": false,
           "source_change": true,
           "scope_break": true,
@@ -153189,19 +153199,20 @@
             "exact": null,
             "lower": null,
             "upper": null,
-            "base_id": "tf-weekly-mlcc-20261005",
+            "base_id": "tf-weekly-mlcc-20261012",
             "base_date": "2026-Q4",
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-mlcc-20261005"
+            "tf-weekly-mlcc-20261005",
+            "tf-weekly-mlcc-20261012"
           ],
           "connect_previous": false,
           "yoy": {
@@ -153222,7 +153233,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -153268,22 +153279,22 @@
             "method_label_ko": "단일 앵커 수준 복사(희소 시나리오)",
             "explanation_ko": "실측 앵커가 1개뿐이라 2026-Q4 수준(35–35주)을 그대로 둔 시나리오입니다. 새 근거가 아닙니다.",
             "anchor_ids": [
-              "tf-weekly-mlcc-20261005"
+              "tf-weekly-mlcc-20261012"
             ],
             "anchor_quarters": [
               "2026-Q4"
             ],
             "anchor_sources": [
               {
-                "id": "tf-weekly-mlcc-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-mlcc-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 35,
                 "value_upper": 35,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -153381,7 +153392,7 @@
             "exact_pct": 0.0,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-mlcc-20261005",
+            "previous_id": "tf-weekly-mlcc-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -153405,7 +153416,7 @@
             "exact": 100.0,
             "lower": 100.0,
             "upper": 100.0,
-            "base_id": "tf-weekly-mlcc-20261005",
+            "base_id": "tf-weekly-mlcc-20261012",
             "base_date": "2026-Q4",
             "is_estimate": true,
             "base_status": "observed"
@@ -153453,22 +153464,22 @@
             "method_label_ko": "단일 앵커 수준 복사(희소 시나리오)",
             "explanation_ko": "실측 앵커가 1개뿐이라 2026-Q4 수준(35–35주)을 그대로 둔 시나리오입니다. 새 근거가 아닙니다.",
             "anchor_ids": [
-              "tf-weekly-mlcc-20261005"
+              "tf-weekly-mlcc-20261012"
             ],
             "anchor_quarters": [
               "2026-Q4"
             ],
             "anchor_sources": [
               {
-                "id": "tf-weekly-mlcc-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-mlcc-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 35,
                 "value_upper": 35,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -153590,7 +153601,7 @@
             "exact": 100.0,
             "lower": 100.0,
             "upper": 100.0,
-            "base_id": "tf-weekly-mlcc-20261005",
+            "base_id": "tf-weekly-mlcc-20261012",
             "base_date": "2026-Q4",
             "is_estimate": true,
             "base_status": "observed"
@@ -153638,22 +153649,22 @@
             "method_label_ko": "단일 앵커 수준 복사(희소 시나리오)",
             "explanation_ko": "실측 앵커가 1개뿐이라 2026-Q4 수준(35–35주)을 그대로 둔 시나리오입니다. 새 근거가 아닙니다.",
             "anchor_ids": [
-              "tf-weekly-mlcc-20261005"
+              "tf-weekly-mlcc-20261012"
             ],
             "anchor_quarters": [
               "2026-Q4"
             ],
             "anchor_sources": [
               {
-                "id": "tf-weekly-mlcc-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-mlcc-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 35,
                 "value_upper": 35,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -153775,7 +153786,7 @@
             "exact": 100.0,
             "lower": 100.0,
             "upper": 100.0,
-            "base_id": "tf-weekly-mlcc-20261005",
+            "base_id": "tf-weekly-mlcc-20261012",
             "base_date": "2026-Q4",
             "is_estimate": true,
             "base_status": "observed"
@@ -153787,7 +153798,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-mlcc-20261005",
+          "point_id": "tf-weekly-mlcc-20261012",
           "level": {
             "lower": 35,
             "upper": 35,
@@ -153795,7 +153806,7 @@
             "upper_open": false,
             "label": "35 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -153893,7 +153904,7 @@
       "series_ids": [
         "tf-weekly-mlcc"
       ],
-      "raw_observations": 4,
+      "raw_observations": 5,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -153994,20 +154005,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-mlcc-20261005",
+          "id": "tf-weekly-mlcc-20261012",
           "series_id": "tf-weekly-mlcc",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / MLCC",
           "evidence_tier": "primary",
           "scope": "AI 인프라 MLCC 집계",
           "comparison_key": "tf-weekly-mlcc",
-          "narrative_ko": "현재 35주, 균형 기준 12주로 공급 제약입니다. 전호의 32주에서 3주 늘었습니다. 저가 소비자용 수요는 둔화되지만 AI용 고급 0805 표준품은 부족해 시장 수요의 양극화가 지속된다고 설명합니다.",
+          "narrative_ko": "현재 35주, 균형 기준 12주로 공급 제약입니다. 스마트폰·노트북 ODM이 MLCC 재고 축적을 늦추는 가운데, 저용량 제품 수요는 약하고 고용량 제품 수요는 강해 소비자용 MLCC 수요가 분화한다고 설명합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -154043,14 +154054,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-mlcc-20261005"
+            "tf-weekly-mlcc-20261005",
+            "tf-weekly-mlcc-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -154071,7 +154083,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -154118,7 +154130,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0179, 상단 slope=0.0179 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-mlcc-20260928",
-              "tf-weekly-mlcc-20261005"
+              "tf-weekly-mlcc-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -154137,15 +154149,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-mlcc-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-mlcc-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 35,
                 "value_upper": 35,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -154247,7 +154259,7 @@
             "exact_pct": 0.900149,
             "lower_pct": 0.900149,
             "upper_pct": 0.900149,
-            "previous_id": "tf-weekly-mlcc-20261005",
+            "previous_id": "tf-weekly-mlcc-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -154320,7 +154332,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0179, 상단 slope=0.0179 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-mlcc-20260928",
-              "tf-weekly-mlcc-20261005"
+              "tf-weekly-mlcc-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -154339,15 +154351,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-mlcc-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-mlcc-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 35,
                 "value_upper": 35,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -154522,7 +154534,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0179, 상단 slope=0.0179 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-mlcc-20260928",
-              "tf-weekly-mlcc-20261005"
+              "tf-weekly-mlcc-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -154541,15 +154553,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-mlcc-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-mlcc-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 35,
                 "value_upper": 35,
                 "publisher": "TrendForce",
                 "qualifier": "exact",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -154687,7 +154699,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-mlcc-20261005",
+          "point_id": "tf-weekly-mlcc-20261012",
           "level": {
             "lower": 35,
             "upper": 35,
@@ -154695,7 +154707,7 @@
             "upper_open": false,
             "label": "35 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -449122,7 +449134,7 @@
       "series_ids": [
         "tf-weekly-cpu"
       ],
-      "raw_observations": 2,
+      "raw_observations": 3,
       "quarterly_recomputed_for_as_of": false,
       "current_quarter": "2026-Q4",
       "current_quarter_label_ko": "2026-Q4",
@@ -449221,20 +449233,20 @@
           "source_estimate_ids": []
         },
         {
-          "id": "tf-weekly-cpu-20261005",
+          "id": "tf-weekly-cpu-20261012",
           "series_id": "tf-weekly-cpu",
           "date": "2026-Q4",
-          "published_at": "2026-10-05",
-          "as_of": "2026-10-05",
+          "published_at": "2026-10-12",
+          "as_of": "2026-10-12",
           "date_basis": "발간일",
           "publisher": "TrendForce",
-          "source_title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-          "source_url": "https://insights.trendforce.com/p/weekly-radar-004",
+          "source_title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+          "source_url": "https://insights.trendforce.com/p/weekly-radar-005",
           "locator": "Supply Chain Radar table / CPU",
           "evidence_tier": "primary",
           "scope": "AI 인프라 서버 CPU 집계 / 제조사·세부 사양·지역 미공개",
           "comparison_key": "tf-weekly-cpu",
-          "narrative_ko": "현재 25–30주, 균형 기준 16–20주. AI 추론 업무가 CPU 수요를 견인하며 공급 제약이 지속된다고 설명합니다.",
+          "narrative_ko": "현재 25–30주, 균형 기준 16–20주로 공급 제약입니다. 주력 및 신플랫폼 전반에서 서버 CPU 공급이 계속 확대되고 있지만 고객 주문 충족은 여전히 어렵다고 설명합니다.",
           "approximate": false,
           "source_change": false,
           "scope_break": false,
@@ -449270,14 +449282,15 @@
             "is_estimate": false,
             "base_status": "observed"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "quarter": "2026-Q4",
           "has_observation": true,
           "selection_status": "latest",
-          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-05 (발간일). 분기 평균·분기말 확정값 아님.",
-          "observation_count": 1,
+          "selection_note": "분기 내 마지막 확인값 · 원 자료 축 2026-10-12 (발간일). 분기 평균·분기말 확정값 아님.",
+          "observation_count": 2,
           "observation_ids": [
-            "tf-weekly-cpu-20261005"
+            "tf-weekly-cpu-20261005",
+            "tf-weekly-cpu-20261012"
           ],
           "connect_previous": true,
           "yoy": {
@@ -449298,7 +449311,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-05) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-12) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
@@ -449345,7 +449358,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=1, Σ=0.5000; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-cpu-20260928",
-              "tf-weekly-cpu-20261005"
+              "tf-weekly-cpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -449364,15 +449377,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-cpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-cpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 25,
                 "value_upper": 30,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -449474,7 +449487,7 @@
             "exact_pct": null,
             "lower_pct": 0.0,
             "upper_pct": 0.0,
-            "previous_id": "tf-weekly-cpu-20261005",
+            "previous_id": "tf-weekly-cpu-20261012",
             "previous_date": "2026-Q4",
             "is_estimate": true
           },
@@ -449547,7 +449560,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=2, Σ=0.7500; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-cpu-20260928",
-              "tf-weekly-cpu-20261005"
+              "tf-weekly-cpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -449566,15 +449579,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-cpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-cpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 25,
                 "value_upper": 30,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -449749,7 +449762,7 @@
             "explanation_ko": "x_h = x_last × exp(slope × Σphi^k), phi=0.5, h=3, Σ=0.8750; 하단 slope=0.0000, 상단 slope=0.0000 (분기당 로그). 2026-Q4 실측에서 인과적으로 외삽 · 기본값(폴드 부족).",
             "anchor_ids": [
               "tf-weekly-cpu-20260928",
-              "tf-weekly-cpu-20261005"
+              "tf-weekly-cpu-20261012"
             ],
             "anchor_quarters": [
               "2026-Q3",
@@ -449768,15 +449781,15 @@
                 "original_date": "2026-09-28"
               },
               {
-                "id": "tf-weekly-cpu-20261005",
-                "title": "Weekly Radar 004: DRAM Tightness Is Becoming an Enterprise SSD Constraint",
-                "url": "https://insights.trendforce.com/p/weekly-radar-004",
+                "id": "tf-weekly-cpu-20261012",
+                "title": "Weekly Radar 005: AI Demand Pulls DRAM Supply Toward Servers",
+                "url": "https://insights.trendforce.com/p/weekly-radar-005",
                 "quarter": "2026-Q4",
                 "value_lower": 25,
                 "value_upper": 30,
                 "publisher": "TrendForce",
                 "qualifier": "range",
-                "original_date": "2026-10-05"
+                "original_date": "2026-10-12"
               }
             ],
             "parameters": {
@@ -449914,7 +449927,7 @@
       "kpi": {
         "latest_actual": {
           "quarter": "2026-Q4",
-          "point_id": "tf-weekly-cpu-20261005",
+          "point_id": "tf-weekly-cpu-20261012",
           "level": {
             "lower": 25,
             "upper": 30,
@@ -449922,7 +449935,7 @@
             "upper_open": false,
             "label": "25–30 주"
           },
-          "original_date": "2026-10-05",
+          "original_date": "2026-10-12",
           "partial": true,
           "fiscal_label": null
         },
@@ -459246,7 +459259,7 @@
           "basis": "actual",
           "basis_label_ko": "실측",
           "partial": true,
-          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-06 기준 분기 내 마지막 확인값(원 자료 축 2026-10-02) · 분기말 확정값 아님",
+          "partial_note_ko": "현재 분기 미완료 · as_of 2026-10-13 기준 분기 내 마지막 확인값(원 자료 축 2026-10-02) · 분기말 확정값 아님",
           "fiscal": null,
           "source_estimate_ids": []
         },
