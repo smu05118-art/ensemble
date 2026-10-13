@@ -18,7 +18,7 @@ async function render(provider,view,opsError=false){
 }
 test('all 22 providers and eight views produce valid content without runtime failures',async()=>{
  for(const provider of Object.keys(data.ledger.providers))for(const view of ['overview','capacity','earnings','calculator','history','evidence','compare','links']){
-  const output=await render(provider,view);assert.ok(output.includes('class="layout"'));assert.ok(!output.includes('NaN'),'NaN in '+provider+'/'+view);
+  const output=await render(provider,view);assert.ok(output.includes('class="layout"'));assert.ok(!output.includes('NaN'),'NaN in '+provider+'/'+view);if(view==='overview')assert.ok(output.includes('공식 공시 연결'),'official source panel missing for '+provider);
  }
 });
 test('capacity, calculator and integration expose their required outputs',async()=>{
@@ -28,4 +28,11 @@ test('capacity, calculator and integration expose their required outputs',async(
 });
 test('an unavailable operations feed does not remove financial and capacity views',async()=>{
  const output=await render('NBIS','overview',true);assert.ok(output.includes('운영 데이터 로드 실패'));assert.ok(output.includes('고객 배정'));
+});
+test('Kingsoft exposes direct annual SEC facts without calling them cloud-only revenue',async()=>{
+ const output=await render('3896.HK','overview');
+ assert.ok(output.includes('8개 공식 대조'));
+ assert.ok(output.includes('공식 공시 연결 · 일일 자동 감시'));
+ assert.ok(output.includes('전사 기준 · SEC XBRL 직접 태그'));
+ assert.ok(!output.includes('클라우드 분기 매출 · SEC XBRL 직접 태그'));
 });

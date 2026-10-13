@@ -1,0 +1,116 @@
+{
+  "schema": "ensemble_cloud_official_sources/1",
+  "description": "Daily bounded fingerprints of each issuer's official investor-relations or newsroom index. A change is a review candidate, not a numeric observation.",
+  "providers": {
+    "0700.HK": {
+      "label": "Tencent investor reports",
+      "kind": "official_investor_index",
+      "url": "https://www.tencent.com/en-us/investors/financial-reports.html"
+    },
+    "0728.HK": {
+      "label": "China Telecom official site",
+      "kind": "official_company_index",
+      "url": "https://www.chinatelecom-h.com/"
+    },
+    "0762.HK": {
+      "label": "China Unicom official site",
+      "kind": "official_company_index",
+      "url": "https://www.chinaunicom.com.hk/"
+    },
+    "0941.HK": {
+      "label": "China Mobile official site",
+      "kind": "official_company_index",
+      "url": "https://www.chinamobileltd.com/"
+    },
+    "3896.HK": {
+      "label": "Kingsoft Cloud SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001795589.json"
+    },
+    "9888.HK": {
+      "label": "Baidu SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001329099.json"
+    },
+    "9988.HK": {
+      "label": "Alibaba SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001577552.json"
+    },
+    "AMZN": {
+      "label": "Amazon SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001018724.json"
+    },
+    "APLD": {
+      "label": "Applied Digital SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001144879.json"
+    },
+    "CIFR": {
+      "label": "Cipher Digital SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001819989.json"
+    },
+    "CRUSOE": {
+      "label": "Crusoe newsroom",
+      "kind": "official_newsroom",
+      "url": "https://crusoe.ai/newsroom/"
+    },
+    "CRWV": {
+      "label": "CoreWeave SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001769628.json"
+    },
+    "GOOGL": {
+      "label": "Alphabet SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001652044.json"
+    },
+    "IBM": {
+      "label": "IBM SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0000051143.json"
+    },
+    "IREN": {
+      "label": "IREN SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001878848.json"
+    },
+    "LAMBDA": {
+      "label": "Lambda blog",
+      "kind": "official_newsroom",
+      "url": "https://lambda.ai/blog"
+    },
+    "MSFT": {
+      "label": "Microsoft SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0000789019.json"
+    },
+    "NBIS": {
+      "label": "Nebius SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001513845.json"
+    },
+    "ORCL": {
+      "label": "Oracle SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001341439.json"
+    },
+    "WULF": {
+      "label": "TeraWulf SEC filing index",
+      "kind": "sec_filing_index",
+      "url": "https://data.sec.gov/submissions/CIK0001083301.json"
+    },
+    "huawei": {
+      "label": "Huawei annual report",
+      "kind": "official_annual_report_index",
+      "url": "https://www.huawei.com/en/annual-report"
+    },
+    "ucloud": {
+      "label": "UCloud official site",
+      "kind": "official_company_index",
+      "url": "https://www.ucloud.cn/"
+    }
+  }
+}

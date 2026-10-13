@@ -7,7 +7,18 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 def read(name): return json.loads((ROOT / 'cloud/data' / (name+'.json')).read_text())
 ledger, research, exports, operations = map(read, ['ledger','research','exports','operations'])
+registry = json.loads((ROOT / 'cloud/data/source_registry.json').read_text())
 assert len(ledger['providers']) == 22
+assert registry['schema'] == 'ensemble_cloud_official_sources/1'
+assert set(registry['providers']) == set(ledger['providers'])
+disclosures = operations.get('disclosures', {})
+assert set(disclosures.get('providers', {})) == set(ledger['providers'])
+for provider, row in disclosures['providers'].items():
+    assert row['provider'] == provider and row['automated'] is True
+    assert row['url'] == registry['providers'][provider]['url']
+    assert row['health'] in ('ok', 'error')
+    assert urlparse(row['url']).scheme == 'https'
+    assert row['last_checked_at']
 assert set(research['profiles']) == {'NBIS','CRWV','IREN','APLD','CIFR','WULF'}
 seen = set()
 for s in ledger['signals']:
@@ -18,6 +29,11 @@ for s in ledger['signals']:
         assert urlparse(s['source_url']).scheme == 'https'
         assert s['published_at'] <= s['observed_at']
         assert s['verified_at'] and s['first_seen_at']
+    if s.get('origin') == 'sec_companyfacts':
+        assert re.fullmatch(r'https://data\.sec\.gov/api/xbrl/companyfacts/CIK\d{10}\.json', s['source_url'])
+        assert s['metric'] in ('group_revenue', 'group_revenue_annual')
+        assert s['effective_at'] in s['period']
+        assert s['direction'] is None and not s['rule']
 for provider, profile in research['profiles'].items():
     assert profile['source'] in research['sources']
     for t in profile['tranches']:
@@ -30,6 +46,7 @@ for provider, profile in research['profiles'].items():
             assert c['mw'] and c['years'] and c['tcv_m']
             assert abs(c['rate']-c['tcv_m']/c['years']/c['mw']) < .000001
 assert len(exports['ensemble']) == 22 and len(exports['monthly_scenarios']) == 6
+assert len(exports['official_disclosures']) == 22
 assert exports['observations'] and all(s['verified'] for s in exports['observations'])
 assert len(operations['adapters']['regions']['rows']) < 100
 for name in ('index.html','ensemble_home.html'):

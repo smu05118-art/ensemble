@@ -14,7 +14,9 @@ No customer allocation is invented as a confirmed disclosure. Solid customer col
 
 `ledger.json` preserves original unverified observations, official checks and revisions. Targets, unverifiable figures and observations older than 180 days do not enter actual-direction scores. Scores summarize rule-based direction; no return prediction, backtest or trading performance is claimed.
 
-`operations.json` collects public Nebius Greenhouse jobs and Statuspage regional groups/incidents. The first collection is a baseline. Created dates are not inferred from job update timestamps. Failed adapters retain last good data with visible error health. Daily collection is configured in `cloud-observations.yml`; financial filings still require deliberate source review.
+`operations.json` collects public Nebius Greenhouse jobs and Statuspage regional groups/incidents, plus a bounded daily fingerprint of every provider's official IR or newsroom index. The first collection is a baseline. Created dates are not inferred from job update timestamps. A changed issuer index is a review candidate, never a numeric observation; failed adapters retain the last good connection with visible error health.
+
+Fourteen SEC-reporting providers additionally refresh direct XBRL revenue facts daily from the official Company Facts API. The collector keeps the reported fiscal label and actual end date, accepts only 70–110-day quarters or 330–380-day annual periods, and never derives Q4 from annual revenue. These facts are explicitly `전사 기준` and do not become cloud-segment direction scores. The other eight providers remain connected to their official indices; their numbers stay blank until the original disclosure gives a compatible unit, period, and scope.
 
 `exports.json` is the machine-readable handoff for other modules. It contains provider IDs, units, scopes, publication and discovery times, evidence groups, actual-direction summaries and explicitly marked monthly scenarios. Chain links to rack, memory, optics and power are navigable. Statistical integration is conditional on customer allocation/BOM and publication-time alignment; it is not automatically a validated forecast model.
 
@@ -22,6 +24,7 @@ No customer allocation is invented as a confirmed disclosure. Solid customer col
 
 ```sh
 python3 tools/collect_cloud.py
+python3 tools/collect_cloud_sec_facts.py
 python3 tools/enrich_cloud_ledger.py
 python3 tools/inject_cloud_tab.py
 node tools/export_cloud.cjs

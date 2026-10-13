@@ -26,4 +26,26 @@ class CollectorTests(unittest.TestCase):
         rows = c.normalize('regions', {'components': [{'id': 'a', 'name': 'EU-NORTH1', 'status': 'operational', 'group': True}, {'id': 'b', 'name': 'Compute', 'status': 'operational', 'group': False}]})
         self.assertEqual(len(rows), 1)
 
+    def test_official_source_change_is_candidate_not_observation(self):
+        registry = {'providers': {'TEST': {'label': 'Issuer IR', 'kind': 'official_investor_index', 'url': 'https://issuer.example/ir'}}}
+        first, events = c.watch_official_sources({}, registry, '2026-10-14T00:00:00Z',
+            fetcher=lambda _: {'content_hash': 'a', 'content_type': 'text/html', 'etag': None, 'last_modified': None, 'bytes': 10, 'final_url': 'https://issuer.example/ir'})
+        self.assertEqual(events, [])
+        second, events = c.watch_official_sources({'disclosures': first}, registry, '2026-10-15T00:00:00Z',
+            fetcher=lambda _: {'content_hash': 'b', 'content_type': 'text/html', 'etag': None, 'last_modified': None, 'bytes': 12, 'final_url': 'https://issuer.example/ir'})
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]['type'], 'source_changed')
+        self.assertEqual(second['providers']['TEST']['content_hash'], 'b')
+        self.assertNotIn('value', second['providers']['TEST'])
+
+    def test_official_source_error_keeps_last_good_fingerprint(self):
+        registry = {'providers': {'TEST': {'label': 'Issuer IR', 'kind': 'official_investor_index', 'url': 'https://issuer.example/ir'}}}
+        old = {'disclosures': {'providers': {'TEST': {'content_hash': 'stable', 'last_good_at': '2026-10-14T00:00:00Z'}}}}
+        watched, events = c.watch_official_sources(old, registry, '2026-10-15T00:00:00Z',
+            fetcher=lambda _: (_ for _ in ()).throw(RuntimeError('HTTP 503')))
+        row = watched['providers']['TEST']
+        self.assertEqual(row['health'], 'error')
+        self.assertEqual(row['content_hash'], 'stable')
+        self.assertEqual(events, [])
+
 if __name__ == '__main__': unittest.main()
