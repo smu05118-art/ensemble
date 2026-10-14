@@ -145,13 +145,15 @@
   // DART 주식총수 현황은 자기주식이 없으면 '-'로 적는다(fetch_shares가 None으로 저장). 발행 = 유통이면 0주로 읽는다(HYBE 2021~2023, 에스엠 2025~)
   const noTreasury = r => !isNum((r || {}).treasury) && isNum((r || {}).issued) && r.issued === r.outstanding;
   const priceSourceName = s => /fsc_close/i.test(str(s)) ? '금융위원회 확정 종가(한국주식데이터 경유)' : /minute/i.test(str(s)) ? '네이버 금융 분봉' :
+    /halted/i.test(str(s)) ? '네이버 금융 시세(거래정지 기준가)' :
     /naver/i.test(str(s)) ? '네이버 금융 시세' : /aikstockdata/i.test(str(s)) ? '한국주식데이터 시세' : '시세 제공처 표기 없음';
   // 관계사 시가총액 산식(range.stakes[].market_cap_basis = affiliates.json mcap_basis 원문 'naver close × aikstockdata shares')의 제공처 약칭을 화면 이름으로 바꾼다.
   // 이름은 시세 제공처 표기(priceSourceName)와 계보 카드의 'KRX 발행주식수(자기주식 미차감)'에 맞춘다. 바꾼 뒤에도 한국어가 없으면 '영문 원문' 표지를 단다
   const mcapBasisTxt = s => str(s).replace(/\bnaver close\b/gi, '현재가').replace(/\baikstockdata shares\b/gi, 'KRX 발행주식수(한국주식데이터 수집, 자기주식 미차감)');
   // 관계사 시가의 종류(range.stakes[].price_source, fetch_snapshot.official_close) — 정규장 종가를 확인하지 못한 조회가는 그렇다고 적는다
   const stakePxTxt = s => ({aikstockdata_fsc_close: 'KRX 정규장 종가(금융위원회 확정 종가)', naver_minute_closing_auction: 'KRX 정규장 종가(네이버 분봉)',
-    naver_mobile_basic: '네이버 시세 조회가 — 정규장 종가를 확인하지 못함(장중·연장 거래 체결가일 수 있음)'})[str(s)] || priceSourceName(s);
+    naver_mobile_basic: '네이버 시세 조회가 — 정규장 종가를 확인하지 못함(장중·연장 거래 체결가일 수 있음)',
+    naver_halted_base: 'KRX 거래정지 중 — 정지 기준가(그날 체결 없음)'})[str(s)] || priceSourceName(s);
   const mcapBasisHtml = s => { const t = mcapBasisTxt(s); return hasHangul(t) ? esc(t) : '<span class="lang">영문 원문</span><span lang="en">' + esc(t) + '</span>'; };
   function histSourceName(s) {
     s = str(s);
@@ -954,7 +956,7 @@
     const years = obj(band.years), yk = Object.keys(years).sort(), off = pbrOff(v);
     if (yk.length) {
       const yn = b => b === true ? '유효' : b === false ? '제외' : '—';
-      // 보통주 BPS ≤ 0이면 기준연도(최신 분기 BPS = 보고 BPS) PBR도 내지 않는다
+      // 보통주 BPS ≤ 0이면 기준연도(기준 기간 말 BPS = 보고 BPS) PBR도 내지 않는다
       const hideRef = x => off && x.source === 'ttm';
       const rows = yk.map(y => { const x = obj(years[y]), on = vy.indexOf(y) >= 0; return '<tr' + (on ? ' class="hl"' : '') + '><td class="l">' + esc(y) + (on ? ' ●' : '') + '</td><td class="l">' + esc(bandSourceNames[x.source] || '') + '</td>' + td(x.eps, 0) + td(x.bps, 0) + tdR(x.roe) + td(x.per, 2) + (hideRef(x) ? '<td>—</td>' : td(x.pbr, 3)) + td(x.months, 0) + '<td>' + yn(x.valid_per) + '</td><td>' + yn(x.valid_pbr) + '</td></tr>'; }).join('');
       // 연도별 주식수 기준(years[y].shares_basis: 연말 유통주식수와 공시, 또는 '현재 유통주식수(연말 자료 없음)'). 같은 문구가 이어지는 연도는 묶는다
@@ -1133,12 +1135,14 @@
     h += '<p class="dim small">금액 십억원(EPS는 원).' + (showOth ? ' 판관비 밖 영업손익 행은 영업이익에서 매출총이익 − 판관비를 뺀 차이로, 영업이익에 들어가지만 판관비 행에 없는 항목(기타영업수익·비용, 매출채권 대손상각비 등)입니다. 워크북 벤더 실적 연도는 벤더가 이런 항목을 판관비에 넣었으면 0으로 보입니다.' : '') + (la.some(r => r[0] === 'capex' || r[0] === 'dividends_paid') ? ' CAPEX·배당금 지급은 현금 유출이라 음수로 둡니다.' : '') + (srcs.length ? ' 출처: ' + esc(srcs.join(' · ')) : '') + '</p>';
     return det(st, 'fin', false, '현금흐름·세전이익·법인세 (십억원)', h);
   }
-  // 연도별 주식수 이력(history.shares_history: DART 정기보고서 주식의 총수 현황, 보통주). 키는 '2021'…'2025'(사업보고서 기말)·'2026H1'(반기말).
+  // 연도별 주식수 이력(history.shares_history: DART 정기보고서 주식의 총수 현황, 보통주). 키는 'YYYY'(사업보고서 기말)·'YYYYH1'(반기말)·'YYYYQ1'·'YYYYQ3'(분기말).
+  // 행은 기간 말 순(같은 해 연말은 그 해 반기·분기말 뒤)
   // 값은 엔진이 실은 그대로이며 페이지가 다시 계산하지 않는다. 필드가 없으면 그리지 않는다
   function sharesHistoryDetails(c, st) {
-    const sh = obj(hist(c).shares_history), ks = Object.keys(sh).filter(k => isNum(obj(sh[k]).outstanding) || isNum(obj(sh[k]).issued)).sort();
+    const endOf = k => /^\d{4}$/.test(k) ? k + '12' : /^\d{4}H1$/.test(k) ? k.slice(0, 4) + '06' : /^\d{4}Q[1-4]$/.test(k) ? k.slice(0, 4) + String(3 * +k[5]).padStart(2, '0') : k;
+    const sh = obj(hist(c).shares_history), ks = Object.keys(sh).filter(k => isNum(obj(sh[k]).outstanding) || isNum(obj(sh[k]).issued)).sort((a, b) => endOf(a) < endOf(b) ? -1 : endOf(a) > endOf(b) ? 1 : 0);
     if (!ks.length) return '';
-    const label = k => /^\d{4}$/.test(k) ? k + ' 연말' : /^\d{4}H1$/.test(k) ? k.slice(0, 4) + ' 반기말' : /^\d{4}Q[1-4]$/.test(k) ? k + ' 말' : k;
+    const label = k => /^\d{4}$/.test(k) ? k + ' 연말' : /^\d{4}H1$/.test(k) ? k.slice(0, 4) + ' 반기말' : /^\d{4}Q[1-4]$/.test(k) ? k.slice(0, 4) + ' ' + k[5] + '분기말' : k;
     const n = x => isNum(x) ? tdTxt(fmt(x, 0)) : '<td>—</td>';
     const rows = ks.map(k => {
       const r = obj(sh[k]), src = [esc(r.basis || ''), r.rcept_no ? dartLink(r.rcept_no, '공시') : ''].filter(Boolean).join(' · ');
