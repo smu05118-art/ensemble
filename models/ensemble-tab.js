@@ -4,7 +4,10 @@
    house_tp_in_consensus_snapshot, 현금흐름·세전이익 이력, sources.aliases·doc_type 등)와 이번 라운드 필드(op_vs_consensus.basis·segment_sum_bn·consolidation_adjustment_bn,
    break_even.required_multiples, history.segment_labels·shares_history, own_band.years[].shares_basis, roll_forward.source.ytd_through·ytd_check)는 없을 수 있다 — 없으면 그 조각을 그리지 않는다.
    라운드 4 필드(consensus_now.forward_retrieved_on·forward_point_in_time, range.segments[].peers[].eps_basis·eps_basis_label, op_vs_consensus.consensus_vintage,
-   range.sensitivity.equity_le_zero)도 없을 수 있다 — 없으면 이전 표기 그대로 둔다. */
+   range.sensitivity.equity_le_zero)도 없을 수 있다 — 없으면 이전 표기 그대로 둔다.
+   연도 넘김(Stage B) 필드(roll_forward.assumptions.anchor와 연도 없는 중립 키, valuation.eps_fy·per_now)가 없으면 옛 연도 키(h1_2026_*·eps_2027e 등)를 읽는다.
+   roll_forward.source.coverage_ahead(커버리지 판 실적으로 채운 분기, 비어 있으면 엔진이 싣지 않음)가 없으면 레저 분기 추정 표는 모든 칸을 추정으로 그린다.
+   화면의 연도 라벨은 고정 연도 없이 모두 데이터(실적·연장 연도 키, anchor, per_now.fy, forward[y].estimate)에서 만든다. */
 (function () {
   'use strict';
   const SCHEMA = 'ensemble-analyst-models/2';
@@ -18,6 +21,7 @@
   const obj = x => (x && typeof x === 'object' && !Array.isArray(x)) ? x : {};
   const arr = x => Array.isArray(x) ? x : [];
   const str = x => typeof x === 'string' ? x : '';
+  const own = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
   const nfs = {};
   const nf = (min, max) => nfs[min + ':' + max] || (nfs[min + ':' + max] = new Intl.NumberFormat('ko-KR', {minimumFractionDigits: min, maximumFractionDigits: max}));
   const z = (x, d) => (Math.abs(x) < 0.5 * Math.pow(10, -d) ? 0 : x);
@@ -178,11 +182,18 @@
   function hv(c, metric, key, freq) { const r = hrec(c, freq || 'annual', metric, key); return r && isNum(r.value) ? r.value : null; }
   function fv(c, year, key, sc) { const v = obj(obj(obj(rf(c).scenarios)[sc])[String(year)])[key]; return isNum(v) ? v : null; }
   function mrec(c, freq, metric, key) { const r = obj(obj(model(c)[freq])[metric])[key]; return (r && isNum(r.value)) ? r : null; }
-  function yearsA(c) { const ks = Object.keys(obj(obj(hist(c).annual).revenue)).filter(k => /^\d{4}$/.test(k)).sort(); return ks.length ? ks : ['2020', '2021', '2022', '2023', '2024', '2025']; }
-  function yearsE(c) { const ks = Object.keys(obj(obj(rf(c).scenarios).base)).filter(k => /^\d{4}$/.test(k)).sort(); return ks.length ? ks : ['2026', '2027', '2028']; }
+  // 실적·연장 연도는 데이터의 키만 쓴다 — 키가 없으면 빈 목록(라벨과 칸은 '—'), 고정 연도로 채우지 않는다(연도 넘김 뒤 틀린 연도가 보이지 않게)
+  function yearsA(c) { return Object.keys(obj(obj(hist(c).annual).revenue)).filter(k => /^\d{4}$/.test(k)).sort(); }
+  function yearsE(c) { return Object.keys(obj(obj(rf(c).scenarios).base)).filter(k => /^\d{4}$/.test(k)).sort(); }
+  // KPI의 실적 연도 = 매출이나 영업이익 값이 있는 마지막 연간 실적 연도(키만 있고 값이 없는 해는 건너뜀)
+  function lastActualYear(c) { const ya = yearsA(c); for (let i = ya.length - 1; i >= 0; i--) if (isNum(hv(c, 'revenue', ya[i])) || isNum(hv(c, 'operating_profit', ya[i]))) return ya[i]; return null; }
   function yoyA(c, metric, y) { const a = hv(c, metric, y), b = hv(c, metric, String(+y - 1)); return (isNum(a) && isNum(b) && b > 0) ? (a / b - 1) * 100 : null; }
   function fyoy(c, y, key, sc) { const a = fv(c, y, key, sc), b = y === yearsE(c)[0] ? hv(c, key, String(+y - 1)) : fv(c, +y - 1, key, sc); return (isNum(a) && isNum(b) && b > 0) ? (a / b - 1) * 100 : null; }
-  function quarterKeys(c) { return Object.keys(obj(obj(hist(c).quarterly).revenue)).filter(k => /^\d{4}Q[1-4]$/.test(k) && k >= '2023Q1').sort(); }
+  // 분기 차트·표는 최신 분기가 속한 해와 그 앞 3개 해(최신 2026Q2면 2023Q1부터) — 연도가 넘어가도 창 길이가 그대로다
+  function quarterKeys(c) {
+    const ks = Object.keys(obj(obj(hist(c).quarterly).revenue)).filter(k => /^\d{4}Q[1-4]$/.test(k)).sort();
+    return ks.length ? ks.filter(k => k >= (+ks[ks.length - 1].slice(0, 4) - 3) + 'Q1') : [];
+  }
   function modelQ(c, metric, k) {
     if (isTemplate(c)) return null;
     const thru = obj(model(c).horizon).quarterly_through, r = mrec(c, 'quarterly', metric, k);
@@ -198,6 +209,43 @@
     Object.keys(src).forEach(k => arr(obj(src[k]).aliases).forEach(a => { if (typeof a === 'string' && a && !src[a]) alias[a] = k; }));
     const key = id => (typeof id === 'string' && id) ? (src[id] ? id : (alias[id] || null)) : null;
     return {key, get: id => { const k = key(id); return k ? obj(src[k]) : null; }};
+  }
+  // 연도 범위 표기: ['2026','2027','2028'] → '2026–2028', 한 해면 그 해
+  const ySpan = ys => ys.length ? (ys[0] === ys[ys.length - 1] ? ys[0] : ys[0] + '–' + ys[ys.length - 1]) : '';
+  // 목적격 조사: 끝 숫자를 읽은 소리에 받침이 있으면 '을'(0·1·3·6·7·8), 없으면 '를'(2·4·5·9)
+  const objJosa = w => /[2459]$/.test(str(w)) ? '를' : '을';
+
+  // ── 연장 기준(roll_forward.assumptions.anchor) ──
+  // 엔진은 연도가 없는 중립 키(ytd_yoy·g_remaining …)와 anchor(기준 연도·종류·연장 연도)를 싣고, 2026 상반기 기준일 때만 연도 키(h1_2026_yoy …)를 함께 싣는다.
+  // anchor가 있으면 중립 키(그 키가 없을 때만 같은 뜻의 연도 키 — 레저 ni_2026_basis 등), 없으면(옛 데이터) 연도 키를 읽는다. 라벨의 연도는 모두 anchor에서 만든다
+  const LEGACY_KEYS = {ytd_yoy: 'h1_2026_yoy', g_remaining: 'g_h2_2026', g_remaining_basis: 'g_h2_basis', g_remaining_seasonal: 'g_h2_seasonal', g_y1: 'g_2027', g_y1_raw: 'g_2027_raw',
+    g_y1_basis: 'g_2027_basis', g_y2: 'g_2028', g_y2_basis: 'g_2028_basis', opm_remaining: 'opm_h2_2026', opm_remaining_basis: 'opm_h2_2026_basis', one_off_ytd_op: 'h1_2026_one_off_op',
+    one_off_prior_half_op: 'h2_2025_one_off_op', opm_ytd_normalised: 'opm_h1_2026_normalised', opm_prior_half_normalised: 'opm_h2_2025_normalised', opm_y1_basis: 'opm_2027_basis',
+    ni_y0_basis: 'ni_2026_basis', ytd_actual: 'h1_2026_actual', prior_half_actual: 'h2_2025_actual'};
+  // 연도 키를 쓰던 옛 계약의 기준: 2026 상반기 실적에 앵커, 2026–2028 연장
+  const LEGACY_ANCHOR = {year: 2026, kind: 'H1', ytd_label: '2026 상반기', prior_label: '2025 하반기', years: ['2026', '2027', '2028']};
+  function rfa(c) {
+    const a = obj(rf(c).assumptions), raw = a.anchor, has = k => own(a, k);
+    const on = !!(raw && typeof raw === 'object' && !Array.isArray(raw)), an0 = on ? raw : LEGACY_ANCHOR;
+    const ye = yearsE(c), yr = parseInt(an0.year, 10), Y = yr > 0 ? yr : (ye.length ? +ye[0] : LEGACY_ANCHOR.year), kind = str(an0.kind) || 'H1';
+    const ys = arr(an0.years).map(String).filter(y => /^\d{4}$/.test(y));
+    // 기준 반기 이름: 상반기 앵커 = Y 상반기(누적 실적)·Y−1 하반기(직전 반기), 사업보고서 앵커 = 누적 실적 없음·Y−1 하반기, 남은 기간 = Y 하반기 또는 Y 연간
+    const an = {on, year: Y, kind, years: ys.length ? ys : (on ? ye : LEGACY_ANCHOR.years.slice()),
+      ytd_label: str(an0.ytd_label) || (kind === 'H1' ? Y + ' 상반기' : ''), prior_label: str(an0.prior_label) || (Y - 1) + ' 하반기', prior_h1_label: (Y - 1) + ' 상반기',
+      rem_label: kind === 'FY' ? Y + 'E' : Y + ' 하반기', ytd_through: str(an0.ytd_through)};
+    return {a, an, get: k => on && has(k) ? a[k] : (LEGACY_KEYS[k] && has(LEGACY_KEYS[k]) ? a[LEGACY_KEYS[k]] : a[k])};
+  }
+  // 현재가 기준 PER의 연도·값과 연도별 EPS(valuation.per_now·eps_fy). 두 필드가 없는 옛 데이터는 연도 키(eps_2026e·eps_2027e·per_now_2027e)를 읽는다.
+  // per_now가 null(회생 등 PER을 내지 않음)이면 연도는 12MF 가중의 먼 연도(먼 연도 가중이 0이면 가까운 연도). 아무 근거도 없으면 연도 없이(null) 그린다
+  function epsFy(v) {
+    const ef = v.eps_fy, ks = (ef && typeof ef === 'object' && !Array.isArray(ef)) ? Object.keys(ef).filter(k => /^\d{4}$/.test(k)).sort() : [];
+    return ks.length ? {ks, eps: ef} : {ks: ['2026', '2027'].filter(y => own(v, 'eps_' + y + 'e')), eps: {'2026': v.eps_2026e, '2027': v.eps_2027e}};
+  }
+  function perNow(v) {
+    const p = v.per_now, ef = epsFy(v), w = obj(obj(v.rule).weights);
+    if (!own(v, 'per_now') && (own(v, 'per_now_2027e') || own(v, 'eps_2027e'))) return {fy: '2027', value: isNum(v.per_now_2027e) ? v.per_now_2027e : null, eps: ef.eps['2027']};
+    const fy = (p && typeof p === 'object' && /^\d{4}$/.test(str(p.fy))) ? p.fy : (isNum(w.far_fy) && isNum(w.w_far) && w.w_far > 0) ? String(w.far_fy) : isNum(w.near_fy) ? String(w.near_fy) : (ef.ks[ef.ks.length - 1] || null);
+    return {fy, value: p && typeof p === 'object' && isNum(p.value) ? p.value : null, eps: fy ? ef.eps[fy] : null};
   }
 
   // ── 밸류에이션 상태 ──
@@ -345,16 +393,18 @@
     return kpi(title, '<span class="tpv">' + won(v.updated_target_price) + '</span>', sub, 'kpi-val');
   }
   function kpis(c, st) {
-    const sc = st.scenario, v = val(c), S = scenName(sc);
-    const r25 = hv(c, 'revenue', '2025'), o25 = hv(c, 'operating_profit', '2025');
-    const e27 = fv(c, '2027', 'eps', sc), per27 = (isNum(e27) && e27 > 0 && isNum(v.price_now)) ? v.price_now / e27 : null;
-    const perTxt = per27 != null ? fmt(per27, 1) + '배' : (isNum(e27) ? '— (EPS ≤ 0)' : '—');
+    // 타일 연도: 실적 = 값이 있는 마지막 연간 실적 연도, 연장 = 첫 연장 연도, EPS·PER = 현재가 기준 PER의 연도(valuation.per_now.fy) — 모두 데이터에서
+    const sc = st.scenario, v = val(c), S = scenName(sc), yA = lastActualYear(c), yE = yearsE(c)[0] || null, yP = perNow(v).fy;
+    const lA = yA ? yA + 'A' : '실적', lE = yE ? yE + 'E' : '연장', lP = yP ? yP + 'E' : '연장';
+    const rA = yA ? hv(c, 'revenue', yA) : null, oA = yA ? hv(c, 'operating_profit', yA) : null;
+    const eP = yP ? fv(c, yP, 'eps', sc) : null, perP = (isNum(eP) && eP > 0 && isNum(v.price_now)) ? v.price_now / eP : null;
+    const perTxt = perP != null ? fmt(perP, 1) + '배' : (isNum(eP) ? '— (EPS ≤ 0)' : '—');
     return '<div class="kpis">' +
-      kpi('2025A 매출', kU(r25, '십억원'), 'YoY ' + pct(yoyA(c, 'revenue', '2025'))) +
-      kpi('2025A 영업이익', kU(o25, '십억원'), 'OPM ' + lvlR(ratio(o25, r25))) +
-      kpi('2026E 매출 · ' + S, kU(fv(c, '2026', 'revenue', sc), '십억원'), 'YoY ' + pct(fyoy(c, '2026', 'revenue', sc))) +
-      kpi('2026E 영업이익 · ' + S, kU(fv(c, '2026', 'operating_profit', sc), '십억원'), 'OPM ' + lvlR(fv(c, '2026', 'opm', sc))) +
-      kpi('2027E EPS · ' + S, won(e27), '현재가 기준 PER ' + perTxt) +
+      kpi(lA + ' 매출', kU(rA, '십억원'), 'YoY ' + pct(yA ? yoyA(c, 'revenue', yA) : null)) +
+      kpi(lA + ' 영업이익', kU(oA, '십억원'), 'OPM ' + lvlR(ratio(oA, rA))) +
+      kpi(lE + ' 매출 · ' + S, kU(yE ? fv(c, yE, 'revenue', sc) : null, '십억원'), 'YoY ' + pct(yE ? fyoy(c, yE, 'revenue', sc) : null)) +
+      kpi(lE + ' 영업이익 · ' + S, kU(yE ? fv(c, yE, 'operating_profit', sc) : null, '십억원'), 'OPM ' + lvlR(yE ? fv(c, yE, 'opm', sc) : null)) +
+      kpi(lP + ' EPS · ' + S, won(eP), '현재가 기준 PER ' + perTxt) +
       valKpi(c, st) + '</div>';
   }
   function titleCard(d, c, st) {
@@ -367,7 +417,7 @@
   }
 
   // ── 연간 표 ──
-  const yearSpan = ys => ys.length ? (ys[0] === ys[ys.length - 1] ? ys[0] : ys[0] + '–' + ys[ys.length - 1]) + 'A' : '';
+  const yearSpan = ys => ys.length ? ySpan(ys) + 'A' : '';
   function sourceYearsText(c, ya) {
     const runs = [];
     ya.forEach(y => { const lab = histSourceName(obj(hrec(c, 'annual', 'revenue', y)).source) || '출처 없음', last = runs[runs.length - 1]; if (last && last.lab === lab) last.to = y; else runs.push({lab, from: y, to: y}); });
@@ -375,6 +425,7 @@
   }
   function annualTable(d, c, st) {
     const sc = st.scenario, ya = yearsA(c), ye = yearsE(c), tpl = isTemplate(c), showCov = !isCovDriver(c), restated = [];
+    if (!ya.length && !ye.length) return '<div class="empty">연간 실적·연장 자료 없음</div>';
     const act = (metric, y, dd) => {
       const r = hrec(c, 'annual', metric, y);
       if (!r || !isNum(r.value)) return '<td>—</td>';
@@ -399,7 +450,8 @@
       row('지배순이익', 'controlling_net_income', 'controlling_net_income', 1) + modelRow('controlling_net_income') + covRow('controlling_net_income') +
       row('EPS(원, 기본)', 'eps_basic', 'eps', 0);
     const a = obj(rf(c).assumptions), cov = obj(c.coverage_lane);
-    let foot = '<p class="dim small">' + esc(sourceYearsText(c, ya)) + ' · ' + esc(ye[0] + '–' + ye[ye.length - 1]) + 'E 앙상블 연장(' + scenName(sc) + ', ' + (isCovDriver(c) ? '커버리지 레인 드라이버 추정 채택' : '일반 규칙') + ')' +
+    const estTxt = (ye.length ? esc(ye[0] + '–' + ye[ye.length - 1]) + 'E ' : '') + '앙상블 연장(' + scenName(sc) + ', ' + (isCovDriver(c) ? '커버리지 레인 드라이버 추정 채택' : '일반 규칙') + ')';
+    let foot = '<p class="dim small">' + [esc(sourceYearsText(c, ya)), estTxt].filter(Boolean).join(' · ') +
       (showCov && cov.as_of ? ' · 커버리지 레인 추정 기준일 ' + esc(cov.as_of) : '') + (a.eps_basis ? ' · EPS(E): ' + esc(a.eps_basis) : '') + '</p>';
     // EPS 실적은 출처마다 주식수 기준이 다르다: 워크북 내 벤더 EPS는 발행주식, DART 기본 EPS는 가중평균 유통주식
     const epsSrc = y => str(obj(hrec(c, 'annual', 'eps_basic', y)).source), vY = ya.filter(y => epsSrc(y) === 'model_report_vendor_actual'), dY = ya.filter(y => epsSrc(y) === 'dart_cfs');
@@ -412,12 +464,13 @@
     }
     return tw('연간 실적과 연장', '<table class="wide"><thead>' + head + '</thead><tbody>' + body + '</tbody></table>') + foot;
   }
+  // 상반기 앵커에서만: 첫 연장 연도 = 상반기 IFRS 실적 + 하반기 추정이라 상반기 일회성 항목이 합계에 들어간다(사업보고서 앵커는 실적을 더하지 않아 해당 없음)
   function oneOffNotice(c, st) {
-    const a = obj(rf(c).assumptions), oo = a.h1_2026_one_off_op, y0 = yearsE(c)[0];
-    if (!isNum(oo) || Math.abs(oo) < 0.05) return '';
-    const op = obj(a.h1_2026_actual).operating_profit, e = fv(c, y0, 'eps', st.scenario), eb = fv(c, y0, 'eps', 'base');
-    return notice('<b>' + esc(y0) + 'E EPS ' + won(e) + ' (' + scenName(st.scenario) + ')' + (st.scenario !== 'base' ? ' · base ' + won(eb) : '') + '</b> — 2026 상반기 IFRS 영업이익 ' + fx(op, 1) + '십억원은 회사 공시 조정 영업이익보다 ' + fx(Math.abs(oo), 1) + '십억원 ' + (oo > 0 ? '낮습니다' : '높습니다') +
-      '(일회성 항목). ' + esc(y0) + 'E 합계 영업이익·지배순이익·EPS는 IFRS 상반기 실적을 그대로 더한 값이라 이 항목이 포함되어 있고, 하반기·2027E 이익률은 조정 영업이익률(2026 상반기 ' + lvlR(a.opm_h1_2026_normalised) + ') 기준입니다.', 'oneoff');
+    const A = rfa(c), an = A.an, oo = A.get('one_off_ytd_op'), y0 = yearsE(c)[0], y1 = an.years[1];
+    if (!isNum(oo) || Math.abs(oo) < 0.05 || !an.ytd_label) return '';
+    const op = obj(A.get('ytd_actual')).operating_profit, e = fv(c, y0, 'eps', st.scenario), eb = fv(c, y0, 'eps', 'base');
+    return notice('<b>' + esc(y0) + 'E EPS ' + won(e) + ' (' + scenName(st.scenario) + ')' + (st.scenario !== 'base' ? ' · base ' + won(eb) : '') + '</b> — ' + esc(an.ytd_label) + ' IFRS 영업이익 ' + fx(op, 1) + '십억원은 회사 공시 조정 영업이익보다 ' + fx(Math.abs(oo), 1) + '십억원 ' + (oo > 0 ? '낮습니다' : '높습니다') +
+      '(일회성 항목). ' + esc(y0) + 'E 합계 영업이익·지배순이익·EPS는 IFRS 상반기 실적을 그대로 더한 값이라 이 항목이 포함되어 있고, 하반기' + (y1 ? '·' + esc(y1) + 'E' : '') + ' 이익률은 조정 영업이익률(' + esc(an.ytd_label) + ' ' + lvlR(A.get('opm_ytd_normalised')) + ') 기준입니다.', 'oneoff');
   }
 
   // ── 분기 ──
@@ -512,10 +565,12 @@
 
   // ── 연장 가정 ──
   const triple = o => { o = obj(o); return [o.revenue, o.operating_profit, o.controlling_net_income].some(isNum) ? fx(o.revenue, 1) + ' / ' + fx(o.operating_profit, 1) + ' / ' + fx(o.controlling_net_income, 1) : ''; };
-  const hasOneOff = a => [a.h1_2026_one_off_op, a.h2_2025_one_off_op].some(x => isNum(x) && Math.abs(x) >= 0.05);
+  const TRIPLE_BASIS = '매출 / 영업이익 / 지배순이익(십억원)';
   // 일회성 키가 null = 조정 영업이익 자료가 없어 재지 않음(0과 다름). 그 반기 이익률은 IFRS 값 그대로다
   const oneOffTxt = x => isNum(x) ? sgn(x, 1) : '자료 없음(조정하지 않음)';
   const oneOffOpm = (r, x) => lvlR(r) + (isNum(x) ? '' : '(조정 자료 없음 — IFRS 그대로)');
+  // 연장 연도 범위의 짧은 표기: ['2027','2028'] → '2027-28'
+  const shortSpan = l => l.length ? (l.length === 1 ? l[0] : l[0] + '-' + l[l.length - 1].slice(2)) : '';
   function rowsAdder() {
     const rows = [];
     rows.add = (label, value, basis) => { if ((value == null || value === '' || value === '—') && !basis) return; rows.push([label, value || '', basis ? str(basis) : '']); };
@@ -525,26 +580,44 @@
     const ns = arr(rf(c).notes).filter(x => typeof x === 'string' && x);
     return ns.length ? notice('<b>연장 메모</b> (금액은 십억원)<ul>' + ns.map(x => '<li>' + esc(plainNote(x)) + '</li>').join('') + '</ul>') : '';
   }
+  // 일반 규칙 가정. 상반기 앵커(H1): Y 상반기 실적 + Y 하반기 성장률·이익률. 사업보고서 앵커(FY, Y−1 사업보고서 뒤 Y 반기보고서 전):
+  // Y 연간 성장률 = min(Y−1 하반기 YoY, Y−1 연간 YoY), 이익률 = Y−1 상반기·하반기 평균 — 두 후보 YoY와 Y−1 상반기 실적·일회성 행을 더한다
   function ruleAssumptions(d, c) {
-    const a = obj(rf(c).assumptions), rows = rowsAdder(), seas = obj(a.h2_h1_seasonality), sk = Object.keys(seas).sort(), obs = obj(a.ni_ratio_observed), ok = Object.keys(obs).sort();
-    rows.add('2026 상반기 매출 YoY(실적)', pctR(a.h1_2026_yoy));
-    rows.add('2026 하반기 성장률', pctR(a.g_h2_2026), a.g_h2_basis);
-    if (sk.length) rows.add('H2/H1 매출 계절비', esc(sk.map(k => k + ' ' + fx(seas[k], 3)).join(' · ')) + ' → 중앙값 ' + fx(a.h2_h1_seasonality_median, 3) + ' · 계절비 기준 ' + pctR(a.g_h2_seasonal));
-    rows.add('2027E 성장률', pctR(a.g_2027) + (isNum(a.g_2027_raw) && isNum(a.g_2027) && Math.abs(a.g_2027_raw - a.g_2027) > 1e-9 ? ' <span class="dim">(제한 전 ' + pctR(a.g_2027_raw) + ')</span>' : ''), a.g_2027_basis);
-    rows.add('2028E 성장률', pctR(a.g_2028), a.g_2028_basis);
-    rows.add('2026 하반기 영업이익률', lvlR(a.opm_h2_2026), a.opm_h2_2026_basis);
-    if (hasOneOff(a)) rows.add('일회성 조정(조정 − IFRS 영업이익, 십억원)', '2026 상반기 ' + oneOffTxt(a.h1_2026_one_off_op) + ' · 2025 하반기 ' + oneOffTxt(a.h2_2025_one_off_op),
-      '반기 영업이익률(일회성 제외): 2026 상반기 ' + oneOffOpm(a.opm_h1_2026_normalised, a.h1_2026_one_off_op) + ' · 2025 하반기 ' + oneOffOpm(a.opm_h2_2025_normalised, a.h2_2025_one_off_op));
-    rows.add('목표 영업이익률(2028E)', lvlR(a.opm_target) + ((isNum(a.opm_ttm) || isNum(a.opm_hist_median)) ? ' <span class="dim">(최근 4개 분기 ' + lvlR(a.opm_ttm) + ' · 2023-2025A 중앙값 ' + lvlR(a.opm_hist_median) + ')</span>' : ''), a.opm_target_basis);
+    const A = rfa(c), a = A.a, g = A.get, an = A.an, Y = an.year, ys = an.years, fy = an.kind === 'FY', rows = rowsAdder();
+    const seas = obj(a.h2_h1_seasonality), sk = Object.keys(seas).sort(), obs = obj(a.ni_ratio_observed), ok = Object.keys(obs).sort(), yE = i => ys[i] ? ys[i] + 'E' : '';
+    if (an.ytd_label) rows.add(an.ytd_label + ' 매출 YoY(실적)', pctR(g('ytd_yoy')));
+    if (fy) { rows.add((Y - 1) + 'A 매출 YoY(실적)', pctR(a.fy_yoy_prior)); rows.add(an.prior_label + ' 매출 YoY(실적)', pctR(a.h2_yoy_prior)); }
+    rows.add(an.rem_label + ' 성장률', pctR(g('g_remaining')), g('g_remaining_basis'));
+    if (sk.length) rows.add('H2/H1 매출 계절비', esc(sk.map(k => k + ' ' + fx(seas[k], 3)).join(' · ')) + ' → 중앙값 ' + fx(a.h2_h1_seasonality_median, 3) + ' · 계절비 기준 ' + pctR(g('g_remaining_seasonal')));
+    const g1 = g('g_y1'), g1r = g('g_y1_raw');
+    if (ys[1]) rows.add(yE(1) + ' 성장률', pctR(g1) + (isNum(g1r) && isNum(g1) && Math.abs(g1r - g1) > 1e-9 ? ' <span class="dim">(제한 전 ' + pctR(g1r) + ')</span>' : ''), g('g_y1_basis'));
+    if (ys[2]) rows.add(yE(2) + ' 성장률', pctR(g('g_y2')), g('g_y2_basis'));
+    if (ys.length > 3) rows.add(ySpan(ys.slice(3)) + 'E 성장률', '', a.g_later_basis);
+    rows.add(an.rem_label + ' 영업이익률', lvlR(g('opm_remaining')), g('opm_remaining_basis'));
+    // 일회성 조정: 상반기 앵커 = Y 상반기 · Y−1 하반기, 사업보고서 앵커 = Y−1 상반기 · Y−1 하반기(Y−1 상반기 이익률은 엔진이 따로 실으면 그 값)
+    const ooA = fy ? a.one_off_prior_h1_op : g('one_off_ytd_op'), ooB = g('one_off_prior_half_op'), labA = fy ? an.prior_h1_label : an.ytd_label;
+    const opmA = fy && isNum(a.opm_prior_h1_normalised) ? a.opm_prior_h1_normalised : g('opm_ytd_normalised');
+    if ([ooA, ooB].some(x => isNum(x) && Math.abs(x) >= 0.05)) rows.add('일회성 조정(조정 − IFRS 영업이익, 십억원)', labA + ' ' + oneOffTxt(ooA) + ' · ' + an.prior_label + ' ' + oneOffTxt(ooB),
+      '반기 영업이익률(일회성 제외): ' + labA + ' ' + oneOffOpm(opmA, ooA) + ' · ' + an.prior_label + ' ' + oneOffOpm(g('opm_prior_half_normalised'), ooB));
+    const tgtY = ySpan(ys.slice(2));
+    // 목표 이익률의 비교 기간(opm_ttm): 사업보고서 앵커 = FY(Y−1), 상반기 앵커 = Y−1 하반기+Y 상반기 — Y 3분기 실적이 들어오기 전에는 그 기간이 곧 최근 4개 분기다
+    // (3분기보고서 뒤에는 최근 4개 분기가 Y−1 4분기~Y 3분기라 반기 이름으로 부른다 — 엔진 rollfwd의 ttm 이름과 같은 조건)
+    const q3in = ['revenue', 'operating_profit'].some(m => isNum(hv(c, m, Y + 'Q3', 'quarterly')));
+    const ttmL = fy ? 'FY' + (Y - 1) + ' ' : q3in ? (Y - 1) + ' 하반기+' + Y + ' 상반기 ' : '최근 4개 분기 ';
+    rows.add('목표 영업이익률' + (tgtY ? '(' + tgtY + 'E)' : ''), lvlR(a.opm_target) + ((isNum(a.opm_ttm) || isNum(a.opm_hist_median)) ? ' <span class="dim">(' + ttmL + lvlR(a.opm_ttm) + ' · ' + (Y - 3) + '-' + (Y - 1) + 'A 중앙값 ' + lvlR(a.opm_hist_median) + ')</span>' : ''), a.opm_target_basis);
     rows.add('참고(' + vintageYM(d) + ' 워크북 2025E)', lvlR(a.opm_model_2025e), a.opm_model_2025e_basis);
-    rows.add('2027E 영업이익률', '', a.opm_2027_basis);
+    if (ys[1]) rows.add(yE(1) + ' 영업이익률', '', g('opm_y1_basis'));
     rows.add('지배순이익/영업이익 전환비율', fx(a.ni_to_op_ratio, 3) + (ok.length ? ' <span class="dim">(관측 ' + esc(ok.map(k => k + ' ' + fx(obs[k], 3)).join(' · ')) + ')</span>' : ''), a.ni_ratio_basis);
-    rows.add('2026E 지배순이익', '', a.ni_2026_basis);
+    rows.add(Y + 'E 지배순이익', '', g('ni_y0_basis'));
     rows.add('EPS', isNum(a.shares_outstanding) ? '유통주식수 ' + fmt(a.shares_outstanding, 0) + '주' : '', a.eps_basis);
-    rows.add('2026 상반기 실적', triple(a.h1_2026_actual), '매출 / 영업이익 / 지배순이익(십억원)');
-    rows.add('2025 하반기 실적', triple(a.h2_2025_actual), '매출 / 영업이익 / 지배순이익(십억원)');
+    // 실적 행은 값이 있을 때만(사업보고서 앵커에는 누적 실적이 없다)
+    const tri = (label, o) => { const t = triple(o); if (label && t) rows.add(label + ' 실적', t, TRIPLE_BASIS); };
+    tri(an.ytd_label, g('ytd_actual'));
+    if (fy) tri(an.prior_h1_label, a.prior_h1_actual);
+    tri(an.prior_label, g('prior_half_actual'));
+    const out = shortSpan(ys.slice(1));
     return kv(rows) + notesBlock(c) +
-      notice('Bear/Bull: 성장률 ∓10pp(2026 하반기)·∓5pp(2027-28), 영업이익률 ∓2pp. 확률 보정 없음. 회사 가이던스·컨센서스가 아니라 앙상블 에이전트의 규칙 기반 연장입니다.', 'blue scen-rule');
+      notice('Bear/Bull: 성장률 ∓10pp(' + esc(an.rem_label) + ')' + (out ? '·∓5pp(' + esc(out) + ')' : '') + ', 영업이익률 ∓2pp. 확률 보정 없음. 회사 가이던스·컨센서스가 아니라 앙상블 에이전트의 규칙 기반 연장입니다.', 'blue scen-rule');
   }
   function assumptionRowsTable(c, st) {
     const rows = arr(rf(c).assumption_rows).map(obj).filter(r => r.metric && (r.scenario === st.scenario || SCEN.indexOf(r.scenario) < 0));
@@ -566,12 +639,27 @@
     const body = list.map(g => '<tr><td class="l">' + metricLabel(g.metric) + '</td><td class="l">' + esc(unitNames[g.unit] || g.unit) + '</td><td class="l">' + g.vals.map(r => esc(r.period) + ' <b>' + unitVal(r.value, r.unit) + '</b>').join(' · ') + '</td><td class="l basis">' + basisHtml(g.basis) + '</td></tr>').join('');
     return '<h3>커버리지 레인 가정 행 (' + scenName(st.scenario) + ')</h3>' + tw('커버리지 레인 가정 행', '<table class="wide"><thead><tr><th class="l">지표</th><th class="l">단위</th><th class="l">기간별 값</th><th class="l">근거(커버리지 레인 원문)</th></tr></thead><tbody>' + body + '</tbody></table>');
   }
-  // 레저 연장의 실적 누적 구간(roll_forward.source.ytd_through): 2026E = 그 분기까지의 DART 누적 + 같은 해 남은 분기의 커버리지 추정.
-  // '2026Q2' → 상반기, '2026Q3' → 1~3분기 누적. 필드가 없는 옛 데이터는 상반기(2026Q2)로 읽는다
-  function ytdInfo(src) {
-    const m = str(obj(src).ytd_through).match(/^(\d{4})Q([1-4])$/), q = m ? +m[2] : 2, year = m ? m[1] : '2026';
-    return {q, year, key: year + 'Q' + q, name: {1: '1분기', 2: '상반기', 3: '1~3분기 누적', 4: '연간'}[q]};
+  // 레저 연장의 실적 누적 구간(roll_forward.source.ytd_through): 첫 연장 연도 Y = 그 분기까지의 DART 누적 + 같은 해 남은 분기의 커버리지 추정.
+  // 'YYYYQ2' → 상반기, 'YYYYQ3' → 1~3분기 누적. null이고 anchor가 있으면 Y의 DART 분기 실적이 아직 없음(q = 0, Y 네 분기 모두 커버리지 추정) — 이때 검증은
+  // Y−1 연간 DART vs 커버리지(ytd_check). 필드도 anchor도 없는 옛 데이터는 상반기(2026Q2)로 읽는다
+  function ytdInfo(c) {
+    const an = rfa(c).an, m = (str(obj(rf(c).source).ytd_through) || (an.on ? an.ytd_through : '')).match(/^(\d{4})Q([1-4])$/);
+    const q = m ? +m[2] : an.on ? 0 : 2, year = m ? m[1] : an.on ? String(an.year) : '2026', name = {0: '', 1: '1분기', 2: '상반기', 3: '1~3분기 누적', 4: '연간'}[q];
+    return {q, year, key: year + 'Q' + q, name, check: q ? year + ' ' + name : (+year - 1) + ' 연간'};
   }
+  // 엔진 기간 표기(2027H1·2026Q3-2027Q2 등)의 화면 이름. 모르는 표기는 쓰지 않는다(''): 내부 표기가 화면에 새지 않게
+  function periodLabel(p) {
+    const t = str(p).trim(); let m;
+    if ((m = t.match(/^(\d{4})H([12])$/))) return m[1] + (m[2] === '1' ? ' 상반기' : ' 하반기');
+    if ((m = t.match(/^(\d{4})Q([1-4])$/))) return m[1] + ' ' + m[2] + '분기';
+    if ((m = t.match(/^(\d{4}Q[1-4])\s*[-–~]\s*(\d{4}Q[1-4])$/))) return m[1] + '~' + m[2];
+    if ((m = t.match(/^(?:FY)?(\d{4})$/))) return m[1] + ' 연간';
+    if ((m = t.match(/^TTM_?(\d{4}Q[1-4])$/))) return '최근 4개 분기(~' + m[1] + ')';
+    return hasHangul(t) ? t : '';
+  }
+  // 엔진 누적 기간 표기(periods.Period.label: YYYYQ1·YYYYH1·YYYYQ3·FYYYYY)의 화면 이름 = Period.ko. 누적 비율(controlling_share_period)의 'YYYYQ3'은
+  // 1~3분기 누적이다(단일 3분기가 아님) — 그 밖은 periodLabel(YYYYQ1 = 1분기, YYYYH1 = 상반기, FYYYYY = 연간)
+  const cumLabel = p => { const m = str(p).trim().match(/^(\d{4})Q3$/); return m ? m[1] + ' 1~3분기 누적' : periodLabel(p); };
   // 커버리지 레인 시나리오별 분기 추정(roll_forward.quarterly) — 연간 표의 E 값이 어떤 분기 값에서 왔는지 접어 둔다
   const RFQ_ORDER = ['revenue', 'casino_net_revenue', 'noncasino_revenue', 'hotel_segment_revenue', 'travel_revenue', 'other_revenue', 'operating_costs', 'operating_profit'];
   function quarterlyForecastTable(c, st) {
@@ -581,16 +669,21 @@
     ms.sort((a, b) => (rank(a) - rank(b)) || a.localeCompare(b));
     const ks = Array.from(new Set([].concat(...ms.map(m => Object.keys(obj(q[m])))))).filter(k => /^\d{4}Q[1-4]$/.test(k)).sort();
     if (!ks.length) return '';
-    const body = ms.map(m => '<tr' + (m === 'revenue' || m === 'operating_profit' ? ' class="hl"' : '') + '><td class="l">' + rfqLabel(m) + '</td>' + ks.map(k => td(obj(q[m])[k], 1, 'est')).join('') + '</tr>').join('');
+    // 커버리지가 DART보다 앞선 분기(roll_forward.source.coverage_ahead): 엔진은 그 분기의 매출·영업이익(만)을 커버리지 레인 판 보고 실적(reported_actual)으로 바꿔 넣는다 —
+    // 열 머리와 각주에 밝히고 그 두 행의 칸은 추정 색을 쓰지 않는다(다른 드라이버 행은 커버리지 추정 그대로). 목록이 없으면(엔진이 비어 있을 때 키를 싣지 않음) 표·각주는 이전과 같다
+    const act = arr(obj(rf(c).source).coverage_ahead).filter(k => ks.indexOf(k) >= 0), isAct = k => act.indexOf(k) >= 0, LMQ = ['revenue', 'operating_profit'];
+    const body = ms.map(m => '<tr' + (LMQ.indexOf(m) >= 0 ? ' class="hl"' : '') + '><td class="l">' + rfqLabel(m) + '</td>' + ks.map(k => td(obj(q[m])[k], 1, isAct(k) && LMQ.indexOf(m) >= 0 ? '' : 'est')).join('') + '</tr>').join('');
     // 연간 표 첫 E 연도 = DART 누적 실적(~ytd_through) + 이 표의 같은 해 남은 분기
-    const yi = ytdInfo(rf(c).source), rest = ks.filter(k => k.slice(0, 4) === yi.year && k > yi.key);
-    const tail = yi.q === 4 ? 'DART 연간 실적 그대로입니다.' : 'DART ' + yi.name + '(~' + yi.key + ') 실적에 ' + (rest.length ? '이 표의 ' + rest.join('·') + '를' : '같은 해 남은 분기 추정을') + ' 더한 값입니다.';
+    const yi = ytdInfo(c), rest = ks.filter(k => k.slice(0, 4) === yi.year && k > yi.key);
+    const tail = yi.q === 4 ? 'DART 연간 실적 그대로입니다.' : !yi.q ? 'DART 분기 실적이 아직 없어 ' + (rest.length ? '이 표의 ' + rest.join('·') + '를' : '같은 해 네 분기 추정을') + ' 더한 값입니다.' :
+      'DART ' + yi.name + '(~' + yi.key + ') 실적에 ' + (rest.length ? '이 표의 ' + rest.join('·') + '를' : '같은 해 남은 분기 추정을') + ' 더한 값입니다.';
+    const actTxt = act.length ? ' ' + act.join('·') + '의 매출·영업이익은 추정이 아니라 커버리지 레인 판 보고 실적입니다(DART 제출 전이라 그 분기 추정 대신 사용 — DART 제출 뒤 다시 확인).' : '';
     return det(st, 'rfq', false, '커버리지 레인 분기 추정 (' + scenName(st.scenario) + ', 십억원, ' + esc(ks[0]) + '~' + esc(ks[ks.length - 1]) + ')',
-      tw('커버리지 레인 분기 추정', '<table class="wide"><thead><tr><th class="l">지표</th>' + ks.map(k => '<th class="est">' + esc(k) + '</th>').join('') + '</tr></thead><tbody>' + body + '</tbody></table>') +
-      '<p class="dim small">커버리지 레인 드라이버 모델의 분기 추정 그대로입니다(영업비용은 비용 합계를 양수로 표시). 연간 표의 ' + esc(yi.year) + 'E는 ' + tail + '</p>');
+      tw('커버리지 레인 분기 추정', '<table class="wide"><thead><tr><th class="l">지표</th>' + ks.map(k => isAct(k) ? '<th>' + esc(k) + ' (매출·영업이익 실적)</th>' : '<th class="est">' + esc(k) + '</th>').join('') + '</tr></thead><tbody>' + body + '</tbody></table>') +
+      '<p class="dim small">커버리지 레인 드라이버 모델의 분기 추정 그대로입니다(영업비용은 비용 합계를 양수로 표시).' + esc(actTxt) + ' 연간 표의 ' + esc(yi.year) + 'E는 ' + tail + '</p>');
   }
   function coverageAssumptions(d, c, st) {
-    const r = rf(c), a = obj(r.assumptions), src = obj(r.source), br = obj(r.bridge), hc = obj(src.h1_check), rows = rowsAdder();
+    const r = rf(c), A = rfa(c), a = A.a, src = obj(r.source), br = obj(r.bridge), hc = obj(src.h1_check), rows = rowsAdder(), yi = ytdInfo(c);
     const mode = a.ni_bridge_mode || br.mode;
     rows.add('방식', '', a.method_basis);
     rows.add('커버리지 레인 기준일', esc(a.source_as_of || src.as_of || ''));
@@ -602,13 +695,17 @@
     rows.add('연도별 지배순이익/영업이익', esc(yearMap(a.ni_op_ratio_by_year || br.ni_op_ratio_by_year, v => fx(v, 3))));
     rows.add('연도별 영업외손익(십억원)', esc(yearMap(br.nonop_by_year, v => sgn(v, 1))));
     rows.add('연도별 세율', esc(yearMap(br.tax_rate_by_year, v => lvlR(v, 1))));
-    if (isNum(br.controlling_share_h1_2026)) rows.add('2026 상반기 지배/연결 순이익 비율', fx(br.controlling_share_h1_2026, 3));
-    rows.add('2026E 지배순이익', '', a.ni_2026_basis);
+    // 지배/연결 순이익 비율은 카드의 누적 구간(ytd_through)을 따른다: anchor가 있으면 엔진의 기간 중립 키와 그 기간(controlling_share_period — 1~3분기 누적·Y−1 연간 포함),
+    // anchor가 없는 옛 데이터(또는 중립 키가 없을 때)만 2026 상반기 키. 2026 상반기 앵커에서는 두 키가 같은 분기(2026Q1·Q2)의 비율이라 값이 같다
+    const cs = isNum(br.controlling_share_ytd) && (A.an.on || !isNum(br.controlling_share_h1_2026)) ? [cumLabel(br.controlling_share_period), br.controlling_share_ytd]
+      : isNum(br.controlling_share_h1_2026) ? ['2026 상반기', br.controlling_share_h1_2026] : null;
+    if (cs) rows.add((cs[0] ? cs[0] + ' ' : '') + '지배/연결 순이익 비율', fx(cs[1], 3));
+    rows.add(yi.year + 'E 지배순이익', '', A.get('ni_y0_basis'));
     rows.add('순이익 추정', '', a.net_income_basis);
     rows.add('EPS', isNum(a.shares_outstanding) ? '유통주식수 ' + fmt(a.shares_outstanding, 0) + '주' : '', a.eps_basis);
     // 검증 기준은 ytd_through까지의 누적 실적(ytd_check)이다. 상반기 앵커면 h1_check와 같고, 상반기가 아닌 앵커에서 h1_check는 참고값이라 검증 행에 쓰지 않는다
-    const yi = ytdInfo(src), yc = Object.keys(obj(src.ytd_check)).length ? obj(src.ytd_check) : (yi.q === 2 ? hc : {});
-    rows.add(yi.year + ' ' + yi.name + ' DART vs 커버리지(십억원)', esc(['revenue', 'operating_profit'].filter(k => yc[k]).map(k => { const x = obj(yc[k]); return metricKo[k] + ' DART ' + fx(x.dart, 1) + ' · 커버리지 ' + fx(x.coverage, 1) + ' (차이 ' + sgn(x.diff, 3) + ')'; }).join(' / ')));
+    const yc = Object.keys(obj(src.ytd_check)).length ? obj(src.ytd_check) : (yi.q === 2 ? hc : {});
+    rows.add(yi.check + ' DART vs 커버리지(십억원)', esc(['revenue', 'operating_profit'].filter(k => yc[k]).map(k => { const x = obj(yc[k]); return metricKo[k] + ' DART ' + fx(x.dart, 1) + ' · 커버리지 ' + fx(x.coverage, 1) + ' (차이 ' + sgn(x.diff, 3) + ')'; }).join(' / ')));
     if (isNum(src.fy_row_max_abs_diff)) rows.add('커버리지 FY 행 − 분기 합 최대 차이', fx(src.fy_row_max_abs_diff, 3) + '십억원');
     return kv(rows) + assumptionRowsTable(c, st) + quarterlyForecastTable(c, st) + notesBlock(c);
   }
@@ -666,7 +763,8 @@
     h += kv([['12개월 선행 EPS(E12)', won(ntm.E12)], ['12개월 선행 BPS(B12)', won(ntm.B12)], ['컨센서스 목표주가 평균(TP)', won(ntm.TP)], ['주가(P)', won(ntm.P) + (ntm.date ? ' <span class="dim">(' + esc(ntm.date) + ')</span>' : ''), ntm.P_basis]]);
     if (!any) h += '<p class="dim small">이 종목은 FnGuide 집계 연간 추정치가 없습니다.</p>';
     else {
-      const head = '<tr><th>지표</th>' + ys.map(y => '<th>' + esc(y) + 'E 컨센서스</th><th class="est">' + esc(y) + 'E 연장 base</th>').join('') + '</tr>';
+      // 컨센서스 열의 접미는 FnGuide 표의 추정 표지(forward[y].estimate)를 따른다 — 실적으로 바뀐 해(estimate false)는 'A'
+      const head = '<tr><th>지표</th>' + ys.map(y => '<th>' + esc(y) + (obj(fw[y]).estimate === false ? 'A' : 'E') + ' 컨센서스</th><th class="est">' + esc(y) + 'E 연장 base</th>').join('') + '</tr>';
       const body = mets.map(m => '<tr><td class="l">' + m[1] + '</td>' + ys.map(y => td(obj(fw[y])[m[0]], m[2]) + td(fv(c, y, m[0], 'base'), m[2], 'est')).join('') + '</tr>').join('');
       h += tw('컨센서스와 연장 base 비교', '<table class="wide">' + (fyDate ? '<caption>컨센서스 열: FnGuide 연간 추정 · ' + esc(fyDate) + '</caption>' : '') + '<thead>' + head + '</thead><tbody>' + body + '</tbody></table>');
     }
@@ -699,15 +797,16 @@
   }
   function commonKv(c) {
     const v = val(c), sc = v.scenario || 'base', inp = obj(v.inputs), mk = obj(hist(c).market), ei = obj(obj(v.rule).earnings_input);
-    const perTxt = isNum(v.per_now_2027e) ? mult(v.per_now_2027e, 1) : (isNum(v.eps_2027e) && v.eps_2027e <= 0 ? '— (EPS ≤ 0)' : '—');
+    // 연도별 EPS와 현재가 기준 PER의 연도는 엔진의 eps_fy·per_now(12MF 가중의 두 연도와 먼 연도)에서 — 없으면 옛 키(2026E·2027E)
+    const ef = epsFy(v), pn = perNow(v), perTxt = isNum(pn.value) ? mult(pn.value, 1) : (isNum(pn.eps) && pn.eps <= 0 ? '— (EPS ≤ 0)' : '—');
     const eps12 = ei.kind === 'eps_12mf' && isNum(ei.raw) ? ei.raw : v.eps_12mf, off = pbrOff(v);
     return '<h3>입력과 현재 배수 (연장 ' + esc(sc) + ')</h3>' + kv([
       ['현재가', won(v.price_now) + (v.price_as_of ? ' <span class="dim">(' + esc(v.price_as_of) + ')</span>' : ''), isNum(mk.price_krw) && mk.price_krw === v.price_now ? mk.price_basis : ''],
       ['유통주식수', isNum(v.shares_outstanding) ? fmt(v.shares_outstanding, 0) + '주' : '—'],
       ['BPS', won(v.bps), off ? '보고 기준(자본 내 신종자본증권 포함)' : ''],
       ['12MF EPS(연장 ' + sc + ')', wonE(eps12) + (inp.eps_weights ? ' <span class="dim">' + esc(inp.eps_weights) + '</span>' : '')],
-      ['2026E · 2027E EPS(연장 ' + sc + ')', won(v.eps_2026e) + ' · ' + won(v.eps_2027e)],
-      ['현재가 기준 2027E PER', perTxt],
+      [ef.ks.map(y => y + 'E').join(' · ') + ' EPS(연장 ' + sc + ')', ef.ks.map(y => won(ef.eps[y])).join(' · ')],
+      ['현재가 기준 ' + (pn.fy ? pn.fy + 'E ' : '') + 'PER', perTxt],
       ['현재가 기준 PBR', isNum(v.pbr_now) ? mult(v.pbr_now, 3) : '—', off ? pbrOffWhy(v) : ''],
       ['순차입금', bnTxt(v.net_debt_bn) + (v.net_debt_basis ? ' <span class="dim">(' + esc(v.net_debt_basis) + (isNum(v.gross_debt_bn) ? ' · 차입금·사채 ' + bnTxt(v.gross_debt_bn) : '') + ')</span>' : '')]
     ]);
@@ -1040,7 +1139,9 @@
   // 부문·항목별 실적. 보이는 분기에 값이 없는 행은 빼고, 조정·잔차 행만 남으면(에스엠) 카드를 그리지 않는다('' 반환)
   function segmentsCard(d, c) {
     const seg = obj(hist(c).segments), si = srcIndex(d);
-    const keys = Array.from(new Set([].concat(...Object.keys(seg).map(n => Object.keys(obj(seg[n])))))).filter(k => /^\d{4}Q[1-4]$/.test(k) && k >= '2025Q1').sort();
+    // 최신 분기가 속한 해와 그 앞 해(최신 2026Q2면 2025Q1부터)
+    const all = Array.from(new Set([].concat(...Object.keys(seg).map(n => Object.keys(obj(seg[n])))))).filter(k => /^\d{4}Q[1-4]$/.test(k)).sort();
+    const keys = all.length ? all.filter(k => k >= (+all[all.length - 1].slice(0, 4) - 1) + 'Q1') : [];
     if (!keys.length) return '';
     const names = Object.keys(seg).filter(n => keys.some(k => isNum(obj(obj(seg[n])[k]).value)));
     if (!names.some(n => segGroup(n) !== 'adj')) return '';
@@ -1220,11 +1321,13 @@
   function renderApp(data, state) {
     const d = obj(data), st = normState(d, state), cs = arr(d.companies).filter(x => obj(x).id), c = cs.find(x => x.id === st.company) || {};
     const nA = cs.filter(x => model(x).status === 'analyst').length, nT = cs.filter(isTemplate).length;
+    // 머리의 연장 기간 = 회사별 연장 연도의 합집합(연도 넘김 중에는 회사마다 첫 연장 연도가 다를 수 있음)
+    const span = ySpan(Array.from(new Set([].concat(...cs.map(yearsE)))).sort());
     const sectors = Object.keys(sectorNames).concat(Array.from(new Set(cs.map(x => x.sector))).filter(s => s && !sectorNames[s])).filter(s => cs.some(x => x.sector === s));
     const secName = s => sectorNames[s] || obj(cs.find(x => x.sector === s)).sector_name || s;
     const list = cs.filter(x => x.sector === st.sector).map(x => '<button type="button" class="company" data-company="' + esc(x.id) + '"' + (x.id === st.company ? ' aria-current="true"' : '') + '><span>' + esc(x.name) + ' <small>' + esc(x.ticker) + (isTemplate(x) ? ' · 템플릿' : '') + '</small></span>' + listTag(x) + '</button>').join('');
     return '<div class="am ' + (st.mode === 'home' ? 'am-home' : 'am-solo') + '">' +
-      '<header><div><div class="eyebrow">ENSEMBLE / ANALYST MODELS</div><h1>커버리지 모델 ' + cs.length + '사</h1><p class="dim">앙상블 에이전트가 ' + esc(d.model_house) + ' 워크북 ' + cs.length + '사(' + esc(d.model_vintage) + ')를 출발점으로 최신 실적을 반영하고 2026–2028을 규칙 기반으로 연장한 페이지 · 애널리스트 추정 포함 워크북 ' + nA + '사 · 추정 미입력 템플릿 ' + nT + '사</p></div>' +
+      '<header><div><div class="eyebrow">ENSEMBLE / ANALYST MODELS</div><h1>커버리지 모델 ' + cs.length + '사</h1><p class="dim">앙상블 에이전트가 ' + esc(d.model_house) + ' 워크북 ' + cs.length + '사(' + esc(d.model_vintage) + ')를 출발점으로 최신 실적을 반영하고 ' + (span ? esc(span) + objJosa(span) : '실적 이후 연도를') + ' 규칙 기반으로 연장한 페이지 · 애널리스트 추정 포함 워크북 ' + nA + '사 · 추정 미입력 템플릿 ' + nT + '사</p></div>' +
       '<div class="asof">기준일 ' + esc(d.as_of) + '<br>DART 수집 ' + esc(kstDay(d.dart_retrieved_at)) + ' · 시세 ' + esc(kstDay(d.market_retrieved_at)) + '<br>컨센서스 기준일 ' + esc(d.consensus_as_of || '—') + '</div></header>' +
       '<nav class="sectors" aria-label="섹터">' + sectors.map(s => '<button type="button" data-sector="' + esc(s) + '" aria-pressed="' + (st.sector === s) + '">' + esc(secName(s)) + ' <small>' + cs.filter(x => x.sector === s).length + '</small></button>').join('') + '</nav>' +
       '<div class="layout"><aside><nav class="companies" aria-label="회사 목록">' + list + '</nav><div class="notice" style="margin-top:12px">워크북은 ' + esc(d.model_vintage) + ' 시점 ' + esc(d.model_house) + ' 리서치 워크북이며, 연장과 환산 값은 앙상블 에이전트의 규칙 계산입니다. ' + esc(disclaimer(d)) + '</div></aside>' +
