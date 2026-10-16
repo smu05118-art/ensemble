@@ -5,8 +5,8 @@
     "jobs": {
       "url": "https://boards-api.greenhouse.io/v1/boards/nebius/jobs",
       "health": "ok",
-      "attempted_at": "2026-10-15T08:22:47+00:00",
-      "updated_at": "2026-10-15T08:22:47+00:00",
+      "attempted_at": "2026-10-16T08:15:20+00:00",
+      "updated_at": "2026-10-16T08:15:20+00:00",
       "rows": [
         {
           "id": "5000282101",
@@ -176,6 +176,16 @@
           "source_updated_at": "2026-10-13T08:45:02-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-08T10:40:08+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "5004280101",
+          "title": "Communications Designer — People Communications",
+          "location": "Amsterdam, Netherlands",
+          "url": "https://careers.nebius.com/?gh_jid=5004280101",
+          "source_updated_at": "2026-10-15T11:58:57-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-10-16T08:15:20+00:00",
           "baseline_import": false
         },
         {
@@ -369,13 +379,13 @@
           "baseline_import": true
         },
         {
-          "id": "4976328101",
+          "id": "4767717101",
           "title": "Data Center IT Technician",
-          "location": "Béthune, Pas-de-Calais, France",
-          "url": "https://careers.nebius.com/?gh_jid=4976328101",
-          "source_updated_at": "2026-10-13T08:45:22-04:00",
+          "location": "London, United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=4767717101",
+          "source_updated_at": "2026-10-14T06:27:34-04:00",
           "data_center": true,
-          "first_seen_at": "2026-09-15T08:44:58+00:00",
+          "first_seen_at": "2026-10-15T08:22:47+00:00",
           "baseline_import": false
         },
         {
@@ -389,34 +399,14 @@
           "baseline_import": true
         },
         {
-          "id": "4767717101",
+          "id": "4976328101",
           "title": "Data Center IT Technician",
-          "location": "London, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4767717101",
-          "source_updated_at": "2026-10-14T06:27:34-04:00",
+          "location": "Béthune, Pas-de-Calais, France",
+          "url": "https://careers.nebius.com/?gh_jid=4976328101",
+          "source_updated_at": "2026-10-13T08:45:22-04:00",
           "data_center": true,
-          "first_seen_at": "2026-10-15T08:22:47+00:00",
+          "first_seen_at": "2026-09-15T08:44:58+00:00",
           "baseline_import": false
-        },
-        {
-          "id": "4975997101",
-          "title": "Data Center IT Technician",
-          "location": "Kansas City, Missouri, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4975997101",
-          "source_updated_at": "2026-10-13T08:45:21-04:00",
-          "data_center": true,
-          "first_seen_at": "2026-09-18T08:18:36+00:00",
-          "baseline_import": false
-        },
-        {
-          "id": "4866023101",
-          "title": "Data Center IT Technician ",
-          "location": "Oklahoma, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4866023101",
-          "source_updated_at": "2026-10-13T08:44:56-04:00",
-          "data_center": true,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
         },
         {
           "id": "4784189101",
@@ -524,6 +514,26 @@
           "location": "Minnesota, United States",
           "url": "https://careers.nebius.com/?gh_jid=4765032101",
           "source_updated_at": "2026-10-13T08:44:31-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4975997101",
+          "title": "Data Center Technician",
+          "location": "Kansas City, Missouri, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4975997101",
+          "source_updated_at": "2026-10-15T13:04:57-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-09-18T08:18:36+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "4866023101",
+          "title": "Data Center Technician ",
+          "location": "Oklahoma, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4866023101",
+          "source_updated_at": "2026-10-15T14:18:48-04:00",
           "data_center": true,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -719,20 +729,20 @@
           "baseline_import": true
         },
         {
-          "id": "4999585101",
+          "id": "4988457101",
           "title": "Electrical Design Engineer (MV/HV)",
-          "location": "Singapore",
-          "url": "https://careers.nebius.com/?gh_jid=4999585101",
+          "location": "Amsterdam, Netherlands",
+          "url": "https://careers.nebius.com/?gh_jid=4988457101",
           "source_updated_at": "2026-10-13T08:45:24-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-08T10:40:08+00:00",
           "baseline_import": false
         },
         {
-          "id": "4988457101",
+          "id": "4999585101",
           "title": "Electrical Design Engineer (MV/HV)",
-          "location": "Amsterdam, Netherlands",
-          "url": "https://careers.nebius.com/?gh_jid=4988457101",
+          "location": "Singapore",
+          "url": "https://careers.nebius.com/?gh_jid=4999585101",
           "source_updated_at": "2026-10-13T08:45:24-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-08T10:40:08+00:00",
@@ -799,16 +809,6 @@
           "baseline_import": true
         },
         {
-          "id": "4769272101",
-          "title": "Field CTO, Media & Entertainment AI Infrastructure ",
-          "location": "New York City, New York, United States; Remote - United States; San Francisco Bay Area, California, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4769272101",
-          "source_updated_at": "2026-10-13T08:44:33-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4981615101",
           "title": "Field Data Center Hardware Engineer",
           "location": "Birmingham, Alabama, United States",
@@ -819,20 +819,20 @@
           "baseline_import": false
         },
         {
-          "id": "4977003101",
+          "id": "4977012101",
           "title": "Field Deploy Engineer",
-          "location": "Hyderabad, India",
-          "url": "https://careers.nebius.com/?gh_jid=4977003101",
+          "location": "Singapore",
+          "url": "https://careers.nebius.com/?gh_jid=4977012101",
           "source_updated_at": "2026-10-13T08:45:22-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-19T08:06:39+00:00",
           "baseline_import": false
         },
         {
-          "id": "4977012101",
+          "id": "4977003101",
           "title": "Field Deploy Engineer",
-          "location": "Singapore",
-          "url": "https://careers.nebius.com/?gh_jid=4977012101",
+          "location": "Hyderabad, India",
+          "url": "https://careers.nebius.com/?gh_jid=4977003101",
           "source_updated_at": "2026-10-13T08:45:22-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-19T08:06:39+00:00",
@@ -869,16 +869,6 @@
           "baseline_import": true
         },
         {
-          "id": "4767268101",
-          "title": "Field Technical Lead – Data Center Deployments",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4767268101",
-          "source_updated_at": "2026-10-13T08:44:32-04:00",
-          "data_center": true,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4766859101",
           "title": "Field Technical Lead – Data Center Deployments",
           "location": "Philadelphia, Pennsylvania, United States",
@@ -887,6 +877,16 @@
           "data_center": true,
           "first_seen_at": "2026-10-07T10:20:21+00:00",
           "baseline_import": false
+        },
+        {
+          "id": "4767268101",
+          "title": "Field Technical Lead – Data Center Deployments",
+          "location": "Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4767268101",
+          "source_updated_at": "2026-10-13T08:44:32-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
         },
         {
           "id": "4856174101",
@@ -1189,16 +1189,6 @@
           "baseline_import": true
         },
         {
-          "id": "5004681101",
-          "title": "Intercompany Accountant",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=5004681101",
-          "source_updated_at": "2026-10-13T09:57:12-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-10-13T17:40:28+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "5003562101",
           "title": "Intercompany Accountant",
           "location": "Amsterdam, Netherlands; London, United Kingdom",
@@ -1209,20 +1199,10 @@
           "baseline_import": false
         },
         {
-          "id": "4941521101",
+          "id": "4941520101",
           "title": "Internal Control Business Partner",
-          "location": "Spain",
-          "url": "https://careers.nebius.com/?gh_jid=4941521101",
-          "source_updated_at": "2026-10-13T08:45:11-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4941567101",
-          "title": "Internal Control Business Partner",
-          "location": "Remote - United States",
-          "url": "https://careers.nebius.com/?gh_jid=4941567101",
+          "location": "Berlin, Germany",
+          "url": "https://careers.nebius.com/?gh_jid=4941520101",
           "source_updated_at": "2026-10-13T08:45:11-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1239,10 +1219,20 @@
           "baseline_import": true
         },
         {
-          "id": "4941520101",
+          "id": "4941521101",
           "title": "Internal Control Business Partner",
-          "location": "Berlin, Germany",
-          "url": "https://careers.nebius.com/?gh_jid=4941520101",
+          "location": "Spain",
+          "url": "https://careers.nebius.com/?gh_jid=4941521101",
+          "source_updated_at": "2026-10-13T08:45:11-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4941567101",
+          "title": "Internal Control Business Partner",
+          "location": "Remote - United States",
+          "url": "https://careers.nebius.com/?gh_jid=4941567101",
           "source_updated_at": "2026-10-13T08:45:11-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1279,16 +1269,6 @@
           "baseline_import": false
         },
         {
-          "id": "4883957101",
-          "title": "IP Legal Counsel",
-          "location": "Amsterdam, Netherlands; Berlin, Germany; London, United Kingdom; Prague, Czech Republic",
-          "url": "https://careers.nebius.com/?gh_jid=4883957101",
-          "source_updated_at": "2026-10-13T08:45:02-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4765077101",
           "title": "IT Infrastructure Engineer – RMA & Hardware Diagnostics",
           "location": "Minnesota, United States",
@@ -1303,6 +1283,16 @@
           "title": "IT Risk & Controls Manager",
           "location": "Amsterdam, Netherlands",
           "url": "https://careers.nebius.com/?gh_jid=4939649101",
+          "source_updated_at": "2026-10-13T08:45:11-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4941897101",
+          "title": "IT Risks & Control Manager",
+          "location": "Remote - United States",
+          "url": "https://careers.nebius.com/?gh_jid=4941897101",
           "source_updated_at": "2026-10-13T08:45:11-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1333,16 +1323,6 @@
           "title": "IT Risks & Control Manager",
           "location": "London, United Kingdom",
           "url": "https://careers.nebius.com/?gh_jid=4941902101",
-          "source_updated_at": "2026-10-13T08:45:11-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4941897101",
-          "title": "IT Risks & Control Manager",
-          "location": "Remote - United States",
-          "url": "https://careers.nebius.com/?gh_jid=4941897101",
           "source_updated_at": "2026-10-13T08:45:11-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1399,13 +1379,13 @@
           "baseline_import": true
         },
         {
-          "id": "4794430101",
+          "id": "4977014101",
           "title": "L3 Support Engineer",
-          "location": "Mäntsälä, Finland",
-          "url": "https://careers.nebius.com/?gh_jid=4794430101",
-          "source_updated_at": "2026-10-13T08:44:40-04:00",
+          "location": "Hyderabad, India",
+          "url": "https://careers.nebius.com/?gh_jid=4977014101",
+          "source_updated_at": "2026-10-13T08:45:22-04:00",
           "data_center": false,
-          "first_seen_at": "2026-10-12T10:57:29+00:00",
+          "first_seen_at": "2026-09-22T08:36:08+00:00",
           "baseline_import": false
         },
         {
@@ -1419,13 +1399,23 @@
           "baseline_import": false
         },
         {
-          "id": "4977014101",
+          "id": "4794430101",
           "title": "L3 Support Engineer",
-          "location": "Hyderabad, India",
-          "url": "https://careers.nebius.com/?gh_jid=4977014101",
-          "source_updated_at": "2026-10-13T08:45:22-04:00",
+          "location": "Mäntsälä, Finland",
+          "url": "https://careers.nebius.com/?gh_jid=4794430101",
+          "source_updated_at": "2026-10-13T08:44:40-04:00",
           "data_center": false,
-          "first_seen_at": "2026-09-22T08:36:08+00:00",
+          "first_seen_at": "2026-10-12T10:57:29+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "4990046101",
+          "title": "L3 Support Engineer, Data Center Infrastructure",
+          "location": "Birmingham, Alabama, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4990046101",
+          "source_updated_at": "2026-10-13T08:45:24-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-10-02T09:50:46+00:00",
           "baseline_import": false
         },
         {
@@ -1443,16 +1433,6 @@
           "title": "L3 Support Engineer, Data Center Infrastructure",
           "location": "Independence, Missouri, United States",
           "url": "https://careers.nebius.com/?gh_jid=4990045101",
-          "source_updated_at": "2026-10-13T08:45:24-04:00",
-          "data_center": true,
-          "first_seen_at": "2026-10-02T09:50:46+00:00",
-          "baseline_import": false
-        },
-        {
-          "id": "4990046101",
-          "title": "L3 Support Engineer, Data Center Infrastructure",
-          "location": "Birmingham, Alabama, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4990046101",
           "source_updated_at": "2026-10-13T08:45:24-04:00",
           "data_center": true,
           "first_seen_at": "2026-10-02T09:50:46+00:00",
@@ -1569,20 +1549,20 @@
           "baseline_import": true
         },
         {
-          "id": "4952080101",
+          "id": "4952091101",
           "title": "Manager, ML Solutions Architecture - Token Factory",
-          "location": "Remote - United States",
-          "url": "https://careers.nebius.com/?gh_jid=4952080101",
+          "location": "Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4952091101",
           "source_updated_at": "2026-10-13T08:45:15-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
         },
         {
-          "id": "4952091101",
+          "id": "4952080101",
           "title": "Manager, ML Solutions Architecture - Token Factory",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4952091101",
+          "location": "Remote - United States",
+          "url": "https://careers.nebius.com/?gh_jid=4952080101",
           "source_updated_at": "2026-10-13T08:45:15-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -1779,21 +1759,21 @@
           "baseline_import": false
         },
         {
-          "id": "5006461101",
+          "id": "5005046101",
           "title": "Partner Solutions Architect",
-          "location": "Canada",
-          "url": "https://careers.nebius.com/?gh_jid=5006461101",
-          "source_updated_at": "2026-10-14T15:18:28-04:00",
+          "location": "San Francisco, California, United States",
+          "url": "https://careers.nebius.com/?gh_jid=5005046101",
+          "source_updated_at": "2026-10-15T16:36:17-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-15T08:22:47+00:00",
           "baseline_import": false
         },
         {
-          "id": "5005046101",
+          "id": "5006461101",
           "title": "Partner Solutions Architect",
-          "location": "San Francisco, California, United States",
-          "url": "https://careers.nebius.com/?gh_jid=5005046101",
-          "source_updated_at": "2026-10-14T15:16:16-04:00",
+          "location": "Canada",
+          "url": "https://careers.nebius.com/?gh_jid=5006461101",
+          "source_updated_at": "2026-10-15T16:36:37-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-15T08:22:47+00:00",
           "baseline_import": false
@@ -1819,21 +1799,21 @@
           "baseline_import": false
         },
         {
-          "id": "5005913101",
-          "title": "People Program Manager ",
-          "location": "Amsterdam, Netherlands",
-          "url": "https://careers.nebius.com/?gh_jid=5005913101",
-          "source_updated_at": "2026-10-15T04:09:54-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-10-15T08:22:47+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "5004901101",
           "title": "People Program Manager ",
           "location": "Tel Aviv, Israel",
           "url": "https://careers.nebius.com/?gh_jid=5004901101",
           "source_updated_at": "2026-10-15T04:09:18-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-10-15T08:22:47+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "5005913101",
+          "title": "People Program Manager ",
+          "location": "Amsterdam, Netherlands",
+          "url": "https://careers.nebius.com/?gh_jid=5005913101",
+          "source_updated_at": "2026-10-15T04:09:54-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-15T08:22:47+00:00",
           "baseline_import": false
@@ -1857,16 +1837,6 @@
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
-        },
-        {
-          "id": "4967692101",
-          "title": "Presentation & Customer-facing Assets Designer",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4967692101",
-          "source_updated_at": "2026-10-13T08:45:19-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-19T08:06:39+00:00",
-          "baseline_import": false
         },
         {
           "id": "4881121101",
@@ -2009,6 +1979,16 @@
           "baseline_import": false
         },
         {
+          "id": "4784080101",
+          "title": "Regional Asset Manager",
+          "location": "Israel",
+          "url": "https://careers.nebius.com/?gh_jid=4784080101",
+          "source_updated_at": "2026-10-13T08:44:38-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
           "id": "4976888101",
           "title": "Regional Asset Manager",
           "location": "Finland",
@@ -2019,14 +1999,14 @@
           "baseline_import": false
         },
         {
-          "id": "4784080101",
-          "title": "Regional Asset Manager",
-          "location": "Israel",
-          "url": "https://careers.nebius.com/?gh_jid=4784080101",
-          "source_updated_at": "2026-10-13T08:44:38-04:00",
+          "id": "5007457101",
+          "title": "Regional Environmental, Health & Safety Manager ",
+          "location": "United States",
+          "url": "https://careers.nebius.com/?gh_jid=5007457101",
+          "source_updated_at": "2026-10-16T01:23:42-04:00",
           "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
+          "first_seen_at": "2026-10-16T08:15:20+00:00",
+          "baseline_import": false
         },
         {
           "id": "4965707101",
@@ -2189,10 +2169,20 @@
           "baseline_import": true
         },
         {
-          "id": "5003409101",
+          "id": "5003407101",
           "title": "Senior Applied Scientist, Efficient LLM Inference & Model Optimization",
-          "location": "Zurich, Switzerland",
-          "url": "https://careers.nebius.com/?gh_jid=5003409101",
+          "location": "London, United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=5003407101",
+          "source_updated_at": "2026-10-13T08:45:24-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-10-13T10:41:29+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "5003412101",
+          "title": "Senior Applied Scientist, Efficient LLM Inference & Model Optimization",
+          "location": "Berlin, Germany",
+          "url": "https://careers.nebius.com/?gh_jid=5003412101",
           "source_updated_at": "2026-10-13T08:45:24-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-13T10:41:29+00:00",
@@ -2209,10 +2199,10 @@
           "baseline_import": false
         },
         {
-          "id": "5003412101",
+          "id": "5003409101",
           "title": "Senior Applied Scientist, Efficient LLM Inference & Model Optimization",
-          "location": "Berlin, Germany",
-          "url": "https://careers.nebius.com/?gh_jid=5003412101",
+          "location": "Zurich, Switzerland",
+          "url": "https://careers.nebius.com/?gh_jid=5003409101",
           "source_updated_at": "2026-10-13T08:45:24-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-13T10:41:29+00:00",
@@ -2229,41 +2219,11 @@
           "baseline_import": true
         },
         {
-          "id": "5003407101",
-          "title": "Senior Applied Scientist, Efficient LLM Inference & Model Optimization",
-          "location": "London, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=5003407101",
-          "source_updated_at": "2026-10-13T08:45:24-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-10-13T10:41:29+00:00",
-          "baseline_import": false
-        },
-        {
-          "id": "4842104101",
-          "title": "Senior Backend Developer (Token Factory)",
-          "location": "Amsterdam, Netherlands; Berlin, Germany; London, United Kingdom; Prague, Czech Republic; Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4842104101",
-          "source_updated_at": "2026-10-13T08:44:28-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:43:44+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4383938101",
           "title": "Senior Backend Engineer",
           "location": "Amsterdam, Netherlands",
           "url": "https://careers.nebius.com/?gh_jid=4383938101",
           "source_updated_at": "2026-10-14T07:40:28-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4558219101",
-          "title": "Senior Backend Engineer",
-          "location": "Germany",
-          "url": "https://careers.nebius.com/?gh_jid=4558219101",
-          "source_updated_at": "2026-10-14T07:41:44-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2294,6 +2254,16 @@
           "location": "Prague, Czech Republic",
           "url": "https://careers.nebius.com/?gh_jid=4930031101",
           "source_updated_at": "2026-10-14T07:43:55-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4558219101",
+          "title": "Senior Backend Engineer",
+          "location": "Germany",
+          "url": "https://careers.nebius.com/?gh_jid=4558219101",
+          "source_updated_at": "2026-10-14T07:41:44-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2339,6 +2309,16 @@
           "baseline_import": false
         },
         {
+          "id": "5000504101",
+          "title": "Senior Customer AI Engineer - Token Factory",
+          "location": "Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=5000504101",
+          "source_updated_at": "2026-10-13T08:45:26-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-10-10T09:55:22+00:00",
+          "baseline_import": false
+        },
+        {
           "id": "5000612101",
           "title": "Senior Customer AI Engineer - Token Factory",
           "location": "Singapore",
@@ -2356,16 +2336,6 @@
           "source_updated_at": "2026-10-14T17:46:57-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-12T10:57:29+00:00",
-          "baseline_import": false
-        },
-        {
-          "id": "5000504101",
-          "title": "Senior Customer AI Engineer - Token Factory",
-          "location": "Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=5000504101",
-          "source_updated_at": "2026-10-13T08:45:26-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-10-10T09:55:22+00:00",
           "baseline_import": false
         },
         {
@@ -2479,20 +2449,20 @@
           "baseline_import": true
         },
         {
-          "id": "4383058101",
+          "id": "4558238101",
           "title": "Senior Hypervisor Engineer",
-          "location": "Amsterdam, Netherlands; Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4383058101",
+          "location": "London, United Kingdom; Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4558238101",
           "source_updated_at": "2026-10-13T08:43:56-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
         },
         {
-          "id": "4558238101",
+          "id": "4383058101",
           "title": "Senior Hypervisor Engineer",
-          "location": "London, United Kingdom; Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4558238101",
+          "location": "Amsterdam, Netherlands; Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4383058101",
           "source_updated_at": "2026-10-13T08:43:56-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -2506,6 +2476,16 @@
           "source_updated_at": "2026-10-13T08:45:23-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-24T08:31:23+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "4986451101",
+          "title": "Senior Machine Learning Engineer, LLM Inference Optimization",
+          "location": "Zurich, Switzerland",
+          "url": "https://careers.nebius.com/?gh_jid=4986451101",
+          "source_updated_at": "2026-10-13T08:45:23-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-25T08:53:02+00:00",
           "baseline_import": false
         },
         {
@@ -2529,16 +2509,6 @@
           "baseline_import": false
         },
         {
-          "id": "4986451101",
-          "title": "Senior Machine Learning Engineer, LLM Inference Optimization",
-          "location": "Zurich, Switzerland",
-          "url": "https://careers.nebius.com/?gh_jid=4986451101",
-          "source_updated_at": "2026-10-13T08:45:23-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-25T08:53:02+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4926274101",
           "title": "Senior Machine Learning Engineer, Model Training and Reinforcement Learning",
           "location": "Palo Alto, California, United States",
@@ -2549,6 +2519,16 @@
           "baseline_import": true
         },
         {
+          "id": "5002146101",
+          "title": "Senior Manager, Integrated Campaigns",
+          "location": "United States",
+          "url": "https://careers.nebius.com/?gh_jid=5002146101",
+          "source_updated_at": "2026-10-15T15:27:32-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-10-16T08:15:20+00:00",
+          "baseline_import": false
+        },
+        {
           "id": "4986889101",
           "title": "Senior Manager, SEO & GEO",
           "location": "Remote - United States; United States",
@@ -2556,26 +2536,6 @@
           "source_updated_at": "2026-10-13T08:45:23-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-26T08:39:24+00:00",
-          "baseline_import": false
-        },
-        {
-          "id": "4826233101",
-          "title": "Senior ML Engineer (Agentic Search)",
-          "location": "Amsterdam, Netherlands; London, United Kingdom; Remote - Europe; Zurich, Switzerland",
-          "url": "https://careers.nebius.com/?gh_jid=4826233101",
-          "source_updated_at": "2026-10-13T08:44:49-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4977180101",
-          "title": "Senior ML Engineer (Agentic Search)",
-          "location": "Zurich, Switzerland",
-          "url": "https://careers.nebius.com/?gh_jid=4977180101",
-          "source_updated_at": "2026-10-13T08:44:49-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-17T08:42:51+00:00",
           "baseline_import": false
         },
         {
@@ -2653,7 +2613,7 @@
           "title": "Senior Product Manager, Agentic Search",
           "location": "Israel",
           "url": "https://careers.nebius.com/?gh_jid=4905074101",
-          "source_updated_at": "2026-10-13T08:44:53-04:00",
+          "source_updated_at": "2026-10-15T09:05:51-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2669,10 +2629,10 @@
           "baseline_import": false
         },
         {
-          "id": "4971190101",
+          "id": "4971191101",
           "title": "Senior Product Manager, Search Infrastructure",
-          "location": "Amsterdam, Netherlands",
-          "url": "https://careers.nebius.com/?gh_jid=4971190101",
+          "location": "London, United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=4971191101",
           "source_updated_at": "2026-10-13T08:45:20-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -2689,20 +2649,10 @@
           "baseline_import": true
         },
         {
-          "id": "4971191101",
+          "id": "4971190101",
           "title": "Senior Product Manager, Search Infrastructure",
-          "location": "London, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4971191101",
-          "source_updated_at": "2026-10-13T08:45:20-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4970709101",
-          "title": "Senior Product Manager, Vertical Search",
           "location": "Amsterdam, Netherlands",
-          "url": "https://careers.nebius.com/?gh_jid=4970709101",
+          "url": "https://careers.nebius.com/?gh_jid=4971190101",
           "source_updated_at": "2026-10-13T08:45:20-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -2723,6 +2673,16 @@
           "title": "Senior Product Manager, Vertical Search",
           "location": "London, United Kingdom",
           "url": "https://careers.nebius.com/?gh_jid=4970711101",
+          "source_updated_at": "2026-10-13T08:45:20-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4970709101",
+          "title": "Senior Product Manager, Vertical Search",
+          "location": "Amsterdam, Netherlands",
+          "url": "https://careers.nebius.com/?gh_jid=4970709101",
           "source_updated_at": "2026-10-13T08:45:20-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
@@ -2834,16 +2794,6 @@
           "location": "United States",
           "url": "https://careers.nebius.com/?gh_jid=4891422101",
           "source_updated_at": "2026-10-13T08:45:02-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
-          "id": "4883870101",
-          "title": "Senior Software Developer: Models Team (Token Factory)",
-          "location": "Amsterdam, Netherlands; London, United Kingdom; Remote - Europe; Remote - United States",
-          "url": "https://careers.nebius.com/?gh_jid=4883870101",
-          "source_updated_at": "2026-10-13T08:45:01-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -2979,16 +2929,6 @@
           "baseline_import": true
         },
         {
-          "id": "4754609101",
-          "title": "Senior Software Engineer (Token Factory)",
-          "location": "Amsterdam, Netherlands; Germany; Israel; Prague, Czech Republic; Remote - Europe; United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4754609101",
-          "source_updated_at": "2026-10-13T08:44:28-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:43:44+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4781977101",
           "title": "Senior Software Engineer (YDB Team)",
           "location": "London, United Kingdom",
@@ -3119,21 +3059,21 @@
           "baseline_import": true
         },
         {
-          "id": "4700444101",
-          "title": "Senior Technical Program Manager - New Data Center Launches ",
-          "location": "Amsterdam, Netherlands; Remote - Europe",
-          "url": "https://careers.nebius.com/?gh_jid=4700444101",
-          "source_updated_at": "2026-10-13T08:44:18-04:00",
-          "data_center": true,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4767377101",
           "title": "Senior Technical Program Manager - New Data Center Launches ",
           "location": "Tel Aviv, Israel",
           "url": "https://careers.nebius.com/?gh_jid=4767377101",
           "source_updated_at": "2026-10-13T08:44:32-04:00",
+          "data_center": true,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
+        },
+        {
+          "id": "4700444101",
+          "title": "Senior Technical Program Manager - New Data Center Launches ",
+          "location": "Amsterdam, Netherlands; Remote - Europe",
+          "url": "https://careers.nebius.com/?gh_jid=4700444101",
+          "source_updated_at": "2026-10-13T08:44:18-04:00",
           "data_center": true,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3283,7 +3223,7 @@
           "title": "Software Engineer in Hardware Infrastructure",
           "location": "Amsterdam, Netherlands; Remote - Europe",
           "url": "https://careers.nebius.com/?gh_jid=4424714101",
-          "source_updated_at": "2026-10-13T08:44:00-04:00",
+          "source_updated_at": "2026-10-15T06:49:11-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3293,7 +3233,7 @@
           "title": "Software Engineer in Hardware Infrastructure Observability",
           "location": "Amsterdam, Netherlands; Remote - Europe",
           "url": "https://careers.nebius.com/?gh_jid=4720129101",
-          "source_updated_at": "2026-10-13T08:44:00-04:00",
+          "source_updated_at": "2026-10-15T06:49:11-04:00",
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
@@ -3310,10 +3250,30 @@
         },
         {
           "id": "5004563101",
-          "title": "Solution Marketing Lead — Finance ",
+          "title": "Solution Marketing Lead — Financial Services  ",
           "location": "United States",
           "url": "https://careers.nebius.com/?gh_jid=5004563101",
-          "source_updated_at": "2026-10-14T13:34:21-04:00",
+          "source_updated_at": "2026-10-15T11:22:59-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-10-15T08:22:47+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "5005044101",
+          "title": "Solutions Architect",
+          "location": "San Francisco, California, United States",
+          "url": "https://careers.nebius.com/?gh_jid=5005044101",
+          "source_updated_at": "2026-10-15T12:14:50-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-10-15T08:22:47+00:00",
+          "baseline_import": false
+        },
+        {
+          "id": "5006458101",
+          "title": "Solutions Architect",
+          "location": "Canada",
+          "url": "https://careers.nebius.com/?gh_jid=5006458101",
+          "source_updated_at": "2026-10-15T12:14:50-04:00",
           "data_center": false,
           "first_seen_at": "2026-10-15T08:22:47+00:00",
           "baseline_import": false
@@ -3327,26 +3287,6 @@
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
-        },
-        {
-          "id": "5005044101",
-          "title": "Solutions Architect",
-          "location": "San Francisco, California, United States",
-          "url": "https://careers.nebius.com/?gh_jid=5005044101",
-          "source_updated_at": "2026-10-14T15:15:58-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-10-15T08:22:47+00:00",
-          "baseline_import": false
-        },
-        {
-          "id": "5006458101",
-          "title": "Solutions Architect",
-          "location": "Canada",
-          "url": "https://careers.nebius.com/?gh_jid=5006458101",
-          "source_updated_at": "2026-10-14T15:17:24-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-10-15T08:22:47+00:00",
-          "baseline_import": false
         },
         {
           "id": "4976304101",
@@ -3409,14 +3349,14 @@
           "baseline_import": true
         },
         {
-          "id": "4977312101",
+          "id": "4826618101",
           "title": "Staff Applied AI Researcher (Agentic Search)",
-          "location": "Zurich, Switzerland",
-          "url": "https://careers.nebius.com/?gh_jid=4977312101",
+          "location": "London, United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=4826618101",
           "source_updated_at": "2026-10-13T08:44:49-04:00",
           "data_center": false,
-          "first_seen_at": "2026-09-17T08:42:51+00:00",
-          "baseline_import": false
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
         },
         {
           "id": "4948471101",
@@ -3429,14 +3369,14 @@
           "baseline_import": true
         },
         {
-          "id": "4826618101",
+          "id": "4977312101",
           "title": "Staff Applied AI Researcher (Agentic Search)",
-          "location": "London, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4826618101",
+          "location": "Zurich, Switzerland",
+          "url": "https://careers.nebius.com/?gh_jid=4977312101",
           "source_updated_at": "2026-10-13T08:44:49-04:00",
           "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
+          "first_seen_at": "2026-09-17T08:42:51+00:00",
+          "baseline_import": false
         },
         {
           "id": "4906462101",
@@ -3499,16 +3439,6 @@
           "baseline_import": false
         },
         {
-          "id": "4824821101",
-          "title": "Staff / Senior Software Engineer (Agentic Search) - Runtime",
-          "location": "Amsterdam, Netherlands; London, United Kingdom",
-          "url": "https://careers.nebius.com/?gh_jid=4824821101",
-          "source_updated_at": "2026-10-13T08:44:48-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4977340101",
           "title": "Staff / Senior Software Engineer (Agentic Search) - Runtime",
           "location": "Zurich, Switzerland",
@@ -3517,6 +3447,16 @@
           "data_center": false,
           "first_seen_at": "2026-09-17T08:42:51+00:00",
           "baseline_import": false
+        },
+        {
+          "id": "4824821101",
+          "title": "Staff / Senior Software Engineer (Agentic Search) - Runtime",
+          "location": "Amsterdam, Netherlands; London, United Kingdom",
+          "url": "https://careers.nebius.com/?gh_jid=4824821101",
+          "source_updated_at": "2026-10-13T08:44:48-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-10T12:27:13+00:00",
+          "baseline_import": true
         },
         {
           "id": "4765226101",
@@ -3699,16 +3639,6 @@
           "baseline_import": true
         },
         {
-          "id": "4763156101",
-          "title": "Technical Project Manager - IAAS",
-          "location": "Amsterdam, Netherlands",
-          "url": "https://careers.nebius.com/?gh_jid=4763156101",
-          "source_updated_at": "2026-10-13T08:44:29-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-10T12:27:13+00:00",
-          "baseline_import": true
-        },
-        {
           "id": "4753448101",
           "title": "Technical Project Manager / IT Infrastructure Engineer",
           "location": "Paris, France",
@@ -3819,16 +3749,6 @@
           "baseline_import": false
         },
         {
-          "id": "4965870101",
-          "title": "Warehouse Logistics Specialist",
-          "location": "Oklahoma, United States",
-          "url": "https://careers.nebius.com/?gh_jid=4965870101",
-          "source_updated_at": "2026-10-13T08:45:18-04:00",
-          "data_center": false,
-          "first_seen_at": "2026-09-16T08:39:20+00:00",
-          "baseline_import": false
-        },
-        {
           "id": "4794078101",
           "title": "Warehouse Logistics Specialist",
           "location": "Bet Shemesh, Israel; Israel",
@@ -3837,6 +3757,16 @@
           "data_center": false,
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
+        },
+        {
+          "id": "4965870101",
+          "title": "Warehouse Logistics Specialist",
+          "location": "Oklahoma, United States",
+          "url": "https://careers.nebius.com/?gh_jid=4965870101",
+          "source_updated_at": "2026-10-13T08:45:18-04:00",
+          "data_center": false,
+          "first_seen_at": "2026-09-16T08:39:20+00:00",
+          "baseline_import": false
         }
       ],
       "baseline_at": "2026-09-10T12:27:13+00:00"
@@ -3844,8 +3774,8 @@
     "regions": {
       "url": "https://status.nebius.com/api/v2/components.json",
       "health": "ok",
-      "attempted_at": "2026-10-15T08:22:47+00:00",
-      "updated_at": "2026-10-15T08:22:47+00:00",
+      "attempted_at": "2026-10-16T08:15:20+00:00",
+      "updated_at": "2026-10-16T08:15:20+00:00",
       "rows": [
         {
           "id": "g389s72ckww8",
@@ -3871,7 +3801,7 @@
         {
           "id": "wjngyggymlwk",
           "name": "EU-WEST2",
-          "status": "partial_outage",
+          "status": "operational",
           "first_seen_at": "2026-09-10T12:27:13+00:00",
           "baseline_import": true
         },
@@ -3916,9 +3846,19 @@
     "incidents": {
       "url": "https://status.nebius.com/api/v2/incidents.json",
       "health": "ok",
-      "attempted_at": "2026-10-15T08:22:47+00:00",
-      "updated_at": "2026-10-15T08:22:47+00:00",
+      "attempted_at": "2026-10-16T08:15:20+00:00",
+      "updated_at": "2026-10-16T08:15:20+00:00",
       "rows": [
+        {
+          "id": "sdb2htxgyprr",
+          "title": "InfiniBand connectivity issues for GPU clusters in eu-west2",
+          "status": "resolved",
+          "created_at": "2026-10-15T05:34:27.405Z",
+          "resolved_at": "2026-10-15T16:12:53.879Z",
+          "url": "https://stspg.io/tvp525c6c7lf",
+          "first_seen_at": "2026-10-15T08:22:47+00:00",
+          "baseline_import": false
+        },
         {
           "id": "ck6r51h1yl0b",
           "title": "Connectivity issues between eu-south1 and other Nebius regions",
@@ -3926,16 +3866,6 @@
           "created_at": "2026-10-14T20:41:24.666Z",
           "resolved_at": "2026-10-15T05:50:30.585Z",
           "url": "https://stspg.io/lb3cnh9jhpn3",
-          "first_seen_at": "2026-10-15T08:22:47+00:00",
-          "baseline_import": false
-        },
-        {
-          "id": "sdb2htxgyprr",
-          "title": "InfiniBand connectivity issues for GPU clusters in eu-west2",
-          "status": "investigating",
-          "created_at": "2026-10-15T05:34:27.405Z",
-          "resolved_at": null,
-          "url": "https://stspg.io/tvp525c6c7lf",
           "first_seen_at": "2026-10-15T08:22:47+00:00",
           "baseline_import": false
         },
@@ -7735,6 +7665,190 @@
       "at": "2026-10-15T08:22:47+00:00",
       "label": "Huawei annual report",
       "url": "https://www.huawei.com/en/annual-report"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "5004280101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Communications Designer — People Communications",
+      "url": "https://careers.nebius.com/?gh_jid=5004280101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "5007457101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Regional Environmental, Health & Safety Manager ",
+      "url": "https://careers.nebius.com/?gh_jid=5007457101"
+    },
+    {
+      "kind": "jobs",
+      "type": "added",
+      "id": "5002146101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Senior Manager, Integrated Campaigns",
+      "url": "https://careers.nebius.com/?gh_jid=5002146101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4754609101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Senior Software Engineer (Token Factory)",
+      "url": "https://careers.nebius.com/?gh_jid=4754609101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4967692101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Presentation & Customer-facing Assets Designer",
+      "url": "https://careers.nebius.com/?gh_jid=4967692101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4883870101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Senior Software Developer: Models Team (Token Factory)",
+      "url": "https://careers.nebius.com/?gh_jid=4883870101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4769272101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Field CTO, Media & Entertainment AI Infrastructure ",
+      "url": "https://careers.nebius.com/?gh_jid=4769272101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4826233101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Senior ML Engineer (Agentic Search)",
+      "url": "https://careers.nebius.com/?gh_jid=4826233101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4977180101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Senior ML Engineer (Agentic Search)",
+      "url": "https://careers.nebius.com/?gh_jid=4977180101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "5004681101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Intercompany Accountant",
+      "url": "https://careers.nebius.com/?gh_jid=5004681101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4883957101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "IP Legal Counsel",
+      "url": "https://careers.nebius.com/?gh_jid=4883957101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4763156101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Technical Project Manager - IAAS",
+      "url": "https://careers.nebius.com/?gh_jid=4763156101"
+    },
+    {
+      "kind": "jobs",
+      "type": "removed",
+      "id": "4842104101",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Senior Backend Developer (Token Factory)",
+      "url": "https://careers.nebius.com/?gh_jid=4842104101"
+    },
+    {
+      "kind": "regions",
+      "type": "status_changed",
+      "id": "wjngyggymlwk",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "EU-WEST2: partial_outage → operational",
+      "url": "https://status.nebius.com/api/v2/components.json"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "0700.HK",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Tencent investor reports",
+      "url": "https://www.tencent.com/en-us/investors/financial-reports.html"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "0728.HK",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "China Telecom official site",
+      "url": "https://www.chinatelecom-h.com/"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "0941.HK",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "China Mobile official site",
+      "url": "https://www.chinamobileltd.com/"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "APLD",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Applied Digital SEC filing index",
+      "url": "https://data.sec.gov/submissions/CIK0001144879.json"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "CIFR",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Cipher Digital SEC filing index",
+      "url": "https://data.sec.gov/submissions/CIK0001819989.json"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "CRUSOE",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Crusoe newsroom",
+      "url": "https://crusoe.ai/newsroom/"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "GOOGL",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Alphabet SEC filing index",
+      "url": "https://data.sec.gov/submissions/CIK0001652044.json"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "MSFT",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Microsoft SEC filing index",
+      "url": "https://data.sec.gov/submissions/CIK0000789019.json"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "NBIS",
+      "at": "2026-10-16T08:15:20+00:00",
+      "label": "Nebius SEC filing index",
+      "url": "https://data.sec.gov/submissions/CIK0001513845.json"
     }
   ],
   "snapshots": [
@@ -7953,11 +8067,17 @@
       "jobs": 383,
       "dc_jobs": 58,
       "region_groups": 9
+    },
+    {
+      "date": "2026-10-16",
+      "jobs": 376,
+      "dc_jobs": 58,
+      "region_groups": 9
     }
   ],
-  "attempted_at": "2026-10-15T08:22:47+00:00",
+  "attempted_at": "2026-10-16T08:15:20+00:00",
   "disclosures": {
-    "attempted_at": "2026-10-15T08:22:47+00:00",
+    "attempted_at": "2026-10-16T08:15:20+00:00",
     "providers": {
       "0700.HK": {
         "provider": "0700.HK",
@@ -7965,17 +8085,17 @@
         "url": "https://www.tencent.com/en-us/investors/financial-reports.html",
         "kind": "official_investor_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
-        "content_hash": "9e29fb2524e377597645b3738fda233feb9db0e8fa57f73bf5ebb862d8ea1efa",
+        "content_hash": "58e22b78f965a485ee3b3bb4c3b24c2c69e3064444e7cbf9ac63869c9bd67f3e",
         "content_type": "text/html",
         "etag": null,
         "last_modified": null,
-        "bytes": 189029,
+        "bytes": 189026,
         "final_url": "https://www.tencent.com/investors/financial-reports/",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-15T08:22:47+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "0728.HK": {
         "provider": "0728.HK",
@@ -7983,18 +8103,18 @@
         "url": "https://www.chinatelecom-h.com/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
-        "content_hash": "c6c3420fd9b50478b276f5b2c4fb9d90a6d0827663dbeb4a3f10673a0543ec79",
+        "content_hash": "f5cc31bde50162b6ac0eb57e928361340da304aa1388351d7edac2f21569abf1",
         "content_type": "text/html",
         "etag": null,
         "last_modified": "Wed, 14 Oct 2026 01:59:08 GMT",
         "bytes": 59693,
         "final_url": "https://www.chinatelecom-h.com/en/global/home.php",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-15T08:22:47+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "0762.HK": {
         "provider": "0762.HK",
@@ -8002,7 +8122,7 @@
         "url": "https://www.chinaunicom.com.hk/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
@@ -8012,7 +8132,7 @@
         "last_modified": "Tue, 01 Sep 2026 06:41:03 GMT",
         "bytes": 257,
         "final_url": "https://www.chinaunicom.com.hk/",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "0941.HK": {
@@ -8021,18 +8141,18 @@
         "url": "https://www.chinamobileltd.com/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
-        "content_hash": "04ed96f9adfdecb00b7a290b5d3edc0a368b113c964a4097be5b0f2c424b3946",
+        "content_hash": "324b78e261b7a54bb869aa3861fe75e6465c1e71c130c13b0d5f797680e5475e",
         "content_type": "text/html",
         "etag": null,
         "last_modified": null,
         "bytes": 64406,
         "final_url": "https://www.chinamobileltd.com/en/global/home.php",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-15T08:22:47+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "3896.HK": {
         "provider": "3896.HK",
@@ -8040,7 +8160,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001795589.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8050,7 +8170,7 @@
         "last_modified": null,
         "bytes": 49563,
         "final_url": "https://data.sec.gov/submissions/CIK0001795589.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "9888.HK": {
@@ -8059,7 +8179,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001329099.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8069,7 +8189,7 @@
         "last_modified": null,
         "bytes": 95766,
         "final_url": "https://data.sec.gov/submissions/CIK0001329099.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "9988.HK": {
@@ -8078,7 +8198,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001577552.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "6ac9ebe730af8c2646bb69e3241bff37356192d0afa18c7849e4e605844ff918",
         "content_type": "application/json",
@@ -8087,7 +8207,7 @@
         "bytes": 108883,
         "final_url": "https://data.sec.gov/submissions/CIK0001577552.json",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "AMZN": {
@@ -8096,7 +8216,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001018724.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8106,7 +8226,7 @@
         "last_modified": null,
         "bytes": 159904,
         "final_url": "https://data.sec.gov/submissions/CIK0001018724.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "APLD": {
@@ -8115,17 +8235,17 @@
         "url": "https://data.sec.gov/submissions/CIK0001144879.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
-        "content_hash": "e083e6d704263119917242ca4355edc795931920bc003ee80e328dd0b13f1a94",
+        "content_hash": "5e431170667e25288603fcf56198f048a1259d56c3c2189c5f1e00b4c6bd6e1c",
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "bytes": 139930,
+        "bytes": 140083,
         "final_url": "https://data.sec.gov/submissions/CIK0001144879.json",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-14T08:47:37+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "CIFR": {
         "provider": "CIFR",
@@ -8133,18 +8253,18 @@
         "url": "https://data.sec.gov/submissions/CIK0001819989.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
-        "content_hash": "9ad5a7f76f89bf8f318564d8b50429bceee4dada8a91d6a69fbf56696761d069",
+        "content_hash": "d17d01a6f18afb24c9acf25cfceea2f4a4116bff5a2a93d1fbf1c6ee052cc641",
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "bytes": 102732,
+        "bytes": 102885,
         "final_url": "https://data.sec.gov/submissions/CIK0001819989.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-15T08:22:47+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "CRUSOE": {
         "provider": "CRUSOE",
@@ -8152,17 +8272,17 @@
         "url": "https://crusoe.ai/newsroom/",
         "kind": "official_newsroom",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
-        "content_hash": "c026b3419a205e37075d04307634e68ed84beb574f1ba24370c9392d6673ce86",
+        "content_hash": "2e63457261874f302c9f43c39b6038195d35c9459923379066d9c399a28710ce",
         "content_type": "text/html",
         "etag": null,
-        "last_modified": "Thu, 15 Oct 2026 00:11:58 GMT",
-        "bytes": 279383,
+        "last_modified": "Thu, 15 Oct 2026 15:47:10 GMT",
+        "bytes": 279124,
         "final_url": "https://www.crusoe.ai/resources/newsroom",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-15T08:22:47+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "CRWV": {
         "provider": "CRWV",
@@ -8170,7 +8290,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001769628.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8180,7 +8300,7 @@
         "last_modified": null,
         "bytes": 157296,
         "final_url": "https://data.sec.gov/submissions/CIK0001769628.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-15T08:22:47+00:00"
       },
       "GOOGL": {
@@ -8189,18 +8309,18 @@
         "url": "https://data.sec.gov/submissions/CIK0001652044.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
-        "content_hash": "9434407b197d6322de4bece8ad3b69459c8d6ddf3a68526b4b22b02e8175d33c",
+        "content_hash": "648cea84d824309b518807fd7e7fdb72d6855e12e8afa221d2caa047d5c9f2ca",
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "bytes": 152415,
+        "bytes": 152401,
         "final_url": "https://data.sec.gov/submissions/CIK0001652044.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-13T17:43:07+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "IBM": {
         "provider": "IBM",
@@ -8208,7 +8328,7 @@
         "url": "https://data.sec.gov/submissions/CIK0000051143.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "48b6180e7fe331232ccbdda20c012f61b5b1ed42251c4d74c05c6db2f07326f8",
         "content_type": "application/json",
@@ -8217,7 +8337,7 @@
         "bytes": 166799,
         "final_url": "https://data.sec.gov/submissions/CIK0000051143.json",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-13T17:46:09+00:00"
       },
       "IREN": {
@@ -8226,7 +8346,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001878848.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 308: Permanent Redirect",
@@ -8236,7 +8356,7 @@
         "last_modified": null,
         "bytes": 54068,
         "final_url": "https://data.sec.gov/submissions/CIK0001878848.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "LAMBDA": {
@@ -8245,7 +8365,7 @@
         "url": "https://lambda.ai/blog",
         "kind": "official_newsroom",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "d8ad6106f4a95758e34a0af2732788c1b5afe5ed43ae8dc4b166b13c37a49d47",
         "content_type": "text/html",
@@ -8254,7 +8374,7 @@
         "bytes": 68003,
         "final_url": "https://lambda.ai/blog",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "MSFT": {
@@ -8263,18 +8383,18 @@
         "url": "https://data.sec.gov/submissions/CIK0000789019.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
-        "content_hash": "4dce45d2dcac53cb8e9d690331ead28daff35cd042edc38524a0482382b2f3e3",
+        "content_hash": "a5848ba348a3d3ae08c3c40bf4599379014be077911e6550ed3a8182a34a6a7b",
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "bytes": 184985,
+        "bytes": 185024,
         "final_url": "https://data.sec.gov/submissions/CIK0000789019.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-15T08:22:47+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "NBIS": {
         "provider": "NBIS",
@@ -8282,18 +8402,18 @@
         "url": "https://data.sec.gov/submissions/CIK0001513845.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
-        "content_hash": "09839953a26ac87f3b5dd20008261f2b1286ae47f4725c3f29d532d5b5d4095e",
+        "content_hash": "01114eb8fc41f95f24f83c042427c70acf450f7e43b9c04b0d5e74cf750caf63",
         "content_type": "application/json",
         "etag": null,
         "last_modified": null,
-        "bytes": 82243,
+        "bytes": 82395,
         "final_url": "https://data.sec.gov/submissions/CIK0001513845.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
-        "last_changed_at": "2026-10-14T08:47:37+00:00"
+        "last_good_at": "2026-10-16T08:15:20+00:00",
+        "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "ORCL": {
         "provider": "ORCL",
@@ -8301,7 +8421,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001341439.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8311,7 +8431,7 @@
         "last_modified": null,
         "bytes": 158606,
         "final_url": "https://data.sec.gov/submissions/CIK0001341439.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "WULF": {
@@ -8320,7 +8440,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001083301.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
@@ -8330,7 +8450,7 @@
         "last_modified": null,
         "bytes": 165092,
         "final_url": "https://data.sec.gov/submissions/CIK0001083301.json",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "huawei": {
@@ -8339,7 +8459,7 @@
         "url": "https://www.huawei.com/en/annual-report",
         "kind": "official_annual_report_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "1f75eabf29f908d36c00b548090b50e5e4d03f13242b69df3cff8f7f429923c6",
         "content_type": "text/html",
@@ -8348,7 +8468,7 @@
         "bytes": 118899,
         "final_url": "https://www.huawei.com/en/annual-report",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-15T08:22:47+00:00"
       },
       "ucloud": {
@@ -8357,7 +8477,7 @@
         "url": "https://www.ucloud.cn/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-15T08:22:47+00:00",
+        "last_checked_at": "2026-10-16T08:15:20+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "e4565179a0320ed68871b047f75b24c25932e160cc7fe6ff326e2ee6eeec8c28",
         "content_type": "text/html",
@@ -8366,7 +8486,7 @@
         "bytes": 134070,
         "final_url": "https://www.ucloud.cn/",
         "health": "ok",
-        "last_good_at": "2026-10-15T08:22:47+00:00",
+        "last_good_at": "2026-10-16T08:15:20+00:00",
         "last_changed_at": "2026-10-13T17:40:28+00:00"
       }
     }
