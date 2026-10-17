@@ -62,10 +62,11 @@
   // 워크북 연도(발행주식 기준)는 유통주식 기준으로 환산한다: EPS·BPS ÷ k, PER·PBR × k (k = 그 해 연말 유통/발행)
   const bandSourceNames = {workbook: '워크북 밴드(EPS·BPS ÷ k, 배수 × k)', dart_fy: 'DART 연간', ttm: '최근 4개 분기'};
   const bucketNames = {borrowings: '차입금·사채', leases: '리스부채', cash: '현금및현금성자산', short_term_financial: '단기금융상품', other_current_financial: '기타유동금융자산'};
-  const unitNames = {ratio: '비율(%)', KRWbn: '십억원', KRWmn: '백만원', persons: '명', visits: '회', visiting_days: '일'};
+  const unitNames = {ratio: '비율(%)', KRWbn: '십억원', KRWmn: '백만원', persons: '명', visits: '회', visiting_days: '일', 'KRWbn/proxy_unit': '십억원/프록시 단위', admissions: '관객 수(명)'};
   const confNames = {low: '낮음', medium: '중간', high: '높음'};
   const metricKo = {revenue: '매출액', operating_profit: '영업이익', net_income: '순이익', controlling_net_income: '지배순이익', eps_basic: 'EPS'};
-  const srcStatusNames = {official_original_acquired: '공식 원본', primary_company_file_retrieved: '회사 원본 파일', agent_model_not_official: '에이전트 모델(공식 자료 아님)', agent_model_design: '에이전트 설계 문서', agent_model_not_company_guidance: '에이전트 모델(회사 가이던스 아님)', coverage_lane_source: '커버리지 레인 수집 자료'};
+  const srcStatusNames = {official_original_acquired: '공식 원본', primary_company_file_retrieved: '회사 원본 파일', agent_model_not_official: '에이전트 모델(공식 자료 아님)', agent_model_design: '에이전트 설계 문서', agent_model_not_company_guidance: '에이전트 모델(회사 가이던스 아님)', coverage_lane_source: '커버리지 레인 수집 자료',
+    models_lane_extension: '앙상블 모델 레인 연장 추정(커버리지 레인 추정 아님)', models_extension_evidence: '모델 레인 연장 근거 자료'};
   const pubStatusNames = {unknown_observed_by_cutoff: '수집 시점까지 확인 안 됨'};
   // 레저 드라이버·커버리지 가정 지표의 화면 이름(목록에 없는 지표는 원문 명칭 그대로). 근거: 커버리지 레인 가정 원문(name_table)
   const driverNames = {
@@ -85,6 +86,61 @@
     nonrecurring_bonus_normalization: '2026Q2 일회성 상여비 감소분 원복(2027Q2 고정비에 다시 가산)', reinforcement_depreciation_release: '보강공사 감가상각비 종료분(2028Q2부터 분기 고정비에서 차감)'
   };
   const metricLabel = k => driverNames[k] ? esc(driverNames[k]) : '<code>' + esc(k) + '</code>';
+  // ── 앙상블 모델 레인 연장(models/inputs/coverage_extension.json, 커버리지 레인이 아직 내지 않은 해) ──
+  // 엔진이 연장 값을 쓸 때만 싣는 필드로 그린다: roll_forward.source.extension(레저 연장의 연장 연도·분기), valuation.range.extension(SOTP 연장 연도·가중),
+  // assumption_rows[].lane 'models_extension'(연장 가정 행), sources[].status 'models_lane_extension'·'models_extension_evidence'(연장 자체·근거 자료).
+  // 필드가 없으면(오늘) 화면은 이전과 같다. 연장 값은 어디서든 '모델 레인 연장' 표지를 달고 커버리지 레인 값과 섞어 부르지 않는다
+  const EXT_LABEL = '앙상블 모델 레인 연장 추정(커버리지 레인 추정 아님)', EXT_MARK = ' (모델 레인 연장)', EXT_LANE = 'models_extension';
+  const EXT_SRC = ['models_lane_extension', 'models_extension_evidence'];
+  const isExtRow = r => obj(r).lane === EXT_LANE;
+  const isExtSrc = s => EXT_SRC.indexOf(obj(s).status) >= 0;
+  const yList = a => arr(a).map(String).filter(y => /^\d{4}$/.test(y)).sort();
+  // 연장 가정 행의 지표 이름(연장만 쓰는 구조 행·CJ ENM 드라이버 체인) — 없으면 레저 드라이버 이름(driverNames), 그래도 없으면 원문 키 <code>
+  const extNames = {
+    second_casino_drop_uplift: '제2카지노 드롭액 증가율 가산(기존 영업장 증가율에 더함)', second_casino_fixed_cost: '제2카지노 고정비(분기 가산)',
+    reinforcement_depreciation_release: '보강공사 감가상각비 종료분(분기 고정비에서 차감)', jangchung_hotel_revenue: '장충동 호텔 매출(비카지노 매출에 가산, 분기)',
+    jangchung_hotel_fixed_cost: '장충동 호텔 고정비(분기 가산)', 'jangchung_hotel_*': '장충동 호텔 매출·고정비',
+    media_op_margin: '미디어플랫폼 영업이익률', commerce_op_margin: '커머스 영업이익률', music_op_margin: '음악 영업이익률', scripted_op_margin: '영화드라마 영업이익률',
+    media_revenue_proxy_anchor: '미디어플랫폼 매출 프록시(분기)', media_revenue_proxy_beta: '미디어플랫폼 매출 프록시 계수', media_revenue_proxy_intercept: '미디어플랫폼 매출 프록시 절편',
+    media_revenue_proxy_weight: '미디어플랫폼 매출 프록시 비중', scripted_revenue_proxy_anchor: '영화드라마 매출 프록시(분기 관객 수)', scripted_revenue_proxy_beta: '영화드라마 매출 프록시 계수',
+    scripted_revenue_proxy_intercept: '영화드라마 매출 프록시 절편', scripted_revenue_proxy_weight: '영화드라마 매출 프록시 비중',
+    corporate_consolidation_adjustment: '연결조정(영업이익, 분기)', media_revenue: '미디어플랫폼 매출', scripted_revenue: '영화드라마 매출'
+  };
+  [['tv_ad_revenue', 'TV 광고 매출'], ['tving_revenue', '티빙 매출'], ['media_other_revenue', '기타 미디어 매출'], ['scripted_revenue', '영화드라마 매출'], ['music_revenue', '음악 매출'], ['commerce_revenue', '커머스 매출']]
+    .forEach(([k, n]) => { extNames[k + '_volume_growth'] = n + ' 물량 증가율(전년 대비)'; extNames[k + '_price_mix_growth'] = n + ' 가격·믹스 증가율(전년 대비)'; });
+  const extMetricLabel = k => extNames[k] ? esc(extNames[k]) : metricLabel(k);
+  // 레저 연장(roll_forward.source.extension): 연장 연도·분기(분기가 없으면 연도의 네 분기), 라벨·생성일·기준 커버리지 판·FY 행 차이
+  function rfExt(c) {
+    const x = obj(obj(rf(c).source).extension), years = yList(x.years), qs = arr(x.quarters).map(String).filter(k => /^\d{4}Q[1-4]$/.test(k)).sort();
+    return {on: years.length > 0, x, years, quarters: qs.length ? qs : [].concat(...years.map(y => [1, 2, 3, 4].map(i => y + 'Q' + i))), label: str(x.label).trim() || EXT_LABEL};
+  }
+  // SOTP 연장(valuation.range.extension): 연장 연도·12MF 가중·부문
+  // all = 12MF 가중 전부가 연장 연도(range.extension.weight ≥ 1 — 12월 기준일의 FY(Y+1) 100% 등): SOTP 입력이 통째로 모델 레인 연장이라 머리·컨센 괴리 상자가 커버리지 레인을 먼저 부르지 않는다
+  function sotpExt(v) { const x = obj(obj(obj(v).range).extension), years = yList(x.years); return {on: years.length > 0, x, years, label: str(x.label).trim() || EXT_LABEL, all: years.length > 0 && isNum(x.weight) && x.weight >= 1 - 1e-9}; }
+  // 밸류에이션 입력의 연장 연도(엔진 표지 valuation.inputs.extension.years — 옛 이름 valuation.extension_years·valuation.extension.years도 읽음 — 연도별 EPS·현재가 기준 PER·12MF EPS가 모델 레인 연장 값에서 온 해). SOTP 범위는 부문 영업이익 쪽
+  // 표지(range.extension)를 쓰고 그 회사의 EPS 행은 연장이 아니라서 여기서는 비운다. share = 12MF 가중(rule.weights) 중 그 해들의 몫, ys = 그중 가중이 있는 해
+  function valExt(v) {
+    v = obj(v); const years = v.status === 'range' ? [] : yList(Array.isArray(v.extension_years) ? v.extension_years : (obj(obj(v.inputs).extension).years || obj(v.extension).years)), w = obj(obj(v.rule).weights);
+    const parts = [[w.near_fy, w.w_near], [w.far_fy, w.w_far]].filter(p => isNum(p[0]) && isNum(p[1]) && p[1] > 0 && years.indexOf(String(p[0])) >= 0);
+    const share = parts.reduce((a, p) => a + p[1], 0), ys = parts.map(p => String(p[0]));
+    return {on: years.length > 0, years, has: y => years.indexOf(String(y)) >= 0, share, ys,
+      note: share > 0 ? '12MF EPS 중 ' + ys.map(y => y + 'E').join('·') + ' 몫(가중 ' + fmt(share * 100, 1) + '%)은 ' + EXT_LABEL : ''};
+  }
+  const qSpan = ks => ks.length ? (ks[0] === ks[ks.length - 1] ? ks[0] : ks[0] + '~' + ks[ks.length - 1]) : '';
+  // 연장 가정 행 근거(모델 레인이 쓴 한국어 문장)의 화면 글자: 커버리지 레인 행 id('GKL114090:total_hold:2028FY:base' → '레인 2028FY BASE 행',
+  // 'v2-assumption:CJ_ENM:forecast:media_revenue:2028Q1..Q4:base' → '레인 2028Q1~Q4 BASE 행'),
+  // 근거 파일명('kangwon_2q26.pdf') → 그 파일의 출처 제목(모델 레인 연장 근거 자료 중 id가 ':파일명'으로 끝나는 항목, 없으면 id가 그 파일명인 커버리지 레인 출처 — 한국어 제목만, 없으면 '근거 자료'),
+  // 대문자 내부 id → 회사 이름, 지표 키 → 화면 이름(없으면 <code>). 숫자·보도 이름·신뢰도 문장은 그대로
+  function extBasisHtml(b, c, d) {
+    const src = obj(obj(d).sources), ids = Object.keys(src);
+    const fileTitle = f => { const k = ids.filter(i => i.slice(-f.length - 1) === ':' + f && isExtSrc(src[i])).concat(src[f] ? [f] : []).find(i => hasHangul(cleanTitle(obj(src[i]).title, src[i])));
+      return k ? cleanTitle(src[k].title, src[k]).split(': ')[0] : '근거 자료'; };
+    const t = str(b).replace(/\b(?:[a-z][a-z0-9-]*:)?[A-Z][A-Z0-9_]*(?::[a-z][a-z0-9_]*)+:(\d{4}(?:Q[1-4]|H[12]|FY)?)(?:\.\.(Q[1-4]))?(?::(base|bear|bull))?\b/g,
+      (m, p, q2, sc) => '레인 ' + p + (q2 ? '~' + q2 : '') + (sc ? ' ' + scenName(sc) : '') + ' 행')
+      .replace(/\b[a-z0-9][a-z0-9_-]*\.(?:pdf|xlsx?|xlsm|csv|tsv|json|py|hwpx?)\b/g, fileTitle)
+      .replace(/\b[A-Z][A-Z0-9]*_[A-Z0-9_]+\b/g, () => obj(c).name || '회사');
+    return esc(t).replace(/\b([a-z]+(?:_[a-z0-9]+)+)(_\*)?/g, (m, k, star) => star ? (extNames[k + '_*'] ? esc(extNames[k + '_*']) : '<code>' + k + '_*</code>') : (extNames[k] || driverNames[k]) ? esc(extNames[k] || driverNames[k]) : '<code>' + k + '</code>');
+  }
   const howTxt = s => str(s).replace(/\b[a-z][a-z0-9]*(?:_[a-z0-9]+)+\b/g, k => driverNames[k] || k);
   // 세그먼트·부문 항목의 화면 이름(엔진 history.segment_labels가 없는 옛 데이터의 폴백). 근거가 원문 계정명(레저 source_locator)·이 데이터의 부문 라벨(CJ ENM range.segments)·콘텐트리중앙 TP 블록인 것만 확정 이름으로 둔다
   const segmentNames = {
@@ -344,7 +400,8 @@
   }
   function sourceItem(s, c, d) {
     s = obj(s);
-    const pub = s.published_at ? '공표 ' + s.published_at + (s.publication_date_status === 'verified' ? '(확인)' : '') : '공표일 미상' + (pubStatusNames[s.publication_date_status] ? '(' + pubStatusNames[s.publication_date_status] + ')' : '');
+    const pub = s.published_at ? '공표 ' + s.published_at + (s.publication_date_status === 'verified' ? '(확인)' : '') : s.publication_date_status === 'internal_estimate' ? '공표 자료 아님(앙상블 내부 추정)' :
+      '공표일 미상' + (pubStatusNames[s.publication_date_status] ? '(' + pubStatusNames[s.publication_date_status] + ')' : '');
     const meta = [pub, !s.published_at && s.retrieved_at ? '수집 ' + kstDay(s.retrieved_at) : '', srcStatusNames[s.status]].filter(Boolean).join(' · ');
     const u = safeUrl(s.url), label = sourceLabel(s, c, d);
     return (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + ' ↗</a>' : esc(label)) + ' <span class="dim">· ' + esc(meta) + '</span>';
@@ -399,12 +456,14 @@
     const rA = yA ? hv(c, 'revenue', yA) : null, oA = yA ? hv(c, 'operating_profit', yA) : null;
     const eP = yP ? fv(c, yP, 'eps', sc) : null, perP = (isNum(eP) && eP > 0 && isNum(v.price_now)) ? v.price_now / eP : null;
     const perTxt = perP != null ? fmt(perP, 1) + '배' : (isNum(eP) ? '— (EPS ≤ 0)' : '—');
+    // 모델 레인 연장 연도의 타일은 부제 앞에 표지(커버리지 레인 값이 아님)
+    const xy = rfExt(c).years, xm = y => y && xy.indexOf(String(y)) >= 0 ? '모델 레인 연장 · ' : '';
     return '<div class="kpis">' +
       kpi(lA + ' 매출', kU(rA, '십억원'), 'YoY ' + pct(yA ? yoyA(c, 'revenue', yA) : null)) +
       kpi(lA + ' 영업이익', kU(oA, '십억원'), 'OPM ' + lvlR(ratio(oA, rA))) +
-      kpi(lE + ' 매출 · ' + S, kU(yE ? fv(c, yE, 'revenue', sc) : null, '십억원'), 'YoY ' + pct(yE ? fyoy(c, yE, 'revenue', sc) : null)) +
-      kpi(lE + ' 영업이익 · ' + S, kU(yE ? fv(c, yE, 'operating_profit', sc) : null, '십억원'), 'OPM ' + lvlR(yE ? fv(c, yE, 'opm', sc) : null)) +
-      kpi(lP + ' EPS · ' + S, won(eP), '현재가 기준 PER ' + perTxt) +
+      kpi(lE + ' 매출 · ' + S, kU(yE ? fv(c, yE, 'revenue', sc) : null, '십억원'), xm(yE) + 'YoY ' + pct(yE ? fyoy(c, yE, 'revenue', sc) : null)) +
+      kpi(lE + ' 영업이익 · ' + S, kU(yE ? fv(c, yE, 'operating_profit', sc) : null, '십억원'), xm(yE) + 'OPM ' + lvlR(yE ? fv(c, yE, 'opm', sc) : null)) +
+      kpi(lP + ' EPS · ' + S, won(eP), xm(yP) + '현재가 기준 PER ' + perTxt) +
       valKpi(c, st) + '</div>';
   }
   function titleCard(d, c, st) {
@@ -444,13 +503,16 @@
       if (!ye.some(y => isNum(pick(y)))) return '';
       return '<tr class="sub cov-row"><td class="l">· 커버리지 레인 추정(' + scenName(sc) + ')</td>' + dashes(ya.length) + ye.map(y => td(pick(y), 1, 'est')).join('') + '</tr>';
     };
-    const head = '<tr><th>십억원</th>' + ya.map(y => '<th>' + y + 'A</th>').join('') + ye.map(y => '<th class="est">' + y + 'E</th>').join('') + '</tr>';
+    // 모델 레인 연장 연도(roll_forward.source.extension.years)의 E 열은 머리에 표지 — 그 해 FY 행은 커버리지 레인이 아니라 모델 레인 연장 추정이다
+    const E = rfExt(c);
+    const head = '<tr><th>십억원</th>' + ya.map(y => '<th>' + y + 'A</th>').join('') + ye.map(y => '<th class="est">' + y + 'E' + (E.years.indexOf(y) >= 0 ? EXT_MARK : '') + '</th>').join('') + '</tr>';
     const body = row('매출액', 'revenue', 'revenue', 1) + modelRow('revenue') + covRow('revenue') + yoyRow('매출 YoY', 'revenue') +
       row('영업이익', 'operating_profit', 'operating_profit', 1) + modelRow('operating_profit') + covRow('operating_profit') + opmRow() +
       row('지배순이익', 'controlling_net_income', 'controlling_net_income', 1) + modelRow('controlling_net_income') + covRow('controlling_net_income') +
       row('EPS(원, 기본)', 'eps_basic', 'eps', 0);
     const a = obj(rf(c).assumptions), cov = obj(c.coverage_lane);
-    const estTxt = (ye.length ? esc(ye[0] + '–' + ye[ye.length - 1]) + 'E ' : '') + '앙상블 연장(' + scenName(sc) + ', ' + (isCovDriver(c) ? '커버리지 레인 드라이버 추정 채택' : '일반 규칙') + ')';
+    const estTxt = (ye.length ? esc(ye[0] + '–' + ye[ye.length - 1]) + 'E ' : '') + '앙상블 연장(' + scenName(sc) + ', ' + (isCovDriver(c) ? '커버리지 레인 드라이버 추정 채택' : '일반 규칙') + ')' +
+      (E.on ? ' · ' + esc(ySpan(E.years)) + 'E는 ' + esc(E.label) + ' — 커버리지 레인에 그 해 FY 행이 없어 모델 레인이 같은 드라이버 식으로 이어 계산' : '');
     let foot = '<p class="dim small">' + [esc(sourceYearsText(c, ya)), estTxt].filter(Boolean).join(' · ') +
       (showCov && cov.as_of ? ' · 커버리지 레인 추정 기준일 ' + esc(cov.as_of) : '') + (a.eps_basis ? ' · EPS(E): ' + esc(a.eps_basis) : '') + '</p>';
     // EPS 실적은 출처마다 주식수 기준이 다르다: 워크북 내 벤더 EPS는 발행주식, DART 기본 EPS는 가중평균 유통주식
@@ -549,16 +611,18 @@
     const W = chartW(w), H = 230, narrow = W < 480, L = narrow ? 44 : 60, R = 14, T = 14, B = 30, pw = W - L - R;
     let hi = Math.max(...vals) * 1.08; const lo = Math.min(0, ...vals); if (!(hi > lo)) hi = lo + 1;
     const x = i => L + pw * (i + 0.5) / n, bw = pw / n * 0.55, y = v => T + (H - T - B) * (hi - v) / (hi - lo), step = Math.max(1, Math.ceil(n * 44 / pw));
+    const xy = rfExt(c).years;  // 모델 레인 연장 연도: 막대 설명과 범례에 표지(막대 모양은 같다)
     let s = '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="연간 매출 실적과 연장(' + scenName(sc) + '), bear–bull 범위, 십억원. 수치는 연간 표에 있음">';
     for (let j = 0; j <= 4; j++) { const v = lo + (hi - lo) * j / 4, yy = r1(y(v)); s += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + yy + '" y2="' + yy + '"/><text x="' + (L - 6) + '" y="' + r1(yy + 4) + '" text-anchor="end">' + fmt(v, 0) + '</text>'; }
     years.forEach((yr, i) => {
       if (i % step === 0) s += '<text x="' + r1(x(i)) + '" y="' + (H - 10) + '" text-anchor="middle">' + esc((narrow ? yr.slice(2) : yr) + (i < na ? 'A' : 'E')) + '</text>';
       const bar = (v, cls, label) => isNum(v) ? '<rect class="' + cls + '" x="' + r1(x(i) - bw / 2) + '" y="' + r1(Math.min(y(v), y(0))) + '" width="' + r1(bw) + '" height="' + r1(Math.abs(y(0) - y(v))) + '"><title>' + esc(label + ' ' + fx(v, 1)) + '</title></rect>' : '';
-      s += bar(act[i], 'bar', yr + 'A 매출') + bar(sel[i], 'barE', yr + 'E 연장 ' + scenName(sc));
+      s += bar(act[i], 'bar', yr + 'A 매출') + bar(sel[i], 'barE', yr + 'E 연장 ' + scenName(sc) + (xy.indexOf(yr) >= 0 ? ' · 모델 레인 연장 추정' : ''));
       if (isNum(bear[i]) && isNum(bull[i])) { const a = r1(y(bull[i])), b = r1(y(bear[i])), xi = r1(x(i)); s += '<g class="rng"><title>' + esc(yr + 'E bear ' + fx(bear[i], 1) + ' – bull ' + fx(bull[i], 1)) + '</title><line x1="' + xi + '" x2="' + xi + '" y1="' + a + '" y2="' + b + '"/><line x1="' + r1(xi - 7) + '" x2="' + r1(xi + 7) + '" y1="' + a + '" y2="' + a + '"/><line x1="' + r1(xi - 7) + '" x2="' + r1(xi + 7) + '" y1="' + b + '" y2="' + b + '"/></g>'; }
       if (isNum(mod[i])) s += '<circle class="mdl" cx="' + r1(x(i)) + '" cy="' + r1(y(mod[i])) + '" r="5"><title>' + esc(yr + 'E 워크북 원본 매출 추정 ' + fx(mod[i], 1)) + '</title></circle>';
     });
-    s += '</svg><div class="legend"><span><i class="sw bar"></i>실적</span><span><i class="sw barE"></i>앙상블 연장 ' + scenName(sc) + '</span><span><i class="sw rng"></i>bear–bull 범위</span>' + (mod.some(isNum) ? '<span><i class="sw ring"></i>워크북 원본 추정</span>' : '') + '</div>';
+    s += '</svg><div class="legend"><span><i class="sw bar"></i>실적</span><span><i class="sw barE"></i>앙상블 연장 ' + scenName(sc) + '</span><span><i class="sw rng"></i>bear–bull 범위</span>' + (mod.some(isNum) ? '<span><i class="sw ring"></i>워크북 원본 추정</span>' : '') +
+      (xy.some(y => ye.indexOf(y) >= 0) ? '<span>' + esc(ySpan(xy.filter(y => ye.indexOf(y) >= 0))) + 'E = ' + esc(rfExt(c).label) + '</span>' : '') + '</div>';
     return s;
   }
   const chartBox = (kind, svg) => '<div class="chartbox" data-chart="' + kind + '">' + svg + '</div>';
@@ -620,7 +684,8 @@
       notice('Bear/Bull: 성장률 ∓10pp(' + esc(an.rem_label) + ')' + (out ? '·∓5pp(' + esc(out) + ')' : '') + ', 영업이익률 ∓2pp. 확률 보정 없음. 회사 가이던스·컨센서스가 아니라 앙상블 에이전트의 규칙 기반 연장입니다.', 'blue scen-rule');
   }
   function assumptionRowsTable(c, st) {
-    const rows = arr(rf(c).assumption_rows).map(obj).filter(r => r.metric && (r.scenario === st.scenario || SCEN.indexOf(r.scenario) < 0));
+    // 모델 레인 연장 가정 행(lane 'models_extension')은 이 표에 넣지 않는다 — extAssumptionRowsTable이 따로 그린다
+    const rows = arr(rf(c).assumption_rows).map(obj).filter(r => r.metric && !isExtRow(r) && (r.scenario === st.scenario || SCEN.indexOf(r.scenario) < 0));
     if (!rows.length) return '';
     // 같은 지표라도 기간별 근거 문장이 다르면 행을 나눈다(강원랜드 비카지노 성장률: 2026 하반기 리노베이션 · 2027 콘도 · 2028 그랜드호텔)
     const groups = new Map(), order = [];
@@ -638,6 +703,30 @@
     const basisHtml = b => { const t = plainNote(b); return t ? (hasHangul(b) ? esc(t) : '<span class="lang">영문 원문</span><span lang="en">' + esc(t) + '</span>') : ''; };
     const body = list.map(g => '<tr><td class="l">' + metricLabel(g.metric) + '</td><td class="l">' + esc(unitNames[g.unit] || g.unit) + '</td><td class="l">' + g.vals.map(r => esc(r.period) + ' <b>' + unitVal(r.value, r.unit) + '</b>').join(' · ') + '</td><td class="l basis">' + basisHtml(g.basis) + '</td></tr>').join('');
     return '<h3>커버리지 레인 가정 행 (' + scenName(st.scenario) + ')</h3>' + tw('커버리지 레인 가정 행', '<table class="wide"><thead><tr><th class="l">지표</th><th class="l">단위</th><th class="l">기간별 값</th><th class="l">근거(커버리지 레인 원문)</th></tr></thead><tbody>' + body + '</tbody></table>');
+  }
+  // 모델 레인 연장 가정 행(roll_forward.assumption_rows[].lane 'models_extension', SOTP는 range.extension.assumption_rows가 있을 때): 커버리지 레인 가정 행과 나눠
+  // '모델 레인 연장 가정 행'으로. 근거는 모델 레인이 쓴 문장(extBasisHtml로 내부 id·파일명·키만 화면 이름으로), 행이 인용한 근거 자료(source_ids)는 출처 칸에 링크
+  function extAssumptionRowsTable(d, c, st, all) {
+    const rows = arr(all).map(obj).filter(r => r.metric && isExtRow(r) && (r.scenario === st.scenario || SCEN.indexOf(r.scenario) < 0));
+    if (!rows.length) return '';
+    const si = srcIndex(d), groups = new Map(), order = [];
+    rows.forEach(r => {
+      if (order.indexOf(r.metric) < 0) order.push(r.metric);
+      const key = r.metric + '|' + str(r.unit) + '|' + str(r.basis);
+      if (!groups.has(key)) groups.set(key, {metric: r.metric, unit: str(r.unit), basis: str(r.basis), vals: [], src: []});
+      const g = groups.get(key); g.vals.push(r);
+      [r.source_id].concat(arr(r.source_ids)).forEach(id => { const k = si.key(id); if (k && g.src.indexOf(k) < 0 && obj(si.get(k)).status !== 'models_lane_extension') g.src.push(k); });
+    });
+    const list = Array.from(groups.values());
+    list.forEach(g => g.vals.sort((p, q) => String(p.period).localeCompare(String(q.period))));
+    list.sort((a, b) => (order.indexOf(a.metric) - order.indexOf(b.metric)) || String(a.vals[0].period).localeCompare(String(b.vals[0].period)));
+    const anySrc = list.some(g => g.src.length);
+    const srcCell = g => g.src.map(k => { const s = obj(si.get(k)), u = safeUrl(s.url), t = (cleanTitle(s.title, s) || sourceLabel(s, c, d)).split(': ')[0]; return u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(t) + '</a>' : esc(t); }).join('<br>');
+    const body = list.map(g => '<tr><td class="l">' + extMetricLabel(g.metric) + '</td><td class="l">' + esc(unitNames[g.unit] || g.unit) + '</td><td class="l">' + g.vals.map(r => esc(r.period) + ' <b>' + unitVal(r.value, r.unit) + '</b>').join(' · ') +
+      '</td><td class="l basis">' + extBasisHtml(g.basis, c, d) + '</td>' + (anySrc ? '<td class="l basis">' + srcCell(g) + '</td>' : '') + '</tr>').join('');
+    return '<h3>모델 레인 연장 가정 행 (' + scenName(st.scenario) + ')</h3>' + tw('모델 레인 연장 가정 행', '<table class="wide ext-rows"><thead><tr><th class="l">지표</th><th class="l">단위</th><th class="l">기간별 값</th><th class="l">근거(모델 레인 연장 — 커버리지 레인 원문 아님)</th>' +
+      (anySrc ? '<th class="l">근거 자료</th>' : '') + '</tr></thead><tbody>' + body + '</tbody></table>') +
+      '<p class="dim small">' + esc(EXT_LABEL) + '의 가정입니다. "레인 … 행"은 그 값을 이어받은 커버리지 레인 가정 행(같은 기간·시나리오)입니다.</p>';
   }
   // 레저 연장의 실적 누적 구간(roll_forward.source.ytd_through): 첫 연장 연도 Y = 그 분기까지의 DART 누적 + 같은 해 남은 분기의 커버리지 추정.
   // 'YYYYQ2' → 상반기, 'YYYYQ3' → 1~3분기 누적. null이고 anchor가 있으면 Y의 DART 분기 실적이 아직 없음(q = 0, Y 네 분기 모두 커버리지 추정) — 이때 검증은
@@ -660,6 +749,13 @@
   // 엔진 누적 기간 표기(periods.Period.label: YYYYQ1·YYYYH1·YYYYQ3·FYYYYY)의 화면 이름 = Period.ko. 누적 비율(controlling_share_period)의 'YYYYQ3'은
   // 1~3분기 누적이다(단일 3분기가 아님) — 그 밖은 periodLabel(YYYYQ1 = 1분기, YYYYH1 = 상반기, FYYYYY = 연간)
   const cumLabel = p => { const m = str(p).trim().match(/^(\d{4})Q3$/); return m ? m[1] + ' 1~3분기 누적' : periodLabel(p); };
+  // 누적(연초부터) 검증 기간의 화면 이름 — 판 낡음 점검(roll_forward.source.vintage_drift)의 validated_on·period: 'YYYYQn'은 그 분기까지의 누적(Q1 = 1분기, Q2 = 상반기,
+  // Q3 = 1~3분기 누적, Q4 = 연간), 'YYYYH1' 상반기, 'YYYYQ1~Q3'·'YYYYQ1-YYYYQ3' 1~3분기 누적, 'FYYYYY'·'YYYY' 연간. 모르는 표기는 periodLabel(없으면 '')
+  const YTD_KO = {1: '1분기', 2: '상반기', 3: '1~3분기 누적', 4: '연간'};
+  const ytdLabel = p => { const t = str(p).trim(); let m;
+    if ((m = t.match(/^(\d{4})Q([1-4])$/)) || (m = t.match(/^(\d{4})Q1\s*[-–~]\s*(?:\1)?Q([1-4])$/))) return m[1] + ' ' + YTD_KO[+m[2]];
+    if ((m = t.match(/^(\d{4})H1$/))) return m[1] + ' 상반기';
+    return periodLabel(t); };
   // 커버리지 레인 시나리오별 분기 추정(roll_forward.quarterly) — 연간 표의 E 값이 어떤 분기 값에서 왔는지 접어 둔다
   const RFQ_ORDER = ['revenue', 'casino_net_revenue', 'noncasino_revenue', 'hotel_segment_revenue', 'travel_revenue', 'other_revenue', 'operating_costs', 'operating_profit'];
   function quarterlyForecastTable(c, st) {
@@ -672,21 +768,29 @@
     // 커버리지가 DART보다 앞선 분기(roll_forward.source.coverage_ahead): 엔진은 그 분기의 매출·영업이익(만)을 커버리지 레인 판 보고 실적(reported_actual)으로 바꿔 넣는다 —
     // 열 머리와 각주에 밝히고 그 두 행의 칸은 추정 색을 쓰지 않는다(다른 드라이버 행은 커버리지 추정 그대로). 목록이 없으면(엔진이 비어 있을 때 키를 싣지 않음) 표·각주는 이전과 같다
     const act = arr(obj(rf(c).source).coverage_ahead).filter(k => ks.indexOf(k) >= 0), isAct = k => act.indexOf(k) >= 0, LMQ = ['revenue', 'operating_profit'];
+    // 모델 레인 연장 분기(roll_forward.source.extension.quarters, 없으면 연장 연도의 네 분기): 열 머리에 표지, 각주에 커버리지 레인 추정이 아님을 밝힌다(칸은 추정 색 그대로)
+    const E = rfExt(c), xq = E.quarters.filter(k => ks.indexOf(k) >= 0), isX = k => xq.indexOf(k) >= 0;
     const body = ms.map(m => '<tr' + (LMQ.indexOf(m) >= 0 ? ' class="hl"' : '') + '><td class="l">' + rfqLabel(m) + '</td>' + ks.map(k => td(obj(q[m])[k], 1, isAct(k) && LMQ.indexOf(m) >= 0 ? '' : 'est')).join('') + '</tr>').join('');
     // 연간 표 첫 E 연도 = DART 누적 실적(~ytd_through) + 이 표의 같은 해 남은 분기
     const yi = ytdInfo(c), rest = ks.filter(k => k.slice(0, 4) === yi.year && k > yi.key);
     const tail = yi.q === 4 ? 'DART 연간 실적 그대로입니다.' : !yi.q ? 'DART 분기 실적이 아직 없어 ' + (rest.length ? '이 표의 ' + rest.join('·') + '를' : '같은 해 네 분기 추정을') + ' 더한 값입니다.' :
       'DART ' + yi.name + '(~' + yi.key + ') 실적에 ' + (rest.length ? '이 표의 ' + rest.join('·') + '를' : '같은 해 남은 분기 추정을') + ' 더한 값입니다.';
     const actTxt = act.length ? ' ' + act.join('·') + '의 매출·영업이익은 추정이 아니라 커버리지 레인 판 보고 실적입니다(DART 제출 전이라 그 분기 추정 대신 사용 — DART 제출 뒤 다시 확인).' : '';
-    return det(st, 'rfq', false, '커버리지 레인 분기 추정 (' + scenName(st.scenario) + ', 십억원, ' + esc(ks[0]) + '~' + esc(ks[ks.length - 1]) + ')',
-      tw('커버리지 레인 분기 추정', '<table class="wide"><thead><tr><th class="l">지표</th>' + ks.map(k => isAct(k) ? '<th>' + esc(k) + ' (매출·영업이익 실적)</th>' : '<th class="est">' + esc(k) + '</th>').join('') + '</tr></thead><tbody>' + body + '</tbody></table>') +
-      '<p class="dim small">커버리지 레인 드라이버 모델의 분기 추정 그대로입니다(영업비용은 비용 합계를 양수로 표시).' + esc(actTxt) + ' 연간 표의 ' + esc(yi.year) + 'E는 ' + tail + '</p>');
+    const xTxt = xq.length ? ' 단, ' + qSpan(xq) + ' 열(모델 레인 연장)은 커버리지 레인 추정이 아니라 ' + E.label + '입니다 — 커버리지 레인' + (str(E.x.base_vintage_as_of) ? ' ' + str(E.x.base_vintage_as_of) + ' 판' : '') +
+      '의 마지막 해 분기 행에서 같은 드라이버 식으로 이어 계산했고' + (str(E.x.as_of) ? '(' + str(E.x.as_of) + ' 생성)' : '') + ', 가정은 "모델 레인 연장 가정 행"에 있습니다.' : '';
+    return det(st, 'rfq', false, '커버리지 레인 분기 추정 (' + scenName(st.scenario) + ', 십억원, ' + esc(ks[0]) + '~' + esc(ks[ks.length - 1]) + (xq.length ? ' — ' + esc(qSpan(xq)) + ' 모델 레인 연장' : '') + ')',
+      tw('커버리지 레인 분기 추정' + (xq.length ? '·모델 레인 연장' : ''), '<table class="wide"><thead><tr><th class="l">지표</th>' + ks.map(k => isAct(k) ? '<th>' + esc(k) + ' (매출·영업이익 실적)</th>' : '<th class="est">' + esc(k) + (isX(k) ? EXT_MARK : '') + '</th>').join('') + '</tr></thead><tbody>' + body + '</tbody></table>') +
+      '<p class="dim small">커버리지 레인 드라이버 모델의 분기 추정 그대로입니다(영업비용은 비용 합계를 양수로 표시).' + esc(actTxt) + esc(xTxt) + ' 연간 표의 ' + esc(yi.year) + 'E는 ' + tail + '</p>');
   }
   function coverageAssumptions(d, c, st) {
     const r = rf(c), A = rfa(c), a = A.a, src = obj(r.source), br = obj(r.bridge), hc = obj(src.h1_check), rows = rowsAdder(), yi = ytdInfo(c);
     const mode = a.ni_bridge_mode || br.mode;
     rows.add('방식', '', a.method_basis);
     rows.add('커버리지 레인 기준일', esc(a.source_as_of || src.as_of || ''));
+    // 모델 레인 연장(roll_forward.source.extension)이 이 결과에 쓰였을 때만: 연장 연도·생성일·기준 커버리지 판과 라벨
+    const E = rfExt(c), ex = E.x;
+    if (E.on) rows.add('모델 레인 연장', esc(ySpan(E.years) + 'E' + (str(ex.as_of) ? ' · ' + str(ex.as_of) + ' 생성' : '') + (str(ex.base_vintage_as_of) ? ' · 커버리지 레인 ' + str(ex.base_vintage_as_of) + ' 판에서 연장' : '')),
+      E.label + ' — 커버리지 레인에 ' + ySpan(E.years) + ' FY 행이 없어 앙상블 모델 레인이 커버리지 레인의 마지막 해 행에서 같은 드라이버 식으로 이어 계산한 값. 가정은 아래 "모델 레인 연장 가정 행", 출처는 출처 · 계보 카드');
     rows.add('Bear/Bull', '', a.scenario_basis);
     rows.add('지배순이익 브리지', esc(mode === 'ratio' ? '비율 방식' : mode === 'additive' ? '가산 방식' : ''), a.ni_bridge_basis || br.basis);
     if (isNum(a.ni_to_op_ratio)) rows.add('전환비율', fx(a.ni_to_op_ratio, 4));
@@ -704,10 +808,53 @@
     rows.add('순이익 추정', '', a.net_income_basis);
     rows.add('EPS', isNum(a.shares_outstanding) ? '유통주식수 ' + fmt(a.shares_outstanding, 0) + '주' : '', a.eps_basis);
     // 검증 기준은 ytd_through까지의 누적 실적(ytd_check)이다. 상반기 앵커면 h1_check와 같고, 상반기가 아닌 앵커에서 h1_check는 참고값이라 검증 행에 쓰지 않는다
-    const yc = Object.keys(obj(src.ytd_check)).length ? obj(src.ytd_check) : (yi.q === 2 ? hc : {});
-    rows.add(yi.check + ' DART vs 커버리지(십억원)', esc(['revenue', 'operating_profit'].filter(k => yc[k]).map(k => { const x = obj(yc[k]); return metricKo[k] + ' DART ' + fx(x.dart, 1) + ' · 커버리지 ' + fx(x.coverage, 1) + ' (차이 ' + sgn(x.diff, 3) + ')'; }).join(' / ')));
+    let yc = Object.keys(obj(src.ytd_check)).length ? obj(src.ytd_check) : (yi.q === 2 ? hc : {});
+    const LMV = ['revenue', 'operating_profit'], chkTxt = (o, cn) => esc(LMV.filter(k => o[k]).map(k => { const x = obj(o[k]); return metricKo[k] + ' DART ' + fx(x.dart, 1) + ' · ' + cn + ' ' + fx(x.coverage, 1) + ' (차이 ' + sgn(x.diff, 3) + ')'; }).join(' / '));
+    // B1 판 낡음 점검(roll_forward.source.vintage_drift — 고정된 커버리지 판에 FY(Y−1) 실적이 없을 때, EXT 결정 6·D2·D3): 판이 실적을 낸 마지막 기간의 검증은
+    // vintage_drift.check(기간 validated_on), ytd_check는 ytd_through(없으면 FY(Y−1))의 검증 그대로 — B1에서는 판에 그 기간 실적이 없어 비교 상대가 판의 추정이다.
+    // check가 없는 vintage_drift(D3 이전 엔진)는 ytd_check가 validated_on 기간의 검증이라 그 기간으로 적는다. 판 낡음 점검 자체(DART vs 판의 같은 기간 추정)는 따로 한 행
+    // 기간 이름은 엔진의 한국어 이름(validated_on_ko·period_ko = Period.ko)을 먼저, 없으면 기간 표기(ytdLabel). D2 레코드는 FY(Y−1) 판 낡음 점검을 prior_fy에 둔다
+    const vd = obj(src.vintage_drift), vdOn = Object.keys(vd).length > 0, vchk = obj(vd.check), koOr = (ko, p) => hasHangul(ko) ? str(ko).trim() : ytdLabel(p);
+    const vOn = koOr(vd.validated_on_ko, vd.validated_on), vdOld = vdOn && !LMV.some(k => vchk[k]) && !!vOn;
+    // D2A(roll_forward.source.dart_ahead — 판이 DART보다 늦을 뿐, 판이 낡은 B1과 다름): DART만 있는 분기는 DART 실적을 쓰고(ytd_through = DART 마지막 분기, ytd_check 없음)
+    // 판 실적 검증은 둘 다 있는 마지막 기간(base·base_check, 차이 1% 이내), DART만 있는 분기는 판의 같은 분기 base 추정과의 차이 한 행(허용 밖이면 '판 갱신 필요' — 알림, 폴백 아님)
+    const da = obj(src.dart_ahead), daOn = Object.keys(da).length > 0, dbc = obj(da.base_check);
+    if (daOn) yc = {};
+    rows.add((vdOld ? vOn : yi.check) + (vdOn && !vdOld ? ' DART vs 커버리지 판 추정(판에 실적 없음, 십억원)' : ' DART vs 커버리지(십억원)'), chkTxt(yc, vdOn && !vdOld ? '판 추정' : '커버리지'));
+    if (LMV.some(k => vchk[k]) && vOn) rows.add(vOn + ' DART vs 커버리지(십억원)', chkTxt(vchk, '커버리지'),
+      '커버리지 판에 ' + (str(vd.fy || obj(vd.prior_fy).fy) ? 'FY' + str(vd.fy || obj(vd.prior_fy).fy).replace(/^FY/, '') + ' ' : '') + '실적이 없어 판이 실적을 낸 마지막 기간으로 검증(차이 1% 이내)');
+    const tolOf = tol => isNum(tol.revenue) || isNum(tol.operating_profit_of_revenue) ? ' (허용 ' + [isNum(tol.revenue) ? '매출 ±' + fmt(tol.revenue, 2) + '%' : '', isNum(tol.operating_profit_of_revenue) ? '영업이익 매출 대비 ±' + fmt(tol.operating_profit_of_revenue, 2) + '%' : ''].filter(Boolean).join(' · ') + ')' : '';
+    const tolTxt = tolOf(obj(vd.tolerance_pct));
+    // 차이율(%) — 소수 둘째 자리, 한도를 넘은 값이 한도로 보이면 넷째 자리(엔진 노트 rollfwd._pct·알림 auto_update._gap_txt와 같은 E16 규칙)
+    const gapPct = (x, lim) => { if (!isNum(x)) return '—'; if (!(isNum(lim) && Math.abs(x) > lim)) return pct(x, 2);
+      for (const d of [2, 4, 6]) if (Math.round(Math.abs(x) * Math.pow(10, d)) / Math.pow(10, d) > lim) return pct(x, d);  // the stored precision is 6
+      return pct(x, 6); };
+    const num = (o, n) => LMV.some(k => isNum(o[k])) ? n + ' ' + LMV.filter(k => isNum(o[k])).map(k => metricKo[k] + ' ' + fx(o[k], 1)).join(' · ') : '';
+    const driftRow = (o, lab) => { if (!(isNum(o.revenue_gap_pct) || isNum(o.op_gap_pct_of_revenue))) return;
+      rows.add(lab, esc('매출 ' + gapPct(o.revenue_gap_pct, obj(vd.tolerance_pct).revenue) + ' · 영업이익 매출 대비 ' + gapPct(o.op_gap_pct_of_revenue, obj(vd.tolerance_pct).operating_profit_of_revenue) + tolTxt + (o.ok === true ? ' · 통과' : o.ok === false ? ' · 허용 초과' : '')),
+        [[num(obj(o.dart), 'DART'), num(obj(o.vintage_estimate), '판 추정')].filter(Boolean).join(' / '), '차이 = (DART − 판 추정) ÷ 판 추정 매출 — 판이 낡았는지 판 자신의 추정과 DART 실적의 차이로 본다(십억원)'].filter(Boolean).join(' — ')); };
+    const fyLab = f => 'FY' + f + ' DART vs 커버리지 판의 FY' + f + ' 추정(판 낡음 점검)';
+    if (vdOn) {
+      const fy = str(vd.fy).replace(/^FY/, ''), per = koOr(vd.period_ko, vd.period), pf = obj(vd.prior_fy), pfy = str(pf.fy).replace(/^FY/, '');
+      driftRow(vd, per ? per + ' DART vs 커버리지 판의 같은 분기 추정(판 낡음 점검)' : fy ? fyLab(fy) : 'DART vs 커버리지 판 추정(판 낡음 점검)');
+      if (pfy && pfy !== fy) driftRow(pf, fyLab(pfy));
+    }
+    if (daOn) {
+      const bl = koOr(da.base_ko, da.base), dq = arr(da.quarters).map(str).filter(k => /^\d{4}Q[1-4]$/.test(k));
+      if (bl && LMV.some(k => dbc[k])) rows.add(bl + ' DART vs 커버리지(십억원)', chkTxt(dbc, '커버리지'), '판이 실적을 낸 마지막 기간으로 검증(차이 1% 이내)');
+      // 판 종류: 커버리지 판(기본) 또는 모델 레인 연장(Y가 연장 연도일 때 — 커버리지 레인 추정이 아니므로 '판'이라 부르지 않음). 판 추정 매출이 0이면 차이율 없이 그 사실을 적는다
+      const xv = da.vintage === 'extension', who = xv ? '모델 레인 연장' : '커버리지 판', est = xv ? '연장 추정' : '판 추정', upd = xv ? '연장 갱신 필요' : '판 갱신 필요';
+      const gapOn = isNum(da.revenue_gap_pct) || isNum(da.op_gap_pct_of_revenue);
+      if (gapOn || da.ok === false) rows.add((qSpan(dq) || 'DART만 있는 분기') + ' DART vs ' + who + '의 같은 분기 추정(DART만 있는 분기)',
+        esc((gapOn ? '매출 ' + gapPct(da.revenue_gap_pct, obj(da.tolerance_pct).revenue) + ' · 영업이익 매출 대비 ' + gapPct(da.op_gap_pct_of_revenue, obj(da.tolerance_pct).operating_profit_of_revenue) +
+          tolOf(obj(da.tolerance_pct)) + (da.ok === true ? ' · 허용 안' : da.ok === false ? ' · 허용 초과 — ' + upd : '') : '차이율 없음(' + est + ' 매출 0) — ' + upd)),
+        [[num(obj(da.dart), 'DART'), num(obj(da.vintage_estimate), est)].filter(Boolean).join(' / '),
+         '차이 = (DART − ' + est + ') ÷ ' + est + ' 매출. 그 분기는 DART 실적을 그대로 쓰고 남은 분기만 ' + est + ' — ' + (dq.length > 1 ?
+           '판이 DART보다 두 분기 이상 늦어 허용을 넘으면 일반 규칙(그 전에는 이 판을 씀, 십억원)' : '한 분기 늦어 허용을 넘어도 ' + (xv ? '연장' : '판') + ' 갱신 알림만(일반 규칙으로 바꾸지 않음, 십억원)')].filter(Boolean).join(' — '));
+    }
     if (isNum(src.fy_row_max_abs_diff)) rows.add('커버리지 FY 행 − 분기 합 최대 차이', fx(src.fy_row_max_abs_diff, 3) + '십억원');
-    return kv(rows) + assumptionRowsTable(c, st) + quarterlyForecastTable(c, st) + notesBlock(c);
+    if (E.on && isNum(ex.fy_row_max_abs_diff)) rows.add('모델 레인 연장 FY 행 − 분기 합 최대 차이', fx(ex.fy_row_max_abs_diff, 3) + '십억원');
+    return kv(rows) + assumptionRowsTable(c, st) + extAssumptionRowsTable(d, c, st, r.assumption_rows) + quarterlyForecastTable(c, st) + notesBlock(c);
   }
   function assumptionsCard(d, c, st) {
     const r = rf(c);
@@ -764,7 +911,8 @@
     if (!any) h += '<p class="dim small">이 종목은 FnGuide 집계 연간 추정치가 없습니다.</p>';
     else {
       // 컨센서스 열의 접미는 FnGuide 표의 추정 표지(forward[y].estimate)를 따른다 — 실적으로 바뀐 해(estimate false)는 'A'
-      const head = '<tr><th>지표</th>' + ys.map(y => '<th>' + esc(y) + (obj(fw[y]).estimate === false ? 'A' : 'E') + ' 컨센서스</th><th class="est">' + esc(y) + 'E 연장 base</th>').join('') + '</tr>';
+      const xy = rfExt(c).years;  // 연장 base가 모델 레인 연장 추정인 해는 머리에 표지
+      const head = '<tr><th>지표</th>' + ys.map(y => '<th>' + esc(y) + (obj(fw[y]).estimate === false ? 'A' : 'E') + ' 컨센서스</th><th class="est">' + esc(y) + 'E 연장 base' + (xy.indexOf(y) >= 0 ? EXT_MARK : '') + '</th>').join('') + '</tr>';
       const body = mets.map(m => '<tr><td class="l">' + m[1] + '</td>' + ys.map(y => td(obj(fw[y])[m[0]], m[2]) + td(fv(c, y, m[0], 'base'), m[2], 'est')).join('') + '</tr>').join('');
       h += tw('컨센서스와 연장 base 비교', '<table class="wide">' + (fyDate ? '<caption>컨센서스 열: FnGuide 연간 추정 · ' + esc(fyDate) + '</caption>' : '') + '<thead>' + head + '</thead><tbody>' + body + '</tbody></table>');
     }
@@ -800,13 +948,15 @@
     // 연도별 EPS와 현재가 기준 PER의 연도는 엔진의 eps_fy·per_now(12MF 가중의 두 연도와 먼 연도)에서 — 없으면 옛 키(2026E·2027E)
     const ef = epsFy(v), pn = perNow(v), perTxt = isNum(pn.value) ? mult(pn.value, 1) : (isNum(pn.eps) && pn.eps <= 0 ? '— (EPS ≤ 0)' : '—');
     const eps12 = ei.kind === 'eps_12mf' && isNum(ei.raw) ? ei.raw : v.eps_12mf, off = pbrOff(v);
+    // 모델 레인 연장 연도(valuation.extension_years)의 EPS·PER 행은 연도에 표지, 12MF EPS는 그 해 몫(가중)을 밝힌다(EXT 결정 5)
+    const VX = valExt(v), xm = y => VX.has(y) ? EXT_MARK : '';
     return '<h3>입력과 현재 배수 (연장 ' + esc(sc) + ')</h3>' + kv([
       ['현재가', won(v.price_now) + (v.price_as_of ? ' <span class="dim">(' + esc(v.price_as_of) + ')</span>' : ''), isNum(mk.price_krw) && mk.price_krw === v.price_now ? mk.price_basis : ''],
       ['유통주식수', isNum(v.shares_outstanding) ? fmt(v.shares_outstanding, 0) + '주' : '—'],
       ['BPS', won(v.bps), off ? '보고 기준(자본 내 신종자본증권 포함)' : ''],
-      ['12MF EPS(연장 ' + sc + ')', wonE(eps12) + (inp.eps_weights ? ' <span class="dim">' + esc(inp.eps_weights) + '</span>' : '')],
-      [ef.ks.map(y => y + 'E').join(' · ') + ' EPS(연장 ' + sc + ')', ef.ks.map(y => won(ef.eps[y])).join(' · ')],
-      ['현재가 기준 ' + (pn.fy ? pn.fy + 'E ' : '') + 'PER', perTxt],
+      ['12MF EPS(연장 ' + sc + ')', wonE(eps12) + (inp.eps_weights ? ' <span class="dim">' + esc(inp.eps_weights) + '</span>' : '') + (VX.note ? ' <span class="dim">· ' + esc(VX.note) + '</span>' : '')],
+      [ef.ks.map(y => y + 'E' + xm(y)).join(' · ') + ' EPS(연장 ' + sc + ')', ef.ks.map(y => won(ef.eps[y])).join(' · ')],
+      ['현재가 기준 ' + (pn.fy ? pn.fy + 'E ' : '') + 'PER' + (pn.fy ? xm(pn.fy) : ''), perTxt],
       ['현재가 기준 PBR', isNum(v.pbr_now) ? mult(v.pbr_now, 3) : '—', off ? pbrOffWhy(v) : ''],
       ['순차입금', bnTxt(v.net_debt_bn) + (v.net_debt_basis ? ' <span class="dim">(' + esc(v.net_debt_basis) + (isNum(v.gross_debt_bn) ? ' · 차입금·사채 ' + bnTxt(v.gross_debt_bn) : '') + ')</span>' : '')]
     ]);
@@ -842,16 +992,25 @@
   // 옛 계약 문구('연장 base 부문 영업이익 …')면 숫자로 문장을 다시 만든다 — 옛 계약(basis 없음)의 lane_12mf_op_bn은 연결조정을 뺀 부문 합계, 새 계약은 연결 기준.
   // '다른 계열' 안내는 엔진 문구에 이미 있으면 다시 붙이지 않는다. 컨센서스 영업이익의 조회일(consensus_vintage)은 엔진 문구에 없을 때만 덧붙인다
   const OVC_OLD_NAME = /연장 base|연장 이익/;
+  // 모델 레인 연장(range.extension)이 12MF에 들어가면 비교 영업이익의 그 해 몫은 커버리지 레인이 아니다 — 페이지 문장은 두 레인을 함께 부르고,
+  // 엔진 문구가 그 사실을 적지 않았으면 상자 끝에 한 번 덧붙인다
   function opVsConsensus(g, c) {
     const oc = obj(g.op_vs_consensus), lane = oc.lane_12mf_op_bn, cop = oc.consensus_12mf_op_bn, seg = oc.segment_sum_bn, adj = oc.consolidation_adjustment_bn, basis = str(oc.basis).trim();
     const engTxt = str(oc.text).trim(), useEng = !!engTxt && !OVC_OLD_NAME.test(engTxt), vin = str(oc.consensus_vintage || oc.consensus_retrieved_on).trim();
-    const laneName = isNum(adj) && isNum(seg) ? '커버리지 레인 base 연결 영업이익 12MF(부문 합계 ' + fx(seg, 1) + ' · 연결조정 ' + sgn(adj, 1) + ')' : (basis || isNum(seg)) ? '커버리지 레인 base 영업이익 12MF' : '커버리지 레인 base 부문 영업이익 12MF 합계(연결조정 제외)';
+    const X = sotpExt({range: g}), xYrs = X.years.map(y => 'FY' + y + 'E').join('·'), xl = X.on ? '(' + xYrs + '는 모델 레인 연장)' : '';
+    // 12MF 전부가 연장 연도면(12월 기준일 등) 비교 대상은 모델 레인 연장 이익이다 — 커버리지 레인을 앞세우지 않는다(E20)
+    const lane0 = X.all ? '모델 레인 연장(' + xYrs + ')' : '커버리지 레인' + xl;
+    const laneName = isNum(adj) && isNum(seg) ? lane0 + ' base 연결 영업이익 12MF(부문 합계 ' + fx(seg, 1) + ' · 연결조정 ' + sgn(adj, 1) + ')' : (basis || isNum(seg)) ? lane0 + ' base 영업이익 12MF' : lane0 + ' base 부문 영업이익 12MF 합계(연결조정 제외)';
     const numTxt = isNum(lane) && isNum(cop) ? laneName + ' ' + bnTxt(lane) + ' vs FnGuide 컨센서스 12MF 영업이익(같은 가중) ' + bnTxt(cop) + (isNum(oc.gap_pct) ? ' · 차이 ' + pct(oc.gap_pct) : '') : '';
     const body = useEng ? engTxt : numTxt;
     if (!body) return '';
-    const head = basis || (isNum(adj) ? '커버리지 레인 연결 영업이익(부문 영업이익 합계 + 연결조정) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일' : 'SOTP 입력(커버리지 레인 부문 영업이익) vs FnGuide 컨센서스 영업이익');
+    // 12MF 전부 연장: 엔진 기준(basis)이 이미 모델 레인 연장을 앞세우면 그대로, 커버리지 레인을 앞세우면(또는 없으면) 페이지 문구
+    const head = X.all && (!basis || /^(?:SOTP 입력\()?커버리지 레인/.test(basis)) ? (isNum(adj) ? xYrs + ' 모델 레인 연장 연결 영업이익(부문 영업이익 합계 + 연결조정) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일' : 'SOTP 입력(' + xYrs + ' 모델 레인 연장 부문 영업이익) vs FnGuide 컨센서스 영업이익') :
+      basis || (isNum(adj) ? '커버리지 레인 연결 영업이익(부문 영업이익 합계 + 연결조정) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일' : 'SOTP 입력(커버리지 레인 부문 영업이익) vs FnGuide 컨센서스 영업이익');
     return notice('<b>컨센서스 대비 · ' + esc(head) + '</b> ' + esc(body) +
       (vin && body.indexOf(vin) < 0 ? ' <span class="dim">· 컨센서스 영업이익은 FnGuide 연간 추정(FY) 표의 ' + esc(vin) + ' 조회 값입니다(기준일 시점 값 아님).</span>' : '') +
+      // 엔진 문구가 이미 적었으면 한 번만. 12월(12MF 전부 연장)은 머리·이름이 페이지 문구라 본문에 라벨 전체가 없을 때 붙인다
+      (X.on && !(X.all ? body.includes(X.label) : /모델 레인 연장/.test(body + head)) ? ' <span class="dim">· ' + esc(xYrs) + ' 부문 영업이익은 ' + esc(X.label) + '입니다.</span>' : '') +
       (isCovDriver(c) || /다른 계열/.test(body) ? '' : ' <span class="dim">— 컨센서스 카드의 연장 base(앙상블 연장 영업이익)와 다른 계열입니다.</span>'), 'blue');
   }
   function rangeExtras(g, c) {
@@ -860,7 +1019,7 @@
     if (cc.length) h += '<h3>교차값</h3><ul class="plain">' + cc.map(x => '<li>' + esc(x.label || '교차값') + ': ' + (isNum(x.value_bn) ? bnTxt(x.value_bn) : '갱신 불가') + (x.note ? ' — ' + esc(x.note) : '') + '</li>').join('') + '</ul>';
     return h + opVsConsensus(g, c);
   }
-  function rangeBlock(c, st) {
+  function rangeBlock(c, st, d) {
     const v = val(c), g = obj(v.range), scs = obj(g.scenarios), sm = obj(g.summary), w = obj(obj(v.rule).weights);
     const mi = obj(g.minority), mItems = arr(mi.items).map(obj), mv = obj(mi.variants), noDed = obj(mv.no_deduction), book = obj(mv.book_nci);
     const hasMin = !!(g.minority && typeof g.minority === 'object') || SCEN.some(s => isNum(obj(scs[s]).minority_bn));
@@ -878,11 +1037,13 @@
     const be = obj(g.bookends), beKeys = Object.keys(be).sort();
     const beObj = x => (x && typeof x === 'object') ? x : null;
     const beTxt = x => isNum(x) ? won(x) : beObj(x) ? ps(x) : '산출 안 됨';
-    const beRows = beKeys.map(k => subRow('base · ' + esc(k) + ' 이익 기준', dash + dash + dash + minDash + (beObj(be[k]) ? td(be[k].equity_value_bn, 1) : dash) + '<td>' + beTxt(be[k]) + '</td>')).join('');
+    // 모델 레인 연장(range.extension.years) 연도의 이익 북엔드는 행 이름에 표지
+    const X = sotpExt(v), xYear = k => { const m = str(k).match(/(\d{4})/); return !!m && X.years.indexOf(m[1]) >= 0; };
+    const beRows = beKeys.map(k => subRow('base · ' + esc(k) + ' 이익 기준' + (xYear(k) ? ' · 모델 레인 연장' : ''), dash + dash + dash + minDash + (beObj(be[k]) ? td(be[k].equity_value_bn, 1) : dash) + '<td>' + beTxt(be[k]) + '</td>')).join('');
     let h = '<h3>SOTP 범위</h3>' + tw('SOTP 범위 표', '<table class="wide range-summary"><caption>' + esc((g.basis || '') + (g.weights ? ' · ' + g.weights : '')) + ' — 금액 십억원, 주당 값 원</caption><thead><tr><th class="l">구분</th><th>영업가치</th><th>지분가치</th><th>순차입금</th>' + (hasMin ? '<th>비지배지분 차감</th>' : '') + '<th>주주가치</th><th>주당 값</th></tr></thead><tbody>' + scRows + ndRows + minRows + beRows + '</tbody></table>');
     h += '<p class="small">base ' + won(sm.base) + ' · bear ' + (isNum(sm.bear) ? won(sm.bear) : '주주가치 ≤ 0') + ' · bull ' + won(sm.bull) + ' · 순차입금 정의별 base ' + won(sm.base_low) + '~' + won(sm.base_high) +
       (isNum(noDed.per_share) ? ' · 비지배지분 차감 전 ' + won(noDed.per_share) : '') + (isNum(book.per_share) ? ' · 연결 비지배지분 장부가 전액 차감 ' + won(book.per_share) : '') +
-      (beKeys.length ? ' · ' + beKeys.map(k => esc(k) + ' 이익 기준 ' + beTxt(be[k])).join(' · ') : '') + '. 단일 값이 아니라 범위로 읽을 것.' +
+      (beKeys.length ? ' · ' + beKeys.map(k => esc(k) + ' 이익 기준' + (xYear(k) ? EXT_MARK : '') + ' ' + beTxt(be[k])).join(' · ') : '') + '. 단일 값이 아니라 범위로 읽을 것.' +
       (beKeys.some(k => be[k] == null) ? ' <span class="dim">"산출 안 됨"은 엔진이 그 연도 이익 기준 값을 내지 않은 경우입니다(사유 필드 없음).</span>' : '') + '</p>';
     h += rangeExtras(g, c);
     if (hasMin) {
@@ -893,15 +1054,22 @@
       if (mi.note) h += '<p class="dim small">' + esc(mi.note) + '</p>';
     }
     const near = isNum(w.near_fy) ? 'FY' + w.near_fy + 'E' : '근접 연도', far = isNum(w.far_fy) ? 'FY' + w.far_fy + 'E' : '다음 연도';
-    const segs = arr(g.segments).map(obj);
+    const segs = arr(g.segments).map(obj), nearX = isNum(w.near_fy) && X.years.indexOf(String(w.near_fy)) >= 0, farX = isNum(w.far_fy) && X.years.indexOf(String(w.far_fy)) >= 0;
+    // 연장 부문(range.extension.segments — 키 또는 라벨, 없으면 모든 부문)의 화면 이름
+    const xSegs = arr(X.x.segments).map(k => obj(segs.find(x => x.key === k || x.label === k || x.key === obj(k).key)).label || str(obj(k).label) || (typeof k === 'string' ? (segmentNames[k] || '') : '')).filter(Boolean);
+    const xw = isNum(X.x.weight) ? X.x.weight : null, xYrs = X.years.map(y => 'FY' + y + 'E').join('·');
     if (segs.length) {
       const segRows = segs.map(x => '<tr><td class="l">' + esc(x.label) + '</td>' + td(x.op_fy_near, 1) + td(x.op_fy_far, 1) + td(x.op_used, 1) + td(x.noplat, 1) + '<td>' + mult(x.multiple, 2) + '</td>' + td(x.value_bn, 1, '', x.floored_at_zero ? '<sup>0</sup>' : '') +
         '<td class="l basis">' + esc(x.multiple_basis) + (x.substitute_note ? '<br>' + esc(x.substitute_note) : '') + ((isNum(x.workbook_multiple) || isNum(x.workbook_value_bn)) ? '<br>워크북: 배수 ' + esc(mult(x.workbook_multiple, 2)) + ' · 가치 ' + bnTxt(x.workbook_value_bn) : '') + '</td></tr>').join('');
       const base = obj(scs.base);
       // 부문 영업이익은 커버리지 레인 base 시나리오(SOTP 입력)다 — 앙상블 연장('연장 base')과 다른 계열임을 머리에 적는다
-      h += '<h3>부문별 SOTP (base · 커버리지 레인 부문 영업이익(SOTP 입력), 십억원)</h3>' + tw('부문별 SOTP 표', '<table class="wide"><thead><tr><th class="l">부문</th><th>' + near + ' 영업이익</th><th>' + far + ' 영업이익</th><th>12MF 영업이익</th><th>NOPLAT</th><th>배수</th><th>가치</th><th class="l">배수 근거</th></tr></thead><tbody>' + segRows +
+      // 모델 레인 연장(range.extension)이 12MF에 들어가면 머리·그 연도 열·각주에 표지 — 그 해 부문 영업이익은 커버리지 레인이 아니라 모델 레인 연장 추정
+      h += '<h3>부문별 SOTP (base · ' + (X.all ? esc(xYrs) + ' 모델 레인 연장 추정 부문 영업이익' : '커버리지 레인 부문 영업이익' + (X.on ? ' + ' + esc(xYrs) + ' 모델 레인 연장 추정' : '')) + '(SOTP 입력), 십억원)</h3>' + tw('부문별 SOTP 표', '<table class="wide"><thead><tr><th class="l">부문</th><th>' + near + ' 영업이익' + (nearX ? EXT_MARK : '') + '</th><th>' + far + ' 영업이익' + (farX ? EXT_MARK : '') + '</th><th>12MF 영업이익</th><th>NOPLAT</th><th>배수</th><th>가치</th><th class="l">배수 근거</th></tr></thead><tbody>' + segRows +
         '<tr class="tot"><td class="l">영업가치 합계</td><td></td><td></td><td></td><td></td><td></td>' + td(base.operating_value_bn, 1) + '<td></td></tr></tbody></table>') +
-        '<p class="dim small">NOPLAT = 12MF 영업이익 × (1 − ' + lvlR(g.noplat_tax_rate, 0) + '). ' + esc(g.excluded) + (segs.some(x => x.floored_at_zero) ? ' · <sup>0</sup> 음수 가치는 0으로 둠' : '') + '</p>';
+        '<p class="dim small">NOPLAT = 12MF 영업이익 × (1 − ' + lvlR(g.noplat_tax_rate, 0) + '). ' + esc(g.excluded) + (segs.some(x => x.floored_at_zero) ? ' · <sup>0</sup> 음수 가치는 0으로 둠' : '') + '</p>' +
+        (X.on ? '<p class="dim small">' + esc(xYrs + ' 부문 영업이익' + (xSegs.length ? '(' + xSegs.join('·') + ')' : '') + '은 ' + X.label + '입니다 — 커버리지 레인에 그 해 부문 행이 없어 앙상블 모델 레인이 커버리지 레인 마지막 해의 분기 행에서 이어 계산했습니다' +
+          (xw != null ? ' · 12MF 가중 ' + fmt(xw * 100, 1) + '%' : '') + (nearX || farX ? '' : ' · 이 기준일의 12MF 열에는 쓰이지 않음') + '. 출처는 출처 · 계보 카드의 모델 레인 연장 자료.') + '</p>' : '') +
+        extAssumptionRowsTable(d, c, st, X.x.assumption_rows);
       // 피어 12MF EPS의 출처(peers[].eps_basis·eps_basis_label): 'ntm' = FnGuide 월말 12개월 선행 EPS(밸류에이션 기준일 시점), 'fy_blend' = 연간 추정 EPS 가중(FY 표 조회일 값).
       // 엔진이 실은 한국어 이름을 그대로 쓰고, 이름이 없을 때만 페이지 이름. 어느 행에도 없으면(옛 데이터) 열을 그리지 않는다
       const pRows = [].concat(...segs.map(x => arr(x.peers).map(obj).map(p => ({x, p}))));
@@ -1002,9 +1170,9 @@
       if (v.status === 'reference_band') h += bandAltLine(c);
     } else h += '<p>' + badge(statusLabel(v), valTone(v)) + '</p>';
     if (v.status !== 'not_valued_rehabilitation') {
-      if (inp.formula) h += '<p class="formula">' + esc(inp.formula) + '</p>';
+      if (inp.formula) h += '<p class="formula">' + esc(inp.formula) + '</p>' + (valExt(v).note && /12MF EPS/.test(str(inp.formula)) ? '<p class="dim small">' + esc(valExt(v).note) + '입니다.</p>' : '');
       if (v.note) h += '<p class="dim small">' + esc(v.note) + '</p>';
-      if (v.status === 'range') h += rangeBlock(c, st);
+      if (v.status === 'range') h += rangeBlock(c, st, d);
       // 매핑 점검·손익분기는 계약상 콘텐트리중앙(회생 블록 안에서 그림) 몫이지만, 회생이 아닌 회사에 실려도 빠뜨리지 않는다
       h += mappingCheckBlock(v.claims_waterfall) + breakEvenBlock(v);
     }
@@ -1018,10 +1186,12 @@
   }
   function earningsInputHtml(ei, v) {
     ei = obj(ei);
+    const xn = valExt(v).note;  // 12MF EPS 중 모델 레인 연장 연도 몫(valuation.extension_years)
     if (ei.kind === 'eps_12mf') {
       const band = arr(ei.band);
       return '12MF EPS(연장 ' + esc(ei.scenario || v.scenario || 'base') + ') ' + wonE(ei.raw) + ' → 입력 ' + wonE(ei.value) + ' <span class="dim">(' + (ei.clamped === true ? '±30% 윈저라이즈 적용' : ei.clamped === false ? '윈저라이즈 미적용' : '윈저라이즈 여부 미기재') +
-        (band.length === 2 ? ' · 허용 범위 ' + won(band[0]) + '~' + won(band[1]) : '') + (isNum(ei.consensus_12mf_lane) ? ' · 컨센서스 12MF(유통주식 기준) ' + wonE(ei.consensus_12mf_lane) + ' 대비 ' + pct(ei.gap_vs_consensus_pct) : '') + ')</span>';
+        (band.length === 2 ? ' · 허용 범위 ' + won(band[0]) + '~' + won(band[1]) : '') + (isNum(ei.consensus_12mf_lane) ? ' · 컨센서스 12MF(유통주식 기준) ' + wonE(ei.consensus_12mf_lane) + ' 대비 ' + pct(ei.gap_vs_consensus_pct) : '') + ')</span>' +
+        (xn ? ' <span class="dim">· ' + esc(xn) + '</span>' : '');
     }
     if (ei.kind === 'bps') {
       const parts = [esc(ei.basis), isNum(ei.lane_eps_12mf) ? '참고: 연장 12MF EPS ' + wonE(ei.lane_eps_12mf) : '', isNum(ei.lane_roe_12mf) ? '12MF ROE ' + lvlR(ei.lane_roe_12mf) : ''].filter(Boolean);
@@ -1049,7 +1219,7 @@
       ['적용 배수 · 실효 배수', mult(r.target_multiple) + ' · ' + mult(r.effective_multiple) + (inp.multiple_kind ? ' <span class="dim">(' + esc(inp.multiple_kind) + ')</span>' : '')],
       ['걸린 상한', esc(binding)],
       ['이익 입력', earningsInputHtml(r.earnings_input, v)],
-      ['12MF 가중', esc(obj(r.weights).text || '—')],
+      ['12MF 가중', esc(obj(r.weights).text || '—') + (valExt(v).share > 0 ? ' <span class="dim">· ' + esc(valExt(v).ys.map(y => y + 'E').join('·')) + '는 모델 레인 연장</span>' : '')],
       ['N 민감도(최근 N개 유효 연도)', nsTxt]
     ]);
     const years = obj(band.years), yk = Object.keys(years).sort(), off = pbrOff(v);
@@ -1084,7 +1254,7 @@
     return tw('대안 값 표', '<table class="wide"><thead><tr><th class="l">대안</th><th>값</th><th>배수</th><th class="l">근거</th></tr></thead><tbody>' + alts.map(a => {
       const extra = [a.da_basis ? 'D&A ' + a.da_basis : '', a.da_source, a.workbook_note ? '워크북 비고: ' + a.workbook_note : ''].filter(Boolean), nm = noMult(a);
       return '<tr><td class="l">' + esc(a.label) + '</td><td>' + altValue(a, v) + '</td><td>' + (nm ? '—' : mult(a.multiple)) + '</td><td class="l basis">' + esc(a.basis) + (nm && !/배수 없음/.test(str(a.basis)) ? ' <span class="dim">· 배수 없음(컨센서스 목표주가 평균 그대로)</span>' : '') + extra.map(x => '<br>' + rcptHtml(x)).join('') + '</td></tr>';
-    }).join('') + '</tbody></table>') + '<p class="dim small">값은 원 단위입니다. 연장 이익을 쓰는 값은 ' + esc(v.scenario || 'base') + ' 시나리오 기준입니다.</p>';
+    }).join('') + '</tbody></table>') + '<p class="dim small">값은 원 단위입니다. 연장 이익을 쓰는 값은 ' + esc(v.scenario || 'base') + ' 시나리오 기준입니다.' + (valExt(v).note ? ' ' + esc(valExt(v).note) + '입니다.' : '') + '</p>';
   }
   const multipleUnit = {per: '배', pbr: '배', ev_ebitda: '배', sotp: '십억원'};
   function workbookCard(d, c, st) {
@@ -1262,6 +1432,16 @@
     arr(obj(rf(c).source).driver_source_ids).forEach(id => ids.push(id));
     return Array.from(new Set(ids.map(si.key).filter(Boolean)));
   }
+  // 모델 레인 연장 출처: 연장 필드(roll_forward.source.extension · valuation.range.extension의 source_id·source_ids)와 연장 가정 행(lane models_extension)의 source_id·source_ids,
+  // 그리고 다른 경로로 회사 출처 목록에 들어온 연장 상태의 자료. 연장 자체(models_lane_extension)가 먼저, 근거 자료는 라벨 순
+  function extSourceIds(c, si, all) {
+    const ids = [], add = id => { const k = si.key(id); if (k && ids.indexOf(k) < 0 && isExtSrc(si.get(k))) ids.push(k); };
+    [obj(obj(rf(c).source).extension), obj(obj(val(c).range).extension)].forEach(x => [x.source_id].concat(arr(x.source_ids)).forEach(add));
+    arr(rf(c).assumption_rows).concat(arr(obj(obj(val(c).range).extension).assumption_rows)).filter(isExtRow).forEach(r => [obj(r).source_id].concat(arr(obj(r).source_ids)).forEach(add));
+    arr(all).forEach(add);
+    const main = id => obj(si.get(id)).status === 'models_lane_extension' ? 0 : 1, lab = id => str(obj(si.get(id)).title);
+    return ids.sort((a, b) => (main(a) - main(b)) || (lab(a) < lab(b) ? -1 : lab(a) > lab(b) ? 1 : 0));
+  }
   function lineageCard(d, c) {
     const h = hist(c), dp = obj(h.dart_periods), mk = obj(h.market), sh = obj(h.shares), m = model(c), si = srcIndex(d), cn = c.consensus_now ? obj(c.consensus_now) : null, lic = obj(mk.license), hz = obj(m.horizon), op = obj(m.op_row), ex = obj(op.excluded_years), exk = Object.keys(ex).sort();
     const tplM = m.status === 'template', pageUrl = safeUrl(mk.page_url);
@@ -1273,8 +1453,11 @@
     if (isNum(mk.shares_outstanding)) s += '<li>KRX 발행주식수(자기주식 미차감, 참고): ' + fmt(mk.shares_outstanding, 0) + '주' + (mk.shares_as_of ? ' (' + esc(ymd(mk.shares_as_of)) + ')' : '') + (cite ? ' · ' + cite : '') + (safeUrl(lic.url) ? ' · 라이선스 <a href="' + esc(lic.url) + '" target="_blank" rel="noopener noreferrer">' + esc(lic.name || lic.id || '보기') + '</a>' : '') + '</li>';
     const fyD = cn ? fyDateTxt(cn) : '';
     s += '</ul><h3>컨센서스</h3><p class="small">' + (cn ? esc(cn.source || 'FnGuide 집계') + (fyD ? ' · 12개월 선행 기준일 ' : ' · 기준일 ') + esc(cn.as_of || obj(d).consensus_as_of || '—') + (fyD ? ' · ' + esc(fyD) : '') + (obj(d).consensus_retrieved_at ? ' · 수집 ' + esc(kstDay(d.consensus_retrieved_at)) : '') : '컨센서스 자료 없음') + '</p>';
-    const ids = sourceIds(c, si);
+    // 모델 레인 연장 자료(status models_lane_extension·models_extension_evidence)는 커버리지 레인 공식 자료와 나눠 따로 — 연장 자체(공표 자료 아님)를 먼저, 근거 자료는 그 뒤
+    const all = sourceIds(c, si), ids = all.filter(id => !isExtSrc(si.get(id))), xids = extSourceIds(c, si, all);
     if (ids.length) s += '<h3>커버리지 레인 공식 자료</h3><ul class="plain">' + ids.map(id => '<li>' + sourceItem(si.get(id), c, d) + '</li>').join('') + '</ul>';
+    if (xids.length) s += '<h3>앙상블 모델 레인 연장 자료(커버리지 레인 자료 아님)</h3><ul class="plain">' + xids.map(id => '<li>' + sourceItem(si.get(id), c, d) + '</li>').join('') + '</ul>' +
+      '<p class="dim small">연장 자체는 공표 자료가 아니라 앙상블 모델 레인의 추정이며, 근거 자료는 그 가정 행이 인용한 회사 IR·보도·커버리지 레인 수집 자료입니다.</p>';
     // 템플릿 워크북에는 애널리스트 추정이 없으므로 추정 범위·분기 영업이익 대사 문구를 쓰지 않는다
     s += '<h3>워크북</h3><p class="small">' + esc(m.house || obj(d).model_house || '') + (m.analyst ? ' · 워크북 담당자 ' + esc(m.analyst) : (tplM ? ' · 템플릿(애널리스트 추정 미입력)' : '')) + ' · 워크북 기준 ' + esc(m.vintage || obj(d).model_vintage || '—') + (m.model_date ? ' · 워크북 일자 ' + esc(m.model_date) : '') +
       (!tplM && hz.quarterly_through ? ' · 분기 추정 범위 ~' + esc(hz.quarterly_through) : '') + (!tplM && hz.annual_through ? ' · 연간 추정 범위 ~' + esc(hz.annual_through) : '') +
@@ -1291,7 +1474,7 @@
   function renderCompany(data, company, state) {
     const d = obj(data), c = pickCompany(d, company), st = normState(d, Object.assign({}, state, {company: c.id}));
     const qk = quarterKeys(c), v = val(c), tpl = isTemplate(c);
-    const asmTitle = isCovDriver(c) ? '연장 가정 · 커버리지 레인 드라이버 추정' : '연장 가정 · 일반 규칙';
+    const asmTitle = isCovDriver(c) ? '연장 가정 · 커버리지 레인 드라이버 추정' + (rfExt(c).on ? ' · 모델 레인 연장' : '') : '연장 가정 · 일반 규칙';
     // 빈 카드는 그리지 않는다: 애널리스트 8사의 '모델 드라이버'(행 없음), 환산가 미산정 회사의 규칙·대안 카드, 조정 행뿐인 세그먼트 카드.
     // 템플릿의 점수표는 별도 카드 대신 연장 가정 카드 아래 한 줄
     const altHtml = alternativesCard(c), wbCard = card('워크북 TP 시트(' + vintageYM(d) + ') 활성 블록', workbookCard(d, c, st));
