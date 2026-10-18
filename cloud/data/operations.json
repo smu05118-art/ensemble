@@ -5,8 +5,8 @@
     "jobs": {
       "url": "https://boards-api.greenhouse.io/v1/boards/nebius/jobs",
       "health": "ok",
-      "attempted_at": "2026-10-17T07:51:45+00:00",
-      "updated_at": "2026-10-17T07:51:45+00:00",
+      "attempted_at": "2026-10-18T08:05:57+00:00",
+      "updated_at": "2026-10-18T08:05:57+00:00",
       "rows": [
         {
           "id": "5002272101",
@@ -3764,8 +3764,8 @@
     "regions": {
       "url": "https://status.nebius.com/api/v2/components.json",
       "health": "ok",
-      "attempted_at": "2026-10-17T07:51:45+00:00",
-      "updated_at": "2026-10-17T07:51:45+00:00",
+      "attempted_at": "2026-10-18T08:05:57+00:00",
+      "updated_at": "2026-10-18T08:05:57+00:00",
       "rows": [
         {
           "id": "g389s72ckww8",
@@ -3836,8 +3836,8 @@
     "incidents": {
       "url": "https://status.nebius.com/api/v2/incidents.json",
       "health": "ok",
-      "attempted_at": "2026-10-17T07:51:45+00:00",
-      "updated_at": "2026-10-17T07:51:45+00:00",
+      "attempted_at": "2026-10-18T08:05:57+00:00",
+      "updated_at": "2026-10-18T08:05:57+00:00",
       "rows": [
         {
           "id": "81hyz9gkpxm3",
@@ -8159,6 +8159,38 @@
       "at": "2026-10-17T07:51:45+00:00",
       "label": "Nebius SEC filing index",
       "url": "https://data.sec.gov/submissions/CIK0001513845.json"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "0700.HK",
+      "at": "2026-10-18T08:05:57+00:00",
+      "label": "Tencent investor reports",
+      "url": "https://www.tencent.com/en-us/investors/financial-reports.html"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "0728.HK",
+      "at": "2026-10-18T08:05:57+00:00",
+      "label": "China Telecom official site",
+      "url": "https://www.chinatelecom-h.com/"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "0941.HK",
+      "at": "2026-10-18T08:05:57+00:00",
+      "label": "China Mobile official site",
+      "url": "https://www.chinamobileltd.com/"
+    },
+    {
+      "kind": "official_disclosure",
+      "type": "source_changed",
+      "id": "huawei",
+      "at": "2026-10-18T08:05:57+00:00",
+      "label": "Huawei annual report",
+      "url": "https://www.huawei.com/en/annual-report"
     }
   ],
   "snapshots": [
@@ -8389,11 +8421,17 @@
       "jobs": 375,
       "dc_jobs": 58,
       "region_groups": 9
+    },
+    {
+      "date": "2026-10-18",
+      "jobs": 375,
+      "dc_jobs": 58,
+      "region_groups": 9
     }
   ],
-  "attempted_at": "2026-10-17T07:51:45+00:00",
+  "attempted_at": "2026-10-18T08:05:57+00:00",
   "disclosures": {
-    "attempted_at": "2026-10-17T07:51:45+00:00",
+    "attempted_at": "2026-10-18T08:05:57+00:00",
     "providers": {
       "0700.HK": {
         "provider": "0700.HK",
@@ -8401,17 +8439,17 @@
         "url": "https://www.tencent.com/en-us/investors/financial-reports.html",
         "kind": "official_investor_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
-        "content_hash": "38a092ad59a4f115a49aad10918bd436fd8845a2ce84c3ac04d5c17572d288c8",
+        "content_hash": "f85755a74a8056d7795afb22fbd163294ee9f90654da9d13cd849068c92a6040",
         "content_type": "text/html",
         "etag": null,
         "last_modified": null,
-        "bytes": 189029,
+        "bytes": 189028,
         "final_url": "https://www.tencent.com/investors/financial-reports/",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
-        "last_changed_at": "2026-10-17T07:51:45+00:00"
+        "last_good_at": "2026-10-18T08:05:57+00:00",
+        "last_changed_at": "2026-10-18T08:05:57+00:00"
       },
       "0728.HK": {
         "provider": "0728.HK",
@@ -8419,18 +8457,18 @@
         "url": "https://www.chinatelecom-h.com/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
-        "content_hash": "2f299d01d36ddad50262553af722defb2cffaa120bdf0053a5d830c462d61120",
+        "content_hash": "a32b56ea3f3efd28be3c4cf92ca465f013da00c9669c1df9feb84095d50dd866",
         "content_type": "text/html",
         "etag": null,
         "last_modified": "Wed, 14 Oct 2026 01:59:08 GMT",
         "bytes": 59693,
         "final_url": "https://www.chinatelecom-h.com/en/global/home.php",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
-        "last_changed_at": "2026-10-17T07:51:45+00:00"
+        "last_good_at": "2026-10-18T08:05:57+00:00",
+        "last_changed_at": "2026-10-18T08:05:57+00:00"
       },
       "0762.HK": {
         "provider": "0762.HK",
@@ -8438,7 +8476,7 @@
         "url": "https://www.chinaunicom.com.hk/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
@@ -8448,7 +8486,7 @@
         "last_modified": "Tue, 01 Sep 2026 06:41:03 GMT",
         "bytes": 257,
         "final_url": "https://www.chinaunicom.com.hk/",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "0941.HK": {
@@ -8457,18 +8495,18 @@
         "url": "https://www.chinamobileltd.com/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
-        "content_hash": "7782ddf5589de20023548fdaea15623d4645775e9ada2611092c63d447ad5b49",
+        "content_hash": "f11ecc7184d349dea16312d5178935d4630a0b0f7f50891a8e8b4b85ea8fcd4b",
         "content_type": "text/html",
         "etag": null,
         "last_modified": null,
         "bytes": 64406,
         "final_url": "https://www.chinamobileltd.com/en/global/home.php",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
-        "last_changed_at": "2026-10-17T07:51:45+00:00"
+        "last_good_at": "2026-10-18T08:05:57+00:00",
+        "last_changed_at": "2026-10-18T08:05:57+00:00"
       },
       "3896.HK": {
         "provider": "3896.HK",
@@ -8476,7 +8514,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001795589.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8486,7 +8524,7 @@
         "last_modified": null,
         "bytes": 49563,
         "final_url": "https://data.sec.gov/submissions/CIK0001795589.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "9888.HK": {
@@ -8495,7 +8533,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001329099.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8505,7 +8543,7 @@
         "last_modified": null,
         "bytes": 95766,
         "final_url": "https://data.sec.gov/submissions/CIK0001329099.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "9988.HK": {
@@ -8514,7 +8552,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001577552.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "6ac9ebe730af8c2646bb69e3241bff37356192d0afa18c7849e4e605844ff918",
         "content_type": "application/json",
@@ -8523,7 +8561,7 @@
         "bytes": 108883,
         "final_url": "https://data.sec.gov/submissions/CIK0001577552.json",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "AMZN": {
@@ -8532,7 +8570,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001018724.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8542,7 +8580,7 @@
         "last_modified": null,
         "bytes": 159904,
         "final_url": "https://data.sec.gov/submissions/CIK0001018724.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "APLD": {
@@ -8551,7 +8589,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001144879.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "5e431170667e25288603fcf56198f048a1259d56c3c2189c5f1e00b4c6bd6e1c",
         "content_type": "application/json",
@@ -8560,7 +8598,7 @@
         "bytes": 140083,
         "final_url": "https://data.sec.gov/submissions/CIK0001144879.json",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "CIFR": {
@@ -8569,7 +8607,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001819989.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8579,7 +8617,7 @@
         "last_modified": null,
         "bytes": 103067,
         "final_url": "https://data.sec.gov/submissions/CIK0001819989.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-17T07:51:45+00:00"
       },
       "CRUSOE": {
@@ -8588,16 +8626,16 @@
         "url": "https://crusoe.ai/newsroom/",
         "kind": "official_newsroom",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "787e539ebd3ce667227d225c2498cb2e3732a5a539bdb5bcf85104457e25d819",
         "content_type": "text/html",
         "etag": null,
-        "last_modified": "Sat, 17 Oct 2026 04:53:32 GMT",
+        "last_modified": "Fri, 16 Oct 2026 22:53:41 GMT",
         "bytes": 273634,
         "final_url": "https://www.crusoe.ai/resources/newsroom",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-17T07:51:45+00:00"
       },
       "CRWV": {
@@ -8606,7 +8644,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001769628.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8616,7 +8654,7 @@
         "last_modified": null,
         "bytes": 157296,
         "final_url": "https://data.sec.gov/submissions/CIK0001769628.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-15T08:22:47+00:00"
       },
       "GOOGL": {
@@ -8625,7 +8663,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001652044.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8635,7 +8673,7 @@
         "last_modified": null,
         "bytes": 152401,
         "final_url": "https://data.sec.gov/submissions/CIK0001652044.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "IBM": {
@@ -8644,7 +8682,7 @@
         "url": "https://data.sec.gov/submissions/CIK0000051143.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "48b6180e7fe331232ccbdda20c012f61b5b1ed42251c4d74c05c6db2f07326f8",
         "content_type": "application/json",
@@ -8653,7 +8691,7 @@
         "bytes": 166799,
         "final_url": "https://data.sec.gov/submissions/CIK0000051143.json",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-13T17:46:09+00:00"
       },
       "IREN": {
@@ -8662,7 +8700,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001878848.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 308: Permanent Redirect",
@@ -8672,7 +8710,7 @@
         "last_modified": null,
         "bytes": 54068,
         "final_url": "https://data.sec.gov/submissions/CIK0001878848.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "LAMBDA": {
@@ -8681,7 +8719,7 @@
         "url": "https://lambda.ai/blog",
         "kind": "official_newsroom",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "d8ad6106f4a95758e34a0af2732788c1b5afe5ed43ae8dc4b166b13c37a49d47",
         "content_type": "text/html",
@@ -8690,7 +8728,7 @@
         "bytes": 68003,
         "final_url": "https://lambda.ai/blog",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-14T08:47:37+00:00"
       },
       "MSFT": {
@@ -8699,7 +8737,7 @@
         "url": "https://data.sec.gov/submissions/CIK0000789019.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
@@ -8709,7 +8747,7 @@
         "last_modified": null,
         "bytes": 185024,
         "final_url": "https://data.sec.gov/submissions/CIK0000789019.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-16T08:15:20+00:00"
       },
       "NBIS": {
@@ -8718,7 +8756,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001513845.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 404: Not Found",
@@ -8728,7 +8766,7 @@
         "last_modified": null,
         "bytes": 82544,
         "final_url": "https://data.sec.gov/submissions/CIK0001513845.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-17T07:51:45+00:00"
       },
       "ORCL": {
@@ -8737,7 +8775,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001341439.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -8747,7 +8785,7 @@
         "last_modified": null,
         "bytes": 158606,
         "final_url": "https://data.sec.gov/submissions/CIK0001341439.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "WULF": {
@@ -8756,7 +8794,7 @@
         "url": "https://data.sec.gov/submissions/CIK0001083301.json",
         "kind": "sec_filing_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "health": "ok",
         "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
@@ -8766,7 +8804,7 @@
         "last_modified": null,
         "bytes": 165092,
         "final_url": "https://data.sec.gov/submissions/CIK0001083301.json",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-13T17:43:07+00:00"
       },
       "huawei": {
@@ -8775,17 +8813,17 @@
         "url": "https://www.huawei.com/en/annual-report",
         "kind": "official_annual_report_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
-        "content_hash": "1f75eabf29f908d36c00b548090b50e5e4d03f13242b69df3cff8f7f429923c6",
+        "content_hash": "67165c377ad29ba831ca1488a1ac7aa85a82d09d1c574d29ea31787894f83f11",
         "content_type": "text/html",
         "etag": null,
         "last_modified": null,
         "bytes": 118899,
         "final_url": "https://www.huawei.com/en/annual-report",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
-        "last_changed_at": "2026-10-15T08:22:47+00:00"
+        "last_good_at": "2026-10-18T08:05:57+00:00",
+        "last_changed_at": "2026-10-18T08:05:57+00:00"
       },
       "ucloud": {
         "provider": "ucloud",
@@ -8793,7 +8831,7 @@
         "url": "https://www.ucloud.cn/",
         "kind": "official_company_index",
         "automated": true,
-        "last_checked_at": "2026-10-17T07:51:45+00:00",
+        "last_checked_at": "2026-10-18T08:05:57+00:00",
         "first_seen_at": "2026-10-13T17:40:28+00:00",
         "content_hash": "e4565179a0320ed68871b047f75b24c25932e160cc7fe6ff326e2ee6eeec8c28",
         "content_type": "text/html",
@@ -8802,7 +8840,7 @@
         "bytes": 134070,
         "final_url": "https://www.ucloud.cn/",
         "health": "ok",
-        "last_good_at": "2026-10-17T07:51:45+00:00",
+        "last_good_at": "2026-10-18T08:05:57+00:00",
         "last_changed_at": "2026-10-13T17:40:28+00:00"
       }
     }
