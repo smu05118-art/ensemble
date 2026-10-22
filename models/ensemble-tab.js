@@ -285,10 +285,13 @@
     const on = !!(raw && typeof raw === 'object' && !Array.isArray(raw)), an0 = on ? raw : LEGACY_ANCHOR;
     const ye = yearsE(c), yr = parseInt(an0.year, 10), Y = yr > 0 ? yr : (ye.length ? +ye[0] : LEGACY_ANCHOR.year), kind = str(an0.kind) || 'H1';
     const ys = arr(an0.years).map(String).filter(y => /^\d{4}$/.test(y));
-    // 기준 반기 이름: 상반기 앵커 = Y 상반기(누적 실적)·Y−1 하반기(직전 반기), 사업보고서 앵커 = 누적 실적 없음·Y−1 하반기, 남은 기간 = Y 하반기 또는 Y 연간
+    // 기준 반기 이름: 상반기 앵커 = Y 상반기(누적 실적)·Y−1 하반기(직전 반기), 사업보고서 앵커 = 누적 실적 없음·Y−1 하반기, 남은 기간 = Y 하반기 또는 Y 연간.
+    // 3분기보고서 앵커(Q3, 2026-10-22) = Y 1~3분기 누적(누적 실적)·Y−1 4분기(남은 분기의 기준값), 남은 기간 = Y 4분기 — 성장률·이익률 입력은 상반기 앵커와 같은 Y 상반기·Y−1 하반기
+    const q3a = kind === 'Q3';
     const an = {on, year: Y, kind, years: ys.length ? ys : (on ? ye : LEGACY_ANCHOR.years.slice()),
-      ytd_label: str(an0.ytd_label) || (kind === 'H1' ? Y + ' 상반기' : ''), prior_label: str(an0.prior_label) || (Y - 1) + ' 하반기', prior_h1_label: (Y - 1) + ' 상반기',
-      rem_label: kind === 'FY' ? Y + 'E' : Y + ' 하반기', ytd_through: str(an0.ytd_through)};
+      ytd_label: str(an0.ytd_label) || (kind === 'H1' ? Y + ' 상반기' : q3a ? Y + ' 1~3분기 누적' : ''), prior_label: str(an0.prior_label) || (Y - 1) + ' 하반기', prior_h1_label: (Y - 1) + ' 상반기',
+      rem_label: kind === 'FY' ? Y + 'E' : q3a ? Y + ' 4분기' : Y + ' 하반기', ytd_through: str(an0.ytd_through),
+      h1_label: q3a ? str(an0.h1_label) || Y + ' 상반기' : '', prior_q4_label: q3a ? str(an0.prior_q4_label) || (Y - 1) + ' 4분기' : ''};
     return {a, an, get: k => on && has(k) ? a[k] : (LEGACY_KEYS[k] && has(LEGACY_KEYS[k]) ? a[LEGACY_KEYS[k]] : a[k])};
   }
   // 현재가 기준 PER의 연도·값과 연도별 EPS(valuation.per_now·eps_fy). 두 필드가 없는 옛 데이터는 연도 키(eps_2026e·eps_2027e·per_now_2027e)를 읽는다.
@@ -528,11 +531,14 @@
   }
   // 상반기 앵커에서만: 첫 연장 연도 = 상반기 IFRS 실적 + 하반기 추정이라 상반기 일회성 항목이 합계에 들어간다(사업보고서 앵커는 실적을 더하지 않아 해당 없음)
   function oneOffNotice(c, st) {
-    const A = rfa(c), an = A.an, oo = A.get('one_off_ytd_op'), y0 = yearsE(c)[0], y1 = an.years[1];
-    if (!isNum(oo) || Math.abs(oo) < 0.05 || !an.ytd_label) return '';
-    const op = obj(A.get('ytd_actual')).operating_profit, e = fv(c, y0, 'eps', st.scenario), eb = fv(c, y0, 'eps', 'base');
-    return notice('<b>' + esc(y0) + 'E EPS ' + won(e) + ' (' + scenName(st.scenario) + ')' + (st.scenario !== 'base' ? ' · base ' + won(eb) : '') + '</b> — ' + esc(an.ytd_label) + ' IFRS 영업이익 ' + fx(op, 1) + '십억원은 회사 공시 조정 영업이익보다 ' + fx(Math.abs(oo), 1) + '십억원 ' + (oo > 0 ? '낮습니다' : '높습니다') +
-      '(일회성 항목). ' + esc(y0) + 'E 합계 영업이익·지배순이익·EPS는 IFRS 상반기 실적을 그대로 더한 값이라 이 항목이 포함되어 있고, 하반기' + (y1 ? '·' + esc(y1) + 'E' : '') + ' 이익률은 조정 영업이익률(' + esc(an.ytd_label) + ' ' + lvlR(A.get('opm_ytd_normalised')) + ') 기준입니다.', 'oneoff');
+    // 3분기보고서 앵커: 일회성은 성장률·이익률 입력인 Y 상반기의 것(one_off_h1_op) — 1~3분기 IFRS 누적 실적에 들어 있다
+    const A = rfa(c), an = A.an, q3a = an.kind === 'Q3', oo = q3a ? A.a.one_off_h1_op : A.get('one_off_ytd_op'), y0 = yearsE(c)[0], y1 = an.years[1];
+    const lab = q3a ? an.h1_label : an.ytd_label;
+    if (!isNum(oo) || Math.abs(oo) < 0.05 || !lab) return '';
+    const op = obj(q3a ? A.a.h1_actual : A.get('ytd_actual')).operating_profit, e = fv(c, y0, 'eps', st.scenario), eb = fv(c, y0, 'eps', 'base');
+    return notice('<b>' + esc(y0) + 'E EPS ' + won(e) + ' (' + scenName(st.scenario) + ')' + (st.scenario !== 'base' ? ' · base ' + won(eb) : '') + '</b> — ' + esc(lab) + ' IFRS 영업이익 ' + fx(op, 1) + '십억원은 회사 공시 조정 영업이익보다 ' + fx(Math.abs(oo), 1) + '십억원 ' + (oo > 0 ? '낮습니다' : '높습니다') +
+      '(일회성 항목). ' + esc(y0) + 'E 합계 영업이익·지배순이익·EPS는 IFRS ' + (q3a ? '1~3분기 누적' : '상반기') + ' 실적을 그대로 더한 값이라 이 항목이 포함되어 있고, ' + (q3a ? '4분기' : '하반기') + (y1 ? '·' + esc(y1) + 'E' : '') +
+      ' 이익률은 조정 영업이익률(' + esc(lab) + ' ' + lvlR(q3a ? A.a.opm_h1_normalised : A.get('opm_ytd_normalised')) + ') 기준입니다.', 'oneoff');
   }
 
   // ── 분기 ──
@@ -649,7 +655,9 @@
   function ruleAssumptions(d, c) {
     const A = rfa(c), a = A.a, g = A.get, an = A.an, Y = an.year, ys = an.years, fy = an.kind === 'FY', rows = rowsAdder();
     const seas = obj(a.h2_h1_seasonality), sk = Object.keys(seas).sort(), obs = obj(a.ni_ratio_observed), ok = Object.keys(obs).sort(), yE = i => ys[i] ? ys[i] + 'E' : '';
+    const q3a = an.kind === 'Q3';  // 3분기보고서 앵커: 누적 실적은 1~3분기, 성장률·이익률 입력은 상반기 앵커와 같은 Y 상반기·Y−1 하반기
     if (an.ytd_label) rows.add(an.ytd_label + ' 매출 YoY(실적)', pctR(g('ytd_yoy')));
+    if (q3a) rows.add(an.h1_label + ' 매출 YoY(실적, 성장률 입력)', pctR(a.h1_yoy));
     if (fy) { rows.add((Y - 1) + 'A 매출 YoY(실적)', pctR(a.fy_yoy_prior)); rows.add(an.prior_label + ' 매출 YoY(실적)', pctR(a.h2_yoy_prior)); }
     rows.add(an.rem_label + ' 성장률', pctR(g('g_remaining')), g('g_remaining_basis'));
     if (sk.length) rows.add('H2/H1 매출 계절비', esc(sk.map(k => k + ' ' + fx(seas[k], 3)).join(' · ')) + ' → 중앙값 ' + fx(a.h2_h1_seasonality_median, 3) + ' · 계절비 기준 ' + pctR(g('g_remaining_seasonal')));
@@ -659,8 +667,8 @@
     if (ys.length > 3) rows.add(ySpan(ys.slice(3)) + 'E 성장률', '', a.g_later_basis);
     rows.add(an.rem_label + ' 영업이익률', lvlR(g('opm_remaining')), g('opm_remaining_basis'));
     // 일회성 조정: 상반기 앵커 = Y 상반기 · Y−1 하반기, 사업보고서 앵커 = Y−1 상반기 · Y−1 하반기(Y−1 상반기 이익률은 엔진이 따로 실으면 그 값)
-    const ooA = fy ? a.one_off_prior_h1_op : g('one_off_ytd_op'), ooB = g('one_off_prior_half_op'), labA = fy ? an.prior_h1_label : an.ytd_label;
-    const opmA = fy && isNum(a.opm_prior_h1_normalised) ? a.opm_prior_h1_normalised : g('opm_ytd_normalised');
+    const ooA = fy ? a.one_off_prior_h1_op : q3a ? a.one_off_h1_op : g('one_off_ytd_op'), ooB = g('one_off_prior_half_op'), labA = fy ? an.prior_h1_label : q3a ? an.h1_label : an.ytd_label;
+    const opmA = fy && isNum(a.opm_prior_h1_normalised) ? a.opm_prior_h1_normalised : q3a ? a.opm_h1_normalised : g('opm_ytd_normalised');
     if ([ooA, ooB].some(x => isNum(x) && Math.abs(x) >= 0.05)) rows.add('일회성 조정(조정 − IFRS 영업이익, 십억원)', labA + ' ' + oneOffTxt(ooA) + ' · ' + an.prior_label + ' ' + oneOffTxt(ooB),
       '반기 영업이익률(일회성 제외): ' + labA + ' ' + oneOffOpm(opmA, ooA) + ' · ' + an.prior_label + ' ' + oneOffOpm(g('opm_prior_half_normalised'), ooB));
     const tgtY = ySpan(ys.slice(2));
@@ -677,6 +685,7 @@
     // 실적 행은 값이 있을 때만(사업보고서 앵커에는 누적 실적이 없다)
     const tri = (label, o) => { const t = triple(o); if (label && t) rows.add(label + ' 실적', t, TRIPLE_BASIS); };
     tri(an.ytd_label, g('ytd_actual'));
+    if (q3a) { tri(an.h1_label, a.h1_actual); tri(an.prior_q4_label, a.prior_q4_actual); }
     if (fy) tri(an.prior_h1_label, a.prior_h1_actual);
     tri(an.prior_label, g('prior_half_actual'));
     const out = shortSpan(ys.slice(1));
