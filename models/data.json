@@ -3,7 +3,7 @@
  "as_of": "2026-10-22",
  "model_vintage": "2024-03-01",
  "model_house": "교보증권",
- "market_retrieved_at": "2026-10-21T11:25:06.556398+00:00",
+ "market_retrieved_at": "2026-10-22T11:25:11.127993+00:00",
  "dart_retrieved_at": "2026-09-30T08:36:44.223299+00:00",
  "consensus_retrieved_at": "2026-10-07T17:48:51.488905+00:00",
  "consensus_as_of": "2026-09-30",
@@ -876,8 +876,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 182900.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 177200.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 42389265.0,
     "net_debt_bn": -1031.9,
     "gross_debt_bn": 763.0,
@@ -890,14 +890,14 @@
      "2027": 4904
     },
     "eps_12mf": 3672,
-    "per_now_2027e": 37.3,
+    "per_now_2027e": 36.1,
     "per_now": {
      "fy": "2027",
-     "value": 37.3
+     "value": 36.1
     },
-    "pbr_now": 2.259,
+    "pbr_now": 2.189,
     "updated_target_price": 248900,
-    "upside_pct": 36.1,
+    "upside_pct": 40.5,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -1076,8 +1076,8 @@
      {
       "key": "market",
       "label": "현재가(현재 PBR)",
-      "value": 182900.0,
-      "multiple": 2.259,
+      "value": 177200.0,
+      "multiple": 2.189,
       "basis": "현재가 ÷ BPS"
      },
      {
@@ -4596,12 +4596,12 @@
      }
     },
     "market": {
-     "price_krw": 182900.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 177200.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 43106836,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/352820",
@@ -4818,8 +4818,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 85900.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 85100.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 22894690.0,
     "net_debt_bn": -571.9,
     "gross_debt_bn": 6.3,
@@ -4832,14 +4832,14 @@
      "2027": 7687
     },
     "eps_12mf": 7366,
-    "per_now_2027e": 11.2,
+    "per_now_2027e": 11.1,
     "per_now": {
      "fy": "2027",
-     "value": 11.2
+     "value": 11.1
     },
-    "pbr_now": 1.906,
+    "pbr_now": 1.888,
     "updated_target_price": 112700,
-    "upside_pct": 31.2,
+    "upside_pct": 32.4,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -5041,8 +5041,8 @@
      {
       "key": "market",
       "label": "현재가(현재 12MF PER)",
-      "value": 85900.0,
-      "multiple": 11.662,
+      "value": 85100.0,
+      "multiple": 11.553,
       "basis": "현재가 ÷ EPS 입력값"
      },
      {
@@ -7402,12 +7402,12 @@
      }
     },
     "market": {
-     "price_krw": 85900.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 85100.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 22894690,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/041510",
@@ -7623,8 +7623,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 39700.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 38100.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 33133059.0,
     "net_debt_bn": -376.6,
     "gross_debt_bn": 0.0,
@@ -7637,14 +7637,14 @@
      "2027": 4590
     },
     "eps_12mf": 4337,
-    "per_now_2027e": 8.6,
+    "per_now_2027e": 8.3,
     "per_now": {
      "fy": "2027",
-     "value": 8.6
+     "value": 8.3
     },
-    "pbr_now": 2.028,
+    "pbr_now": 1.946,
     "updated_target_price": 73100,
-    "upside_pct": 84.1,
+    "upside_pct": 91.9,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -7848,8 +7848,8 @@
      {
       "key": "market",
       "label": "현재가(현재 12MF PER)",
-      "value": 39700.0,
-      "multiple": 9.155,
+      "value": 38100.0,
+      "multiple": 8.786,
       "basis": "현재가 ÷ EPS 입력값"
      },
      {
@@ -7868,7 +7868,7 @@
     "note": "PER 16.866배 × 12MF EPS 4,336.5원 = 73,100원. 자기 밴드 H 16.866배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 17.028배. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": [
-     "현재가 대비 +84.1%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 16.87배(자기 밴드 H 16.87배, 스트리트 17.03배 중 낮은 값) · 연장 12MF EPS 4,336.5원 — 컨센서스(유통주식 기준) 3,854원 대비 +13% · 컨센서스 EPS 적용 시 65,000원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
+     "현재가 대비 +91.9%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 16.87배(자기 밴드 H 16.87배, 스트리트 17.03배 중 낮은 값) · 연장 12MF EPS 4,336.5원 — 컨센서스(유통주식 기준) 3,854원 대비 +13% · 컨센서스 EPS 적용 시 65,000원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
     ]
    },
    "consensus_now": {
@@ -11052,12 +11052,12 @@
      }
     },
     "market": {
-     "price_krw": 39700.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 38100.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 35532492,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/035900",
@@ -11273,8 +11273,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 42400.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 41450.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 18546878.0,
     "net_debt_bn": -251.8,
     "gross_debt_bn": 6.8,
@@ -11287,14 +11287,14 @@
      "2027": 3626
     },
     "eps_12mf": 3274,
-    "per_now_2027e": 11.7,
+    "per_now_2027e": 11.4,
     "per_now": {
      "fy": "2027",
-     "value": 11.7
+     "value": 11.4
     },
-    "pbr_now": 1.511,
+    "pbr_now": 1.477,
     "updated_target_price": 73300,
-    "upside_pct": 72.9,
+    "upside_pct": 76.8,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -11498,8 +11498,8 @@
      {
       "key": "market",
       "label": "현재가(현재 12MF PER)",
-      "value": 42400.0,
-      "multiple": 12.95,
+      "value": 41450.0,
+      "multiple": 12.659,
       "basis": "현재가 ÷ EPS 입력값"
      },
      {
@@ -11518,7 +11518,7 @@
     "note": "PER 22.390배 × 12MF EPS 3,274.25원 = 73,300원. 자기 밴드 H 38.913배(최근 유효 2024·2025·2026년 연평균 배수의 중앙값), 스트리트 상한 22.390배 · 스트리트 상한 적용. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": [
-     "현재가 대비 +72.9%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 22.39배(자기 밴드 H 38.91배, 스트리트 22.39배 중 낮은 값) · 연장 12MF EPS 3,274.25원 — 컨센서스(유통주식 기준) 2,705원 대비 +21% · 컨센서스 EPS 적용 시 60,600원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
+     "현재가 대비 +76.8%: 자기 밴드·스트리트 상한·이익 입력 제한으로 배수 재도출 후의 값이다. 적용 PER 22.39배(자기 밴드 H 38.91배, 스트리트 22.39배 중 낮은 값) · 연장 12MF EPS 3,274.25원 — 컨센서스(유통주식 기준) 2,705원 대비 +21% · 컨센서스 EPS 적용 시 60,600원. 밴드가 과거 고평가 국면을 반영했을 수 있으니 참고값으로만 읽을 것."
     ]
    },
    "consensus_now": {
@@ -14271,12 +14271,12 @@
      }
     },
     "market": {
-     "price_krw": 42400.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 41450.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 18691049,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/122870",
@@ -14491,8 +14491,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 39600.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 40500.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 20766908.0,
     "net_debt_bn": 1532.0,
     "gross_debt_bn": 2561.9,
@@ -14505,14 +14505,14 @@
      "2027": 2218
     },
     "eps_12mf": 2284,
-    "per_now_2027e": 17.9,
+    "per_now_2027e": 18.3,
     "per_now": {
      "fy": "2027",
-     "value": 17.9
+     "value": 18.3
     },
-    "pbr_now": 0.286,
-    "updated_target_price": 15200,
-    "upside_pct": -61.6,
+    "pbr_now": 0.293,
+    "updated_target_price": 15100,
+    "upside_pct": -62.7,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -14529,11 +14529,11 @@
       "lease_note": "재무상태표에 리스부채 별도 행 없음(기타금융부채 등에 포함 가능) — 리스 포함 순차입금 미산출"
      },
      "operating_value_bn": 1808.7,
-     "stake_value_bn": 360.1,
+     "stake_value_bn": 359.2,
      "net_debt_bn": 1532.0,
-     "minority_bn": 321.6,
-     "equity_value_bn": 315.3,
-     "formula": "영업가치 1,808.7 + 지분가치 360.1 − 순차입금 1,532.0 − 상장 자회사 비지배지분 321.6 = 주주가치 315.3십억원 ÷ 20,766,908주"
+     "minority_bn": 322.9,
+     "equity_value_bn": 312.9,
+     "formula": "영업가치 1,808.7 + 지분가치 359.2 − 순차입금 1,532.0 − 상장 자회사 비지배지분 322.9 = 주주가치 312.9십억원 ÷ 20,766,908주"
     },
     "rule": {
      "method_original": "sotp",
@@ -14696,16 +14696,16 @@
      {
       "key": "sotp_nd_ex_other_financial",
       "label": "SOTP base · 순차입금 기타유동금융자산을 현금성으로 보지 않음",
-      "value": 3900,
+      "value": 3700,
       "multiple": null,
       "basis": "순차입금 1,767.2십억원"
      },
      {
       "key": "sotp_no_deduction",
       "label": "SOTP base · 비지배지분 차감 전(참고)",
-      "value": 30700,
+      "value": 30600,
       "multiple": null,
-      "basis": "상장 자회사 비지배지분 321.6십억원 미차감"
+      "basis": "상장 자회사 비지배지분 322.9십억원 미차감"
      },
      {
       "key": "sotp_book_nci",
@@ -14719,12 +14719,12 @@
       "label": "SOTP base · FY2026E 이익 기준",
       "value": null,
       "multiple": null,
-      "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용 · 주주가치 -337.4십억원 ≤ 0"
+      "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용 · 주주가치 -339.8십억원 ≤ 0"
      },
      {
       "key": "sotp_FY2027E",
       "label": "SOTP base · FY2027E 이익 기준",
-      "value": 25700,
+      "value": 25500,
       "multiple": null,
       "basis": "부문 영업이익을 해당 연도 값으로 바꿔 같은 배수 적용"
      }
@@ -14736,12 +14736,12 @@
      "비지배지분은 상장 자회사(스튜디오드래곤)만 시가로 차감 — 비상장 자회사 몫은 빼지 않아 base가 높게 나올 수 있음(연결 장부가 전액 차감 시 주당 값 없음)"
     ],
     "status": "range",
-    "note": "CJ ENM 부문별 SOTP(12MF, 상장 자회사 비지배지분 시가 차감). base 15,200원 · bear 주주가치 ≤ 0(순차입금·상장 자회사 비지배지분이 영업가치+지분가치를 넘음) · bull 80,500원 · 순차입금 정의별 3,900원~15,200원 · 비지배지분 차감 전 30,700원 · 연결 비지배지분 장부가 전액 차감 시 주당 값 없음. 단일 값이 아니라 범위로 읽을 것. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
+    "note": "CJ ENM 부문별 SOTP(12MF, 상장 자회사 비지배지분 시가 차감). base 15,100원 · bear 주주가치 ≤ 0(순차입금·상장 자회사 비지배지분이 영업가치+지분가치를 넘음) · bull 80,400원 · 순차입금 정의별 3,700원~15,100원 · 비지배지분 차감 전 30,600원 · 연결 비지배지분 장부가 전액 차감 시 주당 값 없음. 단일 값이 아니라 범위로 읽을 것. 규칙 기반 평균회귀 참고값 · 교보증권의 목표주가가 아님.",
     "flags": [],
     "warnings": [
      "리스부채가 재무상태표 별도 행으로 없어(기타금융부채 등에 포함 추정) 리스 포함 순차입금 변형을 산출하지 않음",
      "bear 시나리오: 순차입금·상장 자회사 비지배지분이 영업가치+지분가치를 넘어 주주가치 ≤ 0",
-     "현재가 대비 -61.6%: SOTP base 값이다 — bear·bull·순차입금 정의별 범위와 함께 읽을 것."
+     "현재가 대비 -62.7%: SOTP base 값이다 — bear·bull·순차입금 정의별 범위와 함께 읽을 것."
     ],
     "range": {
      "basis": "12MF",
@@ -14749,10 +14749,10 @@
      "scenarios": {
       "bear": {
        "operating_value_bn": 533.0,
-       "stake_value_bn": 360.1,
+       "stake_value_bn": 359.2,
        "net_debt_bn": 1532.0,
-       "minority_bn": 321.6,
-       "equity_value_bn": -960.4,
+       "minority_bn": 322.9,
+       "equity_value_bn": -962.7,
        "per_share": null,
        "equity_le_zero": true,
        "segments": [
@@ -14804,11 +14804,11 @@
       },
       "base": {
        "operating_value_bn": 1808.7,
-       "stake_value_bn": 360.1,
+       "stake_value_bn": 359.2,
        "net_debt_bn": 1532.0,
-       "minority_bn": 321.6,
-       "equity_value_bn": 315.3,
-       "per_share": 15200,
+       "minority_bn": 322.9,
+       "equity_value_bn": 312.9,
+       "per_share": 15100,
        "equity_le_zero": false,
        "segments": [
         {
@@ -14859,11 +14859,11 @@
       },
       "bull": {
        "operating_value_bn": 3164.5,
-       "stake_value_bn": 360.1,
+       "stake_value_bn": 359.2,
        "net_debt_bn": 1532.0,
-       "minority_bn": 321.6,
-       "equity_value_bn": 1671.1,
-       "per_share": 80500,
+       "minority_bn": 322.9,
+       "equity_value_bn": 1668.8,
+       "per_share": 80400,
        "equity_le_zero": false,
        "segments": [
         {
@@ -14918,24 +14918,24 @@
        "key": "net_debt",
        "label": "차입금(유동성사채 포함) − 현금 − 단기금융상품 − 기타유동금융자산(기본 정의)",
        "net_debt_bn": 1532.0,
-       "equity_value_bn": 315.3,
-       "per_share": 15200
+       "equity_value_bn": 312.9,
+       "per_share": 15100
       },
       {
        "key": "ex_other_financial",
        "label": "기타유동금융자산을 현금성으로 보지 않음",
        "net_debt_bn": 1767.2,
-       "equity_value_bn": 80.0,
-       "per_share": 3900
+       "equity_value_bn": 77.7,
+       "per_share": 3700
       }
      ],
      "bookends": {
       "FY2026E": {
        "per_share": null,
        "equity_le_zero": true,
-       "equity_value_bn": -337.4
+       "equity_value_bn": -339.8
       },
-      "FY2027E": 25700
+      "FY2027E": 25500
      },
      "segments": [
       {
@@ -15137,7 +15137,7 @@
        "discount": 0.4,
        "market_cap_bn": 2864.8,
        "market_cap_basis": "naver close × aikstockdata shares",
-       "price_as_of": "2026-10-21",
+       "price_as_of": "2026-10-22",
        "price_source": "naver_minute_closing_auction",
        "value_bn": 298.1
       },
@@ -15150,7 +15150,7 @@
        "discount": 0.4,
        "market_cap_bn": 61.3,
        "market_cap_basis": "naver close × aikstockdata shares",
-       "price_as_of": "2026-10-21",
+       "price_as_of": "2026-10-22",
        "price_source": "naver_halted_base",
        "value_bn": 5.6
       },
@@ -15161,14 +15161,14 @@
        "unverified": false,
        "stake_basis": "523,560주 ÷ 152,094,369주(시가총액 계산과 같은 주식수) · 공시 지분율 0.32% · Open DART 타법인출자현황 · CJ ENM 2026 반기보고서(rcept_no 20260814002422)",
        "discount": 0.4,
-       "market_cap_bn": 27303.5,
+       "market_cap_bn": 26832.0,
        "market_cap_basis": "naver close × aikstockdata shares",
-       "price_as_of": "2026-10-21",
+       "price_as_of": "2026-10-22",
        "price_source": "naver_minute_closing_auction",
-       "value_bn": 56.4
+       "value_bn": 55.4
       }
      ],
-     "stake_value_bn": 360.1,
+     "stake_value_bn": 359.2,
      "stake_discount": 0.4,
      "noplat_tax_rate": 0.25,
      "shares": 20766908.0,
@@ -15179,20 +15179,20 @@
         "key": "STUDIO_DRAGON",
         "name": "스튜디오드래곤",
         "pct_owned": 0.543779,
-        "market_cap_bn": 704.9,
-        "minority_value_bn": 321.6,
-        "basis": "시가총액 704.9십억원(2026-10-21 종가) × (1 − 보유 54.38%) · 보유 지분율: 16,345,182주 ÷ 30,058,498주 · 공시 지분율 54.4% · Open DART 타법인출자현황 · CJ ENM 2026 반기보고서(rcept_no 20260814002422)"
+        "market_cap_bn": 707.9,
+        "minority_value_bn": 322.9,
+        "basis": "시가총액 707.9십억원(2026-10-22 종가) × (1 − 보유 54.38%) · 보유 지분율: 16,345,182주 ÷ 30,058,498주 · 공시 지분율 54.4% · Open DART 타법인출자현황 · CJ ENM 2026 반기보고서(rcept_no 20260814002422)"
        }
       ],
-      "deduction_bn": 321.6,
+      "deduction_bn": 322.9,
       "variants": {
        "no_deduction": {
-        "equity_value_bn": 636.8,
-        "per_share": 30700
+        "equity_value_bn": 635.9,
+        "per_share": 30600
        },
        "book_nci": {
         "nci_book_bn": 641.4,
-        "equity_value_bn": -4.5,
+        "equity_value_bn": -5.5,
         "per_share": null
        }
       },
@@ -15200,10 +15200,10 @@
      },
      "summary": {
       "bear": null,
-      "base": 15200,
-      "bull": 80500,
-      "base_low": 3900,
-      "base_high": 15200
+      "base": 15100,
+      "bull": 80400,
+      "base_low": 3700,
+      "base_high": 15100
      },
      "sensitivity": {
       "axes": {
@@ -15227,36 +15227,36 @@
         null,
         null,
         null,
-        4700,
-        11700
+        4600,
+        11600
        ],
        [
         null,
         null,
-        6500,
-        14300,
-        22100
+        6400,
+        14200,
+        22000
        ],
        [
         null,
-        6500,
-        15200,
-        23900,
-        32600
+        6400,
+        15100,
+        23800,
+        32500
        ],
        [
-        4700,
-        14300,
-        23900,
-        33500,
-        43100
+        4600,
+        14200,
+        23800,
+        33400,
+        42900
        ],
        [
-        11700,
-        22100,
-        32600,
-        43100,
-        53500
+        11600,
+        22000,
+        32500,
+        42900,
+        53400
        ]
       ],
       "equity_le_zero": [
@@ -15300,38 +15300,38 @@
        {
         "key": "tax_22",
         "label": "NOPLAT 세율 22%",
-        "per_share": 18700,
-        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 387.6십억원"
+        "per_share": 18600,
+        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 385.3십억원"
        },
        {
         "key": "tax_27_5",
         "label": "NOPLAT 세율 27.5%",
-        "per_share": 12300,
-        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 255.0십억원"
+        "per_share": 12200,
+        "note": "예시 세율(법정세율 재확인 안 함) · 기본은 워크북 TP 시트 관례 25% · 주주가치 252.6십억원"
        },
        {
         "key": "media_workbook_18_1",
         "label": "미디어플랫폼 배수 워크북 18.1배",
-        "per_share": 30700,
-        "note": "워크북 2024-02 TP 표의 글로벌 OTT/방송사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.04배 대신) · 주주가치 638.0십억원"
+        "per_share": 30600,
+        "note": "워크북 2024-02 TP 표의 글로벌 OTT/방송사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.04배 대신) · 주주가치 635.7십억원"
        },
        {
         "key": "media_workbook_22",
         "label": "미디어플랫폼 배수 워크북 22배",
-        "per_share": 37400,
-        "note": "워크북 2023-04 TP 표의 글로벌 OTT 4사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.04배 대신) · 주주가치 776.9십억원"
+        "per_share": 37300,
+        "note": "워크북 2023-04 TP 표의 글로벌 OTT 4사 평균 — 구성 종목이 기록돼 있지 않아 갱신하지 못한 값(대체 피어 배수 9.04배 대신) · 주주가치 774.6십억원"
        },
        {
         "key": "music_no_discount",
         "label": "음악 배수 할인 없음",
-        "per_share": 20600,
-        "note": "피어 12MF PER 평균 12.95배 그대로(20% 할인 제외) · 주주가치 427.7십억원"
+        "per_share": 20500,
+        "note": "피어 12MF PER 평균 12.95배 그대로(20% 할인 제외) · 주주가치 425.4십억원"
        },
        {
         "key": "no_minority_deduction",
         "label": "비지배지분 미차감",
-        "per_share": 30700,
-        "note": "상장 자회사 비지배지분 미차감(시가 321.6십억원) · 주주가치 636.8십억원"
+        "per_share": 30600,
+        "note": "상장 자회사 비지배지분 미차감(시가 322.9십억원) · 주주가치 635.9십억원"
        }
       ],
       "note": "base 12MF · 기본 순차입금 · 상장 자회사 비지배지분 차감 기준. 행 = 모든 부문 배수 변화(%), 열 = 모든 부문 NOPLAT 변화(%) — 둘 다 영업가치에 곱해져 표가 대칭이다. 지분가치·순차입금·비지배지분은 고정. 주주가치 ≤ 0인 칸은 값 대신 '주주가치 ≤ 0'으로 적고, 주주가치가 양수라도 주당 50원 이하이면 값을 내지 않는다."
@@ -15341,7 +15341,7 @@
        "key": "sd_plus_fifth_season_50pct",
        "label": "(스튜디오드래곤 시가총액 + 피프스시즌 평가액) × 50%(워크북 영화드라마 방식)",
        "value_bn": null,
-       "note": "피프스시즌이 비상장이라 평가액을 갱신할 수 없어 값을 내지 않음(워크북은 9,300억원 × 70% 고정 입력) · 참고: 스튜디오드래곤 시가총액 704.9십억원(2026-10-21 종가) · 워크북 2024-02 표의 해당 부문 가치 1,039.4십억원"
+       "note": "피프스시즌이 비상장이라 평가액을 갱신할 수 없어 값을 내지 않음(워크북은 9,300억원 × 70% 고정 입력) · 참고: 스튜디오드래곤 시가총액 707.9십억원(2026-10-22 종가) · 워크북 2024-02 표의 해당 부문 가치 1,039.4십억원"
       }
      ],
      "op_vs_consensus": {
@@ -15354,7 +15354,7 @@
       "basis": "커버리지 레인 연결 영업이익(부문 영업이익 합계 + 연결조정) vs FnGuide 컨센서스 영업이익, 12MF 가중 동일",
       "text": "커버리지 레인 base 연결 영업이익 12MF 240.2십억원 = 부문 영업이익 합계 255.3(SOTP 입력) + 연결조정 -15.1 · FnGuide 컨센서스 12MF 영업이익 191.7십억원(연결 기준, 같은 가중 · 연간 추정표 2026-10-08 조회값 — 기준일 시점값 아님) · 차이 +25.3% — SOTP 영업가치는 연결조정을 뺀 부문 영업이익에 비례하므로 커버리지 레인 이익이 컨센서스와 다른 만큼 달라진다(앙상블 연장 영업이익과는 다른 계열)"
      },
-     "headline_text": "base 15,200원 · 순차입금 정의별 3,900~15,200원 · 비지배지분 차감 전 30,700원 · bull 80,500원 · bear 주주가치 ≤ 0",
+     "headline_text": "base 15,100원 · 순차입금 정의별 3,700~15,100원 · 비지배지분 차감 전 30,600원 · bull 80,400원 · bear 주주가치 ≤ 0",
      "excluded": "연결조정(부문 합계와 연결 영업이익의 차이)은 워크북처럼 제외 · 티빙·피프스시즌 등 비상장 자회사의 비지배지분은 시가가 없어 차감하지 않음(상장 자회사 스튜디오드래곤의 비지배지분만 시가로 차감)",
      "source": "커버리지 레인 부문 영업이익(SOTP 입력) — 2026Q1~Q2 실적 + 이후 시나리오 · FnGuide 피어 12개월 선행 EPS(기준월 말 시점값, 없으면 연간 추정 EPS 가중)와 기준월 종가 · 관계사 시가총액(주가 × KRX 발행주식수 — 주가 종류는 지분 표 근거 칸) · DART 연결 순차입금"
     }
@@ -18247,12 +18247,12 @@
      }
     },
     "market": {
-     "price_krw": 39600.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 40500.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 21929154,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/035760",
@@ -18470,8 +18470,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 23450.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 23550.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 30058498.0,
     "net_debt_bn": 11.0,
     "gross_debt_bn": 72.8,
@@ -18484,14 +18484,14 @@
      "2027": 1076
     },
     "eps_12mf": 1097,
-    "per_now_2027e": 21.8,
+    "per_now_2027e": 21.9,
     "per_now": {
      "fy": "2027",
-     "value": 21.8
+     "value": 21.9
     },
-    "pbr_now": 0.905,
+    "pbr_now": 0.909,
     "updated_target_price": 27400,
-    "upside_pct": 16.8,
+    "upside_pct": 16.3,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -18696,8 +18696,8 @@
      {
       "key": "market",
       "label": "현재가(현재 12MF PER)",
-      "value": 23450.0,
-      "multiple": 21.386,
+      "value": 23550.0,
+      "multiple": 21.477,
       "basis": "현재가 ÷ EPS 입력값"
      },
      {
@@ -22555,12 +22555,12 @@
      }
     },
     "market": {
-     "price_krw": 23450.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 23550.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 30058498,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/253450",
@@ -22774,8 +22774,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 1689.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 1644.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 19104557.0,
     "net_debt_bn": 994.0,
     "gross_debt_bn": 1141.2,
@@ -23056,13 +23056,13 @@
       "C": 1642.7,
       "D": 1876.8
      },
-     "market_cap_bn": 32.3,
+     "market_cap_bn": 31.4,
      "market_cap_basis": "현재가 × 유통주식수",
      "claims_to_market_cap": {
-      "A": 31.0,
-      "B": 39.3,
-      "C": 50.9,
-      "D": 58.2
+      "A": 31.9,
+      "B": 40.4,
+      "C": 52.3,
+      "D": 59.8
      },
      "other_current_financial_bn": 6.7,
      "net_debt_dart_map_bn": 994.0,
@@ -25732,12 +25732,12 @@
      }
     },
     "market": {
-     "price_krw": 1689.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 1644.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 19262308,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/036420",
@@ -25950,8 +25950,8 @@
      },
      "source": "TP 시트 활성 블록의 워크북 캐시값 · 공표 여부 미확인"
     },
-    "price_now": 11120.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 11020.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 18548394.0,
     "net_debt_bn": -45.6,
     "gross_debt_bn": 420.8,
@@ -25964,14 +25964,14 @@
      "2027": 443
     },
     "eps_12mf": 262,
-    "per_now_2027e": 25.1,
+    "per_now_2027e": 24.9,
     "per_now": {
      "fy": "2027",
-     "value": 25.1
+     "value": 24.9
     },
-    "pbr_now": 0.222,
+    "pbr_now": 0.22,
     "updated_target_price": 15100,
-    "upside_pct": 35.8,
+    "upside_pct": 37.0,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -26153,8 +26153,8 @@
      {
       "key": "market",
       "label": "현재가(현재 PBR)",
-      "value": 11120.0,
-      "multiple": 0.222,
+      "value": 11020.0,
+      "multiple": 0.22,
       "basis": "현재가 ÷ BPS"
      },
      {
@@ -28754,12 +28754,12 @@
      }
     },
     "market": {
-     "price_krw": 11120.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 11020.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 18551238,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/034120",
@@ -29791,8 +29791,8 @@
     "original_target_price": null,
     "original_price": 13490,
     "original": null,
-    "price_now": 8600.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 8520.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 61855670.0,
     "net_debt_bn": -418.4,
     "gross_debt_bn": 0.0,
@@ -29805,14 +29805,14 @@
      "2027": 906
     },
     "eps_12mf": 867,
-    "per_now_2027e": 9.5,
+    "per_now_2027e": 9.4,
     "per_now": {
      "fy": "2027",
-     "value": 9.5
+     "value": 9.4
     },
-    "pbr_now": 1.176,
+    "pbr_now": 1.165,
     "updated_target_price": 10800,
-    "upside_pct": 25.6,
+    "upside_pct": 26.8,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -30014,8 +30014,8 @@
      {
       "key": "market",
       "label": "현재가(현재 12MF PER)",
-      "value": 8600.0,
-      "multiple": 9.922,
+      "value": 8520.0,
+      "multiple": 9.83,
       "basis": "현재가 ÷ EPS 입력값"
      },
      {
@@ -33136,12 +33136,12 @@
      }
     },
     "market": {
-     "price_krw": 8600.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 8520.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 61855670,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/114090",
@@ -34228,8 +34228,8 @@
     "original_target_price": null,
     "original_price": 16000,
     "original": null,
-    "price_now": 14180.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 14260.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 198193804.0,
     "net_debt_bn": -2982.4,
     "gross_debt_bn": 0.0,
@@ -34247,9 +34247,9 @@
      "fy": "2027",
      "value": 9.6
     },
-    "pbr_now": 0.719,
+    "pbr_now": 0.723,
     "updated_target_price": 14200,
-    "upside_pct": 0.1,
+    "upside_pct": -0.4,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -34452,8 +34452,8 @@
      {
       "key": "market",
       "label": "현재가(현재 12MF PER)",
-      "value": 14180.0,
-      "multiple": 9.578,
+      "value": 14260.0,
+      "multiple": 9.632,
       "basis": "현재가 ÷ EPS 입력값"
      },
      {
@@ -36872,12 +36872,12 @@
      }
     },
     "market": {
-     "price_krw": 14180.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 14260.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 213940500,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/035250",
@@ -38079,8 +38079,8 @@
     "original_target_price": null,
     "original_price": 9480,
     "original": null,
-    "price_now": 10610.0,
-    "price_as_of": "2026-10-21",
+    "price_now": 10900.0,
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 79725458.0,
     "net_debt_bn": 858.6,
     "gross_debt_bn": 995.2,
@@ -38093,14 +38093,14 @@
      "2027": 834
     },
     "eps_12mf": 724,
-    "per_now_2027e": 12.7,
+    "per_now_2027e": 13.1,
     "per_now": {
      "fy": "2027",
-     "value": 12.7
+     "value": 13.1
     },
-    "pbr_now": 2.244,
+    "pbr_now": 2.306,
     "updated_target_price": 14800,
-    "upside_pct": 39.5,
+    "upside_pct": 35.8,
     "inputs": {
      "eps_weights": "2026E 25% + 2027E 75% (2026-09-30 기준 12개월 선행)",
      "net_debt": {
@@ -38279,8 +38279,8 @@
      {
       "key": "market",
       "label": "현재가(현재 PBR)",
-      "value": 10610.0,
-      "multiple": 2.244,
+      "value": 10900.0,
+      "multiple": 2.306,
       "basis": "현재가 ÷ BPS"
      },
      {
@@ -40939,12 +40939,12 @@
      }
     },
     "market": {
-     "price_krw": 10610.0,
-     "price_as_of": "2026-10-21",
+     "price_krw": 10900.0,
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 79725458,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/032350",
@@ -41868,7 +41868,7 @@
     "original_price": 13440,
     "original": null,
     "price_now": 9730.0,
-    "price_as_of": "2026-10-21",
+    "price_as_of": "2026-10-22",
     "shares_outstanding": 87759214.0,
     "net_debt_bn": 832.4,
     "gross_debt_bn": 1134.2,
@@ -45178,11 +45178,11 @@
     },
     "market": {
      "price_krw": 9730.0,
-     "price_as_of": "2026-10-21",
+     "price_as_of": "2026-10-22",
      "price_source": "naver_minute_closing_auction",
      "price_basis": "KRX 정규장 종가(15시 30분 종가 단일가, 네이버 분봉) — 컨센서스 기준월 말 주가, 밴드·피어 배수에 쓰는 월말 종가와 시점이 다름",
      "shares_outstanding": 92629382,
-     "shares_as_of": "20261020",
+     "shares_as_of": "20261021",
      "shares_source": "aikstockdata_quote(KRX 발행주식수, 자기주식 미차감)",
      "citation": "자료: 한국주식데이터(aikstockdata.com) — 원천: 금융감독원 DART · 금융위원회 공공데이터포털",
      "page_url": "https://aikstockdata.com/s/034230",
