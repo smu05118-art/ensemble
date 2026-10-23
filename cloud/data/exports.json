@@ -1,6 +1,6 @@
 {
   "schema": "ensemble_cloud_exports/1",
-  "asof": "2026-10-22",
+  "asof": "2026-10-23",
   "primary_key": [
     "provider",
     "metric",
@@ -10,8 +10,8 @@
   ],
   "source_updated_at": {
     "financial_review": "2026-09-10",
-    "operations": "2026-10-22T08:40:58+00:00",
-    "sec_companyfacts": "2026-10-13",
+    "operations": "2026-10-23T08:36:53+00:00",
+    "sec_companyfacts": "2026-10-23",
     "legacy": "2026-08-13"
   },
   "observations": [
@@ -5763,9 +5763,9 @@
       "source_fingerprint": "b0d329131f48d0a4a9f86bee14887028b1cec9ec96e7c1b2a3f3a7969d635814"
     },
     {
-      "id": "7b9f0743370d9d9e0557",
+      "id": "f52343bbc9bc3ea6f34e",
       "key": "sec_companyfacts:IBM:group_revenue:2025-09-30",
-      "revision": 1,
+      "revision": 2,
       "provider": "IBM",
       "metric": "group_revenue",
       "title": "전사 분기 매출 · SEC XBRL 직접 태그",
@@ -5774,11 +5774,11 @@
       "axis": "demand",
       "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000051143.json",
       "source_path": "SEC Company Facts XBRL direct fact",
-      "period": "FY2025-Q3 · 종료 2025-09-30",
+      "period": "FY2026-Q3 · 종료 2025-09-30",
       "effective_at": "2025-09-30",
-      "published_at": "2025-10-23",
-      "observed_at": "2026-10-13",
-      "verified_at": "2026-10-13",
+      "published_at": "2026-10-22",
+      "observed_at": "2026-10-23",
+      "verified_at": "2026-10-23",
       "first_seen_at": "2026-10-13",
       "verified": true,
       "evidence": "confirmed",
@@ -5788,7 +5788,7 @@
       "note": "Revenues · 10-Q · 2025-07-01~2025-09-30 (92일). SEC XBRL 원문값을 단위만 M으로 표시; 연간값으로 Q4를 역산하지 않음.",
       "origin": "sec_companyfacts",
       "correlation_group": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000051143.json",
-      "source_fingerprint": "1a302a62118d552a638eee34068eee82351000fca9f58e59b6fbb5246bd0f0b1"
+      "source_fingerprint": "ef27f3e01570c7e2fec98a4f5b7981492c7380c30d5fb51deea34c2e4c4f2008"
     },
     {
       "id": "12dcc562102dc37bdaa6",
@@ -9261,6 +9261,34 @@
       "origin": "sec_companyfacts",
       "correlation_group": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001083301.json",
       "source_fingerprint": "ec739ce702378624bee416ec4acc526bc1c5262e9d43769421ef65e00293e4c5"
+    },
+    {
+      "id": "7a086cfe650b9ef329f9",
+      "key": "sec_companyfacts:IBM:group_revenue:2026-09-30",
+      "revision": 1,
+      "provider": "IBM",
+      "metric": "group_revenue",
+      "title": "전사 분기 매출 · SEC XBRL 직접 태그",
+      "value": 17103,
+      "unit": "USD M",
+      "axis": "demand",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000051143.json",
+      "source_path": "SEC Company Facts XBRL direct fact",
+      "period": "FY2026-Q3 · 종료 2026-09-30",
+      "effective_at": "2026-09-30",
+      "published_at": "2026-10-22",
+      "observed_at": "2026-10-23",
+      "verified_at": "2026-10-23",
+      "first_seen_at": "2026-10-23",
+      "verified": true,
+      "evidence": "confirmed",
+      "direction": null,
+      "rule": "",
+      "scope": "전사 기준 · SEC XBRL 직접 태그 (클라우드 세그먼트와 구분)",
+      "note": "Revenues · 10-Q · 2026-07-01~2026-09-30 (92일). SEC XBRL 원문값을 단위만 M으로 표시; 연간값으로 Q4를 역산하지 않음.",
+      "origin": "sec_companyfacts",
+      "correlation_group": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000051143.json",
+      "source_fingerprint": "1a8a609ab3ad2414edcb0ff01cd849c0459a3e63b063842b0842880669f8016b"
     }
   ],
   "official_disclosures": [
@@ -9271,9 +9299,9 @@
       "kind": "official_investor_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": null
     },
     {
@@ -9283,9 +9311,9 @@
       "kind": "official_company_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
@@ -9295,8 +9323,8 @@
       "kind": "official_company_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-13T17:43:07+00:00",
       "error": "HTTPError: HTTP Error 404: Not Found"
     },
@@ -9307,9 +9335,9 @@
       "kind": "official_company_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
@@ -9319,8 +9347,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-13T17:43:07+00:00",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
@@ -9331,8 +9359,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-14T08:47:37+00:00",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
@@ -9343,8 +9371,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-14T08:47:37+00:00",
       "error": null
     },
@@ -9355,8 +9383,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-13T17:43:07+00:00",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
@@ -9367,8 +9395,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-20T08:37:28+00:00",
       "error": null
     },
@@ -9379,8 +9407,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-22T08:40:58+00:00",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
@@ -9391,9 +9419,9 @@
       "kind": "official_newsroom",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": null
     },
     {
@@ -9403,9 +9431,9 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-15T08:22:47+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
@@ -9415,8 +9443,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-16T08:15:20+00:00",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
@@ -9427,9 +9455,9 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": null
     },
     {
@@ -9439,8 +9467,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-14T08:47:37+00:00",
       "error": "HTTPError: HTTP Error 308: Permanent Redirect"
     },
@@ -9451,9 +9479,9 @@
       "kind": "official_newsroom",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": null
     },
     {
@@ -9463,8 +9491,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-22T08:40:58+00:00",
       "error": "HTTPError: HTTP Error 404: Not Found"
     },
@@ -9475,9 +9503,9 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": "HTTPError: HTTP Error 404: Not Found"
     },
     {
@@ -9487,8 +9515,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-20T08:37:28+00:00",
       "error": "HTTPError: HTTP Error 403: Forbidden"
     },
@@ -9499,8 +9527,8 @@
       "kind": "sec_filing_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-20T08:37:28+00:00",
       "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
     },
@@ -9511,8 +9539,8 @@
       "kind": "official_annual_report_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
       "last_changed_at": "2026-10-18T08:05:57+00:00",
       "error": null
     },
@@ -9523,16 +9551,16 @@
       "kind": "official_company_index",
       "automated": true,
       "health": "ok",
-      "last_checked_at": "2026-10-22T08:40:58+00:00",
-      "last_good_at": "2026-10-22T08:40:58+00:00",
-      "last_changed_at": "2026-10-22T08:40:58+00:00",
+      "last_checked_at": "2026-10-23T08:36:53+00:00",
+      "last_good_at": "2026-10-23T08:36:53+00:00",
+      "last_changed_at": "2026-10-23T08:36:53+00:00",
       "error": null
     }
   ],
   "ensemble": [
     {
       "provider": "0700.HK",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9551,7 +9579,7 @@
     },
     {
       "provider": "0728.HK",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9570,7 +9598,7 @@
     },
     {
       "provider": "0762.HK",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9589,7 +9617,7 @@
     },
     {
       "provider": "0941.HK",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9608,7 +9636,7 @@
     },
     {
       "provider": "3896.HK",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9627,7 +9655,7 @@
     },
     {
       "provider": "9888.HK",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9646,7 +9674,7 @@
     },
     {
       "provider": "9988.HK",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9665,14 +9693,14 @@
     },
     {
       "provider": "AMZN",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": 82,
       "coverage": 55,
       "axis_count": 3,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "b67a2bdb0c98e17bbc27"
@@ -9682,7 +9710,7 @@
         "contracts": null,
         "pricing": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "eb6cef2851616b21ae4a"
@@ -9690,7 +9718,7 @@
         },
         "funding": {
           "direction": -1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "56332fc2331cf289faa8"
@@ -9709,7 +9737,7 @@
     },
     {
       "provider": "APLD",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 25,
       "axis_count": 1,
@@ -9717,7 +9745,7 @@
         "demand": null,
         "delivery": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "b9eda703bc2d146a153b"
@@ -9737,7 +9765,7 @@
     },
     {
       "provider": "CIFR",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 25,
       "axis_count": 1,
@@ -9745,7 +9773,7 @@
         "demand": null,
         "delivery": {
           "direction": 1,
-          "freshness": 0.5442050397551315,
+          "freshness": 0.5400298694461532,
           "groups": 1,
           "ids": [
             "f8b87b20cf666937fc8a"
@@ -9765,7 +9793,7 @@
     },
     {
       "provider": "CRUSOE",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9784,14 +9812,14 @@
     },
     {
       "provider": "CRWV",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": 69,
       "coverage": 80,
       "axis_count": 4,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "73781c9208d64e96e7e4"
@@ -9799,7 +9827,7 @@
         },
         "delivery": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "837604877c2c0cb89819"
@@ -9808,7 +9836,7 @@
         "contracts": null,
         "pricing": {
           "direction": -1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "29bf28cefd5b0ca37d06"
@@ -9816,7 +9844,7 @@
         },
         "funding": {
           "direction": -1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "c180cab8d579498048c8"
@@ -9836,14 +9864,14 @@
     },
     {
       "provider": "GOOGL",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": 100,
       "coverage": 45,
       "axis_count": 2,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "baa3c5d76e1c97432e9b"
@@ -9853,7 +9881,7 @@
         "contracts": null,
         "pricing": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "c8e28a2d7622de51ccd9"
@@ -9872,7 +9900,7 @@
     },
     {
       "provider": "IBM",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9891,7 +9919,7 @@
     },
     {
       "provider": "IREN",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 20,
       "axis_count": 1,
@@ -9900,7 +9928,7 @@
         "delivery": null,
         "contracts": {
           "direction": 1,
-          "freshness": 0.2742062449236565,
+          "freshness": 0.27210251987756573,
           "groups": 1,
           "ids": [
             "1127165daaef206f36a3"
@@ -9919,7 +9947,7 @@
     },
     {
       "provider": "LAMBDA",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -9938,14 +9966,14 @@
     },
     {
       "provider": "MSFT",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 30,
       "axis_count": 1,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "fd55d764078e0b077178"
@@ -9966,14 +9994,14 @@
     },
     {
       "provider": "NBIS",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": 87,
       "coverage": 75,
       "axis_count": 4,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 2,
           "ids": [
             "f53320d72ef6fd43c379",
@@ -9983,7 +10011,7 @@
         "delivery": null,
         "contracts": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "4ddeb23112629ee32f15"
@@ -9991,7 +10019,7 @@
         },
         "pricing": {
           "direction": 1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "2571e4c9393b040b1396"
@@ -9999,7 +10027,7 @@
         },
         "funding": {
           "direction": -1,
-          "freshness": 0.4156189480713939,
+          "freshness": 0.4124302971676513,
           "groups": 1,
           "ids": [
             "70eae776051833ed17e6"
@@ -10020,14 +10048,14 @@
     },
     {
       "provider": "ORCL",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": 75,
       "coverage": 40,
       "axis_count": 2,
       "axes": {
         "demand": {
           "direction": 1,
-          "freshness": 0.32987697769322355,
+          "freshness": 0.3273461437937433,
           "groups": 1,
           "ids": [
             "5643886198bb559c03b8"
@@ -10038,7 +10066,7 @@
         "pricing": null,
         "funding": {
           "direction": -1,
-          "freshness": 0.32987697769322355,
+          "freshness": 0.3273461437937433,
           "groups": 1,
           "ids": [
             "8525142d47bc5f41ceb4"
@@ -10056,7 +10084,7 @@
     },
     {
       "provider": "WULF",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": 100,
       "coverage": 45,
       "axis_count": 2,
@@ -10064,7 +10092,7 @@
         "demand": null,
         "delivery": {
           "direction": 1,
-          "freshness": 0.5276955701815529,
+          "freshness": 0.5236470614103134,
           "groups": 1,
           "ids": [
             "1d39be1ea09ffcfd09db"
@@ -10072,7 +10100,7 @@
         },
         "contracts": {
           "direction": 1,
-          "freshness": 0.548412489847313,
+          "freshness": 0.5442050397551315,
           "groups": 1,
           "ids": [
             "9a93d1e497c5fd44775c"
@@ -10092,7 +10120,7 @@
     },
     {
       "provider": "huawei",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
@@ -10111,7 +10139,7 @@
     },
     {
       "provider": "ucloud",
-      "asof": "2026-10-22",
+      "asof": "2026-10-23",
       "score": null,
       "coverage": 0,
       "axis_count": 0,
