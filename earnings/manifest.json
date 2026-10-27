@@ -1,0 +1,17 @@
+{
+  "asof": "2026-10-27",
+  "files": {
+    "FORM.html": "ce4590305484bfa88e37aea3ddbced16dd175181b1b55e8a3951f8e9cf4c759e",
+    "SCREEN.html": "343ac2e3927666bd68a12d45ea497f3ffa6cdeda4651c7048966d6db06d7edde",
+    "VRT.html": "38d8ba02e85a34a45cf7c38acf8c3aeb895a2ecb315f2b832f47ce0925184593",
+    "data/FORM.json": "4e160225891d7631073bf86f1cbf8c6a21aed213844d011c806f5b2fdcd8b24a",
+    "data/SCREEN.json": "0d1cab93b2023693f307f2a18799995d44b263904b5e767ad4a7e8e735181121",
+    "data/VRT.json": "9c2c02dafc8afecaea20b2b25a3cd00b4843116ce6101dcac0f950979dc74330",
+    "ensemble-tab.js": "43f8ecca6050318ca7a2c93a410cd049d4122ba66496515250649a0cfd1ebca3",
+    "index.html": "8427ae56849714aff3bea59638c789f941a494f980659bfda5edfd9a260a61e1",
+    "reports/FORM.md": "3574c3712057d4361c4176b842702e3f06faa1b50a21e9e47437c4a8bb3bbc89",
+    "reports/SCREEN.md": "9ae8e045ab9c6fd285b322fee15236cfa378168d59fec43d4eff1dae1cbe12d0",
+    "reports/VRT.md": "6e506c74d95d1250f77dddc96bbd9e598e5fe96ed72b74b346ccaab4cf22fca7",
+    "update_rules.json": "7ce966375fc057c4df9c025c75d4d592c3a41b30ea714274b518251c20f26778"
+  }
+}

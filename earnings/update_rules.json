@@ -1,0 +1,114 @@
+{
+  "asof": "2026-10-27",
+  "preserve_forecast_vintage": true,
+  "required_provenance": [
+    "source_url",
+    "published_at",
+    "observed_period",
+    "unit",
+    "basis",
+    "kind"
+  ],
+  "gates": [
+    "period_alignment",
+    "units",
+    "gaap_vs_adjusted",
+    "segment_eliminations",
+    "split_adjustment",
+    "actual_not_guidance",
+    "no_missing_value_fill"
+  ],
+  "companies": {
+    "FORM": [
+      {
+        "field": "Q3 실제·Q4 공식 가이드",
+        "reason": "발표 전",
+        "fill_rule": "10/28 공식 실적과 콜로 별도 리뷰 생성"
+      },
+      {
+        "field": "바이사이드 직접 컨센서스",
+        "reason": "공개 whisper만 확보",
+        "fill_rule": "날짜·표본·조사방식이 있는 기관 기대치 확보 전 null"
+      },
+      {
+        "field": "수주·전사 잔고·취소율·제품 ASP",
+        "reason": "공식 동일범위 수치 미확보",
+        "fill_rule": "신규 주문/잔고/수량 공시 시 정의·기간 대사; RPO10.8을 대용하지 않음"
+      },
+      {
+        "field": "Teradyne 종결·Q4 실제 희석",
+        "reason": "계약은 확인, 종결 원문 미확보",
+        "fill_rule": "종결 8-K·주식수·납입일 확인 후 가중 주식수 계산"
+      },
+      {
+        "field": "프록시·회귀·옵션 기대변동",
+        "reason": "원행·시점별 빈티지·옵션 체인 미검증",
+        "fill_rule": "월별 원행/발표일 및 사건·옵션 원자료로 재검증 전 확률·IV null"
+      }
+    ],
+    "VRT": [
+      {
+        "field": "Q3 실제·갱신 Q4/FY",
+        "reason": "발표 전",
+        "fill_rule": "10/28 공식 자료·10-Q·콜로 신규 리뷰"
+      },
+      {
+        "field": "최신 backlog·신규수주·취소율·B/B",
+        "reason": "동일범위 공식 수치 미확보",
+        "fill_rule": "공식 시점·인수범위·순수주를 확인 후 계산"
+      },
+      {
+        "field": "바이사이드·Q4 집계·2027 EPS",
+        "reason": "직접 증거 미확보",
+        "fill_rule": "공급자·표본·발표전 timestamp가 있는 입력 필요"
+      },
+      {
+        "field": "월별 회사귀속 프록시·중량·ASP·회귀",
+        "reason": "제품/서비스 혼재 및 원행 부족",
+        "fill_rule": "동질제품·현지생산·서비스·M&A 범위 분리 후 OOS 검증"
+      },
+      {
+        "field": "지역 과거표 원문 충돌",
+        "reason": "Q3 2025 미주OP501.8/510.8, Q4 GAAP OP579.9/597.9 상충",
+        "fill_rule": "과거 해당 분기 공식원표·정정 확보 전 모형 투입 금지"
+      },
+      {
+        "field": "정확 고객집중·취소율·Q3 이연회수액",
+        "reason": "확인 공시에서 정량 미확보",
+        "fill_rule": "회사 공시/콜의 직접 수치만 채택"
+      }
+    ],
+    "SCREEN": [
+      {
+        "field": "Q2/H1 실제·H2 수정전망",
+        "reason": "10/30 발표 전",
+        "fill_rule": "H1실제−Q1로 단독Q2산출; 분할·통화·절사 검증"
+      },
+      {
+        "field": "Q2 단독 EPS·H1매출/OP 시장컨센서스",
+        "reason": "공개 직접 수치 미확보",
+        "fill_rule": "누적EPS 단순차감 금지; 실제주식수·세율 확인. H1경상익 집계는 별도 보존"
+      },
+      {
+        "field": "바이사이드·최신 잔고·취소율·ASP",
+        "reason": "직접 공시/관측 미확보",
+        "fill_rule": "회사 발주·설치·검수·가격 원표와 표본 있는 조사만 사용"
+      },
+      {
+        "field": "월별 9월 원행·모형 확률",
+        "reason": "원세관빈티지/전체OOS 미검증",
+        "fill_rule": "분기3개월과lag정렬·동결표본 독립재현 전예측 투입 금지"
+      },
+      {
+        "field": "슬라이드 수정이력·원문표 오기",
+        "reason": "Q1표지7/28,취득본의수정게시일불명;YoY비교에QoQ라벨",
+        "fill_rule": "공식 재게재와 원PDF해시 대조; 취득일을 발행일로 대체하지 않음"
+      },
+      {
+        "field": "환율 민감도·회사귀속률",
+        "reason": "충격정의·헤지·정량탄력성 미확보",
+        "fill_rule": "회사 정의 원문과동일기간/단위 확인 후 계산"
+      }
+    ]
+  }
+}
