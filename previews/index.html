@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>기업별 프리뷰 · Ensemble</title><link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script></head>
+<body>
+<a class="skip" href="#detail">보고서로 바로 이동</a>
+<header class="masthead"><a class="brand" href="../#previews">ENSEMBLE <span>RESEARCH</span></a><span class="edition">기업별 프리뷰</span></header>
+<section class="intro"><p class="eyebrow">COMPANY OUTLOOK</p><h1>다음 분기, 그리고 올해.</h1><p>공식 가이던스부터 조건부 추정까지, 근거와 빈칸을 함께 읽습니다.</p><p id="catalog-meta" class="muted" role="status">자료를 불러오는 중입니다.</p></section>
+<main class="workspace">
+<aside class="directory" aria-label="회사 탐색"><div class="directory-head"><h2>기업 탐색</h2><span id="count" class="count"></span></div>
+<label for="search">회사 · 티커 · 별칭 검색</label><input type="search" id="search" placeholder="회사명, 티커, 별칭" autocomplete="off"><p id="search-state" class="muted" aria-live="polite"></p>
+<div class="filters"><label>출처<select id="source"><option value="">전체 출처</option></select></label><label>업종<select id="sector"><option value="">전체 업종</option></select></label><label>상태<select id="status"><option value="">전체 상태</option></select></label><label>전망 범위<select id="horizon"><option value="">전체 기업</option><option value="next">다음 분기 수치 있음</option><option value="annual">연간 수치 있음</option><option value="both">분기·연간 모두 있음</option><option value="gap">보완할 전망 있음</option></select></label></div>
+<nav id="companies" aria-label="회사 목록"></nav></aside>
+<article id="detail" tabindex="-1" aria-label="선택한 회사 상세"><div class="empty">회사를 선택하면 전망과 근거를 볼 수 있습니다.</div></article>
+</main><footer>원래 작성 시점의 전망을 보존합니다. 조건부 시나리오는 공식 가이던스나 확률 예측이 아닙니다.</footer>
+</body></html>
